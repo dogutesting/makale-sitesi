@@ -1,21 +1,22 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-const NightModeContext = createContext();
+const AppContext = createContext();
 
-export function useNightMode() {
-  return useContext(NightModeContext);
+/* Alt sayfalarda context'i kullanmak istediğinde bu function çağırılır */
+export function useAppContext() {
+  return useContext(AppContext);
 }
 
-export function NightModeProvider({ children }) {
-  const [nightMode, setNightMode] = useState("what the fuck");
+export function Wrapper({ children }) {
 
-  const setDarkMode = (value) => {
+  const [nightMode, setNightMode] = useState(false);
+  /* const toggleNightMode = (value) => {
     setNightMode(value);
-  };
+  }; */
 
   return (
-    <NightModeContext.Provider value={{ nightMode, setDarkMode }}>
+    <AppContext.Provider value={{ nightMode, setNightMode }}>
       {children}
-    </NightModeContext.Provider>
+    </AppContext.Provider>
   );
 }

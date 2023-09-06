@@ -1,16 +1,14 @@
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useNightMode } from '@/context/ContextProvider';
+import { useAppContext } from '@/context/ContextProvider';
 
-export default function ArticleForOther({rsm, rsm_alt, baslik, icerik, nightModer}) {
+export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
   
-    const { nightMode, toggleNightMode } = useNightMode();
+    const { nightMode } = useAppContext();
 
     return (
     
-    <article>
-        <p>h: {nightMode}</p>
+    <article className={nightMode ? 'white' : 'black'}>
         <Link href="" className=''>
             <div className='image-container'>
                 <Image
@@ -22,7 +20,7 @@ export default function ArticleForOther({rsm, rsm_alt, baslik, icerik, nightMode
                 />
             </div>
             <h2>{baslik}</h2>
-            <p>   
+            <p className={nightMode ? 'white' : 'soft-black'}>   
             {
                 icerik.split(" ").length > 7 ? 
                 (icerik.split(" ").slice(0, 7).join(" ") + "...") :

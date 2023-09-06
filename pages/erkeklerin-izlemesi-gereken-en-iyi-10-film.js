@@ -1,24 +1,24 @@
+import Main from '@/components/Main';
 import En from '@/components/mini_components/en_iyi_10_resimli_section';
 import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
 
-
-//! img/a_0
+/*! img/a_0 */
 /* Article - Section - Section - Section */
 
-export default function films({nightMode}) {
+export default function films() {
 
   return (
-    <main>
+    <Main>
         <Head>
           <title>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</title>
         </Head>
 
         <article>
 
-        <h1>Erkeklerin İzlemesi Gereken En İyi 10 Film</h1>
+        <h1>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</h1>
           <p>Eğer karşılaştığınız zorluklar ve duygusal
              fırtınalar karşısında sarsılmaz bir karakter
               oluşturma hedefiniz varsa, doğru yerdesiniz.
@@ -211,6 +211,6 @@ export default function films({nightMode}) {
             böylelikle otomatik olarak alakalı içerik üretebiliriz.
             -> Aynı zamanda kullanıcının önceden baktığı içeriklerde burada paslanmalı */ }
         </section>
-    </main>
+    </Main>
   )
 }

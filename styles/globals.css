@@ -19,13 +19,6 @@ h2 {
   margin-bottom: 20px;
 }
 
-.link-night a{
-  color: #5a97f9;
-}
-.link-night a:active {
-  color: #3012b8;
-}
-
 .container {
   display: flex;
 }
@@ -40,6 +33,12 @@ h2 {
 .mode {
   cursor: pointer;
 }
+.link-night a{
+  color: #5a97f9;
+}
+.link-night a:active {
+  color: #3012b8;
+}
 .night-mode {
   color: white;
   background-color: black;
@@ -47,6 +46,9 @@ h2 {
 .light-mode {
   color: black;
   background-color: white;
+}
+.soft-black {
+  color: rgb(57, 57, 57);
 }
 .black {
   color: black;
@@ -106,17 +108,25 @@ header {
 }
 .other_contents h2 {
   font-size: 1rem;
+  margin-top: 8px;
   margin-bottom: 0;
 }
 .other_contents p {
   font-size: 1rem;
-  color: rgb(57, 57, 57);
+  /* color: rgb(57, 57, 57); */
   /* color: rgb(206, 206, 206); */
   margin-top: 6px;
 }
 .other_contents a {
   text-decoration: none;
 }
+.other_contents a:visited {
+  color: inherit; /* Link rengini miras al */
+}
+.other_contents a:active {
+  color: inherit; /* Link rengini miras al */
+}
+
 /* Footer Settings */
 footer {
   display: flex;

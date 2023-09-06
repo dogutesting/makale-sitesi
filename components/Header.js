@@ -1,10 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useEffect } from 'react';
 
-export default function Header({darkMode, setdarkMode}) {
+import { useAppContext } from '@/context/ContextProvider';
+
+export default function Header() {
+
+    const { nightMode, setNightMode } = useAppContext();
+
     const toggleDarkMode = () => {
-        localStorage.setItem("n-mode", JSON.stringify(!darkMode));
-        setdarkMode(prevState => !prevState);
+        localStorage.setItem("n-mode", JSON.stringify(!nightMode));
+        setNightMode(prevState => !prevState);
     }
 
     return (
@@ -17,7 +23,7 @@ export default function Header({darkMode, setdarkMode}) {
             <div className='main-content header-main'>
                 <div>
                     <Link id='go_index'
-                     className={darkMode ? 'white' : 'black'}
+                     className={nightMode ? 'white' : 'black'}
                      href="/">enonlar.com</Link>
                 </div>
                 <div>
@@ -26,7 +32,7 @@ export default function Header({darkMode, setdarkMode}) {
                     {/* Light / Dark */}
                     <Image 
                     className='mode'
-                     src={darkMode ? '/images/menu/l_mode.png' : '/images/menu/n_mode.png'}
+                     src={nightMode ? '/images/menu/l_mode.png' : '/images/menu/n_mode.png'}
                      width={25} height={25} alt='Gece-Gündüz Modu İkonu'
                       title='Gece modu'
                       onClick={() => toggleDarkMode()}/>
