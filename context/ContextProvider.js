@@ -7,14 +7,14 @@ export function useNightMode() {
 }
 
 export function NightModeProvider({ children }) {
-  const [nightMode, setNightMode] = useState(false);
+  const [nightMode, setNightMode] = useState("what the fuck");
 
-  const toggleNightMode = () => {
-    setNightMode(!nightMode);
+  const setDarkMode = (value) => {
+    setNightMode(value);
   };
 
   return (
-    <NightModeContext.Provider value={{ nightMode, toggleNightMode }}>
+    <NightModeContext.Provider value={{ nightMode, setDarkMode }}>
       {children}
     </NightModeContext.Provider>
   );

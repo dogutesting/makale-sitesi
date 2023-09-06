@@ -1,0 +1,5 @@
+-> Provider'ı düzenle (sadece night mode değil birden fazla şey aktarılabilinir)
+
+-> content en_10_resimli'ye ihtiyaç duyulabilir. Provider'la işin bittikten sonra bunu bir düşün.
+
+-> erkeklerin-izlemesi-gereken-en-iyi-10-filmden yaklaşık 25 tane makale çıkıyor onları yaz

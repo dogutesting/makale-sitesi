@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useNightMode } from '@/context/ContextProvider';
 
-
-export default function ArticleForOther({rsm, rsm_alt, baslik, icerik, nightMode}) {
+export default function ArticleForOther({rsm, rsm_alt, baslik, icerik, nightModer}) {
   
-    /* Bu içeriğe <Link eklemek lazım ama nasıl? */
-
-    console.log("check stat ->", nightMode);
+    const { nightMode, toggleNightMode } = useNightMode();
 
     return (
     
     <article>
+        <p>h: {nightMode}</p>
         <Link href="" className=''>
             <div className='image-container'>
                 <Image
