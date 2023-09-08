@@ -4,20 +4,30 @@ import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 /*! img/a_0 */
 /* Article - Section - Section - Section */
 
 export default function films() {
+  
+  const [first, setfirst] = useState("")
+
+  useEffect(() => {
+    setfirst(window.innerWidth)
+  }, [])
 
   return (
+    
     <Main>
+      
         <Head>
           <title>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</title>
         </Head>
 
         <article>
 
+        <h1>{first}</h1>
         <h1>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</h1>
           <p>Eğer karşılaştığınız zorluklar ve duygusal
              fırtınalar karşısında sarsılmaz bir karakter
@@ -28,11 +38,12 @@ export default function films() {
                   izlemesi gereken, karakter oluşturma yolculuğunda
                    rehber olabilecek 10 film.</p>
 
-        <En baslik="10 - I Am Legend - Ben Efsaneyim"
+        <En baslik="10 - Ben Efsaneyim - I Am Legend"
             rsm="/images/a_0/f1_imlegend.jpg"
-            rsm_alt="I Am Legend filminden bir fotoğraf."
+            rsm_alt="Ben Efsaneyim - I Am Legend filminden bir fotoğraf."
             pri={true}>
             <Kunye oyuncular={["Will Smith"]}
+             yonetmen="Francis Lawrence"
              kategori="Bilim Kurgu/Drama"
              sure="1 saat 41 dakika"
              yil="2007"
@@ -47,10 +58,11 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="9 - 300 Spartalı"
+        <En baslik="9 - 300 Spartalı - 300"
             rsm="/images/a_0/spartans_300.jpg"
-            rsm_alt="300 Spartalı filminden bir fotoğraf.">
+            rsm_alt="300 Spartalı - 300 filminden bir fotoğraf.">
             <Kunye oyuncular={["Gerard Butler"]}
+             yonetmen="Zack Snyder"
              kategori="Aksiyon/Tarih/Drama"
              sure="1 saat 57 dakika"
              yil="2006"
@@ -66,10 +78,11 @@ export default function films() {
         </En>
 
 
-        <En baslik="8 - The Pursuit of Happyness - Umudunu Kaybetme"
+        <En baslik="8 - Umudunu Kaybetme - The Pursuit of Happyness"
             rsm="/images/a_0/f2_umudunu_kaybetme.jpg"
-            rsm_alt="The Pursuit of Happyness filminden bir fotoğraf.">
+            rsm_alt="Umudunu Kaybetme - The Pursuit of Happyness filminden bir fotoğraf.">
             <Kunye oyuncular={["Will Smith", "Jaden Smith"]}
+             yonetmen="Gabriele Muccino"
              kategori="Biyografi/Drama"
              sure="1 saat 57 dakika"
              yil="2006"
@@ -80,10 +93,11 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="7 - Blade Runner: 2049 - Bıçak Sırtı"
+        <En baslik="7 - Bıçak Sırtı: 2049 - Blade Runner 2049"
          rsm="/images/a_0/f3_blade_runner_0.jpg"
-          rsm_alt="Blade Runner: 2049 Bıçak Sırtı filminden bir fotoğraf.">
+          rsm_alt="Bıçak Sırtı: 2049 - Blade Runner 2049 filminden bir fotoğraf.">
           <Kunye oyuncular={["Ryan Gosling", "Ana de Armas"]}
+             yonetmen="Denis Villeneuve"
              kategori="Bilim Kurgu/Aksiyon"
              sure="2 saat 43 dakika"
              yil="2017"
@@ -102,10 +116,11 @@ export default function films() {
           </p>
         </En>
 
-        <En baslik="6 - Braveheart - Cesur Yürek"
+        <En baslik="6 - Cesur Yürek - Braveheart"
             rsm="/images/a_0/f4_bravehearth.jpg"
-            rsm_alt="Cesur Yürek filminden bir fotoğraf.">
+            rsm_alt="Cesur Yürek - Braveheart filminden bir fotoğraf.">
             <Kunye oyuncular={["Mel Gibson"]}
+             yonetmen="Mel Gibson"
              kategori="Biyografi/Drama/Savaş"
              sure="2 saat 58 dakika"
              yil="1995"
@@ -121,10 +136,11 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="5 - Gladiator - Gladyatör"
+        <En baslik="5 - Gladyatör - Gladiator"
             rsm="/images/a_0/f6_gladiator.jpg"
-            rsm_alt="Gladiator filminden bir fotoğraf.">
+            rsm_alt="Gladyatör - Gladiator filminden bir fotoğraf.">
             <Kunye oyuncular={["Russell Crowe", "Joaquin Phoenix"]}
+             yonetmen="Ridley Scott"
              kategori="Aksiyon/Drama"
              sure="2 saat 35 dakika"
              yil="2000"
@@ -135,10 +151,11 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="4 - American History X"
+        <En baslik="4 - Geçmişin Gölgesinde - American History X"
             rsm="/images/a_0/f7_american_history_x.jpg"
-            rsm_alt="American History X filminden bir fotoğraf.">
+            rsm_alt="Geçmişin Gölgesinde - American History X filminden bir fotoğraf.">
             <Kunye oyuncular={["Edward Norton"]}
+             yonetmen="Tony Kaye"
              kategori="Suç/Drama"
              sure="1 saat 59 dakika"
              yil="1998"
@@ -149,10 +166,11 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="3 - Fight Club - Dövüş Kulübü"
+        <En baslik="3 - Dövüş Kulübü - Fight Club"
          rsm="/images/a_0/f8_fight_club.png"
-          rsm_alt="Fight Club Dövüş Kulübü filminden bir fotoğraf.">
+          rsm_alt="Dövüş Kulübü - Fight Club filminden bir fotoğraf.">
             <Kunye oyuncular={["Edward Norton", "Brad Pitt"]}
+             yonetmen="David Fincher"
              kategori="Gerilim/Drama"
              sure="2 saat 19 dakika"
              yil="1999"
@@ -163,10 +181,11 @@ export default function films() {
           </p>
         </En>
 
-        <En baslik="2 - The Godfather - Baba"
+        <En baslik="2 - Baba - The Godfather"
             rsm="/images/a_0/f9_the_godfather.jpg"
-            rsm_alt="The Godfather filminden bir fotoğraf.">
+            rsm_alt="Baba - The Godfather filminden bir fotoğraf.">
             <Kunye oyuncular={["Marlon Brando", "Al Pacino"]}
+             yonetmen="Francis Ford Coppola"
              kategori="Suç/Drama"
              sure="2 saat 55 dakika"
              yil="1972"
@@ -177,17 +196,18 @@ export default function films() {
             </p>
         </En>
 
-        <En baslik="1 - Esaretin Bedeli - Shawshank Redemption"
+        <En baslik="1 - Esaretin Bedeli - The Shawshank Redemption"
          rsm="/images/a_0/f10_esaretin_bedeli.jpg"
-          rsm_alt="Esaretin Bedeli - Shawshank Redemption filminden bir fotoğraf.">
+          rsm_alt="Esaretin Bedeli - The Shawshank Redemption filminden bir fotoğraf.">
             <Kunye oyuncular={["Morgan Freeman", "Tim Robbins"]}
+             yonetmen="Frank Darabont"
              kategori="Dram/Polisiye"
              sure="2 saat 22 dakika"
              yil="1994"
              puan="9,3"
              />
           <p>
-          Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin
+          <Link href="stephen-king-ile-ilgili-yazilar">Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin
            suçsuz yere mahkum edildiği Shawshank
            hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini
            anlatıyor.

@@ -13,6 +13,24 @@ export default function Header() {
         setNightMode(prevState => !prevState);
     }
 
+    /* BAŞIM AĞRIDI YA BŞAIMA APREIWRIOEWK
+    const support_format_webp = () =>
+    {
+    var elem = document.createElement('canvas');
+
+    if (!!(elem.getContext && elem.getContext('2d')))
+    {
+    // was able or not to get WebP representation
+    return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    }
+    else
+    {
+    // very old browser like IE 8, canvas not supported
+    return false;
+    }
+    }
+
+    if(support_format_webp()) */
     return (
     <>
         <header>

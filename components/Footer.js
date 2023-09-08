@@ -45,7 +45,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='end'>
-                <b>en10sen.com içerisinde bulunan bütün içerikler öznel yorum içermektedir.</b>
+                <b>enonlar.com içerisinde bulunan bütün içerikler öznel yorum içermektedir. Bütün hakları saklıdır.</b>
             </div>
         </div>
         <div className="side"></div>

@@ -9,7 +9,8 @@ body {
   font-size: 18px;
 }
 h1 {
-  text-align: center;
+  /* text-align: center; */
+  text-align: left;
 }
 h2 {
   margin-bottom: 8px;
@@ -82,10 +83,15 @@ header {
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;
+  /* object-fit: contain; */
 }
 .image-container-image {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
+}
+.us-image {
+  width: 100%;
+  margin-bottom: 0;
 }
 .kunye {
   font-size: 0.92rem;
@@ -226,5 +232,27 @@ ul li {
     margin-bottom: 14px;
     font-size: 0.96rem;
     text-align: start;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .other_contents {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .other_contents article {
+    /* flex-basis: calc(100% - 10px); */
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
   }
 }
