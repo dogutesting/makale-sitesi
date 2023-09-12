@@ -4,18 +4,32 @@ import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useAppContext } from '@/context/ContextProvider';
+import { useEffect, useRef } from 'react';
 
 /*! img/a_0 */
 /* Article - Section - Section - Section */
 
 export default function films() {
-  
-  const [first, setfirst] = useState("")
+
+  const { nightMode } = useAppContext();
+
+  const readTimeSpan = useRef(0)
 
   useEffect(() => {
-    setfirst(window.innerWidth)
-  }, [])
+    const allP = document.querySelectorAll('p.text-content');
+    let totalNumber = 0;
+
+    allP.forEach(paragraf => {
+      const wordCount = paragraf.textContent.split(" ").length;
+      totalNumber += wordCount;
+    });
+
+    const averageWordReadingTime = 0.33;
+    const totalReadingTimeInMinutes = (totalNumber * averageWordReadingTime) / 60;
+    readTimeSpan.current.innerText = ": " + Math.round(totalReadingTimeInMinutes) + " dk";
+  }, []);
 
   return (
     
@@ -23,13 +37,35 @@ export default function films() {
       
         <Head>
           <title>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</title>
+          
         </Head>
 
         <article>
-
-        <h1>{first}</h1>
+          
         <h1>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</h1>
-          <p>Eğer karşılaştığınız zorluklar ve duygusal
+
+        { /* ana resim buraya eklenebilir priort true yapılabilir */}
+
+        <div className='details'>
+          <div>
+            <Image 
+                src={!nightMode ? '/images/details/black-added-date.png' : '/images/details/white-added-date.png'}
+                width={20} height={20} alt='Eklenme Tarihi İkonu'
+                title='Eklenme tarihi'/>
+            <span>: 11.09.2023</span>
+          </div>
+          <div>
+            <Image 
+                src={!nightMode ? '/images/details/black-read-time.png' : '/images/details/white-read-time.png'}
+                width={20} height={20} alt='Okuma süresi ikonu'
+                title='Okuma süresi'/>
+            <span ref={readTimeSpan}></span>
+          </div>
+        </div>
+
+        <hr></hr>
+
+          <p className='text-content'>Eğer karşılaştığınız zorluklar ve duygusal
              fırtınalar karşısında sarsılmaz bir karakter
               oluşturma hedefiniz varsa, doğru yerdesiniz.
                Erkekliğin ve karakterin derinliklerine dalmak
@@ -49,7 +85,7 @@ export default function films() {
              yil="2007"
              puan="7,2"
              />
-            <p>
+            <p className='text-content'>
                 Will Smith'in başrolde olduğu bu film, virüs sebebiyle
                  insanoğlunun neredeyse tamamen yok olduğu bir dünyada,
                   hayatta kalan bir bilim adamının hikayesini anlatıyor.
@@ -68,7 +104,7 @@ export default function films() {
              yil="2006"
              puan="7,6"
              />
-            <p>
+            <p className='text-content'>
                 "300 Spartalı", Antik Yunan'da Pers İmparatorluğu'na karşı mücadele eden 300 Spartalı savaşçının destansı hikayesini anlatıyor.
                  Film, erkekliğin ve maskülenliğin sadece zaferlerle değil, aynı zamanda fedakarlık, dayanışma, onur ve cesaret gibi değerlerle de tanımlandığını gösteriyor.
                   Spartalıların karşılaştığı zorluklar ve onların bu zorluklar karşısında sergilediği dayanıklılık, izleyicilere erkekliğin ne anlama geldiğini ve
@@ -88,7 +124,7 @@ export default function films() {
              yil="2006"
              puan="8,0"
              />
-            <p>
+            <p className='text-content'>
                 Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, "Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al."
             </p>
         </En>
@@ -103,7 +139,7 @@ export default function films() {
              yil="2017"
              puan="8,0"
              />
-          <p>
+          <p className='text-content'>
 
                Denis Villeneuve'un yönetmenliğindeki "Blade Runner 2049", siberpunk'ın kurucu filmi olan orijinal "Blade Runner"ın devamı niteliğindedir.
                 Görsel efektleri ve derin karakter analizleriyle birlikte Blade Runner 2049" çok katmanlı bir film. Ana konusu yaratıcılık,
@@ -126,7 +162,7 @@ export default function films() {
              yil="1995"
              puan="8,3"
              />
-            <p>
+            <p className='text-content'>
                 Skotyalı savaşçı William Wallace'ın gerçek yaşam hikayesini temel alan bu epik film,
                  özgürlük, onur ve aşk uğruna verilen mücadelenin etkileyici bir portresini sunar.
                   Mel Gibson'un hem yönetip hem başrolde oynadığı film, özgürlüğünü kaybettiği zaman
@@ -146,7 +182,7 @@ export default function films() {
              yil="2000"
              puan="8,5"
              />
-            <p>
+            <p className='text-content'>
             Roma İmparatorluğu'nun göz kamaştıran döneminde geçen bu epik film, ailesi hain bir prens tarafından öldürülen bir generalin sadece fiziksel değil, duygusal ve manevi mücadelesini de anlatır. Gladyatör arenalarında hayatta kalmak için savaşırken, Maximus sadece bedenen değil, ruhen de bir savaşçıya dönüşür. Onun bu zorlu yolculuğu, erkekliğin derinliklerini, onurunu, sadakatini ve fedakarlığını gözler önüne seriyor.
             </p>
         </En>
@@ -161,7 +197,7 @@ export default function films() {
              yil="1998"
              puan="8,5"
              />
-            <p>
+            <p className='text-content'>
             Neo-Nazi bir grubun içinde büyüyen bir genç olan Derek'in dönüşümünü anlatan bu film, ırkçılığın, nefretin ve şiddetin yıkıcı etkilerine odaklanır. Edward Norton'un başroldeki performansıyla dikkat çeken film, toplumsal konuları cesurca ele alışıyla bilinir. Film, maskülenliğin sadece fiziksel şiddetle değil, aynı zamanda kişisel gelişim ve değişimle de ilgili olduğunu ortaya koyar. Maskülenliğin sadece yıkıcılık ve zorbalıkla sınırlı olmadığını, bununla birlikte karakterimizi şekillendirme ve çevremizdeki insanlara olumlu etkilerde bulunma potansiyelimiz olduğunu vurgular.
             </p>
         </En>
@@ -176,7 +212,7 @@ export default function films() {
              yil="1999"
              puan="8,8"
              />
-          <p>
+          <p className='text-content'>
           Fight Club, erkeklik ve maskülenlik kavramlarına dair en akılda kalıcı filmlerden biridir. David Fincher yönetmenliğindeki bu eser, Chuck Palahniuk'un aynı adlı romanından uyarlanmıştır. Tüketim toplumu, erkekliğin krizi ve bireysel özgürlük temasları üzerine keskin bir eleştiri sunar. Brad Pitt ve Edward Norton'un başrolde olduğu film, izleyiciyi derinden etkileyen bir finalle sonlanır. Modern toplumun getirdiği görünmez kısıtlamalara dikkat çekerken, erkeklerin maskülenliği geri kazanma yolunda <Link href="https://www.centilmenkulubu.com/maskulenligi-arttirmak/">diğer erkeklerle kurduğu bağın önemini</Link> açık bir şekilde vurgular.
           </p>
         </En>
@@ -191,7 +227,7 @@ export default function films() {
              yil="1972"
              puan="9,2"
              />
-            <p>
+            <p className='text-content'>
             Francis Ford Coppola'nın yönettiği bu efsane film, mafya ailesinin iç yüzünü, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alır. Sinema tarihindeki en ikonik filmlerden biri olarak kabul edilir. Aynı zamanda erkekliğin, baba-oğul ilişkisinin ve liderlik etiğinin karmaşıklığını, erkeklerin aileleri ve onurları uğruna neleri feda edebileceğini gözler önüne serer. Bu bağlamda, film, erkeklerin ailevi ve toplumsal beklentilere nasıl yanıt verdiğini, maskülenliğin aile ve onur üzerindeki etkilerini inceler.
             </p>
         </En>
@@ -206,7 +242,7 @@ export default function films() {
              yil="1994"
              puan="9,3"
              />
-          <p>
+          <p className='text-content'>
           <Link href="stephen-king-ile-ilgili-yazilar">Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin
            suçsuz yere mahkum edildiği Shawshank
            hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini

@@ -19,6 +19,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri})
                         src={rsm} alt={rsm_alt}
                         fill
                         sizes="(max-width: 500px) 100vw, 100vw"
+                        /* max-width: 500px ise 500px yükle | sideları topla orta kaç px ise onu ver */
                         />                        
                     ) : (
                         <img
