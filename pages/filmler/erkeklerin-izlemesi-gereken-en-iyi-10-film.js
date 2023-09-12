@@ -11,28 +11,12 @@ import { useEffect, useRef } from 'react';
 /*! img/a_0 */
 /* Article - Section - Section - Section */
 
-export default function films() {
-
-  //burada kaldın
-  function addArticleJsonLd(m_baslik, yazar, eklenmeTarihi="2023-09-12T17:20:00+03:00", m_description, ilk_paragraf, m_resim) {
-    return {
-      __html: `{
-        "@context": "http://schema.org",
-        "@type": "Article",
-        "name": "${m_baslik}",
-        "author": "${yazar}",
-        "datePublished": "${eklenmeTarihi}",
-        "description": "${m_description}",
-        "content": "${ilk_paragraf}",
-        "image": "${m_resim}"
-      }
-      `,
-    };
-  }
+export default function manneedwatchConnectial() {
 
   const { nightMode } = useAppContext();
 
   const readTimeSpan = useRef(0)
+
   useEffect(() => {
     const allP = document.querySelectorAll('p.text-content');
     let totalNumber = 0;
@@ -47,40 +31,19 @@ export default function films() {
     readTimeSpan.current.innerText = ": " + Math.round(totalReadingTimeInMinutes) + " dk";
   }, []);
 
-  const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
-  const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film 2023";
-  //max 160 karakter.
-  const description = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın.";
-  const keywords = "erkek, film, 2023, adam";
-  const ana_resim = "";
-  const ana_paragraf = "";
-
   return (
     
     <Main>
       
         <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywords}/>
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://www.enonlar.com/"+url}/>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={addArticleJsonLd()}
-            key="article-jsonld"
-          />
+          <title>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</title>
+          <link rel="canonical" href="/erkeklerin-izlemesi-gereken-en-iyi-10-film" />
+          
         </Head>
 
         <article>
           
-        <h1>{baslik}</h1>
+        <h1>Erkeklerin İzlemesi Gereken En İyi 10 Film 2023</h1>
 
         { /* ana resim buraya eklenebilir priort true yapılabilir */}
 
