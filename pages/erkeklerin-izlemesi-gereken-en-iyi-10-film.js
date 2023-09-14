@@ -7,25 +7,110 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useAppContext } from '@/context/ContextProvider';
 import { useEffect, useRef } from 'react';
+import json_list from '@/components/json/moviesAndSeriesJson';
 
 /*! img/a_0 */
 /* Article - Section - Section - Section */
 
 export default function films() {
 
-  //burada kaldın
-  function addArticleJsonLd(m_baslik, yazar, eklenmeTarihi="2023-09-12T17:20:00+03:00", m_description, ilk_paragraf, m_resim) {
+  //her seferinde değiştirilmesi gereken yerler
+  // m_logo ve width height değeri güncellenecek
+  
+  //keywords
+  //isFamilyFriendly
+  //articleSection
+  //"item": "https://enonlar.com/film"
+
+  //m_kategori, m_minAge, m_keyWordsArray, m_wordCount, m_baslik, m_yazar, m_logo, m_eklenmeTarihi, m_description, m_resim, m_url, moviesAndSeriesJson
+                                                                                /*
+                                                                                type: Movie - Series
+                                                                                film10.url
+                                                                                film10.name
+                                                                                film10.image
+                                                                                film10.date
+                                                                                film10.director
+                                                                                film10.actors
+                                                                                film10.rating
+                                                                                film10.ratingCount
+                                                                                */
+  function addArticleJsonLd(m_kategori, m_minAge, m_keyWordsArray, m_wordCount, m_baslik, m_yazar, m_logo, m_eklenmeTarihi="2023-09-12T17:20:00+03:00", m_degistirilmeTarihi, m_description, m_resim, m_url, moviesAndSeriesJson) {
     return {
-      __html: `{
+      __html: `[
+        {
         "@context": "http://schema.org",
         "@type": "Article",
+        "inLanguage": "tr-TR",
+
+        "articleSection": "${m_kategori}",
+        "typicalAgeRange": "${m_minAge}",
+        "keywords": ${m_keyWordsArray},
+        "wordCount": "${m_wordCount}",
+
         "name": "${m_baslik}",
-        "author": "${yazar}",
-        "datePublished": "${eklenmeTarihi}",
+        "headline": "${m_baslik}",
+        "author": {
+          "@type": "Person",
+          "name": "${m_yazar}",
+        },
+        "editor": {
+          "@type": "Person",
+          "name": "${m_yazar}"
+        }
+        "publisher": {
+          "@type": "Organization",
+          "name": "En Onlar",
+          "url": "https://enonlar.com",
+          "logo": {
+            "@type": "ImageObject",
+            "width": "300",
+            "height": "60",
+            "url": "${m_logo}"
+          }
+        },
+        "creator": "${m_yazar}",
+        "datePublished": "${m_eklenmeTarihi}",
+        "dateCreated": "${m_eklenmeTarihi}",
+        "dateModified": "${m_eklenmeTarihi}",
+        
         "description": "${m_description}",
-        "content": "${ilk_paragraf}",
+        
+        "url": "${m_url}",
+
         "image": "${m_resim}"
-      }
+        "thumbnail": {
+          "@type": "ImageObject",
+          "url": "${m_resim}",
+        },
+      },
+
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": "1",
+            "name": "Ana Sayfa",
+            "item": "https://enonlar.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": "2",
+            "name": "Film",
+            "item": "https://enonlar.com/film"
+          },
+          {
+            "@type": "ListItem",
+            "position": "3",
+            "name": "${m_baslik}",
+            "item": "${m_url}"
+          }
+        ]
+      },
+
+      ${moviesAndSeriesJson}
+    ]
       `,
     };
   }
@@ -33,10 +118,10 @@ export default function films() {
   const { nightMode } = useAppContext();
 
   const readTimeSpan = useRef(0)
+  
+  let totalNumber = 0;
   useEffect(() => {
     const allP = document.querySelectorAll('p.text-content');
-    let totalNumber = 0;
-
     allP.forEach(paragraf => {
       const wordCount = paragraf.textContent.split(" ").length;
       totalNumber += wordCount;
@@ -47,13 +132,169 @@ export default function films() {
     readTimeSpan.current.innerText = ": " + Math.round(totalReadingTimeInMinutes) + " dk";
   }, []);
 
+  //Her sayfada ayarlanması gereken değerler
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film 2023";
   //max 160 karakter.
-  const description = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın.";
+  const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın.";
+  const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywords = "erkek, film, 2023, adam";
   const ana_resim = "";
-  const ana_paragraf = "";
+
+  const kategori = "film";
+  const minAge = "18";
+  const keywordsArray = ["erkekler", "için", "filmler", "2023", "adam"];
+  const wordCount = totalNumber;
+  //baslik
+  const yazar = "Doğukan Sayın";
+  const logo = "logo_url";
+  const eklenmeTarihi = "2023-09-12T17:20:00+03:00";
+  const degistirilmeTarihi = "2023-09-12T17:20:00+03:00";
+  //description
+  //ana_resim
+
+
+  //burada kaldın
+  //sadece bunu yazıp ardından en component'i içerisine buradaki değerler paslanabilir
+
+  {/* <En baslik="10 - Ben Efsaneyim - I Am Legend"
+            rsm="/images/a_0/f1_imlegend.jpg"
+            rsm_alt="Ben Efsaneyim - I Am Legend filminden bir fotoğraf."
+            enid="bolum-10"
+            pri={true}>
+            <Kunye oyuncular={["Will Smith"]}
+             yonetmen="Francis Lawrence"
+             kategori="Bilim Kurgu/Drama"
+             sure="1 saat 41 dakika"
+             yil="2007"
+             puan="7,2"
+             />
+            <p className='text-content'>
+                Will Smith'in başrolde olduğu bu film, virüs sebebiyle
+                 insanoğlunun neredeyse tamamen yok olduğu bir dünyada,
+                  hayatta kalan bir bilim adamının hikayesini anlatıyor.
+                   Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu
+                    filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor.
+            </p>
+        </En> */}
+
+  const jsonList = json_list("Movie",
+    {
+      "url": `https://enonlar.com/${url}#bolum-10`,
+      "name":"Ben Efsaneyim - I Am Legend",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"2007",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":"",
+
+
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-9`,
+      "name":"300 Spartalı - 300",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-8`,
+      "name":"Umudunu Kaybetme - The Pursuit of Happyness",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-7`,
+      "name":"Bıçak Sırtı: 2049 - Blade Runner 2049",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-6`,
+      "name":"Cesur Yürek - Braveheart",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-5`,
+      "name":"Gladyatör - Gladiator",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-4`,
+      "name":"Geçmişin Gölgesinde - American History X",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-3`,
+      "name":"Dövüş Kulübü - Fight Club",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-2`,
+      "name":"Baba - The Godfather",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+    {
+      "url": `https://enonlar.com/${url}#bolum-1`,
+      "name":"Esaretin Bedeli - The Shawshank Redemption",
+      "image":`https://enonlar.com/${url}/images/a_0/f1_imlegend.jpg`,
+      "date":"",
+      "director":"",
+      "actors":[],
+      "rating":"",
+      "ratingCount":""
+    },
+  )
+  
+  //m_kategori, m_minAge, m_keyWordsArray, m_wordCount, m_baslik, m_yazar, m_logo, m_eklenmeTarihi, m_degistirilmeTarihi, m_description, m_resim, m_url, moviesAndSeriesJson
+                                                                                /*
+                                                                                type: Movie - Series
+                                                                                film10.url
+                                                                                film10.name
+                                                                                film10.image
+                                                                                film10.date
+                                                                                film10.director
+                                                                                film10.actors
+                                                                                film10.rating
+                                                                                film10.ratingCount
+                                                                                */
 
   return (
     
@@ -71,9 +312,15 @@ export default function films() {
           content={ana_resim}
           />
           <meta property="og:url" content={"https://www.enonlar.com/"+url}/>
+
+          <meta name="twitter:card" content="summary_large_image"/>
+          <meta name="twitter:title" content={baslik}/>
+          <meta name="twitter:description" content={description}/>
+          <meta name="twitter:image" content={ana_resim}/>
+          
           <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={addArticleJsonLd()}
+            dangerouslySetInnerHTML={addArticleJsonLd(kategori, minAge, keywordsArray, wordCount, baslik, yazar, logo, eklenmeTarihi, degistirilmeTarihi, description, ana_resim, url, jsonList)}
             key="article-jsonld"
           />
         </Head>
@@ -82,7 +329,7 @@ export default function films() {
           
         <h1>{baslik}</h1>
 
-        { /* ana resim buraya eklenebilir priort true yapılabilir */}
+        { /* ana resim buraya eklenebilir priort true yapılabilir ve ana resim thumbnail boyutu*/}
 
         <div className='details'>
           <div>
@@ -115,6 +362,7 @@ export default function films() {
         <En baslik="10 - Ben Efsaneyim - I Am Legend"
             rsm="/images/a_0/f1_imlegend.jpg"
             rsm_alt="Ben Efsaneyim - I Am Legend filminden bir fotoğraf."
+            enid="bolum-10"
             pri={true}>
             <Kunye oyuncular={["Will Smith"]}
              yonetmen="Francis Lawrence"
@@ -128,13 +376,14 @@ export default function films() {
                  insanoğlunun neredeyse tamamen yok olduğu bir dünyada,
                   hayatta kalan bir bilim adamının hikayesini anlatıyor.
                    Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu
-                    filmde, bir erkeğin şartlar ne olursa olsun yapması gereken şeyi yapmasına güzel bir örnek sunuyor.
+                    filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor.
             </p>
         </En>
 
         <En baslik="9 - 300 Spartalı - 300"
             rsm="/images/a_0/spartans_300.jpg"
-            rsm_alt="300 Spartalı - 300 filminden bir fotoğraf.">
+            rsm_alt="300 Spartalı - 300 filminden bir fotoğraf."
+            enid="bolum-9">
             <Kunye oyuncular={["Gerard Butler"]}
              yonetmen="Zack Snyder"
              kategori="Aksiyon/Tarih/Drama"
@@ -154,7 +403,8 @@ export default function films() {
 
         <En baslik="8 - Umudunu Kaybetme - The Pursuit of Happyness"
             rsm="/images/a_0/f2_umudunu_kaybetme.jpg"
-            rsm_alt="Umudunu Kaybetme - The Pursuit of Happyness filminden bir fotoğraf.">
+            rsm_alt="Umudunu Kaybetme - The Pursuit of Happyness filminden bir fotoğraf."
+            enid="bolum-8">
             <Kunye oyuncular={["Will Smith", "Jaden Smith"]}
              yonetmen="Gabriele Muccino"
              kategori="Biyografi/Drama"
@@ -169,7 +419,8 @@ export default function films() {
 
         <En baslik="7 - Bıçak Sırtı: 2049 - Blade Runner 2049"
          rsm="/images/a_0/f3_blade_runner_0.jpg"
-          rsm_alt="Bıçak Sırtı: 2049 - Blade Runner 2049 filminden bir fotoğraf.">
+          rsm_alt="Bıçak Sırtı: 2049 - Blade Runner 2049 filminden bir fotoğraf."
+          enid="bolum-7">
           <Kunye oyuncular={["Ryan Gosling", "Ana de Armas"]}
              yonetmen="Denis Villeneuve"
              kategori="Bilim Kurgu/Aksiyon"
@@ -192,7 +443,8 @@ export default function films() {
 
         <En baslik="6 - Cesur Yürek - Braveheart"
             rsm="/images/a_0/f4_bravehearth.jpg"
-            rsm_alt="Cesur Yürek - Braveheart filminden bir fotoğraf.">
+            rsm_alt="Cesur Yürek - Braveheart filminden bir fotoğraf."
+            enid="bolum-6">
             <Kunye oyuncular={["Mel Gibson"]}
              yonetmen="Mel Gibson"
              kategori="Biyografi/Drama/Savaş"
@@ -212,7 +464,8 @@ export default function films() {
 
         <En baslik="5 - Gladyatör - Gladiator"
             rsm="/images/a_0/f6_gladiator.jpg"
-            rsm_alt="Gladyatör - Gladiator filminden bir fotoğraf.">
+            rsm_alt="Gladyatör - Gladiator filminden bir fotoğraf."
+            enid="bolum-5">
             <Kunye oyuncular={["Russell Crowe", "Joaquin Phoenix"]}
              yonetmen="Ridley Scott"
              kategori="Aksiyon/Drama"
@@ -227,7 +480,8 @@ export default function films() {
 
         <En baslik="4 - Geçmişin Gölgesinde - American History X"
             rsm="/images/a_0/f7_american_history_x.jpg"
-            rsm_alt="Geçmişin Gölgesinde - American History X filminden bir fotoğraf.">
+            rsm_alt="Geçmişin Gölgesinde - American History X filminden bir fotoğraf."
+            enid="bolum-4">
             <Kunye oyuncular={["Edward Norton"]}
              yonetmen="Tony Kaye"
              kategori="Suç/Drama"
@@ -242,7 +496,8 @@ export default function films() {
 
         <En baslik="3 - Dövüş Kulübü - Fight Club"
          rsm="/images/a_0/f8_fight_club.png"
-          rsm_alt="Dövüş Kulübü - Fight Club filminden bir fotoğraf.">
+          rsm_alt="Dövüş Kulübü - Fight Club filminden bir fotoğraf."
+          enid="bolum-3">
             <Kunye oyuncular={["Edward Norton", "Brad Pitt"]}
              yonetmen="David Fincher"
              kategori="Gerilim/Drama"
@@ -257,7 +512,8 @@ export default function films() {
 
         <En baslik="2 - Baba - The Godfather"
             rsm="/images/a_0/f9_the_godfather.jpg"
-            rsm_alt="Baba - The Godfather filminden bir fotoğraf.">
+            rsm_alt="Baba - The Godfather filminden bir fotoğraf."
+            enid="bolum-2">
             <Kunye oyuncular={["Marlon Brando", "Al Pacino"]}
              yonetmen="Francis Ford Coppola"
              kategori="Suç/Drama"
@@ -272,7 +528,8 @@ export default function films() {
 
         <En baslik="1 - Esaretin Bedeli - The Shawshank Redemption"
          rsm="/images/a_0/f10_esaretin_bedeli.jpg"
-          rsm_alt="Esaretin Bedeli - The Shawshank Redemption filminden bir fotoğraf.">
+          rsm_alt="Esaretin Bedeli - The Shawshank Redemption filminden bir fotoğraf."
+          enid="bolum-1">
             <Kunye oyuncular={["Morgan Freeman", "Tim Robbins"]}
              yonetmen="Frank Darabont"
              kategori="Dram/Polisiye"

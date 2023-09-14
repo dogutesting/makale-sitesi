@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { useAppContext } from '@/context/ContextProvider';
 
 
-export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri}) {
+export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid}) {
 
     if(!pri) pri = false;
 
@@ -10,7 +10,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri})
 
     return (
         <section>
-            <h2>{baslik}</h2>
+            <h2 id={enid}>{baslik}</h2>
             <div className={ supportWebp ? 'image-container' : ''}>
                 { supportWebp ? (
                         <Image
