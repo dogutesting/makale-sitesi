@@ -118,7 +118,12 @@ header {
   padding: 6px;
   
 }
-
+.kunye ul {
+  display: inline;
+}
+.kunye ul li {
+  display: inline;
+}
 /* Other makales */
 .other_contents {
   display: flex;
@@ -157,7 +162,6 @@ footer {
   padding-bottom: 20px;
 }
 ul {
-  color: white;
   margin: 0;
   padding: 0;
   list-style-type: none;

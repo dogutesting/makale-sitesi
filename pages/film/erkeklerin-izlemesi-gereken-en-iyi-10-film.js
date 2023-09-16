@@ -1,5 +1,5 @@
 import Main from '@/components/Main';
-import En from '@/components/mini_components/en_iyi_10_resimli_section';
+import En from '@/components/mini_components/en';
 import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
