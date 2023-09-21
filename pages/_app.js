@@ -47,6 +47,8 @@ export default function App({ Component, pageProps }) {
 
   */
 
+  /* herhangi bir problem çıkar ise bu sayfayı sadece index'e koy */
+
   function addMainJsonLd(m_baslik, yazar, eklenmeTarihi="2023-09-12T17:20:00+03:00", m_description, ilk_paragraf, m_resim) {
     return {
       __html: `[
@@ -54,7 +56,7 @@ export default function App({ Component, pageProps }) {
           "@context": "http://schema.org",
           "@type": "WebSite",
           "name": "Enonlar",
-          "url": "https://enonlar.com",
+          "url": "https://enonlar.com"
         },
         {
           "@context": "http://schema.org",
@@ -64,7 +66,7 @@ export default function App({ Component, pageProps }) {
           "url": "https://enonlar.com",
           "email": "info@enonlar.com",
           "sameAs": [
-            "https://www.enonlar.com",
+            "https://www.enonlar.com"
           ],
           "logo": {
             "@type": "ImageObject",
@@ -76,32 +78,11 @@ export default function App({ Component, pageProps }) {
     };
   }
 
-  /* 
-  type WebSite
-  "potentialAction": [
-            {
-              "@type": "SearchAction",
-              "target": "https://enonlar.com/ara/haber/{queryKeyword}",
-              "query-input": "required name=queryKeyword"
-            }
-          ]
-  _______________________________________________________________________
-  type organization
-"sameAs": [ sadece linkler olabilir
-            "enonlar.com",
-            "https://www.facebook.com/enonlar",
-            "https://twitter.com/enonlar",
-            "https://www.instagram.com/enonlar/",
-            "https://youtube.com/enonlar",
-            "https://tr.wikipedia.org/wiki/Onedio"
-          ],
-
-  */
-
   return (
     <Wrapper>
       <Head>
         <meta charset="UTF-8"/>
+        <meta name="robots" content="index"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

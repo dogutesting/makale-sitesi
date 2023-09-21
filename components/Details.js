@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 export default function Details({nightMode, readTimeSpan="0"}) {
 
-    console.log("details içi: " + nightMode + " - " + readTimeSpan);
-
   return (
     <div className='details'>
         <div>
@@ -18,7 +16,7 @@ export default function Details({nightMode, readTimeSpan="0"}) {
             src={!nightMode ? '/images/details/black-read-time.png' : '/images/details/white-read-time.png'}
             width={20} height={20} alt='Okuma süresi ikonu'
             title='Okuma süresi'/>
-        <span>{readTimeSpan}</span>
+        <span>: {readTimeSpan} dk</span>
         </div>
     </div>
   )

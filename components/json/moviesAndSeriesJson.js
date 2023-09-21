@@ -1,11 +1,10 @@
-export default function json_list(articleInfos, type, arr) {
+export default function json_list(articleInfos, type, summaryText, arr) {
   
-  
-  let wordCount = "", articleBody = "";
+  function escapeString(input) {
+    return input.replace(/"/g, "'");
+  }
 
-  //wordCount and articleBody düzenlenecek
-  //JSON+LD düzenlenecek
-
+  let articleText = "";
   const listeArr = [];
   arr.map((item, index) => {
     
@@ -35,14 +34,31 @@ export default function json_list(articleInfos, type, arr) {
           }
         );
 
-        //wordCount ve articleBody kodları burada yazılmalı item.paragraf ->
-
+        
+        articleText += " " + item.name;
+        let children = item.paragraf.props.children;
+        if(typeof(children) == "object") {
+          children.map(child => {
+            if(typeof(child) == "object") {
+              articleText += " " + child.props.children;
+            }
+            else {
+              articleText += " " + child;
+            }
+          })
+        }
+        else {
+          articleText += " " + children;
+        }
   })
 
-  console.log(JSON.stringify(listeArr));
-  
+  const articleBody = escapeString(summaryText.props.children + articleText);
+  const wordCount = articleBody.split(" ").length;
+  const readTime = Math.round((wordCount * 0.33) / 60);
+
   return {
-    __html: `[
+    readTimeSpan: readTime,
+    html: `[
       {
       "@context": "http://schema.org",
       "@type": "Article",
@@ -52,18 +68,16 @@ export default function json_list(articleInfos, type, arr) {
       "typicalAgeRange": "${articleInfos.minAge}",
       "keywords": ${JSON.stringify(articleInfos.keywordsArray)},
 
-      "wordCount": "${wordCount}",
-
       "name": "${articleInfos.baslik}",
       "headline": "${articleInfos.baslik}",
       "author": {
         "@type": "Person",
-        "name": "${articleInfos.yazar}",
+        "name": "${articleInfos.yazar}"
       },
       "editor": {
         "@type": "Person",
         "name": "${articleInfos.yazar}"
-      }
+      },
       "publisher": {
         "@type": "Organization",
         "name": "En Onlar",
@@ -81,19 +95,21 @@ export default function json_list(articleInfos, type, arr) {
       "dateModified": "${articleInfos.eklenmeTarihi}",
       "description": "${articleInfos.description}",
 
+      "wordCount": "${wordCount}",
       "articleBody": "${articleBody}",
       
       "url": "${articleInfos.url}",
 
-      "image": "${articleInfos.ana_resim}"
+      "image": "${articleInfos.ana_resim}",
       "thumbnail": {
         "@type": "ImageObject",
-        "url": "${articleInfos.ana_resim}",
-      },
+        "url": "${articleInfos.ana_resim}"
+      }
     },
 
     {
       "@context": "https://schema.org",
+      "name": "Breadcrumb Links",
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
@@ -119,6 +135,7 @@ export default function json_list(articleInfos, type, arr) {
 
     {
       "@context": "https://schema.org",
+      "name": "List of ${type}"
       "@type": "ItemList",
       "itemListElement": ${JSON.stringify(listeArr)}
     }

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function kunye({oyuncular, yonetmen, kategori, sure, yil, puan}) {
+export default function kunye({oyuncular, yonetmen, kategori, sure, yil, puan, puan2}) {
 
   /*
 
@@ -47,7 +47,9 @@ export default function kunye({oyuncular, yonetmen, kategori, sure, yil, puan}) 
         <span><b>Süre:</b> {sure}</span> <span> | </span>
         
         <span><b>Yapım Yılı: </b><Link title={yil+" yılının en iyi 10 filmi"} href={yil+"-yilinin-en-iyi-10-filmi"}> {yil}</Link></span> <span> | </span>
-        <span><b><Link title="imdb puanı en yüksek 10 film" href="imdb-puanı-en-yuksek-10-film">imdb puanı:</Link></b> {puan}/10</span>
+        <span><b><Link title="imdb puanı en yüksek 10 film" href="imdb-puani-en-yuksek-10-film">imdb puanı:</Link></b> {puan}/10</span>
+        
+        <span><b><Link title="metascore puanı en yüksek 10 film" href="metascore-puani-en-yuksek-10-film">metascore puanı:</Link></b> {puan2}/100</span>
     </aside>
   )
 }
