@@ -61,9 +61,12 @@ export default function json_list(articleInfos, type, summaryText, arr) {
     html: `[
       {
       "@context": "http://schema.org",
-      "@type": "Article",
       "inLanguage": "tr-TR",
-
+      "@type": "Article",
+      "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://enonlar.com/${articleInfos.url}"
+      },
       "articleSection": "${articleInfos.kategori}",
       "typicalAgeRange": "${articleInfos.minAge}",
       "keywords": ${JSON.stringify(articleInfos.keywordsArray)},

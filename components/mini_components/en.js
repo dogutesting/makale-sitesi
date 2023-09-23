@@ -9,7 +9,8 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
     const { supportWebp } = useAppContext();
 
     return (
-        <section>
+        /* <section> */
+        <>
             <h2 id={enid}>{baslik}</h2>
             <div className={ supportWebp ? 'image-container' : ''}>
                 { supportWebp ? (
@@ -30,12 +31,9 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                       /> 
                     )
                 }
-                
-                
-
-
             </div>
             {children}
-        </section>
+        </>
+        /* </section> */
     )
 }

@@ -16,7 +16,7 @@ export default function OtherContents() {
 
       icerik="Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film."/>
       
-      <ArticleBox rsm="/images/a_0/f2_umudunu_kaybetme.jpg" 
+      <ArticleBox rsm="/images/a_0/f3_umudunu_kaybetme.jpg" 
       baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film"
       rsm_alt="Erkeklerin İzlemesi Gereken En İyi 10 Film"
 

@@ -49,7 +49,7 @@ export default function App({ Component, pageProps }) {
 
   /* herhangi bir problem çıkar ise bu sayfayı sadece index'e koy */
 
-  function addMainJsonLd(m_baslik, yazar, eklenmeTarihi="2023-09-12T17:20:00+03:00", m_description, ilk_paragraf, m_resim) {
+  function addMainJsonLd() {
     return {
       __html: `[
         {
@@ -86,6 +86,17 @@ export default function App({ Component, pageProps }) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#603cba"/>
+        <meta name="apple-mobile-web-app-title" content="En Onlar"/>
+        <meta name="application-name" content="En Onlar"/>
+        <meta name="msapplication-TileColor" content="#603cba"/>
+        <meta name="theme-color" content="#ffffff"/>
+
         <meta property="og:locale" content="tr_TR"/>
         <meta property="og:site_name" content="enonlar"/>
         <script

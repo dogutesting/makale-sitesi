@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function index() {
 
-  function addArticleJsonLd(m_baslik, yazar, eklenmeTarihi="2023-09-12T17:20:00+03:00", m_description, ilk_paragraf, m_resim) {
+  function addArticleJsonLd() {
     return {
       __html: `
       {
@@ -16,21 +16,21 @@ export default function index() {
               {
                 "@context": "https://schema.org",
                 "@type": "SiteNavigationElement",
-                "@id": "#header",
-                "name": "Dizi & Film",
+                "@id": "#film",
+                "name": "Film",
                 "url": "https://enonlar.com/film"
               },
               {
                 "@context": "https://schema.org",
                 "@type": "SiteNavigationElement",
-                "@id": "#header",
-                "name": "Dizi & Film",
+                "@id": "#dizi",
+                "name": "Dizi",
                 "url": "https://enonlar.com/dizi"
               },
               {
                 "@context": "https://schema.org",
                 "@type": "SiteNavigationElement",
-                "@id": "#header",
+                "@id": "#spor",
                 "name": "Spor",
                 "url": "https://enonlar.com/spor"
               },
@@ -144,7 +144,13 @@ export default function index() {
     <>
       <Head>
         <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://www.enonlar.com/"/>
+        <meta property="og:url" content="https://enonlar.com/"/>
+
+        <meta property="og:image" content="/og-image.jpg"/>
+        <meta property="og:image:height" content="136"/>
+        <meta property="og:image:width" content="260"/>
+        <meta property="og:description" content="Enonlar, en iyi 10 içerikler, en popüler 10 filmler, en iyi 10 araba incelemeleri, en çok okunan kitap önerileri ve daha fazlasını sunan bir içerik platformudur. Sizler için seçtiğimiz en ilginç konuları keşfedin!"/>
+
       </Head>
 
       <Main>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function kunye({oyuncular, yonetmen, kategori, sure, yil, puan, puan2}) {
+export default function kunye({oyuncular, yonetmen, kategoris, sure, yil, puan, puan2}) {
 
   /*
 
@@ -35,20 +35,26 @@ export default function kunye({oyuncular, yonetmen, kategori, sure, yil, puan, p
           <ul>
             {
               oyuncular.map((item, index, arr) => {
-                if(index == arr.length -1) { return (<li key={index}><Link title={"En iyi " + item + " filmleri"} href={"/en-iyi-"+trToEngLower(item)+"-filmleri"}>{item}</Link></li>) }
-                else { return (<li key={index}><Link title={"En iyi " + item + " filmleri"} href={"/en-iyi-"+trToEngLower(item)+"-filmleri"}>{item}</Link> - </li>)}
+                if(index == arr.length -1) { return (<li key={index}><Link title={"En iyi 10" + item + " filmleri"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmleri"}>{item}</Link></li>) }
+                else { return (<li key={index}><Link title={"En iyi 10" + item + " filmleri"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmleri"}>{item}</Link> - </li>)}
               })
             }
           </ul>
-        </span><span> | </span>
+        </span><span className='fof'> | </span>
 
-        <span><b>Yönetmen:</b> <Link title={"En iyi "+yonetmen+" filmleri"} href={"en-iyi-"+trToEngLower(yonetmen)+"-filmleri"}>{yonetmen}</Link></span> <span> | </span>
-        <span><b>Kategori:</b> {kategori}</span> <span> | </span>
-        <span><b>Süre:</b> {sure}</span> <span> | </span>
+        <span><b>Yönetmen:</b> <Link title={"En iyi 10"+yonetmen+" filmleri"} href={"en-iyi-10-"+trToEngLower(yonetmen)+"-filmleri"}>{yonetmen}</Link></span> <span className='fof'> | </span>
+        <span><b>Kategori:</b> <ul>{
+            kategoris.map((item, index, arr) => {
+              if(index == arr.length -1) { return (<li key={index}><Link title={"En iyi 10" + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link></li>) }
+              else { return (<li key={index}><Link title={"En iyi 10" + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link>/</li>)}
+            })
+        }</ul>
+        </span> <span className='fof'> | </span>
+        <span><b>Süre:</b> {sure}</span> <span className='fof'> | </span>
         
-        <span><b>Yapım Yılı: </b><Link title={yil+" yılının en iyi 10 filmi"} href={yil+"-yilinin-en-iyi-10-filmi"}> {yil}</Link></span> <span> | </span>
-        <span><b><Link title="imdb puanı en yüksek 10 film" href="imdb-puani-en-yuksek-10-film">imdb puanı:</Link></b> {puan}/10</span>
-        
+        <span><b>Yapım Yılı: </b><Link title={yil+" yılının en iyi 10 filmi"} href={yil+"-yilinin-en-iyi-10-filmi"}> {yil}</Link></span> <span className='fof'> | </span>
+        <span><b><Link title="imdb puanı en yüksek 10 film" href="imdb-puani-en-yuksek-10-film">imdb puanı:</Link></b> {puan}</span> <span className='fof'> | </span>
+
         <span><b><Link title="metascore puanı en yüksek 10 film" href="metascore-puani-en-yuksek-10-film">metascore puanı:</Link></b> {puan2}/100</span>
     </aside>
   )
