@@ -235,14 +235,14 @@ export default function films() {
           />
         </Head>
 
-        <article>
+        <article id='main-article'>
           
           <h1>{baslik}</h1>
 
           { /* ana resim buraya eklenebilir priort true yapılabilir ve ana resim thumbnail boyutu*/}
           <Details nightMode={nightMode} readTimeSpan={jsonList.readTimeSpan}/>
           
-          <hr className='split'></hr>
+          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
           {(summaryText)}
 
@@ -273,7 +273,10 @@ export default function films() {
           }
         
         </article>
-
+        
+        <h2 className='other-h2'>Diğer İçerikler</h2>
+        <OtherContents />
+        
         
     </Main>
   )

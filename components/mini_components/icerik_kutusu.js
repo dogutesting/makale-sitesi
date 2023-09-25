@@ -6,9 +6,12 @@ export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
   
     const { nightMode, supportWebp } = useAppContext();
 
+    const hd = 16;
+
     return (
     
-    <article className={nightMode ? 'white' : 'black'}>
+    
+    <article>
         <Link href="" className=''>
             <div className='image-container'>
                 {
@@ -28,11 +31,34 @@ export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
                             alt={rsm_alt}
                         /> 
                     )
-                }
-                
+                } 
             </div>
+            
+            {/* 
+                -> çok fazla parça olduğu için kötü gözüküyor
+                -> eklenme tarihi ve okunma saatini nereden çekeceğim
+                -> bunu içerikler çoğaldıktan sonra yapabilirim
+            */}
+            {/* <div className='details other-details'>
+                <div>
+                    <Image 
+                    src={!nightMode ? '/images/details/black-add-date.png' : '/images/details/white-add-date.png'}
+                    width={hd} height={hd} alt='Eklenme Tarihi İkonu'
+                    title='Eklenme tarihi'/>
+                    <span>11.12.23</span>
+                </div>
+                <div>
+                    <Image 
+                    src={!nightMode ? '/images/details/black-time-left.png' : '/images/details/white-time-left.png'}
+                    width={hd} height={hd} alt='Eklenme Tarihi İkonu'
+                    title='Eklenme tarihi'/>
+                    <span>5 dk</span>
+                </div>
+            </div> */}
+           
+
             <h2>{baslik}</h2>
-            <p className={nightMode ? 'white' : 'soft-black'}>   
+            <p className={nightMode ? 'soft-white' : 'soft-black'}>   
             {
                 icerik.split(" ").length > 7 ? 
                 (icerik.split(" ").slice(0, 7).join(" ") + "...") :

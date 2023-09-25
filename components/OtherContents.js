@@ -22,7 +22,7 @@ export default function OtherContents() {
 
       icerik="Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."/>
       
-      <ArticleBox rsm="/images/a_0/f3_blade_runner_0.jpg"
+      <ArticleBox rsm="/images/a_0/f4_blade_runner_0.jpg"
       baslik="Why Blade Runner Best Movie of the 2017"
       rsm_alt="Why Blade Runner Best Movie of the 2017"
 
