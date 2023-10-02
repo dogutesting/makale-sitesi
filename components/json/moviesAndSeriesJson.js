@@ -8,6 +8,7 @@ export default function json_list(articleInfos, type, summaryText, arr) {
   const listeArr = [];
   arr.map((item, index) => {
     
+    if(type == "Movies") {
       listeArr.push(
         {
             "@type": "ListItem",
@@ -33,6 +34,45 @@ export default function json_list(articleInfos, type, summaryText, arr) {
             }
           }
         );
+    }
+    else if (type == "Series") {
+      let dateSegments = item.date.split('–'); // Tarihi ayırma
+      let startDate = dateSegments[0];
+      let endDate = dateSegments.length > 1 ? dateSegments[1] : undefined;
+    
+      listeArr.push(
+        {
+          "@type": "ListItem",
+          "position": (index+1),
+          "item": {
+            "@type": "TVSeries",
+            "url": item.url,
+            "name": item.name,
+            "image": item.image,
+            "startDate": startDate,
+            ...(endDate && {"endDate": endDate}), // Eğer endDate varsa ekliyoruz
+            "numberOfSeasons": item.eps,  // Serinin bölüm sayısını ekledik
+            "director": {
+                "@type": "Person",
+                "name": item.director
+              },
+            "actor": item.actors.map(actor => { // Aktörleri doğru formatta ekliyoruz
+              return {
+                "@type": "Person",
+                "name": actor
+              };
+            }),
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": item.ratingValue,
+              "bestRating": "10",
+              "ratingCount": item.ratingCount
+            }
+          }
+        }
+      );
+    }
+      
 
         
         articleText += " " + item.name;
@@ -131,14 +171,14 @@ export default function json_list(articleInfos, type, summaryText, arr) {
           "@type": "ListItem",
           "position": "3",
           "name": "${articleInfos.baslik}",
-          "item": "${articleInfos.url}"
+          "item": "https://enonlar.com/${articleInfos.kategori}/${articleInfos.url}"
         }
       ]
     },
 
     {
       "@context": "https://schema.org",
-      "name": "List of ${type}"
+      "name": "List of ${type}",
       "@type": "ItemList",
       "itemListElement": ${JSON.stringify(listeArr)}
     }

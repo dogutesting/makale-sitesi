@@ -46,7 +46,7 @@ export default function kunye({oyuncular, yonetmen, kategoris, sure, yil, puan, 
         <span><b>Kategori:</b> <ul>{
             kategoris.map((item, index, arr) => {
               if(index == arr.length -1) { return (<li key={index}><Link title={"En iyi 10" + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link></li>) }
-              else { return (<li key={index}><Link title={"En iyi 10" + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link>/</li>)}
+              else { return (<li key={index}><Link title={"En iyi 10" + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link> / </li>)}
             })
         }</ul>
         </span> <span className='fof'> | </span>

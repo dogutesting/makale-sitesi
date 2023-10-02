@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Details({nightMode, readTimeSpan="0"}) {
+export default function Details({nightMode, addDate, readTimeSpan="0"}) {
 
   const hd = 20;
 
@@ -15,7 +15,7 @@ export default function Details({nightMode, readTimeSpan="0"}) {
           src={!nightMode ? '/images/details/black-add-date.png' : '/images/details/white-add-date.png'}
           width={hd} height={hd} alt='Eklenme Tarihi İkonu'
           title='Eklenme tarihi'/>
-        <span className='details_span'>: 11.09.2023</span>
+        <span className='details_span'>: {addDate}</span>
         </div>
         <div>
         <Image 

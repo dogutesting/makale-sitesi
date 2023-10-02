@@ -43,7 +43,7 @@ export default function Main({children}) {
             </div>
             <div className='side'></div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
     </div>
   )
 }

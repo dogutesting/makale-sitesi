@@ -1,9 +1,11 @@
 import Main from "@/components/Main"
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
+import ContentBox from "@/components/index/anasayfa_icerik_kutusu";
+import CategoryBox from "@/components/index/CategoryBox";
+import { useAppContext } from "@/context/ContextProvider";
 
 export default function index() {
+  const { nightMode } = useAppContext();
 
   function addArticleJsonLd() {
     return {
@@ -154,9 +156,65 @@ export default function index() {
       </Head>
 
       <Main>
-        <Link href="/erkeklerin-izlemesi-gereken-en-iyi-10-film">Tıkla</Link>
-        <h1 style={{textAlign: "center"}}>Ana sayfa henüz tasarlanmadığı için rastgele bir sayfaya yönlendir.</h1>
-        <hr></hr>
+        <CategoryBox />
+
+        <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
+
+        <ContentBox
+        url="erkeklerin-izlemesi-gereken-en-iyi-10-film"
+        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film Sizler İçin Derledik"
+        resim="/images/a_0/f4_blade_runner_0.jpg"
+        eklenmeTarihi="30.09.23"
+        okunmaSuresi="5 dk"
+        kategori="film"
+        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
+        
+        <ContentBox
+        url=""
+        baslik="Umudunu Kaybetme - The Pursuit of Happyness Yönetmeninden duygusal sözler"
+        resim="/images/a_0/f3_umudunu_kaybetme.jpg"
+        eklenmeTarihi="07.05.23"
+        okunmaSuresi="8 dk"
+        kategori="spor"
+        paragraf={`Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, \"Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al."`}
+        />
+
+        <ContentBox
+        url=""
+        baslik="Will Smith neden tokat attı?"
+        resim="/images/a_0/f1_imlegend.jpg"
+        eklenmeTarihi="05.09.23"
+        okunmaSuresi="5 dk"
+        kategori="araba"
+        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
+        
+        <ContentBox
+        url=""
+        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film Sizler İçin Derledik"
+        resim="/images/a_0/f4_blade_runner_0.jpg"
+        eklenmeTarihi="30.09.23"
+        okunmaSuresi="5 dk"
+        kategori="film"
+        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
+        
+        <ContentBox
+        url=""
+        baslik="Umudunu Kaybetme - The Pursuit of Happyness Yönetmeninden duygusal sözler"
+        resim="/images/a_0/f3_umudunu_kaybetme.jpg"
+        eklenmeTarihi="07.05.23"
+        okunmaSuresi="8 dk"
+        kategori="spor"
+        paragraf={`Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, \"Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al."`}
+        />
+
+        <ContentBox
+        url=""
+        baslik="Will Smith neden tokat attı?"
+        resim="/images/a_0/f1_imlegend.jpg"
+        eklenmeTarihi="05.09.23"
+        okunmaSuresi="5 dk"
+        kategori="araba"
+        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
       
       </Main>
     </>

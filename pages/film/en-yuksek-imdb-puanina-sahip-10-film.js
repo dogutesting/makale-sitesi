@@ -1,5 +1,7 @@
-export default function smokeSome() {
+import MostMoviesMain from "../en-yuksek-imdb-puanina-sahip-10-film"
+
+export default function mostMovies() {
   return (
-    <div>en-yuksek-10-imdb-puanina-sahip-film</div>
+    <MostMoviesMain />
   )
 }
