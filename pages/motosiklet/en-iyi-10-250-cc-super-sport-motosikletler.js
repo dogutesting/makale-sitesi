@@ -1,7 +1,7 @@
-import eniyi10250ccMotosikletMain from "../en-iyi-10-250-cc-super-sport-motosikletler"
+import Eniyi250ccSuperMain from "../en-iyi-10-250-cc-super-sport-motosikletler"
 
-export default function eniyi10250ccMotosiklet() {
+export default function eniyi250ccSuper() {
   return (
-    <eniyi10250ccMotosikletMain />
+    <Eniyi250ccSuperMain />
   )
 }

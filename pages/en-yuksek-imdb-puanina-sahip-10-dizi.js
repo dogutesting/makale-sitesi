@@ -8,6 +8,11 @@ import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 
+/*
+Kunyede bazı sıkıntılar var
+Kunyedeki link tıklama olayında da sıkıntılar var
+*/
+
 export default function MostSeriesMain() {
   const { nightMode } = useAppContext();
 

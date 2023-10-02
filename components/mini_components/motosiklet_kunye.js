@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function aracKunye({firma, tip, motorHacmi, sifirYuz, max, tuketim}) {
+export default function aracKunye({firma, tip, motorHacmi, sifirYuz, max, agirlik, tuketim}) {
 
     const trToEngLower = (str) => {
         return str
@@ -40,6 +40,10 @@ export default function aracKunye({firma, tip, motorHacmi, sifirYuz, max, tuketi
 
         <span><b>Max Hız: </b>
         <span>{max} Km</span>
+        </span><span className='fof'> | </span>
+
+        <span><b>Ağırlık: </b>
+        <span>{agirlik} Kg</span>
         </span><span className='fof'> | </span>
 
         <span><b><Link href={"en-iyi-tuketime-sahip-10-motosiklet"} title={"En iyi tüketime sahip 10 motosiklet"}>Tüketim</Link>: </b>

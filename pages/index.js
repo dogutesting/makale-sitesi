@@ -170,8 +170,8 @@ export default function index() {
         paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
         
         <ContentBox
-        url=""
-        baslik="Umudunu Kaybetme - The Pursuit of Happyness Yönetmeninden duygusal sözler"
+        url="en-yuksek-imdb-puanina-sahip-10-film"
+        baslik="En yüksek imdb puanına sahip 10 film"
         resim="/images/a_0/f3_umudunu_kaybetme.jpg"
         eklenmeTarihi="07.05.23"
         okunmaSuresi="8 dk"
@@ -180,8 +180,8 @@ export default function index() {
         />
 
         <ContentBox
-        url=""
-        baslik="Will Smith neden tokat attı?"
+        url="en-yuksek-imdb-puanina-sahip-10-dizi"
+        baslik="En yüksek imdb puanına sahip 10 dizi"
         resim="/images/a_0/f1_imlegend.jpg"
         eklenmeTarihi="05.09.23"
         okunmaSuresi="5 dk"
@@ -189,8 +189,8 @@ export default function index() {
         paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
         
         <ContentBox
-        url=""
-        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film Sizler İçin Derledik"
+        url="en-iyi-10-250-cc-super-sport-motosikletler"
+        baslik="En iyi 10 250cc'lik süper spor motosikletler"
         resim="/images/a_0/f4_blade_runner_0.jpg"
         eklenmeTarihi="30.09.23"
         okunmaSuresi="5 dk"
