@@ -1,16 +1,11 @@
 import Main from '@/components/Main';
-import En from '@/components/mini_components/en';
-import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import { useEffect, useRef } from 'react';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
-
-/*! img/a_0 */
-/* Article - Section - Section - Section */
+import Ens_film from '@/components/mini_components/ens/ens_film';
 
 export default function MansNeedWatch() {
   const { nightMode } = useAppContext();
@@ -18,10 +13,9 @@ export default function MansNeedWatch() {
   const keywordsArray = ["erkekler", "için", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
-  const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın.";
+  const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   
-  const ana_resim = "";
   const logo = "logo_url";
 
   const kategori = "film"; //türkce karakter olmasin
@@ -29,16 +23,10 @@ export default function MansNeedWatch() {
   const yazar = "I Will";
   const eklenmeTarihi = "2023-09-12T17:20:00+03:00";
   const degistirilmeTarihi = "2023-09-12T17:20:00+03:00";
-
   
-  const summaryText = <p className='summary_text'>Eğer karşılaştığınız zorluklar ve duygusal
-             fırtınalar karşısında sarsılmaz bir karakter
-              oluşturma hedefiniz varsa, doğru yerdesiniz.
-               Erkekliğin ve karakterin derinliklerine dalmak
-                isteyenler için özenle seçilmiş bu filmler,
-                 size ilham verecektir. İşte erkeklerin mutlaka
-                  izlemesi gereken, karakter oluşturma yolculuğunda
-                   rehber olabilecek 10 film.</p>;
+  const summaryText = <p className='summary_text'>{metin}</p>;
+
+  const ana_resim = "/images/movies/ben_efsaneyim.jpg";
 
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
@@ -205,6 +193,7 @@ export default function MansNeedWatch() {
   jsonContentArray
   )
 
+  console.log(ana_resim);
   return (
     
     <Main>
@@ -239,7 +228,6 @@ export default function MansNeedWatch() {
           
           <h1>{baslik}</h1>
 
-          { /* ana resim buraya eklenebilir priort true yapılabilir ve ana resim thumbnail boyutu*/}
           <Details nightMode={nightMode} readTimeSpan={jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
@@ -248,29 +236,7 @@ export default function MansNeedWatch() {
 
           <hr className='split'/>
 
-          {
-            jsonContentArray.map(item => (
-              <section key={item.num}>
-                <En
-                    baslik={item.num + " - " + item.name}
-                    rsm={item.image}
-                    rsm_alt={item.name + " filminden bir fotoğraf."}
-                    enid={"bolum-"+item.num}>
-                    <Kunye oyuncular={item.actors}
-                    yonetmen={item.director}
-                    kategoris={item.filmKategorisi}
-                    sure={item.sure}
-                    yil={item.date}
-                    puan={item.ratingValue}
-                    puan2={item.metascore}
-                    />
-                    {item.paragraf}
-                </En>
-
-                <hr className='split'/>
-              </section>
-            ))
-          }
+          {<Ens_film jsonContentArray={jsonContentArray}/>}
         
         </article>
         

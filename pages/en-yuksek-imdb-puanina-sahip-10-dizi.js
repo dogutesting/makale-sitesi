@@ -1,17 +1,11 @@
 import Main from '@/components/Main';
-import En from '@/components/mini_components/en';
-import Kunye from '@/components/mini_components/kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
-
-/*
-Kunyede bazı sıkıntılar var
-Kunyedeki link tıklama olayında da sıkıntılar var
-*/
+import Ens_dizi from '@/components/mini_components/ens/ens_dizi';
 
 export default function MostSeriesMain() {
   const { nightMode } = useAppContext();
@@ -22,7 +16,6 @@ export default function MostSeriesMain() {
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   
-  const ana_resim = "";
   const logo = "logo_url";
 
   const kategori = "dizi"; //türkce karakter olmasin
@@ -32,8 +25,9 @@ export default function MostSeriesMain() {
   const degistirilmeTarihi = "2023-10-02T15:25:00+03:00";
   const addDate = "02.10.23";
 
-  
-  const summaryText = <p className='summary_text'>Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.</p>;
+  const summaryText = <p className='summary_text'>{metin}</p>;
+
+  const ana_resim = "/images/series/cosmos_bir_uzay_seruveni.jpg";
 
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
@@ -195,8 +189,6 @@ export default function MostSeriesMain() {
   jsonContentArray
   )
 
-  /* const jsonListArray = JSON.parse(jsonList.html); */
-
   return (
     
     <Main>
@@ -231,7 +223,6 @@ export default function MostSeriesMain() {
           
           <h1>{baslik}</h1>
 
-          { /* ana resim buraya eklenebilir priort true yapılabilir ve ana resim thumbnail boyutu*/}
           <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
@@ -240,29 +231,7 @@ export default function MostSeriesMain() {
 
           <hr className='split'/>
 
-          {
-            jsonContentArray.map(item => (
-              <section key={item.num}>
-                <En
-                    baslik={item.num + " - " + item.name}
-                    rsm={item.image}
-                    rsm_alt={item.name + " filminden bir fotoğraf."}
-                    enid={"bolum-"+item.num}>
-                    <Kunye oyuncular={item.actors}
-                    yonetmen={item.director}
-                    kategoris={item.filmKategorisi}
-                    sure={item.sure}
-                    yil={item.date}
-                    puan={item.ratingValue}
-                    puan2={item.metascore}
-                    />
-                    {item.paragraf}
-                </En>
-
-                <hr className='split'/>
-              </section>
-            ))
-          }
+          {<Ens_dizi jsonContentArray={jsonContentArray}/>}
         
         </article>
         

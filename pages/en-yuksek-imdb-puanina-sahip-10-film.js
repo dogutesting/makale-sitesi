@@ -1,15 +1,16 @@
 import Main from '@/components/Main';
-import En from '@/components/mini_components/en';
-import Kunye from '@/components/mini_components/kunye';
+import En from '@/components/mini_components/ens/en';
+import Kunye from '@/components/mini_components/kunyeler/film_kunye';
 import OtherContents from '@/components/OtherContents';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
+import Ens_film from '@/components/mini_components/ens/ens_film';
 
 export default function MostMoviesMain() {
-  const { nightMode } = useAppContext();
+  const { nightMode, supportWebp } = useAppContext();
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
@@ -17,7 +18,6 @@ export default function MostMoviesMain() {
   const metin = "Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, ruhumuza dokunur ve bizi derinden etkiler. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   
-  const ana_resim = "";
   const logo = "logo_url";
 
   const kategori = "film"; //türkce karakter olmasin
@@ -29,6 +29,8 @@ export default function MostMoviesMain() {
 
   
   const summaryText = <p className='summary_text'>{metin}</p>;
+
+  const ana_resim = "/images/movies/iyi_kotu_cirkin.jpg";
 
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
@@ -58,7 +60,7 @@ export default function MostMoviesMain() {
         "ratingValue":"8.8/10",
         "ratingCount":"1900000",
         "metascore": "92",
-        "actors":["Liv Tyler", "Sean Astin", "Sean Bean", "Elijah Wood", "Cate Blanchett", "Viggo Mortensen", "Ian McKellen", "Orlando Bloom", "Billy Boyd", "Dominic Monaghan", "John Rhys-Davies"],
+        "actors":["Liv Tyler", "Sean Astin", "Sean Bean"],
         "director":"Peter Jackson",
         "paragraf": <p>Orta Dünya'nın kaderini belirleyecek olan Yüzük'ü yok etme görevini üstlenen Frodo ve arkadaşlarının epik yolculuğunu anlatan bu film, fantastik edebiyatın en ünlü eserlerinden birinin sinemaya uyarlamasıdır. Görsel efektleri, müzikleri ve hikayesiyle büyüleyici bir deneyim sunar.</p>
     },
@@ -73,7 +75,7 @@ export default function MostMoviesMain() {
         "ratingValue":"8.9/10",
         "ratingCount":"2200000",
         "metascore": "95",
-        "actors":["Uma Thurman", "John Travolta", "Samuel L. Jackson", "Bruce Willis"],
+        "actors":["Uma Thurman", "John Travolta", "Samuel L. Jackson"],
         "director":"Quentin Tarantino",
         "paragraf": <p>Quentin Tarantino'nun özgün anlatım tarzıyla hazırladığı bu film, farklı hikayeleri bir araya getirerek izleyiciye sıradışı bir deneyim sunar. Film, suç dünyasının karanlık yüzünü, mizahi bir dille gösteriyor. Tarantino'nun eşsiz diyalogları ve karakter derinliği, filmin unutulmaz olmasını sağlıyor.</p>
     },
@@ -88,7 +90,7 @@ export default function MostMoviesMain() {
         "ratingValue":"9.0/10",
         "ratingCount":"1900000",
         "metascore": "94",
-        "actors":["Liv Tyler", "Sean Astin", "Elijah Wood", "Viggo Mortensen", "Ian McKellen", "Andy Serkis"],
+        "actors":["Liv Tyler", "Sean Astin", "Elijah Wood"],
         "director":"Peter Jackson",
         "paragraf": <p>Orta Dünya'nın kaderini belirleyecek olan son savaşın anlatıldığı bu film, Frodo ve Sam'in Yüzük'ü yok etme görevini tamamlamaya çalışmalarını, Aragorn'un kral olarak taç giymesini ve diğer karakterlerin kendi yollarını bulmalarını anlatır. Epik savaş sahneleri, duygusal anlar ve muhteşem görsel efektlerle dolu bu film, serinin muazzam bir finali olarak karşımıza çıkıyor.</p>
     },
@@ -223,7 +225,6 @@ export default function MostMoviesMain() {
           
           <h1>{baslik}</h1>
 
-          { /* ana resim buraya eklenebilir priort true yapılabilir ve ana resim thumbnail boyutu*/}
           <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
@@ -232,29 +233,7 @@ export default function MostMoviesMain() {
 
           <hr className='split'/>
 
-          {
-            jsonContentArray.map(item => (
-              <section key={item.num}>
-                <En
-                    baslik={item.num + " - " + item.name}
-                    rsm={item.image}
-                    rsm_alt={item.name + " görseli."}
-                    enid={"bolum-"+item.num}>
-                    <Kunye oyuncular={item.actors}
-                    yonetmen={item.director}
-                    kategoris={item.filmKategorisi}
-                    sure={item.sure}
-                    yil={item.date}
-                    puan={item.ratingValue}
-                    puan2={item.metascore}
-                    />
-                    {item.paragraf}
-                </En>
-
-                <hr className='split'/>
-              </section>
-            ))
-          }
+          {<Ens_film jsonContentArray={jsonContentArray}/>}
         
         </article>
         
