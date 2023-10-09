@@ -7,9 +7,9 @@ export default function Ens_film({jsonContentArray}) {
 
   jsonContentArray.forEach((item, index) => {
       items.push(
-        <>
-        <section key={item.num}>
+        <section key={index}>
         <En
+                pri={index == 0 ? true : false}
                 baslik={item.num + " - " + item.name}
                 rsm={item.image}
                 rsm_alt={item.name + " görseli."}
@@ -27,22 +27,19 @@ export default function Ens_film({jsonContentArray}) {
 
           
         </section>
-        <hr className='split'/>
-        </>
-        
       )
+
+      items.push(<hr key={index+"hr1"} className='split'/>);
     
       if ((index + 1) % 2 === 0 && (index + 1) != 10) {
         items.push(
-          <>
-          <section key={`${index}`}>
-            {/* <ReklamBileseni />  */}
+          <section key={index+"r"}>
             Reklam bileşeni
           </section>
-          <hr className='split'/>
-          </>
         );
       }
+
+      items.push(<hr key={index+"hr2"} className='split'/>);
       
   });
 

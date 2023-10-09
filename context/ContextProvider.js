@@ -9,6 +9,8 @@ export function useAppContext() {
 
 export function Wrapper({ children }) {
 
+  const siteUrl = "https://enonlar.com";
+
   const [nightMode, setNightMode] = useState(false);
   
   const [supportWebp, setSupportWebp] = useState(false);
@@ -30,7 +32,7 @@ export function Wrapper({ children }) {
   }, [])
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp }}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, siteUrl }}>
       {children}
     </AppContext.Provider>
   );

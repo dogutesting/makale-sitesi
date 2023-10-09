@@ -1,11 +1,11 @@
 import Main from '@/components/Main';
 import OtherContents from '@/components/OtherContents';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
+import HeadHtml from '@/components/HeadHtml';
 
 export default function Eniyi1000ccSuperMain() {
   const { nightMode } = useAppContext();
@@ -15,8 +15,6 @@ export default function Eniyi1000ccSuperMain() {
   const baslik = "En İyi 10 1000 CC Super Sport Motosiklet";
   const metin = "Süper spor motosikletler, mühendislik ve tasarımın zirvesini temsil eder. Bu hız canavarları, sadece dikkatli ve tecrübeli sürücüler için tasarlanmıştır. Her bir detay, sürücüsüne unutulmaz bir deneyim yaşatmak amacıyla özenle düşünülmüştür. İster pistte ister açık yolda olsun, bu motosikletler adrenalinin en saf halini sunar. Bu makalede, piyasadaki en iyi 10 süper spor motosikleti detaylı bir şekilde inceliyoruz. Hangi canavarın sizi en çok heyecanlandıracağını görmek için okumaya devam edin!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
-  const logo = "logo_url";
 
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -28,9 +26,6 @@ export default function Eniyi1000ccSuperMain() {
   
   const summaryText = <p className='summary_text'>{metin}</p>;
 
-  const ana_resim = "/images/motosiklet/triumph_daytona_1050.png";
-  
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
     {
         "num": "10",
@@ -51,8 +46,8 @@ export default function Eniyi1000ccSuperMain() {
     {
       "num": "9",
       "url": `https://enonlar.com/${url}#bolum-9`,
-      "name": "KTM RC8 R",
-      "image": `/images/motosiklet/ktm_rc8_r.png`,
+      "name": "KTM 1190 RC8 R",
+      "image": `/images/motosiklet/ktm_rc8r.jpg`,
       "firma": "KTM",
       "tip": "Super Sport",
       "motorHacmi": "1195",
@@ -84,7 +79,7 @@ export default function Eniyi1000ccSuperMain() {
       "num": "7",
       "url": `https://enonlar.com/${url}#bolum-7`,
       "name": "Suzuki GSX-R1000",
-      "image": `/images/motosiklet/suzuki_gsx-r1000.png`,
+      "image": `/images/motosiklet/suzuki_gsx_r1000.png`,
       "firma": "Suzuki",
       "tip": "Super Sport",
       "motorHacmi": "999",
@@ -116,7 +111,7 @@ export default function Eniyi1000ccSuperMain() {
       "num": "5",
       "url": `https://enonlar.com/${url}#bolum-5`,
       "name": "Kawasaki Ninja ZX-10R",
-      "image": `/images/motosiklet/kawasaki_ninja_zx-10r.png`,
+      "image": `/images/motosiklet/kawasaki_ninja_zx_10r.png`,
       "firma": "Kawasaki",
       "tip": "Super Sport",
       "motorHacmi": "998",
@@ -132,7 +127,7 @@ export default function Eniyi1000ccSuperMain() {
       "num": "4",
       "url": `https://enonlar.com/${url}#bolum-4`,
       "name": "Yamaha YZF-R1",
-      "image": `/images/motosiklet/yamaha_yzf-r1.png`,
+      "image": `/images/motosiklet/yamaha_yzf_r1.png`,
       "firma": "Yamaha",
       "tip": "Super Sport",
       "motorHacmi": "998",
@@ -192,9 +187,11 @@ export default function Eniyi1000ccSuperMain() {
       "yakitKapasitesi": "17.5",
       "paragraf": <p>Alman mühendisliğinin bir şaheseri olan BMW S1000RR, üstün performansı ve sürücü dostu özellikleri ile tanınır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ve ergonomik yapısı uzun sürüşler için ideal. S1000RR, sportif performansı ve günlük kullanım kolaylığı ile hem pist hem de açık yolda mükemmel bir deneyim sunar.</p>
     }
-  
-
   ];
+
+  const ana_resim = jsonContentArray[0].image;
+  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+  
   const jsonList = json_list(articleInfos,
   "Motosiklet", 
   summaryText,
@@ -205,31 +202,14 @@ export default function Eniyi1000ccSuperMain() {
     
     <Main>
       
-        <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywordsArray.join(", ")}/>
-
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content={baslik}/>
-          <meta name="twitter:description" content={description}/>
-          <meta name="twitter:image" content={ana_resim}/>
-          
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: jsonList.html}}
-            key="article-jsonld"
-          />
-        </Head>
+      <HeadHtml 
+        baslik={baslik}
+        description={description}
+        keywords={keywordsArray.join(", ")}
+        ana_resim={ana_resim}
+        url={url}
+        jsonListHtml={jsonList.html}
+        />
 
         <article id='main-article'>
           
@@ -247,7 +227,6 @@ export default function Eniyi1000ccSuperMain() {
         
         </article>
         
-        <h2 className='other-h2'>Diğer İçerikler</h2>
         <OtherContents />
         
         

@@ -1,13 +1,11 @@
 import Main from '@/components/Main';
-import En from '@/components/mini_components/ens/en';
-import Kunye from '@/components/mini_components/kunyeler/film_kunye';
 import OtherContents from '@/components/OtherContents';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 import Ens_film from '@/components/mini_components/ens/ens_film';
+import HeadHtml from '@/components/HeadHtml';
 
 export default function MostMoviesMain() {
   const { nightMode, supportWebp } = useAppContext();
@@ -17,8 +15,6 @@ export default function MostMoviesMain() {
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
   const metin = "Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, ruhumuza dokunur ve bizi derinden etkiler. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
-  const logo = "logo_url";
 
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
@@ -30,9 +26,6 @@ export default function MostMoviesMain() {
   
   const summaryText = <p className='summary_text'>{metin}</p>;
 
-  const ana_resim = "/images/movies/iyi_kotu_cirkin.jpg";
-
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
       {
         "num": "10",
@@ -185,6 +178,10 @@ export default function MostMoviesMain() {
         "paragraf": <p>Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatır. Film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj verir.</p>
     }  
   ];
+
+  const ana_resim = jsonContentArray[0].image;
+  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+  
   const jsonList = json_list(articleInfos,
   "Movies", 
   summaryText,
@@ -195,31 +192,14 @@ export default function MostMoviesMain() {
     
     <Main>
       
-        <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywordsArray.join(", ")}/>
-
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content={baslik}/>
-          <meta name="twitter:description" content={description}/>
-          <meta name="twitter:image" content={ana_resim}/> /* 800w 600h 1800w 1600h */
-          
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: jsonList.html}}
-            key="article-jsonld"
-          />
-        </Head>
+      <HeadHtml 
+        baslik={baslik}
+        description={description}
+        keywords={keywordsArray.join(", ")}
+        ana_resim={ana_resim}
+        url={url}
+        jsonListHtml={jsonList.html}
+        />
 
         <article id='main-article'>
           

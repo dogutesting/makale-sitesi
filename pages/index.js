@@ -148,9 +148,9 @@ export default function index() {
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://enonlar.com/"/>
 
-        <meta property="og:image" content="/og-image.jpg"/>
-        <meta property="og:image:height" content="136"/>
-        <meta property="og:image:width" content="260"/>
+        <meta property="og:image" content="/logo.png"/>
+        <meta property="og:image:height" content="45"/>
+        <meta property="og:image:width" content="234"/>
         <meta property="og:description" content="Enonlar, en iyi 10 içerikler, en popüler 10 filmler, en iyi 10 araba incelemeleri, en çok okunan kitap önerileri ve daha fazlasını sunan bir içerik platformudur. Sizler için seçtiğimiz en ilginç konuları keşfedin!"/>
 
       </Head>
@@ -190,8 +190,8 @@ export default function index() {
         
         <ContentBox
         url="en-iyi-10-250-cc-super-sport-motosikletler"
-        baslik="En iyi 10 250cc'lik süper spor motosikletler"
-        resim="/images/a_0/f4_blade_runner_0.jpg"
+        baslik="En iyi 10 250cc'lik süper spor motosiklet"
+        resim="/images/motosiklet/benelli_tnt_25.png"
         eklenmeTarihi="30.09.23"
         okunmaSuresi="5 dk"
         kategori="film"

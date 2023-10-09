@@ -1,11 +1,11 @@
 import Main from '@/components/Main';
 import OtherContents from '@/components/OtherContents';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 import Ens_dizi from '@/components/mini_components/ens/ens_dizi';
+import HeadHtml from '@/components/HeadHtml';
 
 export default function MostSeriesMain() {
   const { nightMode } = useAppContext();
@@ -15,8 +15,6 @@ export default function MostSeriesMain() {
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
-  const logo = "logo_url";
 
   const kategori = "dizi"; //türkce karakter olmasin
   const minAge = "18";
@@ -27,9 +25,6 @@ export default function MostSeriesMain() {
 
   const summaryText = <p className='summary_text'>{metin}</p>;
 
-  const ana_resim = "/images/series/cosmos_bir_uzay_seruveni.jpg";
-
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
     {
         "eps": "13",
@@ -183,41 +178,27 @@ export default function MostSeriesMain() {
     }
 ];
 
-  const jsonList = json_list(articleInfos,
-  "Series", 
-  summaryText,
-  jsonContentArray
-  )
+    const ana_resim = jsonContentArray[0].image;
+    const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+
+    const jsonList = json_list(articleInfos,
+    "Series", 
+    summaryText,
+    jsonContentArray
+    )
 
   return (
     
     <Main>
       
-        <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywordsArray.join(", ")}/>
-
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content={baslik}/>
-          <meta name="twitter:description" content={description}/>
-          <meta name="twitter:image" content={ana_resim}/> /* 800w 600h 1800w 1600h */
-          
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: jsonList.html}}
-            key="article-jsonld"
-          />
-        </Head>
+      <HeadHtml 
+        baslik={baslik}
+        description={description}
+        keywords={keywordsArray.join(", ")}
+        ana_resim={ana_resim}
+        url={url}
+        jsonListHtml={jsonList.html}
+        />
 
         <article id='main-article'>
           
@@ -235,7 +216,6 @@ export default function MostSeriesMain() {
         
         </article>
         
-        <h2 className='other-h2'>Diğer İçerikler</h2>
         <OtherContents />
         
         

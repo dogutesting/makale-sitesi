@@ -1,11 +1,11 @@
 import Main from '@/components/Main';
 import OtherContents from '@/components/OtherContents';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 import Ens_film from '@/components/mini_components/ens/ens_film';
+import HeadHtml from '@/components/HeadHtml';
 
 export default function MansNeedWatch() {
   const { nightMode } = useAppContext();
@@ -15,8 +15,6 @@ export default function MansNeedWatch() {
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
   const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
-  const logo = "logo_url";
 
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
@@ -26,9 +24,6 @@ export default function MansNeedWatch() {
   
   const summaryText = <p className='summary_text'>{metin}</p>;
 
-  const ana_resim = "/images/movies/ben_efsaneyim.jpg";
-
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
     {
       "num": "10",
@@ -187,6 +182,10 @@ export default function MansNeedWatch() {
       "paragraf": <p><Link href="stephen-king-ile-ilgili-yazilar">Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor.</p>,
     }
   ];
+
+  const ana_resim = jsonContentArray[0].image;
+  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+  
   const jsonList = json_list(articleInfos,
   "Movies", 
   summaryText,
@@ -198,31 +197,14 @@ export default function MansNeedWatch() {
     
     <Main>
       
-        <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywordsArray.join(", ")}/>
-
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content={baslik}/>
-          <meta name="twitter:description" content={description}/>
-          <meta name="twitter:image" content={ana_resim}/> /* 800w 600h 1800w 1600h */
-          
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: jsonList.html}}
-            key="article-jsonld"
-          />
-        </Head>
+        <HeadHtml 
+        baslik={baslik}
+        description={description}
+        keywords={keywordsArray.join(", ")}
+        ana_resim={ana_resim}
+        url={url}
+        jsonListHtml={jsonList.html}
+        />
 
         <article id='main-article'>
           

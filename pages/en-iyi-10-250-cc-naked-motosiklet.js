@@ -1,11 +1,11 @@
 import Main from '@/components/Main';
 import OtherContents from '@/components/OtherContents';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
 import json_list from '@/components/json/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
+import HeadHtml from '@/components/HeadHtml';
 
 export default function Eniyi250ccNakedMain() {
   const { nightMode } = useAppContext();
@@ -15,8 +15,6 @@ export default function Eniyi250ccNakedMain() {
   const baslik = "En İyi 10 250 CC Naked Motosiklet";
   const metin = "250cc naked motosikletler, hafiflikleri, atik yapıları ve şehir içi kullanım kolaylıkları ile bilinirler. İster yeni başlayan bir sürücü olun, ister deneyimli bir motor tutkunu, bu segmentteki motosikletler, sade ve fonksiyonel tasarımları ile geniş bir kitleye hitap ediyor. Aşağıda, birbirinden estetik ve performanslı en iyi 10 250cc naked motosikleti detaylı özellikleri ve teknik analizler ışığında sıralayarak sizler için bir araya getiriyoruz. Her bir motosikletin tasarımından, motor performansına, kullanım kolaylığına kadar birçok detayı bulacaksınız. İyi okumalar!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
-  const logo = "logo_url";
 
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -28,9 +26,6 @@ export default function Eniyi250ccNakedMain() {
   
   const summaryText = <p className='summary_text'>{metin}</p>;
 
-  const ana_resim = "/images/motosiklet/husqvarna_svartpilen_250.jpg";
-
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, logo, eklenmeTarihi, degistirilmeTarihi};
   const jsonContentArray = [
     {
         "num": "10",
@@ -45,7 +40,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.0",
         "agirlik": "154",
         "ulke": "İsveç",
-        "yakitKapatisesi": "9.5",
+        "yakitKapasitesi": "9.5",
         "paragraf": <p>İsveçli motosiklet üreticisi Husqvarna Svartpilen 250, modern ve minimalist bir tasarıma sahiptir. Sade hatları ve endüstriyel görünümü ile dikkat çeker. 250cc motoru, şehir içinde hızlı manevralar ve rahat bir sürüş deneyimi sunar. Hafif yapısı sayesinde, bu motosiklet yeni sürücüler için ideal bir seçenektir. Svartpilen, konforlu bir sürüş pozisyonu ve hassas yol tutuşu ile günlük sürüşler için uygun bir tercihtir.</p>
     },    
     {
@@ -61,7 +56,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.5",
         "agirlik": "180",
         "ulke": "Hindistan",
-        "yakitKapatisesi": "13",
+        "yakitKapasitesi": "13",
         "paragraf": <p>Hindistan'ın önde gelen motosiklet üreticilerinden biri olan Bajaj Dominar 250D, uygun fiyatlı bir giriş seviyesi naked motosiklet arayanlar için mükemmel bir seçimdir. Güçlü ve verimli motoru, şehir içi trafikte hızlı manevralar yapmayı kolaylaştırır. Dominar'ın geniş lastikleri ve konforlu koltuk yapısı, günlük sürüşlerde ve hafta sonu gezilerinde hoş bir deneyim sunar. Tasarımı, modern ve agresif çizgileriyle genç sürücülerin beğenisini kazanır. Performans ve fiyat arasındaki dengesi ile Bajaj Dominar 250D, bütçe dostu bir naked motosiklet arayanlar için ideal bir tercihtir.</p>
     },
     {
@@ -93,7 +88,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.5",
         "agirlik": "168",
         "ulke": "Japonya",
-        "yakitKapatisesi": "17",
+        "yakitKapasitesi": "17",
         "paragraf": <p>Japon yapımı Kawasaki Z250, keskin hatları ve agresif tasarımı ile karakteristik bir naked motosiklet estetiği sunar. 250cc'lik motoru, hızlı hızlanma ve tatmin edici bir üst hız sunar. Yol tutuşu ve fren performansı, sürücülere güven verir. Konforlu sürüş pozisyonu ve geniş koltuğu, şehir içi ve şehirlerarası seyahatler için uygundur. Yüksek kaliteli süspansiyon sistemi, hem konforu hem de sportif sürüş dinamiklerini dengeleyen bir performans sunar. Kawasaki Z250, hem yeni başlayanlar hem de deneyimli sürücüler için uygun, estetik ve performansı bir arada sunan bir motosiklettir.</p>
     },    
     {
@@ -109,7 +104,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.3",
         "agirlik": "156",
         "ulke": "Japonya",
-        "yakitKapatisesi": "12",
+        "yakitKapasitesi": "12",
         "paragraf": <p>Japon markası Suzuki'nin genç ve enerjik modeli Gixxer 250, dinamik tasarımı ve sağlam yapı kalitesi ile ön plana çıkar. 250cc motor, hızlı hızlanma ve tatmin edici bir üst hız sunar. Yol tutuşu ve fren performansı beklentileri karşılar, şehir içi ve şehirlerarası seyahatler için uygundur. Konforlu sürüş pozisyonu ve rahat koltuk, uzun süreli sürüşlerde bile rahatlığı korur. Dijital gösterge paneli, sürücülere gerekli tüm bilgileri temiz ve açık bir şekilde sunar. Suzuki Gixxer 250, hem estetik hem de performansı uygun bir fiyat aralığında sunarak, bu segmentteki rekabette iddialı bir konumda bulunuyor.</p>
     },    
     {
@@ -125,7 +120,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "2.8",
         "agirlik": "159",
         "ulke": "İtalya",
-        "yakitKapatisesi": "17",
+        "yakitKapasitesi": "17",
         "paragraf": <p>İtalyan kökenli bir marka olan Benelli'nin kompakt modeli TNT 25, minimalist ve zarif tasarımı ile dikkat çeker. Motorun hızlanma performansı ve üst hızı, segmenti için tatmin edici. Yol tutuşu ve fren performansı, sürücülere güven verir. Konforlu sürüş pozisyonu ve rahat koltuk, günlük kullanım için uygundur. Süspansiyon sistemi, konfor ve performansı dengeleyerek, hem şehir içi hem de şehirlerarası seyahatler için uygun bir sürüş deneyimi sunar. Benelli TNT 25, estetik tasarımı ve günlük kullanıma uygun özellikleri ile bu segmentte dikkate değer bir seçenektir.</p>
     },    
     {
@@ -141,7 +136,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.1",
         "agirlik": "161",
         "ulke": "Avusturya",
-        "yakitKapatisesi": "15",
+        "yakitKapasitesi": "15",
         "paragraf": <p>Avusturyalı motosiklet üreticisi KTM'nin agresif tasarımı ve yüksek performansı ile tanınan 250 Duke modeli, sürücülerin adrenalin dolu anlar yaşamasını sağlıyor. Sert ve sportif süspansiyon sistemi, keskin virajlarda bile mükemmel bir yol tutuşu sunuyor. Motor performansı, hızlanma ve üst hız bakımından segmentinin üstünde. Konfor, bu modelde biraz daha arka planda kalmış, fakat bu durum, sportif sürüş tutkunları için bir engel teşkil etmiyor. KTM 250 Duke, genç ve enerjik sürücüler için mükemmel bir seçenek olabilir.</p>
     },    
     {
@@ -157,7 +152,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.3",
         "agirlik": "158.5",
         "ulke": "Almanya",
-        "yakitKapatisesi": "11",
+        "yakitKapasitesi": "11",
         "paragraf": <p>Alman mühendisliği ve kalitesiyle üretilen BMW G 310 R, sade ve sofistike tasarımıyla dikkat çeker. Bu model, BMW'nin entry-level motosiklet segmentine girişini temsil eder ve markanın mühendislik mirasını bu segmente taşır. Motor performansı ve yol tutuşu, bu sınıf için oldukça iyi. Sürücüler, düşük ve orta devirlerde iyi bir tork hissiyatı alırken, yüksek devirlerde de tatminkar bir hızlanma elde ederler. Sürüş pozisyonu, günlük kullanıma uygun, rahat ve dik. BMW G 310 R, kalite ve performansı uygun fiyatla buluşturarak, yeni sürücüler için mükemmel bir seçenek sunuyor.</p>
     },    
     {
@@ -173,7 +168,7 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "3.3",
         "agirlik": "143",
         "ulke": "Japonya",
-        "yakitKapatisesi": "9.7",
+        "yakitKapasitesi": "9.7",
         "paragraf": <p>Japon üretici Honda'nın neo-sport kavramını temsil eden CB300R modeli, retro görünümü modern performans ile birleştiriyor. Yol tutuşu ve fren performansı, sınıf standartlarını karşılıyor. Motor, düşük ve orta devirlerde iyi bir tork sunuyor ve şehir içi kullanım için oldukça uygundur. Geniş ve rahat sele, uzun süreli sürüşlerde bile konfor sağlıyor. Honda CB300R, günlük kullanım ve hafta sonu kaçamakları için ideal bir motosiklet olabilir. Japon mühendisliği ve kalitesi, bu motosikletin fiyat/performans oranını oldukça cazip kılıyor.</p>
     },    
     {
@@ -189,10 +184,14 @@ export default function Eniyi250ccNakedMain() {
         "tuketim": "2.4",
         "agirlik": "165",
         "ulke": "Japonya",
-        "yakitKapatisesi": "14",
+        "yakitKapasitesi": "14",
         "paragraf": <p>Japon tasarımının ve mühendisliğinin bir harikası olan Yamaha MT-25, dinamik çizgileri ve agresif tasarımı ile dikkat çeker. MT-25, sürücüsüne şehir içi trafiğinde bile esneklik ve manevra kabiliyeti sunar. Yüksek devirlerde bile pürüzsüz ve dengeli bir performans sunan motoru, bu motosikleti hem yeni başlayanlar hem de deneyimli sürücüler için cazip kılar. Konforlu sürüş pozisyonu ve düşük yakıt tüketimi, MT-25'i günlük kullanım için ideal bir seçenek haline getirir. Genel olarak, Yamaha MT-25, fiyat/performans oranı ve sürüş deneyimi ile segmentinde lider bir konuma sahiptir.</p>
     }    
   ];
+
+  const ana_resim = jsonContentArray[0].image;
+  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+  
   const jsonList = json_list(articleInfos,
   "Motosiklet", 
   summaryText,
@@ -203,31 +202,14 @@ export default function Eniyi250ccNakedMain() {
     
     <Main>
       
-        <Head>
-          <title>{baslik}</title>
-          <meta name="description" content={description}/>
-          <meta name="keywords" content={keywordsArray.join(", ")}/>
-
-          <meta property="og:type" content="article"/>
-          <meta property="og:title" content={baslik}/>
-          <meta property="og:description" content={description} key="desc"/>
-          <meta
-          property="og:image"
-          content={ana_resim}
-          />
-          <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:title" content={baslik}/>
-          <meta name="twitter:description" content={description}/>
-          <meta name="twitter:image" content={ana_resim}/>
-          
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: jsonList.html}}
-            key="article-jsonld"
-          />
-        </Head>
+      <HeadHtml 
+        baslik={baslik}
+        description={description}
+        keywords={keywordsArray.join(", ")}
+        ana_resim={ana_resim}
+        url={url}
+        jsonListHtml={jsonList.html}
+        />
 
         <article id='main-article'>
           
@@ -245,7 +227,6 @@ export default function Eniyi250ccNakedMain() {
         
         </article>
         
-        <h2 className='other-h2'>Diğer İçerikler</h2>
         <OtherContents />
         
         

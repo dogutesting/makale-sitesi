@@ -7,10 +7,10 @@ export default function Ens_dizi({jsonContentArray}) {
 
   jsonContentArray.forEach((item, index) => {
       items.push(
-        <>
-        <section key={item.num}>
+        <section key={index}>
           <En
               baslik={item.num + " - " + item.name}
+              pri={index == 0 ? true : false}
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
               enid={"bolum-"+item.num}>
@@ -24,25 +24,22 @@ export default function Ens_dizi({jsonContentArray}) {
               />
               {item.paragraf}
           </En>
-
-          
         </section>
-        <hr className='split'/>
-        </>
-        
       )
+
+      items.push(<hr key={index+"hr1"} className='split'/>);
     
       if ((index + 1) % 2 === 0 && (index + 1) != 10) {
         items.push(
           <>
-          <section key={`${index}`}>
-            {/* <ReklamBileseni />  */}
+          <section key={index+"r"}>
             Reklam bileşeni
           </section>
-          <hr className='split'/>
           </>
         );
       }
+
+      items.push(<hr key={index+"hr2"} className='split'/>);
       
   });
 
