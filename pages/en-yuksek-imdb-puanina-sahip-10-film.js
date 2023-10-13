@@ -217,7 +217,6 @@ export default function MostMoviesMain() {
         
         </article>
         
-        <h2 className='other-h2'>Diğer İçerikler</h2>
         <OtherContents />
         
         

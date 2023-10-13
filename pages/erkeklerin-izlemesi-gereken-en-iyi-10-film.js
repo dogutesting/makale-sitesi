@@ -8,6 +8,7 @@ import Ens_film from '@/components/mini_components/ens/ens_film';
 import HeadHtml from '@/components/HeadHtml';
 
 export default function MansNeedWatch() {
+
   const { nightMode } = useAppContext();
 
   const keywordsArray = ["erkekler", "için", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
@@ -21,6 +22,7 @@ export default function MansNeedWatch() {
   const yazar = "I Will";
   const eklenmeTarihi = "2023-09-12T17:20:00+03:00";
   const degistirilmeTarihi = "2023-09-12T17:20:00+03:00";
+  const addDate = "12.09.23";
   
   const summaryText = <p className='summary_text'>{metin}</p>;
 
@@ -192,7 +194,6 @@ export default function MansNeedWatch() {
   jsonContentArray
   )
 
-  console.log(ana_resim);
   return (
     
     <Main>
@@ -210,7 +211,7 @@ export default function MansNeedWatch() {
           
           <h1>{baslik}</h1>
 
-          <Details nightMode={nightMode} readTimeSpan={jsonList.readTimeSpan}/>
+          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
@@ -222,7 +223,6 @@ export default function MansNeedWatch() {
         
         </article>
         
-        <h2 className='other-h2'>Diğer İçerikler</h2>
         <OtherContents />
         
         

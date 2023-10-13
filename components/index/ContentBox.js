@@ -1,14 +1,10 @@
 import Image from 'next/image';
-import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-
-
-//const { nightMode, supportWebp } = useAppContext();
-const supportWebp = true;
-
+import { useAppContext } from "@/context/ContextProvider";
 
 export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf}) {
+  const { nightMode, supportWebp } = useAppContext();
 
   const router = useRouter();
   const goTag = (kategori) => {
@@ -17,26 +13,7 @@ export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okun
   }
 
   return (
-    <Link className='index-content-box' href={url}>
-        <div className='icb-child'>
-          <div>
-            <h2 title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
-             : (baslik)}</h2>
-          </div>
-          <div>
-            <p>{paragraf.split(" ").length > 12 ? 
-                (paragraf.split(" ").slice(0, 12).join(" ") + "...") :
-                (paragraf)}</p>
-          </div>
-          <div>
-            <span className='addDate'>{eklenmeTarihi}</span>
-            <span className='dot'> · </span>
-            <span className='readTime'>{okunmaSuresi}</span>
-            <span className='dot'> · </span>
-            <span className='category' onClick={(e) => {goTag(kategori); e.preventDefault();}}>{kategori}</span>
-          </div>
-        </div>
-
+    <Link className={['index-content-box', nightMode ? 'icb-night' : 'icb-light'].join(' ')} href={url}>
         <div className='icb-child image-container'>
                 {
                     supportWebp ? (
@@ -57,6 +34,27 @@ export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okun
                     )
                 } 
         </div>
+        
+        <div className={['icb-child', nightMode ? 'white' : ''].join(' ')}>
+          <div>
+            <h2 title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
+             : (baslik)}</h2>
+          </div>
+          <div className={nightMode ? 'soft-white' : ''}>
+            <p>{paragraf.split(" ").length > 12 ? 
+                (paragraf.split(" ").slice(0, 12).join(" ") + "...") :
+                (paragraf)}</p>
+          </div>
+          <div>
+            <span className='addDate'>{eklenmeTarihi}</span>
+            <span className='dot'> · </span>
+            <span className='readTime'>{okunmaSuresi}</span>
+            <span className='dot'> · </span>
+            <span className='category' onClick={(e) => {goTag(kategori); e.preventDefault();}}>{kategori}</span>
+          </div>
+        </div>
+
+        
 
     </Link>
   )

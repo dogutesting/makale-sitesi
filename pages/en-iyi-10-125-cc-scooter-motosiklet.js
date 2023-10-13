@@ -191,7 +191,6 @@ export default function Eniyi50ccScooterMain() {
   ];
 
   const ana_resim = jsonContentArray[0].image;
-  console.log(ana_resim);
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 
   const jsonList = json_list(articleInfos,

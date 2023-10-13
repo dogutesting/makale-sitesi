@@ -2,13 +2,16 @@ import { useAppContext } from '@/context/ContextProvider';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 
 export default function Main({children}) {
     
     const { nightMode, setNightMode } = useAppContext();
+    const router = useRouter();
 
     const getMode = () => {
+ 
         const localStorage_mode = localStorage.getItem("n-mode");
         setNightMode(JSON.parse(localStorage_mode));
 
@@ -24,11 +27,18 @@ export default function Main({children}) {
             body.classList.remove(class1);
             /* body.classList.add(class2) */
         }
+
     }
     
     useEffect(() => {
         getMode();
-    }, [nightMode]);
+
+        router.events.on('routeChangeComplete', getMode);
+
+        return() => {
+            router.events.off('routeChangeComplete', getMode);
+        };
+    }, [nightMode, router]);
  
     /*------------------------------------------------------------*/
 

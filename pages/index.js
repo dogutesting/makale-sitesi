@@ -1,6 +1,6 @@
 import Main from "@/components/Main"
 import Head from 'next/head'
-import ContentBox from "@/components/index/anasayfa_icerik_kutusu";
+import ContentBox from "@/components/index/ContentBox";
 import CategoryBox from "@/components/index/CategoryBox";
 import { useAppContext } from "@/context/ContextProvider";
 

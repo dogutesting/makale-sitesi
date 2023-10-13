@@ -226,7 +226,7 @@ export default function Eniyi1000ccNakedMain() {
           {<Ens_motosiklet jsonContentArray={jsonContentArray}/>}
         
         </article>
-        yakitKapasitesi
+        
         <OtherContents />
         
         

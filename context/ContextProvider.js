@@ -29,6 +29,8 @@ export function Wrapper({ children }) {
       }
     };
     setSupportWebp(checkWebPSupport());
+
+    console.log("aktiflendi");
   }, [])
 
   return (
