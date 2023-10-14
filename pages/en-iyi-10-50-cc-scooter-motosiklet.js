@@ -16,6 +16,7 @@ export default function Eniyi50ccScooterMain() {
   const metin = "50cc scooter'lar, hem şehir içinde hem de kısa mesafeli taşımacılıkta ideal bir seçenektir. Küçük motor hacimleri sayesinde düşük yakıt tüketimi ve düşük işletme maliyetleri sunarlar. Ayrıca, kompakt boyutları ve hafiflikleri sayesinde trafikte kolay manevra yapabilir ve park problemlerini asgariye indirebilirler. 50cc scooter'lar genellikle yeni sürücüler, öğrenciler veya düşük bütçeli bireyler için mükemmel bir tercihtir. Yine de, bu tür scooter'ların tasarımı ve özellikleri markadan markaya değişkenlik gösterebilir. Bu makalede, Türkiye'de satılan ve popüler olan 10 farklı 50cc scooter modelini inceledik ve onları bir dizi kritere göre sıraladık. Her modelin detaylı incelemesini ve sıralamasını aşağıda bulabilirsiniz. Vespa Primavera 50'den başlayarak, RKS Azure 50'ye kadar olan scooter modelleri, genel kalite, performans, konfor ve benzersiz özellikler açısından değerlendirdik. Hadi başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 
+  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -216,7 +217,7 @@ export default function Eniyi50ccScooterMain() {
           
           <h1>{baslik}</h1>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
+          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 

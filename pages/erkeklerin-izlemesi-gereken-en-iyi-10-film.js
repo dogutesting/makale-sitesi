@@ -17,6 +17,7 @@ export default function MansNeedWatch() {
   const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 
+  const okunmaSuresi = "5";
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -211,7 +212,7 @@ export default function MansNeedWatch() {
           
           <h1>{baslik}</h1>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
+          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 

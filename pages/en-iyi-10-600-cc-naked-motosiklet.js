@@ -16,6 +16,7 @@ export default function Eniyi600ccNakedMain() {
   const metin = "600cc'lik motorlar, genel olarak orta ve tecrübeli motor sürücülerine hitap eder. Naked sınıfının özgürlüğünü ve 600cc veya 700cc naked motosiklet gücünün atılganlığını birleştirerek, esnek ve enerjik bir sürüş deneyimi sunar. Bu liste, her biri kendi sınıfında öne çıkan 10 farklı modeli içermekte. Siz de 600cc'lik naked motosikletlerin sunduğu bu benzersiz deneyimi keşfetmek için yazımızı okumaya devam edin ve heyecanınızı kesfedin!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 
+  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -216,7 +217,7 @@ export default function Eniyi600ccNakedMain() {
           
           <h1>{baslik}</h1>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
+          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 

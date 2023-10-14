@@ -70,7 +70,7 @@ export default function App({ Component, pageProps }) {
           ],
           "logo": {
             "@type": "ImageObject",
-            "url": "https://enonlar.com/images/logo/logo.png"
+            "url": "https://enonlar.com/enonlar_logo_default.png"
           }
         }
       ]

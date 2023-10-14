@@ -162,7 +162,7 @@ export default function index() {
 
         <ContentBox
         url="erkeklerin-izlemesi-gereken-en-iyi-10-film"
-        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film Sizler İçin Derledik"
+        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film"
         resim="/images/a_0/f4_blade_runner_0.jpg"
         eklenmeTarihi="30.09.23"
         okunmaSuresi="5 dk"
@@ -189,7 +189,7 @@ export default function index() {
         paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
         
         <ContentBox
-        url="en-iyi-10-250-cc-super-sport-motosikletler"
+        url="en-iyi-10-250-cc-super-sport-motosiklet"
         baslik="En iyi 10 250cc'lik süper spor motosiklet"
         resim="/images/motosiklet/benelli_tnt_25.png"
         eklenmeTarihi="30.09.23"

@@ -4,6 +4,7 @@ export default function json_list(articleInfos, type, summaryText, arr) {
     return input.replace(/"/g, "'");
   }
 
+  const logo = "enonlar_logo_default.png";
   let articleText = "";
   const listeArr = [];
   arr.map((item, index) => {
@@ -72,6 +73,21 @@ export default function json_list(articleInfos, type, summaryText, arr) {
         }
       );
     }
+
+    else {
+      listeArr.push(
+        {
+            "@type": "ListItem",
+            "position": (index+1),
+            "item": {
+              "@type": type,
+              "url": item.url,
+              "name": item.name,
+              "image": item.image
+            }
+          }
+        );
+    }
       
 
         
@@ -94,9 +110,12 @@ export default function json_list(articleInfos, type, summaryText, arr) {
 
   const articleBody = escapeString(summaryText.props.children + articleText);
   const wordCount = articleBody.split(" ").length;
+
+  //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
   const readTime = Math.round((wordCount * 0.33) / 60);
 
   return {
+    //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
     readTimeSpan: readTime,
     html: `[
       {
@@ -127,9 +146,9 @@ export default function json_list(articleInfos, type, summaryText, arr) {
         "url": "https://enonlar.com",
         "logo": {
           "@type": "ImageObject",
-          "width": "300",
-          "height": "60",
-          "url": "${articleInfos.logo}"
+          "width": "234",
+          "height": "45",
+          "url": "https://enonlar.com/${logo}"
         }
       },
       "creator": "${articleInfos.yazar}",

@@ -16,6 +16,7 @@ export default function Eniyi50ccScooterMain() {
   const metin = "Scooter motosikletler, şehir içi ulaşımda rahatlık ve konfor arayanlar için ideal bir seçenektir. Küçük boyutları, agil yapıları ve geniş bagaj alanları sayesinde, scooterlar, yoğun trafikte rahat hareket edebilme ve park sorununu minimalize edebilme avantajları sunar. 100cc ve 125cc motor hacmine sahip scooter modelleri ise, hem yeni başlayanlar hem de deneyimli sürücüler için uygun bir seçim olabilir. Bu motor hacimleri, günlük şehir içi kullanım için yeterli performansı, ekonomik yakıt tüketimini ve düşük bakım maliyetlerini bir araya getirir. 100cc ve 125cc scooterlar, genelde LED farlar, dijital gösterge panelleri, geniş depolama alanları ve modern güvenlik özellikleri gibi konfor ve fonksiyonellik özellikleri sunar. Ayrıca, bu hacimdeki scooterlar genellikle uygun fiyatlı seçenekler sunar, bu da onları gençler, öğrenciler ve bütçesini düşünen sürücüler için cazip kılar. İşte karşınızda, Türkiye'deki en popüler 10 adet 125cc ve 100cc scooter modeli. Listemize başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 
+  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -41,7 +42,7 @@ export default function Eniyi50ccScooterMain() {
         "agirlik": "100",
         "ulke": "Hindistan",
         "yakitKapasitesi": "5",
-        "paragraf": "<p>Hero Pleasure 100, Hindistan'ın önde gelen motosiklet üreticilerinden Hero MotoCorp tarafından üretilen kompakt bir scooter modelidir. 100cc motor hacmi ile şehir içi trafiğinde hızlı manevra kabiliyeti ve düşük yakıt tüketimi sunar. Pratik tasarımı ve uygun fiyatı ile bütçe dostu bir seçenek olarak öne çıkar. Hero Pleasure 100, kadın sürücüler için tasarlanmış ve pazarlanmış bir modeldir, bu nedenle geniş bir kullanıcı kitlesine hitap eder. Basit ve rahat tasarımı ile günlük ulaşım ihtiyaçları için ideal bir seçenektir.</p>"
+        "paragraf": <p>Hero Pleasure 100, Hindistan'ın önde gelen motosiklet üreticilerinden Hero MotoCorp tarafından üretilen kompakt bir scooter modelidir. 100cc motor hacmi ile şehir içi trafiğinde hızlı manevra kabiliyeti ve düşük yakıt tüketimi sunar. Pratik tasarımı ve uygun fiyatı ile bütçe dostu bir seçenek olarak öne çıkar. Hero Pleasure 100, kadın sürücüler için tasarlanmış ve pazarlanmış bir modeldir, bu nedenle geniş bir kullanıcı kitlesine hitap eder. Basit ve rahat tasarımı ile günlük ulaşım ihtiyaçları için ideal bir seçenektir.</p>
     },        
     {
         "num": "9",
@@ -57,7 +58,7 @@ export default function Eniyi50ccScooterMain() {
         "agirlik": "111",
         "ulke": "Japonya",
         "yakitKapasitesi": "5.7",
-        "paragraf": "<p>Honda Activa 100, Japon motosiklet üreticisi Honda'nın güvenilir ve ekonomik bir scooter modelidir. 100cc motor hacmi ile düşük yakıt tüketimi ve günlük ulaşım için yeterli performans sunar. Honda'nın kalitesi ve güvenilirliği ile birleşen bu model, kullanıcılar için uzun ömürlü ve düşük bakım maliyetli bir seçenek haline gelir. Geniş depolama alanı ve konforlu koltuk, Honda Activa 100'ü pratik ve kullanıcı dostu bir scooter haline getirir. Otomatik şanzıman ve kolay kullanımı, her yaş grubundan sürücüler için uygun bir seçenek olmasını sağlar.</p>"
+        "paragraf": <p>Honda Activa 100, Japon motosiklet üreticisi Honda'nın güvenilir ve ekonomik bir scooter modelidir. 100cc motor hacmi ile düşük yakıt tüketimi ve günlük ulaşım için yeterli performans sunar. Honda'nın kalitesi ve güvenilirliği ile birleşen bu model, kullanıcılar için uzun ömürlü ve düşük bakım maliyetli bir seçenek haline gelir. Geniş depolama alanı ve konforlu koltuk, Honda Activa 100'ü pratik ve kullanıcı dostu bir scooter haline getirir. Otomatik şanzıman ve kolay kullanımı, her yaş grubundan sürücüler için uygun bir seçenek olmasını sağlar.</p>
     },        
     {
         "num": "8",
@@ -216,7 +217,7 @@ export default function Eniyi50ccScooterMain() {
           
           <h1>{baslik}</h1>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={jsonList.readTimeSpan}/>
+          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}/>
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
