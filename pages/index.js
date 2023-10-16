@@ -3,8 +3,32 @@ import Head from 'next/head'
 import ContentBox from "@/components/index/ContentBox";
 import CategoryBox from "@/components/index/CategoryBox";
 import { useAppContext } from "@/context/ContextProvider";
+import { connectToDatabase } from "@/lib/mysql";
 
-export default function index() {
+
+export async function getServerSideProps(context) {
+    
+  /* const { params } = context;
+  const { slug } = params; */
+  
+  const connection = await connectToDatabase();
+  
+  //const [rows] = await connection.execute("SELECT url FROM makaleler");
+  //const isSlugInDatabase = rows.some((row) => row.url === slug);
+  //! daha performanslı diye alttaki kod ile değiştirdim.
+
+  const [rows] = await connection.execute("SELECT * FROM makaleler");
+  connection.end();
+
+  return {
+      props: {
+          rows
+      }
+  }
+}
+
+
+export default function index({rows}) {
   const { nightMode } = useAppContext();
 
   function addArticleJsonLd() {
@@ -160,62 +184,24 @@ export default function index() {
 
         <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
-        <ContentBox
-        url="erkeklerin-izlemesi-gereken-en-iyi-10-film"
-        baslik="Erkeklerin İzlemesi Gereken En İyi 10 Film"
-        resim="/images/a_0/f4_blade_runner_0.jpg"
-        eklenmeTarihi="30.09.23"
-        okunmaSuresi="5 dk"
-        kategori="film"
-        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
-        
-        <ContentBox
-        url="en-yuksek-imdb-puanina-sahip-10-film"
-        baslik="En yüksek imdb puanına sahip 10 film"
-        resim="/images/a_0/f3_umudunu_kaybetme.jpg"
-        eklenmeTarihi="07.05.23"
-        okunmaSuresi="8 dk"
-        kategori="spor"
-        paragraf={`Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, \"Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al."`}
-        />
+        {console.log(rows[0])}
 
-        <ContentBox
-        url="en-yuksek-imdb-puanina-sahip-10-dizi"
-        baslik="En yüksek imdb puanına sahip 10 dizi"
-        resim="/images/a_0/f1_imlegend.jpg"
-        eklenmeTarihi="05.09.23"
-        okunmaSuresi="5 dk"
-        kategori="araba"
-        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
-        
-        <ContentBox
-        url="en-iyi-10-250-cc-super-sport-motosiklet"
-        baslik="En iyi 10 250cc'lik süper spor motosiklet"
-        resim="/images/motosiklet/benelli_tnt_25.png"
-        eklenmeTarihi="30.09.23"
-        okunmaSuresi="5 dk"
-        kategori="film"
-        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
-        
-        <ContentBox
-        url=""
-        baslik="Umudunu Kaybetme - The Pursuit of Happyness Yönetmeninden duygusal sözler"
-        resim="/images/a_0/f3_umudunu_kaybetme.jpg"
-        eklenmeTarihi="07.05.23"
-        okunmaSuresi="8 dk"
-        kategori="spor"
-        paragraf={`Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, \"Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al."`}
-        />
+        {
+          rows.map((row, index) => (
+            <ContentBox
+            key={index}
+            url={row.url}
+            baslik={row.baslik}
+            resim={row.resimYolu}
+            eklenmeTarihi={row.eklenmeTarihi}
+            okunmaSuresi={row.okunmaSuresi+" dk"}
+            kategori={row.kategori}
+            paragraf={row.paragraf}
+            />    
+          ))
+        }
 
-        <ContentBox
-        url=""
-        baslik="Will Smith neden tokat attı?"
-        resim="/images/a_0/f1_imlegend.jpg"
-        eklenmeTarihi="05.09.23"
-        okunmaSuresi="5 dk"
-        kategori="araba"
-        paragraf="Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."/>
-      
+        
       </Main>
     </>
   )
