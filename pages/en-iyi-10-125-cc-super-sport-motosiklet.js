@@ -31,8 +31,8 @@ export default function Eniyi125ccSuperMain() {
     {
         "num": "10",
         "url": `https://enonlar.com/${url}#bolum-10`,
-        "name": "Sinnis GP 125",
-        "image": `/images/motosiklet/sinnis_gp_125.png`,
+        "name": "Sinnis GPX 125",
+        "image": `/images/motosiklet/sinnis_gpx_125.jpg`,
         "firma": "Sinnis",
         "tip": "Super Sport",
         "motorHacmi": "125",

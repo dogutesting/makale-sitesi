@@ -1,7 +1,7 @@
 import { useAppContext } from "@/context/ContextProvider"
 import { useState } from "react";
 
-export default function CategoryBox() {
+export default function CategoryBox({ kategoriler }) {
 
   const { nightMode } = useAppContext();
   const [activeButton, setActiveButton] = useState('all');
@@ -26,6 +26,8 @@ export default function CategoryBox() {
       </button>
     );
   };
+
+  console.log("kategoriler: " + kategoriler);
 
   return (
     <div className="category-box">

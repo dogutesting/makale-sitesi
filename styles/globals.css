@@ -268,10 +268,10 @@ ul li {
 
 @media only screen and (max-width: 1600px) {
   .side {
-    width: 30%;
+    width: 25%;
   }
   .main-content {
-    width: 40%;
+    width: 50%;
   }
 }
 

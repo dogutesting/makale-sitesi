@@ -1,5 +1,7 @@
 import En from '@/components/mini_components/ens/en';
 import Dizi_kunye from '@/components/mini_components/kunyeler/dizi_kunye';
+import Reklam from '@/components/mini_components/reklam';
+
 
 export default function Ens_dizi({jsonContentArray}) {
 
@@ -28,18 +30,16 @@ export default function Ens_dizi({jsonContentArray}) {
       )
 
       items.push(<hr key={index+"hr1"} className='split'/>);
-    
+      
+      let addHr = true;
       if ((index + 1) % 2 === 0 && (index + 1) != 10) {
         items.push(
-          <>
-          <section key={index+"r"}>
-            Reklam bileşeni
-          </section>
-          </>
+          <Reklam key={index+"r"} />
         );
+        addHr = false;
       }
 
-      items.push(<hr key={index+"hr2"} className='split'/>);
+      !addHr && items.push(<hr key={index+"hr2"} className='split'/>);
       
   });
 

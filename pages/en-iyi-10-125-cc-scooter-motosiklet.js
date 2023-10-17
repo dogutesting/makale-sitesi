@@ -159,8 +159,8 @@ export default function Eniyi50ccScooterMain() {
     {
         "num": "2",
         "url": `https://enonlar.com/${url}#bolum-2`,
-        "name": "Yamaha RayZR 125",
-        "image": `/images/motosiklet/yamaha_rayzr_125.png`,
+        "name": "Yamaha Ray ZR 125",
+        "image": `/images/motosiklet/yamaha_ray_zr_125.png`,
         "firma": "Yamaha",
         "tip": "Scooter",
         "motorHacmi": "125",
