@@ -49,9 +49,7 @@ export default function index({rows}) {
                 "url": "https://enonlar.com/${kategori}"
               }`;
       });
-
       
-
     return`
       {
         "@graph": [

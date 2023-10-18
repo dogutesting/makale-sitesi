@@ -92,6 +92,7 @@ p {
   cursor: pointer;
   height: 25px;
   width: 25px;
+  user-select: none;
 }
 .link-night a{
   color: #5a97f9;
@@ -125,6 +126,7 @@ p {
   /* color: initial; */
   font-size: 1.5rem;
   font-weight: bold;
+  user-select: none;
 }
 
 header {
@@ -353,15 +355,48 @@ ul li {
 
 
 /* index */
+
+.arrow {
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: red;
+}
+.arrow-left {
+  left: 0;
+}
+
+.arrow-right {
+  right: 0;
+}
+
+
 .category-box {
+  background-color: red;
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   
   font-size: 16px;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+
   overflow: hidden;
 }
+
+.category-container {
+  display: relative !important;
+  background-color: red;
+}
+
 .category-button-normal {
   background-color: rgba(0, 0, 0, 0.15);
 }
@@ -378,7 +413,7 @@ ul li {
 .category-button-night:hover {
   background-color: rgba(144, 144, 144, 0.760);
 }
-.cnb-night-active {
+.cb-night-active {
   background-color: white;
   color: black !important;
 }
@@ -389,7 +424,6 @@ ul li {
   margin-right: 10px;
   cursor: pointer;
   border-radius: 5px;
-  transition: background-color 0.3s ease-in-out;
 }
 /* Yönlendirme okları için stil */
 .category-button.left {
@@ -410,10 +444,10 @@ ul li {
   flex-direction: row;
   text-decoration: none;
   color: inherit;
-  
   margin-bottom: 18px;
+  border-radius: 4px;
 
-  border-radius: 0.5px;
+  padding: 2px;
 }
 
 .icb-light:hover {
@@ -425,6 +459,14 @@ ul li {
 
 .index-image {
   object-fit: cover;
+}
+.icb-child:nth-child(1) {
+  flex: 2;
+  /* margin: 2px; */
+}
+.icb-child:nth-child(1) img {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
 }
 .icb-child:nth-child(2) {
  flex: 3;
@@ -440,18 +482,16 @@ ul li {
 .icb-child:nth-child(2) .dot {
   font-weight: bolder;
 }
-.icb-child:nth-child(1) .category {
+.icb-child:nth-child(2) .category {
   background-color: rgba(105, 105, 105, 0.272);
   padding: 2px;
-  border-radius: 6px;
+  border-radius: 4px;
 }
 .icb-child:nth-child(2) .category:hover {
   background-color: rgb(63, 63, 63);
   color: white;
 }
-.icb-child:nth-child(1) {
-  flex: 2;
-}
+
 
 .icb-child:nth-child(2) h2 {
   font-size: 1.2rem;
