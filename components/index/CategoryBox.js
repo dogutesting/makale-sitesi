@@ -61,7 +61,7 @@ export default function CategoryBox({ kategoriler }) {
   };
 
   /*
-  - kategoriler'e göre oluştur
+  - kategoriler'e göre oluştur v
   - css'lerini düzenle V
   
   
@@ -69,34 +69,62 @@ export default function CategoryBox({ kategoriler }) {
   */
 
 
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const [showLeftButton, setShowLeftButton] = useState(true);
+  const [showRightButton, setShowRightButton] = useState(true); // Başlangıçta sağ butonu göster
 
+  const categoryBoxRef = useRef(null);
+  const categoryContainerRef = useRef(null);
+  
 
+  useEffect(() => {
+    
+    if (categoryContainerRef.current) {
+
+      const containerWidth = categoryBoxRef.current.offsetWidth;
+      const scrollWidth = categoryContainerRef.current.scrollWidth;
+
+      if(scrollOffset == 0) {
+        setShowLeftButton(false);
+        setShowRightButton(true);
+      }
+      else if(scrollOffset != 0 && scrollOffset + containerWidth < scrollWidth){
+        setShowLeftButton(true);
+        setShowRightButton(true);
+      }
+      else if(scrollOffset + containerWidth >= scrollWidth) {
+        setShowLeftButton(true);
+        setShowRightButton(false);
+      }
+
+    }
+  }, [scrollOffset]);
+
+  const scrollLeft = () => {
+    setScrollOffset(scrollOffset - 100);
+  };
+
+  const scrollRight = () => {
+    setScrollOffset(scrollOffset + 100);
+  };
 
   
   return (
-    <>
-    
-    <div className="category-container">
-      {<button className="arrow-left">{"<"}</button>}
-      <p>toLowerCase lorem lore m lorem mrm mrmr mr </p>
-      {<button className="arrow-right">{">"}</button>}
-    </div>
-
-    {/* <div className="category-box">
-      {showLeftButton && <button className="arrow-left" onClick={scrollLeft}>{"<"}</button>}
-      {renderButton('01', 'Tümü')}
-        {renderButton('02', 'Tü')}
-        {renderButton('03', 'Tüü')}
-        {renderButton('04', 'Tüüü')}
-        {renderButton('05', 'Tüüüü')}
-        {kategoriler.map((kategori, index) => (
-          <button key={index} className="category-button">
-            {kategori}
-          </button>
-        ))}
-      {showRightButton && <button className="arrow-right" onClick={scrollRight}>{">"}</button>}
-    </div> */}
-
-    </>
+      <div className="category-box" ref={categoryBoxRef}>
+        {showLeftButton && <button title="Geri" className="arrow arrow-left arrow-shadow" onClick={scrollLeft}>{"˂"}</button>}
+          <div className="category-container" style={{ transform: `translateX(-${scrollOffset}px)` }} ref={categoryContainerRef}>
+            {renderButton('01', 'Tümü')}
+              {kategoriler.map((kategori, index) => (
+                  renderButton(index, kategori)
+              ))}
+              {renderButton('02', 'Tü')}
+              {renderButton('03', 'Tüü')}
+              {renderButton('04', 'Tüüü')}
+              {renderButton('05', 'Tüüüü')}
+          </div>
+        {showRightButton && 
+            <button title="İleri" className="arrow arrow-right arrow-shadow" onClick={scrollRight}>{"➜"}</button>
+        }
+      </div>
   );
 }
