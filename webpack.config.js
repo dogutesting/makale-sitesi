@@ -1,4 +1,4 @@
-module.exports = function (webpackEnv) {
+/* module.exports = function (webpackEnv) {
     // ...
     return {
      // ...
@@ -11,4 +11,4 @@ module.exports = function (webpackEnv) {
         }
       }
     }
-  }
+  } */

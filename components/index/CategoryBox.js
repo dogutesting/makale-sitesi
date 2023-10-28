@@ -10,6 +10,13 @@ export default function CategoryBox({ kategoriler }) {
   const { nightMode } = useAppContext();
   const [activeButton, setActiveButton] = useState('Tümü');
 
+  const [scrollOffset, setScrollOffset] = useState(0);
+  const [showLeftButton, setShowLeftButton] = useState(true);
+  const [showRightButton, setShowRightButton] = useState(true);
+  const categoryBoxRef = useRef(null);
+  const categoryContainerRef = useRef(null);
+
+
   function buyukBasla(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
@@ -20,6 +27,7 @@ export default function CategoryBox({ kategoriler }) {
 
   const handleButtonClick = (buttonId) => {
     setActiveButton(buttonId);
+    setClickedOffset(scrollOffset);
   };
   
   
@@ -62,20 +70,11 @@ export default function CategoryBox({ kategoriler }) {
 
   /*
   - kategoriler'e göre oluştur v
-  - css'lerini düzenle V
+  - css'lerini düzenle V~
   
   
   - mysql'den tıklanılan kategorinin makalalerini çek
   */
-
-
-  const [scrollOffset, setScrollOffset] = useState(0);
-  const [showLeftButton, setShowLeftButton] = useState(true);
-  const [showRightButton, setShowRightButton] = useState(true); // Başlangıçta sağ butonu göster
-
-  const categoryBoxRef = useRef(null);
-  const categoryContainerRef = useRef(null);
-  
 
   useEffect(() => {
     
@@ -91,10 +90,14 @@ export default function CategoryBox({ kategoriler }) {
       else if(scrollOffset != 0 && scrollOffset + containerWidth < scrollWidth){
         setShowLeftButton(true);
         setShowRightButton(true);
+
+        /* setScrollOffset(clickedOffset); */
       }
       else if(scrollOffset + containerWidth >= scrollWidth) {
         setShowLeftButton(true);
         setShowRightButton(false);
+
+        /* setScrollOffset(clickedOffset); */
       }
 
     }
@@ -111,7 +114,9 @@ export default function CategoryBox({ kategoriler }) {
   
   return (
       <div className="category-box" ref={categoryBoxRef}>
-        {showLeftButton && <button title="Geri" className="arrow arrow-left arrow-shadow" onClick={scrollLeft}>{"˂"}</button>}
+        {showLeftButton && 
+        <button title="Geri" className={["arrow arrow-left", nightMode ? "arrow-shadow-black" : "arrow-shadow-white"].join(" ")} onClick={scrollLeft}>➜</button>
+        }
           <div className="category-container" style={{ transform: `translateX(-${scrollOffset}px)` }} ref={categoryContainerRef}>
             {renderButton('01', 'Tümü')}
               {kategoriler.map((kategori, index) => (
@@ -123,7 +128,7 @@ export default function CategoryBox({ kategoriler }) {
               {renderButton('05', 'Tüüüü')}
           </div>
         {showRightButton && 
-            <button title="İleri" className="arrow arrow-right arrow-shadow" onClick={scrollRight}>{"➜"}</button>
+        <button title="İleri" className={["arrow arrow-right", nightMode ? "arrow-shadow-black" : "arrow-shadow-white"].join(" ")} onClick={scrollRight}>➜</button>
         }
       </div>
   );
