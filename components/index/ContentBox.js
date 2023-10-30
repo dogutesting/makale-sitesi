@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAppContext } from "@/context/ContextProvider";
 
-export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf}) {
+export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri}) {
   const { nightMode, supportWebp } = useAppContext();
 
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okun
                 {
                     supportWebp ? (
                         <Image
-                            priority={false}
+                            priority={pri}
                             src={resim} alt={"rsm_alt"}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"

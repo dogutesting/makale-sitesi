@@ -4,18 +4,11 @@ import ContentBox from "@/components/index/ContentBox";
 import CategoryBox from "@/components/index/CategoryBox";
 import { useAppContext } from "@/context/ContextProvider";
 import { connectToDatabase } from "@/lib/mysql";
+import { useEffect, useState } from "react";
 
-
-export async function getServerSideProps(context) {
-    
-  /* const { params } = context;
-  const { slug } = params; */
+export async function getServerSideProps() {
   
   const connection = await connectToDatabase();
-  
-  //const [rows] = await connection.execute("SELECT url FROM makaleler");
-  //const isSlugInDatabase = rows.some((row) => row.url === slug);
-  //! daha performanslı diye alttaki kod ile değiştirdim.
 
   const [rows] = await connection.execute("SELECT * FROM makaleler");
   connection.end();
@@ -29,18 +22,19 @@ export async function getServerSideProps(context) {
 
 export default function index({rows}) { 
   const { nightMode } = useAppContext();
-
-  let uniqueArray = [];
+  const [handleCategory, setHandleCategory] = useState("Tümü");
+  
+  let uniqueArray = [];  
 
   function addUniqueArrToJsonLd(arr) {
-    
+
     arr.forEach(element => {
       if(!uniqueArray.includes(element.kategori)) {
         uniqueArray = [...uniqueArray, element.kategori];
       }
     }); 
   
-    const jsonText = uniqueArray.map((kategori, index) => {
+    const jsonText = uniqueArray.map(kategori => {
       return `{
                 "@context": "https://schema.org",
                 "@type": "SiteNavigationElement",
@@ -64,6 +58,14 @@ export default function index({rows}) {
       `;
   }
 
+  const uniqueJSON = addUniqueArrToJsonLd(rows);
+
+  useEffect(() => {
+    document.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });  
+  }, []);
+
   return (
     <>
       <Head>
@@ -77,32 +79,31 @@ export default function index({rows}) {
         
         <script
             type="application/ld+json"
-            dangerouslySetInnerHTML={{__html: addUniqueArrToJsonLd(rows)}}
+            dangerouslySetInnerHTML={{__html: uniqueJSON}}
             key="article-jsonld"
         />
       </Head>
 
       <Main>
 
-        <CategoryBox kategoriler={uniqueArray}/>
+        <CategoryBox kategoriler={uniqueArray} setHandleCategory={setHandleCategory}/>
 
         <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
-        {
-          rows.map((row, index) => (
-            <ContentBox
-            key={index}
-            url={row.url}
-            baslik={row.baslik}
-            resim={row.resimYolu}
-            eklenmeTarihi={row.eklenmeTarihi}
-            okunmaSuresi={row.okunmaSuresi+" dk"}
-            kategori={row.kategori}
-            paragraf={row.paragraf}
-            />    
-          ))
-        }
-
+        {rows.filter(row => handleCategory === "Tümü" || row.kategori === handleCategory)
+          .map((row, index) => (
+              <ContentBox
+                key={index}
+                url={row.url}
+                baslik={row.baslik}
+                resim={row.resimYolu}
+                eklenmeTarihi={row.eklenmeTarihi}
+                okunmaSuresi={row.okunmaSuresi + " dk"}
+                kategori={row.kategori}
+                paragraf={row.paragraf}
+                pri={index == 0 ? true : false}
+              />
+        ))}
         
       </Main>
     </>
