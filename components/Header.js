@@ -21,7 +21,7 @@ export default function Header() {
             <div className='main-content header-main'>
                 <div>
                      <Link id='go_index' href="/">
-                        <img className='logo' src={nightMode ? '/logo_white.png' : '/logo.png'} alt='logo'/>
+                        <img className='logo user-drag-none' src={nightMode ? '/logo_white.png' : '/logo.png'} alt='logo'/>
                      </Link>
                 </div>
                 <div>
@@ -35,7 +35,7 @@ export default function Header() {
                      width={25} height={25} alt='Gece-Gündüz Modu İkonu'
                       title='Gece modu'
                       onClick={() => toggleDarkMode()}/> */}
-                      <img className='mode' src={nightMode ? '/images/menu/l_mode.png' : '/images/menu/n_mode.png'}
+                      <img className='mode user-drag-none' src={nightMode ? '/images/menu/l_mode.png' : '/images/menu/n_mode.png'}
                        alt='Gece-Gündüz modu ikonu'
                        onClick={() => toggleDarkMode()}/>
             </div>

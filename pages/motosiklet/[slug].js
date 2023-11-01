@@ -2,7 +2,7 @@ import { connectToDatabase } from "@/lib/mysql"
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
     
   const { params } = context;
   const { slug } = params;

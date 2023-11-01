@@ -1,36 +1,71 @@
 import Main from "@/components/Main"
 import Head from 'next/head'
-import ContentBox from "@/components/index/ContentBox";
+import Content from "@/components/mini_components/Content";
 import CategoryBox from "@/components/index/CategoryBox";
 import { useAppContext } from "@/context/ContextProvider";
-import { connectToDatabase } from "@/lib/mysql";
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router';
+import Pagination from "@/components/mini_components/Pagination";
 
-export async function getServerSideProps() {
+
+import { connectToDatabase } from "@/lib/mysql";
+
+
+export async function getStaticProps() {
   
   const connection = await connectToDatabase();
 
-  const [rows] = await connection.execute("SELECT * FROM makaleler");
-  connection.end();
-
-  return {
+  try {
+    const [rows] = await connection.execute("SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler LIMIT 10");
+    const [kategoriler] = await connection.execute("SELECT kategori FROM makaleler");
+    const [maxRows] = await connection.execute("SELECT COUNT(*) FROM makaleler");
+    const max = parseInt(maxRows[0]["COUNT(*)"], 10);
+    
+    return {
       props: {
-          rows
-      }
+        rows,
+        kategoriler,
+        max,
+      },
+      revalidate: 60 * 60 * 12,
+    };
+  } catch (error) {
+    return {
+      props: {
+        rows: [],
+        kategoriler: [],
+        max: 0,
+      },
+    };
+  } finally {
+    connection.end();
   }
 }
 
-export default function index({rows}) { 
+export default function index({rows, kategoriler, max}) {
+
+  /* //! kaç mb veri çektiğini gösteren kod
+  const dataSizeInBytes = Buffer.from(JSON.stringify(rows)).length;
+  const dataSizeInMB = dataSizeInBytes / (1024 * 1024);
+  console.log("mb: " + dataSizeInMB);
+  */
+
   const { nightMode } = useAppContext();
   const [handleCategory, setHandleCategory] = useState("Tümü");
-  
-  let uniqueArray = [];  
+  const [active, setActive] = useState(1);
+  const router = useRouter();
 
+  const floorAndDivide = (value) => {
+    return value <= 10 ? 0 : Math.ceil(value/10);
+  }
+
+  let uniqueArray = [];  
   function addUniqueArrToJsonLd(arr) {
 
     arr.forEach(element => {
       if(!uniqueArray.includes(element.kategori)) {
         uniqueArray = [...uniqueArray, element.kategori];
+        /* console.log(element.kategori); */
       }
     }); 
   
@@ -58,13 +93,13 @@ export default function index({rows}) {
       `;
   }
 
-  const uniqueJSON = addUniqueArrToJsonLd(rows);
+  const uniqueJSON = addUniqueArrToJsonLd(kategoriler);
 
   useEffect(() => {
-    document.addEventListener('dragstart', (e) => {
-      e.preventDefault();
-    });  
-  }, []);
+    if(handleCategory != "Tümü") {
+      router.push(`/${handleCategory}`);
+    }
+  }, [handleCategory])
 
   return (
     <>
@@ -88,22 +123,15 @@ export default function index({rows}) {
 
         <CategoryBox kategoriler={uniqueArray} setHandleCategory={setHandleCategory}/>
 
-        <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
-        {rows.filter(row => handleCategory === "Tümü" || row.kategori === handleCategory)
-          .map((row, index) => (
-              <ContentBox
-                key={index}
-                url={row.url}
-                baslik={row.baslik}
-                resim={row.resimYolu}
-                eklenmeTarihi={row.eklenmeTarihi}
-                okunmaSuresi={row.okunmaSuresi + " dk"}
-                kategori={row.kategori}
-                paragraf={row.paragraf}
-                pri={index == 0 ? true : false}
-              />
-        ))}
+
+        <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
+    
+        <Pagination max={floorAndDivide(max)} active={active} setActive={setActive}/>
+
+        <Content data={rows.slice(0, 5)} kategori={"all"} />
+        
+
         
       </Main>
     </>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAppContext } from "@/context/ContextProvider";
 
-export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri}) {
+export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, hash}) {
   const { nightMode, supportWebp } = useAppContext();
 
   const router = useRouter();
@@ -37,7 +37,7 @@ export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okun
         
         <div className={['icb-child', nightMode ? 'white' : ''].join(' ')}>
           <div>
-            <h2 title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
+            <h2 id={hash !== 0 ? "h2_"+hash : ''} title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
              : (baslik)}</h2>
           </div>
           <div className={nightMode ? 'soft-white' : ''}>
@@ -51,6 +51,7 @@ export default function IndexContentBox({url, baslik, resim, eklenmeTarihi, okun
             <span className='readTime'>{okunmaSuresi}</span>
             <span className='dot'> · </span>
             <span className='category' onClick={(e) => {goTag(kategori); e.preventDefault();}}>{kategori}</span>
+            <span>Hash: {hash}</span>
           </div>
         </div>
 

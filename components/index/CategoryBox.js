@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 export default function CategoryBox({ kategoriler, setHandleCategory }) {
 
   const { nightMode } = useAppContext();
-  const [activeButton, setActiveButton] = useState('Tümü');
+  const [activeButton, setActiveButton] = useState("Tümü");
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(false);
@@ -38,7 +38,7 @@ export default function CategoryBox({ kategoriler, setHandleCategory }) {
     const isNightActive = isActive && nightMode;
 
     const buttonClasses = [
-      'category-button',
+      'category-button user-select-none',
       isActiveButton,
       isNormalActive ? 'cb-normal-active' : '',
       isNightActive ? 'cb-night-active' : ''
