@@ -557,9 +557,10 @@ ul li {
   justify-content: center;
   align-items: center;
   border: 1px solid #333;
-  border-radius: 50%;
+  border-radius: 10%;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 .page:hover {
   background-color: #6f6f6f61;

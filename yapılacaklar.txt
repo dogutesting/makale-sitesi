@@ -1,3 +1,14 @@
 DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 
 -> erkeklerin-izlemesi-gereken-en-iyi-10-filmden yaklaşık 25 tane makale çıkıyor onları yaz
+
+
+->>>>
+
+-> 404 sayfasını düzenle.
+
+
+-> muhtemelen sayfalar client tarafında oluşuyor. Bu şu demek ->  html'e dönüştürülüp client'a yollanmıyor
+
+
+getAllCategory.js error500 unutma
