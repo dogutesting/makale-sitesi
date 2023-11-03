@@ -9,10 +9,10 @@ export default async (req, res) => {
   const connection = await connectToDatabase();
   try {
     const [rows] = await connection.execute(
-      k == "all"
+      k == "hepsi"
         ? "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler LIMIT ? OFFSET ?"
         : "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler WHERE kategori = ? LIMIT ? OFFSET ?",
-      k == "all" ? [l, o] : [k, l, o]
+      k == "hepsi" ? [l, o] : [k, l, o]
     );                                      
     res.status(200).json(rows);
   }

@@ -1,30 +1,27 @@
+import Link from "next/link";
+
 export default function Pagination({max, active, setActive}) {
 
-    const handleButtonClick = (newActive) => {
-        setActive(newActive);
+  const pageNumbers = [];
+  for (let i = 1; i <= max; i++) {
+      pageNumbers.push(i);
+  }
 
-        /* const h2Element = document.getElementById("h2-"+newActive);
-        console.log(h2Element);
-        h2Element.scrollIntoView({ behavior: "smooth" }); */
-
-      };   
-
-    const pageNumbers = [];
-    for (let i = 1; i <= max; i++) {
-        pageNumbers.push(i);
-    }
+  {/* 10 ve üzeri olunca ne olacak  */}
 
   return (
     <div className="pagination-container">
         <div className="pagination">
             {pageNumbers.map((pageNumber) => (
-            <button
+            <Link
+                title={"Sayfa "+pageNumber}
                 key={pageNumber}
-                className={`page ${active === pageNumber ? 'active' : ''}`}
-                onClick={() => handleButtonClick(pageNumber)}
+                className={`page ${active == pageNumber ? 'active' : ''}`}
+                onClick={() => setActive(pageNumber)}
+                href={pageNumber === 1 ? "/" : "/?page="+pageNumber}
             >
                 {pageNumber}
-            </button>
+            </Link>
             ))}
         </div>
     </div>

@@ -1,17 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import ContentBox from "./ContentBox";
 
-const Content = ({ data, kategori }) => {
+const Content = ({ data, cats, currentPage, addRef }) => {
   const [posts, setPosts] = useState(data);
   const [hasMore, setHasMore] = useState(true);
     
+
+  //currentPage 0 veya 0'dan küçük olamaz!
+  //currentPage == 1 -> 2,3,4 renderla
+  //currentPage != 1 
+
+
   const getMorePost = async () => {
 
+    const offset = ((currentPage - 1) * 10);
+
+    console.log("offset: " + offset);
+
      const params = new URLSearchParams({
-        k: kategori,
+        k: cats,
         l: 10,
-        o: posts.length,
+        o: offset,
       });
   
       try {
@@ -21,7 +31,7 @@ const Content = ({ data, kategori }) => {
         newPosts != 10 && setHasMore(false);
       }
       catch(error) {
-        //
+        console.log(error, "error");
       }
 
     /* const res = await fetch(
@@ -31,7 +41,8 @@ const Content = ({ data, kategori }) => {
     setPosts((post) => [...post, ...newPosts]); */
   };
 
-  
+  /* //! USEREFLERE EKLEYECEĞİZ
+  //! HASH !== 0 USERREF FALAN FİLAN  */  
 
   return (
 
@@ -54,6 +65,7 @@ const Content = ({ data, kategori }) => {
                 paragraf={row.paragraf}
                 pri={index == 0 ? true : false}
                 hash={(index+1) % 10 === 1 ? Math.floor(index / 10) + 1 : 0}
+                addRef={addRef}
             />
         ))}
     </InfiniteScroll>

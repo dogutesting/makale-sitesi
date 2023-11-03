@@ -5,10 +5,9 @@ DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 
 ->>>>
 
+-> pagination ile index oluşturmayı yap önce
+
+
 -> 404 sayfasını düzenle.
-
-
--> muhtemelen sayfalar client tarafında oluşuyor. Bu şu demek ->  html'e dönüştürülüp client'a yollanmıyor
-
-
-getAllCategory.js error500 unutma
+-> muhtemelen sayfalar client tarafında oluşuyor. Bu şu demek ->  html'e dönüştürülüp client'a yollanmıyor (bu konuya siteyi yayına verdikten sonra bak)
+-> getAllCategory.js error500 unutma

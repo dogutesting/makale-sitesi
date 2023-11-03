@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 export default function CategoryBox({ kategoriler, setHandleCategory }) {
 
   const { nightMode } = useAppContext();
-  const [activeButton, setActiveButton] = useState("Tümü");
+  const [activeButton, setActiveButton] = useState("Hepsi");
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(false);
@@ -96,7 +96,7 @@ export default function CategoryBox({ kategoriler, setHandleCategory }) {
         <button title="Geri" className={["arrow arrow-left", nightMode ? "arrow-shadow-black" : "arrow-shadow-white"].join(" ")} onClick={scrollLeft}>➜</button>
         }
           <div className="category-container" style={{ transform: `translateX(-${scrollOffset}px)` }} ref={categoryContainerRef}>
-              {renderButton('01', 'Tümü')}
+              {renderButton('01', 'Hepsi')}
               {kategoriler.map((kategori, index) => (
                   renderButton(index, kategori)
               ))}
