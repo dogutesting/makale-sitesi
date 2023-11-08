@@ -1,13 +1,50 @@
 DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 
 -> erkeklerin-izlemesi-gereken-en-iyi-10-filmden yaklaşık 25 tane makale çıkıyor onları yaz
-
+38
 
 ->>>>
+08.11.23
+-> 1- pagination ile index oluşturmayı yap önce (otomatik oluşturmayı kapat)
+	kategori kısımlarına 
 
--> pagination ile index oluşturmayı yap önce
+"<script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{__html: `
+            <script type="application/ld+json">
+            {
+              "@context": "http://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Ana Sayfa",
+                  "item": "https://www.example.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "${kategori}",
+                  "item": "https://www.example.com/${kategori}"
+                }
+              ]
+            }
+            </script>`}}
+            key="article-jsonld"
+        />"
+ bu kodu ekle
 
-
+-> 2- sayfaları getStaticProps ile oluşturmak için Json formatını getStaticProps içerisine aktar
+    revalidate süresini ayarla
+-> 3- (2. işlem sonrasında node/readAll.js dosyasının doğru çalıştığından emin ol)
 -> 404 sayfasını düzenle.
--> muhtemelen sayfalar client tarafında oluşuyor. Bu şu demek ->  html'e dönüştürülüp client'a yollanmıyor (bu konuya siteyi yayına verdikten sonra bak)
--> getAllCategory.js error500 unutma
+-> makale sayfasındaki önerileri ayarla
+    - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
+-> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+-> Yeni makaleler yazmaya devam et.
+
+-> getAllCategory.js ve diğer benzeri sayfalarda error 500 kodlarını düzenle
+-> Bu ayın 21'inde domain ve server'ı satın al ve internete yükle
+-> google search console'da hata var mı diye kontrol et
+-> günde minimum 1 makale yaz ve diğer proje üzerinde çalış

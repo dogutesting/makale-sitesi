@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Sayfa dosyalarının bulunduğu klasörü belirtin
-const pagesDirectory = path.join(process.cwd(), 'pages');
+const pagesDirectory = path.join(process.cwd(), '../pages');
 
 // Sayfa dosyalarını listele
 const pageFiles = fs.readdirSync(pagesDirectory);
@@ -12,7 +12,9 @@ let values = [];
 // Her sayfanın içeriğini okuyun
 pageFiles.forEach((pageFile) => {
 
- if(!pageFile.includes(".js") || pageFile.includes("index.js") || pageFile.includes("_app.js") || pageFile.includes("_document.js") || pageFile.includes("test.js")) {return false}
+ if(!pageFile.includes(".js") || pageFile.includes("index.js") || pageFile.includes("_app.js") || 
+pageFile.includes("_document.js") || pageFile.includes("test.js") || pageFile.includes("old_index.js") ||
+pageFile.includes("404.js")) {return false}
 
     const pagePath = path.join(pagesDirectory, pageFile);
     const pageContent = fs.readFileSync(pagePath, 'utf-8');
@@ -58,7 +60,7 @@ pageFiles.forEach((pageFile) => {
     const satirlar = pageContent.split('\n');
 
     // Aranan metin
-    const arananMetin = '"num": "10",';
+    const arananMetin = `"num": "10",`;
     
     // Aranan metini içeren satırın indeksini bul
     const indeks = satirlar.findIndex(satir => satir.includes(arananMetin));
@@ -67,7 +69,7 @@ pageFiles.forEach((pageFile) => {
     if (indeks !== -1 && indeks + 3 < satirlar.length) {
         resimYolu = satirlar[indeks + 3];
     } else {
-      console.log('İstenen metin bulunamadı veya 3 satır sonrasında başka bir satır yok.');
+      console.log('İstenen metin bulunamadı veya 3 satır sonrasında başka bir satır yok. Sayfa url: ' + url.trim());
     }
     //! first_image
     

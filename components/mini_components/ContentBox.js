@@ -13,13 +13,6 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
     router.push(url);
   }
 
-  /* hash !== 0 && addRef("h2_"+hash); */
-  /* if(hash !== 0) {
-    const nRef = useRef("h2_"+hash);
-    addRef(nRef);
-  } */
-  
-
   return (
     <Link className={['index-content-box', nightMode ? 'icb-night' : 'icb-light'].join(' ')} href={url}>
         <div className='icb-child image-container'>
@@ -45,14 +38,7 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
         
         <div className={['icb-child', nightMode ? 'white' : ''].join(' ')}>
           <div>
-            {/* {
-             hash !== String ? (
-             <h2 ref={"h2_"+hash} title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
-             : (baslik)}</h2>) :
-             <h2 title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
-             : (baslik)}</h2>
-            } */}
-            <h2 id={hash !== 0 ? "h2_"+hash : ''} title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
+          <h2 title={baslik}>{baslik.split(" ").length > 9 ? (baslik.split(" ").slice(0, 9).join(" ")+"..")
              : (baslik)}</h2>
           </div>
           <div className={nightMode ? 'soft-white' : ''}>

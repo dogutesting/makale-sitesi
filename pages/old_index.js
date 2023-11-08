@@ -1,6 +1,6 @@
 import Main from "@/components/Main"
 import Head from 'next/head'
-import Content from "@/components/mini_components/Content";
+import Content from "@/components/mini_components/Posts";
 import CategoryBox from "@/components/index/CategoryBox";
 import { useAppContext } from "@/context/ContextProvider";
 import { useEffect, useState } from "react";

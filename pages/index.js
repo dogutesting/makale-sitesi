@@ -1,112 +1,80 @@
 // pages/index.js
 import Head from 'next/head';
 import Main from '@/components/Main';
-import Content from '@/components/mini_components/Content';
+import Content from '@/components/mini_components/Posts';
 import CategoryBox from '@/components/index/CategoryBox';
 import Pagination from '@/components/mini_components/Pagination';
 import { useAppContext } from '@/context/ContextProvider';
-import { connectToDatabase } from '@/lib/mysql';
 import { useRouter } from 'next/router';
 import { useEffect, useRef, useState } from 'react';
 
 
+
 export async function getServerSideProps( { query }) {
-    const { page } = query;
-    
-    const currentPage = page === undefined ? 1 : page;
-    const itemsPerPage = 10;
-    
-    const db = await connectToDatabase();
+    const { kategori, sayfa } = query;
+
+    const currentCategory = kategori === undefined ? 'hepsi' : kategori;
+    const currentPage = sayfa === undefined ? 1 : sayfa;
 
     try {
-        const [results] = await db.execute("SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler LIMIT ? OFFSET ?", [itemsPerPage, currentPage === 1 ? 0 : (currentPage - 1) * 10]);
-        const [maxRows] = await db.execute("SELECT COUNT(*) FROM makaleler");
-        const totalCount = parseInt(maxRows[0]["COUNT(*)"], 10);
-        const [getCats] = await db.execute("SELECT DISTINCT kategori FROM makaleler");
-        const cats = getCats.map((item) => item.kategori);
-        const paginationCount = Math.ceil(totalCount / itemsPerPage);
+    const apiUrl = `http://localhost:3000/api/getArticle?kategori=${currentCategory}&sayfa=${currentPage}`;
+    const data = await fetch(apiUrl).then(response => response.json());
+    
+    if(data.paginationCount == 0) {
+      return {
+        redirect: {
+          destination: '/404',
+          permanent: false,
+        },
+      }
+    }
+    
+    return {
+      props: {
+        articles: data.articles,
+        currentPage,
+        cats: data.cats,
+        paginationCount: data.paginationCount,
+        currentCategory: data.currentCategory,
+      }
+    }
 
-        db.end();
-
-        return {
-            props: {
-                articles: results,
-                currentPage,
-                paginationCount,
-                cats,
-            },
-        };
     } catch(error) {
-        console.log("hata: " + error);
-        db.end();
-        return {
-            notFound: true,
-        };
+      return {
+        props: {
+          notFound: true,
+        }
+      }
     }
 }
 
-export default function index({articles, currentPage, paginationCount, cats}) {
+export default function index({articles, currentPage, cats, paginationCount, currentCategory}) {
 
-/* export default function index({currentPage}) { */
+console.log("-----------------------------Başla-----------------");
+console.log("Length: " + articles.length + "\n", "currentPage: " + currentPage +"\n", "cats: " + cats +"\n", "paginationCount: " + paginationCount + "\n" + "currentCategory: " +  currentCategory);
 
   const { nightMode } = useAppContext();
   const [currentPageState, setCurrentPageState] = useState(currentPage);
-  const [handleCategory, setHandleCategory] = useState("Tümü");
+  const [handleCategory, setHandleCategory] = useState("Hepsi");
   
   const router = useRouter();
-  const handlePageChange = (newPage) => {
-    setCurrentPageState(newPage);
 
-    const goTo = newPage == 1 ? "/" : `?page=${newPage}`;
+  /* const handlePageChange = (cat, page) => {
+    setCurrentPageState(page);
+
+    const goTo = page == 1 ? "/" : `?sayfa=${page}`;
     router.push(goTo);    
   };
-  //ilk yüklenmede sayfayı yönlendir
+
+  useEffect(() => { //page==1&&cat=hepsi => /
+    if(handleCategory != "Hepsi") {
+      router.push(`/${handleCategory}`);
+    }
+  }, [handleCategory]) */
+  /* //ilk yüklenmede sayfayı yönlendir
   useEffect(() => {
-    handlePageChange(currentPage);
-  }, [])
-
-  const [refArray, setRefArray] = useState([]);
-
-  const addRef = (newRef) => {
-    setRefArray((prev) => [...prev, useRef(newRef)])
-  };
-
-  /* useEffect(() => {
-    const handleScroll = () => {
-      // Tarayıcının her kaydırma olayında bu işlev çalışacak
-
-      // refArray içindeki her bir ref nesnesini kontrol edin
-      refArrays.current.forEach((ref, index) => {
-        const targetElement = ref.current;
-        if (!targetElement) return; // Geçersiz ref'i atla
-
-        const elementRect = targetElement.getBoundingClientRect();
-        const elementTop = elementRect.top;
-        const elementBottom = elementRect.bottom;
-        const windowHeight = window.innerHeight;
-        const scrollY = window.scrollY;
-
-        // Yaklaşma koşulu burada kontrol edilir
-        if (elementTop >= 0 && elementBottom <= windowHeight) {
-          // Element görünür alandadır, tarayıcının ortasına gelmiştir.
-          console.log(`Element ${index + 1} görünür alanda.`);
-          // Burada yapmak istediğiniz işlemi gerçekleştirebilirsiniz.
-        } else {
-          // Element görünür alanda değil.
-          console.log(`Element ${index + 1} görünür alanda değil.`);
-        }
-      });
-    };
-
-    // Kaydırma olayını dinlemek için bir olay dinleyici ekleyin
-    window.addEventListener("scroll", handleScroll);
-
-    // Temizleme işlemi: bileşen kaldırıldığında olay dinleyiciyi kaldırın
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); */
-
+    handlePageChange(handleCategory, currentPage);
+  }, []) */
   
   function addUniqueArrToJsonLd(uniqueArray) {
   
@@ -136,12 +104,6 @@ export default function index({articles, currentPage, paginationCount, cats}) {
 
   const uniqueJSON = addUniqueArrToJsonLd(cats);
 
-  useEffect(() => { //page==1&&cat=hepsi => /
-    if(handleCategory != "Tümü") {
-      router.push(`/${handleCategory}`);
-    }
-  }, [handleCategory])
-
   return (
     <>
         <Head>
@@ -158,15 +120,15 @@ export default function index({articles, currentPage, paginationCount, cats}) {
                 key="article-jsonld"
             />
         </Head>
-        <h1>Index.js sayfasındayız.</h1>
+        
         <Main>
             <CategoryBox kategoriler={cats} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            <Content data={articles} cats="hepsi" currentPage={currentPageState} addRef={addRef}/>
+            <Content posts = {articles}/>
 
             <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState}/>
+            {paginationCount != 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState}/>}
         </Main>
     </>
   );
