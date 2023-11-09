@@ -37,14 +37,15 @@ export default async (req, res) => {
 
     res.status(200).json({
       articles,
-      cats,//her seferinde category yollamak zorunda mıyım?
+      cats,
       paginationCount,
-      currentCategory
+      currentCategory,
+      currentPageOffset
     });
   }
   catch(error) {
-    //res.status(500).json({error: "Burayı kodlayan büyük bir hata yaptı. Kodlayıcı için F" + "\n" + error + "\n" + "current Category: " + currentCategory + "\n" + "current Page: " + sayfa});
-    res.status(500).send(
+    res.status(500).json("Burayı kodlayan için F");
+    /* res.status(500).send(
       `
       <html>
       <body>
@@ -60,7 +61,7 @@ export default async (req, res) => {
       </body>
       </html>
       `
-    )
+    ) */
   }
   finally {
     db.end();

@@ -1,25 +1,25 @@
-import { useAppContext } from "@/context/ContextProvider"
-
 import { useState, useEffect, useRef } from "react";
 
-export default function CategoryBox({ kategoriler, setHandleCategory }) {
+export default function CategoryBox({ nightMode, kategoriler, setHandleCategory, handleCategory, newCategoriesSequence }) {
 
-  const { nightMode } = useAppContext();
-  const [activeButton, setActiveButton] = useState("Hepsi");
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(false);
   const categoryBoxRef = useRef(null);
   const categoryContainerRef = useRef(null);
 
-  const handleButtonClick = (buttonId) => {
-    setActiveButton(buttonId);
-    setHandleCategory(buttonId);
+
+  
+
+  const handleButtonClick = (buttonText) => {
+    setHandleCategory(buttonText);
+    newCategoriesSequence(kategoriler, buttonText);
+    setScrollOffset(0);
   };
   
   
   const renderButton = (key, buttonText) => {
-    const isActive = activeButton === buttonText;
+    const isActive = handleCategory === buttonText;
 
     const isActiveButton = (() => {
       if(!isActive) {
@@ -96,7 +96,7 @@ export default function CategoryBox({ kategoriler, setHandleCategory }) {
         <button title="Geri" className={["arrow arrow-left", nightMode ? "arrow-shadow-black" : "arrow-shadow-white"].join(" ")} onClick={scrollLeft}>➜</button>
         }
           <div className="category-container" style={{ transform: `translateX(-${scrollOffset}px)` }} ref={categoryContainerRef}>
-              {renderButton('01', 'Hepsi')}
+              {renderButton('01', 'hepsi')}
               {kategoriler.map((kategori, index) => (
                   renderButton(index, kategori)
               ))}

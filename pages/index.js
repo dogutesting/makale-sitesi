@@ -14,6 +14,14 @@ export async function getServerSideProps( { query }) {
     const { kategori, sayfa } = query;
 
     const currentCategory = kategori === undefined ? 'hepsi' : kategori;
+    /* const currentCategory = kategori === undefined ? 'hepsi' : (kategori === 'Hepsi' ? 'hepsi' : kategori); */
+    /* let currentCategory = '';
+    if(kategori === undefined || kategori === 'hepsi') {
+      currentCategory = 'hepsi';
+    }
+    else {
+      currentCategory = kategori;
+    } */
     const currentPage = sayfa === undefined ? 1 : sayfa;
 
     try {
@@ -36,6 +44,7 @@ export async function getServerSideProps( { query }) {
         cats: data.cats,
         paginationCount: data.paginationCount,
         currentCategory: data.currentCategory,
+        currentPageOffset: data.currentPageOffset
       }
     }
 
@@ -50,32 +59,25 @@ export async function getServerSideProps( { query }) {
 
 export default function index({articles, currentPage, cats, paginationCount, currentCategory}) {
 
-console.log("-----------------------------Başla-----------------");
-console.log("Length: " + articles.length + "\n", "currentPage: " + currentPage +"\n", "cats: " + cats +"\n", "paginationCount: " + paginationCount + "\n" + "currentCategory: " +  currentCategory);
-
   const { nightMode } = useAppContext();
-  const [currentPageState, setCurrentPageState] = useState(currentPage);
-  const [handleCategory, setHandleCategory] = useState("Hepsi");
-  
   const router = useRouter();
 
-  /* const handlePageChange = (cat, page) => {
-    setCurrentPageState(page);
+  const [currentPageState, setCurrentPageState] = useState(currentPage);
+  const [categories, setCategories] = useState(cats);
+  const [handleCategory, setHandleCategory] = useState(currentCategory);
 
-    const goTo = page == 1 ? "/" : `?sayfa=${page}`;
-    router.push(goTo);    
-  };
-
-  useEffect(() => { //page==1&&cat=hepsi => /
-    if(handleCategory != "Hepsi") {
-      router.push(`/${handleCategory}`);
+  function newCategoriesSequence (kategoriler, buttonText) {    
+    const data = [...kategoriler];
+    const buttonTextIndex = data.indexOf(buttonText);
+    
+    if(buttonTextIndex > 0) {
+      data.splice(buttonTextIndex, 1);
+      data.unshift(buttonText);
     }
-  }, [handleCategory]) */
-  /* //ilk yüklenmede sayfayı yönlendir
-  useEffect(() => {
-    handlePageChange(handleCategory, currentPage);
-  }, []) */
-  
+    setCategories(data);
+  }
+
+  //Head için LD+JSON
   function addUniqueArrToJsonLd(uniqueArray) {
   
     const jsonText = uniqueArray.map(kategori => {
@@ -84,7 +86,7 @@ console.log("Length: " + articles.length + "\n", "currentPage: " + currentPage +
                 "@type": "SiteNavigationElement",
                 "@id": "#${kategori}",
                 "name": "${kategori}",
-                "url": "https://enonlar.com/${kategori}"
+                "url": "https://enonlar.com/?kategori=${kategori}"
               }`;
       });
       
@@ -101,8 +103,16 @@ console.log("Length: " + articles.length + "\n", "currentPage: " + currentPage +
       }
       `;
   }
+  const uniqueJSON = addUniqueArrToJsonLd(categories);
+  //Head için LD+JSON
 
-  const uniqueJSON = addUniqueArrToJsonLd(cats);
+  useEffect(() => {
+    handleCategory === "hepsi" ? 
+      router.push("/") :
+      router.push(`/?kategori=${handleCategory}`);
+    setCurrentPageState(1);
+  }, [handleCategory]);
+  
 
   return (
     <>
@@ -122,13 +132,13 @@ console.log("Length: " + articles.length + "\n", "currentPage: " + currentPage +
         </Head>
         
         <Main>
-            <CategoryBox kategoriler={cats} setHandleCategory={setHandleCategory}/>
+            <CategoryBox nightMode={nightMode} kategoriler={categories} setHandleCategory={setHandleCategory} handleCategory={handleCategory} newCategoriesSequence={newCategoriesSequence}/>
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             <Content posts = {articles}/>
 
             <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            {paginationCount != 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState}/>}
+            {paginationCount != 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}
         </Main>
     </>
   );

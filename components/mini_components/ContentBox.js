@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useAppContext } from "@/context/ContextProvider";
 import { useRef } from 'react';
 
-export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, hash, addRef}) {
+export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri}) {
   const { nightMode, supportWebp } = useAppContext();
 
   const router = useRouter();
@@ -52,7 +52,6 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
             <span className='readTime'>{okunmaSuresi}</span>
             <span className='dot'> · </span>
             <span className='category' onClick={(e) => {goTag(kategori); e.preventDefault();}}>{kategori}</span>
-            <span>Hash: {hash}</span>
           </div>
         </div>
 
