@@ -3,7 +3,7 @@ import OtherContents from '@/components/OtherContents';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 import Details from '@/components/Details';
-import json_list from '@/components/json/moviesAndSeriesJson';
+import json_list from '@/components/functions/moviesAndSeriesJson';
 import Ens_film from '@/components/mini_components/ens/ens_film';
 import HeadHtml from '@/components/HeadHtml';
 

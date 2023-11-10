@@ -1,9 +1,12 @@
 import En from '@/components/mini_components/ens/en';
 import Motosiklet_kunye from '@/components/mini_components/kunyeler/motosiklet_kunye';
 import Reklam from '@/components/mini_components/reklam';
+import { useAppContext } from '@/context/ContextProvider';
+import Link from 'next/link';
+import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
 export default function Ens_motosiklet({jsonContentArray}) {
-
+  const { supportWebp } = useAppContext();
   const items = [];
   
   jsonContentArray.forEach((item, index) => {
@@ -14,7 +17,8 @@ export default function Ens_motosiklet({jsonContentArray}) {
               baslik={item.num + " - " + item.name}
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
-              enid={"bolum-"+item.num}>
+              enid={"bolum-"+item.num}
+              supportWebp={supportWebp}>
               <Motosiklet_kunye firma={item.firma}
               ulke={item.ulke}
               tip={item.tip}
@@ -25,7 +29,10 @@ export default function Ens_motosiklet({jsonContentArray}) {
               yakitKapasitesi={item.yakitKapasitesi}
               tuketim={item.tuketim}
               />
-              {item.paragraf}
+              {cHtmlToJsx(item.paragraf).map(component => component)}
+              {/* <p>{cHtmlToJsx(item.paragraf).map(component => component)}</p> */}
+              {/* {cHtmlToJsx(item.paragraf).map(item => console.log(item))} */}
+              {/* <p dangerouslySetInnerHTML={{ __html: item.paragraf }} /> */}
           </En>          
         </section>
       )

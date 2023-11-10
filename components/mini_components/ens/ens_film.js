@@ -1,8 +1,10 @@
 import En from '@/components/mini_components/ens/en';
 import Film_kunye from '@/components/mini_components/kunyeler/film_kunye';
 import Reklam from '@/components/mini_components/reklam';
+import { useAppContext } from '@/context/ContextProvider';
 
 export default function Ens_film({jsonContentArray}) {
+  const { supportWebp } = useAppContext();
 
   const items = [];
 
@@ -14,7 +16,8 @@ export default function Ens_film({jsonContentArray}) {
                 baslik={item.num + " - " + item.name}
                 rsm={item.image}
                 rsm_alt={item.name + " görseli."}
-                enid={"bolum-"+item.num}>
+                enid={"bolum-"+item.num}
+                supportWebp={supportWebp}>
                 <Film_kunye oyuncular={item.actors}
                 yonetmen={item.director}
                 kategoris={item.filmKategorisi}

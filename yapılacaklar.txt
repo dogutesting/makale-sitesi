@@ -1,3 +1,5 @@
+-> yurtdışı numarası sadece whatsappdan mesajlaşmak için
+
 DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 
 -> erkeklerin-izlemesi-gereken-en-iyi-10-filmden yaklaşık 25 tane makale çıkıyor onları yaz
@@ -12,10 +14,13 @@ DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 		-CategoryBox kategori sırası ve kategori seçimi düzenlenecek
 		-Pagination categori değiştiğinde değişecek
 		
-	} görev tamamlandı, tamamlanma tarihi 9.11.23
+	} 
+V => görev tamamlandı, tamamlanma tarihi 9.11.23
+
 
 -> 2- sayfaları getStaticProps ile oluşturmak için Json formatını getStaticProps içerisine aktar
     revalidate süresini ayarla
+
 -> 3- (2. işlem sonrasında node/readAll.js dosyasının doğru çalıştığından emin ol)
 -> 404 sayfasını düzenle.
 -> makale sayfasındaki önerileri ayarla

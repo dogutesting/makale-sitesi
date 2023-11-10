@@ -1,7 +1,15 @@
-export default function json_list(articleInfos, type, summaryText, arr) {
+import { parse } from 'node-html-parser';
+
+export default function json_list(articleInfos, type, metin, arr) {
   
   function escapeString(input) {
     return input.replace(/"/g, "'");
+  }
+
+  function cleanText(input) {
+    const root = parse(input);
+    const cleanText = root.textContent;
+    return cleanText;
   }
 
   const logo = "enonlar_logo_default.png";
@@ -91,8 +99,9 @@ export default function json_list(articleInfos, type, summaryText, arr) {
       
 
         
-        articleText += " " + item.name;
-        let children = item.paragraf.props.children;
+        articleText += " " + item.name + " " + cleanText(item.paragraf);
+        /* articleText += " " + item.name + " " + item.paragraf */
+       /*  let children = item.paragraf.props.children;
         if(typeof(children) == "object") {
           children.map(child => {
             if(typeof(child) == "object") {
@@ -105,10 +114,11 @@ export default function json_list(articleInfos, type, summaryText, arr) {
         }
         else {
           articleText += " " + children;
-        }
+        } */
   })
 
-  const articleBody = escapeString(summaryText.props.children + articleText);
+  //const articleBody = escapeString(summaryText.props.children + articleText);
+  const articleBody = escapeString(metin + articleText);
   const wordCount = articleBody.split(" ").length;
 
   //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
@@ -184,13 +194,13 @@ export default function json_list(articleInfos, type, summaryText, arr) {
           "@type": "ListItem",
           "position": "2",
           "name": "${articleInfos.kategori}",
-          "item": "https://enonlar.com/${articleInfos.kategori}"
+          "item": "https://enonlar.com/?kategori=${articleInfos.kategori}"
         },
         {
           "@type": "ListItem",
           "position": "3",
           "name": "${articleInfos.baslik}",
-          "item": "https://enonlar.com/${articleInfos.kategori}/${articleInfos.url}"
+          "item": "https://enonlar.com/${articleInfos.url}"
         }
       ]
     },
