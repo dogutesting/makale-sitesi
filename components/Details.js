@@ -19,7 +19,7 @@ export default function Details({nightMode, addDate, readTimeSpan="0", kategori}
             src={!nightMode ? '/images/details/black-folder.png' : '/images/details/white-folder.png'}
             width={hd} height={hd} alt='Kategori ikonu'
             title='Eklenme tarihi'/>
-          <span className='details_span'>&nbsp;<Link href={`https://localhost:3000/${kategori}`}>{kategori}</Link></span>
+          <span className='details_span'>&nbsp;<Link href={`/?kategori=${kategori}`}>{kategori}</Link></span>
         </div>
 
         <div>

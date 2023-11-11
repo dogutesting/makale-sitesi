@@ -19,9 +19,13 @@ V => görev tamamlandı, tamamlanma tarihi 9.11.23
 
 
 -> 2- sayfaları getStaticProps ile oluşturmak için Json formatını getStaticProps içerisine aktar
-    revalidate süresini ayarla
+    revalidate süresini ayarla 
+V => görev tamamlandı, tamamlanma tarihi 11.11.23
 
 -> 3- (2. işlem sonrasında node/readAll.js dosyasının doğru çalıştığından emin ol)
+V => doğru çalışıyor gibi gözüküyor, 11.11.23
+
+
 -> 404 sayfasını düzenle.
 -> makale sayfasındaki önerileri ayarla
     - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için

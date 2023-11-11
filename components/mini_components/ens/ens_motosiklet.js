@@ -29,10 +29,7 @@ export default function Ens_motosiklet({jsonContentArray}) {
               yakitKapasitesi={item.yakitKapasitesi}
               tuketim={item.tuketim}
               />
-              {cHtmlToJsx(item.paragraf).map(component => component)}
-              {/* <p>{cHtmlToJsx(item.paragraf).map(component => component)}</p> */}
-              {/* {cHtmlToJsx(item.paragraf).map(item => console.log(item))} */}
-              {/* <p dangerouslySetInnerHTML={{ __html: item.paragraf }} /> */}
+              <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>          
         </section>
       )

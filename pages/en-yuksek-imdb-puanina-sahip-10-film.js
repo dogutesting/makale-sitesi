@@ -1,15 +1,9 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import Details from '@/components/Details';
-import json_list from '@/components/functions/moviesAndSeriesJson';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_film from '@/components/mini_components/ens/ens_film';
-import HeadHtml from '@/components/HeadHtml';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function MostMoviesMain() {
-  const { nightMode, supportWebp } = useAppContext();
-
+export async function getStaticProps() {
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
@@ -23,9 +17,6 @@ export default function MostMoviesMain() {
   const eklenmeTarihi = "2023-10-02T14:18:00+03:00";
   const degistirilmeTarihi = "2023-10-02T14:18:00+03:00";
   const addDate = "02.10.23";
-
-  
-  const summaryText = <p className='summary_text'>{metin}</p>;
 
   const jsonContentArray = [
       {
@@ -41,7 +32,7 @@ export default function MostMoviesMain() {
         "metascore": "90",
         "actors":["Clint Eastwood", "Lee Van Cleef", "Eli Wallach"],
         "director":"Sergio Leone",
-        "paragraf": <p>"Il buono, il brutto, il cattivo", Sergio Leone'nin yönettiği, Ennio Morricone'nin unutulmaz müziğiyle süslenmiş bir Vahşi Batı klasiğidir. Clint Eastwood, Lee Van Cleef ve Eli Wallach'ın başrollerini paylaştığı film, Amerikan İç Savaşı sırasında üç silahşörün, gizli bir defineyi bulma yarışındaki maceralarını anlatıyor. Filmdeki karakterler arasındaki ilişkiler, dinamikler ve etkileyici sahneler, onu tüm zamanların en iyi Vahşi Batı filmlerinden biri yapar. Film aynı zamanda hayatta kalma, hırs, ihanet ve onur temalarını derinlemesine işler.</p>
+        "paragraf": "'Il buono, il brutto, il cattivo', Sergio Leone'nin yönettiği, Ennio Morricone'nin unutulmaz müziğiyle süslenmiş bir Vahşi Batı klasiğidir. Clint Eastwood, Lee Van Cleef ve Eli Wallach'ın başrollerini paylaştığı film, Amerikan İç Savaşı sırasında üç silahşörün, gizli bir defineyi bulma yarışındaki maceralarını anlatıyor. Filmdeki karakterler arasındaki ilişkiler, dinamikler ve etkileyici sahneler, onu tüm zamanların en iyi Vahşi Batı filmlerinden biri yapar. Film aynı zamanda hayatta kalma, hırs, ihanet ve onur temalarını derinlemesine işler."
       },
       {
         "num": "9",
@@ -56,7 +47,7 @@ export default function MostMoviesMain() {
         "metascore": "92",
         "actors":["Liv Tyler", "Sean Astin", "Sean Bean"],
         "director":"Peter Jackson",
-        "paragraf": <p>Orta Dünya'nın kaderini belirleyecek olan Yüzük'ü yok etme görevini üstlenen Frodo ve arkadaşlarının epik yolculuğunu anlatan bu film, fantastik edebiyatın en ünlü eserlerinden birinin sinemaya uyarlamasıdır. Görsel efektleri, müzikleri ve hikayesiyle büyüleyici bir deneyim sunar.</p>
+        "paragraf": "Orta Dünya'nın kaderini belirleyecek olan Yüzük'ü yok etme görevini üstlenen Frodo ve arkadaşlarının epik yolculuğunu anlatan bu film, fantastik edebiyatın en ünlü eserlerinden birinin sinemaya uyarlamasıdır. Görsel efektleri, müzikleri ve hikayesiyle büyüleyici bir deneyim sunar."
     },
     {
         "num": "8",
@@ -71,7 +62,7 @@ export default function MostMoviesMain() {
         "metascore": "95",
         "actors":["Uma Thurman", "John Travolta", "Samuel L. Jackson"],
         "director":"Quentin Tarantino",
-        "paragraf": <p>Quentin Tarantino'nun özgün anlatım tarzıyla hazırladığı bu film, farklı hikayeleri bir araya getirerek izleyiciye sıradışı bir deneyim sunar. Film, suç dünyasının karanlık yüzünü, mizahi bir dille gösteriyor. Tarantino'nun eşsiz diyalogları ve karakter derinliği, filmin unutulmaz olmasını sağlıyor.</p>
+        "paragraf": "Quentin Tarantino'nun özgün anlatım tarzıyla hazırladığı bu film, farklı hikayeleri bir araya getirerek izleyiciye sıradışı bir deneyim sunar. Film, suç dünyasının karanlık yüzünü, mizahi bir dille gösteriyor. Tarantino'nun eşsiz diyalogları ve karakter derinliği, filmin unutulmaz olmasını sağlıyor."
     },
     {
         "num": "7",
@@ -86,7 +77,7 @@ export default function MostMoviesMain() {
         "metascore": "94",
         "actors":["Liv Tyler", "Sean Astin", "Elijah Wood"],
         "director":"Peter Jackson",
-        "paragraf": <p>Orta Dünya'nın kaderini belirleyecek olan son savaşın anlatıldığı bu film, Frodo ve Sam'in Yüzük'ü yok etme görevini tamamlamaya çalışmalarını, Aragorn'un kral olarak taç giymesini ve diğer karakterlerin kendi yollarını bulmalarını anlatır. Epik savaş sahneleri, duygusal anlar ve muhteşem görsel efektlerle dolu bu film, serinin muazzam bir finali olarak karşımıza çıkıyor.</p>
+        "paragraf": "Orta Dünya'nın kaderini belirleyecek olan son savaşın anlatıldığı bu film, Frodo ve Sam'in Yüzük'ü yok etme görevini tamamlamaya çalışmalarını, Aragorn'un kral olarak taç giymesini ve diğer karakterlerin kendi yollarını bulmalarını anlatır. Epik savaş sahneleri, duygusal anlar ve muhteşem görsel efektlerle dolu bu film, serinin muazzam bir finali olarak karşımıza çıkıyor."
     },
     {
         "num": "6",
@@ -101,7 +92,7 @@ export default function MostMoviesMain() {
         "metascore": "95",
         "actors":["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"],
         "director":"Steven Spielberg",
-        "paragraf": <p>Steven Spielberg'in yönettiği bu film, gerçek bir hikayeye dayanmaktadır. İkinci Dünya Savaşı sırasında Nazi işgali altındaki Polonya'da, işadamı Oskar Schindler'in Yahudi işçileri kurtarma çabalarını anlatır. Film, insanlık, fedakarlık ve umut temalarını işleyerek, izleyenler üzerinde derin bir etki bırakır.</p>
+        "paragraf": "Steven Spielberg'in yönettiği bu film, gerçek bir hikayeye dayanmaktadır. İkinci Dünya Savaşı sırasında Nazi işgali altındaki Polonya'da, işadamı Oskar Schindler'in Yahudi işçileri kurtarma çabalarını anlatır. Film, insanlık, fedakarlık ve umut temalarını işleyerek, izleyenler üzerinde derin bir etki bırakır."
     },
     {
         "num": "5",
@@ -116,7 +107,7 @@ export default function MostMoviesMain() {
         "metascore": "97",
         "actors":["Henry Fonda", "Martin Balsam", "Lee J. Cobb"],
         "director":"Sidney Lumet",
-        "paragraf": <p>12 Angry Men, bir jüri odasında geçen ve bir cinayet davasını tartışan 12 jüri üyesinin hikayesini anlatan sade ama etkili bir filmdir. Film, önyargıların, bireysel deneyimlerin ve adaletin doğasının derinlemesine incelenmesiyle dikkat çeker. Her bir jüri üyesinin kendi inançları ve değerleriyle nasıl mücadele ettiğini göstererek, izleyiciye adaletin ne anlama geldiğini sorgulatır.</p>
+        "paragraf": "12 Angry Men, bir jüri odasında geçen ve bir cinayet davasını tartışan 12 jüri üyesinin hikayesini anlatan sade ama etkili bir filmdir. Film, önyargıların, bireysel deneyimlerin ve adaletin doğasının derinlemesine incelenmesiyle dikkat çeker. Her bir jüri üyesinin kendi inançları ve değerleriyle nasıl mücadele ettiğini göstererek, izleyiciye adaletin ne anlama geldiğini sorgulatır."
     },
     {
         "num": "4",
@@ -131,7 +122,7 @@ export default function MostMoviesMain() {
         "metascore": "90",
         "actors":["Al Pacino", "Robert De Niro", "Robert Duvall"],
         "director":"Francis Ford Coppola",
-        "paragraf": <p>"Baba" serisinin ikinci filmi olan "The Godfather Part II", Corleone ailesinin hikayesini devam ettiriyor ve aynı zamanda Vito Corleone'nin gençliğini ve nasıl bir suç lordu haline geldiğini anlatıyor. Film, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alırken, aynı zamanda Amerikan rüyasının karanlık yüzünü de gözler önüne serer.</p>
+        "paragraf": "Baba serisinin ikinci filmi olan 'The Godfather Part II', Corleone ailesinin hikayesini devam ettiriyor ve aynı zamanda Vito Corleone'nin gençliğini ve nasıl bir suç lordu haline geldiğini anlatıyor. Film, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alırken, aynı zamanda Amerikan rüyasının karanlık yüzünü de gözler önüne serer."
     },
     {
         "num": "3",
@@ -146,7 +137,7 @@ export default function MostMoviesMain() {
         "metascore": "84",
         "actors":["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
         "director":"Christopher Nolan",
-        "paragraf": <p>Christopher Nolan'ın yönetmenliğindeki bu film, Batman'in Joker ile olan mücadelesini anlatıyor. Heath Ledger'ın unutulmaz performansıyla Joker karakterini hayata geçirdiği film, iyi ve kötü arasındaki sınırın ne kadar belirsiz olabileceğini gösteriyor. Aynı zamanda, bir kahramanın toplum üzerindeki etkisini ve bir suçlunun bir şehri nasıl kaosa sürükleyebileceğini de ele alıyor.</p>
+        "paragraf": "Christopher Nolan'ın yönetmenliğindeki bu film, Batman'in Joker ile olan mücadelesini anlatıyor. Heath Ledger'ın unutulmaz performansıyla Joker karakterini hayata geçirdiği film, iyi ve kötü arasındaki sınırın ne kadar belirsiz olabileceğini gösteriyor. Aynı zamanda, bir kahramanın toplum üzerindeki etkisini ve bir suçlunun bir şehri nasıl kaosa sürükleyebileceğini de ele alıyor."
     },
     {
         "num": "2",
@@ -161,7 +152,7 @@ export default function MostMoviesMain() {
         "metascore": "100",
         "actors":["Marlon Brando", "Al Pacino", "James Caan"],
         "director":"Francis Ford Coppola",
-        "paragraf": <p>Corleone ailesinin hikayesini anlatan bu epik film, mafya dünyasının iç yüzünü, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alır. Film, aynı zamanda Amerikan rüyasına, ailenin toplumdaki yerine ve suçun cazibesine dair sorgulamalar yapar.</p>
+        "paragraf": "Corleone ailesinin hikayesini anlatan bu epik film, mafya dünyasının iç yüzünü, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alır. Film, aynı zamanda Amerikan rüyasına, ailenin toplumdaki yerine ve suçun cazibesine dair sorgulamalar yapar."
     },
     {
         "num": "1",
@@ -176,7 +167,7 @@ export default function MostMoviesMain() {
         "metascore": "82",
         "actors":["Tim Robbins", "Morgan Freeman"],
         "director":"Frank Darabont",
-        "paragraf": <p>Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatır. Film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj verir.</p>
+        "paragraf": "Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatır. Film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj verir."
     }  
   ];
 
@@ -185,42 +176,40 @@ export default function MostMoviesMain() {
   
   const jsonList = json_list(articleInfos,
   "Movies", 
-  summaryText,
+  metin,
   jsonContentArray
   )
+  
+  return {
+    props: {
+        baslik,
+        description,
+        keywordsArray,
+        ana_resim,
+        url,
+        jsonList,
+        addDate,
+        okunmaSuresi,
+        kategori,
+        metin,
+        jsonContentArray
+    },
+    revalidate: 60 * 60 * 24,
+  }
+
+}
+
+export default function MostMoviesMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+  const { nightMode } = useAppContext();
 
   return (
-    
-    <Main>
-      
-      <HeadHtml 
-        baslik={baslik}
-        description={description}
-        keywords={keywordsArray.join(", ")}
-        ana_resim={ana_resim}
-        url={url}
-        jsonListHtml={jsonList.html}
-        />
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin}>
 
-        <article id='main-article'>
-          
-          <h1>{baslik}</h1>
+      <Ens_film jsonContentArray={jsonContentArray}/>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan} kategori={kategori}/>
-          
-          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-
-          {(summaryText)}
-
-          <hr className='split'/>
-
-          {<Ens_film jsonContentArray={jsonContentArray}/>}
-        
-        </article>
-        
-        <OtherContents />
-        
-        
-    </Main>
+    </ClassicArticle>
   )
 }

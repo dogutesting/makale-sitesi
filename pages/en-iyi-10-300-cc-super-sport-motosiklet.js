@@ -1,15 +1,9 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import Details from '@/components/Details';
-import json_list from '@/components/functions/moviesAndSeriesJson';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
-import HeadHtml from '@/components/HeadHtml';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function Eniyi300ccSuperMain() {
-  const { nightMode } = useAppContext();
-
+export async function getStaticProps() {
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-300-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 300 CC Super Sport Motosiklet";
@@ -23,9 +17,6 @@ export default function Eniyi300ccSuperMain() {
   const eklenmeTarihi = "2023-10-02T18:00:00+03:00";
   const degistirilmeTarihi = "2023-10-02T18:00:00+03:00";
   const addDate = "02.10.23";
-
-  
-  const summaryText = <p className='summary_text'>{metin}</p>;
 
   const jsonContentArray = [
     {
@@ -42,7 +33,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "169.7",
       "ulke": "Hindistan",
       "yakitKapasitesi": "11",
-      "paragraf": <p>TVS Apache RR 310, baş döndürücü tasarımı ve aerodinamik yapısıyla dikkat çeker. Motorun düşük ve yüksek devir performansı dengeli, gas tepkisi canlı ve tork dağılımı ise eşit. Yol tutuşu sağlam, frenler güvenilir, ve süspansiyon sistemi sert ama rahat. Gidonun pozisyonu ve hassasiyeti, virajlarda kolay manevra imkanı sağlar. Ağırlığı sayesinde stabil ve dengeli bir sürüş deneyimi sunar. Ancak, yüksek hızlarda rüzgar koruması yetersiz kalabilir. Genel olarak, TVS Apache RR 310, sportif sürüş deneyimi ve estetik tasarımı uygun fiyatla sunan başarılı bir model.</p>
+      "paragraf": "TVS Apache RR 310, baş döndürücü tasarımı ve aerodinamik yapısıyla dikkat çeker. Motorun düşük ve yüksek devir performansı dengeli, gas tepkisi canlı ve tork dağılımı ise eşit. Yol tutuşu sağlam, frenler güvenilir, ve süspansiyon sistemi sert ama rahat. Gidonun pozisyonu ve hassasiyeti, virajlarda kolay manevra imkanı sağlar. Ağırlığı sayesinde stabil ve dengeli bir sürüş deneyimi sunar. Ancak, yüksek hızlarda rüzgar koruması yetersiz kalabilir. Genel olarak, TVS Apache RR 310, sportif sürüş deneyimi ve estetik tasarımı uygun fiyatla sunan başarılı bir model."
     },
     {
       "num": "9",
@@ -58,7 +49,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "165",
       "ulke": "Çin",
       "yakitKapasitesi": "12",
-      "paragraf": <p>CFMoto 300SR, keskin hatları ve atletik duruşu ile genç sürücülerin ilgisini çeker. Motorun hızlanma performansı ve düşük devirdeki torku tatminkar. Yüksek devirlerde bile motor titreşimsiz ve sessiz çalışır. Frenler etkili, yol tutuşu dikkat çekici. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda güvenli manevralar yapmanıza olanak tanır. Ağırlığının hafifliği, motorun agresif bir şekilde yönlendirilmesini sağlar. Ancak, uzun mesafeli sürüşlerde koltuk konforu yetersiz kalabilir. CFMoto 300SR, performansı ve estetiği bir araya getiren, uygun fiyatlı bir süpersport seçeneği.</p>
+      "paragraf": "CFMoto 300SR, keskin hatları ve atletik duruşu ile genç sürücülerin ilgisini çeker. Motorun hızlanma performansı ve düşük devirdeki torku tatminkar. Yüksek devirlerde bile motor titreşimsiz ve sessiz çalışır. Frenler etkili, yol tutuşu dikkat çekici. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda güvenli manevralar yapmanıza olanak tanır. Ağırlığının hafifliği, motorun agresif bir şekilde yönlendirilmesini sağlar. Ancak, uzun mesafeli sürüşlerde koltuk konforu yetersiz kalabilir. CFMoto 300SR, performansı ve estetiği bir araya getiren, uygun fiyatlı bir süpersport seçeneği."
     },
     {
       "num": "8",
@@ -74,7 +65,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "198",
       "ulke": "İtalya",
       "yakitKapasitesi": "14",
-      "paragraf": <p>Benelli 302R, İtalyan tarzı zarif tasarımı ve çift silindirli motoru ile segmentinde dikkat çeker. Motor, düşük devirlerden itibaren güçlü bir tork sunar ve yüksek devirlere çıktıkça canlanır. Yol tutuşu mükemmel, frenler dozajlı ve etkili. Gidonun konumu ve hassasiyeti, virajlarda rahat manevralar yapmanıza olanak tanır. Ağırlığı diğer modellere göre biraz daha fazla, bu da stabiliteyi artırır ancak hızlanma ve manevra kabiliyetini bir miktar düşürür. Benelli 302R, estetik tasarımı, güçlü motoru ve üstün yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip.</p>
+      "paragraf": "Benelli 302R, İtalyan tarzı zarif tasarımı ve çift silindirli motoru ile segmentinde dikkat çeker. Motor, düşük devirlerden itibaren güçlü bir tork sunar ve yüksek devirlere çıktıkça canlanır. Yol tutuşu mükemmel, frenler dozajlı ve etkili. Gidonun konumu ve hassasiyeti, virajlarda rahat manevralar yapmanıza olanak tanır. Ağırlığı diğer modellere göre biraz daha fazla, bu da stabiliteyi artırır ancak hızlanma ve manevra kabiliyetini bir miktar düşürür. Benelli 302R, estetik tasarımı, güçlü motoru ve üstün yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip."
     },
     {
       "num": "7",
@@ -90,7 +81,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "178",
       "ulke": "Güney Kore",
       "yakitKapasitesi": "15",
-      "paragraf": <p>Hyosung GT300R, Güney Kore'nin otomotiv endüstrisinden çıkma, sportif tasarımı ve kompakt yapısıyla dikkat çeker. Motorun düşük ve orta devir performansı tatminkar, yüksek devirlerde ise motorun canlılığı hissedilir. Yol tutuşu sağlam, fren performansı ise ortalamanın üzerinde. Gidonun pozisyonu ve hassasiyeti, virajlarda rahat manevralar yapmanıza olanak tanır. Ağırlığı, motorun stabilitesini artırır, fakat hızlanma ve manevra kabiliyetini biraz kısıtlar. Hyosung GT300R, uygun fiyatlı ve performans odaklı bir süpersport motosiklet arayanlar için cazip bir seçenek sunar.</p>
+      "paragraf": "Hyosung GT300R, Güney Kore'nin otomotiv endüstrisinden çıkma, sportif tasarımı ve kompakt yapısıyla dikkat çeker. Motorun düşük ve orta devir performansı tatminkar, yüksek devirlerde ise motorun canlılığı hissedilir. Yol tutuşu sağlam, fren performansı ise ortalamanın üzerinde. Gidonun pozisyonu ve hassasiyeti, virajlarda rahat manevralar yapmanıza olanak tanır. Ağırlığı, motorun stabilitesini artırır, fakat hızlanma ve manevra kabiliyetini biraz kısıtlar. Hyosung GT300R, uygun fiyatlı ve performans odaklı bir süpersport motosiklet arayanlar için cazip bir seçenek sunar."
     },
     {
       "num": "6",
@@ -106,7 +97,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "168",
       "ulke": "Japonya",
       "yakitKapasitesi": "14",
-      "paragraf": <p>Kawasaki Ninja 400, sürücüler için tatmin edici bir performans ve mükemmel bir yol tutuşu sunar. Agresif ve aerodinamik tasarımı sayesinde dikkat çeker ve yüksek hızlarda bile rüzgar direncini minimize eder. Yolculuklar sırasında sağladığı konfor ve düşük yakıt tüketimi, bu modeli hem günlük kullanım hem de uzun mesafeli sürüşler için ideal kılar. Ninja 400'ün geniş ve okunması kolay göstergesi, sürücülerin tüm önemli bilgilere hızlı bir şekilde erişmesini sağlar.</p>
+      "paragraf": "Kawasaki Ninja 400, sürücüler için tatmin edici bir performans ve mükemmel bir yol tutuşu sunar. Agresif ve aerodinamik tasarımı sayesinde dikkat çeker ve yüksek hızlarda bile rüzgar direncini minimize eder. Yolculuklar sırasında sağladığı konfor ve düşük yakıt tüketimi, bu modeli hem günlük kullanım hem de uzun mesafeli sürüşler için ideal kılar. Ninja 400'ün geniş ve okunması kolay göstergesi, sürücülerin tüm önemli bilgilere hızlı bir şekilde erişmesini sağlar."
     },  
     {
       "num": "5",
@@ -122,7 +113,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "172",
       "ulke": "Japonya",
       "yakitKapasitesi": "17",
-      "paragraf": <p>Kawasaki Ninja 300, Japonya'nın mühendislik mirasını yansıtan, sportif ve aerodinamik tasarımıyla göz doldurur. Motorun düşük devir performansı başarılı, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda ve ani manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış ve bu da motorun manevra kabiliyetini artırır. Kawasaki Ninja 300, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip.</p>
+      "paragraf": "Kawasaki Ninja 300, Japonya'nın mühendislik mirasını yansıtan, sportif ve aerodinamik tasarımıyla göz doldurur. Motorun düşük devir performansı başarılı, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda ve ani manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış ve bu da motorun manevra kabiliyetini artırır. Kawasaki Ninja 300, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip."
     },
     {
       "num": "4",
@@ -138,7 +129,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "164",
       "ulke": "Japonya",
       "yakitKapasitesi": "13",
-      "paragraf": <p>Honda CBR300R, Japonya'nın hassas mühendislik geleneğini yansıtan, zarif ve fonksiyonel tasarımıyla dikkat çeker. Motor, düşük devirlerde dahi tatminkar bir tork sunar, yüksek devirlerde ise canlı ve enerjik. Yol tutuşu dikkat çekici, frenler ise hem etkili hem de hassas. Gidon pozisyonu ve hassasiyeti, virajlarda ve şehir içi sürüşlerde manevra kabiliyetini artırır. Motorun ağırlığı dengeli, bu da stabilite ve hızlanma performansını olumlu etkiler. Honda CBR300R, performansı ve güvenilirliği ile 300cc süpersport segmentinde rekabetçi bir seçenek.</p>
+      "paragraf": "Honda CBR300R, Japonya'nın hassas mühendislik geleneğini yansıtan, zarif ve fonksiyonel tasarımıyla dikkat çeker. Motor, düşük devirlerde dahi tatminkar bir tork sunar, yüksek devirlerde ise canlı ve enerjik. Yol tutuşu dikkat çekici, frenler ise hem etkili hem de hassas. Gidon pozisyonu ve hassasiyeti, virajlarda ve şehir içi sürüşlerde manevra kabiliyetini artırır. Motorun ağırlığı dengeli, bu da stabilite ve hızlanma performansını olumlu etkiler. Honda CBR300R, performansı ve güvenilirliği ile 300cc süpersport segmentinde rekabetçi bir seçenek."
     },
     {
       "num": "3",
@@ -154,7 +145,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "147",
       "ulke": "Avusturya",
       "yakitKapasitesi": "13.7",
-      "paragraf": <p>KTM RC 390, Avusturya'nın mühendislik ustalığı ve sıra dışı tasarım anlayışını temsil ediyor. Agresif tasarımı, hafif şasisi ve mükemmel motor performansı ile dikkat çeker. Motor düşük devirlerden itibaren güçlü bir tork sunar, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Hafifliği, motorun manevra kabiliyetini ve hızlanma performansını artırır. KTM RC 390, yüksek performansı, estetik ve agresif tasarımı ile 300cc süpersport segmentinin ötesine geçiyor.</p>
+      "paragraf": "KTM RC 390, Avusturya'nın mühendislik ustalığı ve sıra dışı tasarım anlayışını temsil ediyor. Agresif tasarımı, hafif şasisi ve mükemmel motor performansı ile dikkat çeker. Motor düşük devirlerden itibaren güçlü bir tork sunar, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Hafifliği, motorun manevra kabiliyetini ve hızlanma performansını artırır. KTM RC 390, yüksek performansı, estetik ve agresif tasarımı ile 300cc süpersport segmentinin ötesine geçiyor."
     },
     {
       "num": "2",
@@ -170,7 +161,7 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "158",
       "ulke": "Almanya",
       "yakitKapasitesi": "12",
-      "paragraf": <p>BMW G310RR, Alman mühendisliğinin ve estetiğinin bir harmanını temsil ediyor. Sade ve keskin çizgileriyle modern bir süpersport tasarımı sunan bu model, düşük devirlerde dahi tatminkar bir tork ve tepki sunuyor. Yüksek devirlerde ise motor canlı ve enerjik. Yol tutuşu ve fren performansı beklentileri karşılıyor, gidon hassasiyeti ise övgüyü hak ediyor. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini ve stabilitesini artırır. BMW'nin geniş servis ağı ve yedek parça desteği, G310RR'yi uzun vadede güvenilir bir seçenek haline getiriyor. BMW G310RR, sade tasarımı ve güvenilir performansı ile süpersport segmentinde sağlam bir seçenek.</p>
+      "paragraf": "BMW G310RR, Alman mühendisliğinin ve estetiğinin bir harmanını temsil ediyor. Sade ve keskin çizgileriyle modern bir süpersport tasarımı sunan bu model, düşük devirlerde dahi tatminkar bir tork ve tepki sunuyor. Yüksek devirlerde ise motor canlı ve enerjik. Yol tutuşu ve fren performansı beklentileri karşılıyor, gidon hassasiyeti ise övgüyü hak ediyor. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini ve stabilitesini artırır. BMW'nin geniş servis ağı ve yedek parça desteği, G310RR'yi uzun vadede güvenilir bir seçenek haline getiriyor. BMW G310RR, sade tasarımı ve güvenilir performansı ile süpersport segmentinde sağlam bir seçenek."
     },
     {
       "num": "1",
@@ -186,51 +177,48 @@ export default function Eniyi300ccSuperMain() {
       "agirlik": "169",
       "ulke": "Japonya",
       "yakitKapasitesi": "14",
-      "paragraf": <p>Yamaha YZF-R3, Japonya'nın mühendislik ustalığı ve estetik anlayışını mükemmel bir şekilde birleştiriyor. Motorun düşük devir performansı tatminkar, yüksek devirlerde ise canlı ve atak. Yol tutuşu etkileyici, frenler dozajlı ve etkili. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini artırır. Yamaha YZF-R3, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde rekabetçi ve popüler bir seçenek. Genç ve deneyimli sürücüler arasında popüler bir seçenektir. Her sürüşte yanınızda olacak bir arkadaş gibi, güvenilirliği ve dayanıklılığı ile bilinir. Ek olarak, Yamaha'nın geniş servis ve yedek parça ağı, bu modeli uzun vadede de cazip kılar. Her açıdan Yamaha YZF-R3, süpersport motosiklet segmentinde kendine sağlam bir yer bulmuş durumda.</p>
+      "paragraf": "Yamaha YZF-R3, Japonya'nın mühendislik ustalığı ve estetik anlayışını mükemmel bir şekilde birleştiriyor. Motorun düşük devir performansı tatminkar, yüksek devirlerde ise canlı ve atak. Yol tutuşu etkileyici, frenler dozajlı ve etkili. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini artırır. Yamaha YZF-R3, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde rekabetçi ve popüler bir seçenek. Genç ve deneyimli sürücüler arasında popüler bir seçenektir. Her sürüşte yanınızda olacak bir arkadaş gibi, güvenilirliği ve dayanıklılığı ile bilinir. Ek olarak, Yamaha'nın geniş servis ve yedek parça ağı, bu modeli uzun vadede de cazip kılar. Her açıdan Yamaha YZF-R3, süpersport motosiklet segmentinde kendine sağlam bir yer bulmuş durumda."
     }
   ];
 
   const ana_resim = jsonContentArray[0].image;
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
   
-  const jsonList = json_list(articleInfos,
+  const jsonList = moviesAndSeriesJson(articleInfos,
   "Motosiklet", 
-  summaryText,
+  metin,
   jsonContentArray
   )
 
+  return {
+    props: {
+        baslik,
+        description,
+        keywordsArray,
+        ana_resim,
+        url,
+        jsonList,
+        addDate,
+        okunmaSuresi,
+        kategori,
+        metin,
+        jsonContentArray
+    },
+    revalidate: 60 * 60 * 24,
+  }
+}
+
+export default function Eniyi300ccSuperMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+  const { nightMode } = useAppContext();
+
   return (
-    
-    <Main>
-      
-      <HeadHtml 
-        baslik={baslik}
-        description={description}
-        keywords={keywordsArray.join(", ")}
-        ana_resim={ana_resim}
-        url={url}
-        jsonListHtml={jsonList.html}
-        />
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin}>
 
-        <article id='main-article'>
-          
-          <h1>{baslik}</h1>
+        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan} kategori={kategori}/>
-          
-          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-
-          {(summaryText)}
-
-          <hr className='split'/>
-
-          {<Ens_motosiklet jsonContentArray={jsonContentArray}/>}
-        
-        </article>
-        
-        <OtherContents />
-        
-        
-    </Main>
+    </ClassicArticle>
   )
 }

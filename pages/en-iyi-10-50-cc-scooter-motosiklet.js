@@ -1,11 +1,6 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
-
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
 export async function getStaticProps() {
@@ -38,7 +33,7 @@ export async function getStaticProps() {
             "agirlik": "95",
             "ulke": "Çin",
             "yakitKapasitesi": "5.5",
-            "paragraf": "RKS'nin Azure 50 modeli, <a href='/?kategori=motosiklet'>ekonomik</a> bir seçenek olarak dikkat çeker. 50cc motor hacmi ile şehir içi ulaşım için tasarlanmış bu model, düşük yakıt tüketimi ve kolay manevra kabiliyeti ile öne çıkar. Hafifliği ve kompakt boyutları sayesinde, yeni başlayanlar ve genç sürücüler için uygun bir tercih olabilir. Azure 50, temel özellikler ve fonksiyonları ile sadelik ve işlevsellik sunar. Maksimum hızı ve performansı, diğer daha üst düzey modellerle kıyaslandığında daha düşük olabilir, ancak günlük kullanım ve kısa mesafeler için yeterlidir. RKS Azure 50, bütçe dostu bir scooter arayanlar için makul bir seçim olabilir."
+            "paragraf": "RKS'nin Azure 50 modeli, ekonomik bir seçenek olarak dikkat çeker. 50cc motor hacmi ile şehir içi ulaşım için tasarlanmış bu model, düşük yakıt tüketimi ve kolay manevra kabiliyeti ile öne çıkar. Hafifliği ve kompakt boyutları sayesinde, yeni başlayanlar ve genç sürücüler için uygun bir tercih olabilir. Azure 50, temel özellikler ve fonksiyonları ile sadelik ve işlevsellik sunar. Maksimum hızı ve performansı, diğer daha üst düzey modellerle kıyaslandığında daha düşük olabilir, ancak günlük kullanım ve kısa mesafeler için yeterlidir. RKS Azure 50, bütçe dostu bir scooter arayanlar için makul bir seçim olabilir."
         },    
         {
             "num": "9",
@@ -187,9 +182,8 @@ export async function getStaticProps() {
     
     ];
 
-    //const ana_resim = jsonContentArray[0].image;
-    const ana_resim = "/images/motosiklet/rks_azure_50.png";
-
+    const ana_resim = jsonContentArray[0].image;
+    //const ana_resim = "/images/motosiklet/rks_azure_50.png";
 
     const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 
@@ -222,16 +216,16 @@ export async function getStaticProps() {
 export default function Eniyi50ccScooterMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
   const { nightMode } = useAppContext();
 
+  const html_text = "normal text <Link title='ana sayfa' href='/'>Ana sayfa</Link> normal text 2 <b>Bold text</b>";
+
   return (
-    
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-         okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-          kategori={kategori} metin={metin}>
+        <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+                okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+                kategori={kategori} metin={metin}>
 
-        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
+            <Ens_motosiklet jsonContentArray={jsonContentArray}/>
 
-    </ClassicArticle>
-
+        </ClassicArticle>
   )
 }

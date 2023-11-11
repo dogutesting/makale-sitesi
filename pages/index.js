@@ -6,7 +6,7 @@ import CategoryBox from '@/components/index/CategoryBox';
 import Pagination from '@/components/mini_components/Pagination';
 import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -14,14 +14,6 @@ export async function getServerSideProps( { query }) {
     const { kategori, sayfa } = query;
 
     const currentCategory = kategori === undefined ? 'hepsi' : kategori;
-    /* const currentCategory = kategori === undefined ? 'hepsi' : (kategori === 'Hepsi' ? 'hepsi' : kategori); */
-    /* let currentCategory = '';
-    if(kategori === undefined || kategori === 'hepsi') {
-      currentCategory = 'hepsi';
-    }
-    else {
-      currentCategory = kategori;
-    } */
     const currentPage = sayfa === undefined ? 1 : sayfa;
 
     try {

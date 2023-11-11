@@ -2,6 +2,8 @@ import En from '@/components/mini_components/ens/en';
 import Dizi_kunye from '@/components/mini_components/kunyeler/dizi_kunye';
 import Reklam from '@/components/mini_components/reklam';
 import { useAppContext } from '@/context/ContextProvider';
+import Link from 'next/link';
+import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
 export default function Ens_dizi({jsonContentArray}) {
   const { supportWebp } = useAppContext();
@@ -26,7 +28,7 @@ export default function Ens_dizi({jsonContentArray}) {
               puan={item.ratingValue}
               puan2={item.metascore}
               />
-              {item.paragraf}
+              <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>
         </section>
       )

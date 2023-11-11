@@ -1,15 +1,9 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import Details from '@/components/Details';
-import json_list from '@/components/functions/moviesAndSeriesJson';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
-import HeadHtml from '@/components/HeadHtml';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function Eniyi125ccSuperMain() {
-  const { nightMode } = useAppContext();
-
+export async function getStaticProps() {
   const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-125-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 125 CC Super Sport Motosiklet";
@@ -23,9 +17,6 @@ export default function Eniyi125ccSuperMain() {
   const eklenmeTarihi = "2023-10-05T01:13:00+03:00";
   const degistirilmeTarihi = "2023-10-05T01:13:00+03:00";
   const addDate = "05.10.23";
-
-  
-  const summaryText = <p className='summary_text'>{metin}</p>;
 
   const jsonContentArray = [
     {
@@ -42,7 +33,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "134",
         "ulke": "Birleşik Krallık",
         "yakitKapasitesi": "13.5",
-        "paragraf": <p>Birleşik Krallık menşeili Sinnis, GP 125 modeli ile 125cc sınıfında rekabet ediyor. Bu model, 125cc'lik motor hacmi ve uygun fiyatı ile dikkat çekiyor. Sinnis GP 125, yeni başlayanlar için uygun, basit ve erişilebilir bir seçenek sunuyor. Hafifliği ve kompakt yapısı sayesinde kullanıcılarına rahat bir sürüş deneyimi sağlıyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi oldukça düşük ve bu da onu ekonomik bir seçenek haline getiriyor. Fakat, genel performansı ve donanımları daha pahalı ve premium modeller kadar tatmin edici değil.</p>
+        "paragraf": "Birleşik Krallık menşeili Sinnis, GP 125 modeli ile 125cc sınıfında rekabet ediyor. Bu model, 125cc'lik motor hacmi ve uygun fiyatı ile dikkat çekiyor. Sinnis GP 125, yeni başlayanlar için uygun, basit ve erişilebilir bir seçenek sunuyor. Hafifliği ve kompakt yapısı sayesinde kullanıcılarına rahat bir sürüş deneyimi sağlıyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi oldukça düşük ve bu da onu ekonomik bir seçenek haline getiriyor. Fakat, genel performansı ve donanımları daha pahalı ve premium modeller kadar tatmin edici değil."
     },
     {
         "num": "9",
@@ -58,7 +49,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "142",
         "ulke": "Birleşik Krallık",
         "yakitKapasitesi": "13.8",
-        "paragraf": <p>Birleşik Krallık'tan bir diğer 125cc süper sport motosiklet olan Lexmoto LXR 125, genç ve yeni başlayan sürücüler için tasarlanmış. Hem şehir içi hem de şehir dışı sürüşler için uygun olan LXR 125, hafifliği ve kolay manevra kabiliyeti ile biliniyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi konusunda oldukça ekonomik olan bu model, düşük maliyetli bir süper sport motosiklet arayanlar için ideal bir seçenek. Ancak, donanım ve performans açısından daha pahalı modellerle kıyaslandığında biraz daha sade bir profil çiziyor.</p>
+        "paragraf": "Birleşik Krallık'tan bir diğer 125cc süper sport motosiklet olan Lexmoto LXR 125, genç ve yeni başlayan sürücüler için tasarlanmış. Hem şehir içi hem de şehir dışı sürüşler için uygun olan LXR 125, hafifliği ve kolay manevra kabiliyeti ile biliniyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi konusunda oldukça ekonomik olan bu model, düşük maliyetli bir süper sport motosiklet arayanlar için ideal bir seçenek. Ancak, donanım ve performans açısından daha pahalı modellerle kıyaslandığında biraz daha sade bir profil çiziyor."
     },
     {
         "num": "8",
@@ -74,7 +65,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "134",
         "ulke": "İspanya",
         "yakitKapasitesi": "13.5",
-        "paragraf": <p>İspanyol motosiklet üreticisi Derbi'nin 125cc sınıfındaki temsilcisi GPR 125, genç sürücüler için sportif bir seçenek sunuyor. Hafifliği ve kompakt tasarımı sayesinde, GPR 125 genç sürücülerin kontrolünü kolaylaştırırken, şehir içi ve çevre yollarındaki sürüşler için de uygun bir seçenek sunuyor. Motorunun sağladığı tatminkar performans ve yakıt verimliliği, bu modeli ekonomik bir süper sport motosiklet haline getiriyor. Ancak, yüksek hızlarda sürüş stabilitesi ve rüzgar koruması gibi alanlarda biraz eksiklikler gösterebilir. Derbi GPR 125, günlük sürüşler ve hafta sonu gezileri için uygun, eğlenceli bir motosiklet.</p>
+        "paragraf": "İspanyol motosiklet üreticisi Derbi'nin 125cc sınıfındaki temsilcisi GPR 125, genç sürücüler için sportif bir seçenek sunuyor. Hafifliği ve kompakt tasarımı sayesinde, GPR 125 genç sürücülerin kontrolünü kolaylaştırırken, şehir içi ve çevre yollarındaki sürüşler için de uygun bir seçenek sunuyor. Motorunun sağladığı tatminkar performans ve yakıt verimliliği, bu modeli ekonomik bir süper sport motosiklet haline getiriyor. Ancak, yüksek hızlarda sürüş stabilitesi ve rüzgar koruması gibi alanlarda biraz eksiklikler gösterebilir. Derbi GPR 125, günlük sürüşler ve hafta sonu gezileri için uygun, eğlenceli bir motosiklet."
     },
     {
         "num": "7",
@@ -90,7 +81,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "144",
         "ulke": "İtalya",
         "yakitKapasitesi": "14.5",
-        "paragraf": <p>İtalyan motosiklet üreticisi Aprilia'nın süper sport segmentindeki 125cc'lik modeli Tuono 125, performans ve stilin mükemmel bir birleşimini sunuyor. Bu model, genç ve deneyimsiz sürücüler için mükemmel bir başlangıç motosikleti olmasına rağmen, tecrübeli sürücüler için de eğlenceli ve zevkli bir sürüş deneyimi vaat ediyor. Aprilia Tuono 125, sportif sürüş pozisyonu ve rüzgarı kesen tasarımı sayesinde, hem şehir içi hem de şehir dışı sürüşlerde sürücüsüne eşsiz bir konfor ve kontrol sunuyor. Motosikletin dinamik tasarımı, genç ve enerjik bir görünüm sağlarken, hafifliği ve kompakt yapısı sayesinde manevra kabiliyeti de oldukça yüksek. Yakıt verimliliği ve düşük işletme maliyetleri ile Aprilia Tuono 125, bütçe dostu bir süper sport motosiklet seçeneği sunuyor.</p>
+        "paragraf": "İtalyan motosiklet üreticisi Aprilia'nın süper sport segmentindeki 125cc'lik modeli Tuono 125, performans ve stilin mükemmel bir birleşimini sunuyor. Bu model, genç ve deneyimsiz sürücüler için mükemmel bir başlangıç motosikleti olmasına rağmen, tecrübeli sürücüler için de eğlenceli ve zevkli bir sürüş deneyimi vaat ediyor. Aprilia Tuono 125, sportif sürüş pozisyonu ve rüzgarı kesen tasarımı sayesinde, hem şehir içi hem de şehir dışı sürüşlerde sürücüsüne eşsiz bir konfor ve kontrol sunuyor. Motosikletin dinamik tasarımı, genç ve enerjik bir görünüm sağlarken, hafifliği ve kompakt yapısı sayesinde manevra kabiliyeti de oldukça yüksek. Yakıt verimliliği ve düşük işletme maliyetleri ile Aprilia Tuono 125, bütçe dostu bir süper sport motosiklet seçeneği sunuyor."
     },
     {
         "num": "6",
@@ -106,7 +97,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "148",
         "ulke": "Japonya",
         "yakitKapasitesi": "11",
-        "paragraf": <p>Japon motosiklet devi Kawasaki'nin genç ve yeni sürücüler için sunduğu Ninja 125, markanın prestijli Ninja serisinin küçük motorlu bir temsilcisidir. Sportif ve aerodinamik tasarımı sayesinde Ninja 125, genç sürücülerin dikkatini çekiyor ve onlara supersport motosiklet sürüş deneyimini yaşatmayı amaçlıyor. 125cc motor hacmi, Ninja 125'i günlük kullanım ve kısa mesafeli turlar için uygun kılar, aynı zamanda düşük yakıt tüketimi sayesinde ekonomik bir seçenek sunar. Motosiklet, rüzgarı kesen tasarımı ve sportif pozisyonu sayesinde hızlı sürüşlerde bile iyi bir yol tutuşu ve denge sunuyor. Frenleri güçlü ve etkili, bu da genç sürücülerin kendilerini güvende hissetmelerini sağlar. Kawasaki Ninja 125, genç sürücülerin supersport segmentine giriş yapmaları için uygun ve ekonomik bir seçenektir.</p>
+        "paragraf": "Japon motosiklet devi Kawasaki'nin genç ve yeni sürücüler için sunduğu Ninja 125, markanın prestijli Ninja serisinin küçük motorlu bir temsilcisidir. Sportif ve aerodinamik tasarımı sayesinde Ninja 125, genç sürücülerin dikkatini çekiyor ve onlara supersport motosiklet sürüş deneyimini yaşatmayı amaçlıyor. 125cc motor hacmi, Ninja 125'i günlük kullanım ve kısa mesafeli turlar için uygun kılar, aynı zamanda düşük yakıt tüketimi sayesinde ekonomik bir seçenek sunar. Motosiklet, rüzgarı kesen tasarımı ve sportif pozisyonu sayesinde hızlı sürüşlerde bile iyi bir yol tutuşu ve denge sunuyor. Frenleri güçlü ve etkili, bu da genç sürücülerin kendilerini güvende hissetmelerini sağlar. Kawasaki Ninja 125, genç sürücülerin supersport segmentine giriş yapmaları için uygun ve ekonomik bir seçenektir."
     },
     {
         "num": "5",
@@ -122,7 +113,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "134",
         "ulke": "İtalya",
         "yakitKapasitesi": "14.5",
-        "paragraf": <p>İtalyan motosiklet üreticisi Aprilia'nın genç ve yeni başlayan sürücüler için tasarladığı RS4 125, hem şehir içi hem de açık yolda sürüş için mükemmel bir tercih. 125cc'lik motoru sayesinde, RS4 125 enerjik bir performans ve çeviklik sunuyor. Motosikletin kompakt ve hafif tasarımı, genç sürücüler için mükemmel bir kontrol ve rahatlık sağlıyor. Yol tutuşu ve fren performansı bu segmentteki diğer modellere kıyasla oldukça üstün. Aprilia RS4 125, genç sürücülerin supersport motosiklet dünyasına adım atmaları için mükemmel bir başlangıç seçeneği sunuyor.</p>
+        "paragraf": "İtalyan motosiklet üreticisi Aprilia'nın genç ve yeni başlayan sürücüler için tasarladığı RS4 125, hem şehir içi hem de açık yolda sürüş için mükemmel bir tercih. 125cc'lik motoru sayesinde, RS4 125 enerjik bir performans ve çeviklik sunuyor. Motosikletin kompakt ve hafif tasarımı, genç sürücüler için mükemmel bir kontrol ve rahatlık sağlıyor. Yol tutuşu ve fren performansı bu segmentteki diğer modellere kıyasla oldukça üstün. Aprilia RS4 125, genç sürücülerin supersport motosiklet dünyasına adım atmaları için mükemmel bir başlangıç seçeneği sunuyor."
     },
     {
         "num": "4",
@@ -138,7 +129,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "134",
         "ulke": "Japonya",
         "yakitKapasitesi": "11",
-        "paragraf": <p>Japonya'nın önde gelen motosiklet üreticilerinden Suzuki'nin 125cc segmentindeki iddialı modeli GSX-R125, genç ve yeni sürücüler için mükemmel bir giriş seviyesi spor motosikleti sunuyor. Aerodinamik ve agresif tasarımı, bu motosikleti dikkat çekici ve sportif kılıyor. Suzuki'nin güçlü ve verimli 125cc motoru, düşük devirlerde bile tatminkar bir performans ve tork sağlıyor. GSX-R125, sürücüsüne atik ve çevik bir sürüş deneyimi sunuyor, bu da onu şehir içi trafiğinde ve dar sokaklarda kullanmak için ideal kılar. Yol tutuşu ve fren performansı, bu segmentin genel beklentilerini karşılıyor, ve motosiklet, sürücüsünün güvenli bir şekilde sürüş yapabilmesi için gerekli tüm güvenlik özelliklerine sahip. Suzuki GSX-R125, ekonomik yakıt tüketimi ve uygun fiyatı ile genç sürücüler için cazip bir seçenek oluşturuyor.</p>
+        "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden Suzuki'nin 125cc segmentindeki iddialı modeli GSX-R125, genç ve yeni sürücüler için mükemmel bir giriş seviyesi spor motosikleti sunuyor. Aerodinamik ve agresif tasarımı, bu motosikleti dikkat çekici ve sportif kılıyor. Suzuki'nin güçlü ve verimli 125cc motoru, düşük devirlerde bile tatminkar bir performans ve tork sağlıyor. GSX-R125, sürücüsüne atik ve çevik bir sürüş deneyimi sunuyor, bu da onu şehir içi trafiğinde ve dar sokaklarda kullanmak için ideal kılar. Yol tutuşu ve fren performansı, bu segmentin genel beklentilerini karşılıyor, ve motosiklet, sürücüsünün güvenli bir şekilde sürüş yapabilmesi için gerekli tüm güvenlik özelliklerine sahip. Suzuki GSX-R125, ekonomik yakıt tüketimi ve uygun fiyatı ile genç sürücüler için cazip bir seçenek oluşturuyor."
     },        
     {
         "num": "3",
@@ -154,7 +145,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "135",
         "ulke": "Avusturya",
         "yakitKapasitesi": "10",
-        "paragraf": <p>Avusturya'nın efsanevi motosiklet üreticisi KTM, RC 125 modeliyle genç ve yeni başlayan sürücüler için bir başlangıç seviyesi supersport motosikleti sunuyor. Motosikletin keskin ve agresif tasarımı, KTM'nin spor motosikletlerdeki uzmanlığını ve yarış DNA'sını yansıtıyor. 125cc motor hacmi, RC 125'i hem uygun fiyatlı hem de yakıt verimli kılıyor. Motosiklet, genç sürücülere sportif bir sürüş deneyimi sunarken, aynı zamanda kullanıcı dostu ve affedici bir sürüş karakteristiği sergiliyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar. Ayrıca, KTM RC 125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. RC 125, genç ve enerjik sürücüler için mükemmel bir seçenektir.</p>
+        "paragraf": "Avusturya'nın efsanevi motosiklet üreticisi KTM, RC 125 modeliyle genç ve yeni başlayan sürücüler için bir başlangıç seviyesi supersport motosikleti sunuyor. Motosikletin keskin ve agresif tasarımı, KTM'nin spor motosikletlerdeki uzmanlığını ve yarış DNA'sını yansıtıyor. 125cc motor hacmi, RC 125'i hem uygun fiyatlı hem de yakıt verimli kılıyor. Motosiklet, genç sürücülere sportif bir sürüş deneyimi sunarken, aynı zamanda kullanıcı dostu ve affedici bir sürüş karakteristiği sergiliyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar. Ayrıca, KTM RC 125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. RC 125, genç ve enerjik sürücüler için mükemmel bir seçenektir."
     },
     {
         "num": "2",
@@ -170,7 +161,7 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "136.9",
         "ulke": "Japonya",
         "yakitKapasitesi": "13",
-        "paragraf": <p>Japonya'nın önde gelen motosiklet üreticilerinden biri olan Honda'nın CBR125R modeli, küçük motor hacmine rağmen heyecan verici bir sürüş deneyimi sunuyor. CBR125R, sürücülerine, kompakt boyutları ve hafifliği sayesinde, harika bir manevra kabiliyeti ve kolay kontrol imkanı tanır. Motosiklet, aerodinamik tasarımı ve sportif görünümü ile dikkat çekerken, performansı ve yakıt verimliliği ile de genç ve deneyimsiz sürücüler için ideal bir seçimdir. Honda'nın güvenilirliği ve dayanıklılığı, CBR125R'yi 125cc super sport motosiklet kategorisinde popüler bir seçenek haline getirir.</p>
+        "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden biri olan Honda'nın CBR125R modeli, küçük motor hacmine rağmen heyecan verici bir sürüş deneyimi sunuyor. CBR125R, sürücülerine, kompakt boyutları ve hafifliği sayesinde, harika bir manevra kabiliyeti ve kolay kontrol imkanı tanır. Motosiklet, aerodinamik tasarımı ve sportif görünümü ile dikkat çekerken, performansı ve yakıt verimliliği ile de genç ve deneyimsiz sürücüler için ideal bir seçimdir. Honda'nın güvenilirliği ve dayanıklılığı, CBR125R'yi 125cc super sport motosiklet kategorisinde popüler bir seçenek haline getirir."
     },
     {
         "num": "1",
@@ -186,51 +177,48 @@ export default function Eniyi125ccSuperMain() {
         "agirlik": "142",
         "ulke": "Japonya",
         "yakitKapasitesi": "11.5",
-        "paragraf": <p>Japonya'nın köklü motosiklet üreticisi Yamaha, YZF-R125 modeli ile genç ve yeni başlayan sürücüler için üstün bir giriş seviyesi supersport motosiklet sunuyor. YZF-R125'in keskin ve aerodinamik tasarımı, motosikletin sportif karakterini ve Yamaha'nın yarış DNA'sını vurguluyor. 125cc'lik motoru, iyi bir yakıt verimliliği ve yeterli bir performans sunarken, motosikletin kompakt boyutları ve hafif yapısı, yeni sürücüler için sürüşü kolay ve kontrol edilebilir kılıyor. YZF-R125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar, ve YZF-R125, genç sürücüler için güvenli ve eğlenceli bir sürüş deneyimi sunuyor. YZF-R125, sportif tasarımı, güvenilir performansı ve kullanıcı dostu sürüş karakteristikleri ile 125cc supersport segmentinde lider bir konumda bulunuyor.</p>
+        "paragraf": "Japonya'nın köklü motosiklet üreticisi Yamaha, YZF-R125 modeli ile genç ve yeni başlayan sürücüler için üstün bir giriş seviyesi supersport motosiklet sunuyor. YZF-R125'in keskin ve aerodinamik tasarımı, motosikletin sportif karakterini ve Yamaha'nın yarış DNA'sını vurguluyor. 125cc'lik motoru, iyi bir yakıt verimliliği ve yeterli bir performans sunarken, motosikletin kompakt boyutları ve hafif yapısı, yeni sürücüler için sürüşü kolay ve kontrol edilebilir kılıyor. YZF-R125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar, ve YZF-R125, genç sürücüler için güvenli ve eğlenceli bir sürüş deneyimi sunuyor. YZF-R125, sportif tasarımı, güvenilir performansı ve kullanıcı dostu sürüş karakteristikleri ile 125cc supersport segmentinde lider bir konumda bulunuyor."
     }
   ];
 
-  const ana_resim = jsonContentArray[0].image;
-  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+    const ana_resim = jsonContentArray[0].image;
+    const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 
-  const jsonList = json_list(articleInfos,
-  "Motosiklet", 
-  summaryText,
-  jsonContentArray
-  )
+    const jsonList = moviesAndSeriesJson(articleInfos,
+    "Motosiklet", 
+    metin,
+    jsonContentArray
+    )
+
+    return {
+        props: {
+            baslik,
+            description,
+            keywordsArray,
+            ana_resim,
+            url,
+            jsonList,
+            addDate,
+            okunmaSuresi,
+            kategori,
+            metin,
+            jsonContentArray
+        },
+        revalidate: 60 * 60 * 24,
+    }
+}
+
+export default function Eniyi125ccSuperMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+  const { nightMode } = useAppContext();
 
   return (
-    
-    <Main>
-      
-      <HeadHtml 
-        baslik={baslik}
-        description={description}
-        keywords={keywordsArray.join(", ")}
-        ana_resim={ana_resim}
-        url={url}
-        jsonListHtml={jsonList.html}
-        />
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin}>
 
-        <article id='main-article'>
-          
-          <h1>{baslik}</h1>
+        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan} kategori={kategori}/>
-          
-          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-
-          {(summaryText)}
-
-          <hr className='split'/>
-
-          {<Ens_motosiklet jsonContentArray={jsonContentArray}/>}
-        
-        </article>
-        
-        <OtherContents />
-        
-        
-    </Main>
+    </ClassicArticle>
   )
 }

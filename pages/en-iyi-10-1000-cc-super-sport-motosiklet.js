@@ -1,15 +1,9 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import Details from '@/components/Details';
-import json_list from '@/components/functions/moviesAndSeriesJson';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
-import HeadHtml from '@/components/HeadHtml';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function Eniyi1000ccSuperMain() {
-  const { nightMode } = useAppContext();
-
+export async function getStaticProps() {
   const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "supersport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-1000-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 1000 CC Super Sport Motosiklet";
@@ -23,9 +17,6 @@ export default function Eniyi1000ccSuperMain() {
   const eklenmeTarihi = "2023-10-03T18:07:00+03:00";
   const degistirilmeTarihi = "2023-10-03T18:07:00+03:00";
   const addDate = "03.10.23";
-
-  
-  const summaryText = <p className='summary_text'>{metin}</p>;
 
   const jsonContentArray = [
     {
@@ -42,7 +33,7 @@ export default function Eniyi1000ccSuperMain() {
         "agirlik": "186",
         "ulke": "İngiltere",
         "yakitKapasitesi": "18",
-        "paragraf": <p>İngiltere'nin süper spor mirası Triumph Daytona 1050, performans ve konforu bir arada sunar. 1050cc motoru ile güçlü bir hızlanma sağlarken, süspansiyon sistemi ve ergonomik yapısı, sürücüsüne konforlu bir sürüş deneyimi sunar. Yakıt kapasitesi ve tüketimi dengeli, fakat bazı sürücüler için gösterge panelinin modernize edilmesi gerekebilir. Yol tutuşu ve fren performansı güven verici, fakat sele konforu uzun sürüşler için ideal olmayabilir. Daytona 1050, hem günlük kullanım hem de sportif sürüşler için uygun bir seçenektir.</p>
+        "paragraf": "İngiltere'nin süper spor mirası Triumph Daytona 1050, performans ve konforu bir arada sunar. 1050cc motoru ile güçlü bir hızlanma sağlarken, süspansiyon sistemi ve ergonomik yapısı, sürücüsüne konforlu bir sürüş deneyimi sunar. Yakıt kapasitesi ve tüketimi dengeli, fakat bazı sürücüler için gösterge panelinin modernize edilmesi gerekebilir. Yol tutuşu ve fren performansı güven verici, fakat sele konforu uzun sürüşler için ideal olmayabilir. Daytona 1050, hem günlük kullanım hem de sportif sürüşler için uygun bir seçenektir."
     },  
     {
       "num": "9",
@@ -58,7 +49,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "200",
       "ulke": "Avusturya",
       "yakitKapasitesi": "16.5",
-      "paragraf": <p>Avusturya'nın hız makinesi KTM RC8 R, keskin hatları ve agresif tasarımı ile dikkat çeker. 1195cc motoru ile rakiplerine kıyasla daha güçlü bir performans sunar. Yol tutuşu mükemmel, frenler ise oldukça güvenilir. Yakıt kapasitesi diğerlerine kıyasla biraz düşük, fakat bu, RC8 R'nin hız tutkusunu asla gölgeleyemez. Gidon pozisyonu ve sele konforu, uzun sürüşlerde bile sürücüsüne rahatlık sağlar. RC8 R, sportif performansı ve estetik tasarımı ile süper sport motosiklet severler için ideal bir seçenek.</p>
+      "paragraf": "Avusturya'nın hız makinesi KTM RC8 R, keskin hatları ve agresif tasarımı ile dikkat çeker. 1195cc motoru ile rakiplerine kıyasla daha güçlü bir performans sunar. Yol tutuşu mükemmel, frenler ise oldukça güvenilir. Yakıt kapasitesi diğerlerine kıyasla biraz düşük, fakat bu, RC8 R'nin hız tutkusunu asla gölgeleyemez. Gidon pozisyonu ve sele konforu, uzun sürüşlerde bile sürücüsüne rahatlık sağlar. RC8 R, sportif performansı ve estetik tasarımı ile süper sport motosiklet severler için ideal bir seçenek."
     },
     {
       "num": "8",
@@ -74,7 +65,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "190",
       "ulke": "İtalya",
       "yakitKapasitesi": "20",
-      "paragraf": <p>İtalyan estetiği ve mühendislik harikası MV Agusta F4 RR, dikkat çekici tasarımı ve üstün performansı ile bir sanat eseri niteliğindedir. Yol tutuşu ve fren performansı sınıfının en iyilerinden, motorun hızlanma kabiliyeti ve yüksek hızları ise adeta nefes kesici. Yakıt kapasitesi geniş, fakat yakıt tüketimi biraz yüksek. Sele konforu ve ergonomik yapısı, uzun mesafeli sürüşler için ideal. MV Agusta F4 RR, estetik ve performansı bir arada arayan sürücüler için mükemmel bir tercih.</p>
+      "paragraf": "İtalyan estetiği ve mühendislik harikası MV Agusta F4 RR, dikkat çekici tasarımı ve üstün performansı ile bir sanat eseri niteliğindedir. Yol tutuşu ve fren performansı sınıfının en iyilerinden, motorun hızlanma kabiliyeti ve yüksek hızları ise adeta nefes kesici. Yakıt kapasitesi geniş, fakat yakıt tüketimi biraz yüksek. Sele konforu ve ergonomik yapısı, uzun mesafeli sürüşler için ideal. MV Agusta F4 RR, estetik ve performansı bir arada arayan sürücüler için mükemmel bir tercih."
     },
     {
       "num": "7",
@@ -90,7 +81,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "202",
       "ulke": "Japonya",
       "yakitKapasitesi": "16",
-      "paragraf": <p>Japon mühendisliğinin bir başyapıtı olan Suzuki GSX-R1000, dinamik tasarımı ve güçlü motoru ile dikkat çeker. Yol tutuşu ve fren performansı mükemmel, motorun hızlanma kabiliyeti ise etkileyici. Yakıt kapasitesi ortalamanın biraz altında, fakat bu, GSX-R1000'in performansını gölgeleyemez. Sele konforu ve ergonomik gidon yapısı, uzun sürüşler için rahatlık sunar. GSX-R1000, sportif performans ve güvenilirlik arayan sürücüler için ideal bir seçenek.</p>
+      "paragraf": "Japon mühendisliğinin bir başyapıtı olan Suzuki GSX-R1000, dinamik tasarımı ve güçlü motoru ile dikkat çeker. Yol tutuşu ve fren performansı mükemmel, motorun hızlanma kabiliyeti ise etkileyici. Yakıt kapasitesi ortalamanın biraz altında, fakat bu, GSX-R1000'in performansını gölgeleyemez. Sele konforu ve ergonomik gidon yapısı, uzun sürüşler için rahatlık sunar. GSX-R1000, sportif performans ve güvenilirlik arayan sürücüler için ideal bir seçenek."
     },
     {
       "num": "6",
@@ -106,7 +97,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "196",
       "ulke": "Japonya",
       "yakitKapasitesi": "16",
-      "paragraf": <p>Honda'nın süper spor motosikleti CBR1000RR, mükemmel bir yol tutuşu ve güçlü motor performansı ile bilinir. Sürücüler, hızlanma kabiliyetini ve fren performansını takdir ederler. Yakıt kapasitesi ortalama, fakat yakıt tüketimi oldukça iyi. Ergonomik yapısı sayesinde uzun sürüşlerde bile konforlu. Honda CBR1000RR, pist günleri ve günlük sürüşler için uygun, güvenilir ve eğlenceli bir motosiklettir.</p>
+      "paragraf": "Honda'nın süper spor motosikleti CBR1000RR, mükemmel bir yol tutuşu ve güçlü motor performansı ile bilinir. Sürücüler, hızlanma kabiliyetini ve fren performansını takdir ederler. Yakıt kapasitesi ortalama, fakat yakıt tüketimi oldukça iyi. Ergonomik yapısı sayesinde uzun sürüşlerde bile konforlu. Honda CBR1000RR, pist günleri ve günlük sürüşler için uygun, güvenilir ve eğlenceli bir motosiklettir."
     },
     {
       "num": "5",
@@ -122,7 +113,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "206",
       "ulke": "Japonya",
       "yakitKapasitesi": "17",
-      "paragraf": <p>Japonya'nın hız makinesi Kawasaki Ninja ZX-10R, sürücülerin pist ve açık yolda tam kontrol sağlamaları için tasarlanmıştır. Yol tutuşu ve fren performansı etkileyici, motorun hızlanma kabiliyeti ise adeta bir füze kadar hızlı. Yakıt kapasitesi ve tüketimi dengeli. Sele konforu, uzun mesafeli sürüşlerde bile rahatlık sunar. ZX-10R'nin sportif ve agresif tasarımı, bu motosikleti her yere götürürken başları çevirir.</p>
+      "paragraf": "Japonya'nın hız makinesi Kawasaki Ninja ZX-10R, sürücülerin pist ve açık yolda tam kontrol sağlamaları için tasarlanmıştır. Yol tutuşu ve fren performansı etkileyici, motorun hızlanma kabiliyeti ise adeta bir füze kadar hızlı. Yakıt kapasitesi ve tüketimi dengeli. Sele konforu, uzun mesafeli sürüşlerde bile rahatlık sunar. ZX-10R'nin sportif ve agresif tasarımı, bu motosikleti her yere götürürken başları çevirir."
     },
     {
       "num": "4",
@@ -138,7 +129,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "199",
       "ulke": "Japonya",
       "yakitKapasitesi": "17",
-      "paragraf": <p>Yamaha'nın süper spor modeli YZF-R1, sürücüsüne yarış pistindeki deneyimi yaşatmak için tasarlanmıştır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ise uzun sürüşler için ideal. YZF-R1, sportif tasarımı ve üstün performansı ile süper spor motosiklet tutkunlarının favorilerinden biridir.</p>
+      "paragraf": "Yamaha'nın süper spor modeli YZF-R1, sürücüsüne yarış pistindeki deneyimi yaşatmak için tasarlanmıştır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ise uzun sürüşler için ideal. YZF-R1, sportif tasarımı ve üstün performansı ile süper spor motosiklet tutkunlarının favorilerinden biridir."
     },
     {
       "num": "3",
@@ -154,7 +145,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "199",
       "ulke": "İtalya",
       "yakitKapasitesi": "18.5",
-      "paragraf": <p>İtalyan tasarımının ve performansının bir sembolü olan Aprilia RSV4 1100 Factory, sınıfının en iyi motorlarından biri ile donatılmıştır. Yüksek hızlara ulaşma kabiliyeti ve yol tutuşu, bu motosikleti süper spor sınıfında bir efsane haline getirir. Yakıt kapasitesi geniş, fakat tüketim biraz yüksek. Konfor ve ergonomi, uzun sürüşler için uygun. RSV4 1100 Factory, sportif sürüşler ve pist günleri için mükemmel bir tercihtir.</p>
+      "paragraf": "İtalyan tasarımının ve performansının bir sembolü olan Aprilia RSV4 1100 Factory, sınıfının en iyi motorlarından biri ile donatılmıştır. Yüksek hızlara ulaşma kabiliyeti ve yol tutuşu, bu motosikleti süper spor sınıfında bir efsane haline getirir. Yakıt kapasitesi geniş, fakat tüketim biraz yüksek. Konfor ve ergonomi, uzun sürüşler için uygun. RSV4 1100 Factory, sportif sürüşler ve pist günleri için mükemmel bir tercihtir."
     },
     {
       "num": "2",
@@ -170,7 +161,7 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "198",
       "ulke": "İtalya",
       "yakitKapasitesi": "16",
-      "paragraf": <p>İtalya'nın prestijli motosiklet üreticisi Ducati'nin süper spor modeli Panigale V4, sürücülerin yarış pistlerinde ve açık yollarda unutulmaz deneyimler yaşaması için tasarlanmıştır. Motorun gücü ve hızlanma kabiliyeti, sürücüsüne adrenalin dolu anlar yaşatır. Yol tutuşu ve fren performansı üst düzeyde, fakat yakıt tüketimi biraz yüksek. Sele konforu ve ergonomik yapısı, sürücüsüne uzun sürüşlerde bile rahatlık sunar. Panigale V4, sadece performans değil, aynı zamanda İtalyan estetiği ve zarafetini de yollara taşır.</p>
+      "paragraf": "İtalya'nın prestijli motosiklet üreticisi Ducati'nin süper spor modeli Panigale V4, sürücülerin yarış pistlerinde ve açık yollarda unutulmaz deneyimler yaşaması için tasarlanmıştır. Motorun gücü ve hızlanma kabiliyeti, sürücüsüne adrenalin dolu anlar yaşatır. Yol tutuşu ve fren performansı üst düzeyde, fakat yakıt tüketimi biraz yüksek. Sele konforu ve ergonomik yapısı, sürücüsüne uzun sürüşlerde bile rahatlık sunar. Panigale V4, sadece performans değil, aynı zamanda İtalyan estetiği ve zarafetini de yollara taşır."
     },
     {
       "num": "1",
@@ -186,51 +177,48 @@ export default function Eniyi1000ccSuperMain() {
       "agirlik": "197",
       "ulke": "Almanya",
       "yakitKapasitesi": "17.5",
-      "paragraf": <p>Alman mühendisliğinin bir şaheseri olan BMW S1000RR, üstün performansı ve sürücü dostu özellikleri ile tanınır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ve ergonomik yapısı uzun sürüşler için ideal. S1000RR, sportif performansı ve günlük kullanım kolaylığı ile hem pist hem de açık yolda mükemmel bir deneyim sunar.</p>
+      "paragraf": "Alman mühendisliğinin bir şaheseri olan BMW S1000RR, üstün performansı ve sürücü dostu özellikleri ile tanınır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ve ergonomik yapısı uzun sürüşler için ideal. S1000RR, sportif performansı ve günlük kullanım kolaylığı ile hem pist hem de açık yolda mükemmel bir deneyim sunar."
     }
   ];
 
   const ana_resim = jsonContentArray[0].image;
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
   
-  const jsonList = json_list(articleInfos,
+  const jsonList = moviesAndSeriesJson(articleInfos,
   "Motosiklet", 
-  summaryText,
+  metin,
   jsonContentArray
   )
 
+  return {
+    props: {
+        baslik,
+        description,
+        keywordsArray,
+        ana_resim,
+        url,
+        jsonList,
+        addDate,
+        okunmaSuresi,
+        kategori,
+        metin,
+        jsonContentArray
+    },
+    revalidate: 60 * 60 * 24,
+  }
+}
+
+export default function Eniyi1000ccSuperMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+  const { nightMode } = useAppContext();
+
   return (
-    
-    <Main>
-      
-      <HeadHtml 
-        baslik={baslik}
-        description={description}
-        keywords={keywordsArray.join(", ")}
-        ana_resim={ana_resim}
-        url={url}
-        jsonListHtml={jsonList.html}
-        />
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin}>
 
-        <article id='main-article'>
-          
-          <h1>{baslik}</h1>
+        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan} kategori={kategori}/>
-          
-          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-
-          {(summaryText)}
-
-          <hr className='split'/>
-
-          {<Ens_motosiklet jsonContentArray={jsonContentArray}/>}
-        
-        </article>
-        
-        <OtherContents />
-        
-        
-    </Main>
+    </ClassicArticle>
   )
 }

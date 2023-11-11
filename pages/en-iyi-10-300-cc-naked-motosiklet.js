@@ -1,15 +1,9 @@
-import Main from '@/components/Main';
-import OtherContents from '@/components/OtherContents';
-import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
-import Details from '@/components/Details';
-import json_list from '@/components/functions/moviesAndSeriesJson';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
-import HeadHtml from '@/components/HeadHtml';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function Eniyi300ccNakedMain() {
-  const { nightMode } = useAppContext();
-
+export async function getStaticProps() {
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-300-cc-naked-motosiklet";
   const baslik = "En İyi 10 300 CC Naked Motosiklet";
@@ -23,9 +17,6 @@ export default function Eniyi300ccNakedMain() {
   const eklenmeTarihi = "2023-10-03T02:32:00+03:00";
   const degistirilmeTarihi = "2023-10-03T02:32:00+03:00";
   const addDate = "03.10.23";
-
-  
-  const summaryText = <p className='summary_text'>{metin}</p>;
 
   const jsonContentArray = [
     {
@@ -42,7 +33,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "151",
         "ulke": "Çin",
         "yakitKapasitesi": "12.5",
-        "paragraf": <p>Çinli üretici CFMoto'nun 300NK modeli, uygun fiyatlı ve stil sahibi bir naked motosiklet arayanlar için ideal bir seçenek. Sade ve modern bir tasarım anlayışını benimsemiş. Dik sürüş pozisyonu ve hafif yapısı sayesinde, şehir içinde rahat bir sürüş deneyimi sunuyor. 300NK, performans ve konfor arasında iyi bir denge kurarak, yeni başlayanlar için güvenilir ve ulaşılabilir bir tercih oluşturuyor.</p>
+        "paragraf": "Çinli üretici CFMoto'nun 300NK modeli, uygun fiyatlı ve stil sahibi bir naked motosiklet arayanlar için ideal bir seçenek. Sade ve modern bir tasarım anlayışını benimsemiş. Dik sürüş pozisyonu ve hafif yapısı sayesinde, şehir içinde rahat bir sürüş deneyimi sunuyor. 300NK, performans ve konfor arasında iyi bir denge kurarak, yeni başlayanlar için güvenilir ve ulaşılabilir bir tercih oluşturuyor."
     },        
     {
         "num": "9",
@@ -58,7 +49,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "157",
         "ulke": "İsveç",
         "yakitKapasitesi": "9.5",
-        "paragraf": <p>İsveç kökenli Husqvarna'nın Vitpilen 401 modeli, minimalist ve modern tasarımı ile dikkat çeker. Hafif ve kompakt yapıda olan bu motosiklet, şehir içi kullanım için ideal. Güçlü motoru ve dikkat çekici hızlanması, sürüş deneyimini eğlenceli hale getiriyor. Gidon ve gaz tepkileri, sürücüyü tatmin edecek düzeyde. Sürüş pozisyonu sportif ve yol tutuşu güven verici. Fren performansı ve süspansiyon sistemi, sınıfının beklentilerini karşılıyor. Genel olarak, Vitpilen 401, şık görünümü ve performansı ile naked sınıfında farklı bir seçenek sunuyor.</p>
+        "paragraf": "İsveç kökenli Husqvarna'nın Vitpilen 401 modeli, minimalist ve modern tasarımı ile dikkat çeker. Hafif ve kompakt yapıda olan bu motosiklet, şehir içi kullanım için ideal. Güçlü motoru ve dikkat çekici hızlanması, sürüş deneyimini eğlenceli hale getiriyor. Gidon ve gaz tepkileri, sürücüyü tatmin edecek düzeyde. Sürüş pozisyonu sportif ve yol tutuşu güven verici. Fren performansı ve süspansiyon sistemi, sınıfının beklentilerini karşılıyor. Genel olarak, Vitpilen 401, şık görünümü ve performansı ile naked sınıfında farklı bir seçenek sunuyor."
     },
     {
         "num": "8",
@@ -74,7 +65,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "169.5",
         "ulke": "Hindistan",
         "yakitKapasitesi": "11",
-        "paragraf": <p>Hindistan'ın önde gelen motosiklet üreticilerinden TVS'nin Apache RTR 310 modeli, spor tarzı ve ergonomik tasarımı ile genç sürücülerin ilgisini çekiyor. Güçlü motoru ve dengeli ağırlık dağılımı sayesinde, şehir içinde ve şehir dışında rahat bir sürüş deneyimi sunuyor. Motorun düşük ve yüksek devir performansı tatmin edici. Fren sistemi ve süspansiyon, beklenen düzeyde konfor ve kontrol sunuyor. Gidonun rahat ergonomisi ve gaz tepkileri, sürüş deneyimini daha da keyifli hale getiriyor. TVS Apache RTR 310, uygun fiyatlı ve performans odaklı bir naked motosiklet arayanlar için cazip bir seçenek olabilir.</p>
+        "paragraf": "Hindistan'ın önde gelen motosiklet üreticilerinden TVS'nin Apache RTR 310 modeli, spor tarzı ve ergonomik tasarımı ile genç sürücülerin ilgisini çekiyor. Güçlü motoru ve dengeli ağırlık dağılımı sayesinde, şehir içinde ve şehir dışında rahat bir sürüş deneyimi sunuyor. Motorun düşük ve yüksek devir performansı tatmin edici. Fren sistemi ve süspansiyon, beklenen düzeyde konfor ve kontrol sunuyor. Gidonun rahat ergonomisi ve gaz tepkileri, sürüş deneyimini daha da keyifli hale getiriyor. TVS Apache RTR 310, uygun fiyatlı ve performans odaklı bir naked motosiklet arayanlar için cazip bir seçenek olabilir."
     },   
     {
         "num": "7",
@@ -90,7 +81,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "166",
         "ulke": "Japonya",
         "yakitKapasitesi": "14",
-        "paragraf": <p>Japonya'nın prestijli motosiklet üreticilerinden Kawasaki'nin Z400 modeli, hafiflik ve kompakt yapıyı performansla birleştiriyor. Düşük ağırlık merkezi ve kompakt motor tasarımı, motorun hızlı ve tepkisel olmasını sağlıyor. Z400, özellikle düşük ve orta devirlerde güçlü bir tork sunuyor. Sert süspansiyon sistemi, motorun yol tutuşunu ve sürüş dinamiklerini iyileştiriyor. Gidon ve gaz tepkileri son derece hassas, bu da motoru hızlı ve çevik kılıyor. Kullanıcı dostu ergonomisi ve konforlu sürüş pozisyonu, Kawasaki Z400'ü uzun sürüşler için uygun hale getiriyor. Fren performansı ve ABS sistemi, güvenli bir sürüş deneyimi sağlıyor.</p>
+        "paragraf": "Japonya'nın prestijli motosiklet üreticilerinden Kawasaki'nin Z400 modeli, hafiflik ve kompakt yapıyı performansla birleştiriyor. Düşük ağırlık merkezi ve kompakt motor tasarımı, motorun hızlı ve tepkisel olmasını sağlıyor. Z400, özellikle düşük ve orta devirlerde güçlü bir tork sunuyor. Sert süspansiyon sistemi, motorun yol tutuşunu ve sürüş dinamiklerini iyileştiriyor. Gidon ve gaz tepkileri son derece hassas, bu da motoru hızlı ve çevik kılıyor. Kullanıcı dostu ergonomisi ve konforlu sürüş pozisyonu, Kawasaki Z400'ü uzun sürüşler için uygun hale getiriyor. Fren performansı ve ABS sistemi, güvenli bir sürüş deneyimi sağlıyor."
     }, 
     {
         "num": "6",
@@ -106,7 +97,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "185",
         "ulke": "İtalyan",
         "yakitKapasitesi": "16",
-        "paragraf": <p>İtalyan tasarımı ve Çin mühendisliği ile harmanlanmış Benelli TNT 300, estetik ve performansı uygun fiyatla sunuyor. 300cc hacmindeki motor, düşük ve orta devirlerde tatminkar tork sağlıyor. Ergonomik yapısı ve geniş koltuğu, konforlu bir sürüş deneyimi sunarken, hassas süspansiyon sistemi sayesinde yol tutuşu ve sürüş dinamikleri de oldukça başarılı. Gidon tepkisi ve gaz kontrolü, sürücüye tam kontrol hissi veriyor. Sade ve zarif tasarımı, TNT 300'ü şehir içi sürüşler için ideal kılıyor. Fren performansı ve ABS sistemi, sürücüye güvenli bir sürüş deneyimi sunuyor.</p>
+        "paragraf": "İtalyan tasarımı ve Çin mühendisliği ile harmanlanmış Benelli TNT 300, estetik ve performansı uygun fiyatla sunuyor. 300cc hacmindeki motor, düşük ve orta devirlerde tatminkar tork sağlıyor. Ergonomik yapısı ve geniş koltuğu, konforlu bir sürüş deneyimi sunarken, hassas süspansiyon sistemi sayesinde yol tutuşu ve sürüş dinamikleri de oldukça başarılı. Gidon tepkisi ve gaz kontrolü, sürücüye tam kontrol hissi veriyor. Sade ve zarif tasarımı, TNT 300'ü şehir içi sürüşler için ideal kılıyor. Fren performansı ve ABS sistemi, sürücüye güvenli bir sürüş deneyimi sunuyor."
     },   
     {
         "num": "5",
@@ -122,7 +113,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "143",
         "ulke": "Japonya",
         "yakitKapasitesi": "10",
-        "paragraf": <p>Japon mühendisliği ile üretilen Honda CB300R, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Yalın ve modern tasarımı, genç ve enerjik sürücülerin beklentilerini karşılar. Motor performansı, düşük ve orta devirlerde güçlü, yüksek devirlerde ise canlıdır. Konforlu sürüş pozisyonu, şehir içi ve uzun yol sürüşlerinde sürücüyü yormaz. Yol tutuşu ve süspansiyon sistemi, Honda'nın kalitesini gösteriyor. Gaz tepkisi ve fren performansı, sürücüye tam kontrol sağlıyor. CB300R, dayanıklılığı ve düşük yakıt tüketimi ile de uzun vadede ekonomik bir seçenek sunar.</p>
+        "paragraf": "Japon mühendisliği ile üretilen Honda CB300R, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Yalın ve modern tasarımı, genç ve enerjik sürücülerin beklentilerini karşılar. Motor performansı, düşük ve orta devirlerde güçlü, yüksek devirlerde ise canlıdır. Konforlu sürüş pozisyonu, şehir içi ve uzun yol sürüşlerinde sürücüyü yormaz. Yol tutuşu ve süspansiyon sistemi, Honda'nın kalitesini gösteriyor. Gaz tepkisi ve fren performansı, sürücüye tam kontrol sağlıyor. CB300R, dayanıklılığı ve düşük yakıt tüketimi ile de uzun vadede ekonomik bir seçenek sunar."
     },   
     {
         "num": "4",
@@ -138,7 +129,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "158.5",
         "ulke": "Almanya",
         "yakitKapasitesi": "11",
-        "paragraf": <p>Alman mühendisliği ile hazırlanan BMW G 310 R, minimalist ve şık tasarımı ile dikkat çeker. BMW'nin kalite standartlarını yansıtan bu model, günlük kullanımdan uzun yol sürüşlerine kadar geniş bir kullanım yelpazesi sunar. Motoru, düşük devirlerde dahi tatminkar bir tork sunar. Süspansiyon sistemi, rahat bir sürüş deneyimi sağlarken, frenler oldukça güçlü ve hassastır. Gidon ve gaz tepkisi, sürücüye mükemmel bir kontrol imkanı sunar. BMW G 310 R, uzun ömürlü ve dayanıklı bir yapıya sahiptir, bu da onu uzun vadede güvenilir ve ekonomik bir seçenek haline getirir.</p>
+        "paragraf": "Alman mühendisliği ile hazırlanan BMW G 310 R, minimalist ve şık tasarımı ile dikkat çeker. BMW'nin kalite standartlarını yansıtan bu model, günlük kullanımdan uzun yol sürüşlerine kadar geniş bir kullanım yelpazesi sunar. Motoru, düşük devirlerde dahi tatminkar bir tork sunar. Süspansiyon sistemi, rahat bir sürüş deneyimi sağlarken, frenler oldukça güçlü ve hassastır. Gidon ve gaz tepkisi, sürücüye mükemmel bir kontrol imkanı sunar. BMW G 310 R, uzun ömürlü ve dayanıklı bir yapıya sahiptir, bu da onu uzun vadede güvenilir ve ekonomik bir seçenek haline getirir."
     },   
     {
         "num": "3",
@@ -154,7 +145,7 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "149",
         "ulke": "Avusturya",
         "yakitKapasitesi": "13.4",
-        "paragraf": <p>Avusturyalı motosiklet üreticisi KTM'nin başyapıtı Duke 390, radikal tasarımı ve sıra dışı performansı ile pazardaki diğer naked'lardan ayrılıyor. 390cc motor hacmi, sürücüye her gaz açışında etkileyici bir güç ve tork sunar. Sert süspansiyonlar, mükemmel yol tutuşu sağlar ama bir o kadar da konforlu bir sürüş deneyimi sunar. Gaz tepkimesi ve fren performansı sınıfının en iyilerinden. Sürücü pozisyonu, hem şehir içi hem de otoyol sürüşlerinde ergonomik ve rahat. KTM Duke 390, genç ve enerjik sürücüler için mükemmel bir seçimdir.</p>
+        "paragraf": "Avusturyalı motosiklet üreticisi KTM'nin başyapıtı Duke 390, radikal tasarımı ve sıra dışı performansı ile pazardaki diğer naked'lardan ayrılıyor. 390cc motor hacmi, sürücüye her gaz açışında etkileyici bir güç ve tork sunar. Sert süspansiyonlar, mükemmel yol tutuşu sağlar ama bir o kadar da konforlu bir sürüş deneyimi sunar. Gaz tepkimesi ve fren performansı sınıfının en iyilerinden. Sürücü pozisyonu, hem şehir içi hem de otoyol sürüşlerinde ergonomik ve rahat. KTM Duke 390, genç ve enerjik sürücüler için mükemmel bir seçimdir."
     },  
     {
       "num": "2",
@@ -170,7 +161,7 @@ export default function Eniyi300ccNakedMain() {
       "agirlik": "168",
       "ulke": "Japonya",
       "yakitKapasitesi": "17",
-      "paragraf": <p>Japonya'nın köklü motosiklet üreticilerinden Kawasaki'nin Z serisinin bir üyesi olan Z300, hafifliği ve çevikliği ile dikkat çeker. Günlük sürüşler ve şehir içi kullanım için oldukça uygun olan Z300, sürücüsüne konforlu bir sürüş deneyimi sunar. Motorun çevikliği ve rahat kullanımı, yeni başlayanlar için bile dostane bir seçenek haline getirir. Ayrıca, 17 litrelik yakıt kapasitesi sayesinde uzun yolculuklar için de oldukça uygundur. Yol tutuşu ve fren performansı, Kawasaki'nin bu modelinde de oldukça tatminkardır.</p>
+      "paragraf": "Japonya'nın köklü motosiklet üreticilerinden Kawasaki'nin Z serisinin bir üyesi olan Z300, hafifliği ve çevikliği ile dikkat çeker. Günlük sürüşler ve şehir içi kullanım için oldukça uygun olan Z300, sürücüsüne konforlu bir sürüş deneyimi sunar. Motorun çevikliği ve rahat kullanımı, yeni başlayanlar için bile dostane bir seçenek haline getirir. Ayrıca, 17 litrelik yakıt kapasitesi sayesinde uzun yolculuklar için de oldukça uygundur. Yol tutuşu ve fren performansı, Kawasaki'nin bu modelinde de oldukça tatminkardır."
     },
     {
         "num": "1",
@@ -186,51 +177,48 @@ export default function Eniyi300ccNakedMain() {
         "agirlik": "168",
         "ulke": "Japonya",
         "yakitKapasitesi": "15",
-        "paragraf": <p>Japon üretici Yamaha'nın MT-03 modeli, sportif ve agresif tasarımı ile dikkat çeker. 321cc motor hacmi, tatmin edici bir performans ve dinamik bir sürüş deneyimi sunar. Yol tutuşu ve süspansiyon sistemi, sportif sürüşleri destekler ve konforu korur. Gaz tepkimesi hızlı, frenler güçlü ve hassas. MT-03, hem estetik hem de performans açısından, bu segmentteki sürücüler için etkileyici bir seçenektir.</p>
+        "paragraf": "Japon üretici Yamaha'nın MT-03 modeli, sportif ve agresif tasarımı ile dikkat çeker. 321cc motor hacmi, tatmin edici bir performans ve dinamik bir sürüş deneyimi sunar. Yol tutuşu ve süspansiyon sistemi, sportif sürüşleri destekler ve konforu korur. Gaz tepkimesi hızlı, frenler güçlü ve hassas. MT-03, hem estetik hem de performans açısından, bu segmentteki sürücüler için etkileyici bir seçenektir."
     }   
   ];
 
   const ana_resim = jsonContentArray[0].image;
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
   
-  const jsonList = json_list(articleInfos,
+  const jsonList = moviesAndSeriesJson(articleInfos,
   "Motosiklet", 
-  summaryText,
+  metin,
   jsonContentArray
   )
 
+  return {
+    props: {
+        baslik,
+        description,
+        keywordsArray,
+        ana_resim,
+        url,
+        jsonList,
+        addDate,
+        okunmaSuresi,
+        kategori,
+        metin,
+        jsonContentArray
+    },
+    revalidate: 60 * 60 * 24,
+  }
+}
+
+export default function Eniyi300ccNakedMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+  const { nightMode } = useAppContext();
+
   return (
-    
-    <Main>
-      
-      <HeadHtml 
-        baslik={baslik}
-        description={description}
-        keywords={keywordsArray.join(", ")}
-        ana_resim={ana_resim}
-        url={url}
-        jsonListHtml={jsonList.html}
-        />
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin}>
 
-        <article id='main-article'>
-          
-          <h1>{baslik}</h1>
+        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
 
-          <Details nightMode={nightMode} addDate={addDate} readTimeSpan={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan} kategori={kategori}/>
-          
-          <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-
-          {(summaryText)}
-
-          <hr className='split'/>
-
-          {<Ens_motosiklet jsonContentArray={jsonContentArray}/>}
-        
-        </article>
-        
-        <OtherContents />
-        
-        
-    </Main>
+    </ClassicArticle>
   )
 }
