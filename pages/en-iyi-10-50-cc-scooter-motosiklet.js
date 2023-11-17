@@ -216,8 +216,6 @@ export async function getStaticProps() {
 export default function Eniyi50ccScooterMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
   const { nightMode } = useAppContext();
 
-  const html_text = "normal text <Link title='ana sayfa' href='/'>Ana sayfa</Link> normal text 2 <b>Bold text</b>";
-
   return (
         <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}

@@ -4,7 +4,7 @@ import Ens_film from '@/components/mini_components/ens/ens_film';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
 export async function getStaticProps() {
-  const keywordsArray = ["erkekler", "için", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
+  const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
   const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
@@ -194,7 +194,7 @@ export async function getStaticProps() {
         metin,
         jsonContentArray
     },
-    revalidate: 60 * 60 * 24,
+    revalidate: 60 * 60 * 24, //! eğer burada bir hata olur ise revalidate 1 günü bulur
   }
 }
 

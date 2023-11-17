@@ -116,6 +116,10 @@ export default function index({articles, currentPage, cats, paginationCount, cur
             <meta property="og:image:width" content="234"/>
             <meta property="og:description" content="Enonlar, en iyi 10 içerikler, en popüler 10 film, en iyi 10 araba incelemeleri, en çok okunan kitap önerileri ve daha fazlasını sunan bir içerik platformudur. Sizler için seçtiğimiz en ilginç konuları keşfedin!"/>
             
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:title" content="En onlar" />
+            <meta name="twitter:description" content="Enonlar, en iyi 10 içerikler, en popüler 10 film, en iyi 10 araba incelemeleri, en çok okunan kitap önerileri ve daha fazlasını sunan bir içerik platformudur. Sizler için seçtiğimiz en ilginç konuları keşfedin!" />
+            <meta name="twitter:image" content="https://enonlar.com/enonlar_logo_default.png" />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{__html: uniqueJSON}}

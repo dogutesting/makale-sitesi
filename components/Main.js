@@ -1,6 +1,6 @@
 import { useAppContext } from '@/context/ContextProvider';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+/* import Footer from '@/components/Footer'; */
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -11,7 +11,6 @@ export default function Main({children}) {
     const router = useRouter();
 
     const getMode = () => {
- 
         const localStorage_mode = localStorage.getItem("n-mode");
         setNightMode(JSON.parse(localStorage_mode));
 
@@ -27,7 +26,6 @@ export default function Main({children}) {
             body.classList.remove(class1);
             /* body.classList.add(class2) */
         }
-
     }
     
     useEffect(() => {
@@ -43,8 +41,7 @@ export default function Main({children}) {
     /*------------------------------------------------------------*/
 
   return (
-    <div>
-    {/* <div className={nightMode ? 'night-mode' : 'light-mode'}> */}
+    <>
         <Header />
         <div className={['container', nightMode ? 'link-night' : ''].join(' ')}>
             <div className='side'></div>
@@ -54,6 +51,6 @@ export default function Main({children}) {
             <div className='side'></div>
         </div>
         {/* <Footer /> */}
-    </div>
+    </>
   )
 }

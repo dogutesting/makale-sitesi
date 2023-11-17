@@ -1,0 +1,48 @@
+.main_error {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.light {background-color: white; color: black;}
+.night {background-color: black; color: white;}
+
+.hi {
+    margin-top: 0px;
+    font-size: 5rem;
+    text-align: center;
+}
+.pi {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 4px;
+    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.button_go_main_page {
+    margin-top: 16px;
+}
+.button_light {
+    background-color: black;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+.button_light:hover {
+    background-color: rgb(60, 60, 60);   
+    color: rgb(191, 191, 191);
+}
+.button_night {
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.button_night:hover {
+    background-color: rgb(191, 191, 191);
+    color: rgb(60, 60, 60);
+}

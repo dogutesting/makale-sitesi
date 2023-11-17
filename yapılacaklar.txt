@@ -27,6 +27,8 @@ V => doğru çalışıyor gibi gözüküyor, 11.11.23
 
 
 -> 404 sayfasını düzenle.
+V => çalışıyor -> 17.11.23
+
 -> makale sayfasındaki önerileri ayarla
     - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
 -> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)

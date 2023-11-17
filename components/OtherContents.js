@@ -2,9 +2,11 @@
 
 import ArticleBox from '@/components/mini_components/icerik_kutusu';
 
-export default function OtherContents() {
+export default function OtherContents({kullaniciID}) {
 
-  /* Article'lar otomatik bir şekilde oluşturulacak */
+  const GetArticles() {
+    
+  }
 
   return (
     <>
