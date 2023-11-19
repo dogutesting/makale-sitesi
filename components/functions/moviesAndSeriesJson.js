@@ -122,7 +122,8 @@ export default function json_list(articleInfos, type, metin, arr) {
   const wordCount = articleBody.split(" ").length;
 
   //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
-  const readTime = Math.round((wordCount * 0.33) / 60);
+  const readOn = true;
+  const readTime = readOn ? Math.round((wordCount * 0.33) / 60) +"hesap" : 0;
 
   return {
     //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-export default function MotosikletKunye({firma, ulke, tip, motorHacmi, sifirYuz, max, agirlik, yakitKapasitesi, tuketim}) {    
+/* export default function MotosikletKunye({firma, ulke, tip, motorHacmi, sifirYuz, max, agirlik, yakitKapasitesi, tuketim}) {     */
+export default function MotosikletKunye({ozellikler}) {    
 
     const trToEngLower = (str) => {
       return str
@@ -20,14 +21,28 @@ export default function MotosikletKunye({firma, ulke, tip, motorHacmi, sifirYuz,
         .toLowerCase(); // Tüm metni küçük harfe dönüştür
     }
 
+    const ozelliklerArray = Object.entries(ozellikler);
+
     return (
     <aside className='kunye'>
-        <span><b>Firma: </b>
-        <span><Link href={"en-iyi-10-"+firma+"-motosiklet-modeli"} title={'En iyi 10 ' + firma + " motosiklet modeli"}>{firma}</Link></span>
+
+        {
+          ozelliklerArray.map(([anahtar, deger], index) => (
+            deger != "0" &&
+            <span key={index}>
+              <b>{anahtar}: </b>
+              <span>{deger}</span>
+              {index !== ozelliklerArray.length - 1 && <span className='fof'> | </span>}
+            </span>
+          ))
+        }
+
+        {/* <span><b>Firma: </b>
+        <span>{firma}</span>
         </span><span className='fof'> | </span>
 
         <span><b>Ülke: </b>
-        <span><Link href={"en-iyi-10-"+ulke+"-motosiklet-modeli"} title={'En iyi 10 ' + ulke + " motosiklet modeli"}>{ulke}</Link></span>
+        <span>{ulke}</span>
         </span><span className='fof'> | </span>
 
         <span><b>Tip: </b>
@@ -50,20 +65,23 @@ export default function MotosikletKunye({firma, ulke, tip, motorHacmi, sifirYuz,
 
         <span><b>Max Hız: </b>
         <span>{max} Km</span>
-        </span><span className='fof'> | </span>
+        </span>
+        <span className='fof'> | </span>
 
         <span><b>Ağırlık: </b>
-        <span><Link href={`en-hafif-10-${trToEngLower(tip)}-motosiklet`} title={`En hafif 10 ${tip} motosiklet`}>{agirlik} Kg</Link></span>
-        </span><span className='fof'> | </span>
-
-        <span><b>Depo kapasitesi: </b>
-        <span>{yakitKapasitesi} Litre</span>
-        </span><span className='fof'> | </span>
-
-        <span><b><Link href={`en-iyi-tuketime-sahip-10-${trToEngLower(tip)}-motosiklet`} title={`En iyi tüketime sahip 10 ${tip} motosiklet`}>Tüketim</Link>: </b>
-        <span>100 km'de {tuketim} litre</span>
+        <span>{agirlik}</span>
         </span>
+        <span className='fof'> | </span>
 
+        <span><b>Depo Kapasitesi: </b>
+        <span>{yakitKapasitesi} Litre</span>
+        </span>
+        <span className='fof'> | </span>
+
+        <span>
+        <b>Tüketim: </b>
+        <span>100 km'de {tuketim} litre</span>
+        </span> */}
     </aside>
   )
 }

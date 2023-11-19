@@ -1,40 +1,15 @@
--> yurtdışı numarası sadece whatsappdan mesajlaşmak için
-
-DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
-
--> erkeklerin-izlemesi-gereken-en-iyi-10-filmden yaklaşık 25 tane makale çıkıyor onları yaz
-38
-
-->>>>
-08.11.23
--> 1- pagination ile index oluşturmayı yap önce (otomatik oluşturmayı kapat)
-	kategori kısımlarına 
-	{
-		
-		-CategoryBox kategori sırası ve kategori seçimi düzenlenecek
-		-Pagination categori değiştiğinde değişecek
-		
-	} 
-V => görev tamamlandı, tamamlanma tarihi 9.11.23
+600cc naked motosiklet
 
 
--> 2- sayfaları getStaticProps ile oluşturmak için Json formatını getStaticProps içerisine aktar
-    revalidate süresini ayarla 
-V => görev tamamlandı, tamamlanma tarihi 11.11.23
-
--> 3- (2. işlem sonrasında node/readAll.js dosyasının doğru çalıştığından emin ol)
-V => doğru çalışıyor gibi gözüküyor, 11.11.23
-
-
--> 404 sayfasını düzenle.
-V => çalışıyor -> 17.11.23
 
 -> makale sayfasındaki önerileri ayarla
     - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
 -> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+-> ana sayfa mobil img'ler doğru gözükmüyor düzenle
 -> Yeni makaleler yazmaya devam et.
 
 -> getAllCategory.js ve diğer benzeri sayfalarda error 500 kodlarını düzenle
+->DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 -> Bu ayın 21'inde domain ve server'ı satın al ve internete yükle
 -> google search console'da hata var mı diye kontrol et
 -> günde minimum 1 makale yaz ve diğer proje üzerinde çalış

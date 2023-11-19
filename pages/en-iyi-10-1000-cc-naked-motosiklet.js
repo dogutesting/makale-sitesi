@@ -15,173 +15,193 @@ export async function getStaticProps() {
   const minAge = "18";
   const yazar = "I Will";
   const eklenmeTarihi = "2023-10-03T18:07:00+03:00";
-  const degistirilmeTarihi = "2023-10-03T18:07:00+03:00";
+  const degistirilmeTarihi = "2023-11-19T01:13:00+03:00";
   const addDate = "03.10.23";
 
   const jsonContentArray = [
     {
-    "num": "10",
-    "url": `https://enonlar.com/${url}#bolum-10`,
-    "name": "Kawasaki Z1000",
-    "image": `/images/motosiklet/kawasaki_z1000.jpg`,
-    "firma": "Kawasaki",
-    "tip": "Naked",
-    "motorHacmi": "1043",
-    "sifirYuz": "3.4",
-    "max": "258",
-    "tuketim": "6.4",
-    "agirlik": "221",
-    "ulke": "Japonya",
-    "yakitKapasitesi": "17",
-    "paragraf": "Japonya'nın güçlü motosiklet üreticilerinden Kawasaki'nin bu agresif tasarımlı naked modeli, günlük sürüşler kadar heyecanlı sürüşler için de ideal. Z1000, sert ve atak bir yapıya sahip. 1043 cc'lik motoru ile düşük devirden itibaren güçlü tork sunuyor. Gidonunun ve gaz tepkilerinin doğru zamanlama ve hassasiyeti, sürücüsüne yüksek kontrol sağlıyor. Yol tutuşu ve viraj kabiliyeti, sportif sürüşler için oldukça tatminkar. Estetik ve aerodinamik tasarımı sayesinde, Z1000 sürücüsüne sadece performans değil, aynı zamanda stil de sunuyor. Kawasaki Z1000, güç ve estetiği bir araya getiren bir naked motosiklet örneği."
+      "num": "10",
+      "url": "https://enonlar.com/${url}#bolum-10",
+      "name": "Kawasaki Z1000",
+      "image": "/images/motosiklet/kawasaki_z1000.jpg",
+      "ozellikler": {
+        "Ülke": "Japonya",
+        "Firma": "Kawasaki",
+        "Tip": "Naked",
+        "Motor Hacmi": "1043 cc",
+        "Sıfır Yüz": "3.4 s",
+        "Max Hız": "258 km/s",
+        "Tüketim": "6.4 Litre/100 km",
+        "Ağırlık": "221 kg",
+        "Yakıt Kapasitesi": "17 Litre"
+      },
+      "paragraf": "Japonya'nın güçlü motosiklet üreticilerinden Kawasaki'nin bu agresif tasarımlı naked modeli, günlük sürüşler kadar heyecanlı sürüşler için de ideal. Z1000, sert ve atak bir yapıya sahip. 1043 cc'lik motoru ile düşük devirden itibaren güçlü tork sunuyor. Gidonunun ve gaz tepkilerinin doğru zamanlama ve hassasiyeti, sürücüsüne yüksek kontrol sağlıyor. Yol tutuşu ve viraj kabiliyeti, sportif sürüşler için oldukça tatminkar. Estetik ve aerodinamik tasarımı sayesinde, Z1000 sürücüsüne sadece performans değil, aynı zamanda stil de sunuyor. Kawasaki Z1000, güç ve estetiği bir araya getiren bir naked motosiklet örneği."
     },
     {
       "num": "9",
-      "url": `https://enonlar.com/${url}#bolum-9`,
+      "url": "https://enonlar.com/${url}#bolum-9",
       "name": "Aprilia Tuono V4 1100 RR",
-      "image": `/images/motosiklet/aprilia_tuono_v4_1100_rr.png`,
-      "firma": "Aprilia",
-      "tip": "Naked",
-      "motorHacmi": "1077",
-      "sifirYuz": "3.3",
-      "max": "250",
-      "tuketim": "6.1",
-      "agirlik": "209",
-      "ulke": "İtalya",
-      "yakitKapasitesi": "18.5",
+      "image": "/images/motosiklet/aprilia_tuono_v4_1100_rr.png",
+      "ozellikler": {
+        "Ülke": "İtalya",
+        "Firma": "Aprilia",
+        "Tip": "Naked",
+        "Motor Hacmi": "1077 cc",
+        "Sıfır Yüz": "3.3 s",
+        "Max Hız": "250 km/s",
+        "Tüketim": "6.1 Litre/100 km",
+        "Ağırlık": "209 kg",
+        "Yakıt Kapasitesi": "18.5 Litre"
+      },
       "paragraf": "İtalyan üretici Aprilia'nın başyapıtlarından biri olan Tuono V4 1100 RR, sıradışı bir performans ve çarpıcı bir tasarım sunuyor. Motorun V4 motor konfigürasyonu, torkun geniş bir devir aralığında dağılmasını sağlayarak sürücüsüne eşsiz bir hızlanma ve tepki veriyor. Aprilia'nın gelişmiş elektronik sürüş destek sistemleri, bu motosikleti her seviyeden sürücü için dostane ve güvenli kılıyor. Yol tutuşu ve fren performansı, markanın yarış kökenlerini yansıtacak şekilde üst düzeyde."
-    },  
-    {
-    "num": "8",
-    "url": `https://enonlar.com/${url}#bolum-8`,
-    "name": "Ducati Monster 1200",
-    "image": `/images/motosiklet/ducati_monster_1200.png`,
-    "firma": "Ducati",
-    "tip": "Naked",
-    "motorHacmi": "1198",
-    "sifirYuz": "3.2",
-    "max": "250",
-    "tuketim": "5.9",
-    "agirlik": "209",
-    "ulke": "İtalya",
-    "yakitKapasitesi": "16.5",
-    "paragraf": "İtalyan estetiği ve mühendisliği ile öne çıkan Ducati Monster 1200, hem günlük sürüşler hem de sportif kullanım için uygun bir seçenek. V-twin motoru yüksek tork ve güç sunarken, yol tutuşu ve viraj kabiliyeti de üst düzey. Gidon ve gaz tepkisi oldukça hassas, bu da sürücüye tam kontrol sağlar. Sert süspansiyon sistemi kötü yol koşullarında konforu biraz düşürse de, genel olarak Ducati Monster 1200, performans ve tasarımı bir araya getiren başarılı bir model."
     },
     {
-    "num": "7",
-    "url": `https://enonlar.com/${url}#bolum-7`,
-    "name": "Yamaha MT-10",
-    "image": `/images/motosiklet/yamaha_mt_10.png`,
-    "firma": "Yamaha",
-    "tip": "Naked",
-    "motorHacmi": "998",
-    "sifirYuz": "3.1",
-    "max": "250",
-    "tuketim": "6.1",
-    "agirlik": "210",
-    "ulke": "Japonya",
-    "yakitKapasitesi": "17",
-    "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden Yamaha'nın MT-10 modeli, agresif tasarımı ve yüksek performansı ile dikkat çekiyor. Crossplane kranklı dört silindirli motoru, güçlü tork ve hızlı hızlanma sunarken, elektronik kontrol sistemleri ve modlar sayesinde sürücüsüne esneklik ve kontrol sağlıyor. Yol tutuşu ve fren performansı, motorun bu segmentteki rakipleri arasında öne çıkmasını sağlıyor. Gidon ve gaz tepkisi hassas, bu da sürücüye mükemmel bir kontrol ve yanıt veriyor. Yamaha MT-10, her türlü yolda ve koşulda güvenli ve eğlenceli bir sürüş deneyimi sunuyor."
+      "num": "8",
+      "url": "https://enonlar.com/${url}#bolum-8",
+      "name": "Ducati Monster 1200",
+      "image": "/images/motosiklet/ducati_monster_1200.png",
+      "ozellikler": {
+        "Ülke": "İtalya",
+        "Firma": "Ducati",
+        "Tip": "Naked",
+        "Motor Hacmi": "1198 cc",
+        "Sıfır Yüz": "3.2 s",
+        "Max Hız": "250 km/s",
+        "Tüketim": "5.9 Litre/100 km",
+        "Ağırlık": "209 kg",
+        "Yakıt Kapasitesi": "16.5 Litre"
+      },
+      "paragraf": "İtalyan estetiği ve mühendisliği ile öne çıkan Ducati Monster 1200, hem günlük sürüşler hem de sportif kullanım için uygun bir seçenek. V-twin motoru yüksek tork ve güç sunarken, yol tutuşu ve viraj kabiliyeti de üst düzey. Gidon ve gaz tepkisi oldukça hassas, bu da sürücüye tam kontrol sağlar. Sert süspansiyon sistemi kötü yol koşullarında konforu biraz düşürse de, genel olarak Ducati Monster 1200, performans ve tasarımı bir araya getiren başarılı bir model."
     },
     {
-    "num": "6",
-    "url": `https://enonlar.com/${url}#bolum-6`,
-    "name": "KTM 1290 Super Duke R",
-    "image": `/images/motosiklet/ktm_1290_super_duke_r.png`,
-    "firma": "KTM",
-    "tip": "Naked",
-    "motorHacmi": "1301",
-    "sifirYuz": "2.8",
-    "max": "280",
-    "tuketim": "5.9",
-    "agirlik": "189",
-    "ulke": "Avusturya",
-    "yakitKapasitesi": "18",
-    "paragraf": "Avusturya'nın sert ve agresif motosiklet üreticisi KTM, 1290 Super Duke R ile agresifliğini sergiliyor. Büyük hacimli motoru ve devasa torku ile her türlü hızlanmayı ve manevrayı rahatlıkla gerçekleştirebilirsiniz. Motosiklet, elektronik güvenlik ve sürüş yardım sistemleri ile donatılmış, bu da sürücüye daha fazla kontrol ve güvenlik sunuyor. Yol tutuşu ve fren performansı, bu segmentin önde gelenlerinden. Gidon ve gaz tepkisi oldukça hassas, bu da dinamik sürüşleri daha eğlenceli ve kontrol edilebilir kılıyor. KTM 1290 Super Duke R, performansı ve agresif tasarımı ile tam bir adrenalin makinesi."
+      "num": "7",
+      "url": "https://enonlar.com/${url}#bolum-7",
+      "name": "Yamaha MT-10",
+      "image": "/images/motosiklet/yamaha_mt_10.png",
+      "ozellikler": {
+        "Ülke": "Japonya",
+        "Firma": "Yamaha",
+        "Tip": "Naked",
+        "Motor Hacmi": "998 cc",
+        "Sıfır Yüz": "3.1 s",
+        "Max Hız": "250 km/s",
+        "Tüketim": "6.1 Litre/100 km",
+        "Ağırlık": "210 kg",
+        "Yakıt Kapasitesi": "17 Litre"
+      },
+      "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden Yamaha'nın MT-10 modeli, agresif tasarımı ve yüksek performansı ile dikkat çekiyor. Crossplane kranklı dört silindirli motoru, güçlü tork ve hızlı hızlanma sunarken, elektronik kontrol sistemleri ve modlar sayesinde sürücüsüne esneklik ve kontrol sağlıyor. Yol tutuşu ve fren performansı, motorun bu segmentteki rakipleri arasında öne çıkmasını sağlıyor. Gidon ve gaz tepkisi hassas, bu da sürücüye mükemmel bir kontrol ve yanıt veriyor. Yamaha MT-10, her türlü yolda ve koşulda güvenli ve eğlenceli bir sürüş deneyimi sunuyor."
     },
     {
-    "num": "5",
-    "url": `https://enonlar.com/${url}#bolum-5`,
-    "name": "Honda CB1000R",
-    "image": `/images/motosiklet/honda_cb1000r.png`,
-    "firma": "Honda",
-    "tip": "Naked",
-    "motorHacmi": "998",
-    "sifirYuz": "3.5",
-    "max": "234",
-    "tuketim": "6.2",
-    "agirlik": "212",
-    "ulke": "Japonya",
-    "yakitKapasitesi": "16.2",
-    "paragraf": "Japonya'nın köklü motosiklet üreticisi Honda'nın CB1000R modeli, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Dört silindirli motoru, güçlü ve lineer bir güç dağılımı sağlarken, yol tutuşu ve fren performansı da sınıf standartlarının üzerinde. Gidon ve gaz tepkisi son derece dengeli, bu sayede motoru kontrol etmek oldukça kolay. Honda CB1000R, şehir içinde veya uzun yolda, hem konforlu hem de dinamik bir sürüş deneyimi sunar. Ayrıca, motosikletin LED farları ve dijital gösterge paneli gibi modern özellikleri, kullanıcısına günümüz teknolojisini sunuyor."
+      "num": "6",
+      "url": "https://enonlar.com/${url}#bolum-6",
+      "name": "KTM 1290 Super Duke R",
+      "image": "/images/motosiklet/ktm_1290_super_duke_r.png",
+      "ozellikler": {
+        "Ülke": "Avusturya",
+        "Firma": "KTM",
+        "Tip": "Naked",
+        "Motor Hacmi": "1301 cc",
+        "Sıfır Yüz": "2.8 s",
+        "Max Hız": "280 km/s",
+        "Tüketim": "5.9 Litre/100 km",
+        "Ağırlık": "189 kg",
+        "Yakıt Kapasitesi": "18 Litre"
+      },
+      "paragraf": "Avusturya'nın sert ve agresif motosiklet üreticisi KTM, 1290 Super Duke R ile agresifliğini sergiliyor. Büyük hacimli motoru ve devasa torku ile her türlü hızlanmayı ve manevrayı rahatlıkla gerçekleştirebilirsiniz. Motosiklet, elektronik güvenlik ve sürüş yardım sistemleri ile donatılmış, bu da sürücüye daha fazla kontrol ve güvenlik sunuyor. Yol tutuşu ve fren performansı, bu segmentin önde gelenlerinden. Gidon ve gaz tepkisi oldukça hassas, bu da dinamik sürüşleri daha eğlenceli ve kontrol edilebilir kılıyor. KTM 1290 Super Duke R, performansı ve agresif tasarımı ile tam bir adrenalin makinesi."
     },
     {
-    "num": "4",
-    "url": `https://enonlar.com/${url}#bolum-4`,
-    "name": "Suzuki GSX-S1000",
-    "image": `/images/motosiklet/suzuki_gsx_s1000.png`,
-    "firma": "Suzuki",
-    "tip": "Naked",
-    "motorHacmi": "999",
-    "sifirYuz": "3.4",
-    "max": "241",
-    "tuketim": "5.9",
-    "agirlik": "209",
-    "ulke": "Japonya",
-    "yakitKapasitesi": "19",
-    "paragraf": "Japonya'nın tecrübeli motosiklet üreticisi Suzuki'nin GSX-S1000 modeli, agresif tasarımı ve yüksek performansı ile öne çıkar. Bu model, dört silindirli motoru ile süratli bir şekilde hızlanırken, yol tutuşu ve frenleme performansı da kullanıcılarına güven veriyor. Gidon tepkisi dengeli ve gaz tepkisi hassas, bu da sürücülerin motoru daha iyi kontrol etmelerini sağlıyor. GSX-S1000, virajlarda istikrarlı bir performans sunarken, süspansiyon sistemi de hem konforlu hem de sert bir sürüş deneyimi sunuyor. Suzuki GSX-S1000, güçlü motoru ve sportif tasarımı ile naked motosiklet segmentinde kendine sağlam bir yer buluyor."
-    },   
-    {
-    "num": "3",
-    "url": `https://enonlar.com/${url}#bolum-3`,
-    "name": "BMW S1000R",
-    "image": `/images/motosiklet/bmw_s1000r.png`,
-    "firma": "BMW",
-    "tip": "Naked",
-    "motorHacmi": "999",
-    "sifirYuz": "3.1",
-    "max": "260",
-    "tuketim": "6.7",
-    "agirlik": "205",
-    "ulke": "Almanya",
-    "yakitKapasitesi": "16.5",
-    "paragraf": "Alman mühendisliğinin bir simgesi olan BMW'nin S1000R modeli, yüksek performansı ve ince tasarım detayları ile dikkat çekiyor. Motosiklet, güçlü motoru ve mükemmel yol tutuşu ile sürücülerine tam bir sürüş deneyimi sunuyor. Gaz tepkisi hassas ve motorun gücü, hızlanma esnasında sürücüye etkileyici bir tork sağlıyor. S1000R, virajlarda da oldukça başarılı ve güven veriyor. Süspansiyon sistemi, sürücünün her türlü yol koşulunda rahat ve kontrolü bir sürüş deneyimi yaşamasını sağlıyor. BMW S1000R, premium bir naked motosiklet deneyimi arayan sürücüler için ideal bir tercih."
+      "num": "5",
+      "url": "https://enonlar.com/${url}#bolum-5",
+      "name": "Honda CB1000R",
+      "image": "/images/motosiklet/honda_cb1000r.png",
+      "ozellikler": {
+        "Ülke": "Japonya",
+        "Firma": "Honda",
+        "Tip": "Naked",
+        "Motor Hacmi": "998 cc",
+        "Sıfır Yüz": "3.5 s",
+        "Max Hız": "234 km/s",
+        "Tüketim": "6.2 Litre/100 km",
+        "Ağırlık": "212 kg",
+        "Yakıt Kapasitesi": "16.2 Litre"
+      },
+      "paragraf": "Japonya'nın köklü motosiklet üreticisi Honda'nın CB1000R modeli, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Dört silindirli motoru, güçlü ve lineer bir güç dağılımı sağlarken, yol tutuşu ve fren performansı da sınıf standartlarının üzerinde. Gidon ve gaz tepkisi son derece dengeli, bu sayede motoru kontrol etmek oldukça kolay. Honda CB1000R, şehir içinde veya uzun yolda, hem konforlu hem de dinamik bir sürüş deneyimi sunar. Ayrıca, motosikletin LED farları ve dijital gösterge paneli gibi modern özellikleri, kullanıcısına günümüz teknolojisini sunuyor."
     },
     {
-    "num": "2",
-    "url": `https://enonlar.com/${url}#bolum-2`,
-    "name": "MV Agusta Brutale 1000 RR",
-    "image": `/images/motosiklet/mv_agusta_brutale_1000rr.png`,
-    "firma": "MV Agusta",
-    "tip": "Naked",
-    "motorHacmi": "998",
-    "sifirYuz": "3.1",
-    "max": "300",
-    "tuketim": "6.4",
-    "agirlik": "186",
-    "ulke": "İtalya",
-    "yakitKapasitesi": "16",
-    "paragraf": "İtalyan zarafeti ve mühendisliği, MV Agusta Brutale 1000 RR'de kendini gösteriyor. Bu motosiklet, inovatif aerodinamik tasarımı ve 208 beygir gücündeki muazzam motoru ile sınıfındaki diğer motosikletlerden ayrılıyor. Sürücüsüne sadece yüksek performans değil, aynı zamanda konfor ve kolay kullanım sunuyor. Elektronik kontrol sistemleri ve tamamen ayarlanabilir süspansiyon, her türlü yol koşulunda mükemmel bir sürüş deneyimi sağlıyor."
-    },  
+      "num": "4",
+      "url": "https://enonlar.com/${url}#bolum-4",
+      "name": "Suzuki GSX-S1000",
+      "image": "/images/motosiklet/suzuki_gsx_s1000.png",
+      "ozellikler": {
+        "Ülke": "Japonya",
+        "Firma": "Suzuki",
+        "Tip": "Naked",
+        "Motor Hacmi": "999 cc",
+        "Sıfır Yüz": "3.4 s",
+        "Max Hız": "241 km/s",
+        "Tüketim": "5.9 Litre/100 km",
+        "Ağırlık": "209 kg",
+        "Yakıt Kapasitesi": "19 Litre"
+      },
+      "paragraf": "Japonya'nın tecrübeli motosiklet üreticisi Suzuki'nin GSX-S1000 modeli, agresif tasarımı ve yüksek performansı ile öne çıkar. Bu model, dört silindirli motoru ile süratli bir şekilde hızlanırken, yol tutuşu ve frenleme performansı da kullanıcılarına güven veriyor. Gidon tepkisi dengeli ve gaz tepkisi hassas, bu da sürücülerin motoru daha iyi kontrol etmelerini sağlıyor. GSX-S1000, virajlarda istikrarlı bir performans sunarken, süspansiyon sistemi de hem konforlu hem de sert bir sürüş deneyimi sunuyor. Suzuki GSX-S1000, güçlü motoru ve sportif tasarımı ile naked motosiklet segmentinde kendine sağlam bir yer buluyor."
+    },
     {
-    "num": "1",
-    "url": `https://enonlar.com/${url}#bolum-1`,
-    "name": "Ducati Streetfighter V4",
-    "image": `/images/motosiklet/ducati_streetfighter_v4.png`,
-    "firma": "Ducati",
-    "tip": "Naked",
-    "motorHacmi": "1103",
-    "sifirYuz": "2.9",
-    "max": "290",
-    "tuketim": "6.7",
-    "agirlik": "201",
-    "ulke": "İtalya",
-    "yakitKapasitesi": "16",
-    "paragraf": "İtalya'nın prestijli motosiklet üreticisi Ducati'nin bu eseri, aerodinamik kanatları ve elektronik süspansiyon sistemleri ile öne çıkıyor. Streetfighter V4, sadece sokaklarda değil, pistlerde de kendini kanıtlıyor. Sürücüler, etkileyici bir güç, mükemmel yol tutuşu ve adrenalin dolu bir sürüş deneyimi elde ediyorlar. Ayrıca, Ducati'nin öncü elektronik kontrol sistemleri sayesinde, bu motosiklet sürüş güvenliğini ve kontrolünü artırıyor. Agresif tasarımı ve yüksek kaliteli bileşenleri ile Streetfighter V4, sınıfının en iyileri arasında kendine sağlam bir yer buluyor."
-  }
+      "num": "3",
+      "url": "https://enonlar.com/${url}#bolum-3",
+      "name": "BMW S1000R",
+      "image": "/images/motosiklet/bmw_s1000r.png",
+      "ozellikler": {
+        "Ülke": "Almanya",
+        "Firma": "BMW",
+        "Tip": "Naked",
+        "Motor Hacmi": "999 cc",
+        "Sıfır Yüz": "3.1 s",
+        "Max Hız": "260 km/s",
+        "Tüketim": "6.7 Litre/100 km",
+        "Ağırlık": "205 kg",
+        "Yakıt Kapasitesi": "16.5 Litre"
+      },
+      "paragraf": "Alman mühendisliğinin bir simgesi olan BMW'nin S1000R modeli, yüksek performansı ve ince tasarım detayları ile dikkat çekiyor. Motosiklet, güçlü motoru ve mükemmel yol tutuşu ile sürücülerine tam bir sürüş deneyimi sunuyor. Gaz tepkisi hassas ve motorun gücü, hızlanma esnasında sürücüye etkileyici bir tork sağlıyor. S1000R, virajlarda da oldukça başarılı ve güven veriyor. Süspansiyon sistemi, sürücünün her türlü yol koşulunda rahat ve kontrolü bir sürüş deneyimi yaşamasını sağlıyor. BMW S1000R, premium bir naked motosiklet deneyimi arayan sürücüler için ideal bir tercih."
+    },
+    {
+      "num": "2",
+      "url": "https://enonlar.com/${url}#bolum-2",
+      "name": "MV Agusta Brutale 1000 RR",
+      "image": "/images/motosiklet/mv_agusta_brutale_1000rr.png",
+      "ozellikler": {
+        "Ülke": "İtalya",
+        "Firma": "MV Agusta",
+        "Tip": "Naked",
+        "Motor Hacmi": "998 cc",
+        "Sıfır Yüz": "3.1 s",
+        "Max Hız": "300 km/s",
+        "Tüketim": "6.4 Litre/100 km",
+        "Ağırlık": "186 kg",
+        "Yakıt Kapasitesi": "16 Litre"
+      },
+      "paragraf": "İtalyan zarafeti ve mühendisliği, MV Agusta Brutale 1000 RR'de kendini gösteriyor. Bu motosiklet, inovatif aerodinamik tasarımı ve 208 beygir gücündeki muazzam motoru ile sınıfındaki diğer motosikletlerden ayrılıyor. Sürücüsüne sadece yüksek performans değil, aynı zamanda konfor ve kolay kullanım sunuyor. Elektronik kontrol sistemleri ve tamamen ayarlanabilir süspansiyon, her türlü yol koşulunda mükemmel bir sürüş deneyimi sağlıyor."
+    },
+    {
+      "num": "1",
+      "url": "https://enonlar.com/${url}#bolum-1",
+      "name": "Ducati Streetfighter V4",
+      "image": "/images/motosiklet/ducati_streetfighter_v4.png",
+      "ozellikler": {
+        "Ülke": "İtalya",
+        "Firma": "Ducati",
+        "Tip": "Naked",
+        "Motor Hacmi": "1103 cc",
+        "Sıfır Yüz": "2.9 s",
+        "Max Hız": "290 km/s",
+        "Tüketim": "6.7 Litre/100 km",
+        "Ağırlık": "201 kg",
+        "Yakıt Kapasitesi": "16 Litre"
+      },
+      "paragraf": "İtalya'nın prestijli motosiklet üreticisi Ducati'nin bu eseri, aerodinamik kanatları ve elektronik süspansiyon sistemleri ile öne çıkıyor. Streetfighter V4, sadece sokaklarda değil, pistlerde de kendini kanıtlıyor. Sürücüler, etkileyici bir güç, mükemmel yol tutuşu ve adrenalin dolu bir sürüş deneyimi elde ediyorlar. Ayrıca, Ducati'nin öncü elektronik kontrol sistemleri sayesinde, bu motosiklet sürüş güvenliğini ve kontrolünü artırıyor. Agresif tasarımı ve yüksek kaliteli bileşenleri ile Streetfighter V4, sınıfının en iyileri arasında kendine sağlam bir yer buluyor."
+    }
   ];
 
-  const ana_resim = jsonContentArray[0].image;
+  const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-1000-cc-naked-motosiklet.png";
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
   
   const jsonList = moviesAndSeriesJson(articleInfos,

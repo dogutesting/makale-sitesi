@@ -13,21 +13,15 @@ export default function Ens_motosiklet({jsonContentArray}) {
       items.push(
         <section key={index}>
         <En
-              pri={index == 0 ? true : false}
+              /* pri={index == 0 ? true : false} */
+              pri={false}
               baslik={item.num + " - " + item.name}
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
               enid={"bolum-"+item.num}
               supportWebp={supportWebp}>
-              <Motosiklet_kunye firma={item.firma}
-              ulke={item.ulke}
-              tip={item.tip}
-              motorHacmi={item.motorHacmi}
-              sifirYuz={item.sifirYuz}
-              max={item.max}
-              agirlik={item.agirlik}
-              yakitKapasitesi={item.yakitKapasitesi}
-              tuketim={item.tuketim}
+              <Motosiklet_kunye
+              ozellikler={item.ozellikler}
               />
               <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>          

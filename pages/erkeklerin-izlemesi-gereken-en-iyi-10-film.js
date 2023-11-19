@@ -15,7 +15,7 @@ export async function getStaticProps() {
   const minAge = "18";
   const yazar = "I Will";
   const eklenmeTarihi = "2023-09-12T17:20:00+03:00";
-  const degistirilmeTarihi = "2023-09-12T17:20:00+03:00";
+  const degistirilmeTarihi = "2023-11-19T01:13:00+03:00";
   const addDate = "12.09.23";
 
   const jsonContentArray = [
@@ -171,7 +171,7 @@ export async function getStaticProps() {
     }
   ];
 
-  const ana_resim = jsonContentArray[0].image;
+  const ana_resim = "/images/ana_gorseller/enonlar-erkeklerin-izlemesi-gereken-en-iyi-10-film.png";
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
   
   const jsonList = moviesAndSeriesJson(articleInfos,

@@ -31,7 +31,32 @@ export default function Dizi_kunye({oyuncular, yonetmen, kategoris, bolumSayisi,
 
     return (
     <aside className='kunye'>
-        <span><b>Oyuncular: </b>
+      <span><b>Oyuncular: </b>
+          <ul>
+            {
+              oyuncular.map((item, index, arr) => {
+                if(index == arr.length -1) { return (<li key={index}>{item}</li>) }
+                else { return (<li key={index}>{item} - </li>)}
+              })
+            }
+          </ul>
+        </span><span className='fof'> | </span>
+
+        <span><b>Yönetmen:</b> {yonetmen}</span> <span className='fof'> | </span>
+        <span><b>Kategori:</b> <ul>{
+            kategoris.map((item, index, arr) => {
+              if(index == arr.length -1) { return (<li key={index}><Link title={"En iyi 10 " + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link></li>) }
+              else { return (<li key={index}><Link title={"En iyi 10 " + item + " filmi"} href={"/en-iyi-10-"+trToEngLower(item)+"-filmi"}>{item}</Link><b>/</b></li>)}
+            })
+        }</ul>
+        </span> <span className='fof'> | </span>
+        <span><b>Bölüm Sayısı:</b> {bolumSayisi}</span> <span className='fof'> | </span>
+        
+        <span><b>Yapım Yılı: </b>{yil}</span> <span className='fof'> | </span>
+        <span><b>imdb puanı:</b> {puan}</span> <span className='fof'> | </span>
+
+        <span><b>metascore puanı:</b> {puan2}/100</span>
+        {/* <span><b>Oyuncular: </b>
           <ul>
             {
               oyuncular.map((item, index, arr) => {
@@ -55,7 +80,7 @@ export default function Dizi_kunye({oyuncular, yonetmen, kategoris, bolumSayisi,
         <span><b>Yapım Yılı: </b><Link title={yil+" yılının en iyi 10 filmi"} href={yil+"-yilinin-en-iyi-10-filmi"}> {yil}</Link></span> <span className='fof'> | </span>
         <span><b><Link title="imdb puanı en yüksek 10 film" href="imdb-puani-en-yuksek-10-film">imdb puanı:</Link></b> {puan}</span> <span className='fof'> | </span>
 
-        <span><b><Link title="metascore puanı en yüksek 10 film" href="metascore-puani-en-yuksek-10-film">metascore puanı:</Link></b> {puan2}/100</span>
+        <span><b><Link title="metascore puanı en yüksek 10 film" href="metascore-puani-en-yuksek-10-film">metascore puanı:</Link></b> {puan2}/100</span> */}
     </aside>
   )
 }
