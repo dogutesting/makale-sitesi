@@ -1,11 +1,11 @@
 600cc naked motosiklet
 
-
-
 -> makale sayfasındaki önerileri ayarla
     - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
 -> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
 -> ana sayfa mobil img'ler doğru gözükmüyor düzenle
+
+
 -> Yeni makaleler yazmaya devam et.
 
 -> getAllCategory.js ve diğer benzeri sayfalarda error 500 kodlarını düzenle

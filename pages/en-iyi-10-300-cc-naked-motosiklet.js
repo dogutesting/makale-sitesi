@@ -19,23 +19,24 @@ export async function getStaticProps() {
   const addDate = "03.10.23";
 
   const jsonContentArray = [
+    //{"name": "CFMoto 300NK", "firma”: “CFMoto”, “tip”: “Naked”, “motorHacmi”: “292.4”, “sifirYuz”: “6.5”, “max”: “128”, “tuketim”: “4.2”, “agirlik”: “151”, “ulke”: “Çin”, “yakitKapasitesi”: “12.5”}
     {
       "num": "10",
       "url": "https://enonlar.com/${url}#bolum-10",
       "name": "CFMoto 300NK",
       "image": "/images/motosiklet/cfmoto_300nk.png",
       "ozellikler": {
+          "Ülke": "Çin",
           "Firma": "CFMoto",
           "Tip": "Naked",
-          "Motor Hacmi": "300 cc",
-          "Sıfır Yüz": "3.2 s",
-          "Max": "150 km/s",
-          "Tüketim": "3.8 Litre/100 km",
+          "Motor Hacmi": "292 cc",
+          "Sıfır Yüz": "6.5 s",
+          "Max": "128 km/s",
+          "Tüketim": "4.2 Litre/100 km",
           "Ağırlık": "151 kg",
-          "Ülke": "Çin",
           "Yakıt Kapasitesi": "12.5 Litre"
       },
-      "paragraf": ""
+      "paragraf": "Çinli üretici CFMoto'nun 300NK modeli, uygun fiyatlı ve stil sahibi bir naked motosiklet arayanlar için ideal bir seçenek. Sade ve modern bir tasarım anlayışını benimsemiş. Dik sürüş pozisyonu ve hafif yapısı sayesinde, şehir içinde rahat bir sürüş deneyimi sunuyor. 300NK, performans ve konfor arasında iyi bir denge kurarak, yeni başlayanlar için güvenilir ve ulaşılabilir bir tercih oluşturuyor."
   },
   {
       "num": "9",
@@ -43,6 +44,7 @@ export async function getStaticProps() {
       "name": "Husqvarna Vitpilen 401",
       "image": "/images/motosiklet/husqvarna_vitpilen_401.png",
       "ozellikler": {
+          "Ülke": "İsveç",
           "Firma": "Husqvarna",
           "Tip": "Naked",
           "Motor Hacmi": "373 cc",
@@ -50,7 +52,6 @@ export async function getStaticProps() {
           "Max": "145 km/s",
           "Tüketim": "3.5 Litre/100 km",
           "Ağırlık": "157 kg",
-          "Ülke": "İsveç",
           "Yakıt Kapasitesi": "9.5 Litre"
       },
       "paragraf": "İsveç kökenli Husqvarna'nın Vitpilen 401 modeli, minimalist ve modern tasarımı ile dikkat çeker. Hafif ve kompakt yapıda olan bu motosiklet, şehir içi kullanım için ideal. Güçlü motoru ve dikkat çekici hızlanması, sürüş deneyimini eğlenceli hale getiriyor. Gidon ve gaz tepkileri, sürücüyü tatmin edecek düzeyde. Sürüş pozisyonu sportif ve yol tutuşu güven verici. Fren performansı ve süspansiyon sistemi, sınıfının beklentilerini karşılıyor. Genel olarak, Vitpilen 401, şık görünümü ve performansı ile naked sınıfında farklı bir seçenek sunuyor."

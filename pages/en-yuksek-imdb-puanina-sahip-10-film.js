@@ -7,7 +7,14 @@ export async function getStaticProps() {
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
-  const metin = "Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, ruhumuza dokunur ve bizi derinden etkiler. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.";
+
+  const metin = `Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, 
+  ruhumuza dokunur ve bizi derinden etkiler. Onların bizdeki değeri farklıdır. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, 
+  sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. 
+  IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, 
+  izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. 
+  İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.`;
+
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 
   const okunmaSuresi = "3";

@@ -22,20 +22,20 @@ export async function getStaticProps() {
     {
       "num": "10",
       "url": "https://enonlar.com/${url}#bolum-10",
-      "name": "Triumph Daytona 1050",
-      "image": "/images/motosiklet/triumph_daytona_1050.png",
+      "name": "Yamaha YZF-R7",
+      "image": "/images/motosiklet/yamaha_yzf_r7.jpg",
       "ozellikler": {
-        "Ülke": "İngiltere",
-        "Firma": "Triumph",
+        "Ülke": "Japonya",
+        "Firma": "Yamaha",
         "Tip": "Super Sport",
-        "Motor Hacmi": "1050 cc",
-        "Sıfır Yüz": "2.9 s",
-        "Max Hız": "280 km/s",
-        "Tüketim": "5.8 Litre/100 km",
-        "Ağırlık": "186 kg",
-        "Yakıt Kapasitesi": "18 Litre"
+        "Motor Hacmi": "698 cc",
+        "Sıfır Yüz": "3.1 s",
+        "Max Hız": "241 km/s",
+        "Tüketim": "5.9 Litre/100 km",
+        "Ağırlık": "188 kg",
+        "Yakıt Kapasitesi": "13 Litre"
       },
-      "paragraf": "İngiltere'nin süper spor mirası Triumph Daytona 1050, performans ve konforu bir arada sunar. 1050cc motoru ile güçlü bir hızlanma sağlarken, süspansiyon sistemi ve ergonomik yapısı, sürücüsüne konforlu bir sürüş deneyimi sunar. Yakıt kapasitesi ve tüketimi dengeli, fakat bazı sürücüler için gösterge panelinin modernize edilmesi gerekebilir. Yol tutuşu ve fren performansı güven verici, fakat sele konforu uzun sürüşler için ideal olmayabilir. Daytona 1050, hem günlük kullanım hem de sportif sürüşler için uygun bir seçenektir."
+      "paragraf": "İlk motosikletimiz 698cc'lik YZF-R7, evet, 1000cc değil ama 1000cc'liklerin arasında olmayı hak eden bir motosiklet. YZF-R7, Yamaha'nın süper spor segmentine yeni bir soluk getiren, yüksek performans ve mükemmel yol tutuşuyla dikkat çekiyor. Agresif ve aerodinamik tasarımı, hafifliği ve çevikliği ile öne çıkan R7, kullanıcılarına konforlu bir sürüş deneyimi sunuyor. Hızlanma kapasitesi ve motorun tepkime hızı, hem şehir içinde hem de açık yollarda etkileyici bir performans sergiliyor. YZF-R7, yüksek manevra kabiliyeti ve sürücü dostu ergonomisi ile deneyimli sürücüler için ideal bir seçenek."
     },
     {
       "num": "9",
