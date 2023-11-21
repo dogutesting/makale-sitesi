@@ -1,5 +1,7 @@
 600cc naked motosiklet
 
+google analityc
+
 -> makale sayfasındaki önerileri ayarla
     - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
 -> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)

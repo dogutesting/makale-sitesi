@@ -1,26 +1,35 @@
 /* Paragraf sonunda benzer makaleleri ve alakalı içerikleri gösteren kod */
 
 import ArticleBox from '@/components/mini_components/icerik_kutusu';
+import { useAppContext } from '@/context/ContextProvider';
 
 export default function OtherContents({kullaniciID}) {
 
-  //const GetArticles() {
-    //! Gereklilikler
+  const { userID } = useAppContext();
 
-    //1-kullanıcının id'si local storage'de saklanmalı
-      //tabloda böyle bir id var mı diye kontrol edilip ona bir id atanacak
-      //? useAppContext
-
-    //2-kullanıcının tıkladığı bütün linkler bu id ile tabloya eklenmeli
-      //? main click
-
-    //x- kullanıcının makale sayfalarında kaldığı zamanlar kayıt altına alınabilir
-      //* örnek: erkeklerin-izlemesi-gereken-filmler sayfası 5dk ve o 5dk sonra ayrıldı
-      //* örnek: en-yuksek-imdb-puanina-sahip-10-dizi sayfası 5dk ve o 1dk sonra ayrıldı
-    
-    //3- OtherContents içerisinde kullanıcının önceden tıkladığı yazıların kategorileri alınacak
-    //ve yeni içerikler sunulacak.
-  //}
+  const getUserInfo = async () => {
+    const res = await fetch("/api/userKey", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        "req": "gui",
+        "data": {
+          "uuid": userID
+        }
+      })
+    })
+    if(res.ok) {
+      console.log("ok", await res.json());
+      //geriye dönen değerlerde öneri url'lerini sunmak lazım
+      //
+    }
+    else {
+      console.log("hata!");
+    }
+  }
+  getUserInfo();
 
   return (
     <>

@@ -2,21 +2,26 @@
 import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
 
-export default async (req, res) => {
+export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {
-            const body = req.body;
-            const jsonBody = JSON.parse(body);
-
-
-            if(jsonBody.request === 'add-user-key') {
-                res.status(200).json(await addUser());
+            const jsonBody = req.body;
+            if(jsonBody.req === 'add-user-key') {
+                res.status(200).json({"uuid": await addUser()});
             }
-            if(jsonBody.request === 'get-user-info') {
-                //res.status(200).json(getUserInfo(body.data));
-                //console.log("şimdilik phpmyadmin'den bak");
-                res.status(200).json("şimdilik phpmyadmin'den get user info'yu takip et");
+            if(jsonBody.req === 'auc') {
+               await addUserClick(jsonBody.data.url,
+                                                jsonBody.data.date,
+                                                jsonBody.data.type,
+                                                jsonBody.data.uuid);
+                res.status(200).json({"onay": "true"});
             }
+            if(jsonBody.req === 'gui') {
+                
+                res.status(200).json({data: await getUserInfo(jsonBody.data.uuid)});
+            }
+
+            res.status(200).json(body.req);
         } catch (error) {
             res.status(500).json({ error: 'Beklenmedik hata, kesinlikle beklemiyorduk.'});
         }
@@ -41,39 +46,64 @@ async function addUser() {
         await connection.execute('INSERT INTO users (user_uuid) VALUES (?)', [uuid]);
         return uuid;
    } catch (error) {
-    throw error;
+    //throw error;
    } finally {
     connection && connection.end();
    }
 }
 
-/* async function getUserInfo(uuid) {
+async function addUserClick(url, time, type, uuid) {
+    let connection;
+     try {
+     connection = await connectToDatabase();
+     let kategori;
+     if(url !== '') {
+        const [rows] = await connection.execute("SELECT kategori FROM makaleler WHERE url = ?", [url]);
+        if(rows && rows.length > 0) {
+            kategori = rows[0].kategori;
+        }
+        else {
+            kategori = "mumkundegil!";
+        }
+     }
+     else {
+        kategori = "/";
+        url = "/";
+     }
+     await connection.execute('INSERT INTO clicks (url, time, kategori, type, clicked_user_uuid) VALUES (?, ?, ?, ?, ?)', [url, time, kategori, type, uuid]);
+     //return true;
+    } catch (error) {
+     //throw error;
+    } finally {
+     connection && connection.end();
+    }
+ }
+
+async function getUserInfo(uuid) {
     let connection;
     try {
         connection = await connectToDatabase();
-        const [rows] = await connection.execute("SELECT url FROM clicks WHERE clicked_user_uuid = ?", [uuid]);
-        
-        if (rows && rows.length > 0) {
-            // URL'leri al
-            const urls = rows.map(row => row.url);
-        
-            // İkinci sorgu: Alınan URL'leri başka bir tabloda arayarak içerikleri getir
-            const [contentRows] = await connection.execute("SELECT * FROM content WHERE url IN (?)", [urls]);
-        
-            if (contentRows && contentRows.length > 0) {
-              // İçerikleri işleme devam edebilirsiniz
-              //console.log('İçerikler:', contentRows);
 
-            } else {
-              console.log('Belirtilen URL içeriği bulunamadı.');
-            }
-          } else {
-            console.log('Belirtilen kullanıcının tıklama verileri bulunamadı.');
-          }
+        const [rows] = await connection.execute(
+            "SELECT kategori, COUNT(DISTINCT url) AS sayi " +
+            "FROM clicks " +
+            "WHERE clicked_user_uuid = ? " +
+            "GROUP BY kategori",
+            [uuid]
+          );
+        
+        const sonuc = {};
+        rows.map(row => {
+            const kategori = row.kategori;
+            const sayi = row.sayi;
+            sonuc[kategori] = sayi;
+        });
+        return sonuc;
+        
        
        } catch (error) {
         throw error;
        } finally {
         connection && connection.end();
        }
-} */
+}
