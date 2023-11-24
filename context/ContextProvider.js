@@ -8,15 +8,15 @@ export function useAppContext() {
   return useContext(AppContext);
 }
 
-export function Wrapper({ children }) {
+const url = "http://localhost:3000";
 
-  const siteUrl = "https://enonlar.com";
+export function Wrapper({ children }) {
 
   const router = useRouter();
 
   const [nightMode, setNightMode] = useState(false);
   const [supportWebp, setSupportWebp] = useState(false);
-  const [userID, setUserID] = useState();
+  const [userID, setUserID] = useState(null);
   const [currentDate, setCurrentDate] = useState('20.11.2023')
 
 
@@ -70,7 +70,7 @@ export function Wrapper({ children }) {
   }
 
   const addClick = async (url, type) => {
-    const response = await fetch("/api/userKey", {
+    fetch("/api/userKey", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ export function Wrapper({ children }) {
   }, [router])
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, siteUrl, userID }}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, userID, url }}>
       {children}
     </AppContext.Provider>
   );

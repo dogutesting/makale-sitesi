@@ -4,13 +4,13 @@ import { useAppContext } from '@/context/ContextProvider';
 
 export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
   
-    const { nightMode, supportWebp } = useAppContext();
+    const { nightMode} = useAppContext();
 
     const hd = 16;
 
+    const supportWebp = false;
+
     return (
-    
-    
     <article>
         <Link href="" className=''>
             <div className='image-container'>
@@ -18,7 +18,8 @@ export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
                     supportWebp ? (
                         <Image
                             priority={false}
-                            src={rsm} alt={rsm_alt}
+                            src={rsm}
+                            alt={rsm_alt}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"
                             className='image-container-image'
@@ -29,6 +30,8 @@ export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
                             className='us-image'
                             src={rsm}
                             alt={rsm_alt}
+                            height={160}
+                            style={{objectFit: "cover"}}
                         /> 
                     )
                 } 

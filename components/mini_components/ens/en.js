@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp}) {
-
+    //! sayfa-icin-en
     return (
         <>
             <h2 id={enid}>{baslik}</h2>
@@ -21,6 +21,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                         className='us-image'
                         src={rsm}
                         alt={rsm_alt}
+                        /* style={objectFit: "cover"} */
                       /> 
                     )
                 }

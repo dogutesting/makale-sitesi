@@ -41,7 +41,7 @@ useEffect(() => {
       </Head>
 
       <div className={nf_styles.main_error}>
-        <img src="dedektif_ellad.png" alt="404 robotu" height={200} width={200}/>
+        <img src="/dedektif_ellad.png" alt="404 robotu" height={200} width={200}/>
         <h1 className={nf_styles.hi}>404</h1>
         <p className={nf_styles.pi}>Böyle bir sayfa yok. Eğer burası yok ise olmayan bir yere nasıl gelebildin? Bunu asla bilemeyeceğiz..</p>
         <p className={nf_styles.pi}>En iyisi ana sayfaya gitmek.</p>

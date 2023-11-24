@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useAppContext } from "@/context/ContextProvider";
-import { useRef } from 'react';
 
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri}) {
   const { nightMode, supportWebp } = useAppContext();

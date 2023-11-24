@@ -204,7 +204,7 @@ export async function getStaticProps() {
     ];
 
     //const ana_resim = jsonContentArray[0].image;
-    const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-250-cc-sccoter-motosiklet.png";
+    const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-250-cc-scooter-motosiklet.png";
 
     const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 

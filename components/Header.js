@@ -4,7 +4,7 @@ import { useAppContext } from '@/context/ContextProvider';
 
 export default function Header() {
 
-    const { nightMode, setNightMode, siteUrl } = useAppContext();
+    const { nightMode, setNightMode } = useAppContext();
 
     const toggleDarkMode = () => {
         localStorage.setItem("n-mode", JSON.stringify(!nightMode));

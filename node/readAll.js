@@ -78,8 +78,8 @@ pageFile.includes("404.js")) {return false}
     //! first_image
     
     //const resimYolu0 = resimYolu.split(":")[1].replace(/[`',]/g, "");
-
-    values.push('("'+url.trim()+'", "'+baslik.trim()+'", "'+anaResim+'", "'+eklenmeTarihi.trim()+'", "'+okunmaSuresi.trim()+'", "'+kategori.trim()+'", "'+metin+'", "'+keywords+'")');
+    const spreadMetinxD = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
+    values.push('("'+url.trim()+'", "'+baslik.trim()+'", "'+anaResim+'", "'+eklenmeTarihi.trim()+'", "'+okunmaSuresi.trim()+'", "'+kategori.trim()+'", "'+spreadMetinxD+'", "'+keywords+'")');
 });
 
 //! mysql kodu oluşturuluyor.

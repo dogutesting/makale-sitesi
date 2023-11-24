@@ -7,6 +7,7 @@ en pahalı 10 beyzbol oyuncusu 2023
 
 
 
+
 en iyi 10 atatürk sözü
 en iyi 10 abdülhamit sözü
 en iyi 10 mimar sinan sözü
@@ -29,6 +30,9 @@ en uygun fiyatlı 10 saat
 en iyi 10 mekanik saat
 en iyi 10 otomatik saat
 en iyi 10 cep saati
+
+saat rotor tipleri -> https://lapatiala.com/different-rotors-automatic-watches/
+saat enerji üretim tipleri: tam rotor, manuel kurma, kinetic, solar, termoelektrik
 
 psikopatların 10 özelliği
 
