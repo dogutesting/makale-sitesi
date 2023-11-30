@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
-import { useAppContext } from '@/context/ContextProvider';
-
-export default function Header() {
-
-    const { nightMode, setNightMode } = useAppContext();
+export default function Header({nightMode, setNightMode}) {
 
     const toggleDarkMode = () => {
         localStorage.setItem("n-mode", JSON.stringify(!nightMode));

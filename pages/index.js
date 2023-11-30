@@ -17,29 +17,31 @@ export async function getServerSideProps( { query }) {
     const currentPage = sayfa === undefined ? 1 : sayfa;
 
     try {
-    const apiUrl = `http://localhost:3000/api/getArticle?kategori=${currentCategory}&sayfa=${currentPage}`;
-    const data = await fetch(apiUrl).then(response => response.json());
-    
-    if(data.paginationCount == 0) {
+      //! burası post yapılabilir.
+      //! istekleri atan kullanıcının izinleri düzenlenmeli, sadece get atabilsin
+        //! delete, add, put, update bunları yapamasın
+      const apiUrl = `http://localhost:3000/api/getArticle?kategori=${currentCategory}&sayfa=${currentPage}`;
+      const data = await fetch(apiUrl).then(response => response.json());
+      
+      if(data.paginationCount == 0) {
+        return {
+          redirect: {
+            destination: '/404',
+            permanent: false,
+          },
+        }
+      }
+      
       return {
-        redirect: {
-          destination: '/404',
-          permanent: false,
-        },
+        props: {
+          articles: data.articles,
+          currentPage,
+          cats: data.cats,
+          paginationCount: data.paginationCount,
+          currentCategory: data.currentCategory,
+          currentPageOffset: data.currentPageOffset
+        }
       }
-    }
-    
-    return {
-      props: {
-        articles: data.articles,
-        currentPage,
-        cats: data.cats,
-        paginationCount: data.paginationCount,
-        currentCategory: data.currentCategory,
-        currentPageOffset: data.currentPageOffset
-      }
-    }
-
     } catch(error) {
       return {
         props: {
@@ -51,7 +53,7 @@ export async function getServerSideProps( { query }) {
 
 export default function index({articles, currentPage, cats, paginationCount, currentCategory}) {
 
-  const { nightMode } = useAppContext();
+  const { nightMode, supportWebp } = useAppContext();
   const router = useRouter();
 
   const [currentPageState, setCurrentPageState] = useState(currentPage);
@@ -98,13 +100,14 @@ export default function index({articles, currentPage, cats, paginationCount, cur
   const uniqueJSON = addUniqueArrToJsonLd(categories);
   //Head için LD+JSON
 
+
+
   useEffect(() => {
     handleCategory === "hepsi" ? 
       router.push("/") :
       router.push(`/?kategori=${handleCategory}`);
     setCurrentPageState(1);
   }, [handleCategory]);
-  
 
   return (
     <>
@@ -128,10 +131,15 @@ export default function index({articles, currentPage, cats, paginationCount, cur
         </Head>
         
         <Main>
-            <CategoryBox nightMode={nightMode} kategoriler={categories} setHandleCategory={setHandleCategory} handleCategory={handleCategory} newCategoriesSequence={newCategoriesSequence}/>
+            <CategoryBox nightMode={nightMode}
+                          kategoriler={categories}
+                          setHandleCategory={setHandleCategory}
+                          handleCategory={handleCategory}
+                          newCategoriesSequence={newCategoriesSequence}/>
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            <Content posts = {articles}/>
+            
+            <Content posts = {articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             {paginationCount != 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}

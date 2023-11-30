@@ -1,6 +1,6 @@
 import ContentBox from "./ContentBox";
 
-const Content = ({ posts }) => {
+const Content = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
   return (
       <>
         {posts.map((row, index) => (
@@ -14,6 +14,9 @@ const Content = ({ posts }) => {
                 kategori={row.kategori}
                 paragraf={row.paragraf}
                 pri={index == 0 ? true : false}
+                nightMode={nightMode}
+                supportWebp={supportWebp}
+                setHandleCategory={setHandleCategory}
             />
         ))}
       </>

@@ -177,6 +177,8 @@ header {
 }
 .us-image {
   width: 100%;
+  /* height: 100%; */
+  /* object-fit: cover; */
 }
 .kunye {
   font-size: 0.92rem;
@@ -232,7 +234,7 @@ header {
 }
 
 /* Footer Settings */
-footer {
+/* footer {
   display: flex;
   background-color: rgb(0, 9, 27);
   padding-top: 20px;
@@ -250,7 +252,6 @@ ul li {
 }
 
 .footer-content ul li a {
-  /* color: rgb(44, 103, 252); */
   color: rgb(228, 233, 246);
 }
 .footer-content ul li a:hover {
@@ -275,95 +276,8 @@ ul li {
   color: white;
   font-size: 1rem;
   text-align: center;
-}
-/* Responsive CSS Settings */
-/* Tablet and Mobile Screen */
-
-@media only screen and (max-width: 1600px) {
-  .side {
-    width: 25%;
-  }
-  .main-content {
-    width: 50%;
-  }
-}
-
-@media only screen and (max-width: 1100px) {
-  .side {
-    width: 20%;
-  }
-  
-  .main-content {
-    width: 60%;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .side {
-    width: 16%;
-  }
-  .main-content {
-    width: 68%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .side {
-    width: 2.5%;
-  }
-  
-  .main-content {
-    width: 95%;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  ul {
-    color: white;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-top: 20px;
-  }
-  ul li {
-    margin-bottom: 14px;
-    font-size: 0.96rem;
-    text-align: start;
-  }
-}
-
-@media only screen and (max-width: 420px) {
-  .other_contents {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .other_contents article {
-    /* flex-basis: calc(100% - 10px); */
-    width: 100%;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    color: white;
-    justify-content: space-between;
-  }
-}
-
-@media only screen and (max-width: 200px) {
-  .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-  }
-}
-
+} */
+/* Footer Settings */
 
 /* index */
 
@@ -407,8 +321,6 @@ ul li {
     padding-top: 1.5px; /* what the fuck is this shit! */
   }
 } 
-
-
 
 .category-box {
   position: relative;
@@ -483,6 +395,8 @@ ul li {
 
   padding: 2px;
   user-select: none;
+
+  /* height: 125px; */
 }
 
 .icb-light:hover {
@@ -509,6 +423,7 @@ ul li {
  flex-direction: column;
  justify-content: space-between;
  padding-left: 5px;
+ /*  */
 }
 .icb-child:nth-child(2) span {
   font-size: 1rem;
@@ -580,3 +495,94 @@ ul li {
   padding: 10px;
 }
 /* PAGINATION */
+
+
+/* Responsive CSS Settings */
+/* Tablet and Mobile Screen */
+
+@media only screen and (max-width: 1600px) {
+  .side {
+    width: 25%;
+  }
+  .main-content {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .side {
+    width: 20%;
+  }
+  
+  .main-content {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .side {
+    width: 16%;
+  }
+  .main-content {
+    width: 68%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .side {
+    width: 2.5%;
+  }
+  
+  .main-content {
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  /* //! bu sanırım footer için
+  ul {
+    color: white;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  ul li {
+    margin-bottom: 14px;
+    font-size: 0.96rem;
+    text-align: start;
+  } */
+
+}
+
+@media only screen and (max-width: 420px) {
+  .other_contents {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .other_contents article {
+    /* flex-basis: calc(100% - 10px); */
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 200px) {
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+}

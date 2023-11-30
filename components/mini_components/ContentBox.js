@@ -1,16 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useAppContext } from "@/context/ContextProvider";
+/* import { useAppContext } from "@/context/ContextProvider"; */
 
-export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri}) {
-  const { nightMode, supportWebp } = useAppContext();
+export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
 
-  const router = useRouter();
-  const goTag = (kategori) => {
-    const url = `/${kategori}`;
-    router.push(url);
+  supportWebp = false;
+
+  const goTag = (e, kategori) => {
+    //const url = `/?kategori=${kategori}`;
+    //router.push(url);
+    e.preventDefault();
+    setHandleCategory(kategori);
+    window.scrollTo(0, 0);
   }
+
+  //! mobil uygulamada bunların nasıl gözüktüğüne bakmanı istiyorum
+  //! supportWebp' false yap true yap test et.
 
   return (
     <Link className={['index-content-box', nightMode ? 'icb-night' : 'icb-light'].join(' ')} href={url}>
@@ -18,16 +23,16 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
                 {
                     supportWebp ? (
                         <Image
+                            className='index-image'
                             priority={pri}
                             src={resim} alt={"rsm_alt"}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"
-                            className='index-image'
                         />
                     ) : (
                         <img
-                            loading='lazy'
                             className='us-image'
+                            loading='lazy'
                             src={resim}
                             alt={"rsm_alt"}
                         /> 
@@ -50,7 +55,7 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
             <span className='dot'> · </span>
             <span className='readTime'>{okunmaSuresi}</span>
             <span className='dot'> · </span>
-            <span className='category' onClick={(e) => {goTag(kategori); e.preventDefault();}}>{kategori}</span>
+            <span className='category' onClick={(e) => {goTag(e, kategori);}}>{kategori}</span>
           </div>
         </div>
 

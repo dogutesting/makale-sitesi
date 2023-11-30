@@ -42,7 +42,7 @@ export default function Main({children}) {
 
   return (
     <>
-        <Header />
+        <Header nightMode={nightMode} setNightMode={setNightMode}/>
         <div className={['container', nightMode ? 'link-night' : ''].join(' ')}>
             <div className='side'></div>
             <div className={'main-content'}>

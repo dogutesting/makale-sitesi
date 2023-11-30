@@ -8,9 +8,6 @@ export default function CategoryBox({ nightMode, kategoriler, setHandleCategory,
   const categoryBoxRef = useRef(null);
   const categoryContainerRef = useRef(null);
 
-
-  
-
   const handleButtonClick = (buttonText) => {
     setHandleCategory(buttonText);
     newCategoriesSequence(kategoriler, buttonText);

@@ -2,10 +2,27 @@
 
 google analityc
 
--> makale sayfasındaki önerileri ayarla
-    - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden okuduklarını sunucuda tutmak için
--> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+-> makale sayfasındaki önerileri ayarla - V?
+    - alakalı gönderiler için istemciye bir kod tanımlanabilir, kullanıcının önceden
+     okuduklarını sunucuda tutmak için
+    - bunun yerine cookie olarak tanımlamak daha mantıklı olabilir,
+    useState ile localStorage'dan uuid'yi almak yerine cookie olarak http isteği içinde alınabilir
+
 -> ana sayfa mobil img'ler doğru gözükmüyor düzenle
+
+-> makale sayfalarına
+ "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+
+
+-> sayfa içi h1 yanlarına paylaş ikonu ekle
+
+-> kullanılmayan npm i kütüphanelerini bul ve sil
+
+-> https://ip-api.com/ sınırsız req 13 euro - dakikada 45 istek 
+yerine
+-> freeipapi.com/
+ya da kullanıcının ip adresini javascript kodu ile alıp
+geo api'lardan birine onun cihazı üzerinden yollar ve geriye dönen değeri kendime öyle alırım
 
 
 -> Yeni makaleler yazmaya devam et.
@@ -15,3 +32,6 @@ google analityc
 -> Bu ayın 21'inde domain ve server'ı satın al ve internete yükle
 -> google search console'da hata var mı diye kontrol et
 -> günde minimum 1 makale yaz ve diğer proje üzerinde çalış
+
+
+-> fuse kütüphanesi ile arama barı eklenebilinir

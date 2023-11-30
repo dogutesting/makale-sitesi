@@ -3,7 +3,6 @@ import nf_styles from '@/styles/not_found.module.css';
 import { useEffect, useState } from 'react';
 
 export default function ErrorPage() {
-  //const { nightMode, setNightMode } = useAppContext();
   const [nightMode, setNightMode] = useState(false);
 
   const getMode = () => {

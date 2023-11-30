@@ -8,18 +8,21 @@ export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {
             const jsonBody = req.body;
-            if(jsonBody.req === 'add-user-key') {
-                res.status(200).json({"uuid": await addUser()});
+            if(jsonBody.req === 'auk') { //* add-user-key
+                res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
+                                                            jsonBody.data.date)});
             }
-            if(jsonBody.req === 'auc') {
+            if(jsonBody.req === 'auc') { //* add-user-click
                await addUserClick(jsonBody.data.url,
-                                                jsonBody.data.date,
-                                                jsonBody.data.type,
-                                                jsonBody.data.uuid);
-                res.status(200).json({"onay": "true"});
+                                  jsonBody.data.date,
+                                  jsonBody.data.type,
+                                  jsonBody.data.city,
+                                  jsonBody.data.uuid);
+                res.status(200).end();
             }
-            if(jsonBody.req === 'gui') {
-                const response = await getUserInfo(jsonBody.data.uuid)
+            if(jsonBody.req === 'gui') { //* get-user-info
+                const response = await getUserInfo(jsonBody.data.id,
+                                                   jsonBody.data.city)
                 res.status(200).json({data: response});
             }
         } catch (error) {
@@ -29,10 +32,9 @@ export default async function handler (req, res) {
     } else {
         res.status(405).end();
     }
-
 }
 
-async function addUser() {
+async function addUser(geo, date) {
    let connection;
     try {
     connection = await connectToDatabase();
@@ -44,16 +46,32 @@ async function addUser() {
           uuid = null;
         }
     } while (!uuid);
-        await connection.execute('INSERT INTO users (user_uuid) VALUES (?)', [uuid]);
+    
+    await connection.execute(`INSERT INTO users (user_uuid,
+                                                    city,
+                                                    country,
+                                                    region,
+                                                    lat,
+                                                    lon,
+                                                    date) 
+                                                    VALUES (?, ?, ?, ?, ?, ?, ?)`,
+                                                    [uuid,
+                                                    geo.city,
+                                                    geo.country,
+                                                    geo.region,
+                                                    geo.lat,
+                                                    geo.lon,
+                                                    date]
+                                );
         return uuid;
    } catch (error) {
-    //throw error;
+    /* throw error */
    } finally {
     connection && connection.end();
    }
 }
 
-async function addUserClick(url, time, type, uuid) {
+async function addUserClick(url, time, type, city, uuid) {
     let connection;
      try {
      connection = await connectToDatabase();
@@ -71,16 +89,19 @@ async function addUserClick(url, time, type, uuid) {
         kategori = "/";
         url = "/";
      }
-     await connection.execute('INSERT INTO clicks (url, time, kategori, type, clicked_user_uuid) VALUES (?, ?, ?, ?, ?)', [url, time, kategori, type, uuid]);
+     await connection.execute(`INSERT INTO clicks 
+     (url, time, kategori, type, city, clicked_user_uuid) 
+     VALUES (?, ?, ?, ?, ?, ?)`, 
+     [url, time, kategori, type, city, uuid]);
      //return true;
     } catch (error) {
-     //throw error;
+     //console.log("error: ", error);
     } finally {
      connection && connection.end();
     }
  }
 
-async function getUserInfo(uuid) {
+async function getUserInfo(id, city) {
     let connection;
     try {
 
@@ -93,8 +114,16 @@ async function getUserInfo(uuid) {
             "GROUP BY kategori " +
             "ORDER BY sayi DESC " +
             "LIMIT 2",
-            [uuid, "/"]
+            [id, "/"]
         );
+
+        const [cityMost] = await connection.execute(`
+            
+        `)
+
+        //* geoLocation eklediğimiz için bu kısımda random yerine o bölgede en çok tıklanan
+            //* içeriklerden rastgele vereceğiz.
+        //! Eğer tıklanmamışsa o zaman RANDOM verilecek
 
         const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
 
@@ -102,7 +131,7 @@ async function getUserInfo(uuid) {
             const [randomMakaleler] = await connection.execute(
                 DEFAULT_TABLE +
                 " ORDER BY RAND() LIMIT 6"
-            )
+            , []);
             return randomMakaleler;
         }
         else if(enFazlaTiklananKategoriler.length === 1) {
@@ -113,7 +142,7 @@ async function getUserInfo(uuid) {
             );
             return await getRandomArticleForUser(connection, enFazlaTiklananKategoriler[0], uuid, 6 - makaleRows.length, makaleRows);
         }
-        //! enFazlaTiklanan.length == 2
+        //! enFazlaTiklanan.length == 2 || BU YOK111
         else {
             return await setRangeBetweenRandomArticle(category, kategori1, kategori2)
         }
