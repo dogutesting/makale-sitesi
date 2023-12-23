@@ -8,13 +8,14 @@ google analityc
     - bunun yerine cookie olarak tanımlamak daha mantıklı olabilir,
     useState ile localStorage'dan uuid'yi almak yerine cookie olarak http isteği içinde alınabilir
 
--> ana sayfa mobil img'ler doğru gözükmüyor düzenle
+-> cookie'lerde id ve ci silindiği zaman tıklamalar hata fırlatıyor
+    çözüm önerisi: tıklandığında id ve ci yok ise id ve ci atamasını söyle
 
+-> ana sayfa mobil img'ler doğru gözükmüyor düzenle
 -> makale sayfalarına
  "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
-
-
 -> sayfa içi h1 yanlarına paylaş ikonu ekle
+-> cookie:ci encrypt ile düzenle-> city'si gözükmesin
 
 -> kullanılmayan npm i kütüphanelerini bul ve sil
 
@@ -30,7 +31,7 @@ geo api'lardan birine onun cihazı üzerinden yollar ve geriye dönen değeri ke
 -> getAllCategory.js ve diğer benzeri sayfalarda error 500 kodlarını düzenle
 ->DETAILS İÇERİSİNDE LOCALHOST:3000/ LİNKİ VERDİM! UNUTMA
 -> Bu ayın 21'inde domain ve server'ı satın al ve internete yükle
--> google search console'da hata var mı diye kontrol et
+-> google search console'da hata var mı diye kontrol e ,t
 -> günde minimum 1 makale yaz ve diğer proje üzerinde çalış
 
 

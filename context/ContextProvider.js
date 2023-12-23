@@ -1,14 +1,14 @@
 import { createContext, useContext, useEffect, useState } from 'react';
+import CryptoJS from 'crypto-js';
 import { useRouter } from 'next/router';
 
 const AppContext = createContext();
 
-/* Alt sayfalarda context'i kullanmak istediğinde bu function çağırılır */
 export function useAppContext() {
   return useContext(AppContext);
 }
-
 const url = "http://localhost:3000";
+const notSecretKey = "D++;";
 let cookies = null;
 
 export function Wrapper({ children }) {
@@ -18,6 +18,17 @@ export function Wrapper({ children }) {
   const [nightMode, setNightMode] = useState(false);
   const [supportWebp, setSupportWebp] = useState(false);
   const [userInfo, setUserInfo] = useState({id: null, city: null});
+
+  const kriptoloji = (encry, text) => {
+    let value = "";
+    if(encry) {
+      value = CryptoJS.AES.encrypt(text, notSecretKey).toString();
+    }
+    else {
+      value = CryptoJS.AES.decrypt(text, notSecretKey).toString(CryptoJS.enc.Utf8);
+    }
+    return value;
+  }
 
   const checkWebPSupport = () => {
     var elem = document.createElement('canvas');
@@ -73,9 +84,8 @@ export function Wrapper({ children }) {
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
     //id
     cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
-
     //geo
-    cookies.set('city', city, { secure: true, sameSite: 'Strict' });
+    cookies.set('ci', kriptoloji(true, city), { secure: true, sameSite: 'Strict' });
 
     setUserInfo({
       "id": id,
@@ -85,10 +95,21 @@ export function Wrapper({ children }) {
 
  const setStateUserInfo = async () => {
     const id_cookie = cookies.get("id");
-    const city_cookie = cookies.get("city");
-
-    const geoInfos = await getGeoInfos();
+    const city_cookie = cookies.get("ci");
     
+    let geoInfos, city_normal;
+    if(!city_cookie) {
+      geoInfos = await getGeoInfos();
+      city_normal = geoInfos.city;
+    }
+    else {
+      let city_cookie_enc = kriptoloji(false, city_cookie);
+      geoInfos = {
+        country: "hata", city: city_cookie_enc, region: "", lat: "", lon: ""
+      }
+      city_normal = city_cookie_enc;
+    }
+
     if(!id_cookie) {
       const response = await fetch('/api/userKey', {
         method: 'POST',
@@ -106,19 +127,12 @@ export function Wrapper({ children }) {
 
       if(response.ok) {
         const responseId = await response.json();
-        return {id: responseId.uuid, city: geoInfos.city}
+        return {id: responseId.uuid, city: city_normal}
         //! setToken for comment or like actions
       }
     }
     else {
-      if(!city_cookie) {
-        return {id: id_cookie, city: geoInfos.city}
-        //! setToken for comment or like actions
-      }
-      else {
-        return {id: id_cookie, city: city_cookie}
-        //! setToken for comment or like actions
-      }
+      return {id: id_cookie, city: city_normal}
     }
  }
 
@@ -150,7 +164,6 @@ export function Wrapper({ children }) {
       cookies = jsCookie.default;
       const {id, city} = await setStateUserInfo();
       setCookiesIDandGEO(id, city);
-      
     })();
 
   }, [])

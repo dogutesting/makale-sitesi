@@ -6,10 +6,10 @@ import { useEffect, useState } from 'react';
 
 export default function OtherContents() {
 
-  const { userInfo } = useAppContext();
+  const { userInfo, url } = useAppContext();
   const [others, setOthers] = useState();
 
-  const getArticlesForUser = async (userInfo) => {
+  const getArticlesForUser = async () => {
     const res = await fetch(url+"/api/userKey", {
       method: "POST",
       headers: { 
@@ -25,7 +25,8 @@ export default function OtherContents() {
     })
     if(res.ok) {
       const response = await res.json();
-      setOthers(response.data);
+      //setOthers(response.data);
+      console.log("other response", response);
       //return response.data;
     }
     else {
@@ -35,7 +36,8 @@ export default function OtherContents() {
 
   useEffect(() => {
     if(userInfo.id && userInfo.city) {
-
+      console.log(userInfo.id, " - ", userInfo.city);
+      getArticlesForUser();
     }
   }, [userInfo])
 
@@ -43,20 +45,7 @@ export default function OtherContents() {
     <>
       <h2 className='other-h2'>Diğer İçerikler</h2>
       <div className='other_contents'>
-        {
-          others ? others.map((other, index) => (
-            <ArticleBox
-            key={index}
-            baslik={other.baslik}
-            rsm={other.resimYolu}
-            rsm_alt={other.baslik + " " + "görseli"}
-            icerik={other.paragraf}/>
-          )) 
-          :
-          <>
-            <b>Loading...</b>
-          </>
-        }
+        
         {/* <ArticleBox rsm="/images/movies/ben_efsaneyim.jpg"
         baslik="Ben Efsaneyim filminin ikinici çıkarsa efsaneliği biter!"
         rsm_alt="Ben Efsaneyim filminin ikinici çıkarsa efsaneliği biter!"
