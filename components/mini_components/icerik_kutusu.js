@@ -2,17 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useAppContext } from '@/context/ContextProvider';
 
-export default function ArticleBox({rsm, rsm_alt, baslik, icerik}) {
+export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, link}) {
   
     const { nightMode} = useAppContext();
 
     const hd = 16;
 
-    const supportWebp = false;
+    /* const supportWebp = false; */
 
     return (
     <article>
-        <Link href="" className=''>
+        <Link href={link} className=''>
             <div className='image-container'>
                 {
                     supportWebp ? (

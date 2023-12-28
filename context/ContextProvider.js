@@ -93,68 +93,110 @@ export function Wrapper({ children }) {
     })
   }
 
- const setStateUserInfo = async () => {
-    const id_cookie = cookies.get("id");
-    const city_cookie = cookies.get("ci");
-    
-    let geoInfos, city_normal;
-    if(!city_cookie) {
-      geoInfos = await getGeoInfos();
-      city_normal = geoInfos.city;
-    }
-    else {
-      let city_cookie_enc = kriptoloji(false, city_cookie);
-      geoInfos = {
-        country: "hata", city: city_cookie_enc, region: "", lat: "", lon: ""
+  //* connect with: main
+  const setStateUserInfo = async () => {
+      const id_cookie = cookies.get("id");
+      const city_cookie = cookies.get("ci");
+
+      let geoInfos, city_normal;
+      if(!city_cookie) {
+        geoInfos = await getGeoInfos();
+        city_normal = geoInfos.city;
       }
-      city_normal = city_cookie_enc;
-    }
-
-    if(!id_cookie) {
-      const response = await fetch('/api/userKey', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', 
-        },
-        body: JSON.stringify({
-          req: "auk",
-          "data": {
-            "date": getDateAndTime(),
-            "geo": geoInfos
-          }
-        })
-      });
-
-      if(response.ok) {
-        const responseId = await response.json();
-        return {id: responseId.uuid, city: city_normal}
-        //! setToken for comment or like actions
-      }
-    }
-    else {
-      return {id: id_cookie, city: city_normal}
-    }
- }
-
-  const addClick = (url, type) => {
-    fetch("/api/userKey", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        "req": "auc",
-        "data": {
-          "url": url,
-          "date": getDateAndTime(),
-          "type": type,
-          "city": userInfo.city,
-          "uuid": userInfo.id
+      else {
+        let city_cookie_enc = kriptoloji(false, city_cookie);
+        geoInfos = {
+          country: "hata", city: city_cookie_enc, region: "", lat: "", lon: ""
         }
-      })
-    });
-  } 
+        city_normal = city_cookie_enc;
+      }
 
+      if(!id_cookie) {
+        const response = await fetch('/api/userKey', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json', 
+          },
+          body: JSON.stringify({
+            req: "auk",
+            "data": {
+              "date": getDateAndTime(),
+              "geo": geoInfos
+            }
+          })
+        });
+
+        if(response.ok) {
+          const responseId = await response.json();
+          return {id: responseId.uuid, city: city_normal}
+          //! setToken for comment or like actions
+        }
+      }
+      else {
+        return {id: id_cookie, city: city_normal}
+      }
+  }
+
+
+ //* connect with: rota kayıt ve gece mod doğrulayıcı
+ const addClick = async (url, button) => {
+  fetch("/api/userKey", {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      "req": "auc",
+      "data": {
+        "url": url,
+        "date": getDateAndTime(),
+        "type": button,
+        "city": userInfo.city,
+        "uuid": userInfo.id
+      }
+    })
+  });
+}
+//* connect with: rota kayıt ve gece mod doğrulayıcı 
+const handleClick = (event) => {
+  if(event.target.closest('a') != null) {
+    const moddedUrl = new URL(event.target.closest('a').href).pathname.slice(1);
+    /* if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) { */
+    if(event.button === 0 || event.button === 1) {
+      addClick(moddedUrl, event.button);
+    }
+  }
+}
+//* connect with: rota kayıt ve gece mod doğrulayıcı
+ const getMode = () => {
+  const localStorage_mode = localStorage.getItem("n-mode");
+  setNightMode(JSON.parse(localStorage_mode));
+
+  const body = document.body;
+  const class1 = 'night-mode';
+  /* const class2 = 'light-mode'; */
+
+  if(nightMode && !body.classList.contains(class1)) {
+      body.classList.add(class1)
+      /* body.classList.remove(class2) */
+  }
+  else {
+      body.classList.remove(class1);
+      /* body.classList.add(class2) */
+  }
+}
+  //rota kayıt ve gece mod doğrulayıcı
+ useEffect(() => {
+  getMode();
+  router.events.on('routeChangeComplete', getMode);
+  document.addEventListener('mousedown', handleClick);
+  return() => {
+      router.events.off('routeChangeComplete', getMode);
+      document.removeEventListener('mousedown', handleClick);
+  };
+}, [nightMode, router]);
+
+  //main
   useEffect(() => {
     setSupportWebp(checkWebPSupport());
     //getDateAndTime();
@@ -165,25 +207,7 @@ export function Wrapper({ children }) {
       const {id, city} = await setStateUserInfo();
       setCookiesIDandGEO(id, city);
     })();
-
-  }, [])
-
-  useEffect(() => {
-
-    const handleClick = (event) => {
-      if(event.target.closest('a') != null) {
-        const moddedUrl = new URL(event.target.closest('a').href).pathname.slice(1);
-        if(event.button === 0 || event.button === 1) {
-          addClick(moddedUrl, event.button);
-        }
-      }
-    }
-    document.addEventListener('mousedown', handleClick);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClick);
-    }
-  }, [router])
+  }, []);
 
   return (
     <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, url, userInfo}}>

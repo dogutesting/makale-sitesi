@@ -8,7 +8,7 @@ import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-
+import { useHistory } from "next/router";
 
 export async function getServerSideProps( { query }) {
     const { kategori, sayfa } = query;
@@ -100,15 +100,16 @@ export default function index({articles, currentPage, cats, paginationCount, cur
   const uniqueJSON = addUniqueArrToJsonLd(categories);
   //Head için LD+JSON
 
+  useEffect(() => {
+    newCategoriesSequence(cats, currentCategory);
+  }, [currentCategory]);
 
 
   useEffect(() => {
-    handleCategory === "hepsi" ? 
-      router.push("/") :
-      router.push(`/?kategori=${handleCategory}`);
-    setCurrentPageState(1);
-  }, [handleCategory]);
-
+    if(articles.length === 0) {
+      router.push("/404");
+    }
+  }, [articles])
   return (
     <>
         <Head>
@@ -131,7 +132,8 @@ export default function index({articles, currentPage, cats, paginationCount, cur
         </Head>
         
         <Main>
-            <CategoryBox nightMode={nightMode}
+            <CategoryBox  router={router}
+                          nightMode={nightMode}
                           kategoriler={categories}
                           setHandleCategory={setHandleCategory}
                           handleCategory={handleCategory}
@@ -142,7 +144,7 @@ export default function index({articles, currentPage, cats, paginationCount, cur
             <Content posts = {articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            {paginationCount != 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}
+            {paginationCount > 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}
         </Main>
     </>
   );

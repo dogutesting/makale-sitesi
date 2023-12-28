@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-export default function CategoryBox({ nightMode, kategoriler, setHandleCategory, handleCategory, newCategoriesSequence }) {
+export default function CategoryBox({ router, nightMode, kategoriler, setHandleCategory, handleCategory, newCategoriesSequence }) {
 
   const [scrollOffset, setScrollOffset] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
@@ -12,6 +12,7 @@ export default function CategoryBox({ nightMode, kategoriler, setHandleCategory,
     setHandleCategory(buttonText);
     newCategoriesSequence(kategoriler, buttonText);
     setScrollOffset(0);
+    router.push(`/?kategori=`+buttonText);
   };
   
   

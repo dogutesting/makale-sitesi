@@ -3,11 +3,14 @@
 import ArticleBox from '@/components/mini_components/icerik_kutusu';
 import { useAppContext } from '@/context/ContextProvider';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 
 export default function OtherContents() {
 
-  const { userInfo, url } = useAppContext();
+  const { userInfo, url, supportWebp } = useAppContext();
   const [others, setOthers] = useState();
+
+  const router = useRouter();
 
   const getArticlesForUser = async () => {
     const res = await fetch(url+"/api/userKey", {
@@ -19,37 +22,56 @@ export default function OtherContents() {
         "req": "gui",
         "data": {
           "id": userInfo.id,
-          "city": userInfo.city
+          "city": userInfo.city,
+          "currentUrl": router.asPath.slice(1)
         }
       })
     })
     if(res.ok) {
       const response = await res.json();
-      //setOthers(response.data);
-      console.log("other response", response);
-      //return response.data;
+      setOthers(response.data);
+      console.log("!RESPONSE: ", response.data);
     }
     else {
-      console.log("hata!", res);
+      fetch(url+"/api/error", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            "location": "other-contents",
+            "error": res.status + " - " + res.statusText  
+          })
+        }
+      )
     }
   }
 
   useEffect(() => {
     if(userInfo.id && userInfo.city) {
-      console.log(userInfo.id, " - ", userInfo.city);
+      //console.log(userInfo.id + " ve " + userInfo.city);
       getArticlesForUser();
     }
   }, [userInfo])
+
+  useEffect(() => {
+    //console.log("%c!SONRA DÜZELT! -> supportWebp: " + supportWebp, "color: red");
+  }, [])
 
   return (
     <>
       <h2 className='other-h2'>Diğer İçerikler</h2>
       <div className='other_contents'>
-        
-        {/* <ArticleBox rsm="/images/movies/ben_efsaneyim.jpg"
-        baslik="Ben Efsaneyim filminin ikinici çıkarsa efsaneliği biter!"
-        rsm_alt="Ben Efsaneyim filminin ikinici çıkarsa efsaneliği biter!"
-        icerik="Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film."/> */}
+        {others && others.map((other, index) => (
+          <ArticleBox
+          key={index}
+          supportWebp={supportWebp}
+          link={other.url}
+          baslik={other.baslik}
+          rsm_alt={other.baslik}
+          rsm={other.resimYolu}
+          icerik={other.paragraf}
+          onClick={() => getArticlesForUser()}
+          />  
+        ))}
       </div>
     </>
   )

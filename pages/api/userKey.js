@@ -3,6 +3,7 @@ import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
 
 const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler";
+let currentUrl = "";
 
 export default async function handler (req, res) {
     if(req.method === 'POST') {
@@ -21,13 +22,10 @@ export default async function handler (req, res) {
                 res.status(200).end();
             }
             if(jsonBody.req === 'gui') { //* get-user-info
-                
-                /* const response = await getUserInfo(jsonBody.data.id,
-                                                   jsonBody.data.city)
-                res.status(200).json({data: response}); */
-
-                const arr = await contest(jsonBody.data.id, jsonBody.data.city);
-                res.status(200).json({data: arr});
+                currentUrl = jsonBody.data.currentUrl;
+                const response = await getUserInfo(jsonBody.data.id,
+                                                   jsonBody.data.city);
+                res.status(200).json({data: response});
             }
         } catch (error) {
             console.log(colors.green("Beklenmedik hata: ", error));
@@ -106,23 +104,6 @@ async function addUserClick(url, time, type, city, uuid) {
     }
  }
 
- async function contest(id, city) {
-    let connection = await connectToDatabase();
-    const cityMost = await getMostClickedFromCity(connection, null, city, id, 6);
-    /* const cityMost = await getMostClickedFromCity(connection, null, city, id, 6);
-    return cityMost;
-    
-    if(cityMost.length < 6) {
-                return getRandomArticle(connection, id, city, (6 - cityMost.length), cityMost);
-            }
-            else {
-                return cityMost;
-            } */
-    //const articles = await getRandomArticle(connection, id, 6, cityMost);
-    //console.log(articles);
-    return "hey";
- }
-
 async function getUserInfo(id, city) {
     let connection;
     try {
@@ -145,28 +126,44 @@ async function getUserInfo(id, city) {
         const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
-            const cityMost = getMostClickedFromCity(connection, null, city, id, 6);
+
+            const cityMost = await getMostClickedFromCity(connection, null, city, id, 6);
             if(cityMost.length < 6) {
-                return getRandomArticle(connection, id, city, (6 - cityMost.length), cityMost);
+                const randomArticle = await getRandomArticle(connection, id, city, (6 - cityMost.length), cityMost);
+                const f1 = cityMost.concat(randomArticle);
+                if(f1.length < 6) {
+                    return await setArticleTo6(connection, f1, (6 - f1.length));
+                }
+                else {
+                    return f1;
+                }
             }
             else {
                 return cityMost;
             }
         }
         else if(enFazlaTiklananKategoriler.length === 1) { // eğer kullanıcı 1 kategoride bir şeylere bakmış ise
+            const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, 4);
+            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (6-categoryAndCity.length), categoryAndCity);    
+            let moded = categoryAndCity.concat(nullAndCity);
 
-            const createMode = getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, 4);
-            const mode1 = getMostClickedFromCity(connection, null, city, id, 2, cityMostWithCategory);
-
-            const toplamSayi = createMode.length + mode1.length;
-            let moded = createMode.concat(mode1);
-            if(toplamSayi < 6) {
-                return getRandomArticle(connection, id, (6 - toplamSayi), moded);
+            if(moded.length < 6) {
+                //return await getRandomArticle(connection, id, (6 - moded.length), moded);
+                const randomArticle = await getRandomArticle(connection, id, (6 - moded.length), moded);
+                const f1 = moded.concat(randomArticle);
+                console.log("urls-f1: ", f1);
+                if(f1.length < 6) {
+                    console.log("gönderiliyor 2");
+                    return await setArticleTo6(connection, f1, (6 - f1.length));
+                }
+                else {
+                    console.log("gönderiliyor");
+                    return f1;
+                }
             }
             else {
                 return moded;
             }
-
         }
         else {
             return await setRangeBetweenRandomArticle(connection, enFazlaTiklananKategoriler[0], enFazlaTiklananKategoriler[1], city, id)
@@ -179,77 +176,128 @@ async function getUserInfo(id, city) {
     }
 }
 
+
+//!!const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
 //bölgenin en çok tıklananları getir
 async function getMostClickedFromCity(connection, category, city, id, num, rows=null) {
+
+    //!CTRL + F ile seçili olan
+    //! AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicke
+    //! burada bir yerde hata var. En son şunu ekledim
+    //! AND m.url != "${currentUrl}"
+
+    const urls = rows == null ? [""] : rows.map(row=>row.url);
+    const placeholders = urls.map(() => '?').join(', ');
+
     if(category == null) {
-        const urls = rows == null ? [] : rows.map(row=>row.url);
         const [cityMost] = await connection.execute(`
-            SELECT c.url, COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori 
+            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori 
             FROM clicks c 
             JOIN makaleler m ON c.url = m.url 
-            WHERE c.url != ? AND c.city = ? AND c.clicked_user_uuid != ? AND c.url NOT IN (?) 
-            GROUP BY c.url, m.kategori 
+            WHERE c.url != ? AND c.city = ? AND c.clicked_user_uuid != ? AND c.url NOT IN (${placeholders}) 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
+            AND m.url != "${currentUrl}"
+            GROUP BY c.url, m.kategori  
             ORDER BY clickCount DESC 
-            LIMIT ?`, ["/", city, id, urls, num]);
+            LIMIT ?`, ["/", city, id, ...urls, id, num]);
         return cityMost;
     }
     else {
         const [cityMost] = await connection.execute(`
-        SELECT c.url, COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori 
+        SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+        COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
         FROM clicks c 
         JOIN makaleler m ON c.url = m.url 
         WHERE c.url != ? AND c.city = ? AND c.clicked_user_uuid != ? AND m.kategori = ? 
-        GROUP BY c.url, m.kategori 
+        AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+        AND m.url NOT IN (${placeholders}) 
+        AND m.url != "${currentUrl}"
+        GROUP BY c.url 
         ORDER BY clickCount DESC 
-        LIMIT ?`, ["/", city, id, category, num]);
+        LIMIT ?`, ["/", city, id, category, id, ...urls, num]);
         return cityMost;
     }
 }
 
 //rastgele makale getir
 async function getRandomArticle(connection, id, num, rows=null) {
-    //!hata var
-    const a_urls = rows === null ? [""] : rows.map(row => row.url);
-    //console.log("a_urls type: ", typeof(a_urls), " value: ", a_urls);
-    /* const [randomRows] = await connection.execute(`
-    SELECT m.url, m.baslik, m.resimYolu, m.eklenmeTarihi, m.okunmaSuresi, m.kategori, m.paragraf, 
-    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+    const urls = rows == null ? [""] : rows.map(row=>row.url);
+    const placeholders = urls.map(() => '?').join(', ');
+
+    const [randomRows] = await connection.execute(`
+    SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
     FROM makaleler m 
     LEFT JOIN clicks c ON c.url = m.url 
     WHERE m.url NOT IN ( 
     SELECT DISTINCT url 
     FROM clicks 
-    WHERE clicked_user_uuid = ? AND url NOT IN (?) 
-    ) 
-    GROUP BY m.url, m.baslik, m.resimYolu, m.eklenmeTarihi, m.okunmaSuresi, m.kategori, m.paragraf 
+    WHERE clicked_user_uuid = ?) AND m.url NOT IN (${placeholders}) 
+    AND m.url != "${currentUrl}"
+    GROUP BY m.url 
     ORDER BY clickCount DESC 
-    LIMIT ?`, [id, ["1", "2"], num]); */
-    /* return randomRows; */
-    return {a_urls};
-    
+    LIMIT ?`, [id, ...urls, num]);
+    return randomRows;
+}
+
+async function setArticleTo6(connection, rows, num) {
+    const urls = rows.map(row => row.url);
+    const placeholders = urls.map(() => '?').join(', ');
+
+    const [randomRows] = await connection.execute(`
+    SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
+    FROM makaleler m 
+    LEFT JOIN clicks c ON c.url = m.url 
+    WHERE m.url NOT IN (${placeholders}) 
+    AND m.url != "${currentUrl}"
+    GROUP BY m.url 
+    ORDER BY clickCount DESC LIMIT ?`, [...urls, num]);
+    return rows.concat(randomRows);
 }
 
 async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, city, id) {
+
+    console.log("helloworld!");
+
     if(kategori1.length === kategori2.length) {
-        const kat1 = getMostClickedFromCity(connection, kategori1, city, id, 3);
-        const kat2 = getMostClickedFromCity(connection, kategori2, city, id, 3);
+        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
+        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 3);
 
         const kat12 = kat1.concat(kat2);
         if(kat12.length < 6) {
-            return getRandomArticle(connection, id, (6 - kat12.length), kat12)
+            const randomArticles = await getRandomArticle(connection, id, (6 - kat12.length), kat12);
+            const grawc = kat12.concat(randomArticles);
+
+            if(grawc.length === 6) {
+                return grawc;
+            }
+            else {
+                return await setArticleTo6(connection, grawc, (6 - grawc.length));
+            }
         }
         else {
             return kat12;
         }
     }
     else {
-        const kat1 = getMostClickedFromCity(connection, kategori1, city, id, 2);
-        const kat2 = getMostClickedFromCity(connection, kategori2, city, id, 1);
-        const kat3 = getMostClickedFromCity(connection, null, city, id, 3);
+        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
+        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 1);
+        const kat12 = kat1.concat(kat2);
+        const kat3 = await getMostClickedFromCity(connection, null, city, id, 2, kat12);
+        const kat123 = kat12.concat(kat3);
 
-        const kat123 = kat1.concat(kat2).concat(kat3);
         if(kat123.length < 6) {
-            return getRandomArticle(connection, id, (6 - kat123.length), kat123)
+            const randomArticles = await getRandomArticle(connection, id, (6 - kat123.length), kat123);
+            const grawc = kat123.concat(randomArticles);
+
+            if(grawc.length === 6) {
+                return grawc;
+            }
+            else {
+                return await setArticleTo6(connection, grawc, (6 - grawc.length));
+            }
         }
         else {
             return kat123;

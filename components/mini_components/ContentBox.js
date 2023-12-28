@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
 
-  supportWebp = false;
+  /* supportWebp = false; */
 
   const goTag = (e, kategori) => {
     //const url = `/?kategori=${kategori}`;
