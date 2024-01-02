@@ -17,11 +17,37 @@ body {
   margin: 0 auto;
   font-size: 18px;
 }
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  animation: fadeInOut 2s ease-out;
+  z-index: 999;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+
 h1 {
   /* text-align: center; */
   text-align: left;
   margin-top: 0.4rem;
   margin-bottom: 0.4rem;
+}
+.h2-div {
+  display: flex;
+  justify-content: space-between;
 }
 h2 {
   margin-top: 10px;
@@ -41,6 +67,20 @@ h2 {
   height: 100%; /* Şeridin yüksekliği, başlığın tam yüksekliği kadar */
   background-color: red; /* Kırmızı renk */
 }
+
+.share-h2 {
+  object-fit: contain;
+}
+.share-h2-white {
+  filter: invert(1) !important;
+}
+.share-h2:hover {
+  cursor: pointer;
+}
+.share-h2:active {
+  opacity: 0.5;
+}
+
 .other-h2 {
   text-align: center;
 }
@@ -157,16 +197,11 @@ header {
   align-items: center;
 }
 
+/*geridön*/
 .image-container {
   position: relative;
   width: 100%;
-  
   aspect-ratio: 16/9;
-  
-  /*
-  işe yaramıyor
-  object-fit: cover;
-  */
 }
 /* images in other contents */
 .image-container-image {
@@ -177,6 +212,8 @@ header {
 }
 .us-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   /* height: 100%; */
   /* object-fit: cover; */
 }
@@ -193,11 +230,24 @@ header {
   font-size: medium;
 }
 .kunye ul {
+  padding: 0;
   color: inherit;
   display: inline;
+  list-style-type: none;
 }
 .kunye ul li {
   display: inline;
+  margin-right: 2px;
+}
+.kunye ul li::before {
+  content: '\2022';
+  margin-right: 2px;
+}
+@media screen and (max-width: 200px) {
+  .kunye ul li {
+    display: block;
+    margin-bottom: 2px;
+  }
 }
 /* Other makales */
 .other_contents {
@@ -569,12 +619,12 @@ ul li {
 }
 
 @media only screen and (max-width: 360px) {
-  .footer-content {
+  /* .footer-content {
     display: flex;
     flex-direction: column;
     color: white;
     justify-content: space-between;
-  }
+  } */
 }
 
 @media only screen and (max-width: 200px) {

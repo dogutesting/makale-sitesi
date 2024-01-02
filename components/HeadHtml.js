@@ -4,7 +4,7 @@ export default function HeadHtml({baslik, description, keywords, ana_resim, url,
     <Head>
           <title>{baslik}</title>
           <link rel="canonical" href={"https://enonlar.com/"+url} />
-
+          <meta name="robots" content="index, follow"/>
           <meta name="description" content={description}/>
           <meta name="keywords" content={keywords}/>
           <meta property="og:type" content="article"/>

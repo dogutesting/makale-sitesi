@@ -16,8 +16,18 @@ export function Wrapper({ children }) {
   const router = useRouter();
 
   const [nightMode, setNightMode] = useState(false);
-  const [supportWebp, setSupportWebp] = useState(false);
+  const [supportWebp, setSupportWebp] = useState(true);
   const [userInfo, setUserInfo] = useState({id: null, city: null});
+
+  function showToast(message) {
+    const toastContainer = document.getElementById('toast-container');
+    toastContainer.innerHTML = message;
+    toastContainer.style.display = 'block';
+  
+    setTimeout(() => {
+      toastContainer.style.display = 'none';
+    }, 2000); // 2 saniye sonra toast gizlenir
+  }
 
   const kriptoloji = (encry, text) => {
     let value = "";
@@ -199,10 +209,8 @@ const handleClick = (event) => {
   //main
   useEffect(() => {
     setSupportWebp(checkWebPSupport());
-    //getDateAndTime();
     (async () => {
       const jsCookie = await import('js-cookie');
-      //setCookies(jsCookie.default);
       cookies = jsCookie.default;
       const {id, city} = await setStateUserInfo();
       setCookiesIDandGEO(id, city);
@@ -210,7 +218,7 @@ const handleClick = (event) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, url, userInfo}}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, url, userInfo, showToast}}>
       {children}
     </AppContext.Provider>
   );

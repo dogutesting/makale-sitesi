@@ -3,6 +3,9 @@ import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import Ens_dizi from '@/components/mini_components/ens/ens_dizi';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
+import { useState, useEffect } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+
 export async function getStaticProps() {
     const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
     const url = "en-yuksek-imdb-puanina-sahip-10-dizi";
@@ -211,14 +214,22 @@ export async function getStaticProps() {
 export default function MostSeriesMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
   const { nightMode } = useAppContext();
 
+  const [items, setItems] = useState([]);
+  const [hasMore, setHasMore] = useState(true);
+
+  const fetchData = () => {
+
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, [])
+
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-        <Ens_dizi jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

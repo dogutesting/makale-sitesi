@@ -8,8 +8,6 @@ import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { useHistory } from "next/router";
-
 export async function getServerSideProps( { query }) {
     const { kategori, sayfa } = query;
 
@@ -113,6 +111,10 @@ export default function index({articles, currentPage, cats, paginationCount, cur
   return (
     <>
         <Head>
+            <title>En Onlar</title>
+            <meta name="description" content="Enonlar, en iyi 10 içerikler, en popüler 10 film, en iyi 10 araba incelemeleri, en çok okunan kitap önerileri ve daha fazlasını sunan bir içerik platformudur. Sizler için seçtiğimiz en ilginç konuları keşfedin!"/>
+            <meta name="robots" content="index, follow"/>
+
             <meta property="og:type" content="website"/>
             <meta property="og:url" content="https://enonlar.com/"/>
             <meta property="og:image" content="/logo.png"/>
@@ -140,8 +142,8 @@ export default function index({articles, currentPage, cats, paginationCount, cur
                           newCategoriesSequence={newCategoriesSequence}/>
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
-            
-            <Content posts = {articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
+
+            <Content posts={articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             {paginationCount > 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}

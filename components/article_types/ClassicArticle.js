@@ -3,10 +3,19 @@ import HeadHtml from "../HeadHtml";
 import Details from "../Details";
 import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/ana_gorsel";
+import dynamic from 'next/dynamic';
 
 export default function ClassicArticle (
     {children, baslik, description, keywordsArray, ana_resim, url, jsonList,
-     nightMode, addDate, okunmaSuresi, kategori, metin})  {
+     nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray})  {
+
+      let DynamicComponent = null;
+      const allowedCats = ["dizi", "film", "motosiklet"];
+      if(allowedCats.includes(kategori)) {
+        DynamicComponent = dynamic(() => import('../mini_components/ens/ens_'+kategori));
+      }
+      
+
   return (
     <Main>
         <HeadHtml 
@@ -32,7 +41,9 @@ export default function ClassicArticle (
 
           <hr className='split'/>
         
-          {children}
+          {/* {children} */}
+          { DynamicComponent !== null && 
+          <DynamicComponent jsonContentArray={jsonContentArray} /> }
         
         </article>
         

@@ -1,11 +1,12 @@
 import ContentBox from "./ContentBox";
 
 const Content = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
+
   return (
       <>
         {posts.map((row, index) => (
             <ContentBox
-                key={index+1}
+                key={index}
                 url={row.url}
                 baslik={row.baslik}
                 resim={row.resimYolu}
@@ -13,8 +14,8 @@ const Content = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
                 okunmaSuresi={row.okunmaSuresi + " dk"}
                 kategori={row.kategori}
                 paragraf={row.paragraf}
-                pri={index == 0 ? true : false}
-                nightMode={nightMode}
+                pri={index === 0}
+                nightMode2={nightMode}
                 supportWebp={supportWebp}
                 setHandleCategory={setHandleCategory}
             />

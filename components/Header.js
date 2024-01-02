@@ -17,7 +17,7 @@ export default function Header({nightMode, setNightMode}) {
             <div className='main-content header-main'>
                 <div>
                      <Link id='go_index' href="/">
-                        <img className='logo user-drag-none' src={nightMode ? '/logo_white.png' : '/logo.png'} alt='logo'/>
+                        <img className='logo user-drag-none' src={nightMode ? '/logo_white.png' : '/logo.png'} alt='logo' width={120} height={30}/>
                      </Link>
                 </div>
                 <div>

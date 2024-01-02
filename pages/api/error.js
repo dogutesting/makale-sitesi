@@ -5,15 +5,22 @@ export default async function handler (req, res) {
         try {
             const connection = await connectToDatabase();
             const jsonBody = req.body;
-            
-            await connection.execute(
-                "INSERT INTO hatalar (location, hata) VALUES (?, ?)",
-                [jsonBody.location, jsonBody.error]
-            );
+            if(jsonBody.type == "other") {
+                connection.execute(
+                    "INSERT INTO hatalar (location, hata) VALUES (?, ?)",
+                    [jsonBody.location, jsonBody.error]
+                );
+            }
+            if(jsonBody.type == "404") {
+                connection.execute(
+                    "INSERT INTO notfound (location, date, uuid) VALUES (?, ?, ?)",
+                    [jsonBody.location, jsonBody.date, jsonBody.uuid]
+                );
+            }
             
         }
         catch(error) {
-            //console.log("err: ", error);
+            console.log("err: ", error);
         }
     }
 }

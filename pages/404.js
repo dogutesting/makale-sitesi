@@ -1,31 +1,64 @@
 import Head from "next/head"
 import nf_styles from '@/styles/not_found.module.css';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Cookies from 'js-cookie';
+
+//! Öneri
+//! (Örneğin: neil gibson filmleri -> böyle bir sayfa yok 404 yönlendirildi -> 404'de neil-gibson anahtar kelimesi içeren url'lere bakılıp, en iyi 10 neil gibson kitabı sunulabilir vs vs.)
 
 export default function ErrorPage() {
   const [nightMode, setNightMode] = useState(false);
+  const router = useRouter();
+
+  const getDateAndTime = () => {
+    const now = new Date();
+    const saat = now.getHours().toString().padStart(2, '0');
+    const dakika = now.getMinutes().toString().padStart(2, '0');
+    const gun = now.getDate().toString().padStart(2, '0');
+    const ay = (now.getMonth() + 1).toString().padStart(2, '0'); // Ay 0'dan başladığı için +1 ekliyoruz.
+    const yil = now.getFullYear();
+    const tarihVeSaat = `${saat}:${dakika}-${gun}.${ay}.${yil}`;
+    //setCurrentDate(tarihVeSaat);
+    return tarihVeSaat;
+  }
+
+  const recordNotFound = (url, date, id) => {    
+    fetch("/api/error", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          "type": "404",
+          "location": url,
+          "date": date,
+          "uuid": id  
+        })
+      }
+    ) 
+  }
 
   const getMode = () => {
     const localStorage_mode = localStorage.getItem("n-mode");
+    console.log(localStorage_mode);
     setNightMode(JSON.parse(localStorage_mode));
 
     const body = document.body;
     const class1 = 'night-mode';
-    /* const class2 = 'light-mode'; */
 
-    if(nightMode && !body.classList.contains(class1)) {
+    if(nightMode) {
         body.classList.add(class1)
-        /* body.classList.remove(class2) */
     }
     else {
         body.classList.remove(class1);
-        /* body.classList.add(class2) */
     }
-}
+  }
 
-useEffect(() => {
-  getMode();
-})
+  useEffect(() => {
+    getMode();
+    const { asPath } = router;
+    recordNotFound(asPath, getDateAndTime(), Cookies.get("id"));
+  }, []);
+
 
   return (
     <>
@@ -49,4 +82,3 @@ useEffect(() => {
     </>
   )
 }
-1

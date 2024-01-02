@@ -28,7 +28,6 @@ export default async function handler (req, res) {
                 res.status(200).json({data: response});
             }
         } catch (error) {
-            console.log(colors.green("Beklenmedik hata: ", error));
             res.status(500).json({ error: 'Beklenmedik hata, kesinlikle beklemiyorduk.'});
         }
     } else {
@@ -91,12 +90,10 @@ async function addUserClick(url, time, type, city, uuid) {
             kategori = "/";
             url = "/";
         }
-        //console.log(colors.bgGreen("click: "), colors.brightGreen(url, time, kategori, type, city, uuid));
         await connection.execute(`INSERT INTO clicks 
         (url, time, kategori, type, city, clicked_user_uuid) 
         VALUES (?, ?, ?, ?, ?, ?)`, 
         [url, time, kategori, type, city, uuid]);
-     //return true;
     } catch (error) {
      //console.log("error: ", error);
     } finally {
@@ -151,13 +148,10 @@ async function getUserInfo(id, city) {
                 //return await getRandomArticle(connection, id, (6 - moded.length), moded);
                 const randomArticle = await getRandomArticle(connection, id, (6 - moded.length), moded);
                 const f1 = moded.concat(randomArticle);
-                console.log("urls-f1: ", f1);
                 if(f1.length < 6) {
-                    console.log("gönderiliyor 2");
                     return await setArticleTo6(connection, f1, (6 - f1.length));
                 }
                 else {
-                    console.log("gönderiliyor");
                     return f1;
                 }
             }
@@ -180,13 +174,7 @@ async function getUserInfo(id, city) {
 //!!const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
 //bölgenin en çok tıklananları getir
 async function getMostClickedFromCity(connection, category, city, id, num, rows=null) {
-
-    //!CTRL + F ile seçili olan
-    //! AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicke
-    //! burada bir yerde hata var. En son şunu ekledim
-    //! AND m.url != "${currentUrl}"
-
-    const urls = rows == null ? [""] : rows.map(row=>row.url);
+    const urls = rows == null || rows.length === 0 ? [""] : rows.map(row=>row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
     if(category == null) {
@@ -222,7 +210,7 @@ async function getMostClickedFromCity(connection, category, city, id, num, rows=
 
 //rastgele makale getir
 async function getRandomArticle(connection, id, num, rows=null) {
-    const urls = rows == null ? [""] : rows.map(row=>row.url);
+    const urls = rows == null || rows.length === 0 ? [""] : rows.map(row=>row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
     const [randomRows] = await connection.execute(`
@@ -242,7 +230,7 @@ async function getRandomArticle(connection, id, num, rows=null) {
 }
 
 async function setArticleTo6(connection, rows, num) {
-    const urls = rows.map(row => row.url);
+    const urls = rows.length === 0 ? [""] : rows.map(row => row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
     const [randomRows] = await connection.execute(`
@@ -258,8 +246,6 @@ async function setArticleTo6(connection, rows, num) {
 }
 
 async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, city, id) {
-
-    console.log("helloworld!");
 
     if(kategori1.length === kategori2.length) {
         const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);

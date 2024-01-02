@@ -19,7 +19,6 @@ export async function getStaticProps() {
   const addDate = "03.10.23";
 
   const jsonContentArray = [
-    //{"name": "CFMoto 300NK", "firma”: “CFMoto”, “tip”: “Naked”, “motorHacmi”: “292.4”, “sifirYuz”: “6.5”, “max”: “128”, “tuketim”: “4.2”, “agirlik”: “151”, “ulke”: “Çin”, “yakitKapasitesi”: “12.5”}
     {
       "num": "10",
       "url": "https://enonlar.com/${url}#bolum-10",

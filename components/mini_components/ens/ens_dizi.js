@@ -6,7 +6,7 @@ import Link from 'next/link';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
 export default function Ens_dizi({jsonContentArray}) {
-  const { supportWebp } = useAppContext();
+  const { supportWebp, showToast, nightMode, url } = useAppContext();
 
   const items = [];
 
@@ -19,14 +19,13 @@ export default function Ens_dizi({jsonContentArray}) {
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
               enid={"bolum-"+item.num}
-              supportWebp={supportWebp}>
-              <Dizi_kunye oyuncular={item.actors}
-              yonetmen={item.director}
-              kategoris={item.filmKategorisi}
-              bolumSayisi={item.eps}
-              yil={item.date}
-              puan={item.ratingValue}
-              puan2={item.metascore}
+              supportWebp={supportWebp}
+              showToast={showToast}
+              nightMode={nightMode}
+              url={url}>
+              <Dizi_kunye 
+                ozellikler={item.ozellikler}
+                parseHtml={cHtmlToJsx}
               />
               <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>

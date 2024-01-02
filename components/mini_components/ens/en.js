@@ -1,10 +1,29 @@
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp}) {
-    //! sayfa-icin-en
+export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, showToast, nightMode, url}) {
+    //! sayfa-içi-en
+
+
+    const router = useRouter();
+
+    const handleCopyClick = async () => {
+        try {
+            const kopyalanacakText = url+router.asPath+"/"+enid;
+            await navigator.clipboard.writeText(kopyalanacakText);
+            showToast("Link kopyalandı.");
+        } catch (err) {
+            //console.log("kopyalanamadı hata: ", err);
+        }
+    }
+
     return (
         <>
-            <h2 id={enid}>{baslik}</h2>
+            <div className='h2-div'>
+                <h2 id={enid}>{baslik}</h2>
+                <img className={['user-drag-none share-h2', nightMode ? 'share-h2-white' : ''].join(' ')} src='/share_black.png' alt='Başlığı paylaşma ikonu' 
+                onClick={() => handleCopyClick()}/>
+            </div>
             <div className={ supportWebp ? 'image-container' : ''}>
                 { supportWebp ? (
                         <Image
@@ -13,7 +32,6 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                         src={rsm} alt={rsm_alt}
                         fill
                         sizes="(max-width: 500px) 100vw, 100vw"
-                        /* max-width: 500px ise 500px yükle | sideları topla orta kaç px ise onu ver */
                         />                        
                     ) : (
                         <img
@@ -21,7 +39,6 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                         className='us-image'
                         src={rsm}
                         alt={rsm_alt}
-                        /* style={objectFit: "cover"} */
                       /> 
                     )
                 }

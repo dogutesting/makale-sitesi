@@ -27,25 +27,24 @@ export default function json_list(articleInfos, type, metin, arr) {
               "url": item.url,
               "name": item.name,
               "image": item.image,
-              "dateCreated": item.date,
+              "dateCreated": item.ozellikler["Yıl"],
               "director": {
                   "@type": "Person",
-                  "name": item.director
+                  "name": item.ozellikler["Yönetmen"]
                 },
-              "actor": item.actors,
-              "duration": item.duration,
+              "actor": item.ozellikler["oyuncular"],
+              "duration": item.ozellikler["Süre"],
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": item.ratingValue,
-                "bestRating": "10",
-                "ratingCount": item.ratingCount
+                "ratingValue": item.ozellikler["imdb"],
+                "bestRating": "10"
               }
             }
           }
         );
     }
     else if (type == "Series") {
-      let dateSegments = item.date.split('–'); // Tarihi ayırma
+      let dateSegments = item.ozellikler["Yıl"].split('–'); // Tarihi ayırma
       let startDate = dateSegments[0];
       let endDate = dateSegments.length > 1 ? dateSegments[1] : undefined;
     
@@ -63,9 +62,9 @@ export default function json_list(articleInfos, type, metin, arr) {
             "numberOfSeasons": item.eps,  // Serinin bölüm sayısını ekledik
             "director": {
                 "@type": "Person",
-                "name": item.director
+                "name": item.ozellikler["Yönetmen"]
               },
-            "actor": item.actors.map(actor => { // Aktörleri doğru formatta ekliyoruz
+            "actor": item.ozellikler["Oyuncular"].map(actor => { // Aktörleri doğru formatta ekliyoruz
               return {
                 "@type": "Person",
                 "name": actor
@@ -73,9 +72,8 @@ export default function json_list(articleInfos, type, metin, arr) {
             }),
             "aggregateRating": {
               "@type": "AggregateRating",
-              "ratingValue": item.ratingValue,
-              "bestRating": "10",
-              "ratingCount": item.ratingCount
+              "ratingValue": item.ozellikler["imdb"],
+              "bestRating": "10"
             }
           }
         }
@@ -100,21 +98,6 @@ export default function json_list(articleInfos, type, metin, arr) {
 
         
         articleText += " " + item.name + " " + cleanText(item.paragraf);
-        /* articleText += " " + item.name + " " + item.paragraf */
-       /*  let children = item.paragraf.props.children;
-        if(typeof(children) == "object") {
-          children.map(child => {
-            if(typeof(child) == "object") {
-              articleText += " " + child.props.children;
-            }
-            else {
-              articleText += " " + child;
-            }
-          })
-        }
-        else {
-          articleText += " " + children;
-        } */
   })
 
   //const articleBody = escapeString(summaryText.props.children + articleText);

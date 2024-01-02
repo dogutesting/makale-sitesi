@@ -2,18 +2,33 @@
 	-V-> herhalde çözüldü bende tam anlayamadım
 
 -> makale sayfasındaki önerileri ayarla
+ 	-V-> sanırım oldu gibi
+	
 
 -> ana sayfa mobil img'ler doğru gözükmüyor düzenle
+	-V-> doğru gibi
+
+-> CategoryBox doğru çalışmıyor
+	(400 px altında (css media ile alakasız bir noktada) doğru çalışıyor, ama yukarılarda çalışmıyor | ctrl + shift + r gerekli)
+	V
+
+-> sayfa içi h1 yanlarına paylaş ikonu ekle
+	-> V
+
+!-> details içindeki ul ve li'ler hatalı gözüküyor
+	-V? (olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir)
+		(Örneğin: neil gibson filmleri -> böyle bir sayfa yok 404 yönlendirildi -> 404'de neil-gibson anahtar kelimesi içeren url'lere bakılıp, en iyi 10 neil gibson kitabı sunulabilir vs vs.)
 
 -> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
 
--> sayfa içi h1 yanlarına paylaş ikonu ekle-> cookie:ci encrypt ile düzenle-> city'si gözükmesin
+
+-> 10 makale daha yaz.
 
 -> kullanılmayan npm i kütüphanelerini bul ve sil
-
--> günde minimum 1 makale yaz ve diğer proje üzerinde çalış
-
+-> Lighthouse'da hata var mı diye kontrol (dosya boyutlarını küçültmek için minify (bundle)
+	 veya https://github.com/johnagan/clean-webpack-plugin)
 -> google search console'da hata var mı diye kontrol et
+-> günde minimum 1 makale yaz ve diğer proje üzerinde çalış
 
 Belki:
 	-> fuse kütüphanesi ile arama barı eklenebilinir

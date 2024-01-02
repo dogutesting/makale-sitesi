@@ -2,11 +2,10 @@ import En from '@/components/mini_components/ens/en';
 import Motosiklet_kunye from '@/components/mini_components/kunyeler/motosiklet_kunye';
 import Reklam from '@/components/mini_components/reklam';
 import { useAppContext } from '@/context/ContextProvider';
-import Link from 'next/link';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
 export default function Ens_motosiklet({jsonContentArray}) {
-  const { supportWebp } = useAppContext();
+  const { supportWebp, showToast, nightMode, url } = useAppContext();
   const items = [];
   
   jsonContentArray.forEach((item, index) => {
@@ -19,9 +18,13 @@ export default function Ens_motosiklet({jsonContentArray}) {
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
               enid={"bolum-"+item.num}
-              supportWebp={supportWebp}>
+              supportWebp={supportWebp}
+              showToast={showToast}
+              nightMode={nightMode}
+              url={url}>
               <Motosiklet_kunye
               ozellikler={item.ozellikler}
+              parseHtml= {cHtmlToJsx}
               />
               <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>          

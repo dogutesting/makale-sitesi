@@ -30,13 +30,13 @@ export default function OtherContents() {
     if(res.ok) {
       const response = await res.json();
       setOthers(response.data);
-      console.log("!RESPONSE: ", response.data);
     }
     else {
       fetch(url+"/api/error", {
           method: "POST",
           headers: {"Content-Type": "application/json"},
           body: JSON.stringify({
+            "type": "other",
             "location": "other-contents",
             "error": res.status + " - " + res.statusText  
           })
@@ -47,14 +47,9 @@ export default function OtherContents() {
 
   useEffect(() => {
     if(userInfo.id && userInfo.city) {
-      //console.log(userInfo.id + " ve " + userInfo.city);
       getArticlesForUser();
     }
   }, [userInfo])
-
-  useEffect(() => {
-    //console.log("%c!SONRA DÜZELT! -> supportWebp: " + supportWebp, "color: red");
-  }, [])
 
   return (
     <>

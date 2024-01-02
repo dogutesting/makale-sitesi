@@ -8,6 +8,12 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
   const categoryBoxRef = useRef(null);
   const categoryContainerRef = useRef(null);
 
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  }
+
   const handleButtonClick = (buttonText) => {
     setHandleCategory(buttonText);
     newCategoriesSequence(kategoriler, buttonText);
@@ -53,8 +59,7 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
     );
   };
 
-  useEffect(() => {
-    
+  const checkCategoryLeftRight = () => {
     if (categoryContainerRef.current) {
       const containerWidth = categoryBoxRef.current.offsetWidth;
       const scrollWidth = categoryContainerRef.current.scrollWidth;
@@ -75,9 +80,20 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
         setShowLeftButton(true);
         setShowRightButton(false);
       }
-
     }
-  }, [scrollOffset]);
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    checkCategoryLeftRight();
+  }, [scrollOffset, windowWidth, kategoriler]);
 
   const scrollLeft = () => {
     setScrollOffset(scrollOffset - 100);

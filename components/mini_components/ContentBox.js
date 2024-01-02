@@ -1,10 +1,9 @@
+import { useAppContext } from '@/context/ContextProvider';
 import Image from 'next/image';
 import Link from 'next/link';
 /* import { useAppContext } from "@/context/ContextProvider"; */
 
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
-
-  /* supportWebp = false; */
 
   const goTag = (e, kategori) => {
     //const url = `/?kategori=${kategori}`;
@@ -14,8 +13,8 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
     window.scrollTo(0, 0);
   }
 
-  //! mobil uygulamada bunların nasıl gözüktüğüne bakmanı istiyorum
-  //! supportWebp' false yap true yap test et.
+
+  //pri && console.log("priority: " + pri + " - ");
 
   return (
     <Link className={['index-content-box', nightMode ? 'icb-night' : 'icb-light'].join(' ')} href={url}>
@@ -25,7 +24,7 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
                         <Image
                             className='index-image'
                             priority={pri}
-                            src={resim} alt={"rsm_alt"}
+                            src={resim} alt={baslik + " görseli"}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"
                         />
@@ -34,7 +33,7 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
                             className='us-image'
                             loading='lazy'
                             src={resim}
-                            alt={"rsm_alt"}
+                            alt={baslik + " görseli"}
                         /> 
                     )
                 } 
