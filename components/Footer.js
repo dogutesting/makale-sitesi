@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 export default function Footer() {
+    //! buraya kısaca sayfanın telif haklarını, sayfayı kullanarak hangi izinlerin olduğunu falan yaz
   return (
     <footer>
         <div className="side"></div>

@@ -1,15 +1,16 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function Eniyi250ccNakedMain() {
+    const { nightMode } = useAppContext();
+
     const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
     const url = "en-iyi-10-250-cc-naked-motosiklet";
     const baslik = "En İyi 10 250 CC Naked Motosiklet";
     const metin = "250cc naked motosikletler, hafiflikleri, atik yapıları ve şehir içi kullanım kolaylıkları ile bilinirler. İster yeni başlayan bir sürücü olun, ister deneyimli bir motor tutkunu, bu segmentteki motosikletler, sade ve fonksiyonel tasarımları ile geniş bir kitleye hitap ediyor. Aşağıda, birbirinden estetik ve performanslı en iyi 10 250cc naked motosikleti detaylı özellikleri ve teknik analizler ışığında sıralayarak sizler için bir araya getiriyoruz. Her bir motosikletin tasarımından, motor performansına, kullanım kolaylığına kadar birçok detayı bulacaksınız. İyi okumalar!";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-  
+
     const okunmaSuresi = "5";
     const kategori = "motosiklet"; //türkce karakter olmasin
     const minAge = "18";
@@ -17,7 +18,7 @@ export async function getStaticProps() {
     const eklenmeTarihi = "2023-10-03T01:36:00+03:00";
     const degistirilmeTarihi = "2023-11-19T01:13:00+03:00";
     const addDate = "03.10.23";
-  
+
     const jsonContentArray = [
         {
             "num": "10",
@@ -200,46 +201,21 @@ export async function getStaticProps() {
             "paragraf": "Japon tasarımının ve mühendisliğinin bir harikası olan Yamaha MT-25, dinamik çizgileri ve agresif tasarımı ile dikkat çeker. MT-25, sürücüsüne şehir içi trafiğinde bile esneklik ve manevra kabiliyeti sunar. Yüksek devirlerde bile pürüzsüz ve dengeli bir performans sunan motoru, bu motosikleti hem yeni başlayanlar hem de deneyimli sürücüler için cazip kılar. Konforlu sürüş pozisyonu ve düşük yakıt tüketimi, MT-25'i günlük kullanım için ideal bir seçenek haline getirir. Genel olarak, Yamaha MT-25, fiyat/performans oranı ve sürüş deneyimi ile segmentinde lider bir konuma sahiptir."
         }
     ];
-  
-    //const ana_resim = jsonContentArray[0].image;
+
     const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-250-cc-naked-motosiklet.png";
     const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
-    
+
     const jsonList = moviesAndSeriesJson(articleInfos,
     "Motosiklet", 
     metin,
     jsonContentArray
     )
 
-    return {
-        props: {
-            baslik,
-            description,
-            keywordsArray,
-            ana_resim,
-            url,
-            jsonList,
-            addDate,
-            okunmaSuresi,
-            kategori,
-            metin,
-            jsonContentArray
-        },
-        revalidate: 60 * 60 * 24,
-    }
-}
-
-export default function Eniyi250ccNakedMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
-
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

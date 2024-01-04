@@ -172,7 +172,7 @@ const handleClick = (event) => {
   if(event.target.closest('a') != null) {
     const moddedUrl = new URL(event.target.closest('a').href).pathname.slice(1);
     /* if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) { */
-    if(event.button === 0 || event.button === 1) {
+    if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) {
       addClick(moddedUrl, event.button);
     }
   }

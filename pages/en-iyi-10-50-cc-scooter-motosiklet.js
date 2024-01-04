@@ -1,9 +1,9 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function Eniyi50ccScooterMain() {
+    const { nightMode } = useAppContext();
 
     const keywordsArray = ["en", "iyi", "50cc", "motosiklet", "scooter"];
     const url = "en-iyi-10-50-cc-scooter-motosiklet";
@@ -201,48 +201,20 @@ export async function getStaticProps() {
         }
     ];
 
-    //const ana_resim = jsonContentArray[0].image;
     const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-50-cc-scooter-motosiklet.png";
 
     const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
-
     const jsonList = moviesAndSeriesJson(articleInfos,
     "Motosiklet", 
     metin,
     jsonContentArray
     )
 
-    return {
-        props: {
-            baslik,
-            description,
-            keywordsArray,
-            ana_resim,
-            url,
-            jsonList,
-            addDate,
-            okunmaSuresi,
-            kategori,
-            metin,
-            jsonContentArray
-        },
-        revalidate: 60 * 60 * 24,
-    }
-
-}
-
-
-export default function Eniyi50ccScooterMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
-
   return (
-        <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-                okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-                kategori={kategori} metin={metin}>
-
-            <Ens_motosiklet jsonContentArray={jsonContentArray}/>
-
-        </ClassicArticle>
+    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+    </ClassicArticle>
   )
 }

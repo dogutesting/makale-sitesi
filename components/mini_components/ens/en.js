@@ -1,15 +1,11 @@
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
-export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, showToast, nightMode, url}) {
+export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, showToast, nightMode, url, sayfaUrl}) {
     //! sayfa-içi-en
-
-
-    const router = useRouter();
 
     const handleCopyClick = async () => {
         try {
-            const kopyalanacakText = url+router.asPath+"/"+enid;
+            const kopyalanacakText = url+"/"+sayfaUrl+"/"+enid;
             await navigator.clipboard.writeText(kopyalanacakText);
             showToast("Link kopyalandı.");
         } catch (err) {

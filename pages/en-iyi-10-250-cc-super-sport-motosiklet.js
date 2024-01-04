@@ -1,9 +1,10 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function Eniyi250ccSuperMain() {
+  const { nightMode } = useAppContext();
+
   const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-250-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 250 CC Super Sport Motosiklet";
@@ -201,45 +202,19 @@ export async function getStaticProps() {
   }
   ];
 
-  //const ana_resim = jsonContentArray[0].image;
   const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-250-cc-super-sport-motosiklet.png";
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
-  
   const jsonList = moviesAndSeriesJson(articleInfos,
   "Motosiklet", 
   metin,
   jsonContentArray
   )
 
-  return {
-    props: {
-        baslik,
-        description,
-        keywordsArray,
-        ana_resim,
-        url,
-        jsonList,
-        addDate,
-        okunmaSuresi,
-        kategori,
-        metin,
-        jsonContentArray
-    },
-    revalidate: 60 * 60 * 24,
-  }
-}
-
-export default function Eniyi250ccSuperMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
-
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

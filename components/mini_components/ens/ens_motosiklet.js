@@ -4,7 +4,7 @@ import Reklam from '@/components/mini_components/reklam';
 import { useAppContext } from '@/context/ContextProvider';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
-export default function Ens_motosiklet({jsonContentArray}) {
+export default function Ens_motosiklet({jsonContentArray, sayfaUrl}) {
   const { supportWebp, showToast, nightMode, url } = useAppContext();
   const items = [];
   
@@ -21,7 +21,8 @@ export default function Ens_motosiklet({jsonContentArray}) {
               supportWebp={supportWebp}
               showToast={showToast}
               nightMode={nightMode}
-              url={url}>
+              url={url}
+              sayfaUrl={sayfaUrl}>
               <Motosiklet_kunye
               ozellikler={item.ozellikler}
               parseHtml= {cHtmlToJsx}

@@ -27,8 +27,14 @@ export default async function handler (req, res) {
                                                    jsonBody.data.city);
                 res.status(200).json({data: response});
             }
+            if(jsonBody.req === "guil") { //* get-user-info-limitless
+                currentUrl = jsonBody.data.currentUrl;
+                const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.city);
+                res.status(200).json({data: response});
+            }
         } catch (error) {
-            res.status(500).json({ error: 'Beklenmedik hata, kesinlikle beklemiyorduk.'});
+            console.log(colors.red("hata: ", error));
+            res.status(500).end();
         }
     } else {
         res.status(405).end();
@@ -83,13 +89,13 @@ async function addUserClick(url, time, type, city, uuid) {
                 kategori = rows[0].kategori;
             }
             else {
-                kategori = "mumkundegil!";
+                kategori = "bos";
             }
         }
-        else {
+        /* else {
             kategori = "/";
             url = "/";
-        }
+        } */
         await connection.execute(`INSERT INTO clicks 
         (url, time, kategori, type, city, clicked_user_uuid) 
         VALUES (?, ?, ?, ?, ?, ?)`, 
@@ -100,6 +106,121 @@ async function addUserClick(url, time, type, city, uuid) {
      connection && connection.end();
     }
  }
+
+async function getUserInfoLimitless(id, city) { 
+    let connection;
+    try {
+        connection= await connectToDatabase();
+        const [rows] = await connection.execute(
+            "SELECT kategori, COUNT(*) AS sayi " +
+            "FROM clicks " +
+            "WHERE clicked_user_uuid = ? AND url != ? " +
+            "GROUP BY kategori " +
+            "ORDER BY sayi DESC " +
+            "LIMIT 3",
+            [id, "/"]
+        );
+        const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
+
+        if(enFazlaTiklananKategoriler.length > 0) {
+            //! IF
+            const placeholders = enFazlaTiklananKategoriler.map(() => '?').join(', ');
+
+            const [cityMost] = await connection.execute(`
+            SELECT c.url, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.city = ? AND c.clicked_user_uuid != ? AND m.kategori IN (${placeholders}) 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != ?
+            GROUP BY c.url 
+            ORDER BY clickCount DESC`, [city, id, ...enFazlaTiklananKategoriler, id, currentUrl]);
+
+            const cityMostUrls = cityMost.length === 0 ? [""] : cityMost.map(item => item.url);
+            const placeholders_2 = cityMostUrls.map(() => '?').join(', ');
+
+            const [cityMostWithoutCategory] = await connection.execute(`
+            SELECT c.url, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.city = ? AND c.clicked_user_uuid != ? AND m.url NOT IN (${placeholders_2}) 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != ?
+            GROUP BY c.url 
+            ORDER BY clickCount DESC`, [city, id, ...cityMostUrls, id, currentUrl]);
+
+            const cityMostAndCats = cityMost.concat(cityMostWithoutCategory);
+            const placeholders_3 = cityMostAndCats.map(() => '?').join(', ');
+
+            const [top_to_bot_clicks] = await connection.execute(`
+            SELECT c.url, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.clicked_user_uuid != ? AND m.url NOT IN (${placeholders_3}) 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != ?
+            GROUP BY c.url 
+            ORDER BY clickCount DESC`, [id, ...cityMostAndCats, id, currentUrl]);
+
+            const before_final = cityMostAndCats.concat(top_to_bot_clicks);
+            const placeholders_4 = before_final.map(() => '?').join(', ');
+            
+            const [top_to_bot_makales] = await connection.execute(`
+            SELECT url FROM makaleler 
+            WHERE url NOT IN (${placeholders_4}) 
+            AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
+
+            return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined);
+        }
+        else {
+            //! ELSE
+            const [cityMost] = await connection.execute(`
+            SELECT c.url, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.city = ? AND c.clicked_user_uuid != ? 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != ?
+            GROUP BY c.url 
+            ORDER BY clickCount DESC`, [city, id, id, currentUrl]);
+
+            const cityMostUrls = cityMost.length === 0 ? [""] : cityMost.map(item => item.url);
+            const placeholders = cityMostUrls.map(() => '?').join(', ');
+
+            const [top_to_bot_clicks] = await connection.execute(`
+            SELECT c.url, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.clicked_user_uuid != ? AND m.url NOT IN (${placeholders}) 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != ?
+            GROUP BY c.url 
+            ORDER BY clickCount DESC`, [id, ...cityMostUrls, id, currentUrl]);
+
+            const before_final = cityMost.concat(top_to_bot_clicks).map(item => item.url);
+            const placeholders_2 = before_final.map(() => '?').join(', ');
+
+            const [top_to_bot_makales] = await connection.execute(`
+            SELECT url FROM makaleler 
+            WHERE url NOT IN (${placeholders_2}) 
+            AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
+
+            return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined);
+        }
+    } catch (error) {
+        /* throw error; */
+        console.log("error", error);
+    } finally {
+        connection && connection.end();
+    }
+}
 
 async function getUserInfo(id, city) {
     let connection;
@@ -116,17 +237,14 @@ async function getUserInfo(id, city) {
             [id, "/"]
         );
 
-        //* geoLocation eklediğimiz için bu kısımda random yerine o bölgede en çok tıklanan
-            //* içeriklerden rastgele vereceğiz.
-        //! Eğer tıklanmamışsa o zaman RANDOM verilecek
-
         const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
 
             const cityMost = await getMostClickedFromCity(connection, null, city, id, 6);
+
             if(cityMost.length < 6) {
-                const randomArticle = await getRandomArticle(connection, id, city, (6 - cityMost.length), cityMost);
+                const randomArticle = await getRandomArticle(connection, id, (6 - cityMost.length), cityMost);
                 const f1 = cityMost.concat(randomArticle);
                 if(f1.length < 6) {
                     return await setArticleTo6(connection, f1, (6 - f1.length));
@@ -170,8 +288,6 @@ async function getUserInfo(id, city) {
     }
 }
 
-
-//!!const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
 //bölgenin en çok tıklananları getir
 async function getMostClickedFromCity(connection, category, city, id, num, rows=null) {
     const urls = rows == null || rows.length === 0 ? [""] : rows.map(row=>row.url);
@@ -183,12 +299,12 @@ async function getMostClickedFromCity(connection, category, city, id, num, rows=
             COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori 
             FROM clicks c 
             JOIN makaleler m ON c.url = m.url 
-            WHERE c.url != ? AND c.city = ? AND c.clicked_user_uuid != ? AND c.url NOT IN (${placeholders}) 
+            WHERE c.city = ? AND c.clicked_user_uuid != ? AND c.url NOT IN (${placeholders}) 
             AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
             AND m.url != "${currentUrl}"
             GROUP BY c.url, m.kategori  
             ORDER BY clickCount DESC 
-            LIMIT ?`, ["/", city, id, ...urls, id, num]);
+            LIMIT ?`, [city, id, ...urls, id, num]);
         return cityMost;
     }
     else {
@@ -197,13 +313,13 @@ async function getMostClickedFromCity(connection, category, city, id, num, rows=
         COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
         FROM clicks c 
         JOIN makaleler m ON c.url = m.url 
-        WHERE c.url != ? AND c.city = ? AND c.clicked_user_uuid != ? AND m.kategori = ? 
+        WHERE c.city = ? AND c.clicked_user_uuid != ? AND m.kategori = ? 
         AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
         AND m.url NOT IN (${placeholders}) 
         AND m.url != "${currentUrl}"
         GROUP BY c.url 
         ORDER BY clickCount DESC 
-        LIMIT ?`, ["/", city, id, category, id, ...urls, num]);
+        LIMIT ?`, [city, id, category, id, ...urls, num]);
         return cityMost;
     }
 }
@@ -229,8 +345,9 @@ async function getRandomArticle(connection, id, num, rows=null) {
     return randomRows;
 }
 
+//!hata
 async function setArticleTo6(connection, rows, num) {
-    const urls = rows.length === 0 ? [""] : rows.map(row => row.url);
+    const urls = null || rows.length === 0 ? [""] : rows.map(row => row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
     const [randomRows] = await connection.execute(`

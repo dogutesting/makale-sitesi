@@ -1,9 +1,10 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_film from '@/components/mini_components/ens/ens_film';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function MostMoviesMain() {
+  const { nightMode } = useAppContext();
+
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
@@ -196,37 +197,12 @@ export async function getStaticProps() {
   metin,
   jsonContentArray
   )
-  
-  return {
-    props: {
-        baslik,
-        description,
-        keywordsArray,
-        ana_resim,
-        url,
-        jsonList,
-        addDate,
-        okunmaSuresi,
-        kategori,
-        metin,
-        jsonContentArray
-    },
-    revalidate: 60 * 60 * 24,
-  }
-
-}
-
-export default function MostMoviesMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
 
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-      <Ens_film jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

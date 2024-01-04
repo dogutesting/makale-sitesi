@@ -5,7 +5,7 @@ import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
-export default function Ens_dizi({jsonContentArray}) {
+export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
   const { supportWebp, showToast, nightMode, url } = useAppContext();
 
   const items = [];
@@ -22,7 +22,8 @@ export default function Ens_dizi({jsonContentArray}) {
               supportWebp={supportWebp}
               showToast={showToast}
               nightMode={nightMode}
-              url={url}>
+              url={url}
+              sayfaUrl={sayfaUrl}>
               <Dizi_kunye 
                 ozellikler={item.ozellikler}
                 parseHtml={cHtmlToJsx}

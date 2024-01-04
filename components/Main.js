@@ -1,8 +1,6 @@
 import { useAppContext } from '@/context/ContextProvider';
 import Header from '@/components/Header';
 /* import Footer from '@/components/Footer'; */
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 
 
 export default function Main({children}) {

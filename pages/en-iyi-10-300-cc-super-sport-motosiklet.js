@@ -1,9 +1,10 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function Eniyi300ccSuperMain() {
+  const { nightMode } = useAppContext();
+
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-300-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 300 CC Super Sport Motosiklet";
@@ -210,35 +211,11 @@ export async function getStaticProps() {
   jsonContentArray
   )
 
-  return {
-    props: {
-        baslik,
-        description,
-        keywordsArray,
-        ana_resim,
-        url,
-        jsonList,
-        addDate,
-        okunmaSuresi,
-        kategori,
-        metin,
-        jsonContentArray
-    },
-    revalidate: 60 * 60 * 24,
-  }
-}
-
-export default function Eniyi300ccSuperMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
-
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

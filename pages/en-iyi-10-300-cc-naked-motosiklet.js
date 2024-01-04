@@ -1,9 +1,10 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import Ens_motosiklet from '@/components/mini_components/ens/ens_motosiklet';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export async function getStaticProps() {
+export default function Eniyi300ccNakedMain() {
+  const { nightMode } = useAppContext();
+
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const url = "en-iyi-10-300-cc-naked-motosiklet";
   const baslik = "En İyi 10 300 CC Naked Motosiklet";
@@ -200,7 +201,6 @@ export async function getStaticProps() {
     "paragraf": "Japon üretici Yamaha'nın MT-03 modeli, sportif ve agresif tasarımı ile dikkat çeker. 321cc motor hacmi, tatmin edici bir performans ve dinamik bir sürüş deneyimi sunar. Yol tutuşu ve süspansiyon sistemi, sportif sürüşleri destekler ve konforu korur. Gaz tepkimesi hızlı, frenler güçlü ve hassas. MT-03, hem estetik hem de performans açısından, bu segmentteki sürücüler için etkileyici bir seçenektir."
   }
   ];
-
   
   const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-300-cc-naked-motosiklet.png";
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
@@ -211,35 +211,11 @@ export async function getStaticProps() {
   jsonContentArray
   )
 
-  return {
-    props: {
-        baslik,
-        description,
-        keywordsArray,
-        ana_resim,
-        url,
-        jsonList,
-        addDate,
-        okunmaSuresi,
-        kategori,
-        metin,
-        jsonContentArray
-    },
-    revalidate: 60 * 60 * 24,
-  }
-}
-
-export default function Eniyi300ccNakedMain({baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-  const { nightMode } = useAppContext();
-
   return (
     <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin}>
-
-        <Ens_motosiklet jsonContentArray={jsonContentArray}/>
-
+            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }

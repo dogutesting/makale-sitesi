@@ -47,7 +47,7 @@ export default function OtherContents() {
 
   useEffect(() => {
     if(userInfo.id && userInfo.city) {
-      getArticlesForUser();
+      getArticlesForUser(url, userInfo, router);
     }
   }, [userInfo])
 

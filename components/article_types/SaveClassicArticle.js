@@ -7,9 +7,9 @@ import dynamic from 'next/dynamic';
 
 import React, { useRef } from 'react';
 
- const ClassicArticle = React.forwardRef((
+ export default function ClassicArticle (
     {baslik, description, keywordsArray, ana_resim, url, jsonList,
-     nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}, ref) => {
+     nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
 
   let DynamicComponent = null;
   //!önemli
@@ -49,6 +49,4 @@ import React, { useRef } from 'react';
       </Main>
     </div>
   );
-});
-
-export default ClassicArticle;
+};

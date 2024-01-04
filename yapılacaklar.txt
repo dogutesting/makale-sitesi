@@ -15,15 +15,31 @@
 -> sayfa içi h1 yanlarına paylaş ikonu ekle
 	-> V
 
-!-> details içindeki ul ve li'ler hatalı gözüküyor
-	-V? (olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir)
-		(Örneğin: neil gibson filmleri -> böyle bir sayfa yok 404 yönlendirildi -> 404'de neil-gibson anahtar kelimesi içeren url'lere bakılıp, en iyi 10 neil gibson kitabı sunulabilir vs vs.)
+-> details içindeki ul ve li'ler hatalı gözüküyor
+		
+-> addClick'deki / olayı kaldırılsın, performans için V
 
--> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+!-> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+	-> react-infinite-scroll içerisindeki hatalar
+		0-) her sayfanın getStaticProps özelliği alta çekilmeli, import getStaticProps'u çalıştırmıyor -> V
+		1-) paylaş butonu doğru çalışmıyor -> V
+		2-) sayfa yenilendiğinde en son bakılan yerden yenilenecek
+			-> observer veya h1 ve end etiketleri takip edilebilir
+		3-) bakılan sayfalar database'e eklenmiyor
+		4-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
+
+
+-> users ekleme çalışmıyor
+
+-> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
+okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
 
 
 -> 10 makale daha yaz.
 
+
+-> console.log'ları yayınlamadan önce kaldır. Özellikle userKey gibi dosyalarda.
+-> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir
 -> kullanılmayan npm i kütüphanelerini bul ve sil
 -> Lighthouse'da hata var mı diye kontrol (dosya boyutlarını küçültmek için minify (bundle)
 	 veya https://github.com/johnagan/clean-webpack-plugin)
