@@ -23,8 +23,10 @@
 	-> react-infinite-scroll içerisindeki hatalar
 		0-) her sayfanın getStaticProps özelliği alta çekilmeli, import getStaticProps'u çalıştırmıyor -> V
 		1-) paylaş butonu doğru çalışmıyor -> V
+		
 		2-) sayfa yenilendiğinde en son bakılan yerden yenilenecek
 			-> observer veya h1 ve end etiketleri takip edilebilir
+				2.1 -> adblock varken observer çalışmıyor
 		3-) bakılan sayfalar database'e eklenmiyor
 		4-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
 
@@ -34,6 +36,7 @@
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
 
+-> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
 
 -> 10 makale daha yaz.
 

@@ -1,8 +1,9 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
+import { useEffect, forwardRef } from 'react';
 
-export default function MansNeedWatch() {
+function MansNeedWatch({addRef}) {
   const { nightMode } = useAppContext();
 
   const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
@@ -192,10 +193,12 @@ export default function MansNeedWatch() {
   )
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
+    <ClassicArticle addRef={addRef} baslik={baslik} description={description} keywordsArray={keywordsArray}
         ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
             kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
     </ClassicArticle>
   )
 }
+
+export default MansNeedWatch;

@@ -1,14 +1,19 @@
+import 'intersection-observer';
+
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useRouter } from 'next/router';
 
 import dynamic from 'next/dynamic';
 
-export default function MostSeriesMain() {
+import { forwardRef } from 'react';
+import Hello from './hello';
+
+export default function MostSeriesMain10() {
   const { nightMode, url: defautlUrl, userInfo } = useAppContext();
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
@@ -205,6 +210,10 @@ export default function MostSeriesMain() {
   const [loadedPages, setLoadedPages] = useState([]);
   const [pageCount, setPageCount] = useState(0);
 
+  const classicArticleRefs = useRef([]);
+  const currentPageRef = useRef(1);
+  const [dummyState, setDummyState] = useState(0);
+
   const getAllArticlesForUser = async () => {
       const res = await fetch(defautlUrl+"/api/userKey", {
         method: "POST",
@@ -221,8 +230,9 @@ export default function MostSeriesMain() {
         })
       })
       if(res.ok) {
-        const response = await res.json();
-        setItems(response.data);
+        /* const response = await res.json();
+        setItems(response.data); */
+        //setItems([{url: 'erkeklerin-izlemesi-gereken-en-iyi-10-film'}, {url: 'en-yuksek-imdb-puanina-sahip-10-dizi'}]);
       }
       else {
         //! buradaki hataları mysql'e kaydet
@@ -231,9 +241,10 @@ export default function MostSeriesMain() {
   }
 
   useEffect(() => {
-      if(userInfo.id && userInfo.city) {
+      /* if(userInfo.id && userInfo.city) {
           getAllArticlesForUser();
-      }
+      } */
+      /* setItems([{url: 'erkeklerin-izlemesi-gereken-en-iyi-10-film'}, {url: "en-iyi-10-300-cc-super-sport-motosiklet"}]); */
   }, [userInfo]);
 
   const fetchData = async () => {
@@ -242,81 +253,132 @@ export default function MostSeriesMain() {
       const PageComponent = dynamic(() => import(`/pages/${nextPageUrl}`));
       setLoadedPages(prevPages => [...prevPages, PageComponent]);
       setPageCount(prevCount => prevCount + 1);
-      //window.history.replaceState(null, null, `${defautlUrl}/${nextPageUrl}`)
+      
     } catch (error) {
       //!
     }
   }
-
   
-  /* const [currentPage, setCurrentPage] = useState(1);
+  const handleScrollToPage = (pageNumber) => {
+    console.log(`Kullanıcı şu an sayfa ${pageNumber}'da`);
+    // Burada sayfa değiştiğinde yapılacak işlemleri ekleyebilirsiniz
+  };
 
-  const classicArticleRefs = useRef([]);
-  const observer = new IntersectionObserver(handleScroll, options);
+  /* const addRef = (ref) => {
+    
+    if(ref) {
+      classicArticleRefs.current.push(ref);"1"
+    }
+  }; */
 
-  useEffect(() => {
-    const handleScrollToPage = (pageNumber) => {
-      console.log(`Kullanıcı şu an sayfa ${pageNumber}'da`);
-      // Burada sayfa değiştiğinde yapılacak işlemleri ekleyebilirsiniz
-    };
-
-    const handleScroll = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const pageIndex = classicArticleRefs.current.indexOf(entry.target);
-          if (currentPage !== pageIndex + 1) {
-            setCurrentPage(pageIndex + 1);
-            handleScrollToPage(pageIndex + 1);
-          }
+  //! sorun burada bir yerde
+  const handleScroll = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const pageIndex = classicArticleRefs.current.indexOf(entry.target);
+        if (currentPageRef.current !== pageIndex + 1) {
+          console.log("şu an: " + (pageIndex + 1) + " sayfasındasınız");
+          currentPageRef.current = pageIndex + 1;
+          handleScrollToPage(pageIndex + 1);
         }
-      });
-    };
-
+      }
+    });
+  };
+  
+  useEffect(() => {
     const options = {
       root: null,
       rootMargin: '0px',
       threshold: 0.5,
     };
 
+    const observer = new IntersectionObserver(handleScroll, options);
+
     classicArticleRefs.current.forEach((ref) => {
-      observer.observe(ref);
+      if (ref && ref instanceof Element) {
+        observer.observe(ref);
+      }
     });
 
     return () => {
       observer.disconnect();
     };
-  }, [currentPage]);
+  }, []);
 
-  const addRef = (ref) => {
-    if (ref && !classicArticleRefs.current.includes(ref)) {
-      classicArticleRefs.current.push(ref);
+  const addRef = (val) => {
+    /* refArray.current.push(val); */
+    console.log("val: ", val);
+    if(val && classicArticleRefs.current.indexOf(val) === -1) {
+      classicArticleRefs.current.push(val);
+      /* setDummyState((prevState) => prevState + 1); */
+      /* observer.observe(val); */
     }
-  };
+  }
 
+  const addAfter = async (timer) => {
+    console.log("waiting: " + timer + " seconds");
+
+     const backData = await new Promise((resolve) => {
+      setTimeout(() => {
+        resolve (
+        <ClassicArticle
+        addRef={addRef}
+        baslik={baslik} description={description} keywordsArray={keywordsArray}
+           ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+             kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        </ClassicArticle>
+        )
+      }, timer * 1000);
+     });
+    return backData;
+  }
+  const [result, setResult] = useState(null);
+
+  const justWait = async (timer) => {
+    const add2 = await addAfter(timer);
+    setResult(add2);
+  }
+  
   useEffect(() => {
-    console.log("classicArticleRefs: ", classicArticleRefs);
-  }, [classicArticleRefs]) */
+    //justWait();
+    //setResult(addAfter());
+    //justWait(0);
+  }, []);
+  
 
   return (
     <>
-      <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-          ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-      </ClassicArticle>
 
-      <InfiniteScroll
-        dataLength={loadedPages.length}
-        next={fetchData}
-        hasMore={pageCount < items.length}
-        /* loader={<h4>Loading...</h4>} */
-        loader={<></>}>
-          {
-            loadedPages.map((PageComponent, index) => (
-              <PageComponent key={index}/>
-            ))
-          }
-      </InfiniteScroll>
+        <ClassicArticle
+        addRef={addRef}
+         baslik={baslik} description={description} keywordsArray={keywordsArray}
+            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        </ClassicArticle>
+
+        <ClassicArticle
+        addRef={addRef}
+         baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
+            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        </ClassicArticle>
+
+        {/* {!result ? "Waiting" : result} */}
+
+        {/* <InfiniteScroll
+          dataLength={loadedPages.length}
+          next={fetchData}
+          hasMore={pageCount < items.length}
+          loader={<h4>Loading...</h4>}>
+            {
+              loadedPages.map((PageComponent, index) => (
+                <PageComponent key={index} addRef={addRef}/>
+              ))
+            }
+        </InfiniteScroll> */}
     </>
   )
 }

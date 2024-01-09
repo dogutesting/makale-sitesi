@@ -104,6 +104,7 @@ export default function App({ Component, pageProps}) {
             key="main-jsonld"
           />
       </Head>
+      <div id="toast-container"></div>
       <Component {...pageProps} />
     </Wrapper>
   )

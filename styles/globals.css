@@ -145,7 +145,8 @@ p {
   user-select: none;
 }
 .link-night a{
-  color: #5a97f9;
+  /* color: #5a97f9; */
+  color: white;
 }
 .link-night a:active {
   color: #3012b8;
