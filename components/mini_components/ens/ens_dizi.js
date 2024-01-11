@@ -3,14 +3,20 @@ import Dizi_kunye from '@/components/mini_components/kunyeler/dizi_kunye';
 import Reklam from '@/components/mini_components/reklam';
 import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
+import Custom_Waypoint from '../CustomWaypoint';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
 
 export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
-  const { supportWebp, showToast, nightMode, url } = useAppContext();
+  const { supportWebp, showToast, nightMode, url,  } = useAppContext();
 
   const items = [];
 
   jsonContentArray.forEach((item, index) => {
+
+      /* if(index + 1 == 1) {
+        items.push(<Custom_Waypoint key={index+1+"wp"} type={"addClick"} fullUrl={url+"/"+sayfaUrl} currentPage={currentPage}/>)
+      } */
+
       items.push(
         <section key={index}>
           <En
@@ -36,7 +42,7 @@ export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
       items.push(<hr key={index+"hr1"} className='split'/>);
       
       let addHr = true;
-      if ((index + 1) % 2 === 0 && (index + 1) != 10) {
+      if ((index + 1) % 3 === 0 && (index + 1) != 10) {
         items.push(
           <Reklam key={index+"r"} />
         );

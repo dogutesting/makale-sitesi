@@ -4,13 +4,11 @@ import Details from "../Details";
 import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/ana_gorsel";
 import dynamic from 'next/dynamic';
-import { useEffect, useRef } from "react";
+import Custom_Waypoint from "../mini_components/CustomWaypoint";
 
 export default function ClassicArticle (
-    {addRef, baslik, description, keywordsArray, ana_resim, url, jsonList,
+    {currentPage, baslik, description, keywordsArray, ana_resim, url, jsonList,
      nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-
-    const localRef = useRef();
 
   let DynamicComponent = null;
   //!önemli
@@ -19,12 +17,7 @@ export default function ClassicArticle (
     DynamicComponent = dynamic(() => import('../mini_components/ens/ens_'+kategori));
   }
 
-  useEffect(() => {
-    addRef(localRef.current);
-  }, [])
-
   return (
-  <div ref={localRef}>
     <Main>
         <HeadHtml 
         baslik={baslik}
@@ -43,15 +36,16 @@ export default function ClassicArticle (
 
           <Ana_gorsel ana_resim={ana_resim} baslik={baslik}/>
           <p className='summary_text'>{metin}</p>
+          
+          <Custom_Waypoint type={"addClick"} fullUrl={"düzenle!!!"+url} currentPage={currentPage}/>
 
           <hr className='split'/>
         
           { DynamicComponent !== null && 
-          <DynamicComponent jsonContentArray={jsonContentArray} sayfaUrl={url}/> }
+          <DynamicComponent jsonContentArray={jsonContentArray} sayfaUrl={url} currentPage={currentPage}/> }
         </article>
                 
         <OtherContents />
     </Main>
-  </div>
   );
 }

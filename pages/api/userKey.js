@@ -2,8 +2,14 @@ import colors, { random } from 'colors';
 import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
 
-const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler";
+/* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 let currentUrl = "";
+
+function showWithColor(color, text) {
+    console.log(colors[color]("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"));
+    console.log(colors[color](text));
+    console.log(colors[color]("_________________________________________________"));    
+  }
 
 export default async function handler (req, res) {
     if(req.method === 'POST') {
@@ -126,6 +132,7 @@ async function getUserInfoLimitless(id, city) {
             //! IF
             const placeholders = enFazlaTiklananKategoriler.map(() => '?').join(', ');
 
+            //kullanıcının en çok tıkladığı kategorilerde şehrin en çok tıklananları
             const [cityMost] = await connection.execute(`
             SELECT c.url, 
             COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
@@ -140,6 +147,9 @@ async function getUserInfoLimitless(id, city) {
             const cityMostUrls = cityMost.length === 0 ? [""] : cityMost.map(item => item.url);
             const placeholders_2 = cityMostUrls.map(() => '?').join(', ');
 
+            showWithColor("red", "!PHASE 1: " + cityMostUrls);
+
+            //kategori gözetmeksizin şehrin en çok tıklananları
             const [cityMostWithoutCategory] = await connection.execute(`
             SELECT c.url, 
             COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
@@ -150,10 +160,14 @@ async function getUserInfoLimitless(id, city) {
             AND m.url != ?
             GROUP BY c.url 
             ORDER BY clickCount DESC`, [city, id, ...cityMostUrls, id, currentUrl]);
+            
+            
+            const cityMostAndWithoutCats = cityMostUrls.concat(cityMostWithoutCategory.map(item => item.url));
+            const placeholders_3 = cityMostAndWithoutCats.map(() => '?').join(', ');
 
-            const cityMostAndCats = cityMost.concat(cityMostWithoutCategory);
-            const placeholders_3 = cityMostAndCats.map(() => '?').join(', ');
+            showWithColor("cyan", "!PHASE 2: " + cityMostAndWithoutCats);
 
+            //kategori ve şehir gözetmeksizin en çok tıklananlar
             const [top_to_bot_clicks] = await connection.execute(`
             SELECT c.url, 
             COUNT(DISTINCT c.clicked_user_uuid) AS clickCount 
@@ -163,18 +177,23 @@ async function getUserInfoLimitless(id, city) {
             AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND m.url != ?
             GROUP BY c.url 
-            ORDER BY clickCount DESC`, [id, ...cityMostAndCats, id, currentUrl]);
+            ORDER BY clickCount DESC`, [id, ...cityMostAndWithoutCats, id, currentUrl]);
 
-            const before_final = cityMostAndCats.concat(top_to_bot_clicks);
+            const before_final = cityMostAndWithoutCats.concat(top_to_bot_clicks.map(item => item.url));
             const placeholders_4 = before_final.map(() => '?').join(', ');
+
+            showWithColor("yellow", "!PHASE 3: " + before_final);
             
+            //tıklanmamış makaleler var ise en son eklenenden ilk eklenene doğru getir
             const [top_to_bot_makales] = await connection.execute(`
             SELECT url FROM makaleler 
             WHERE url NOT IN (${placeholders_4}) 
             AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
 
-            return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined);
+            /* return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => typeof item !== "string" && item !== null && item !== undefined); */
+            return before_final.concat(top_to_bot_makales.map(item => item.url));
+            //! burada kaldın
         }
         else {
             //! ELSE
@@ -203,7 +222,7 @@ async function getUserInfoLimitless(id, city) {
             GROUP BY c.url 
             ORDER BY clickCount DESC`, [id, ...cityMostUrls, id, currentUrl]);
 
-            const before_final = cityMost.concat(top_to_bot_clicks).map(item => item.url);
+            const before_final = cityMost.concat(top_to_bot_clicks.map(item => item.url));
             const placeholders_2 = before_final.map(() => '?').join(', ');
 
             const [top_to_bot_makales] = await connection.execute(`

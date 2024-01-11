@@ -1,5 +1,3 @@
-import 'intersection-observer';
-
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
@@ -10,14 +8,11 @@ import { useRouter } from 'next/router';
 
 import dynamic from 'next/dynamic';
 
-import { forwardRef } from 'react';
-import Hello from './hello';
-
 export default function MostSeriesMain10() {
   const { nightMode, url: defautlUrl, userInfo } = useAppContext();
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const url = "en-yuksek-imdb-puanina-sahip-10-dizi";
+  const url = "test-most-10";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
@@ -209,10 +204,8 @@ export default function MostSeriesMain10() {
   const [items, setItems] = useState([]);
   const [loadedPages, setLoadedPages] = useState([]);
   const [pageCount, setPageCount] = useState(0);
-
-  const classicArticleRefs = useRef([]);
-  const currentPageRef = useRef(1);
-  const [dummyState, setDummyState] = useState(0);
+  
+  const currentPage = useRef(url);
 
   const getAllArticlesForUser = async () => {
       const res = await fetch(defautlUrl+"/api/userKey", {
@@ -225,11 +218,13 @@ export default function MostSeriesMain10() {
           "data": {
             "id": userInfo.id,
             "city": userInfo.city,
-            "currentUrl": router.asPath.slice(1)
+            "currentUrl": currentPage.current
           }
         })
       })
       if(res.ok) {
+        const response = await res.json();
+        console.log("res ok: ", response.data);
         /* const response = await res.json();
         setItems(response.data); */
         //setItems([{url: 'erkeklerin-izlemesi-gereken-en-iyi-10-film'}, {url: 'en-yuksek-imdb-puanina-sahip-10-dizi'}]);
@@ -240,118 +235,29 @@ export default function MostSeriesMain10() {
       }
   }
 
-  useEffect(() => {
-      /* if(userInfo.id && userInfo.city) {
-          getAllArticlesForUser();
-      } */
-      /* setItems([{url: 'erkeklerin-izlemesi-gereken-en-iyi-10-film'}, {url: "en-iyi-10-300-cc-super-sport-motosiklet"}]); */
-  }, [userInfo]);
-
   const fetchData = async () => {
     try {
       const nextPageUrl = items[pageCount].url;
       const PageComponent = dynamic(() => import(`/pages/${nextPageUrl}`));
       setLoadedPages(prevPages => [...prevPages, PageComponent]);
       setPageCount(prevCount => prevCount + 1);
-      
     } catch (error) {
       //!
     }
   }
-  
-  const handleScrollToPage = (pageNumber) => {
-    console.log(`Kullanıcı şu an sayfa ${pageNumber}'da`);
-    // Burada sayfa değiştiğinde yapılacak işlemleri ekleyebilirsiniz
-  };
 
-  /* const addRef = (ref) => {
-    
-    if(ref) {
-      classicArticleRefs.current.push(ref);"1"
-    }
-  }; */
-
-  //! sorun burada bir yerde
-  const handleScroll = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const pageIndex = classicArticleRefs.current.indexOf(entry.target);
-        if (currentPageRef.current !== pageIndex + 1) {
-          console.log("şu an: " + (pageIndex + 1) + " sayfasındasınız");
-          currentPageRef.current = pageIndex + 1;
-          handleScrollToPage(pageIndex + 1);
-        }
-      }
-    });
-  };
-  
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver(handleScroll, options);
-
-    classicArticleRefs.current.forEach((ref) => {
-      if (ref && ref instanceof Element) {
-        observer.observe(ref);
+      if(userInfo.id && userInfo.city) {
+          getAllArticlesForUser();
       }
-    });
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const addRef = (val) => {
-    /* refArray.current.push(val); */
-    console.log("val: ", val);
-    if(val && classicArticleRefs.current.indexOf(val) === -1) {
-      classicArticleRefs.current.push(val);
-      /* setDummyState((prevState) => prevState + 1); */
-      /* observer.observe(val); */
-    }
-  }
-
-  const addAfter = async (timer) => {
-    console.log("waiting: " + timer + " seconds");
-
-     const backData = await new Promise((resolve) => {
-      setTimeout(() => {
-        resolve (
-        <ClassicArticle
-        addRef={addRef}
-        baslik={baslik} description={description} keywordsArray={keywordsArray}
-           ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-             kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle>
-        )
-      }, timer * 1000);
-     });
-    return backData;
-  }
-  const [result, setResult] = useState(null);
-
-  const justWait = async (timer) => {
-    const add2 = await addAfter(timer);
-    setResult(add2);
-  }
-  
-  useEffect(() => {
-    //justWait();
-    //setResult(addAfter());
-    //justWait(0);
-  }, []);
+  }, [userInfo]);
   
 
   return (
     <>
 
-        <ClassicArticle
-        addRef={addRef}
+        {/* <ClassicArticle
+        currentPage={currentPage.current}
          baslik={baslik} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
               okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
@@ -359,14 +265,20 @@ export default function MostSeriesMain10() {
         </ClassicArticle>
 
         <ClassicArticle
-        addRef={addRef}
+        currentPage={currentPage.current}
+         baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
+            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        </ClassicArticle> */}
+
+        <ClassicArticle
+        currentPage={currentPage.current}
          baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
               okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
               kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
         </ClassicArticle>
-
-        {/* {!result ? "Waiting" : result} */}
 
         {/* <InfiniteScroll
           dataLength={loadedPages.length}
@@ -375,7 +287,7 @@ export default function MostSeriesMain10() {
           loader={<h4>Loading...</h4>}>
             {
               loadedPages.map((PageComponent, index) => (
-                <PageComponent key={index} addRef={addRef}/>
+                <PageComponent key={index} currentPage={currentPage.current}/>
               ))
             }
         </InfiniteScroll> */}

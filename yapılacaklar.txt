@@ -27,6 +27,7 @@
 		2-) sayfa yenilendiğinde en son bakılan yerden yenilenecek
 			-> observer veya h1 ve end etiketleri takip edilebilir
 				2.1 -> adblock varken observer çalışmıyor
+					Olası çözümler: observer yerine farklı bir yöntem denemek
 		3-) bakılan sayfalar database'e eklenmiyor
 		4-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
 

@@ -3,93 +3,13 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import Hello from "./hello";
 
-let number = 0;
+import { Waypoint } from "react-waypoint";
 
 export default function test () {
 
-    const classicArticleRefs = useRef([]);
-    const currentPageRef = useRef(1);
-
-    const handleScrollToPage = (pageNumber) => {
-        console.log(`Kullanıcı şu an sayfa ${pageNumber}'da`);
-        // Burada sayfa değiştiğinde yapılacak işlemleri ekleyebilirsiniz
-      };
-    
-      //! sorun burada bir yerde
-      /* const handleScroll = (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const pageIndex = classicArticleRefs.current.indexOf(entry.target);
-            if (currentPageRef.current !== pageIndex + 1) {
-              console.log("şu an: " + (pageIndex + 1) + " sayfasındasınız");
-              currentPageRef.current = pageIndex + 1;
-              handleScrollToPage(pageIndex + 1);
-            }
-          }
-        });
-      }; */
-      
-      
-      const handleScroll = (entries) => {
-        entries.forEach((entry) => {
-            if(entry.isIntersecting) {                
-                console.log("Element is visible: ", entry.target.style.backgroundColor);
-            }
-        })
-      }
-
-      const checkEntries = (observer) => {
-        classicArticleRefs.current.forEach((ref) => {
-            if (ref && ref instanceof Element) {
-                observer.observe(ref);
-            }
-        });
-      }
-      
-      
-      useEffect(() => {
-        console.log("started: ");
-
-        
-        //! KULLANICI ADBLOCK KULLANDIĞINDA observer kodu çalışmıyor
-
-        /* const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-        if(isChrome) {
-            window.addEventListener('scroll', handleScrollForChrome);
-        } */
-
-        const options = {
-            threshold: 0.5
-        };
-        
-        const observer = new IntersectionObserver(handleScroll, options);
-        checkEntries(observer);
-
-        window.addEventListener('scroll', () => {
-            /* const observer = new IntersectionObserver(handleScroll, options);
-            checkEntries(observer);     */
-        });
-    
-        return () => {
-            /* window.removeEventListener('scroll', () => checkEntries); */
-
-            observer.disconnect();
-        };
-      }, []);
-    
-      const addRef = (val) => {
-        /* refArray.current.push(val); */
-        console.log("added: " + (number += 1) + " - ", val);
-        if(val && classicArticleRefs.current.indexOf(val) === -1) {
-          classicArticleRefs.current.push(val);
-          /* setDummyState((prevState) => prevState + 1); */
-          /* observer.observe(val); */
-        }
-      }
-
   return (
     <>
-        <p style={{backgroundColor: "red"}} ref={addRef}>
+        <p style={{backgroundColor: "red"}}>
         Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
 
 Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
@@ -130,7 +50,9 @@ Reprehenderit nulla in irure deserunt duis. Do adipisicing sunt do non nisi esse
 Mollit duis in Lorem in cupidatat et ea ipsum aliqua quis laborum culpa. Laborum labore id id adipisicing quis. Dolore Lorem qui do duis ea exercitation sint. Nulla ea non ex ex nulla commodo Lorem. Consequat laborum irure adipisicing ut sint esse veniam.
         </p>
         
-        <p style={{backgroundColor: "yellow"}} ref={addRef}>
+        <Waypoint onEnter={(props) => console.log("on enter ", props)}/>
+
+        <p style={{backgroundColor: "yellow"}}>
         Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
 
 Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
