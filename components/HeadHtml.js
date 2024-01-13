@@ -1,5 +1,10 @@
 import Head from "next/head"
-export default function HeadHtml({baslik, description, keywords, ana_resim, url, jsonListHtml}) {
+import { useEffect, memo } from "react"
+
+ const HeadHtml = memo(({baslik, description, keywords, ana_resim, url, jsonListHtml}) => {
+  useEffect(() => {
+    console.log("HEADHTML.js render edildi");
+  }, [])
   return (
     <Head>
           <title>{baslik}</title>
@@ -28,4 +33,6 @@ export default function HeadHtml({baslik, description, keywords, ana_resim, url,
           />
     </Head>
   )
-}
+})
+
+export default HeadHtml;

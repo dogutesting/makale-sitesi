@@ -5,17 +5,28 @@ import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
 import Custom_Waypoint from '../CustomWaypoint';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
+import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 
-export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
-  const { supportWebp, showToast, nightMode, url,  } = useAppContext();
+const allowedCats = ["dizi", "film", "motosiklet"];
+const items = [];
 
-  const items = [];
+//!YENİDEN RENDER EDİLİYOR MU BU SAYFA KONTROL ET, EĞER PROPLARI DEĞİŞİRSE RENDER OLACAK MI?
 
+export default function Ens_all({kategori, jsonContentArray, sayfaUrl, currentPageOperations}) {
+  const { supportWebp, showToast, nightMode, url } = useAppContext();
+  
+  const [DynamicComponent, setDynamicComponent] = useState(null);
+
+  if(DynamicComponent == null && allowedCats.includes(kategori)) {
+    console.log("ens_all: geldi: ", kategori);
+    const newDynamicComponent = dynamic(() => import(`../kunyeler/${kategori}_kunye`));
+    setDynamicComponent(newDynamicComponent);
+    console.log("ens_all: set edildi: ", kategori);
+  }
+
+  items.length === 0 &&
   jsonContentArray.forEach((item, index) => {
-
-      /* if(index + 1 == 1) {
-        items.push(<Custom_Waypoint key={index+1+"wp"} type={"addClick"} fullUrl={url+"/"+sayfaUrl} currentPage={currentPage}/>)
-      } */
 
       items.push(
         <section key={index}>
@@ -30,10 +41,10 @@ export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
               nightMode={nightMode}
               url={url}
               sayfaUrl={sayfaUrl}>
-              <Dizi_kunye 
+              {/* <Dizi_kunye 
                 ozellikler={item.ozellikler}
                 parseHtml={cHtmlToJsx}
-              />
+              /> */}
               <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>
         </section>
@@ -49,8 +60,13 @@ export default function Ens_dizi({jsonContentArray, sayfaUrl}) {
         addHr = false;
       }
 
+      if((index + 1) === 9) {
+        items.push(
+            <Custom_Waypoint key={(index+1)+"wp"} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations}/>
+        )
+      }
+
       !addHr && items.push(<hr key={index+"hr2"} className='split'/>);
-      
   });
 
   return (

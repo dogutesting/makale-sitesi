@@ -147,8 +147,6 @@ async function getUserInfoLimitless(id, city) {
             const cityMostUrls = cityMost.length === 0 ? [""] : cityMost.map(item => item.url);
             const placeholders_2 = cityMostUrls.map(() => '?').join(', ');
 
-            showWithColor("red", "!PHASE 1: " + cityMostUrls);
-
             //kategori gözetmeksizin şehrin en çok tıklananları
             const [cityMostWithoutCategory] = await connection.execute(`
             SELECT c.url, 
@@ -165,8 +163,6 @@ async function getUserInfoLimitless(id, city) {
             const cityMostAndWithoutCats = cityMostUrls.concat(cityMostWithoutCategory.map(item => item.url));
             const placeholders_3 = cityMostAndWithoutCats.map(() => '?').join(', ');
 
-            showWithColor("cyan", "!PHASE 2: " + cityMostAndWithoutCats);
-
             //kategori ve şehir gözetmeksizin en çok tıklananlar
             const [top_to_bot_clicks] = await connection.execute(`
             SELECT c.url, 
@@ -181,8 +177,6 @@ async function getUserInfoLimitless(id, city) {
 
             const before_final = cityMostAndWithoutCats.concat(top_to_bot_clicks.map(item => item.url));
             const placeholders_4 = before_final.map(() => '?').join(', ');
-
-            showWithColor("yellow", "!PHASE 3: " + before_final);
             
             //tıklanmamış makaleler var ise en son eklenenden ilk eklenene doğru getir
             const [top_to_bot_makales] = await connection.execute(`
@@ -193,7 +187,6 @@ async function getUserInfoLimitless(id, city) {
 
             /* return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => typeof item !== "string" && item !== null && item !== undefined); */
             return before_final.concat(top_to_bot_makales.map(item => item.url));
-            //! burada kaldın
         }
         else {
             //! ELSE
@@ -231,7 +224,8 @@ async function getUserInfoLimitless(id, city) {
             AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
 
-            return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined);
+            /* return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined); */
+            return before_final.concat(top_to_bot_makales.map(item => item.url));
         }
     } catch (error) {
         /* throw error; */

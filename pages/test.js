@@ -1,98 +1,293 @@
-/* import 'intersection-observer'; */
-import { Suspense, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-import Hello from "./hello";
+import { useAppContext } from '@/context/ContextProvider';
+import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
+import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-import { Waypoint } from "react-waypoint";
+import React, { useState, useEffect, useRef } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { useRouter } from 'next/router';
 
-export default function test () {
+import dynamic from 'next/dynamic';
+
+export default function MostSeriesMain10() {
+  const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
+
+  const router = useRouter();
+
+
+  const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
+  
+  /* const url = "test-most-10"; */
+  const url = router.asPath.slice(1);
+
+  const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
+  const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
+  const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
+
+  const okunmaSuresi = "2";
+  const kategori = "film"; //türkce karakter olmasin
+  const minAge = "18";
+  const yazar = "I Will";
+  const eklenmeTarihi = "2023-10-02T15:25:00+03:00";
+  const degistirilmeTarihi = "2023-11-19T01:13:00+03:00";
+  const addDate = "02.10.23";
+
+  const jsonContentArray = [
+    {
+        "eps": "13",
+        "num": "10",
+        "url": `https://enonlar.com/${url}#bolum-10`,
+        "name": "Kozmos: Uzay Zaman Yolculuğu - Cosmos: A Spacetime Odyssey",
+        "image": `/images/series/cosmos_bir_uzay_seruveni.jpg`,
+        "ozellikler": {
+          "Yıl": "2014",
+          "Kategori": ["Bilim", "Belgesel"],
+          "imdb": "9.2",
+          "metascore":"83",
+          "Oyuncular": ["Neil deGrasse Tyson"],
+          "Yönetmen": "Neil deGrasse Tyson"
+        },
+        "paragraf": "Cosmos: A Spacetime Odyssey, evrenin sırlarını anlamak için bilimin penceresinden bakıyor. Neil deGrasse Tyson'ın etkileyici anlatımıyla, izleyiciyi kozmosun derinliklerine götüren bu dizi, hem bilgilendirici hem de görsel bir şölen sunuyor."
+    },
+    {
+        "eps": "94",
+        "num": "9",
+        "url": `https://enonlar.com/${url}#bolum-9`,
+        "name": "Sopranos - The Sopranos",
+        "image": "/images/series/sopranos.jpg",
+        "ozellikler": {
+          "Yıl": "1999–2007",
+          "Kategori": ["Suç", "Drama"],
+          "imdb": "9.2",
+          "metascore":"92",
+          "Oyuncular": ["James Gandolfini", "Edie Falco", "Steven Van Zandt"],
+          "Yönetmen": "David Chase"
+        },
+        "paragraf": "The Sopranos, Amerikan mafya hayatının gerçekçi bir portresini sunarken, aile ve iş yaşantısının karmaşıklığını da ele alıyor. Tony Soprano'nun hem bir aile babası hem de bir mafya lideri olarak yaşadığı içsel çatışmalar, diziye derinlik katıyor."
+    },
+    {
+        "eps": "7",
+        "num": "8",
+        "url": `https://enonlar.com/${url}#bolum-8`,
+        "name": "Mavi Gezegen II - Blue Planet II",
+        "image": "/images/series/mavi_gezegen_2.jpg",
+        "ozellikler": {
+          "Yıl": "2017",
+          "Kategori": ["Doğa", "Belgesel"],
+          "imdb": "9.3",
+          "metascore":"97",
+          "Oyuncular": ["David Attenborough"],
+          "Yönetmen": "David Attenborough"
+        },
+        "paragraf": "Blue Planet II, denizlerin ve okyanusların gizemli dünyasını gözler önüne seriyor. David Attenborough'nun eşsiz anlatımı ile deniz canlılarının hayatlarına tanık oluyoruz. Bu dizi, doğanın güzelliklerini ve hassasiyetlerini bizlere hatırlatıyor."
+    },
+    {
+        "eps": "62",
+        "num": "7",
+        "url": `https://enonlar.com/${url}#bolum-7`,
+        "name": "Avatar: Son Hava Bükücü - Avatar: The Last Airbender",
+        "image": "/images/series/avatar_son_hava_bukucu.jpg",
+        "ozellikler": {
+          "Yıl": "2005–2008",
+          "Kategori": ["Animasyon", "Macera", "Aksiyon"],
+          "imdb": "9.3",
+          "metascore":"90",
+          "Oyuncular": ["Zach Tyler", "Mae Whitman", "Jack De Sena"],
+          "Yönetmen": "Michael Dante DiMartino, Bryan Konietzko"
+        },
+        "paragraf": "Avatar: The Last Airbender, elementleri kontrol edebilen bükücülerin dünyasında geçiyor. Genç Avatar Aang'in yolculuğunu anlatan bu dizi, dostluk, onur ve fedakarlık temasları üzerine odaklanıyor."
+    },
+    {
+        "eps": "60",
+        "num": "6",
+        "url": `https://enonlar.com/${url}#bolum-6`,
+        "name": "Tel - The Wire",
+        "image": "/images/series/tel.jpg",
+        "ozellikler": {
+          "Yıl": "2002–2008",
+          "Kategori": ["Suç", "Drama"],
+          "imdb": "9.3",
+          "metascore":"91",
+          "Oyuncular": ["Dominic West", "Idris Elba", "Michael K. Williams"],
+          "Yönetmen": "David Simon"
+        },
+        "paragraf": "The Wire, Baltimore şehrinin hem sokaklarında hem de koridorlarında cereyan eden suç, politika ve medya olaylarını ele alıyor. Dizi, kentsel yaşamın ve sistemlerin karmaşıklığına derinlemesine bir bakış sunuyor."
+    },
+    {
+        "eps": "5",
+        "num": "5",
+        "url": `https://enonlar.com/${url}#bolum-5`,
+        "name": "Çernobil - Chernobyl",
+        "image": "/images/series/chernobyl.jpg",
+        "ozellikler": {
+          "Yıl": "2019",
+          "Kategori": ["Drama", "Tarih"],
+          "imdb": "9.3",
+          "metascore":"82",
+          "Oyuncular": ["Jessie Buckley", "Jared Harris", "Stellan Skarsgård"],
+          "Yönetmen": "Johan Renck"
+        },
+        "paragraf": "Chernobyl, tarihin en büyük nükleer felaketlerinden birini detaylı bir şekilde ele alıyor. İnsan hatalarının ve bürokrasinin getirdiği korkunç sonuçları gözler önüne seren bu dizi, izleyiciye derinden etkileyen bir deneyim sunuyor."
+    },
+    {
+        "eps": "10",
+        "num": "4",
+        "url": `https://enonlar.com/${url}#bolum-4`,
+        "name": "Kardeşler Takımı - Band of Brothers",
+        "image": "/images/series/kardesler_takimi.jpg",
+        "ozellikler": {
+          "Yıl": "2001",
+          "Kategori": ["Drama", "Tarih", "Savaş"],
+          "imdb": "9.4",
+          "metascore":"87",
+          "Oyuncular": ["Damian Lewis", "Ron Livingston", "David Schwimmer"],
+          "Yönetmen": "David Frankel, Phil Alden Robinson"
+        },
+        "paragraf": "Band of Brothers, II. Dünya Savaşı sırasında Easy Company'nin Avrupa'da yaşadığı olayları anlatıyor. Savaşın zorlukları, askerlerin arasındaki kardeşlik bağları ve liderlik teması bu diziyi unutulmaz kılıyor."
+    },
+    {
+        "eps": "12",
+        "num": "3",
+        "url": `https://enonlar.com/${url}#bolum-3`,
+        "name": "Yeryüzü - Planet Earth",
+        "image": "/images/series/yeryuzu.jpg",
+        "ozellikler": {
+          "Yıl": "2006–2023",
+          "Kategori": ["Doğa", "Belgesel"],
+          "imdb": "9.4",
+          "metascore":"91",
+          "Oyuncular": ["David Attenborough"],
+          "Yönetmen": "David Attenborough"
+        },
+        "paragraf": "Planet Earth, dünyamızın doğal güzelliklerini ve vahşi yaşamını ultra yüksek çözünürlükte gözler önüne seriyor. David Attenborough'nun rehberliğinde, doğanın eşsiz manzaralarına ve canlılarına şahit oluyoruz."
+    },
+    {
+        "eps": "6",
+        "num": "2",
+        "url": `https://enonlar.com/${url}#bolum-2`,
+        "name": "Yeryüzü II - Planet Earth II",
+        "image": "/images/series/yeryuzu_2.jpg",
+        "ozellikler": {
+          "Yıl": "2016",
+          "Kategori": ["Doğa", "Belgesel"],
+          "imdb": "9.5",
+          "metascore":"96",
+          "Oyuncular": ["David Attenborough"],
+          "Yönetmen": "David Attenborough"
+        },
+        "paragraf": "Planet Earth II, doğanın harikalarını ve vahşi yaşamı daha yakından keşfetmemize olanak tanıyor. İzleyici, şehirlerdeki hayvanlardan uzak ormanlara kadar geniş bir yelpazede doğal yaşama tanık oluyor."
+    },
+    {
+        "eps": "62",  
+        "num": "1",
+        "url": `https://enonlar.com/${url}#bolum-1`,
+        "name": "Breaking Bad",
+        "image": "/images/series/breaking_bad.jpg",
+        "ozellikler": {
+          "Yıl": "2008–2013",
+          "Kategori": ["Suç", "Drama", "Gerilim"],
+          "imdb": "9.5",
+          "metascore":"87",
+          "Oyuncular": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
+          "Yönetmen": "Vince Gilligan"
+        },
+        "paragraf": "Breaking Bad, kimya öğretmeni Walter White'ın kanser teşhisi sonrası uyuşturucu üreticisi ve satıcısına dönüşmesini anlatıyor. Ailevi sorumlulukları ve hayatta kalma mücadelesi, Walter'ın moral değerlerini sorgulamasına neden oluyor."
+    }
+  ];
+
+  const ana_resim = "/images/ana_gorseller/enonlar-en-yuksek-imdb-puanina-sahip-10-dizi.png";
+  const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
+
+  const jsonList = moviesAndSeriesJson(articleInfos,
+  "Series", 
+  metin,
+  jsonContentArray
+  )
+
+  const [items, setItems] = useState([]);
+  const [loadedPages, setLoadedPages] = useState([]);
+  const [pageCount, setPageCount] = useState(0);
+  
+  /* const currentPageValue = useRef("başka bir sayfa"); */
+  const [currentPageValue, setCurrentPageValue] = useState(url);
+
+  const getAllArticlesForUser = async () => {
+      const res = await fetch(topLevelUrl+"/api/userKey", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          "req": "guil",
+          "data": {
+            "id": userInfo.id,
+            "city": userInfo.city,
+            "currentUrl": currentPageValue.current
+          }
+        })
+      })
+      if(res.ok) {
+        /* const response = await res.json();
+        console.log("res.ok"); */
+
+        /* const response = await res.json();
+        setItems(response.data);
+        console.log(response.data); */
+        setItems(['test']);
+      }
+      else {
+        //! buradaki hataları mysql'e kaydet
+        console.log("%i Hata: " + res.statusText, red);
+      }
+  }
+
+  const fetchData = async () => {
+    try {
+      /* const nextPageUrl = items[pageCount].url; */
+      const nextPageUrl = items[pageCount];
+      const PageComponent = dynamic(() => import(`/pages/${nextPageUrl}`));
+      setLoadedPages(prevPages => [...prevPages, PageComponent]);
+      setPageCount(prevCount => prevCount + 1);
+    } catch (error) {
+      //!
+    }
+  }
+
+  useEffect(() => {
+      if(userInfo.id && userInfo.city) {
+          getAllArticlesForUser();
+      }
+  }, [userInfo]);
+
+  useEffect(() => {
+    /* window.history.pushState({}, "", curren) */
+    console.log(topLevelUrl+"/"+currentPageValue);
+  }, [currentPageValue])
+
+  useEffect(() => {
+    console.log("üst: yüklendi");
+  }, [])
 
   return (
     <>
-        <p style={{backgroundColor: "red"}}>
-        Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
+        <ClassicArticle
+        currentPageOperations={{currentPageValue, setCurrentPageValue}}
+         baslik={"Örnek 2"} description={description} keywordsArray={keywordsArray}
+            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
+              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        </ClassicArticle>
 
-Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
-
-Sunt est occaecat quis magna excepteur ad eu consequat eu laborum commodo do. Nostrud et aute velit anim sunt. Adipisicing culpa commodo ut do enim sit sint Lorem voluptate.
-
-Lorem excepteur ea dolor ipsum ex pariatur commodo anim fugiat velit culpa. Adipisicing sit in enim cillum voluptate reprehenderit commodo cupidatat cupidatat aute minim laboris aute. Lorem nostrud ullamco id anim irure labore exercitation cillum proident dolor mollit amet eiusmod laborum. Ad qui reprehenderit est aute.
-
-Ipsum dolor tempor dolor aliqua est nulla reprehenderit laborum qui exercitation mollit. Id labore Lorem do sit est ut exercitation do minim quis dolor officia anim. Ipsum amet Lorem aliquip velit dolore Lorem consectetur. Voluptate aute occaecat nisi nostrud dolor. Aute eiusmod sunt Lorem sit labore velit incididunt sint non laborum ullamco veniam in. Lorem sit aute proident consequat non incididunt tempor quis ut sint.
-
-Laborum ipsum irure tempor ad. Eiusmod exercitation labore exercitation excepteur adipisicing proident sit et velit commodo mollit. Tempor enim pariatur laborum cupidatat dolor enim irure irure ullamco eu mollit adipisicing dolor cillum. Cupidatat officia consectetur qui voluptate ullamco eu quis non aliquip excepteur veniam aliquip. Id do aute irure magna minim culpa voluptate aute occaecat sint. Id et ullamco adipisicing mollit pariatur pariatur minim dolore ipsum mollit cupidatat labore incididunt dolore. Pariatur in duis anim sit exercitation.
-
-Non in id ea officia cupidatat proident cupidatat elit fugiat exercitation consequat laborum excepteur nostrud. Veniam consectetur laborum duis anim ad consequat reprehenderit minim. Enim eu laborum officia qui ea culpa deserunt irure quis.
-
-Et aute excepteur duis eiusmod reprehenderit cupidatat. Ullamco occaecat sint velit culpa culpa quis dolore. Non ipsum incididunt irure ipsum irure aliquip veniam. Esse velit non pariatur excepteur consectetur quis est.
-
-Reprehenderit nulla in irure deserunt duis. Do adipisicing sunt do non nisi esse nulla. Cupidatat elit aliqua magna excepteur. Eiusmod minim sunt nulla ex exercitation laborum in dolor ad exercitation. Amet nisi enim reprehenderit ut Lorem irure ad esse duis ipsum. Mollit consequat duis nisi nostrud adipisicing. Irure nostrud consequat sunt cillum aliquip consequat quis.
-
-Mollit duis in Lorem in cupidatat et ea ipsum aliqua quis laborum culpa. Laborum labore id id adipisicing quis. Dolore Lorem qui do duis ea exercitation sint. Nulla ea non ex ex nulla commodo Lorem. Consequat laborum irure adipisicing ut sint esse veniam.
-            Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
-
-Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
-
-Sunt est occaecat quis magna excepteur ad eu consequat eu laborum commodo do. Nostrud et aute velit anim sunt. Adipisicing culpa commodo ut do enim sit sint Lorem voluptate.
-
-Lorem excepteur ea dolor ipsum ex pariatur commodo anim fugiat velit culpa. Adipisicing sit in enim cillum voluptate reprehenderit commodo cupidatat cupidatat aute minim laboris aute. Lorem nostrud ullamco id anim irure labore exercitation cillum proident dolor mollit amet eiusmod laborum. Ad qui reprehenderit est aute.
-
-Ipsum dolor tempor dolor aliqua est nulla reprehenderit laborum qui exercitation mollit. Id labore Lorem do sit est ut exercitation do minim quis dolor officia anim. Ipsum amet Lorem aliquip velit dolore Lorem consectetur. Voluptate aute occaecat nisi nostrud dolor. Aute eiusmod sunt Lorem sit labore velit incididunt sint non laborum ullamco veniam in. Lorem sit aute proident consequat non incididunt tempor quis ut sint.
-
-Laborum ipsum irure tempor ad. Eiusmod exercitation labore exercitation excepteur adipisicing proident sit et velit commodo mollit. Tempor enim pariatur laborum cupidatat dolor enim irure irure ullamco eu mollit adipisicing dolor cillum. Cupidatat officia consectetur qui voluptate ullamco eu quis non aliquip excepteur veniam aliquip. Id do aute irure magna minim culpa voluptate aute occaecat sint. Id et ullamco adipisicing mollit pariatur pariatur minim dolore ipsum mollit cupidatat labore incididunt dolore. Pariatur in duis anim sit exercitation.
-
-Non in id ea officia cupidatat proident cupidatat elit fugiat exercitation consequat laborum excepteur nostrud. Veniam consectetur laborum duis anim ad consequat reprehenderit minim. Enim eu laborum officia qui ea culpa deserunt irure quis.
-
-Et aute excepteur duis eiusmod reprehenderit cupidatat. Ullamco occaecat sint velit culpa culpa quis dolore. Non ipsum incididunt irure ipsum irure aliquip veniam. Esse velit non pariatur excepteur consectetur quis est.
-
-Reprehenderit nulla in irure deserunt duis. Do adipisicing sunt do non nisi esse nulla. Cupidatat elit aliqua magna excepteur. Eiusmod minim sunt nulla ex exercitation laborum in dolor ad exercitation. Amet nisi enim reprehenderit ut Lorem irure ad esse duis ipsum. Mollit consequat duis nisi nostrud adipisicing. Irure nostrud consequat sunt cillum aliquip consequat quis.
-
-Mollit duis in Lorem in cupidatat et ea ipsum aliqua quis laborum culpa. Laborum labore id id adipisicing quis. Dolore Lorem qui do duis ea exercitation sint. Nulla ea non ex ex nulla commodo Lorem. Consequat laborum irure adipisicing ut sint esse veniam.
-        </p>
-        
-        <Waypoint onEnter={(props) => console.log("on enter ", props)}/>
-
-        <p style={{backgroundColor: "yellow"}}>
-        Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
-
-Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
-
-Sunt est occaecat quis magna excepteur ad eu consequat eu laborum commodo do. Nostrud et aute velit anim sunt. Adipisicing culpa commodo ut do enim sit sint Lorem voluptate.
-
-Lorem excepteur ea dolor ipsum ex pariatur commodo anim fugiat velit culpa. Adipisicing sit in enim cillum voluptate reprehenderit commodo cupidatat cupidatat aute minim laboris aute. Lorem nostrud ullamco id anim irure labore exercitation cillum proident dolor mollit amet eiusmod laborum. Ad qui reprehenderit est aute.
-
-Ipsum dolor tempor dolor aliqua est nulla reprehenderit laborum qui exercitation mollit. Id labore Lorem do sit est ut exercitation do minim quis dolor officia anim. Ipsum amet Lorem aliquip velit dolore Lorem consectetur. Voluptate aute occaecat nisi nostrud dolor. Aute eiusmod sunt Lorem sit labore velit incididunt sint non laborum ullamco veniam in. Lorem sit aute proident consequat non incididunt tempor quis ut sint.
-
-Laborum ipsum irure tempor ad. Eiusmod exercitation labore exercitation excepteur adipisicing proident sit et velit commodo mollit. Tempor enim pariatur laborum cupidatat dolor enim irure irure ullamco eu mollit adipisicing dolor cillum. Cupidatat officia consectetur qui voluptate ullamco eu quis non aliquip excepteur veniam aliquip. Id do aute irure magna minim culpa voluptate aute occaecat sint. Id et ullamco adipisicing mollit pariatur pariatur minim dolore ipsum mollit cupidatat labore incididunt dolore. Pariatur in duis anim sit exercitation.
-
-Non in id ea officia cupidatat proident cupidatat elit fugiat exercitation consequat laborum excepteur nostrud. Veniam consectetur laborum duis anim ad consequat reprehenderit minim. Enim eu laborum officia qui ea culpa deserunt irure quis.
-
-Et aute excepteur duis eiusmod reprehenderit cupidatat. Ullamco occaecat sint velit culpa culpa quis dolore. Non ipsum incididunt irure ipsum irure aliquip veniam. Esse velit non pariatur excepteur consectetur quis est.
-
-Reprehenderit nulla in irure deserunt duis. Do adipisicing sunt do non nisi esse nulla. Cupidatat elit aliqua magna excepteur. Eiusmod minim sunt nulla ex exercitation laborum in dolor ad exercitation. Amet nisi enim reprehenderit ut Lorem irure ad esse duis ipsum. Mollit consequat duis nisi nostrud adipisicing. Irure nostrud consequat sunt cillum aliquip consequat quis.
-
-Mollit duis in Lorem in cupidatat et ea ipsum aliqua quis laborum culpa. Laborum labore id id adipisicing quis. Dolore Lorem qui do duis ea exercitation sint. Nulla ea non ex ex nulla commodo Lorem. Consequat laborum irure adipisicing ut sint esse veniam.
-            Nostrud occaecat Lorem enim excepteur eiusmod aliquip pariatur incididunt quis tempor ipsum occaecat irure. Quis voluptate tempor exercitation deserunt ut veniam proident nulla pariatur ut eu sit sit et. Adipisicing incididunt ex dolor velit.
-
-Nostrud ut do ipsum adipisicing deserunt culpa ipsum in ipsum nulla commodo eu minim. Aute culpa commodo eiusmod dolor fugiat. Tempor voluptate cupidatat fugiat laborum dolor et sunt ex nisi. Magna deserunt do non veniam mollit fugiat mollit sunt dolor laborum non ea cillum aliqua.
-
-Sunt est occaecat quis magna excepteur ad eu consequat eu laborum commodo do. Nostrud et aute velit anim sunt. Adipisicing culpa commodo ut do enim sit sint Lorem voluptate.
-
-Lorem excepteur ea dolor ipsum ex pariatur commodo anim fugiat velit culpa. Adipisicing sit in enim cillum voluptate reprehenderit commodo cupidatat cupidatat aute minim laboris aute. Lorem nostrud ullamco id anim irure labore exercitation cillum proident dolor mollit amet eiusmod laborum. Ad qui reprehenderit est aute.
-
-Ipsum dolor tempor dolor aliqua est nulla reprehenderit laborum qui exercitation mollit. Id labore Lorem do sit est ut exercitation do minim quis dolor officia anim. Ipsum amet Lorem aliquip velit dolore Lorem consectetur. Voluptate aute occaecat nisi nostrud dolor. Aute eiusmod sunt Lorem sit labore velit incididunt sint non laborum ullamco veniam in. Lorem sit aute proident consequat non incididunt tempor quis ut sint.
-
-Laborum ipsum irure tempor ad. Eiusmod exercitation labore exercitation excepteur adipisicing proident sit et velit commodo mollit. Tempor enim pariatur laborum cupidatat dolor enim irure irure ullamco eu mollit adipisicing dolor cillum. Cupidatat officia consectetur qui voluptate ullamco eu quis non aliquip excepteur veniam aliquip. Id do aute irure magna minim culpa voluptate aute occaecat sint. Id et ullamco adipisicing mollit pariatur pariatur minim dolore ipsum mollit cupidatat labore incididunt dolore. Pariatur in duis anim sit exercitation.
-
-Non in id ea officia cupidatat proident cupidatat elit fugiat exercitation consequat laborum excepteur nostrud. Veniam consectetur laborum duis anim ad consequat reprehenderit minim. Enim eu laborum officia qui ea culpa deserunt irure quis.
-
-Et aute excepteur duis eiusmod reprehenderit cupidatat. Ullamco occaecat sint velit culpa culpa quis dolore. Non ipsum incididunt irure ipsum irure aliquip veniam. Esse velit non pariatur excepteur consectetur quis est.
-
-Reprehenderit nulla in irure deserunt duis. Do adipisicing sunt do non nisi esse nulla. Cupidatat elit aliqua magna excepteur. Eiusmod minim sunt nulla ex exercitation laborum in dolor ad exercitation. Amet nisi enim reprehenderit ut Lorem irure ad esse duis ipsum. Mollit consequat duis nisi nostrud adipisicing. Irure nostrud consequat sunt cillum aliquip consequat quis.
-
-Mollit duis in Lorem in cupidatat et ea ipsum aliqua quis laborum culpa. Laborum labore id id adipisicing quis. Dolore Lorem qui do duis ea exercitation sint. Nulla ea non ex ex nulla commodo Lorem. Consequat laborum irure adipisicing ut sint esse veniam.
-        </p>
-
+        {/* <InfiniteScroll
+          dataLength={loadedPages.length}
+          next={fetchData}
+          hasMore={pageCount < items.length}
+          loader={<h4>Loading...</h4>}>
+            {
+              loadedPages.map((PageComponent, index) => (
+                <PageComponent key={index} currentPageOperations={{currentPageValue, setCurrentPageValue}}/>
+              ))
+            }
+        </InfiniteScroll> */}
     </>
-  );
+  )
 }

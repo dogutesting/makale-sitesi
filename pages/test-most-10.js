@@ -9,10 +9,16 @@ import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
 
 export default function MostSeriesMain10() {
-  const { nightMode, url: defautlUrl, userInfo } = useAppContext();
+  const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
+
+  const router = useRouter();
+
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const url = "test-most-10";
+  
+  /* const url = "test-most-10"; */
+  const url = router.asPath.slice(1);
+
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
@@ -197,18 +203,15 @@ export default function MostSeriesMain10() {
   jsonContentArray
   )
 
-  const router = useRouter();
-
-  /*//! buradaki url'yi bağla:>  console.log(": ", router.asPath.slice(1)); */
-
   const [items, setItems] = useState([]);
   const [loadedPages, setLoadedPages] = useState([]);
   const [pageCount, setPageCount] = useState(0);
   
-  const currentPage = useRef(url);
+  /* const currentPageValue = useRef("başka bir sayfa"); */
+  const [currentPageValue, setCurrentPageValue] = useState(url);
 
   const getAllArticlesForUser = async () => {
-      const res = await fetch(defautlUrl+"/api/userKey", {
+      const res = await fetch(topLevelUrl+"/api/userKey", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json"
@@ -218,16 +221,18 @@ export default function MostSeriesMain10() {
           "data": {
             "id": userInfo.id,
             "city": userInfo.city,
-            "currentUrl": currentPage.current
+            "currentUrl": currentPageValue.current
           }
         })
       })
       if(res.ok) {
-        const response = await res.json();
-        console.log("res ok: ", response.data);
         /* const response = await res.json();
-        setItems(response.data); */
-        //setItems([{url: 'erkeklerin-izlemesi-gereken-en-iyi-10-film'}, {url: 'en-yuksek-imdb-puanina-sahip-10-dizi'}]);
+        console.log("res.ok"); */
+
+        /* const response = await res.json();
+        setItems(response.data);
+        console.log(response.data); */
+        setItems(['test']);
       }
       else {
         //! buradaki hataları mysql'e kaydet
@@ -237,7 +242,8 @@ export default function MostSeriesMain10() {
 
   const fetchData = async () => {
     try {
-      const nextPageUrl = items[pageCount].url;
+      /* const nextPageUrl = items[pageCount].url; */
+      const nextPageUrl = items[pageCount];
       const PageComponent = dynamic(() => import(`/pages/${nextPageUrl}`));
       setLoadedPages(prevPages => [...prevPages, PageComponent]);
       setPageCount(prevCount => prevCount + 1);
@@ -251,46 +257,37 @@ export default function MostSeriesMain10() {
           getAllArticlesForUser();
       }
   }, [userInfo]);
-  
+
+  useEffect(() => {
+    /* window.history.pushState({}, "", curren) */
+    console.log(topLevelUrl+"/"+currentPageValue);
+  }, [currentPageValue])
+
+  useEffect(() => {
+    console.log("üst: yüklendi");
+  }, [])
 
   return (
     <>
-
-        {/* <ClassicArticle
-        currentPage={currentPage.current}
-         baslik={baslik} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle>
-
         <ClassicArticle
-        currentPage={currentPage.current}
-         baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle> */}
-
-        <ClassicArticle
-        currentPage={currentPage.current}
+        currentPageOperations={{currentPageValue, setCurrentPageValue}}
          baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
               okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
               kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
         </ClassicArticle>
 
-        {/* <InfiniteScroll
+        <InfiniteScroll
           dataLength={loadedPages.length}
           next={fetchData}
           hasMore={pageCount < items.length}
           loader={<h4>Loading...</h4>}>
             {
               loadedPages.map((PageComponent, index) => (
-                <PageComponent key={index} currentPage={currentPage.current}/>
+                <PageComponent key={index} currentPageOperations={{currentPageValue, setCurrentPageValue}}/>
               ))
             }
-        </InfiniteScroll> */}
+        </InfiniteScroll>
     </>
   )
 }
