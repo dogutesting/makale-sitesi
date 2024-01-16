@@ -11,13 +11,9 @@ import dynamic from 'next/dynamic';
 export default function MostSeriesMain10() {
   const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
 
-  const router = useRouter();
-
-
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
   
-  /* const url = "test-most-10"; */
-  const url = router.asPath.slice(1);
+  const url = "test-most-10";
 
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
@@ -254,18 +250,19 @@ export default function MostSeriesMain10() {
 
   useEffect(() => {
       if(userInfo.id && userInfo.city) {
-          getAllArticlesForUser();
+          //getAllArticlesForUser();
+          setItems(['test']);
       }
   }, [userInfo]);
 
   useEffect(() => {
     /* window.history.pushState({}, "", curren) */
-    console.log(topLevelUrl+"/"+currentPageValue);
+    console.log("CurrentPageValue Changed: " + topLevelUrl+"/"+currentPageValue);
   }, [currentPageValue])
 
   useEffect(() => {
     console.log("üst: yüklendi");
-  }, [])
+  }, []);
 
   return (
     <>
@@ -277,7 +274,7 @@ export default function MostSeriesMain10() {
               kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
         </ClassicArticle>
 
-        <InfiniteScroll
+        {/* <InfiniteScroll
           dataLength={loadedPages.length}
           next={fetchData}
           hasMore={pageCount < items.length}
@@ -287,7 +284,7 @@ export default function MostSeriesMain10() {
                 <PageComponent key={index} currentPageOperations={{currentPageValue, setCurrentPageValue}}/>
               ))
             }
-        </InfiniteScroll>
+        </InfiniteScroll> */}
     </>
   )
 }

@@ -28,8 +28,20 @@
 			-> observer veya h1 ve end etiketleri takip edilebilir
 				2.1 -> adblock varken observer çalışmıyor
 					Olası çözümler: observer yerine farklı bir yöntem denemek
+
+					2.2 ->
+							- github'dan eski bir commit indirilerek sayfa düzenine ve text'lere bakılacak
+								bir hata mı var eksik mi var diye
+
+							- dinamik olarak yüklenen info'lar hydration hatası veriyor
+							
+							- waypoint olayı çözülecek
+
+
 		3-) bakılan sayfalar database'e eklenmiyor
-		4-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
+
+		4-) resimlerin border-radius'ları doğru çalışmıyor
+		5-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
 
 
 -> users ekleme çalışmıyor

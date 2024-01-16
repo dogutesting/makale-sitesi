@@ -6,10 +6,6 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
   
     const { nightMode} = useAppContext();
 
-    const hd = 16;
-
-    /* const supportWebp = false; */
-
     return (
     <article>
         <Link href={link} className=''>
@@ -31,7 +27,6 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                             src={rsm}
                             alt={rsm_alt}
                             height={160}
-                            style={{objectFit: "cover"}}
                         /> 
                     )
                 } 

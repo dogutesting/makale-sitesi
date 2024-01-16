@@ -8,7 +8,7 @@ export default function Ana_gorsel({ana_resim, baslik}) {
         { supportWebp ? (
                 <Image
                 priority={true}
-                className='image-container-image'
+                className='image-container-image-top'
                 src={ana_resim} alt={baslik +" ana görseli"}
                 fill
                 sizes="(max-width: 500px) 100vw, 100vw"

@@ -6,13 +6,9 @@ export default function Custom_Waypoint ({name, startedUrl, currentPageOperation
     const [looked, setLooked] = useState(false);
 
     const setCurrentPageProp = (url) => {
-      currentPageOperations.setCurrentPageValue(url);
+      /* currentPageOperations.setCurrentPageValue(url); */
+      console.log("func: " + url);
     }
-
-    //makalenin top ve botunda olacak şekilde 2 tane waypoint noktası olacak
-    //  bu noktalardan geçince currentValue değeri waypoint üzerinde veriye göre değişecek
-
-    //top waypoint'inde ek olarak addClick olacak ve sadece 1 kere çalışacak
 
     //! tıklamaları kayınca düzenle!
 
@@ -23,21 +19,24 @@ export default function Custom_Waypoint ({name, startedUrl, currentPageOperation
           setLooked(true);
         }
 
-        if(currentPageOperations.currentPageValue != startedUrl) {
+        /* if(currentPageOperations.currentPageValue != startedUrl) {
           setCurrentPageProp(currentPageOperations.currentPageValue);
-        }
+        } */
+        setCurrentPageProp(startedUrl);
       }
 
       if(name == "bottom") {
-        if(currentPageOperations.currentPageValue != startedUrl) {
+        /* if(currentPageOperations.currentPageValue != startedUrl) {
           setCurrentPageProp(currentPageOperations.currentPageValue);
-        }
+        } */
+        setCurrentPageProp(startedUrl);
       }
 
       if(name == "topNot") {
-        if(currentPageOperations.currentPageValue != startedUrl) { 
+        /* if(currentPageOperations.currentPageValue != startedUrl) { 
           setCurrentPageProp(currentPageOperations.currentPageValue);
-        }
+        } */
+        setCurrentPageProp(startedUrl);
       }
     }
 

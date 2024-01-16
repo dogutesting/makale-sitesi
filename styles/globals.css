@@ -66,6 +66,7 @@ h2 {
   width: 8px; /* Şeridin genişliği */
   height: 100%; /* Şeridin yüksekliği, başlığın tam yüksekliği kadar */
   background-color: red; /* Kırmızı renk */
+  border-radius: 2px;
 }
 
 .share-h2 {
@@ -91,6 +92,7 @@ h2 {
   margin-top: 4px;
   /* margin-bottom: 0; */
   margin-bottom: 16px;
+  border-radius: 4px;
 }
 .top-split-normal {
   background-color: #6b6b6b;
@@ -204,11 +206,17 @@ header {
   width: 100%;
   aspect-ratio: 16/9;
 }
-/* images in other contents */
+
+.image-container-image-top {
+  border-radius: 5px;
+}
+
 .image-container-image {
   /* border-top-left-radius: 4px;
   border-top-right-radius: 4px; */
-  border-radius: 4px;
+  /* border-radius: 4px; */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
   object-fit: cover;
 }
 .us-image {
@@ -221,7 +229,7 @@ header {
 .kunye {
   font-size: 0.92rem;
   border: 1px solid grey;
-  border-radius: 4px;
+  border-radius: 6px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   padding: 6px;

@@ -1,17 +1,22 @@
+import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, showToast, nightMode, url, sayfaUrl}) {
+export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, 
+    showToast, nightMode, url, sayfaUrl, parseHtml, paragraf}) {
     //! sayfa-içi-en
 
     const handleCopyClick = async () => {
         try {
-            const kopyalanacakText = url+"/"+sayfaUrl+"/"+enid;
+            const kopyalanacakText = url+"/"+sayfaUrl+"#"+enid;
             await navigator.clipboard.writeText(kopyalanacakText);
             showToast("Link kopyalandı.");
         } catch (err) {
             //console.log("kopyalanamadı hata: ", err);
         }
     }
+
+
 
     return (
         <>
@@ -32,7 +37,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                     ) : (
                         <img
                         loading='lazy'
-                        className='us-image'
+                        className='us-image user-drag-none'
                         src={rsm}
                         alt={rsm_alt}
                       /> 
