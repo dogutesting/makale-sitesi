@@ -1,9 +1,8 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
-import { useEffect, forwardRef } from 'react';
 
-function MansNeedWatch({addRef}) {
+function MansNeedWatch() {
   const { nightMode } = useAppContext();
 
   const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok

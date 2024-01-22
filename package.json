@@ -17,6 +17,7 @@
     "dotenv": "^16.3.1",
     "js-cookie": "^3.0.5",
     "mysql2": "^3.6.2",
+    "net": "^1.0.2",
     "next": "^14.0.0",
     "node-html-parser": "^6.1.11",
     "normalize.css": "^8.0.1",
@@ -25,6 +26,7 @@
     "react-infinite-scroll-component": "^6.1.0",
     "react-waypoint": "^10.3.0",
     "sharp": "^0.33.1",
+    "tls": "^0.0.1",
     "uuid": "^9.0.1"
   },
   "browser": {
@@ -33,5 +35,8 @@
     "os": false,
     "net": false,
     "tls": false
+  },
+  "devDependencies": {
+    "encoding": "^0.1.13"
   }
 }

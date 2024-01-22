@@ -1,10 +1,7 @@
-import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
 export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, 
-    showToast, nightMode, url, sayfaUrl, parseHtml, paragraf}) {
-    //! sayfa-içi-en
+    showToast, nightMode, url, sayfaUrl}) {
 
     const handleCopyClick = async () => {
         try {
@@ -15,8 +12,6 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
             //console.log("kopyalanamadı hata: ", err);
         }
     }
-
-
 
     return (
         <>

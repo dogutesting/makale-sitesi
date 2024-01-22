@@ -1,4 +1,5 @@
-export default function MotosikletKunye({ozellikler, parseHtml}) {    
+import Link from 'next/link';
+export default function Kunye({ozellikler, parseHtml}) {    
     const ozelliklerArray = Object.entries(ozellikler);
     return (
       <aside className='kunye'>

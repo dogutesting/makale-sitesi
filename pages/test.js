@@ -6,8 +6,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useRouter } from 'next/router';
 
-import dynamic from 'next/dynamic';
-
 export default function MostSeriesMain10({currentPageOperations}) {
   const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
 
