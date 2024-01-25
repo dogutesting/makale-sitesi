@@ -1,19 +1,17 @@
 import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticle from '@/components/article_types/ClassicArticle';
-
-import React, { useState, useEffect, useRef } from 'react';
+import dynamic from 'next/dynamic';
+import React, { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useRouter } from 'next/router';
-
-import dynamic from 'next/dynamic';
 
 export default function MostSeriesMain10() {
   const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
   
-  const url = "test-most-10";
+  const url = "test-1";
 
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
@@ -199,11 +197,15 @@ export default function MostSeriesMain10() {
   jsonContentArray
   )
 
+  const router = useRouter();
+
+  //InfinityScroll için
   const [items, setItems] = useState([]);
   const [loadedPages, setLoadedPages] = useState([]);
   const [pageCount, setPageCount] = useState(0);
-  
-  /* const currentPageValue = useRef("başka bir sayfa"); */
+
+  //react-waypoint için
+  const [ancestor, setAncestor] = useState(null);
   const [currentPageValue, setCurrentPageValue] = useState(url);
 
   const getAllArticlesForUser = async () => {
@@ -228,7 +230,7 @@ export default function MostSeriesMain10() {
         /* const response = await res.json();
         setItems(response.data);
         console.log(response.data); */
-        setItems(['test']);
+        setItems(['test-2']);
       }
       else {
         //! buradaki hataları mysql'e kaydet
@@ -251,40 +253,44 @@ export default function MostSeriesMain10() {
   useEffect(() => {
       if(userInfo.id && userInfo.city) {
           //getAllArticlesForUser();
-          setItems(['test']);
+          setItems(['test-2']);
       }
   }, [userInfo]);
 
   useEffect(() => {
     /* window.history.pushState({}, "", curren) */
     console.log("CurrentPageValue Changed: " + topLevelUrl+"/"+currentPageValue);
+    /* if(currentPageValue != router.asPath) */
+    //burada kaldın işte
+    window.history.pushState({}, '', topLevelUrl+"/"+currentPageValue);
   }, [currentPageValue])
 
   useEffect(() => {
-    console.log("üst: yüklendi");
+    setAncestor(window);
   }, []);
 
   return (
     <>
         <ClassicArticle
-        currentPageOperations={{currentPageValue, setCurrentPageValue}}
-         baslik={"Örnek 1"} description={description} keywordsArray={keywordsArray}
+        currentPageOperations={{isSetable: false, currentPageValue, setCurrentPageValue, ancestor}}
+         baslik={"Test 1 Sayfası Başlığı"} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
               okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
               kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
         </ClassicArticle>
 
-        {/* <InfiniteScroll
+        <InfiniteScroll
           dataLength={loadedPages.length}
           next={fetchData}
           hasMore={pageCount < items.length}
           loader={<h4>Loading...</h4>}>
             {
               loadedPages.map((PageComponent, index) => (
-                <PageComponent key={index} currentPageOperations={{currentPageValue, setCurrentPageValue}}/>
+                  <PageComponent key={index} 
+                  topCurrentPageOperations={{isSetable: true, currentPageValue, setCurrentPageValue, ancestor}}/>
               ))
             }
-        </InfiniteScroll> */}
+        </InfiniteScroll>
     </>
   )
 }

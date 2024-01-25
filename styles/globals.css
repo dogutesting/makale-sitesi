@@ -94,6 +94,11 @@ h2 {
   margin-bottom: 16px;
   border-radius: 4px;
 }
+
+.bot_split {
+  margin-bottom: 4px !important;
+}
+
 .top-split-normal {
   background-color: #6b6b6b;
 }
@@ -208,15 +213,19 @@ header {
 }
 
 .image-container-image-top {
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
-.image-container-image {
+.image-container-image-center {
   /* border-top-left-radius: 4px;
   border-top-right-radius: 4px; */
   /* border-radius: 4px; */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
+  object-fit: cover;
+}
+.image-container-image-other {
+  border-radius: 4px;
   object-fit: cover;
 }
 .us-image {
@@ -475,6 +484,8 @@ ul li {
 .icb-child:nth-child(1) img {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
+  border-top-right-radius: 1.5px;
+  border-bottom-right-radius: 1.5px;
 }
 .icb-child:nth-child(2) {
  flex: 3;

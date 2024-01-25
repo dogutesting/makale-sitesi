@@ -4,7 +4,7 @@ import { useAppContext } from '@/context/ContextProvider';
 
 export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, link}) {
   
-    const { nightMode} = useAppContext();
+    const { nightMode } = useAppContext();
 
     return (
     <article>
@@ -18,12 +18,12 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                             alt={rsm_alt}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"
-                            className='image-container-image'
+                            className='image-container-image-other'
                         />
                     ) : (
                         <img
                             loading='lazy'
-                            className='us-image'
+                            className='us-image image-container-image-other'
                             src={rsm}
                             alt={rsm_alt}
                             height={160}
@@ -32,12 +32,12 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                 } 
             </div>
             
-            {/* 
-                -> çok fazla parça olduğu için kötü gözüküyor
+            
+            {/*     -> çok fazla parça olduğu için kötü gözüküyor
                 -> eklenme tarihi ve okunma saatini nereden çekeceğim
                 -> bunu içerikler çoğaldıktan sonra yapabilirim
-            */}
-            {/* <div className='details other-details'>
+           
+            <div className='details other-details'>
                 <div>
                     <Image 
                     src={!nightMode ? '/images/details/black-add-date.png' : '/images/details/white-add-date.png'}
@@ -54,7 +54,6 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                 </div>
             </div> */}
            
-
             <h2>{baslik}</h2>
             <p className={nightMode ? 'soft-white' : 'soft-black'}>   
             {

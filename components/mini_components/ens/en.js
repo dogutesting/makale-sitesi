@@ -24,7 +24,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                 { supportWebp ? (
                         <Image
                         priority={pri}
-                        className='image-container-image'
+                        className='image-container-image-center'
                         src={rsm} alt={rsm_alt}
                         fill
                         sizes="(max-width: 500px) 100vw, 100vw"
@@ -32,7 +32,7 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
                     ) : (
                         <img
                         loading='lazy'
-                        className='us-image user-drag-none'
+                        className='us-image image-container-image-center'
                         src={rsm}
                         alt={rsm_alt}
                       /> 

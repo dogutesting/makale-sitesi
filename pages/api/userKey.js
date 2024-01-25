@@ -254,13 +254,13 @@ async function getUserInfo(id, city) {
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
 
-            const cityMost = await getMostClickedFromCity(connection, null, city, id, 6);
+            const cityMost = await getMostClickedFromCity(connection, null, city, id, 4);
 
-            if(cityMost.length < 6) {
-                const randomArticle = await getRandomArticle(connection, id, (6 - cityMost.length), cityMost);
+            if(cityMost.length < 4) {
+                const randomArticle = await getRandomArticle(connection, id, (4 - cityMost.length), cityMost);
                 const f1 = cityMost.concat(randomArticle);
-                if(f1.length < 6) {
-                    return await setArticleTo6(connection, f1, (6 - f1.length));
+                if(f1.length < 4) {
+                    return await setArticleTo4(connection, f1, (4 - f1.length));
                 }
                 else {
                     return f1;
@@ -272,15 +272,14 @@ async function getUserInfo(id, city) {
         }
         else if(enFazlaTiklananKategoriler.length === 1) { // eğer kullanıcı 1 kategoride bir şeylere bakmış ise
             const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, 4);
-            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (6-categoryAndCity.length), categoryAndCity);    
+            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (4-categoryAndCity.length), categoryAndCity);    
             let moded = categoryAndCity.concat(nullAndCity);
 
-            if(moded.length < 6) {
-                //return await getRandomArticle(connection, id, (6 - moded.length), moded);
-                const randomArticle = await getRandomArticle(connection, id, (6 - moded.length), moded);
+            if(moded.length < 4) {
+                const randomArticle = await getRandomArticle(connection, id, (4 - moded.length), moded);
                 const f1 = moded.concat(randomArticle);
-                if(f1.length < 6) {
-                    return await setArticleTo6(connection, f1, (6 - f1.length));
+                if(f1.length < 4) {
+                    return await setArticleTo4(connection, f1, (4 - f1.length));
                 }
                 else {
                     return f1;
@@ -359,7 +358,7 @@ async function getRandomArticle(connection, id, num, rows=null) {
 }
 
 //!hata
-async function setArticleTo6(connection, rows, num) {
+async function setArticleTo4(connection, rows, num) {
     const urls = null || rows.length === 0 ? [""] : rows.map(row => row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
@@ -378,19 +377,19 @@ async function setArticleTo6(connection, rows, num) {
 async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, city, id) {
 
     if(kategori1.length === kategori2.length) {
-        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
-        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 3);
+        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 2);
+        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 2);
 
         const kat12 = kat1.concat(kat2);
-        if(kat12.length < 6) {
-            const randomArticles = await getRandomArticle(connection, id, (6 - kat12.length), kat12);
+        if(kat12.length < 4) {
+            const randomArticles = await getRandomArticle(connection, id, (4 - kat12.length), kat12);
             const grawc = kat12.concat(randomArticles);
 
-            if(grawc.length === 6) {
+            if(grawc.length === 4) {
                 return grawc;
             }
             else {
-                return await setArticleTo6(connection, grawc, (6 - grawc.length));
+                return await setArticleTo4(connection, grawc, (4 - grawc.length));
             }
         }
         else {
@@ -401,22 +400,22 @@ async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, ci
         const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
         const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 1);
         const kat12 = kat1.concat(kat2);
-        const kat3 = await getMostClickedFromCity(connection, null, city, id, 2, kat12);
-        const kat123 = kat12.concat(kat3);
+        /* const kat3 = await getMostClickedFromCity(connection, null, city, id, 2, kat12);
+        const kat123 = kat12.concat(kat3); */
 
-        if(kat123.length < 6) {
-            const randomArticles = await getRandomArticle(connection, id, (6 - kat123.length), kat123);
-            const grawc = kat123.concat(randomArticles);
+        if(kat12.length < 4) {
+            const randomArticles = await getRandomArticle(connection, id, (4 - kat12.length), kat12);
+            const grawc = kat12.concat(randomArticles);
 
-            if(grawc.length === 6) {
+            if(grawc.length === 4) {
                 return grawc;
             }
             else {
-                return await setArticleTo6(connection, grawc, (6 - grawc.length));
+                return await setArticleTo4(connection, grawc, (4 - grawc.length));
             }
         }
         else {
-            return kat123;
+            return kat12;
         }
     }
 }

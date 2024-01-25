@@ -16,7 +16,7 @@ export default function Ana_gorsel({ana_resim, baslik}) {
             ) : (
                 <img
                 loading=''
-                className='us-image'
+                className='us-image image-container-image-top'
                 src={ana_resim}
                 alt={"Makale ana görseli"}
                 /> 

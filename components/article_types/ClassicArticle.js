@@ -3,18 +3,13 @@ import HeadHtml from "../HeadHtml";
 import Details from "../Details";
 import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/ana_gorsel";
-import dynamic from 'next/dynamic';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
 import Ens_all from "../mini_components/ens/ens_all";
 
 const ClassicArticle = ({currentPageOperations, baslik, description, keywordsArray, ana_resim, url, jsonList,
      nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) => {
-
-  useEffect(() => {
-    console.log("CLASSICARTICLE RENDER EDİLDİ.");
-  }, [])
 
   return (
     <Main>
@@ -36,8 +31,8 @@ const ClassicArticle = ({currentPageOperations, baslik, description, keywordsArr
           <Ana_gorsel ana_resim={ana_resim} baslik={baslik}/>
           <p className='summary_text'>{metin}</p>
           
-          { currentPageOperations && currentPageOperations.currentPageValue !== null && <Custom_Waypoint name={"top"} startedUrl={url} currentPageOperations={currentPageOperations}/> }
-          {/* //! eğer currentPageOperations.currentPageValue eşitse boşa bu durumda currentPage'i yine set etsin ama database tablosuna kayıt eklemesin */}
+          { currentPageOperations && currentPageOperations.currentPageValue !== null 
+          && <Custom_Waypoint customKey={"top_wp_"+url} name={"top"} startedUrl={url} currentPageOperations={currentPageOperations}/> }
 
           <hr className='split'/>
 
@@ -45,7 +40,7 @@ const ClassicArticle = ({currentPageOperations, baslik, description, keywordsArr
            kategori={kategori} currentPageOperations={currentPageOperations}/>
         </article>
 
-        {/* <OtherContents/> */}
+        <OtherContents/>
     </Main>
   );
 };

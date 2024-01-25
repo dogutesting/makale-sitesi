@@ -8,7 +8,7 @@ export default function Kunye({ozellikler, parseHtml}) {
             deger != "0" &&
             <span key={index}>
               <b>{parseHtml(anahtar)}: </b>
-              <span>{parseHtml(deger)}</span>
+              <span>{typeof deger}{parseHtml(deger)}</span>
               {index !== ozelliklerArray.length - 1 && <span className='fof'> | </span>}
             </span>
           ))

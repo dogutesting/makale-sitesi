@@ -18,7 +18,7 @@ export default function Ens_all({jsonContentArray, sayfaUrl, currentPageOperatio
         <section key={index}>
           <En
               baslik={item.num + " - " + item.name}
-              pri={index == 0 ? true : false}
+              pri={false}
               rsm={item.image}
               rsm_alt={item.name + " görseli."}
               enid={"bolum-"+item.num}
@@ -43,11 +43,11 @@ export default function Ens_all({jsonContentArray, sayfaUrl, currentPageOperatio
         addHr = false;
       }
 
-      /* if((index + 1) === 9) {
+      if((index + 1) === 9) {
         items.push(
-            <Custom_Waypoint key={(index+1)+"wp"} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations}/>
+            <Custom_Waypoint key={"bottom_wp_"+(index+1)} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations}/>
         )
-      } */
+      }
 
       !addHr && items.push(<hr key={index+"hr2"} className='split'/>);
   });

@@ -145,7 +145,7 @@ export default function index({articles, currentPage, cats, paginationCount, cur
 
             <Content posts={articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
-            <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
+            <hr className={['top_split bot_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             {paginationCount > 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}
         </Main>
     </>

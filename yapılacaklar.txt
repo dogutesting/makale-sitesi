@@ -19,6 +19,8 @@
 		
 -> addClick'deki / olayı kaldırılsın, performans için V
 
+-> geo location : //https://www.iplocation.net/ip-lookup
+
 !-> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
 	-> react-infinite-scroll içerisindeki hatalar
 		0-) her sayfanın getStaticProps özelliği alta çekilmeli, import getStaticProps'u çalıştırmıyor -> V
@@ -46,10 +48,12 @@
 
 -> users ekleme çalışmıyor
 
--> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
-okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
+-> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
 
 -> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
+
+-> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
+okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
 
 -> 10 makale daha yaz.
 

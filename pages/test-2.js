@@ -6,16 +6,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { useRouter } from 'next/router';
 
-export default function MostSeriesMain10({currentPageOperations}) {
+export default function MostSeriesMain10({topCurrentPageOperations}) {
   const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
-
-  const router = useRouter();
-
 
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
   
-  const url = "TEST";
-  /* const url = router.asPath.slice(1); */
+  const url = "test-2";
 
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
@@ -196,20 +192,20 @@ export default function MostSeriesMain10({currentPageOperations}) {
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 
   const jsonList = moviesAndSeriesJson(articleInfos,
-  "Series", 
+  "Series",
   metin,
-  jsonContentArray
-  )
+  jsonContentArray);
 
   return (
-    <>
-      <h1>URL: {url}</h1>
         <ClassicArticle
-         baslik={"Örnek 2"} description={description} keywordsArray={keywordsArray}
+         currentPageOperations={topCurrentPageOperations ? 
+          topCurrentPageOperations
+           :
+          {isSetable: false, currentPageValue, setCurrentPageValue}}
+         baslik={"Test 2 Sayfası Başlığı"} description={description} keywordsArray={keywordsArray}
             ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
               okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
               kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
         </ClassicArticle>
-    </>
   )
 }
