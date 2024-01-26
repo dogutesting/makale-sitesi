@@ -1,5 +1,5 @@
-import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function MostMoviesMain({topCPO}) {
   //#region SAYFA İÇİ TEXT TANIMLAMALARI

@@ -1,5 +1,5 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticleTop from '@/components/article_types/ClassicArticleTot';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi250ccScooterMain({topCPO}) {
   //#region SAYFA TANIMLAMALARI

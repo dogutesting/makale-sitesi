@@ -43,4 +43,4 @@ const ClassicArticleBot = ({currentPageOperations, baslik, description, keywords
   );
 };
 
-export default ClassicArticle;
+export default ClassicArticleBot;

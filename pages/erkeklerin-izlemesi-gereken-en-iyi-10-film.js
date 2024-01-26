@@ -1,5 +1,5 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticleTop from '@/components/article_types/ClassicArticleBot';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function MansNeedWatch({topCPO}) {
   //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
