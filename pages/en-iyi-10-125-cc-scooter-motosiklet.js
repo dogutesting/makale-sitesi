@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi125ccScooterMain() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "scooter"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi125ccScooterMain({topCPO}) {
+  //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-125-cc-scooter-motosiklet";
   const baslik = "En İyi 10 125 CC Scooter Motosiklet";
   const metin = "Scooter motosikletler, şehir içi ulaşımda rahatlık ve konfor arayanlar için ideal bir seçenektir. Küçük boyutları, agil yapıları ve geniş bagaj alanları sayesinde, scooterlar, yoğun trafikte rahat hareket edebilme ve park sorununu minimalize edebilme avantajları sunar. 100cc ve 125cc motor hacmine sahip scooter modelleri ise, hem yeni başlayanlar hem de deneyimli sürücüler için uygun bir seçim olabilir. Bu motor hacimleri, günlük şehir içi kullanım için yeterli performansı, ekonomik yakıt tüketimini ve düşük bakım maliyetlerini bir araya getirir. 100cc ve 125cc scooterlar, genelde LED farlar, dijital gösterge panelleri, geniş depolama alanları ve modern güvenlik özellikleri gibi konfor ve fonksiyonellik özellikleri sunar. Ayrıca, bu hacimdeki scooterlar genellikle uygun fiyatlı seçenekler sunar, bu da onları gençler, öğrenciler ve bütçesini düşünen sürücüler için cazip kılar. İşte karşınızda, Türkiye'deki en popüler 10 adet 125cc ve 100cc scooter modeli. Listemize başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "scooter"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -213,12 +210,12 @@ export default function Eniyi125ccScooterMain() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

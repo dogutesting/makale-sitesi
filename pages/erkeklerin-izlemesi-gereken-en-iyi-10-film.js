@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleBot';
 
-function MansNeedWatch() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function MansNeedWatch({topCPO}) {
+  //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
   const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "5";
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
@@ -190,14 +187,12 @@ function MansNeedWatch() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle addRef={addRef} baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }
-
-export default MansNeedWatch;

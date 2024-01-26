@@ -1,23 +1,18 @@
-import { useAppContext } from '@/context/ContextProvider';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
 
-export default function MostMoviesMain() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function MostMoviesMain({topCPO}) {
+  //#region SAYFA İÇİ TEXT TANIMLAMALARI
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
-
   const metin = `Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, 
   ruhumuza dokunur ve bizi derinden etkiler. Onların bizdeki değeri farklıdır. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, 
   sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. 
   IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, 
   izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. 
   İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.`;
-
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "3";
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
@@ -143,8 +138,8 @@ export default function MostMoviesMain() {
         "num": "3",
         "url": `https://enonlar.com/${url}#bolum-3`,
         "name":"Kara Şövalye - The Dark Knight",
+        "image":`/images/movies/batman_kara_sovalye.jpg`,
         "ozellikler": {
-          "image":`/images/movies/kara_sovalye.jpg`,
           "Yıl":"2008",
           "Süre": "2 sa. 32 dk.",
           "Kategori": ["Aksiyon", "Dram", "Suç"],
@@ -197,12 +192,12 @@ export default function MostMoviesMain() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

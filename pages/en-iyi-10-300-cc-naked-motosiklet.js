@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi300ccNakedMain() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi300ccNakedMain({topCPO}) {
+  //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-300-cc-naked-motosiklet";
   const baslik = "En İyi 10 300 CC Naked Motosiklet";
   const metin = "300cc motor hacmi, genellikle başlangıç ve orta seviye sürücüler için idealdir, çünkü hem şehir içi hem de uzun mesafeli sürüşler için yeterli güç sunar. Naked motosikletlerin minimalist tasarımı, daha düşük ağırlık ve rahat sürüş pozisyonu, bu tarz motosikletleri hem günlük kullanım hem de maceralı sürüşler için cazip kılar. Listemizdeki zarif tasarımlı ve performans odaklı motosikletler, bu segmentin ne kadar çekici ve heyecan verici olduğunu gösteriyor. Hadi listeyi inceleyelim!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -210,12 +207,12 @@ export default function Eniyi300ccNakedMain() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

@@ -1,15 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticle from '@/components/article_types/ClassicArticleBot';
 
-export default function Eniyi50ccScooterMain() {
-    const { nightMode } = useAppContext();
-
-    const keywordsArray = ["en", "iyi", "50cc", "motosiklet", "scooter"];
+export default function Eniyi50ccScooterMain({topCPO}) {
+  //#region SAYFA TANIMLAMALARI
     const url = "en-iyi-10-50-cc-scooter-motosiklet";
     const baslik = "En İyi 10 50 CC Scooter Motosiklet";
     const metin = "50cc scooter'lar, hem şehir içinde hem de kısa mesafeli taşımacılıkta ideal bir seçenektir. Küçük motor hacimleri sayesinde düşük yakıt tüketimi ve düşük işletme maliyetleri sunarlar. Ayrıca, kompakt boyutları ve hafiflikleri sayesinde trafikte kolay manevra yapabilir ve park problemlerini asgariye indirebilirler. 50cc scooter'lar genellikle yeni sürücüler, öğrenciler veya düşük bütçeli bireyler için mükemmel bir tercihtir. Yine de, bu tür scooter'ların tasarımı ve özellikleri markadan markaya değişkenlik gösterebilir. Bu makalede, Türkiye'de satılan ve popüler olan 10 farklı 50cc scooter modelini inceledik ve onları bir dizi kritere göre sıraladık. Her modelin detaylı incelemesini ve sıralamasını aşağıda bulabilirsiniz. Vespa Primavera 50'den başlayarak, RKS Azure 50'ye kadar olan scooter modelleri, genel kalite, performans, konfor ve benzersiz özellikler açısından değerlendirdik. Hadi başlayalım!";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
+    const keywordsArray = ["en", "iyi", "50cc", "motosiklet", "scooter"];
     const okunmaSuresi = "5";
     const kategori = "motosiklet"; //türkce karakter olmasin
     const minAge = "18";
@@ -209,12 +207,12 @@ export default function Eniyi50ccScooterMain() {
     metin,
     jsonContentArray
     )
+    //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

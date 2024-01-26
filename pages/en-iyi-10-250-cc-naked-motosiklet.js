@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi250ccNakedMain() {
-    const { nightMode } = useAppContext();
-
-    const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi250ccNakedMain({topCPO}) {
+  //#region SAYFA TANIMLAMALARI
     const url = "en-iyi-10-250-cc-naked-motosiklet";
     const baslik = "En İyi 10 250 CC Naked Motosiklet";
     const metin = "250cc naked motosikletler, hafiflikleri, atik yapıları ve şehir içi kullanım kolaylıkları ile bilinirler. İster yeni başlayan bir sürücü olun, ister deneyimli bir motor tutkunu, bu segmentteki motosikletler, sade ve fonksiyonel tasarımları ile geniş bir kitleye hitap ediyor. Aşağıda, birbirinden estetik ve performanslı en iyi 10 250cc naked motosikleti detaylı özellikleri ve teknik analizler ışığında sıralayarak sizler için bir araya getiriyoruz. Her bir motosikletin tasarımından, motor performansına, kullanım kolaylığına kadar birçok detayı bulacaksınız. İyi okumalar!";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+    const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
     const okunmaSuresi = "5";
     const kategori = "motosiklet"; //türkce karakter olmasin
     const minAge = "18";
@@ -210,12 +207,12 @@ export default function Eniyi250ccNakedMain() {
     metin,
     jsonContentArray
     )
+    //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

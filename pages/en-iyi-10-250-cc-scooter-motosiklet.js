@@ -1,20 +1,17 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTot';
 
-export default function Eniyi250ccScooterMain() {
-  const {nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "scooter"];
+export default function Eniyi250ccScooterMain({topCPO}) {
+  //#region SAYFA TANIMLAMALARI
   const url = "en-iyi-10-250-cc-scooter-motosiklet";
   const baslik = "En İyi 10 250 CC Scooter Motosiklet";
   const metin = "Şehir hayatının yoğun temposunda hız, konfor ve stil arayanlar için 250cc scooter motosikletler mükemmel bir tercih sunar. Bu motor hacmi, şehir içinde hızlı ve çevik hareket etme imkanı sağlarken, şehirler arası yolculuklarda da yeterli performansı ve rahatlığı sunar. 250cc scooterlar, genellikle güçlü motorları, geniş oturma alanları ve yüksek depolama kapasiteleri ile öne çıkarlar. Bu segmentteki modeller, hem deneyimli sürücüler için hem de performanstan ödün vermek istemeyen yeni başlayanlar için idealdir. Modern teknolojik donanımlar, gelişmiş güvenlik özellikleri ve aerodinamik tasarımlar, 250cc scooterların günlük kullanımda pratikliğini ve sürüş keyfini artırır. Uzun yolculuklar ve şehir içi trafikte eşsiz bir sürüş deneyimi sunan bu modeller, hem tasarım hem de işlevsellik açısından beklentileri karşılar. İşte Türkiye'deki en popüler ve sevilen 10 adet 250cc scooter modeli, bu dinamik ve heyecan verici scooterları incelemeye başlayalım.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
+  const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "scooter"];
   const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
-  //!tarih
   const eklenmeTarihi = "2023-11-18T00:22:00+03:00";
   const degistirilmeTarihi = "2023-11-19T01:13:00+03:00";
   const addDate = "18.11.23";
@@ -202,22 +199,19 @@ export default function Eniyi250ccScooterMain() {
         }
   ];
 
-  //const ana_resim = jsonContentArray[0].image;
   const ana_resim = "/images/ana_gorseller/enonlar-en-iyi-10-250-cc-scooter-motosiklet.png";
-
   const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
-
   const jsonList = moviesAndSeriesJson(articleInfos,
   "Motosiklet", 
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-        <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-                okunmaSuresi={jsonList.readTimeSpan != 0 ? jsonList.readTimeSpan : okunmaSuresi}
-                kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

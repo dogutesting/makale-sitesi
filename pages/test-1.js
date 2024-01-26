@@ -1,22 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
-import dynamic from 'next/dynamic';
-import React, { useState, useEffect} from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import { useRouter } from 'next/router';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function MostSeriesMain10() {
-  const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
-
-  const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  
+export default function MostSeriesMain10({topCPO}) {  
+  //#region  SAYFA TEXT TANIMLAMALARI
   const url = "test-1";
-
-  const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
+  const baslik = "TEST-1 SAYFASI";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "2";
   const kategori = "dizi"; //türkce karakter olmasin
   const minAge = "18";
@@ -196,101 +187,12 @@ export default function MostSeriesMain10() {
   metin,
   jsonContentArray
   )
-
-  const router = useRouter();
-
-  //InfinityScroll için
-  const [items, setItems] = useState([]);
-  const [loadedPages, setLoadedPages] = useState([]);
-  const [pageCount, setPageCount] = useState(0);
-
-  //react-waypoint için
-  const [ancestor, setAncestor] = useState(null);
-  const [currentPageValue, setCurrentPageValue] = useState(url);
-
-  const getAllArticlesForUser = async () => {
-      const res = await fetch(topLevelUrl+"/api/userKey", {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          "req": "guil",
-          "data": {
-            "id": userInfo.id,
-            "city": userInfo.city,
-            "currentUrl": currentPageValue.current
-          }
-        })
-      })
-      if(res.ok) {
-        /* const response = await res.json();
-        console.log("res.ok"); */
-
-        /* const response = await res.json();
-        setItems(response.data);
-        console.log(response.data); */
-        setItems(['test-2']);
-      }
-      else {
-        //! buradaki hataları mysql'e kaydet
-        console.log("%i Hata: " + res.statusText, red);
-      }
-  }
-
-  const fetchData = async () => {
-    try {
-      /* const nextPageUrl = items[pageCount].url; */
-      const nextPageUrl = items[pageCount];
-      const PageComponent = dynamic(() => import(`/pages/${nextPageUrl}`));
-      setLoadedPages(prevPages => [...prevPages, PageComponent]);
-      setPageCount(prevCount => prevCount + 1);
-    } catch (error) {
-      //!
-    }
-  }
-
-  useEffect(() => {
-      if(userInfo.id && userInfo.city) {
-          //getAllArticlesForUser();
-          setItems(['test-2']);
-      }
-  }, [userInfo]);
-
-  useEffect(() => {
-    /* window.history.pushState({}, "", curren) */
-    console.log("CurrentPageValue Changed: " + topLevelUrl+"/"+currentPageValue);
-    /* if(currentPageValue != router.asPath) */
-    //burada kaldın işte
-    window.history.pushState({}, '', topLevelUrl+"/"+currentPageValue);
-  }, [currentPageValue])
-
-  useEffect(() => {
-    setAncestor(window);
-  }, []);
-
+  //#endregion
+  
   return (
-    <>
-        <ClassicArticle
-        currentPageOperations={{isSetable: false, currentPageValue, setCurrentPageValue, ancestor}}
-         baslik={"Test 1 Sayfası Başlığı"} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle>
-
-        <InfiniteScroll
-          dataLength={loadedPages.length}
-          next={fetchData}
-          hasMore={pageCount < items.length}
-          loader={<h4>Loading...</h4>}>
-            {
-              loadedPages.map((PageComponent, index) => (
-                  <PageComponent key={index} 
-                  topCurrentPageOperations={{isSetable: true, currentPageValue, setCurrentPageValue, ancestor}}/>
-              ))
-            }
-        </InfiniteScroll>
-    </>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

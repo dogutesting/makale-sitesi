@@ -6,8 +6,9 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
     const [looked, setLooked] = useState(false);
 
     const setCurrentPageProp = (url) => {
-      currentPageOperations.setCurrentPageValue(url);
-      console.log("Set to: " + url);
+      if(url != currentPageOperations.currentPageValue) {
+        currentPageOperations.setCurrentPageValue(url);
+      }      
     }
 
     //! tıklamaları kayınca düzenle!

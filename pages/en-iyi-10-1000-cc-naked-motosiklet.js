@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi1000ccNakedMain() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi1000ccNakedMain({topCPO}) {
+  //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
   const url = "en-iyi-10-1000-cc-naked-motosiklet";
   const baslik = "En İyi 10 1000 CC Naked Motosiklet";
   const metin = "1000cc sınıfı naked motosikletler, tecrübeli motosiklet sürücülerinin ellerinde bile agresifliğini ve yırtıcılığını bırakmayan, adrenalini zirveye taşıyan makinalardır. Bu devasa güçler, her bir gaz hareketiyle kendini gösterirken, derin ve tok egzoz notaları ile çevrenizdeki herkesin dikkatini çeker. İster şehir içinde ister açık yolda olsun, bu motosikletler sürücülerine her zaman tam kontrollü bir agresiflik sunar. Yüksek performansları, sofistike teknolojileri ve etkileyici tasarımları ile bu makinalar, sadece hız ve güç tutkunlarına hitap eder. Bu makalede, bu sınıfın en iyi temsilcilerini detaylarıyla inceliyor ve sizi bu benzersiz deneyimi keşfetmeye davet ediyoruz. Okurken heyecanlanacak ve belki de bir sonraki motosikletinizi seçerken bu listeye göz atacaksınız.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -210,12 +207,12 @@ export default function Eniyi1000ccNakedMain() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

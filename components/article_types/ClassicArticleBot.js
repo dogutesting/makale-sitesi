@@ -3,12 +3,10 @@ import HeadHtml from "../HeadHtml";
 import Details from "../Details";
 import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/ana_gorsel";
-import { useEffect } from "react";
-
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
 import Ens_all from "../mini_components/ens/ens_all";
 
-const ClassicArticle = ({currentPageOperations, baslik, description, keywordsArray, ana_resim, url, jsonList,
+const ClassicArticleBot = ({currentPageOperations, baslik, description, keywordsArray, ana_resim, url, jsonList,
      nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) => {
 
   return (

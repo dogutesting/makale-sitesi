@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi125ccSuperMain() {
-    const { nightMode } = useAppContext();
-
-    const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi125ccSuperMain({topCPO}) {
+  //#region SAYFA TANIMLAMALARI
     const url = "en-iyi-10-125-cc-super-sport-motosiklet";
     const baslik = "En İyi 10 125 CC Super Sport Motosiklet";
     const metin = "125cc'lik supersport motosikletler, motosiklet dünyasının heyecan verici bir bölümünü temsil eder. Hem yeni başlayanlar hem de genç sürücüler için tasarlanmış bu makineler, sürücülerine yarışçı ruhunu, hızı ve esnekliği ilk elden deneyimleme fırsatı sunar. Estetik tasarımları, aerodinamik yapıları ve sportif karakterleri, sürücülerini sıkı bir yol tutuşu ve duyarlı manevra kabiliyeti ile buluşturur. Özellikle genç ve enerjik sürücüler için tasarlanmış bu motosikletler, onlara sürüş becerilerini geliştirme ve motor sporlarına olan ilgilerini derinleştirme fırsatı verir. Ayrıca, bu segmentteki motosikletler genellikle ekonomik yakıt tüketimi ve uygun fiyatlı bakım maliyetleri sunarak, bütçe dostu bir sürüş deneyimi sağlar. 125cc'lik supersport motosikletlerin sunduğu bu eşsiz deneyimi yaşamak ve bu sınıfın en iyi modellerini keşfetmek adına, makalemizi okuyarak bu küçük canavarlar hakkında detaylı bilgi edinin.";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+    const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
     const okunmaSuresi = "6";
     const kategori = "motosiklet"; //türkce karakter olmasin
     const minAge = "18";
@@ -210,12 +207,12 @@ export default function Eniyi125ccSuperMain() {
     metin,
     jsonContentArray
     )
-
+    //#endregion
+  
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

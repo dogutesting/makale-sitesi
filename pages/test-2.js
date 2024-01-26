@@ -1,22 +1,14 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-import React, { useState, useEffect, useRef } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import { useRouter } from 'next/router';
+export default function MostSeriesMain10({topCPO}) {
 
-export default function MostSeriesMain10({topCurrentPageOperations}) {
-  const { nightMode, url: topLevelUrl, userInfo } = useAppContext();
-
-  const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  
+  //#region -> SAYFADA GÖSTERİLECEK TEXT DEĞERLERİ VE JSON+LD AYARLAMASI
   const url = "test-2";
-
-  const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
+  const baslik = "TEST-2 SAYFASI";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "2";
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
@@ -195,17 +187,12 @@ export default function MostSeriesMain10({topCurrentPageOperations}) {
   "Series",
   metin,
   jsonContentArray);
+  //#endregion
 
   return (
-        <ClassicArticle
-         currentPageOperations={topCurrentPageOperations ? 
-          topCurrentPageOperations
-           :
-          {isSetable: false, currentPageValue, setCurrentPageValue}}
-         baslik={"Test 2 Sayfası Başlığı"} description={description} keywordsArray={keywordsArray}
-            ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-              okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-              kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-        </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }

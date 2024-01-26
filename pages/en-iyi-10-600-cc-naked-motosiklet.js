@@ -1,16 +1,13 @@
-import { useAppContext } from '@/context/ContextProvider';
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
-import ClassicArticle from '@/components/article_types/ClassicArticle';
+import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi600ccNakedMain() {
-  const { nightMode } = useAppContext();
-
-  const keywordsArray = ["en", "iyi", "600cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
+export default function Eniyi600ccNakedMain({topCPO}) {
+  //#region 
   const url = "en-iyi-10-600-cc-naked-motosiklet";
   const baslik = "En İyi 10 600 CC Naked Motosiklet";
   const metin = "600cc'lik motorlar, genel olarak orta ve tecrübeli motor sürücülerine hitap eder. Naked sınıfının özgürlüğünü ve 600cc veya 700cc naked motosiklet gücünün atılganlığını birleştirerek, esnek ve enerjik bir sürüş deneyimi sunar. Bu liste, her biri kendi sınıfında öne çıkan 10 farklı modeli içermekte. Siz de 600cc'lik naked motosikletlerin sunduğu bu benzersiz deneyimi keşfetmek için yazımızı okumaya devam edin ve heyecanınızı kesfedin!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-
+  const keywordsArray = ["en", "iyi", "600cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
@@ -212,12 +209,12 @@ export default function Eniyi600ccNakedMain() {
   metin,
   jsonContentArray
   )
+  //#endregion
 
   return (
-    <ClassicArticle baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
-    </ClassicArticle>
+    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
   )
 }
