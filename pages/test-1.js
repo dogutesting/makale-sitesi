@@ -1,8 +1,9 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function MostSeriesMain10({topCPO}) {  
-  //#region  SAYFA TEXT TANIMLAMALARI
+export default function MostSeriesMain10({topCPO}) {
+  
+  //#region SAYFA TEXT TANIMLAMALARI
   const url = "test-1";
   const baslik = "TEST-1 SAYFASI";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
@@ -188,7 +189,7 @@ export default function MostSeriesMain10({topCPO}) {
   jsonContentArray
   )
   //#endregion
-  
+
   return (
     <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
     ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}

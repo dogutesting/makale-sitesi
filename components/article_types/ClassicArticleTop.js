@@ -4,9 +4,6 @@ import { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { getAllArticlesForUser, fetchData } from '@/components/functions/infinityScrollFunctions';
 
-let willComponentRender = true;
-//2 tane renderlasın sadece
-
 export default function ClassicArticleTop ({topCPO, baslik, description, keywordsArray, ana_resim, url, jsonList,
      addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
 
@@ -48,7 +45,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   //#region InfinityScroll Yüklemeye devam etsin mi?
   const [firstComponentRendered, setFirstComponentRendered] = useState(false);
   const [componentRenderedTime, setComponentRenderedTime] = useState(new Date());
-  /* const [willComponentRender, setWillComponentRender] = useState(true); */
+  const [willComponentRender, setWillComponentRender] = useState(true);
   const getCurrentTime = () => {
     return new Date();
   }
@@ -56,12 +53,21 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   function calculateTimeDifferenceInSeconds(date1, date2) {
     const differenceInMilliseconds = Math.abs(date2 - date1);
     const differenceInSeconds = differenceInMilliseconds / 1000;
-    console.log(differenceInSeconds + " | " + 3.5);
+    const timer = 5.5;
+    console.log(differenceInSeconds + " | " + timer);
     console.log("--------------------");
-    console.log(differenceInSeconds < 3.5);
-    return differenceInSeconds < 6.0;
+    console.log(differenceInSeconds < timer);
+    return differenceInSeconds < timer;
   }
   //#endregion
+
+  useEffect(() => {
+    console.log("değişti: ", loadedPages);
+  }, [loadedPages.length])
+
+  useEffect(() => {
+    console.log("pagecount değişti: " + pageCount);
+  }, [pageCount])
 
   return (
     <>
@@ -77,31 +83,36 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
             okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
             kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
       </ClassicArticleBot>
-
       {
         !topCPO && (
         <InfiniteScroll
           dataLength={loadedPages.length}
           next={willComponentRender && (() => {
-                fetchData(pageCount, items, setLoadedPages, setPageCount);
+                console.log("test");
                 if(!firstComponentRendered) {
-                  console.log("!first");
+                  console.log("test1");
+                  //! loadedPages ve pageCount'ı kontrol ettiğim zaman önce set ediyor ardından sıfırlıyor
+                  fetchData(pageCount, items, setLoadedPages, setPageCount);
+
                   setComponentRenderedTime(getCurrentTime());
                   setFirstComponentRendered(true);
                 }
                 else {
                   const isFast = calculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime());
                   if(isFast) {
-                    /* setWillComponentRender(prevValue => !prevValue); */
-                    willComponentRender = false;
+                    console.log("test2");
+                    setWillComponentRender(false);
                   }
                   else {
+                    console.log("test3");
+                    fetchData(pageCount, items, setLoadedPages, setPageCount);
                     setFirstComponentRendered(false);
                   }
                 }
               }
             )
           }
+          //items.length -> burası mozilla'da hata veriyor.
           hasMore={pageCount < items.length}
           >
             {
