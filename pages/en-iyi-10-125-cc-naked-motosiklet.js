@@ -2,7 +2,8 @@ import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi125ccNakedMain({topCPO}) {
-  //#region SAYFA TEXT TANIMLAMALARI
+
+    //#region SAYFA TEXT TANIMLAMALARI
     const url = "en-iyi-10-125-cc-naked-motosiklet";
     const baslik = "En İyi 10 125 CC Naked Motosiklet";
     const metin = "125cc'lik motosikletler, özellikle yeni sürücüler ve gençler için cazip bir seçenek sunar. Hem ekonomik hem de çevik olan bu motosikletler, sürücülerine trafikte kolay manevra kabiliyeti ve sürüş esnekliği sunar. Naked tasarımı, bu kategoriyi daha da çekici kılar; minimal karoseri ve sade tasarım, motosikletin hafifliğini ve atikliğini vurgular. Naked 125cc motosikletler, şehir içi trafikte mükemmel performans sergilerken, aynı zamanda sürücülerine rüzgarla bütünleşme ve doğal bir sürüş deneyimi sunar. Bu motosikletler, genç sürücülerin yanı sıra kısıtlı bir bütçesi olan yetişkinler için de idealdir. Bu makalede, bu kategorideki en popüler 10 modeli derinlemesine inceleyeceğiz. Hangi modelin sizin için en uygun olduğunu belirlemek ve 125cc naked motosikletlerin sunduğu benzersiz deneyimi daha iyi anlamak için okumaya devam edin!";
@@ -207,12 +208,12 @@ export default function Eniyi125ccNakedMain({topCPO}) {
     metin,
     jsonContentArray
     )
-  //#endregion
+    //#endregion
 
-  return (
-    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
-  )
+    return (
+        <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
+        ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
+          okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
+          kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+    )
 }

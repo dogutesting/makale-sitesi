@@ -39,7 +39,7 @@
 							
 							- waypoint olayı çözülecek
 
-
+		2.1-) getAllArticlesForUser() fonksiyonu doğru çalışıyor mu diye kontrol edilecek 
 		3-) bakılan sayfalar database'e eklenmiyor
 
 		4-) resimlerin border-radius'ları doğru çalışmıyor

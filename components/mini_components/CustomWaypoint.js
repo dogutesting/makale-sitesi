@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 
 export default function Custom_Waypoint ({customKey, name, startedUrl, currentPageOperations}) {
-    
     const [looked, setLooked] = useState(false);
 
     const setCurrentPageProp = (url) => {
@@ -18,7 +17,7 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
           console.log("TOP-CLICK EKLENMESI");
           setLooked(true);
         }
-        setCurrentPageProp(startedUrl)
+        setCurrentPageProp(startedUrl);
       }
 
       if(name == "bottom") {

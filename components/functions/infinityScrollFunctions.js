@@ -25,8 +25,6 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
     }
 }
 
-
-
 export const fetchData = async (pageCount, items, setLoadedPages, setPageCount) => {
   try {
     /* const nextPageUrl = items[pageCount].url; */

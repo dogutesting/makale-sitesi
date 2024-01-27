@@ -185,8 +185,7 @@ async function getUserInfoLimitless(id, city) {
             AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
 
-            /* return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => typeof item !== "string" && item !== null && item !== undefined); */
-            return before_final.concat(top_to_bot_makales.map(item => item.url));
+            return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => item !== "string" && item !== "" && item !== null && item !== undefined);
         }
         else {
             //! ELSE
@@ -224,8 +223,7 @@ async function getUserInfoLimitless(id, city) {
             AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
 
-            /* return before_final.concat(top_to_bot_makales).filter(item => typeof item !== "string" && item !== null && item !== undefined); */
-            return before_final.concat(top_to_bot_makales.map(item => item.url));
+            return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => item !== "string" && item !== "" && item !== null && item !== undefined);
         }
     } catch (error) {
         /* throw error; */

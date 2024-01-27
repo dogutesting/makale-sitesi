@@ -4,6 +4,8 @@ import { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { getAllArticlesForUser, fetchData } from '@/components/functions/infinityScrollFunctions';
 
+let willComponentRender = true;
+//2 tane renderlasın sadece
 
 export default function ClassicArticleTop ({topCPO, baslik, description, keywordsArray, ana_resim, url, jsonList,
      addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
@@ -18,8 +20,8 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   useEffect(() => {
     if(!topCPO) {
       if(userInfo.id && userInfo.city) {
-        //getAllArticlesForUser();
-        setItems(['test-2', 'erkeklerin-izlemesi-gereken-en-iyi-10-film']);
+        getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
+        //setItems(['test-2', 'erkeklerin-izlemesi-gereken-en-iyi-10-film']);
       }
     }
   }, [userInfo]);
@@ -43,6 +45,24 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   }, []);
   //#endregion REACT-WAYPOINT
   
+  //#region InfinityScroll Yüklemeye devam etsin mi?
+  const [firstComponentRendered, setFirstComponentRendered] = useState(false);
+  const [componentRenderedTime, setComponentRenderedTime] = useState(new Date());
+  /* const [willComponentRender, setWillComponentRender] = useState(true); */
+  const getCurrentTime = () => {
+    return new Date();
+  }
+
+  function calculateTimeDifferenceInSeconds(date1, date2) {
+    const differenceInMilliseconds = Math.abs(date2 - date1);
+    const differenceInSeconds = differenceInMilliseconds / 1000;
+    console.log(differenceInSeconds + " | " + 3.5);
+    console.log("--------------------");
+    console.log(differenceInSeconds < 3.5);
+    return differenceInSeconds < 6.0;
+  }
+  //#endregion
+
   return (
     <>
       <ClassicArticleBot
@@ -50,7 +70,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
         topCPO ? 
           topCPO
           :
-          {isSetable: false, currentPageValue: currentPageValue, setCurrentPageValue, ancestor}
+          {isSetable: false, currentPageValue, setCurrentPageValue, ancestor}
       }
         baslik={baslik} description={description} keywordsArray={keywordsArray}
           ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
@@ -62,9 +82,28 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
         !topCPO && (
         <InfiniteScroll
           dataLength={loadedPages.length}
-          next={() => fetchData(pageCount, items, setLoadedPages, setPageCount)}
+          next={willComponentRender && (() => {
+                fetchData(pageCount, items, setLoadedPages, setPageCount);
+                if(!firstComponentRendered) {
+                  console.log("!first");
+                  setComponentRenderedTime(getCurrentTime());
+                  setFirstComponentRendered(true);
+                }
+                else {
+                  const isFast = calculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime());
+                  if(isFast) {
+                    /* setWillComponentRender(prevValue => !prevValue); */
+                    willComponentRender = false;
+                  }
+                  else {
+                    setFirstComponentRendered(false);
+                  }
+                }
+              }
+            )
+          }
           hasMore={pageCount < items.length}
-          loader={<h4>Loading...</h4>}>
+          >
             {
               loadedPages.map((PageComponent, index) => (
                   <PageComponent key={index} 
