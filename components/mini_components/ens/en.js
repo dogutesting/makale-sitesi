@@ -1,15 +1,17 @@
 import Image from 'next/image';
 
 export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, 
-    showToast, nightMode, url, sayfaUrl}) {
+    showToast, nightMode, topLevelUrl, sayfaUrl}) {
 
     const handleCopyClick = async () => {
+        //! Buradaki kod güvenli olmayan bağlantılarda çalışmıyor.
         try {
-            const kopyalanacakText = url+"/"+sayfaUrl+"#"+enid;
+            const kopyalanacakText = topLevelUrl+"/"+sayfaUrl+"#"+enid;
             await navigator.clipboard.writeText(kopyalanacakText);
             showToast("Link kopyalandı.");
         } catch (err) {
             //console.log("kopyalanamadı hata: ", err);
+            console.log("kopyalanamadı", err);
         }
     }
 

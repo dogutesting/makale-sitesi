@@ -3,53 +3,18 @@
 import ArticleBox from '@/components/mini_components/icerik_kutusu';
 import { useAppContext } from '@/context/ContextProvider';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { getOtherContentArticles } from './functions/infinityScrollAndGetNewArticle';
 
-export default function OtherContents() {
+export default function OtherContents({currentUrl}) {
 
-  const { userInfo, url, supportWebp } = useAppContext();
-  const [others, setOthers] = useState();
-
-  const router = useRouter();
-
-  const getArticlesForUser = async () => {
-    const res = await fetch(url+"/api/userKey", {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        "req": "gui",
-        "data": {
-          "id": userInfo.id,
-          "city": userInfo.city,
-          "currentUrl": router.asPath.slice(1)
-        }
-      })
-    })
-    if(res.ok) {
-      const response = await res.json();
-      setOthers(response.data);
-    }
-    else {
-      fetch(url+"/api/error", {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-            "type": "other",
-            "location": "other-contents",
-            "error": res.status + " - " + res.statusText  
-          })
-        }
-      )
-    }
-  }
+  const { userInfo, topLevelUrl, supportWebp, isItMobile } = useAppContext();
+  const [others, setOthers] = useState([]);
 
   useEffect(() => {
-    if(userInfo.id && userInfo.city) {
-      getArticlesForUser(url, userInfo, router);
+    if(userInfo.id && userInfo.city && typeof isItMobile === "boolean") {
+      getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile, setOthers);
     }
-  }, [userInfo])
+  }, [userInfo, isItMobile])
 
   return (
     <>
@@ -64,7 +29,7 @@ export default function OtherContents() {
           rsm_alt={other.baslik}
           rsm={other.resimYolu}
           icerik={other.paragraf}
-          onClick={() => getArticlesForUser()}
+          /* onClick={() => getArticlesForUser()} */
           />  
         ))}
       </div>

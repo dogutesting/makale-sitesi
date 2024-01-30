@@ -6,8 +6,6 @@ import Link from 'next/link';
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
 
   const goTag = (e, kategori) => {
-    //const url = `/?kategori=${kategori}`;
-    //router.push(url);
     e.preventDefault();
     setHandleCategory(kategori);
     window.scrollTo(0, 0);

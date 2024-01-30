@@ -39,14 +39,18 @@
 							
 							- waypoint olayı çözülecek
 
-		2.1-) getAllArticlesForUser() fonksiyonu doğru çalışıyor mu diye kontrol edilecek 
+		2.1-) v getAllArticlesForUser() fonksiyonu doğru çalışıyor mu diye kontrol edilecek 
 		3-) bakılan sayfalar database'e eklenmiyor
 
-		4-) resimlerin border-radius'ları doğru çalışmıyor
-		5-) problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
+		4-) v resimlerin border-radius'ları doğru çalışmıyor
+		5-) v problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
 
 
--> users ekleme çalışmıyor
+-> mozilla hatası | ilginç bir şekilde hata düzelmiş
+
+-> users ekleme çalışmıyor | artık doğru çalışıyor
+
+! -> Custom_Waypoint içerisinde bazı kodlar daha yazılacak 
 
 -> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
 

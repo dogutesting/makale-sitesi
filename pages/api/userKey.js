@@ -3,13 +3,15 @@ import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
-let currentUrl = "";
 
 function showWithColor(color, text) {
     console.log(colors[color]("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"));
     console.log(colors[color](text));
     console.log(colors[color]("_________________________________________________"));    
-  }
+}
+
+let currentUrl = "";
+let numberOfContents = 4;
 
 export default async function handler (req, res) {
     if(req.method === 'POST') {
@@ -29,6 +31,7 @@ export default async function handler (req, res) {
             }
             if(jsonBody.req === 'gui') { //* get-user-info
                 currentUrl = jsonBody.data.currentUrl;
+                numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                 const response = await getUserInfo(jsonBody.data.id,
                                                    jsonBody.data.city);
                 res.status(200).json({data: response});
@@ -107,7 +110,7 @@ async function addUserClick(url, time, type, city, uuid) {
         VALUES (?, ?, ?, ?, ?, ?)`, 
         [url, time, kategori, type, city, uuid]);
     } catch (error) {
-     //console.log("error: ", error);
+     console.log("error: ", error);
     } finally {
      connection && connection.end();
     }
@@ -214,7 +217,7 @@ async function getUserInfoLimitless(id, city) {
             GROUP BY c.url 
             ORDER BY clickCount DESC`, [id, ...cityMostUrls, id, currentUrl]);
 
-            const before_final = cityMost.concat(top_to_bot_clicks.map(item => item.url));
+            const before_final = cityMostUrls.concat(top_to_bot_clicks.map(item => item.url));
             const placeholders_2 = before_final.map(() => '?').join(', ');
 
             const [top_to_bot_makales] = await connection.execute(`
@@ -222,12 +225,13 @@ async function getUserInfoLimitless(id, city) {
             WHERE url NOT IN (${placeholders_2}) 
             AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
             AND url != ? ORDER BY id DESC`, [...before_final, id, currentUrl]);
-
+            
             return before_final.concat(top_to_bot_makales.map(item => item.url)).filter(item => item !== "string" && item !== "" && item !== null && item !== undefined);
         }
     } catch (error) {
         /* throw error; */
-        console.log("error", error);
+        showWithColor("red", "!!!!!!!!!!HATA!!!!!!!!!!")
+        console.log(error);
     } finally {
         connection && connection.end();
     }
@@ -252,13 +256,13 @@ async function getUserInfo(id, city) {
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
 
-            const cityMost = await getMostClickedFromCity(connection, null, city, id, 4);
+            const cityMost = await getMostClickedFromCity(connection, null, city, id, numberOfContents);
 
-            if(cityMost.length < 4) {
-                const randomArticle = await getRandomArticle(connection, id, (4 - cityMost.length), cityMost);
+            if(cityMost.length < numberOfContents) {
+                const randomArticle = await getRandomArticle(connection, id, (numberOfContents - cityMost.length), cityMost);
                 const f1 = cityMost.concat(randomArticle);
-                if(f1.length < 4) {
-                    return await setArticleTo4(connection, f1, (4 - f1.length));
+                if(f1.length < numberOfContents) {
+                    return await setArticleTo(connection, f1, (numberOfContents - f1.length));
                 }
                 else {
                     return f1;
@@ -269,15 +273,15 @@ async function getUserInfo(id, city) {
             }
         }
         else if(enFazlaTiklananKategoriler.length === 1) { // eğer kullanıcı 1 kategoride bir şeylere bakmış ise
-            const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, 4);
-            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (4-categoryAndCity.length), categoryAndCity);    
+            const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, numberOfContents);
+            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (numberOfContents-categoryAndCity.length), categoryAndCity);    
             let moded = categoryAndCity.concat(nullAndCity);
 
-            if(moded.length < 4) {
-                const randomArticle = await getRandomArticle(connection, id, (4 - moded.length), moded);
+            if(moded.length < numberOfContents) {
+                const randomArticle = await getRandomArticle(connection, id, (numberOfContents - moded.length), moded);
                 const f1 = moded.concat(randomArticle);
-                if(f1.length < 4) {
-                    return await setArticleTo4(connection, f1, (4 - f1.length));
+                if(f1.length < numberOfContents) {
+                    return await setArticleTo(connection, f1, (numberOfContents - f1.length));
                 }
                 else {
                     return f1;
@@ -355,8 +359,8 @@ async function getRandomArticle(connection, id, num, rows=null) {
     return randomRows;
 }
 
-//!hata
-async function setArticleTo4(connection, rows, num) {
+//* Verilen sayıya tamamla
+async function setArticleTo(connection, rows, num) {
     const urls = null || rows.length === 0 ? [""] : rows.map(row => row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
@@ -379,15 +383,15 @@ async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, ci
         const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 2);
 
         const kat12 = kat1.concat(kat2);
-        if(kat12.length < 4) {
-            const randomArticles = await getRandomArticle(connection, id, (4 - kat12.length), kat12);
+        if(kat12.length < numberOfContents) {
+            const randomArticles = await getRandomArticle(connection, id, (numberOfContents - kat12.length), kat12);
             const grawc = kat12.concat(randomArticles);
 
-            if(grawc.length === 4) {
+            if(grawc.length === numberOfContents) {
                 return grawc;
             }
             else {
-                return await setArticleTo4(connection, grawc, (4 - grawc.length));
+                return await setArticleTo(connection, grawc, (numberOfContents - grawc.length));
             }
         }
         else {
@@ -401,15 +405,15 @@ async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, ci
         /* const kat3 = await getMostClickedFromCity(connection, null, city, id, 2, kat12);
         const kat123 = kat12.concat(kat3); */
 
-        if(kat12.length < 4) {
-            const randomArticles = await getRandomArticle(connection, id, (4 - kat12.length), kat12);
+        if(kat12.length < numberOfContents) {
+            const randomArticles = await getRandomArticle(connection, id, (numberOfContents - kat12.length), kat12);
             const grawc = kat12.concat(randomArticles);
 
-            if(grawc.length === 4) {
+            if(grawc.length === numberOfContents) {
                 return grawc;
             }
             else {
-                return await setArticleTo4(connection, grawc, (4 - grawc.length));
+                return await setArticleTo(connection, grawc, (numberOfContents - grawc.length));
             }
         }
         else {

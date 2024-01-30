@@ -39,7 +39,6 @@ export default function ErrorPage() {
 
   const getMode = () => {
     const localStorage_mode = localStorage.getItem("n-mode");
-    console.log(localStorage_mode);
     setNightMode(JSON.parse(localStorage_mode));
 
     const body = document.body;

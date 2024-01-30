@@ -1,5 +1,7 @@
 import { connectToDatabase } from "@/lib/mysql";
 
+//! bu koda gerçekten gerek var mı?
+
 export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {

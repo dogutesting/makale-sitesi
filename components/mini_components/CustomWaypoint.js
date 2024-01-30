@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
 
-export default function Custom_Waypoint ({customKey, name, startedUrl, currentPageOperations}) {
+export default function Custom_Waypoint ({customKey, name, startedUrl, currentPageOperations, addClick}) {
     const [looked, setLooked] = useState(false);
 
     const setCurrentPageProp = (url) => {
@@ -13,11 +13,18 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
     //! tıklamaları kayınca düzenle!
     const _fun_onEnter = () => {
       if(name === "top") {
+        setCurrentPageProp(startedUrl);
+        if(!looked) {
+          //! sayfalara sağ tıklayıp yeni sekmede aç deyince sql'e eklemiyor
+          //! bu sayfayı daha önce okumadı ise sql'i yazılabilir!
+
+        }
         if(!looked && currentPageOperations.isSetable) {
           console.log("TOP-CLICK EKLENMESI");
           setLooked(true);
+          addClick(startedUrl, "auto");
+          //! eğer sessionStorage'den id'yi silersem nasıl ekleyecek
         }
-        setCurrentPageProp(startedUrl);
       }
 
       if(name == "bottom") {

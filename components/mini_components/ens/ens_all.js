@@ -9,7 +9,7 @@ import Kunye from './kunye';
 
 
 export default function Ens_all({jsonContentArray, sayfaUrl, currentPageOperations}) {
-  const { supportWebp, showToast, nightMode, url } = useAppContext();
+  const { supportWebp, showToast, nightMode, topLevelUrl } = useAppContext();
   const items = [];
 
   items.length === 0 &&
@@ -25,7 +25,7 @@ export default function Ens_all({jsonContentArray, sayfaUrl, currentPageOperatio
               supportWebp={supportWebp}
               showToast={showToast}
               nightMode={nightMode}
-              url={url}
+              topLevelUrl={topLevelUrl}
               sayfaUrl={sayfaUrl}>
                 <Kunye ozellikler={item.ozellikler} parseHtml={cHtmlToJsx}/>
                 <p>{cHtmlToJsx(item.paragraf)}</p>

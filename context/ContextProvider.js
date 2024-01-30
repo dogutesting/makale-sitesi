@@ -7,7 +7,8 @@ const AppContext = createContext();
 export function useAppContext() {
   return useContext(AppContext);
 }
-const url = "http://localhost:3000";
+/* const topLevelUrl = "http://" + "enonlar.com:3000"; */
+const topLevelUrl = "http://" + "localhost:3000";
 const notSecretKey = "D++;";
 let cookies = null;
 
@@ -18,7 +19,14 @@ export function Wrapper({ children }) {
   const [nightMode, setNightMode] = useState(false);
   const [supportWebp, setSupportWebp] = useState(true);
   const [userInfo, setUserInfo] = useState({id: null, city: null});
+  const [isItMobile, setIsItMobile] = useState(null);
 
+  //* Mobile mi değil mi?
+  function hasTouchSupport() {
+    return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+
+  //* Ekranda toast mesaj göstermek için
   function showToast(message) {
     const toastContainer = document.getElementById('toast-container');
     toastContainer.innerHTML = message;
@@ -103,6 +111,7 @@ export function Wrapper({ children }) {
     })
   }
 
+  //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
       const id_cookie = cookies.get("id");
@@ -208,7 +217,11 @@ const handleClick = (event) => {
 
   //main
   useEffect(() => {
+    //#region //* Bu ikisi cihaz özellikleri kısmına konulabilir
     setSupportWebp(checkWebPSupport());
+    setIsItMobile(hasTouchSupport());
+    //#endregion
+
     (async () => {
       const jsCookie = await import('js-cookie');
       cookies = jsCookie.default;
@@ -218,7 +231,7 @@ const handleClick = (event) => {
   }, []);
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, url, userInfo, showToast}}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo, showToast, addClick, isItMobile}}>
       {children}
     </AppContext.Provider>
   );
