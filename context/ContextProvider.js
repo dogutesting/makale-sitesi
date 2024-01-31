@@ -157,36 +157,49 @@ export function Wrapper({ children }) {
   }
 
 
- //* connect with: rota kayıt ve gece mod doğrulayıcı
- const addClick = async (url, button) => {
-  fetch("/api/userKey", {
+  /*
+  auth: "m4i5d",
+  user: {
+    id: id,
+    ci: ci  
+  },
+  status: {
+    pathname: pathname,
+    time: getDateAndTime()
+  }
+  */
+
+
+ //* connect with: rota kayıt //Güncellendi
+ const addClick = async (pathname, type) => {
+  fetch("http:localhost:4541/c-event/waypoint", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      "req": "auc",
-      "data": {
-        "url": url,
-        "date": getDateAndTime(),
-        "type": button,
-        "city": userInfo.city,
-        "uuid": userInfo.id
+      "type": type,
+      user: {
+        "id": userInfo.id,
+        "ci": userInfo.city
+      },
+      status: {
+        pathname: pathname,
+        time: getDateAndTime()
       }
     })
   });
 }
-//* connect with: rota kayıt ve gece mod doğrulayıcı 
-const handleClick = (event) => {
+//* connect with: rota kayıt
+/* const handleClick = (event) => {
   if(event.target.closest('a') != null) {
     const moddedUrl = new URL(event.target.closest('a').href).pathname.slice(1);
-    /* if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) { */
     if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) {
       addClick(moddedUrl, event.button);
     }
   }
-}
-//* connect with: rota kayıt ve gece mod doğrulayıcı
+} */
+//* connect with: gece mod doğrulayıcı
  const getMode = () => {
   const localStorage_mode = localStorage.getItem("n-mode");
   setNightMode(JSON.parse(localStorage_mode));
@@ -207,12 +220,12 @@ const handleClick = (event) => {
   //rota kayıt ve gece mod doğrulayıcı
  useEffect(() => {
   getMode();
-  router.events.on('routeChangeComplete', getMode);
+  /* router.events.on('routeChangeComplete', getMode);
   document.addEventListener('mousedown', handleClick);
   return() => {
       router.events.off('routeChangeComplete', getMode);
       document.removeEventListener('mousedown', handleClick);
-  };
+  }; */
 }, [nightMode, router]);
 
   //main

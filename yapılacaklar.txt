@@ -52,6 +52,8 @@
 
 ! -> Custom_Waypoint içerisinde bazı kodlar daha yazılacak 
 
+-> infinitescroll ile yüklenen componentlerde pre-load kaldırılabilir
+
 -> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
 
 -> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla

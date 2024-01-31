@@ -87,7 +87,7 @@ async function addUser(geo, date) {
    }
 }
 
-async function addUserClick(url, time, type, city, uuid) {
+/* async function addUserClick(url, time, type, city, uuid) {
     let connection;
      try {
         connection = await connectToDatabase();
@@ -101,10 +101,6 @@ async function addUserClick(url, time, type, city, uuid) {
                 kategori = "bos";
             }
         }
-        /* else {
-            kategori = "/";
-            url = "/";
-        } */
         await connection.execute(`INSERT INTO clicks 
         (url, time, kategori, type, city, clicked_user_uuid) 
         VALUES (?, ?, ?, ?, ?, ?)`, 
@@ -114,16 +110,16 @@ async function addUserClick(url, time, type, city, uuid) {
     } finally {
      connection && connection.end();
     }
- }
+ } */
 
 async function getUserInfoLimitless(id, city) { 
     let connection;
     try {
-        connection= await connectToDatabase();
+        connection = await connectToDatabase();
         const [rows] = await connection.execute(
             "SELECT kategori, COUNT(*) AS sayi " +
             "FROM clicks " +
-            "WHERE clicked_user_uuid = ? AND url != ? " +
+            "WHERE clicked_user_uuid = ? AND url != ? AND kategori != 'bos' " +
             "GROUP BY kategori " +
             "ORDER BY sayi DESC " +
             "LIMIT 3",
@@ -245,7 +241,7 @@ async function getUserInfo(id, city) {
         const [rows] = await connection.execute(
             "SELECT kategori, COUNT(*) AS sayi " +
             "FROM clicks " +
-            "WHERE clicked_user_uuid = ? AND url != ? " +
+            "WHERE clicked_user_uuid = ? AND url != ? AND kategori != 'bos' " +
             "GROUP BY kategori " +
             "ORDER BY sayi DESC " +
             "LIMIT 2",

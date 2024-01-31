@@ -65,7 +65,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
       {
         !topCPO && (
         <InfiniteScroll
-          scrollThreshold={0.95}
+          scrollThreshold={0.93}
           dataLength={loadedPages.length}
           next={willComponentRender && (() => {
                 /* console.log("test"); */

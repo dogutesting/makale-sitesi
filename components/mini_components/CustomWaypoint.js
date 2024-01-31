@@ -14,21 +14,18 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
     const _fun_onEnter = () => {
       if(name === "top") {
         setCurrentPageProp(startedUrl);
-        if(!looked) {
-          //! sayfalara sağ tıklayıp yeni sekmede aç deyince sql'e eklemiyor
-          //! bu sayfayı daha önce okumadı ise sql'i yazılabilir!
-
-        }
         if(!looked && currentPageOperations.isSetable) {
           console.log("TOP-CLICK EKLENMESI");
           setLooked(true);
-          addClick(startedUrl, "auto");
-          //! eğer sessionStorage'den id'yi silersem nasıl ekleyecek
+          
+          //! burası tekrar tekrar çalışmaz ama aşağı tekrar tekrar çalışır
+          addClick(startedUrl, name);
         }
       }
 
       if(name == "bottom") {
         setCurrentPageProp(startedUrl);
+        addClick(startedUrl, name);
       }
     }
 
