@@ -7,7 +7,7 @@ const AppContext = createContext();
 export function useAppContext() {
   return useContext(AppContext);
 }
-/* const topLevelUrl = "http://" + "enonlar.com:3000"; */
+const otherServer = "http://" + "localhost:4541";
 const topLevelUrl = "http://" + "localhost:3000";
 const notSecretKey = "D++;";
 let cookies = null;
@@ -79,32 +79,38 @@ export function Wrapper({ children }) {
     .then(response => response.json())
     .then((data) => ({
           country: data.countryName,
-          city: data.cityName,
-          region: data.regionName,
-          lat: data.latitude,
-          lon: data.longitude
+          city: data.cityName
       })
     );
     
     return geoInfos; */
     return {
       country: "Türkiye",
-      city: "Adana",
-      region: "Adana",
-      lat: "34.215",
-      lon: "32.181"
+      city: "Adana"
     }
   }
 
   //* connect with: setStateUserInfo
-  const setCookiesIDandGEO = (id, city) => {
-    const expirationDate = new Date();
-    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
-    //id
-    cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
-    //geo
-    cookies.set('ci', kriptoloji(true, city), { secure: true, sameSite: 'Strict' });
+  const setCookies = (id, city) => {
+    let expirationDate = null;
+    if(id) {
+      expirationDate = new Date();
+      expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    }
 
+    if(id && city) {
+      cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+      cookies.set('ci', city, { secure: true, sameSite: 'Strict' });
+    }
+    else if(id && !city) {
+      cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+    }
+    else if(!id && city) {
+      cookies.set('ci', city, { secure: true, sameSite: 'Strict' });
+    }
+  }
+
+  const setStates = (id, city) => {
     setUserInfo({
       "id": id,
       "city": city
@@ -117,21 +123,28 @@ export function Wrapper({ children }) {
       const id_cookie = cookies.get("id");
       const city_cookie = cookies.get("ci");
 
-      let geoInfos, city_normal;
-      if(!city_cookie) {
-        geoInfos = await getGeoInfos();
-        city_normal = geoInfos.city;
+      if(id_cookie && city_cookie) {
+        setStates(id_cookie, city_cookie);
       }
-      else {
-        let city_cookie_enc = kriptoloji(false, city_cookie);
-        geoInfos = {
-          country: "hata", city: city_cookie_enc, region: "", lat: "", lon: ""
-        }
-        city_normal = city_cookie_enc;
-      }
+      else if(id_cookie && !city_cookie) {
+        const geoInfos = await getGeoInfos();
+        const city = await fetch(otherServer+"/oa/cry", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            "val": geoInfos.city
+          })
+        }).then(res => res.json()).then(data => data.cry);
 
-      if(!id_cookie) {
-        const response = await fetch('/api/userKey', {
+        setStates(id_cookie, city);
+
+        setCookies(null, city);
+      }
+      else if(!id_cookie && city_cookie) {
+        const geoInfos = await getGeoInfos();
+        const id = await fetch('/api/userKey', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', 
@@ -143,32 +156,44 @@ export function Wrapper({ children }) {
               "geo": geoInfos
             }
           })
-        });
+        }).then(res => res.json()).then(data => data.uuid);
+        
+        setStates(id, city_cookie);
 
-        if(response.ok) {
-          const responseId = await response.json();
-          return {id: responseId.uuid, city: city_normal}
-          //! setToken for comment or like actions
-        }
+        setCookies(id, null);
       }
       else {
-        return {id: id_cookie, city: city_normal}
+        const geoInfos = await getGeoInfos();
+
+        const id = await fetch(topLevelUrl+'/api/userKey', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            req: "auk",
+            "data": {
+              "date": getDateAndTime(),
+              "geo": geoInfos
+            }
+          })
+        }).then(res => res.json()).then(data => data.uuid);
+
+        const city = await fetch(otherServer+"/oa/cry", {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            "val": geoInfos.city
+          })
+        }).then(res => res.json()).then(data => data.cry);
+       
+        setStates(id, city);
+
+        setCookies(id, city); 
       }
   }
-
-
-  /*
-  auth: "m4i5d",
-  user: {
-    id: id,
-    ci: ci  
-  },
-  status: {
-    pathname: pathname,
-    time: getDateAndTime()
-  }
-  */
-
 
  //* connect with: rota kayıt //Güncellendi
  const addClick = async (pathname, type) => {
@@ -190,15 +215,6 @@ export function Wrapper({ children }) {
     })
   });
 }
-//* connect with: rota kayıt
-/* const handleClick = (event) => {
-  if(event.target.closest('a') != null) {
-    const moddedUrl = new URL(event.target.closest('a').href).pathname.slice(1);
-    if((event.button === 0 || event.button === 1) && moddedUrl.length != 0) {
-      addClick(moddedUrl, event.button);
-    }
-  }
-} */
 //* connect with: gece mod doğrulayıcı
  const getMode = () => {
   const localStorage_mode = localStorage.getItem("n-mode");
@@ -217,15 +233,9 @@ export function Wrapper({ children }) {
       /* body.classList.add(class2) */
   }
 }
-  //rota kayıt ve gece mod doğrulayıcı
+  //gece mod doğrulayıcı
  useEffect(() => {
   getMode();
-  /* router.events.on('routeChangeComplete', getMode);
-  document.addEventListener('mousedown', handleClick);
-  return() => {
-      router.events.off('routeChangeComplete', getMode);
-      document.removeEventListener('mousedown', handleClick);
-  }; */
 }, [nightMode, router]);
 
   //main
@@ -238,8 +248,9 @@ export function Wrapper({ children }) {
     (async () => {
       const jsCookie = await import('js-cookie');
       cookies = jsCookie.default;
-      const {id, city} = await setStateUserInfo();
-      setCookiesIDandGEO(id, city);
+      await setStateUserInfo();
+      /* const {id, city, is_city_normal} = await setStateUserInfo();
+      setCookiesAndState(id, city); */
     })();
   }, []);
 

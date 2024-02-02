@@ -1,42 +1,23 @@
 import { NextResponse } from 'next/server';
-import CryptoJS from 'crypto-js';
 
 let num = 0;
- 
-// This function can be marked `async` if using `await` inside
+const host = "http://localhost:4541";
+
 export function middleware(request) {
   const response = NextResponse.next();
 
   console.log("middleware: " + (num++));
 
-  const pathname = request.nextUrl.pathname;
   const id = request.cookies.get("id")?.value;
   const ci = request.cookies.get("ci")?.value;
-
-  fetch('http://localhost:4541/c-event/middleware', {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      auth: "m4i5d",
-      user: {
-        id: id,
-        ci: ci  
-      },
-      status: {
-        pathname: pathname,
-        date: getDateAndTime()
-      }
-    })
-  });
-
+  const pathname = request.nextUrl.pathname;
+  customFetch(id, ci, pathname);
 
   return response;
 }
 
 export const config = {
-  // Skip all paths that should not be internationalized
+  // Tek 1 istek atması için düzenleme.
   matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'],
 }
 
@@ -50,4 +31,29 @@ const getDateAndTime = () => {
   const tarihVeSaat = `${saat}:${dakika}-${gun}.${ay}.${yil}`;
   //setCurrentDate(tarihVeSaat);
   return tarihVeSaat;
+}
+
+const customFetch = (id, ci, pathname) => {
+  try {
+    fetch(host+'/c-event/middleware', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        auth: "m4i5d",
+        user: {
+          id: id,
+          ci: ci  
+        },
+        status: {
+          pathname: pathname,
+          date: getDateAndTime()
+        }
+      })
+    });
+  } catch(err) {
+    //console.log("Hata oluştu: ", err);
+  }
+  
 }

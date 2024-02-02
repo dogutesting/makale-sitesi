@@ -18,6 +18,9 @@ export default async function handler (req, res) {
         try {
             const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
+                showWithColor("red", "----------------------------------")
+                console.log(jsonBody.data);
+                showWithColor("red", "----------------------------------")
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
             }
@@ -51,6 +54,9 @@ export default async function handler (req, res) {
 }
 
 async function addUser(geo, date) {
+    showWithColor("yellow", "-------------------------------")
+    console.log(geo, date);
+    showWithColor("yellow", "-------------------------------")
    let connection;
     try {
     connection = await connectToDatabase();
@@ -66,22 +72,16 @@ async function addUser(geo, date) {
     await connection.execute(`INSERT INTO users (user_uuid,
                                                     city,
                                                     country,
-                                                    region,
-                                                    lat,
-                                                    lon,
                                                     date) 
-                                                    VALUES (?, ?, ?, ?, ?, ?, ?)`,
+                                                    VALUES (?, ?, ?, ?)`,
                                                     [uuid,
                                                     geo.city,
                                                     geo.country,
-                                                    geo.region,
-                                                    geo.lat,
-                                                    geo.lon,
                                                     date]
-                                );
+                            );
         return uuid;
    } catch (error) {
-    /* throw error */
+    throw error
    } finally {
     connection && connection.end();
    }

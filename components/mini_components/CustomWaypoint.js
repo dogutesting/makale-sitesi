@@ -7,7 +7,7 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
     const setCurrentPageProp = (url) => {
       if(url != currentPageOperations.currentPageValue) {
         currentPageOperations.setCurrentPageValue(url);
-      }      
+      }
     }
 
     //! tıklamaları kayınca düzenle!
