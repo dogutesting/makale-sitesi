@@ -1,5 +1,4 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import CryptoJS from 'crypto-js';
 import { useRouter } from 'next/router';
 
 const AppContext = createContext();
@@ -9,7 +8,6 @@ export function useAppContext() {
 }
 const otherServer = "http://" + "localhost:4541";
 const topLevelUrl = "http://" + "localhost:3000";
-const notSecretKey = "D++;";
 let cookies = null;
 
 export function Wrapper({ children }) {
@@ -35,17 +33,6 @@ export function Wrapper({ children }) {
     setTimeout(() => {
       toastContainer.style.display = 'none';
     }, 2000); // 2 saniye sonra toast gizlenir
-  }
-
-  const kriptoloji = (encry, text) => {
-    let value = "";
-    if(encry) {
-      value = CryptoJS.AES.encrypt(text, notSecretKey).toString();
-    }
-    else {
-      value = CryptoJS.AES.decrypt(text, notSecretKey).toString(CryptoJS.enc.Utf8);
-    }
-    return value;
   }
 
   const checkWebPSupport = () => {
@@ -120,6 +107,7 @@ export function Wrapper({ children }) {
   //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
+    
       const id_cookie = cookies.get("id");
       const city_cookie = cookies.get("ci");
 
@@ -191,32 +179,32 @@ export function Wrapper({ children }) {
        
         setStates(id, city);
 
-        setCookies(id, city); 
+        setCookies(id, city);
       }
   }
 
- //* connect with: rota kayıt //Güncellendi
- const addClick = async (pathname, type) => {
-  fetch("http:localhost:4541/c-event/waypoint", {
-    method: "POST",
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      "type": type,
-      user: {
-        "id": userInfo.id,
-        "ci": userInfo.city
+  //* connect with: rota kayıt //Güncellendi
+  const addClick = (pathname, type) => {
+    fetch(otherServer+"/c-event/waypoint", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
       },
-      status: {
-        pathname: pathname,
-        time: getDateAndTime()
-      }
-    })
-  });
-}
-//* connect with: gece mod doğrulayıcı
- const getMode = () => {
+      body: JSON.stringify({
+        "type": type,
+        user: {
+          "id": userInfo.id,
+          "city": userInfo.city
+        },
+        status: {
+          "pathname": pathname,
+          "date": getDateAndTime()
+        }
+      })
+    });
+  }
+  //* connect with: gece mod doğrulayıcı
+  const getMode = () => {
   const localStorage_mode = localStorage.getItem("n-mode");
   setNightMode(JSON.parse(localStorage_mode));
 
@@ -225,18 +213,18 @@ export function Wrapper({ children }) {
   /* const class2 = 'light-mode'; */
 
   if(nightMode && !body.classList.contains(class1)) {
-      body.classList.add(class1)
-      /* body.classList.remove(class2) */
+        body.classList.add(class1)
+        /* body.classList.remove(class2) */
+    }
+    else {
+        body.classList.remove(class1);
+        /* body.classList.add(class2) */
+    }
   }
-  else {
-      body.classList.remove(class1);
-      /* body.classList.add(class2) */
-  }
-}
-  //gece mod doğrulayıcı
- useEffect(() => {
-  getMode();
-}, [nightMode, router]);
+    //gece mod doğrulayıcı
+  useEffect(() => {
+    getMode();
+  }, [nightMode, router]);
 
   //main
   useEffect(() => {

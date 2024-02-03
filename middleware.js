@@ -7,11 +7,14 @@ export function middleware(request) {
   const response = NextResponse.next();
 
   console.log("middleware: " + (num++));
+  const pathname_0 = request.nextUrl.pathname;
 
-  const id = request.cookies.get("id")?.value;
-  const ci = request.cookies.get("ci")?.value;
-  const pathname = request.nextUrl.pathname;
-  customFetch(id, ci, pathname);
+  if(pathname_0 !== "/") {
+    const pathname_1 = pathname_0.substring(1);
+    const id = request.cookies.get("id")?.value;
+    const ci = request.cookies.get("ci")?.value;
+    customFetch(id, ci, pathname_1);
+  }
 
   return response;
 }

@@ -5,12 +5,9 @@ import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/ana_gorsel";
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
 import Ens_all from "../mini_components/ens/ens_all";
-import { useAppContext } from "@/context/ContextProvider";
 
 const ClassicArticleBot = ({currentPageOperations, baslik, description, keywordsArray, ana_resim, url, jsonList,
      nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) => {
-
-      const { addClick } = useAppContext();
 
   return (
     <Main>
@@ -33,7 +30,7 @@ const ClassicArticleBot = ({currentPageOperations, baslik, description, keywords
           <p className='summary_text'>{metin}</p>
           
           { currentPageOperations && currentPageOperations.currentPageValue !== null 
-          && <Custom_Waypoint addClick={addClick} customKey={"top_wp_"+url} name={"top"} startedUrl={url} currentPageOperations={currentPageOperations}/> }
+          && <Custom_Waypoint customKey={"top_wp_"+url} name={"top"} startedUrl={url} currentPageOperations={currentPageOperations}/> }
 
           <hr className='split'/>
 

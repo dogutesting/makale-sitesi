@@ -13,6 +13,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
           "id": userInfo.id,
           "city": userInfo.city,
           "currentUrl": currentPageValue
+          /* "date": getCurrentTime() */
         }
       })
     })
@@ -22,7 +23,17 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
     }
     else {
       //! buradaki hataları mysql'e kaydet
-      console.log("%i Hata: " + res.statusText, red);
+      /* console.log("%i Hata: " + res.statusText, red); */
+      fetch(topLevelUrl+"/api/error", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            "type": "other",
+            "location": "getAllArticlesForUser",
+            "error": res.status + " - " + res.statusText  
+          })
+        }
+      )
     }
 }
 //* Sonsuz akış için dinamik sayfa yükleyici
@@ -34,7 +45,16 @@ export const getDynamicPage = async (pageCount, items, setLoadedPages, setPageCo
     setLoadedPages(prevPages => [...prevPages, PageComponent]);
     setPageCount(prevCount => prevCount + 1);
   } catch (error) {
-    //!
+    fetch(topLevelUrl+"/api/error", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+          "type": "other",
+          "location": "getDynamicPage",
+          "error": error.message + " - "   + error
+        })
+      }
+    )
   }
 }
 
@@ -83,7 +103,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
           "type": "other",
-          "location": "other-contents",
+          "location": "getOtherContentArticles",
           "error": res.status + " - " + res.statusText  
         })
       }

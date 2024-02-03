@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Waypoint } from "react-waypoint";
+import { useAppContext } from "@/context/ContextProvider";
 
-export default function Custom_Waypoint ({customKey, name, startedUrl, currentPageOperations, addClick}) {
+export default function Custom_Waypoint ({customKey, name, startedUrl, currentPageOperations}) {
+    const { addClick } = useAppContext();
     const [looked, setLooked] = useState(false);
+    const [looked2, setLooked2] = useState(false);
 
     const setCurrentPageProp = (url) => {
       if(url != currentPageOperations.currentPageValue) {
@@ -15,17 +18,17 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
       if(name === "top") {
         setCurrentPageProp(startedUrl);
         if(!looked && currentPageOperations.isSetable) {
-          console.log("TOP-CLICK EKLENMESI");
           setLooked(true);
-          
-          //! burası tekrar tekrar çalışmaz ama aşağı tekrar tekrar çalışır
           addClick(startedUrl, name);
         }
       }
 
       if(name == "bottom") {
         setCurrentPageProp(startedUrl);
-        addClick(startedUrl, name);
+        if(!looked2) {
+          addClick(startedUrl, name);
+          setLooked2(true); 
+        }
       }
     }
 

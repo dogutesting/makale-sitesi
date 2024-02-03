@@ -18,19 +18,10 @@ export default async function handler (req, res) {
         try {
             const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
-                showWithColor("red", "----------------------------------")
-                console.log(jsonBody.data);
-                showWithColor("red", "----------------------------------")
+                //! EĞER jsonBody.data.geo içerisindeki şifrelenmiş değişken benim oluşturduğum bir değişken değil ise
+                //! bunu kayıt etmemek lazım
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
-            }
-            if(jsonBody.req === 'auc') { //* add-user-click
-               await addUserClick(jsonBody.data.url,
-                                  jsonBody.data.date,
-                                  jsonBody.data.type,
-                                  jsonBody.data.city,
-                                  jsonBody.data.uuid);
-                res.status(200).end();
             }
             if(jsonBody.req === 'gui') { //* get-user-info
                 currentUrl = jsonBody.data.currentUrl;
@@ -38,10 +29,18 @@ export default async function handler (req, res) {
                 const response = await getUserInfo(jsonBody.data.id,
                                                    jsonBody.data.city);
                 res.status(200).json({data: response});
+
             }
             if(jsonBody.req === "guil") { //* get-user-info-limitless
                 currentUrl = jsonBody.data.currentUrl;
                 const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.city);
+
+                //* burada kullanıcıya sunulan infinite makaleleri bir tabloya kaydedilir ise
+                //* kullanıcı ne zaman akıştan çıktığını kontrol edip, ona göre alakalı içerikler sunabilirim
+                //! ÖNEMLİ BİR NOKTA İSE BURASI DATABASE'DEKİ BÜTÜN MAKALELERİ DÖNÜYOR, BU SORUN YARATABİLİR
+                
+                //console.log("response: ", response);
+
                 res.status(200).json({data: response});
             }
         } catch (error) {
@@ -54,9 +53,6 @@ export default async function handler (req, res) {
 }
 
 async function addUser(geo, date) {
-    showWithColor("yellow", "-------------------------------")
-    console.log(geo, date);
-    showWithColor("yellow", "-------------------------------")
    let connection;
     try {
     connection = await connectToDatabase();
@@ -87,32 +83,9 @@ async function addUser(geo, date) {
    }
 }
 
-/* async function addUserClick(url, time, type, city, uuid) {
-    let connection;
-     try {
-        connection = await connectToDatabase();
-        let kategori;
-        if(url !== '') {
-            const [rows] = await connection.execute("SELECT kategori FROM makaleler WHERE url = ?", [url]);
-            if(rows && rows.length > 0) {
-                kategori = rows[0].kategori;
-            }
-            else {
-                kategori = "bos";
-            }
-        }
-        await connection.execute(`INSERT INTO clicks 
-        (url, time, kategori, type, city, clicked_user_uuid) 
-        VALUES (?, ?, ?, ?, ?, ?)`, 
-        [url, time, kategori, type, city, uuid]);
-    } catch (error) {
-     console.log("error: ", error);
-    } finally {
-     connection && connection.end();
-    }
- } */
-
-async function getUserInfoLimitless(id, city) { 
+async function getUserInfoLimitless(id, city) {
+    //! BURASI BÜTÜN MAKALELERİ DÖNÜYOR, BURADA BİR DÜZENLEME KESİNLİKLE GEREKLİ
+    //! 1000 TANE MAKALE OLSA 1000 TANE Mİ DÖNECEK? 
     let connection;
     try {
         connection = await connectToDatabase();
