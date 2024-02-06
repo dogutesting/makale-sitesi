@@ -1,20 +1,26 @@
 import { NextResponse } from 'next/server';
 
-let num = 0;
-const host = "http://localhost:4541";
+/* let num = 0; */
+const click_server_name = "http://localhost:4541";
 
 export function middleware(request) {
   const response = NextResponse.next();
 
-  console.log("middleware: " + (num++));
+  //console.log("middleware: " + (num++));
   const pathname_0 = request.nextUrl.pathname;
 
+  //anasayfaya gelişleride kabul et ama onlara 24 saat sınırlama ver
   if(pathname_0 !== "/") {
     const pathname_1 = pathname_0.substring(1);
     const id = request.cookies.get("id")?.value;
     const ci = request.cookies.get("ci")?.value;
     customFetch(id, ci, pathname_1);
   }
+  /* else {
+    const id = request.cookies.get("id")?.value;
+    const ci = request.cookies.get("ci")?.value;
+    customFetch(id, ci, pathname_0, true);
+  } */
 
   return response;
 }
@@ -36,9 +42,14 @@ const getDateAndTime = () => {
   return tarihVeSaat;
 }
 
-const customFetch = (id, ci, pathname) => {
+const customFetch = (id, ci, pathname, main=false) => {
   try {
-    fetch(host+'/c-event/middleware', {
+    let requestUrl = click_server_name+"/c-event/middleware";
+    if(main) {
+      requestUrl = click_server_name+"/c-event/main";
+    }
+
+    fetch(requestUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,6 +68,6 @@ const customFetch = (id, ci, pathname) => {
     });
   } catch(err) {
     //console.log("Hata oluştu: ", err);
-  }
-  
+    //console.log("middleware içerisinde bir hata oluştu");
+  } 
 }

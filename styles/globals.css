@@ -153,10 +153,15 @@ p {
 }
 .link-night a{
   /* color: #5a97f9; */
-  color: white;
+  /* color: #3391ff; */
+  color: #2e94fc;
+  /* color: white; */
 }
 .link-night a:active {
-  color: #3012b8;
+  color: #1e84ec;
+}
+.link-nigh a:visited {
+  color: #c5197b;
 }
 .night-mode {
   color: white;

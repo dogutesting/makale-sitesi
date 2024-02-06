@@ -175,7 +175,7 @@ export default function MansNeedWatch({topCPO}) {
         "Oyuncular":["Tim Robbins", "Morgan Freeman"],
         "Yönetmen":"Frank Darabont",
       },
-      "paragraf": "<Link href='/stephen-king-en-iyi-10-kitap-ve-sinema-uyarlamalari' title='Stephen King'in En İyi 10 Kitabı Ve Bu Kitapların Sinema Uyarlamaları'>Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor."
+      "paragraf": "<Link href='/en-iyi-10-1000-cc-naked-motosiklet'>HASHA</Link> <Link href='/stephen-king-en-iyi-10-kitap-ve-sinema-uyarlamalari' title='Stephen King'in En İyi 10 Kitabı Ve Bu Kitapların Sinema Uyarlamaları'>Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor."
     }
   ];
 

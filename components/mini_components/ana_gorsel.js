@@ -1,13 +1,13 @@
 import Image from "next/image"
 import { useAppContext } from "@/context/ContextProvider";
 
-export default function Ana_gorsel({ana_resim, baslik}) {
+export default function Ana_gorsel({ana_resim, baslik, isItPri}) {
   const { supportWebp } = useAppContext();
   return (
     <div className={ supportWebp ? 'image-container' : ''}>
         { supportWebp ? (
                 <Image
-                priority={true}
+                priority={isItPri}
                 className='image-container-image-top'
                 src={ana_resim} alt={baslik +" ana görseli"}
                 fill

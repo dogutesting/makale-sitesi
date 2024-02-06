@@ -2,10 +2,13 @@ import { useAppContext } from '@/context/ContextProvider';
 import ClassicArticleBot from "./ClassicArticleBot";
 import { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import { useRouter } from 'next/router';
 import { getAllArticlesForUser, getDynamicPage, getCurrentTime, getCalculateTimeDifferenceInSeconds } from '@/components/functions/infinityScrollAndGetNewArticle';
 
 export default function ClassicArticleTop ({topCPO, baslik, description, keywordsArray, ana_resim, url, jsonList,
      addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
+
+      const router = useRouter();
 
   const { nightMode, topLevelUrl, userInfo } = useAppContext();
 
@@ -17,6 +20,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   useEffect(() => {
     if(!topCPO) {
       if(userInfo.id && userInfo.city) {
+        //! Buranın düzenlenmesi gerekiyor, her seferinde mysql'den bütün tabloları taraması hoş değil
         getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
         //setItems(['test-2', 'erkeklerin-izlemesi-gereken-en-iyi-10-film']);
       }
@@ -25,7 +29,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   //#endregion INFINITYSCROLL
 
   //#region InfinityScroll Yüklemeye devam etsin mi?
-  const [firstComponentRendered, setFirstComponentRendered] = useState(false);
+  /* const [firstComponentRendered, setFirstComponentRendered] = useState(false); */
   const [componentRenderedTime, setComponentRenderedTime] = useState(new Date());
   const [willComponentRender, setWillComponentRender] = useState(true);
   //#endregion
@@ -36,7 +40,12 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
  
    useEffect(() => {
      if(!topCPO) {
-       window.history.pushState({}, '', topLevelUrl+"/"+currentPageValue);
+      //! burada hata var, mouse geri tuşu veya browser geri tuşu doğru çalışmıyor
+      window.history.pushState(null, null, topLevelUrl+"/"+currentPageValue);
+      /* let push_url = topLevelUrl+"/"+currentPageValue
+      router.push({pathname: push_url}) */
+      /* let push_url = topLevelUrl+"/"+currentPageValue
+      router.replace(push_url) */
      }
    }, [currentPageValue])
  
@@ -67,30 +76,19 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
         <InfiniteScroll
           scrollThreshold={0.93}
           dataLength={loadedPages.length}
-          next={willComponentRender && (() => {
-                /* console.log("test"); */
-                if(!firstComponentRendered) {
-                  getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-                  const currenTime = getCurrentTime();
-                  setComponentRenderedTime(currenTime);
-                  setFirstComponentRendered(true);
+          next={ willComponentRender && (() => {
+                const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 10, false);
+                if(isItFast) {
+                  setWillComponentRender(false);
                 }
                 else {
-                  const isFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 0, true);
-                  if(isFast) {
-                    /* console.log("test2"); */
-                    setWillComponentRender(false);
-                  }
-                  else {
-                    /* console.log("test3"); */
-                    getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-                    setFirstComponentRendered(false);
-                  }
+                  getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
+                  setComponentRenderedTime(getCurrentTime());
                 }
               }
             )
           }
-          //items.length -> burası mozilla'da hata veriyor.
+          //! items.length -> burası mozilla'da hata veriyor.
           hasMore={() => pageCount < items.length}
           >
             {

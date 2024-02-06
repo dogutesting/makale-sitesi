@@ -26,7 +26,7 @@ const ClassicArticleBot = ({currentPageOperations, baslik, description, keywords
           
           <hr className={['top_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
-          <Ana_gorsel ana_resim={ana_resim} baslik={baslik}/>
+          <Ana_gorsel ana_resim={ana_resim} baslik={baslik} isItPri={currentPageOperations.isSetable === false ? true : false}/>
           <p className='summary_text'>{metin}</p>
           
           { currentPageOperations && currentPageOperations.currentPageValue !== null 

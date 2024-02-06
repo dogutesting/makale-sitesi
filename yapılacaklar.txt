@@ -21,7 +21,7 @@
 
 -> geo location : //https://www.iplocation.net/ip-lookup
 
-!-> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
+-> makale sayfalarına "react-infinite-scroll-component" ekle (alakalı makale devam etsin ve yeni alakalı öneriler sunsun)
 	-> react-infinite-scroll içerisindeki hatalar
 		0-) her sayfanın getStaticProps özelliği alta çekilmeli, import getStaticProps'u çalıştırmıyor -> V
 		1-) paylaş butonu doğru çalışmıyor -> V
@@ -46,20 +46,32 @@
 		5-) v problem görülebilir mi bilmiyorum ama enonlar ve nightModeButonu her page'de render ediyor
 
 
--> mozilla hatası | ilginç bir şekilde hata düzelmiş
+V? -> mozilla hatası | ilginç bir şekilde hata düzelmiş
 
--> users ekleme çalışmıyor | artık doğru çalışıyor
+V -> users ekleme çalışmıyor | artık doğru çalışıyor
 
-! -> Custom_Waypoint içerisinde bazı kodlar daha yazılacak 
+V -> Custom_Waypoint içerisinde bazı kodlar daha yazılacak 
 
--> infinitescroll ile yüklenen componentlerde pre-load kaldırılabilir
+x iptal edildi;sebeb: en çok uğradıkları noktaları çekiyorum
+-> infinitescroll ve othercontents içerisinde oluşturulan sayfalar düzenlenmeli (yeni type'lar eklendi: top-waypoint, bot-waypoint- middleware)
 
--> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
+V -> infinitescroll ile yüklenen componentlerde pre-load kaldırılabilir
 
--> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
+V -> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
+
+
+v -> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
+
+-> fare geri tuşuna basılınca kod doğru çalışmıyor
+
+-> click-server waypoint'e bir tıklanma limiti eklenmeli
+
+yürüyüş
 
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
+
+-> google reklamı eklenmesi gerekiyor
 
 -> 10 makale daha yaz.
 

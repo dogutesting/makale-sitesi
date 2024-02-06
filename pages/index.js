@@ -1,7 +1,7 @@
 // pages/index.js
 import Head from 'next/head';
 import Main from '@/components/Main';
-import Content from '@/components/mini_components/Posts';
+import Posts from '@/components/mini_components/Posts';
 import CategoryBox from '@/components/index/CategoryBox';
 import Pagination from '@/components/mini_components/Pagination';
 import { useAppContext } from '@/context/ContextProvider';
@@ -143,7 +143,7 @@ export default function index({articles, currentPage, cats, paginationCount, cur
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
-            <Content posts={articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
+            <Posts posts={articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top_split bot_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             {paginationCount > 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}

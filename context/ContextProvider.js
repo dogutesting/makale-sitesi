@@ -194,7 +194,7 @@ export function Wrapper({ children }) {
         "type": type,
         user: {
           "id": userInfo.id,
-          "city": userInfo.city
+          "ci": userInfo.city
         },
         status: {
           "pathname": pathname,
@@ -205,23 +205,25 @@ export function Wrapper({ children }) {
   }
   //* connect with: gece mod doğrulayıcı
   const getMode = () => {
-  const localStorage_mode = localStorage.getItem("n-mode");
-  setNightMode(JSON.parse(localStorage_mode));
+    const localStorage_mode = localStorage.getItem("n-mode");
+    setNightMode(JSON.parse(localStorage_mode));
 
-  const body = document.body;
-  const class1 = 'night-mode';
-  /* const class2 = 'light-mode'; */
+    const body = document.body;
+    const class1 = 'night-mode';
 
-  if(nightMode && !body.classList.contains(class1)) {
-        body.classList.add(class1)
-        /* body.classList.remove(class2) */
+    if(nightMode) {
+      if(!body.classList.contains(class1)) {
+        body.classList.add(class1);
+      }
     }
     else {
+      if(body.classList.contains(class1)) {
         body.classList.remove(class1);
-        /* body.classList.add(class2) */
+      }
     }
   }
-    //gece mod doğrulayıcı
+  
+  //gece mod doğrulayıcı
   useEffect(() => {
     getMode();
   }, [nightMode, router]);
