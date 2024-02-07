@@ -2,7 +2,7 @@
 
 import { connectToDatabase } from '@/lib/mysql';
 
-export default async (req, res) => {
+export default async (req, res) => { 
 
   const { kategori, sayfa } = req.query;
   const currentCategory = kategori === undefined ? "hepsi" : kategori; //hepsi

@@ -59,14 +59,15 @@ V -> infinitescroll ile yüklenen componentlerde pre-load kaldırılabilir
 
 V -> oyuncular [array] olarak gönderiliyor ama kunye içerisinde garip yazılıyor
 
-
 v -> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
 
--> fare geri tuşuna basılınca kod doğru çalışmıyor
+v -> fare geri tuşuna basılınca kod doğru çalışmıyor, window.pushState
+
+-> getAllArticlesForUser her seferinde bütün tabloyu taraması engellenmeli 
+	click-server'deki limitin benzeri burayada eklenmeli
+	eğer zaman aşımı uygulanıyor ise infinite-scroll deactive olacak.
 
 -> click-server waypoint'e bir tıklanma limiti eklenmeli
-
-yürüyüş
 
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).

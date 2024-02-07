@@ -12,6 +12,8 @@ export default function OtherContents({currentUrl}) {
 
   useEffect(() => {
     if(userInfo.id && userInfo.city && typeof isItMobile === "boolean") {
+      //! tekrar tekrar istek atılması normal midir?
+      console.log("istek atıldı");
       getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile, setOthers);
     }
   }, [userInfo, isItMobile])

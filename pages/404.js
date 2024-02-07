@@ -34,7 +34,9 @@ export default function ErrorPage() {
           "uuid": id  
         })
       }
-    ) 
+    ).catch(error => {
+      //
+    }) 
   }
 
   const getMode = () => {

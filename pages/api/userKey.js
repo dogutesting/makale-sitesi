@@ -1,6 +1,7 @@
 import colors, { random } from 'colors';
 import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
+import { useRouter } from 'next/router';
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
@@ -13,13 +14,19 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
+let requestLog = {};
+
 export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {
+            // #region
+                const router = useRouter();
+                console.log(req.headers);
+            // #endregion
+
+
             const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
-                //! EĞER jsonBody.data.geo içerisindeki şifrelenmiş değişken benim oluşturduğum bir değişken değil ise
-                //! bunu kayıt etmemek lazım
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
             }
@@ -27,13 +34,12 @@ export default async function handler (req, res) {
                 currentUrl = jsonBody.data.currentUrl;
                 numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                 const response = await getUserInfo(jsonBody.data.id,
-                                                   jsonBody.data.city);
+                                                   jsonBody.data.ci);
                 res.status(200).json({data: response});
-
             }
             if(jsonBody.req === "guil") { //* get-user-info-limitless
                 currentUrl = jsonBody.data.currentUrl;
-                const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.city);
+                const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
 
                 //* burada kullanıcıya sunulan infinite makaleleri bir tabloya kaydedilir ise
                 //* kullanıcı ne zaman akıştan çıktığını kontrol edip, ona göre alakalı içerikler sunabilirim

@@ -11,7 +11,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
         "req": "guil",
         "data": {
           "id": userInfo.id,
-          "city": userInfo.city,
+          "ci": userInfo.city,
           "currentUrl": currentPageValue
           /* "date": getCurrentTime() */
         }
@@ -33,7 +33,9 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
             "error": res.status + " - " + res.statusText  
           })
         }
-      )
+      ).catch(error => {
+        //
+      }) 
     }
 }
 //* Sonsuz akış için dinamik sayfa yükleyici
@@ -54,7 +56,9 @@ export const getDynamicPage = async (pageCount, items, setLoadedPages, setPageCo
           "error": error.message + " - "   + error
         })
       }
-    )
+    ).catch(error => {
+      //
+    }) 
   }
 }
 
@@ -78,6 +82,7 @@ export function getCalculateTimeDifferenceInSeconds(date1, date2, timer=5.5, log
 
 //#region //* Sayfa altındaki öneri kutuları (OtherContents)
 export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl, isItMobile, setOthers) => {
+  console.log("2, istek atıldı");
   const res = await fetch(topLevelUrl+"/api/userKey", {
     method: "POST",
     headers: { 
@@ -87,7 +92,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
       "req": "gui",
       "data": {
         "id": userInfo.id,
-        "city": userInfo.city,
+        "ci": userInfo.city,
         "currentUrl": currentUrl,
         "isItMobile": isItMobile
       }
@@ -107,7 +112,9 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
           "error": res.status + " - " + res.statusText  
         })
       }
-    )
+    ).catch(error => {
+      //
+    }) 
   }
 }
 //#endregion

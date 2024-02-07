@@ -19,10 +19,10 @@ export default async function handler (req, res) {
                     [jsonBody.location, jsonBody.date, jsonBody.uuid]
                 );
             }
-            
+            res.status(200).send(); //* Burayı ekleyince hata kalkıyor.
         }
         catch(error) {
-            console.log("err: ", error);
+            //console.log("err: ", error);
         }
     }
 }

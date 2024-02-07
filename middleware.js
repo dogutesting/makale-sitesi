@@ -6,21 +6,18 @@ const click_server_name = "http://localhost:4541";
 export function middleware(request) {
   const response = NextResponse.next();
 
-  //console.log("middleware: " + (num++));
-  const pathname_0 = request.nextUrl.pathname;
-
-  //anasayfaya gelişleride kabul et ama onlara 24 saat sınırlama ver
-  if(pathname_0 !== "/") {
-    const pathname_1 = pathname_0.substring(1);
-    const id = request.cookies.get("id")?.value;
-    const ci = request.cookies.get("ci")?.value;
-    customFetch(id, ci, pathname_1);
+  if(request.method === "GET") {
+    if(request.nextUrl.pathname !== "/" && request.nextUrl.pathname !== "/404") {
+      const pathname_1 = request.nextUrl.pathname.substring(1);
+      const id = request.cookies.get("id")?.value;
+      const ci = request.cookies.get("ci")?.value;
+      customFetch(id, ci, pathname_1);    
+    }
   }
-  /* else {
-    const id = request.cookies.get("id")?.value;
-    const ci = request.cookies.get("ci")?.value;
-    customFetch(id, ci, pathname_0, true);
-  } */
+
+  if(request.method === "POST") {
+    console.log("post isteği atıldı: ", {"method": request.method, "url": request.url});
+  }
 
   return response;
 }
@@ -43,13 +40,13 @@ const getDateAndTime = () => {
 }
 
 const customFetch = (id, ci, pathname, main=false) => {
-  try {
+    console.log("pathname: ", pathname);
     let requestUrl = click_server_name+"/c-event/middleware";
     if(main) {
       requestUrl = click_server_name+"/c-event/main";
     }
-
-    fetch(requestUrl, {
+    //console.log("middleware_fetch: ", requestUrl);
+    /* fetch(requestUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -65,9 +62,7 @@ const customFetch = (id, ci, pathname, main=false) => {
           date: getDateAndTime()
         }
       })
-    });
-  } catch(err) {
-    //console.log("Hata oluştu: ", err);
-    //console.log("middleware içerisinde bir hata oluştu");
-  } 
+    }).catch(error => {
+      //
+    })  */
 }

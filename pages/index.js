@@ -8,16 +8,18 @@ import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-export async function getServerSideProps( { query }) {
-    const { kategori, sayfa } = query;
+export async function getServerSideProps( { query, req, res }) {
+    res.setHeader(
+      'Cache-Control',
+      'public, s-maxage=43200, stale-while-revalidate=10'
+    )
 
+    const { kategori, sayfa } = query;
+    
     const currentCategory = kategori === undefined ? 'hepsi' : kategori;
     const currentPage = sayfa === undefined ? 1 : sayfa;
 
     try {
-      //! burası post yapılabilir.
-      //! istekleri atan kullanıcının izinleri düzenlenmeli, sadece get atabilsin
-        //! delete, add, put, update bunları yapamasın
       const apiUrl = `http://localhost:3000/api/getArticle?kategori=${currentCategory}&sayfa=${currentPage}`;
       const data = await fetch(apiUrl).then(response => response.json());
       

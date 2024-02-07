@@ -201,6 +201,8 @@ export function Wrapper({ children }) {
           "date": getDateAndTime()
         }
       })
+    }).catch(error => {
+      //
     });
   }
   //* connect with: gece mod doğrulayıcı

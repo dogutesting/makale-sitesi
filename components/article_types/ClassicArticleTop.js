@@ -18,8 +18,14 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
+    console.log("items değişti: " + getCurrentTime() + ": " + items);
+  }, [items])
+
+  useEffect(() => {
     if(!topCPO) {
+      console.log("yok");
       if(userInfo.id && userInfo.city) {
+        console.log("buradayız");
         //! Buranın düzenlenmesi gerekiyor, her seferinde mysql'den bütün tabloları taraması hoş değil
         getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
         //setItems(['test-2', 'erkeklerin-izlemesi-gereken-en-iyi-10-film']);
@@ -40,12 +46,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
  
    useEffect(() => {
      if(!topCPO) {
-      //! burada hata var, mouse geri tuşu veya browser geri tuşu doğru çalışmıyor
-      window.history.pushState(null, null, topLevelUrl+"/"+currentPageValue);
-      /* let push_url = topLevelUrl+"/"+currentPageValue
-      router.push({pathname: push_url}) */
-      /* let push_url = topLevelUrl+"/"+currentPageValue
-      router.replace(push_url) */
+      window.history.replaceState(window.history.state, "", topLevelUrl+"/"+currentPageValue);
      }
    }, [currentPageValue])
  
@@ -77,7 +78,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
           scrollThreshold={0.93}
           dataLength={loadedPages.length}
           next={ willComponentRender && (() => {
-                const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 10, false);
+                const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 1, false);
                 if(isItFast) {
                   setWillComponentRender(false);
                 }
