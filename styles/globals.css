@@ -7,7 +7,7 @@
   user-select: none;
 }
 .user-drag-none {
-  user-drag: none; /* Eski tarayıcılarda */
+  /* user-drag: none; Eski tarayıcılarda */
   -webkit-user-drag: none; /* WebKit tabanlı tarayıcılarda (Safari, Chrome) */
   -moz-user-drag: none; /* Firefox'da */
 }
@@ -166,11 +166,13 @@ p {
 .night-mode {
   color: white;
   background-color: black;
+  transition: color 0.6s ease, background-color 0.6s ease;
 }
 
 .light-mode {
   color: black;
   background-color: white;
+  transition: color 0.6s ease, background-color 0.6s ease;
 }
 .soft-black {
   color: rgb(44, 44, 44);

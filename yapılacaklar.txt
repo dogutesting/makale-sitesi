@@ -63,9 +63,14 @@ v -> gece modunda ana sayfa ve yazılarında linklerin gözükme rengini ayarla
 
 v -> fare geri tuşuna basılınca kod doğru çalışmıyor, window.pushState
 
+v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor. Performans kaybı olarak değerlendirilebilir, local storage'de saklarsak tekrar tekrar hesap yapmamış oluruz.
+
+-> getArticlesForUser, otherContents her seferinde istek atması düzenlenmeli
+
 -> getAllArticlesForUser her seferinde bütün tabloyu taraması engellenmeli 
 	click-server'deki limitin benzeri burayada eklenmeli
 	eğer zaman aşımı uygulanıyor ise infinite-scroll deactive olacak.
+
 
 -> click-server waypoint'e bir tıklanma limiti eklenmeli
 

@@ -2,14 +2,9 @@ import { useAppContext } from '@/context/ContextProvider';
 import ClassicArticleBot from "./ClassicArticleBot";
 import { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
-import { useRouter } from 'next/router';
 import { getAllArticlesForUser, getDynamicPage, getCurrentTime, getCalculateTimeDifferenceInSeconds } from '@/components/functions/infinityScrollAndGetNewArticle';
 
-export default function ClassicArticleTop ({topCPO, baslik, description, keywordsArray, ana_resim, url, jsonList,
-     addDate, okunmaSuresi, kategori, metin, jsonContentArray}) {
-
-      const router = useRouter();
-
+export default function ClassicArticleTop ({topCPO, articleConstructor}) {
   const { nightMode, topLevelUrl, userInfo } = useAppContext();
 
   //#region INFINITYSCROLL | //! eğer topCPO yok ise farklı bir dosyadan dynamic import mu etsek? Taktım bu bellek israfına.
@@ -18,17 +13,10 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    console.log("items değişti: " + getCurrentTime() + ": " + items);
-  }, [items])
-
-  useEffect(() => {
     if(!topCPO) {
-      console.log("yok");
       if(userInfo.id && userInfo.city) {
-        console.log("buradayız");
         //! Buranın düzenlenmesi gerekiyor, her seferinde mysql'den bütün tabloları taraması hoş değil
-        getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
-        //setItems(['test-2', 'erkeklerin-izlemesi-gereken-en-iyi-10-film']);
+        //getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
       }
     }
   }, [userInfo]);
@@ -42,7 +30,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
 
    //#region REACT-WAYPOINT
    const [ancestor, setAncestor] = useState(null);
-   const [currentPageValue, setCurrentPageValue] = useState(url);
+   const [currentPageValue, setCurrentPageValue] = useState(articleConstructor.url);
  
    useEffect(() => {
      if(!topCPO) {
@@ -67,10 +55,7 @@ export default function ClassicArticleTop ({topCPO, baslik, description, keyword
           :
           {isSetable: false, currentPageValue, setCurrentPageValue, ancestor}
       }
-        baslik={baslik} description={description} keywordsArray={keywordsArray}
-          ana_resim={ana_resim} url={url} jsonList={jsonList} nightMode={nightMode} addDate={addDate}
-            okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-            kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}>
+        nightMode={nightMode} articleConstructor={articleConstructor}>
       </ClassicArticleBot>
       {
         !topCPO && (

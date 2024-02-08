@@ -1,14 +1,14 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function MostSeriesMain({topCPO}) {
+export async function getStaticProps() {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-yuksek-imdb-puanina-sahip-10-dizi";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Dizi";
   const metin = "Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz, duygusal bir bağ kurar ve bizi bölümler arasında bekleyişe sürükler. IMDb'nin en iyi dizileri listesindeki bu başyapıtlar, sadece anlatım güçleriyle değil, aynı zamanda derinlikli hikayeleri, etkileyici karakter gelişimleri ve benzersiz temalarıyla da öne çıkar. En iyi IMDb dizileri arasında zirveye yerleşen bu eserler, izleyiciye düşündürücü anlar yaşatarak, günlük hayatın ötesine geçmeye davet eder. İşte televizyon tarihinin unutulmazlarına ev sahipliği yapan, her dizi tutkununun kaçırmaması gereken en iyi 10 dizi IMDb listesi.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "diziler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const okunmaSuresi = "2";
+  /* const okunmaSuresi = "2"; */
   const kategori = "dizi"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -189,10 +189,18 @@ export default function MostSeriesMain({topCPO}) {
   )
   //#endregion
 
+  return {
+    props: {
+        articleConstructor: {
+            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
+        }
+    }
+  }
+}
+
+export default function MostSeriesMain({topCPO, articleConstructor}) {
+
   return (
-    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+    <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )
 }

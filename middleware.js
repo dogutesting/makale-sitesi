@@ -14,9 +14,8 @@ export function middleware(request) {
       customFetch(id, ci, pathname_1);    
     }
   }
-
   if(request.method === "POST") {
-    console.log("post isteği atıldı: ", {"method": request.method, "url": request.url});
+    console.log("hello from post: ", request.nextUrl.pathname);
   }
 
   return response;
@@ -40,7 +39,7 @@ const getDateAndTime = () => {
 }
 
 const customFetch = (id, ci, pathname, main=false) => {
-    console.log("pathname: ", pathname);
+    //console.log("pathname: ", pathname);
     let requestUrl = click_server_name+"/c-event/middleware";
     if(main) {
       requestUrl = click_server_name+"/c-event/main";

@@ -1,5 +1,6 @@
 import { useAppContext } from '@/context/ContextProvider';
 import Header from '@/components/Header';
+import { useEffect } from 'react';
 /* import Footer from '@/components/Footer'; */
 
 export default function Main({children}) {

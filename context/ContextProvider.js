@@ -14,7 +14,9 @@ export function Wrapper({ children }) {
 
   const router = useRouter();
 
-  const [nightMode, setNightMode] = useState(false);
+  /* const [nightMode, setNightMode] = useState(false); */
+  const [nightMode, setNightMode] = useState(null);
+  
   const [supportWebp, setSupportWebp] = useState(true);
   const [userInfo, setUserInfo] = useState({id: null, city: null});
   const [isItMobile, setIsItMobile] = useState(null);
@@ -36,14 +38,23 @@ export function Wrapper({ children }) {
   }
 
   const checkWebPSupport = () => {
-    var elem = document.createElement('canvas');
-    if (!!(elem.getContext && elem.getContext('2d'))) {
-        // was able or not to get WebP representation
-        return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+    const localStorage_webp = JSON.parse(localStorage.getItem("web-p"));
+    if(localStorage_webp) {
+      return localStorage_webp;
     }
     else {
-        // very old browser like IE 8, canvas not supported
-        return false;
+      var elem = document.createElement('canvas');
+      if (!!(elem.getContext && elem.getContext('2d'))) {
+          // was able or not to get WebP representation
+          const isTrue = elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
+          localStorage.setItem("web-p", JSON.stringify(isTrue));
+          return isTrue;
+      }
+      else {
+          // very old browser like IE 8, canvas not supported
+          localStorage.setItem("web-p", JSON.stringify(false));
+          return false;
+      }
     }
   };
 
@@ -211,17 +222,16 @@ export function Wrapper({ children }) {
     setNightMode(JSON.parse(localStorage_mode));
 
     const body = document.body;
-    const class1 = 'night-mode';
+    const night = 'night-mode';
+    const light = 'light-mode';
 
     if(nightMode) {
-      if(!body.classList.contains(class1)) {
-        body.classList.add(class1);
-      }
+      body.classList.remove(light);
+      body.classList.add(night);
     }
     else {
-      if(body.classList.contains(class1)) {
-        body.classList.remove(class1);
-      }
+      body.classList.remove(night);
+      body.classList.add(light);
     }
   }
   
@@ -241,8 +251,6 @@ export function Wrapper({ children }) {
       const jsCookie = await import('js-cookie');
       cookies = jsCookie.default;
       await setStateUserInfo();
-      /* const {id, city, is_city_normal} = await setStateUserInfo();
-      setCookiesAndState(id, city); */
     })();
   }, []);
 

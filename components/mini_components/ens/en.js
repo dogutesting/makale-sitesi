@@ -11,7 +11,6 @@ export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, 
             showToast("Link kopyalandı.");
         } catch (err) {
             //console.log("kopyalanamadı hata: ", err);
-            console.log("kopyalanamadı", err);
         }
     }
 

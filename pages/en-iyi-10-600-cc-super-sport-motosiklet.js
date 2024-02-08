@@ -1,7 +1,7 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi600ccSuperMain({topCPO}) {
+export async function getStaticProps() {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-600-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 600 CC Super Sport Motosiklet";
@@ -209,10 +209,17 @@ export default function Eniyi600ccSuperMain({topCPO}) {
   )
   //#endregion
 
+  return {
+    props: {
+        articleConstructor: {
+            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
+        }
+    }
+  }
+}
+
+export default function Eniyi600ccSuperMain({topCPO, articleConstructor}) {
   return (
-    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+    <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )
 }

@@ -27,16 +27,16 @@ export default function json_list(articleInfos, type, metin, arr) {
               "url": item.url,
               "name": item.name,
               "image": item.image,
-              "dateCreated": item.ozellikler["Yıl"],
+              "dateCreated": cleanText(item.ozellikler["Yıl"]),
               "director": {
                   "@type": "Person",
-                  "name": item.ozellikler["Yönetmen"]
+                  "name": cleanText(item.ozellikler["Yönetmen"])
                 },
-              "actor": item.ozellikler["oyuncular"],
+              "actor": item.ozellikler["Oyuncular"].map(item => cleanText(item)),
               "duration": item.ozellikler["Süre"],
               "aggregateRating": {
                 "@type": "AggregateRating",
-                "ratingValue": item.ozellikler["imdb"],
+                "ratingValue": cleanText(item.ozellikler["imdb"]),
                 "bestRating": "10"
               }
             }
@@ -62,12 +62,12 @@ export default function json_list(articleInfos, type, metin, arr) {
             "numberOfSeasons": item.eps,  // Serinin bölüm sayısını ekledik
             "director": {
                 "@type": "Person",
-                "name": item.ozellikler["Yönetmen"]
+                "name": cleanText(item.ozellikler["Yönetmen"])
               },
             "actor": item.ozellikler["Oyuncular"].map(actor => { // Aktörleri doğru formatta ekliyoruz
               return {
                 "@type": "Person",
-                "name": actor
+                "name": cleanText(actor)
               };
             }),
             "aggregateRating": {
@@ -104,12 +104,9 @@ export default function json_list(articleInfos, type, metin, arr) {
   const articleBody = escapeString(metin + articleText);
   const wordCount = articleBody.split(" ").length;
 
-  //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
-  const readOn = true;
-  const readTime = readOn ? Math.round((wordCount * 0.33) / 60) +"hesap" : 0;
+  const readTime = Math.round((wordCount * 0.33) / 60)
 
   return {
-    //!Okunma süresini gördükten sonra sayfanın içerisindeki okumaSuresi değişkenine yaz ve bunları kapat.
     readTimeSpan: readTime,
     html: `[
       {

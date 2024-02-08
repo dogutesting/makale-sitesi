@@ -1,7 +1,7 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function MansNeedWatch({topCPO}) {
+export async function getStaticProps() {
   //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
@@ -189,10 +189,18 @@ export default function MansNeedWatch({topCPO}) {
   )
   //#endregion
 
+  return {
+    props: {
+        articleConstructor: {
+            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
+        }
+    }
+  }
+}
+
+export default function MansNeedWatch({topCPO, articleConstructor}) {
+
   return (
-    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+    <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )
 }

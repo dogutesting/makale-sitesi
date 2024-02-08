@@ -82,7 +82,6 @@ export function getCalculateTimeDifferenceInSeconds(date1, date2, timer=5.5, log
 
 //#region //* Sayfa altındaki öneri kutuları (OtherContents)
 export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl, isItMobile, setOthers) => {
-  console.log("2, istek atıldı");
   const res = await fetch(topLevelUrl+"/api/userKey", {
     method: "POST",
     headers: { 

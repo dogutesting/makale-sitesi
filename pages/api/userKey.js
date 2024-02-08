@@ -1,7 +1,6 @@
 import colors, { random } from 'colors';
 import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
-import { useRouter } from 'next/router';
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
@@ -14,23 +13,18 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
-let requestLog = {};
+//let requestLog = {};
 
 export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {
-            // #region
-                const router = useRouter();
-                console.log(req.headers);
-            // #endregion
-
-
             const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
             }
             if(jsonBody.req === 'gui') { //* get-user-info
+                console.log("gui atıldı");
                 currentUrl = jsonBody.data.currentUrl;
                 numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                 const response = await getUserInfo(jsonBody.data.id,

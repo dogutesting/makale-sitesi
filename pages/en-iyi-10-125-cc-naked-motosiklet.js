@@ -1,15 +1,14 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
-export default function Eniyi125ccNakedMain({topCPO}) {
-
+export async function getStaticProps() {
     //#region SAYFA TEXT TANIMLAMALARI
     const url = "en-iyi-10-125-cc-naked-motosiklet";
     const baslik = "En İyi 10 125 CC Naked Motosiklet";
     const metin = "125cc'lik motosikletler, özellikle yeni sürücüler ve gençler için cazip bir seçenek sunar. Hem ekonomik hem de çevik olan bu motosikletler, sürücülerine trafikte kolay manevra kabiliyeti ve sürüş esnekliği sunar. Naked tasarımı, bu kategoriyi daha da çekici kılar; minimal karoseri ve sade tasarım, motosikletin hafifliğini ve atikliğini vurgular. Naked 125cc motosikletler, şehir içi trafikte mükemmel performans sergilerken, aynı zamanda sürücülerine rüzgarla bütünleşme ve doğal bir sürüş deneyimi sunar. Bu motosikletler, genç sürücülerin yanı sıra kısıtlı bir bütçesi olan yetişkinler için de idealdir. Bu makalede, bu kategorideki en popüler 10 modeli derinlemesine inceleyeceğiz. Hangi modelin sizin için en uygun olduğunu belirlemek ve 125cc naked motosikletlerin sunduğu benzersiz deneyimi daha iyi anlamak için okumaya devam edin!";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
     const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
-    const okunmaSuresi = "5";
+    /* const okunmaSuresi = "5"; */
     const kategori = "motosiklet"; //türkce karakter olmasin
     const minAge = "18";
     const yazar = "I Will";
@@ -210,10 +209,18 @@ export default function Eniyi125ccNakedMain({topCPO}) {
     )
     //#endregion
 
+    return {
+        props: {
+            articleConstructor: {
+                baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
+            }
+        }
+    }
+}
+
+export default function Eniyi125ccNakedMain({topCPO, articleConstructor}) {
+
     return (
-        <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-        ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-          okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-          kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+        <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
     )
 }

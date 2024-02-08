@@ -6,8 +6,8 @@ import Ana_gorsel from "../mini_components/ana_gorsel";
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
 import Ens_all from "../mini_components/ens/ens_all";
 
-const ClassicArticleBot = ({currentPageOperations, baslik, description, keywordsArray, ana_resim, url, jsonList,
-     nightMode, addDate, okunmaSuresi, kategori, metin, jsonContentArray}) => {
+const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor}) => {
+  const { baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray  } = articleConstructor;
 
   return (
     <Main>
