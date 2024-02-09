@@ -1,6 +1,7 @@
 import colors, { random } from 'colors';
 import { connectToDatabase } from '@/lib/mysql';
 import {v4 as uuidv4 } from 'uuid';
+import rateLimit from "../../utils/rate-limit";
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
@@ -13,18 +14,25 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
-//let requestLog = {};
+const limiter = rateLimit({
+    interval: 60 * 1000,
+    uniqueTokenPerInterval: 500,
+});
 
 export default async function handler (req, res) {
     if(req.method === 'POST') {
         try {
+            console.log("İsteğin geldiği ip adresi ", req.ip);
+
             const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
+                /* await limiter.check(res, 10, "CACHE_TOKEN"); */
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
             }
             if(jsonBody.req === 'gui') { //* get-user-info
                 console.log("gui atıldı");
+                await limiter.check(res, 10, "CACHE_TOKEN");
                 currentUrl = jsonBody.data.currentUrl;
                 numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                 const response = await getUserInfo(jsonBody.data.id,
