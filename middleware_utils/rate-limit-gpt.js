@@ -1,20 +1,6 @@
-import LRUCache from 'lru-cache';
+const DEFAULT_TIMEOUT = 10000;
 
-// Önceden belirlenmiş bir zaman aşımı (ms cinsinden)
-const DEFAULT_TIMEOUT = 60000; // 1 dakika
-const MAX_TIMEOUT = 24 * 60 * 60 * 1000; // 1 gün
-
-// IP tabanlı kota sınırları için bir LRU Cache oluştur
-const ipLimits = new LRUCache({
-  max: 1000, // Maximum öğe sayısı
-  maxAge: MAX_TIMEOUT, // Öğelerin maksimum yaşam süresi
-});
-
-let limitedCount = 1;
-
-// Rate limiting işlevi
-export default async function rateLimit(req, res, next, minuteLimit=10, dailyLimit=100) {
-    console.log("rate limite geldi", minuteLimit, dailyLimit);
+export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimit=3, dailyLimit=10) {
     const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
     // İp adresine göre kota bilgilerini al
@@ -28,41 +14,57 @@ export default async function rateLimit(req, res, next, minuteLimit=10, dailyLim
         this.remainingInMinute = minuteLimit,
         this.remainingInDaily = dailyLimit,
 
-        this.resetStart = Date.now(),
-        this.resetTime = this.resetStart + this.timeout,
+        this.stunned = false,
+        this.resetTime = null,
 
         //* functions
-        this.remainingDecrease = () => {
-            limits.remainingInMinute--;
-            limits.remainingInDaily--;
+        this.decreaseToRemaining = function () {
+            this.remainingInMinute--;
+            this.remainingInDaily--;
         },
-        this.resetMinuteLimit = () => {
-            limits.remaining = 10;
-            limits.resetStart = Date.now();
+        this.resetMinuteLimit = function () {
+            this.remainingInMinute = minuteLimit;
         },
-        this.checkDailyLimit = () => {
-            return limits.dailyLimit <= 0 ? res.status(429).send("Günlük limit aşıldı.") : true;
+        this.checkDailyLimit = function () {
+            /* return this.remainingInDaily <= 0 && res.status(429).send("Günlük limit aşıldı."); */
+            return this.remainingInDaily <= 0 && false;
         }
       };
       ipLimits.set(ipAddress, limits);
+      limits.decreaseToRemaining();
+      /* console.log("ilk kez istek atıldı"); */
+      return true;
     }
     else {
-        limits.checkDailyLimit();
-        console.log("check edildi");
+        !limits.checkDailyLimit() && false;
 
-        if((Date.now() - resetTime) > 0) {
-            limits.resetMinuteLimit();
-            limits.remainingDecrease();
+        if(limits.remainingInMinute > 0) {
+            /* console.log("stage 1"); */
+            limits.decreaseToRemaining();
+            return true;
         }
         else {
-            if(limits.remaining > 0) {
-                limits.remainingDecrease();
+            if(limits.stunned) {
+                if((Date.now() - limits.resetTime) > 0) {
+                    /* console.log("stage 2"); */
+                    limits.resetMinuteLimit();
+                    limits.decreaseToRemaining();
+                    limits.stunned = false;
+                    return true;
+                }
+                else {
+                    console.log("zaman aşımına kalan süre: ", (Date.now() - limits.resetTime) / 1000);
+                    return false;
+                }
             }
             else {
-                limits.limitedCount++;
-                return res.status(429).send("Çok fazla istek yapıldı. Zaman cezası verildi: " + limits.timeout);
+                limits.stunned = true;
+                limits.resetTime = Date.now() + (limits.timeout * limits.limitedCount);
+                limits.limitedCount *= 2;
+                console.log("Zaman aşımı uygulandı. Kalan süre: ", (Date.now() - limits.resetTime) / 1000);
+                return false;
             }
         }
+        //* Dejavu 16:05-10.02.2024
     }
-    next();
 }

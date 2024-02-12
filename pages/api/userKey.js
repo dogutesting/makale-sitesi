@@ -1,9 +1,19 @@
 import colors, { random } from 'colors';
 import { connectToDatabase } from '@/lib/mysql';
 import { v4 as uuidv4 } from 'uuid';
+import rateLimitMiddleware from '../../middleware_utils/rate-limit-gpt';
 
 import LRUCache from 'lru-cache';
 
+//#region //* rate-limit
+/* const MAX_TIMEOUT = 1 * 10 * 1000; */
+const MAX_TIMEOUT = 4 * 60 * 60 * 1000; //* 4 saat olarak ayarlandı
+ 
+const ipLimits = new LRUCache({
+  max: 1000, // Maximum öğe sayısı
+  ttl: MAX_TIMEOUT
+});
+//#endregion
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
@@ -16,20 +26,69 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
-
+//! GÜNÜN EN ÇOK TIKLANAN 4 MAKALESİNİ BİR DEĞİŞKJEN İÇERİSİNDE TUT VE 24 SAATTE BİR YENİLENSİN
+//! HER İHTİMALE KARŞI BUNU RES.HEADERS'A KAYIT ET. EĞER CLİENT TARAFINDAKİ RECOMMENDS ÇALIŞMAZ İSE
+//! BU ÇALIŞIR
 
 export default async function handler (req, res) {
-    console.log("0-handler'a istek geldi.");
     if(req.method === 'POST') {
+
+        /* const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
+        // Byte cinsinden alınan boyutu megabayt cinsine çevirin
+        const requestDataSize = requestBodySizeInBytes / (1024 * 1024); // Byte'ı MB'ye dönüştür
+        // İsteğin boyutunu konsola yazdırın (isteğin boyutunu kontrol etmek için)
+        console.log('Request size:', requestDataSize, 'MB'); */
+
+
         try {
 
-            await rateLimitMiddleware(req, res, () => {
+            /* await rateLimitMiddleware(req, res, ipLimits, () => {
                 console.log("2-handler'dan devam ediyor");
                 console.log("-------------------");
-            })
+            }) */
 
+            const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
+            if (!IsRateLimitPassed) {
+                console.log("çok fazla istek atıyor.");
+                /* return res.status(429).end(); */
+                res.status(200).json({penalty: true})
+            }
+            else {
+                console.log("İstek yapabilir..");
+                const jsonBody = req.body;
+                //auk'tan aynı ip adresi üzerinden sadece günde 20 istek yapılabilir 
+                if(jsonBody.req === 'auk') { //* add-user-key
+                    console.log("auk isteği yapıldı");
+                    res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
+                                                                jsonBody.data.date)});
+                }
+
+                //geri kalanlar normal kurallara tabii olacak
+                if(jsonBody.req === 'gui') { //* get-user-info
+                    console.log("gui isteği yapıldı");
+                    currentUrl = jsonBody.data.currentUrl;
+                    numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
+                    const response = await getUserInfo(jsonBody.data.id,
+                                                       jsonBody.data.ci);
+                    const responseClickCount = response.map(item => {
+                        const newItem = { ...item }; // Yeni bir kopya oluştur
+                        delete newItem["clickCount"]; // Belirtilen anahtarı kaldır
+                        return newItem; // Yeni öğeyi diziye ekle
+                    });
+                    res.status(200).json({data: responseClickCount});
+                    /* res.status(200).json({data: response}); */
+                }
+                if(jsonBody.req === "guil") { //* get-user-info-limitless
+                    console.log("guil isteği yapıldı");
+                    currentUrl = jsonBody.data.currentUrl;
+                    const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
+                    res.status(200).json({data: response});
+                }
+            }
+
+            //her türlü buraya geçiyor.
             //#region
-            const jsonBody = req.body;
+            /* const jsonBody = req.body;
             if(jsonBody.req === 'auk') { //* add-user-key
                 res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                             jsonBody.data.date)});
@@ -45,7 +104,7 @@ export default async function handler (req, res) {
                 currentUrl = jsonBody.data.currentUrl;
                 const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
                 res.status(200).json({data: response});
-            }
+            } */
             //#endregion
         } catch (error) {
             console.log(colors.red("hata: ", error));
@@ -58,82 +117,6 @@ export default async function handler (req, res) {
 
 
 
-/* const DEFAULT_TIMEOUT = 60000; */
-const DEFAULT_TIMEOUT = 10000;
-const MAX_TIMEOUT = 24 * 60 * 60 * 1000;
-
-const ipLimits = new LRUCache({
-  max: 1000, // Maximum öğe sayısı
-  maxAge: MAX_TIMEOUT, // Öğelerin maksimum yaşam süresi
-});
-
-async function rateLimitMiddleware(req, res, next, minuteLimit=3, dailyLimit=10) {
-    const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-
-    // İp adresine göre kota bilgilerini al
-    let limits = ipLimits.get(ipAddress);
-    if (!limits) {
-      // Limits yoksa, yeni bir limits oluştur ve önbelleğe ekle
-      limits = new function() {
-        this.limitedCount = 1,
-        this.timeout = DEFAULT_TIMEOUT * this.limitedCount,
-
-        this.remainingInMinute = minuteLimit,
-        this.remainingInDaily = dailyLimit,
-
-        this.stunned = false,
-        this.resetTime = null,
-
-        //* functions
-        this.decreaseToRemaining = function () {
-            this.remainingInMinute--;
-            this.remainingInDaily--;
-        },
-        this.resetMinuteLimit = function () {
-            this.remainingInMinute = minuteLimit;
-        },
-        this.checkDailyLimit = function () {
-            return this.remainingInDaily <= 0 && res.status(429).send("Günlük limit aşıldı.");
-        }
-      };
-      ipLimits.set(ipAddress, limits);
-      limits.decreaseToRemaining();
-      console.log("ilk kez istek atıldı");
-      next();
-    }
-    else {
-        limits.checkDailyLimit();
-
-        if(limits.remainingInMinute > 0) {
-            console.log("stage 1");
-            limits.decreaseToRemaining();
-            next();
-        }
-        else {
-            if(limits.stunned) {
-                if((Date.now() - limits.resetTime) > 0) {
-                    console.log("stage 2");
-                    limits.resetMinuteLimit();
-                    limits.decreaseToRemaining();
-                    limits.stunned = false;
-                    next();
-                }
-                else {
-                    console.log("zaman aşımına kalan süre: ", (Date.now() - limits.resetTime) / 1000);
-                    res.status(200).json({penalty: true});
-                }
-            }
-            else {
-                limits.stunned = true;
-                limits.resetTime = Date.now() + (limits.timeout * limits.limitedCount);
-                limits.limitedCount*=2;
-                console.log("Zaman aşımı uygulandı. Kalan süre: ", (Date.now() - limits.resetTime) / 1000);
-                res.status(200).json({penalty: true});
-            }
-        }
-        //* Dejavu 16:05-10.02.2024
-    }
-}
 
 //#region //* handler fonksiyonları
 async function addUser(geo, date) {

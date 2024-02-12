@@ -10,18 +10,36 @@ export default function OtherContents({currentUrl}) {
   const { userInfo, topLevelUrl, supportWebp, isItMobile } = useAppContext();
   const [others, setOthers] = useState([]);
 
+  const checkRequestStatus = async () => {
+    const response = await getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile);
+    if(!response) {
+      console.log("zaman aşımında, localStorage'dan çekilecek. ");
+      setOthers(JSON.parse(localStorage.getItem("recommends")));
+    }
+    else {
+      localStorage.setItem('recommends', JSON.stringify(response));
+      console.log("else:" , response);
+      setOthers(response);
+    }
+  }
+
   useEffect(() => {
     if(userInfo.id && userInfo.city && typeof isItMobile === "boolean") {
-      //! tekrar tekrar istek atılması normal midir?
-      getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile, setOthers);
+      checkRequestStatus();
     }
   }, [userInfo, isItMobile])
+
+  useEffect(() =>{
+    console.log("typeof: ", typeof others);
+    console.log("others: ", others);
+    console.log("-----------------------------");
+  }, [others])
 
   return (
     <>
       <h2 className='other-h2'>Diğer İçerikler</h2>
       <div className='other_contents'>
-        {others && others.map((other, index) => (
+        {!others && others.map((other, index) => (
           <ArticleBox
           key={index}
           supportWebp={supportWebp}
@@ -30,7 +48,6 @@ export default function OtherContents({currentUrl}) {
           rsm_alt={other.baslik}
           rsm={other.resimYolu}
           icerik={other.paragraf}
-          /* onClick={() => getArticlesForUser()} */
           />  
         ))}
       </div>

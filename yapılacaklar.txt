@@ -71,8 +71,10 @@ v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor.
 	click-server'deki limitin benzeri burayada eklenmeli
 	eğer zaman aşımı uygulanıyor ise infinite-scroll deactive olacak.
 
+-> hem click-server'a hemde next.js server'ına post veri yollama limiti eklenmeli 1 gb veri yollayarak sistemi yormamalı.
 
 -> click-server waypoint'e bir tıklanma limiti eklenmeli
+
 
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).

@@ -81,7 +81,7 @@ export function getCalculateTimeDifferenceInSeconds(date1, date2, timer=5.5, log
 //#endregion
 
 //#region //* Sayfa altındaki öneri kutuları (OtherContents)
-export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl, isItMobile, setOthers) => {
+export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl, isItMobile) => {
   const res = await fetch(topLevelUrl+"/api/userKey", {
     method: "POST",
     headers: { 
@@ -96,24 +96,17 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
         "isItMobile": isItMobile
       }
     })
-  })
+  });
   if(res.ok) {
     const response = await res.json();
-    setOthers(response.data);
+    if(response.penalty) {
+      return false;
+    }
+    return response;
   }
   else {
-    fetch(topLevelUrl+"/api/error", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          "type": "other",
-          "location": "getOtherContentArticles",
-          "error": res.status + " - " + res.statusText  
-        })
-      }
-    ).catch(error => {
-      //
-    }) 
+    /* console.log("else kısmındayız"); */
+    return false;
   }
 }
 //#endregion
