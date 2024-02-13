@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 /* let num = 0; */
 const click_server_name = "http://localhost:4541";
 
-export function middleware(request) {
+export default function middleware(request) {
   const response = NextResponse.next();
 
   if(request.method === "GET") {

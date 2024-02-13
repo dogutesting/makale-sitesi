@@ -1,5 +1,6 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
+import StaticUrls from '@/lib/StaticUrls';
 
 export async function getStaticProps() {
       //#region SAYFA TANIMLAMALARI
@@ -208,6 +209,22 @@ export async function getStaticProps() {
       jsonContentArray
       )
       //#endregion
+
+      const defaultsURLs = [
+          "en-iyi-10-250-cc-super-sport-motosiklet",
+          "en-iyi-10-300-cc-super-sport-motosiklet",
+          "en-iyi-10-600-cc-super-sport-motosiklet",
+          "en-iyi-10-250-cc-naked-motosiklet"
+        ];
+      const defaultRecommends = await StaticUrls(defaultsURLs);
+    
+      return {
+        props: {
+            articleConstructor: {
+                baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
+            }
+        }
+      }
 }
 
 export default function Eniyi125ccSuperMain({topCPO, articleConstructor}) {

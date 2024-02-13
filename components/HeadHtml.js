@@ -16,7 +16,6 @@ import Head from "next/head"
           content={ana_resim}
           />
           <meta property="og:url" content={"https://enonlar.com/"+url}/>
-
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:title" content={baslik}/>
           <meta name="twitter:description" content={description}/>

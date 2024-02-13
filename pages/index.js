@@ -51,7 +51,7 @@ export async function getServerSideProps( { query, req, res }) {
     }
 }
 
-export default function index({articles, currentPage, cats, paginationCount, currentCategory}) {
+export default function Index({articles, currentPage, cats, paginationCount, currentCategory}) {
 
   const { nightMode, supportWebp } = useAppContext();
   const router = useRouter();

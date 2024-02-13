@@ -102,7 +102,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
     if(response.penalty) {
       return false;
     }
-    return response;
+    return response.data;
   }
   else {
     /* console.log("else kısmındayız"); */

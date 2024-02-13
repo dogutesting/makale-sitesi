@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function en_iyi_10_resimli({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, 
+export default function En({children, baslik, rsm, rsm_alt, pri, enid, supportWebp, 
     showToast, nightMode, topLevelUrl, sayfaUrl}) {
 
     const handleCopyClick = async () => {

@@ -1,14 +1,14 @@
-import En from '@/components/mini_components/ens/en';
-import Reklam from '@/components/mini_components/reklam';
+import En from '@/components/mini_components/ens/En';
+import Reklam from '@/components/mini_components/Reklam';
 import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
 import Custom_Waypoint from '../CustomWaypoint';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
-import Kunye from './kunye';
+import Kunye from './Kunye';
 
 
 
-export default function Ens_all({jsonContentArray, sayfaUrl, currentPageOperations}) {
+export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperations}) {
   const { supportWebp, showToast, nightMode, topLevelUrl } = useAppContext();
   const items = [];
 

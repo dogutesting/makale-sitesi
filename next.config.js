@@ -5,10 +5,10 @@ const nextConfig = {
 } */
 
 module.exports = {
-  transpilePackage: ['crypto-js'],
-  api: {
+  /* transpilePackage: ['crypto-js'], */
+  /* api: {
     bodyParser: {
       sizeLimit: '10kb'
     }
-  }
+  } */
 }

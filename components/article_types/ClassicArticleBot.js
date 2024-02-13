@@ -2,12 +2,13 @@ import Main from "../Main";
 import HeadHtml from "../HeadHtml";
 import Details from "../Details";
 import OtherContents from "../OtherContents";
-import Ana_gorsel from "../mini_components/ana_gorsel";
+import Ana_gorsel from "../mini_components/AnaGorsel";
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
-import Ens_all from "../mini_components/ens/ens_all";
+import Ens_all from "../mini_components/ens/EnsAll";
 
 const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor}) => {
-  const { baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray  } = articleConstructor;
+  const { baslik, description, keywordsArray, ana_resim,
+     url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray, defaultRecommends  } = articleConstructor;
 
   return (
     <Main>
@@ -38,7 +39,7 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
            kategori={kategori} currentPageOperations={currentPageOperations}/>
         </article>
 
-        <OtherContents currentUrl={url}/>
+        <OtherContents currentUrl={url} defaultRecommends={defaultRecommends}/>
     </Main>
   );
 };

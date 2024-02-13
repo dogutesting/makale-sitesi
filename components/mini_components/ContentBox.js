@@ -1,7 +1,5 @@
-import { useAppContext } from '@/context/ContextProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-/* import { useAppContext } from "@/context/ContextProvider"; */
 
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
 

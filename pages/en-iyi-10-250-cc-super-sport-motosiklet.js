@@ -1,5 +1,6 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
+import StaticUrls from '@/lib/StaticUrls';
 
 export async function getStaticProps() {
   //#region SAYFA TEXT TANIMLAMALARI
@@ -208,10 +209,18 @@ export async function getStaticProps() {
   )
   //#endregion
 
+  const defaultsURLs = [
+    "en-iyi-10-125-cc-super-sport-motosiklet",
+    "en-iyi-10-300-cc-super-sport-motosiklet",
+    "en-iyi-10-600-cc-super-sport-motosiklet",
+    "en-iyi-10-1000-cc-super-sport-motosiklet"
+    ];
+  const defaultRecommends = await StaticUrls(defaultsURLs);
+
   return {
     props: {
         articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
+            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
         }
     }
   }

@@ -65,7 +65,7 @@ v -> fare geri tuşuna basılınca kod doğru çalışmıyor, window.pushState
 
 v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor. Performans kaybı olarak değerlendirilebilir, local storage'de saklarsak tekrar tekrar hesap yapmamış oluruz.
 
--> getArticlesForUser, otherContents her seferinde istek atması düzenlenmeli
+-> getArticlesForUser, otherContents her seferinde istek atması düzenlenmeli !!BURADA KALDIN: uuid oluşturmak için istek sayısı veya diğer yollar için istek sayısı ayarlanmalı
 
 -> getAllArticlesForUser her seferinde bütün tabloyu taraması engellenmeli 
 	click-server'deki limitin benzeri burayada eklenmeli
@@ -73,8 +73,9 @@ v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor.
 
 -> hem click-server'a hemde next.js server'ına post veri yollama limiti eklenmeli 1 gb veri yollayarak sistemi yormamalı.
 
--> click-server waypoint'e bir tıklanma limiti eklenmeli
-
+-> getArticle sayfasına istek atma limiti eklenecek
+-> Click server, userKey içerisine alınacak.
+X -> click-server waypoint'e bir tıklanma limiti eklenmeli
 
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
@@ -83,6 +84,10 @@ okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımla
 
 -> 10 makale daha yaz.
 
+-> server'a uygulamayı yüklerken nginx kurulması gerekiyor, böylelikle
+	sık sık talep edilen içerikler nginx tarafından önbelleğe alınır ve
+		performans artışı sağlar. Aynı zamanda ön alan adı eklemeyi de mümkün
+			kılar. market.enonlar.com | test.enonlar.com | ustalar.enonlar.com
 
 -> console.log'ları yayınlamadan önce kaldır. Özellikle userKey gibi dosyalarda.
 -> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir

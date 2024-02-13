@@ -6,7 +6,7 @@ import rateLimitMiddleware from '../../middleware_utils/rate-limit-gpt';
 import LRUCache from 'lru-cache';
 
 //#region //* rate-limit
-/* const MAX_TIMEOUT = 1 * 10 * 1000; */
+/* const MAX_TIMEOUT = 1 * 10 * 1000; //* 1 gün limit */ 
 const MAX_TIMEOUT = 4 * 60 * 60 * 1000; //* 4 saat olarak ayarlandı
  
 const ipLimits = new LRUCache({
@@ -26,6 +26,8 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
+//* EK OLARAK: Botların buraya istek atamayacağınıda göz önünde bulundurarak her makaleye
+//* default olarak 4 tane öneri ekleyelim
 //! GÜNÜN EN ÇOK TIKLANAN 4 MAKALESİNİ BİR DEĞİŞKJEN İÇERİSİNDE TUT VE 24 SAATTE BİR YENİLENSİN
 //! HER İHTİMALE KARŞI BUNU RES.HEADERS'A KAYIT ET. EĞER CLİENT TARAFINDAKİ RECOMMENDS ÇALIŞMAZ İSE
 //! BU ÇALIŞIR

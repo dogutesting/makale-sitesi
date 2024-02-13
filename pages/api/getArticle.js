@@ -44,7 +44,7 @@ export default async (req, res) => {
     });
   }
   catch(error) {
-    res.status(500).json("Burayı kodlayan için F");
+    res.status(500).end("Burayı kodlayan için F");
     /* res.status(500).send(
       `
       <html>
