@@ -90,6 +90,7 @@ export function Wrapper({ children }) {
 
   //* connect with: setStateUserInfo
   const setCookies = (id, city) => {
+
     let expirationDate = null;
     if(id) {
       expirationDate = new Date();

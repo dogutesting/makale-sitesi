@@ -1,15 +1,13 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function Eniyi300ccSuperMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-300-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 300 CC Super Sport Motosiklet";
   const metin = "Supersport motosikletler, genellikle onları sürmenin kendine has bir stil ve tecrübe gerektirdiği bir araç kategorisidir. 300cc'lik motorlar, genellikle orta seviye sürücüler için idealdir ve yeni başlayanlar için bile uygun olabilir. Tasarım, performans, kullanılabilirlik ve fiyat gibi kritik faktörleri değerlendirerek, bu segmentteki en iyi seçenekleri belirledik. Motosiklet dünyasının estetik ve performans harmanını sunan supersport kategorisi, motor sporlarına olan tutkunuzu kesinlikle alevlendirecek. Makalemizin devamında, her bir motosikletin detaylı incelemesini ve benzersiz özelliklerini bulabilirsiniz. Sizleri, 300cc süpersport motosikletlerin hızlı, estetik ve heyecan verici dünyasına davet ediyoruz.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
-  /* const okunmaSuresi = "5"; */
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -210,24 +208,9 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "en-iyi-10-600-cc-super-sport-motosiklet",
-    "en-iyi-10-1000-cc-super-sport-motosiklet",
-    "en-iyi-10-125-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-naked-motosiklet"
-  ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
-
-export default function Eniyi300ccSuperMain({topCPO, articleConstructor}) {
 
   return (
     <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>

@@ -1,8 +1,8 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function MostMoviesMain({topCPO}) {
+  
   //#region SAYFA İÇİ TEXT TANIMLAMALARI
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
@@ -14,7 +14,6 @@ export async function getStaticProps() {
   İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.`;
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
-  /* const okunmaSuresi = "3"; */
   const kategori = "film"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -195,29 +194,11 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "erkeklerin-izlemesi-gereken-en-iyi-10-film",
-    "en-yuksek-imdb-puanina-sahip-10-dizi",
-    "en-iyi-10-1000-cc-naked-motosiklet",
-    "en-iyi-10-1000-cc-super-sport-motosiklet"
-  ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
 
-export default function MostMoviesMain({topCPO, articleConstructor}) {
-  
   return (
-    <ClassicArticleTop topCPO={topCPO} baslik={baslik} description={description} keywordsArray={keywordsArray}
-    ana_resim={ana_resim} url={url} jsonList={jsonList} addDate={addDate}
-      okunmaSuresi={okunmaSuresi ? okunmaSuresi : jsonList.readTimeSpan}
-      kategori={kategori} metin={metin} jsonContentArray={jsonContentArray}/>
+    <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )
 }

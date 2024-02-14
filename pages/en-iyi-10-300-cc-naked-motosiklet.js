@@ -1,15 +1,13 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function Eniyi300ccNakedMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-300-cc-naked-motosiklet";
   const baslik = "En İyi 10 300 CC Naked Motosiklet";
   const metin = "300cc motor hacmi, genellikle başlangıç ve orta seviye sürücüler için idealdir, çünkü hem şehir içi hem de uzun mesafeli sürüşler için yeterli güç sunar. Naked motosikletlerin minimalist tasarımı, daha düşük ağırlık ve rahat sürüş pozisyonu, bu tarz motosikletleri hem günlük kullanım hem de maceralı sürüşler için cazip kılar. Listemizdeki zarif tasarımlı ve performans odaklı motosikletler, bu segmentin ne kadar çekici ve heyecan verici olduğunu gösteriyor. Hadi listeyi inceleyelim!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -210,25 +208,9 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "en-iyi-10-600-cc-naked-motosiklet",
-    "en-iyi-10-1000-cc-naked-motosiklet",
-    "en-iyi-10-125-cc-naked-motosiklet",
-    "en-iyi-10-300-cc-super-sport-motosiklet"
-  ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
-
-export default function Eniyi300ccNakedMain({topCPO, articleConstructor}) {
-  
 
   return (
     <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>

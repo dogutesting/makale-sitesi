@@ -19,15 +19,15 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
         setCurrentPageProp(startedUrl);
         if(!looked && currentPageOperations.isSetable) {
           setLooked(true);
-          addClick(startedUrl, name);
+          //addClick(startedUrl, name);
         }
       }
 
       if(name == "bottom") {
         setCurrentPageProp(startedUrl);
         if(!looked2) {
-          addClick(startedUrl, name);
           setLooked2(true); 
+          //addClick(startedUrl, name);
         }
       }
     }

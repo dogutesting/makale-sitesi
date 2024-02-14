@@ -65,6 +65,10 @@ v -> fare geri tuşuna basılınca kod doğru çalışmıyor, window.pushState
 
 v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor. Performans kaybı olarak değerlendirilebilir, local storage'de saklarsak tekrar tekrar hesap yapmamış oluruz.
 
+!!!-> İSTEK LİMİTLERİ DÜZENLENECEK, SAYFA İLK YÜKLENDİĞİNDE GUİ VE GUİL İSTEĞİ YAPMASINA GEREK YOK ALTA GELİNCE GUİ İSTEĞİ YAPABİLİR VE EĞER HIZLI DEĞİLSE GUİL İSTEĞİ YAPABİLİR
+
+-> SERVER.JS dosyasındaki yollar userKey içerisine geri eklenecek.
+
 -> getArticlesForUser, otherContents her seferinde istek atması düzenlenmeli !!BURADA KALDIN: uuid oluşturmak için istek sayısı veya diğer yollar için istek sayısı ayarlanmalı
 
 -> getAllArticlesForUser her seferinde bütün tabloyu taraması engellenmeli 
@@ -76,6 +80,7 @@ v -> webSupport state'i sayfa yenilendikten sonra kendisini tekrar başlatıyor.
 -> getArticle sayfasına istek atma limiti eklenecek
 -> Click server, userKey içerisine alınacak.
 X -> click-server waypoint'e bir tıklanma limiti eklenmeli
+
 
 -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
 okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).

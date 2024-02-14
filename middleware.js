@@ -14,9 +14,6 @@ export default function middleware(request) {
       customFetch(id, ci, pathname_1);    
     }
   }
-  if(request.method === "POST") {
-    console.log("hello from post: ", request.nextUrl.pathname);
-  }
 
   return response;
 }

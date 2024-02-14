@@ -47,18 +47,7 @@ export const getDynamicPage = async (pageCount, items, setLoadedPages, setPageCo
     setLoadedPages(prevPages => [...prevPages, PageComponent]);
     setPageCount(prevCount => prevCount + 1);
   } catch (error) {
-    fetch(topLevelUrl+"/api/error", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({
-          "type": "other",
-          "location": "getDynamicPage",
-          "error": error.message + " - "   + error
-        })
-      }
-    ).catch(error => {
-      //
-    }) 
+    //Hata.. 
   }
 }
 

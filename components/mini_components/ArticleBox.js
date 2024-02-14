@@ -53,7 +53,7 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                     </div>
                 </div> */}
             
-                <h2>{baslik}</h2>
+                <h2 className={nightMode ? 'soft-white' : 'soft-black'}>{baslik}</h2>
                 <p className={nightMode ? 'soft-white' : 'soft-black'}>   
                 {
                     icerik.split(" ").length > 7 ? 

@@ -1,15 +1,13 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function Eniyi600ccSuperMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-600-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 600 CC Super Sport Motosiklet";
   const metin = "600cc super sport motosikletler, hız tutkunlarının ve pist aslanlarının gözdesidir. Aerodinamik tasarımları sayesinde rüzgarı delebilir ve saniyeler içinde yüksek hızlara ulaşabilirler. Bu makinalar, sadece deneyimli sürücüler için tasarlanmıştır; çünkü bu güçlü makinelerin kontrolü, tam bir beceri ister. Özellikle pist günlerinde ya da açık yollarda, 600cc'nin altındaki süper sport motosikletler, sürücüsüne adeta kanatlandırır gibi hissettirir. Bu makalede, piyasadaki en popüler 600cc super sport motosikletleri inceliyor ve her birinin eşsiz özelliklerini detaylıca ele alıyoruz. Makalemize göz atmaya hazır mısınız? Heyecanlandırıcı bir sürüş deneyimi sizi bekliyor!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "600cc", "motosiklet", "supersport"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -210,24 +208,10 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "en-iyi-10-1000-cc-naked-motosiklet",
-    "en-iyi-10-1000-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-naked-motosiklet"
-  ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
 
-export default function Eniyi600ccSuperMain({topCPO, articleConstructor}) {
   return (
     <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )

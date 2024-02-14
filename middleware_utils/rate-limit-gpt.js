@@ -1,10 +1,48 @@
 const DEFAULT_TIMEOUT = 10000;
 
-export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimit=3, dailyLimit=10) {
-    const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimit = 3, dailyLimit = 3) {
+    
+    
+    //* All Request Types
+    //*----------------------
+    //* auk
+    //* gui
+    //* guil
+    //* middleware
+    //* top-waypoint
+    //* bottom-waypoint
+
+    const ip_address = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    const request_type = req.body.req;
+    const ip_and_req = ip_address + "-" + request_type;
+    
+    switch (request_type) {
+        case "auk":
+            minuteLimit = 30;
+            dailyLimit = 30;
+            break;
+        case "gui":
+            minuteLimit = 10;
+            dailyLimit = 100;
+            break;
+        case "guil":
+            minuteLimit = 5;
+            dailyLimit = 50;
+            break;
+        case "top-waypoint":
+            minuteLimit = 10;
+            dailyLimit = 100;
+            break;
+        case "bottom-waypoint":
+            minuteLimit = 10;
+            dailyLimit = 100;
+            break;
+    }
+    
 
     // İp adresine göre kota bilgilerini al
-    let limits = ipLimits.get(ipAddress);
+    /* let limits = ipLimits.get(ip_address); */
+    let limits = ipLimits.get(ip_and_req);
     if (!limits) {
       // Limits yoksa, yeni bir limits oluştur ve önbelleğe ekle
       limits = new function() {
@@ -26,13 +64,12 @@ export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimi
             this.remainingInMinute = minuteLimit;
         },
         this.checkDailyLimit = function () {
-            /* return this.remainingInDaily <= 0 && res.status(429).send("Günlük limit aşıldı."); */
             return this.remainingInDaily <= 0 && false;
         }
       };
-      ipLimits.set(ipAddress, limits);
+      /* ipLimits.set(ip_address, limits); */
+      ipLimits.set(ip_and_req, limits);
       limits.decreaseToRemaining();
-      /* console.log("ilk kez istek atıldı"); */
       return true;
     }
     else {

@@ -1,15 +1,14 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function Eniyi1000ccSuperMain({topCPO}) {
+  
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-1000-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 1000 CC Super Sport Motosiklet";
   const metin = "Süper spor motosikletler, mühendislik ve tasarımın zirvesini temsil eder. Bu hız canavarları, sadece dikkatli ve tecrübeli sürücüler için tasarlanmıştır. Her bir detay, sürücüsüne unutulmaz bir deneyim yaşatmak amacıyla özenle düşünülmüştür. İster pistte ister açık yolda olsun, bu motosikletler adrenalinin en saf halini sunar. Bu makalede, piyasadaki en iyi 10 süper spor motosikleti detaylı bir şekilde inceliyoruz. Hangi canavarın sizi en çok heyecanlandıracağını görmek için okumaya devam edin!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "supersport"]; //burada türkçe karakter olacak mı bir fikrim yok
-  /* const okunmaSuresi = "4"; */
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -211,24 +210,10 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "en-iyi-10-600-cc-naked-motosiklet",
-    "en-iyi-10-600-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-naked-motosiklet"
-  ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
 
-export default function Eniyi1000ccSuperMain({topCPO, articleConstructor}) {
   return (
     <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>
   )

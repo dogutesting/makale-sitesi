@@ -1,15 +1,13 @@
 import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
-import StaticUrls from '@/lib/StaticUrls';
 
-export async function getStaticProps() {
+export default function Eniyi250ccSuperMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-250-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 250 CC Super Sport Motosiklet";
   const metin = "250cc'lik supersport motosikletler, hem performansları hem de estetik tasarımları ile genç ve enerjik sürücülerin ilgisini çekiyor. Estetik ve atik yapılarıyla, her bir virajda sizi motosiklet tutkunuzun yeni boyutlarına taşıyor. Bu makalemizde, piyasada bulabileceğiniz en iyi 10 250cc'lik supersport motosikleti derledik. İster şehir içinde hızlı manevralar, ister uzun yolda rüzgarla dans etmek olsun, bu motosikletler ile eğlenceyi hissedeceksiniz. Hangi modelin sizi en çok heyecanlandırdığını keşfedin!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
-  const okunmaSuresi = "5";
   const kategori = "motosiklet"; //türkce karakter olmasin
   const minAge = "18";
   const yazar = "I Will";
@@ -209,24 +207,9 @@ export async function getStaticProps() {
   )
   //#endregion
 
-  const defaultsURLs = [
-    "en-iyi-10-125-cc-super-sport-motosiklet",
-    "en-iyi-10-300-cc-super-sport-motosiklet",
-    "en-iyi-10-600-cc-super-sport-motosiklet",
-    "en-iyi-10-1000-cc-super-sport-motosiklet"
-    ];
-  const defaultRecommends = await StaticUrls(defaultsURLs);
-
-  return {
-    props: {
-        articleConstructor: {
-            baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray, defaultRecommends
-        }
-    }
+  const articleConstructor = {
+    baslik, description, keywordsArray, ana_resim, url, jsonList, addDate, okunmaSuresi: jsonList.readTimeSpan, kategori, metin, jsonContentArray
   }
-}
-
-export default function Eniyi250ccSuperMain({topCPO, articleConstructor}) {
 
   return (
     <ClassicArticleTop topCPO={topCPO} articleConstructor={articleConstructor}/>

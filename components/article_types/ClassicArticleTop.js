@@ -15,8 +15,11 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
   useEffect(() => {
     if(!topCPO) {
       if(userInfo.id && userInfo.city) {
-        //! Buranın düzenlenmesi gerekiyor, her seferinde mysql'den bütün tabloları taraması hoş değil
         //getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
+        /*
+        10 saniyede bir istek atabilsin, eğer 10 saniyelik zaman aşımı içerisinde ise cookie içerisindeki değeri kullansın
+        */
+        
       }
     }
   }, [userInfo]);
@@ -46,6 +49,33 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
    }, []);
    //#endregion REACT-WAYPOINT
 
+   //#region can we load?
+   const canWeLoadNext = () => {
+      console.log("loaded next!!!");
+      const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 1, true);
+      if(isItFast) {
+        console.log("fast");
+        setWillComponentRender(false);
+      }
+      else {
+        console.log("fast değil");
+        /* if(!topCPO && userInfo.id && userInfo.ci && items.length === 0) {
+          console.log("items çekildi");
+          getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
+          getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
+          setComponentRenderedTime(getCurrentTime());
+        }
+        else {
+          console.log("items zaten var. Length: ", items.length);
+          getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
+          setComponentRenderedTime(getCurrentTime());
+        } */
+        /* getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
+          setComponentRenderedTime(getCurrentTime()); */
+      }
+   }
+   //#endregion
+
   return (
     <>
       <ClassicArticleBot
@@ -62,7 +92,7 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
         <InfiniteScroll
           scrollThreshold={0.93}
           dataLength={loadedPages.length}
-          next={ willComponentRender && (() => {
+          /* next={ willComponentRender && (() => {
                 const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 1, false);
                 if(isItFast) {
                   setWillComponentRender(false);
@@ -73,7 +103,8 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
                 }
               }
             )
-          }
+          } */
+          next={ willComponentRender && canWeLoadNext() }
           //! items.length -> burası mozilla'da hata veriyor.
           hasMore={() => pageCount < items.length}
           >

@@ -26,41 +26,31 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
-//* EK OLARAK: Botların buraya istek atamayacağınıda göz önünde bulundurarak her makaleye
-//* default olarak 4 tane öneri ekleyelim
-//! GÜNÜN EN ÇOK TIKLANAN 4 MAKALESİNİ BİR DEĞİŞKJEN İÇERİSİNDE TUT VE 24 SAATTE BİR YENİLENSİN
-//! HER İHTİMALE KARŞI BUNU RES.HEADERS'A KAYIT ET. EĞER CLİENT TARAFINDAKİ RECOMMENDS ÇALIŞMAZ İSE
-//! BU ÇALIŞIR
-
 export default async function handler (req, res) {
     if(req.method === 'POST') {
 
-        /* const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
+        const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
         // Byte cinsinden alınan boyutu megabayt cinsine çevirin
-        const requestDataSize = requestBodySizeInBytes / (1024 * 1024); // Byte'ı MB'ye dönüştür
+        const requestDataSizeInKB = requestBodySizeInBytes / (1024); // Byte'ı Kilobyte çevir?
         // İsteğin boyutunu konsola yazdırın (isteğin boyutunu kontrol etmek için)
-        console.log('Request size:', requestDataSize, 'MB'); */
+        console.log('Request size:', requestDataSizeInKB, 'KB');
 
 
         try {
 
-            /* await rateLimitMiddleware(req, res, ipLimits, () => {
-                console.log("2-handler'dan devam ediyor");
-                console.log("-------------------");
-            }) */
-
             const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             if (!IsRateLimitPassed) {
                 console.log("çok fazla istek atıyor.");
-                /* return res.status(429).end(); */
                 res.status(200).json({penalty: true})
             }
             else {
                 console.log("İstek yapabilir..");
                 const jsonBody = req.body;
-                //auk'tan aynı ip adresi üzerinden sadece günde 20 istek yapılabilir 
+
+                //auk'tan aynı ip adresi üzerinden sadece günde 25 istek yapılabilir 
                 if(jsonBody.req === 'auk') { //* add-user-key
-                    console.log("auk isteği yapıldı");
+                    /* console.log("auk isteği yapıldı"); */
+
                     res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                                 jsonBody.data.date)});
                 }
@@ -68,20 +58,22 @@ export default async function handler (req, res) {
                 //geri kalanlar normal kurallara tabii olacak
                 if(jsonBody.req === 'gui') { //* get-user-info
                     console.log("gui isteği yapıldı");
+
                     currentUrl = jsonBody.data.currentUrl;
                     numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                     const response = await getUserInfo(jsonBody.data.id,
                                                        jsonBody.data.ci);
                     const responseClickCount = response.map(item => {
-                        const newItem = { ...item }; // Yeni bir kopya oluştur
-                        delete newItem["clickCount"]; // Belirtilen anahtarı kaldır
-                        return newItem; // Yeni öğeyi diziye ekle
+                        const newItem = { ...item };
+                        delete newItem["clickCount"];
+                        return newItem;
                     });
                     res.status(200).json({data: responseClickCount});
                     /* res.status(200).json({data: response}); */
                 }
                 if(jsonBody.req === "guil") { //* get-user-info-limitless
                     console.log("guil isteği yapıldı");
+
                     currentUrl = jsonBody.data.currentUrl;
                     const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
                     res.status(200).json({data: response});
