@@ -11,24 +11,36 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
   const [items, setItems] = useState([]);
   const [loadedPages, setLoadedPages] = useState([]);
   const [pageCount, setPageCount] = useState(0);
-
-  useEffect(() => {
-    if(!topCPO) {
-      if(userInfo.id && userInfo.city) {
-        //getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
-        /*
-        10 saniyede bir istek atabilsin, eğer 10 saniyelik zaman aşımı içerisinde ise cookie içerisindeki değeri kullansın
-        */
-        
-      }
-    }
-  }, [userInfo]);
   //#endregion INFINITYSCROLL
 
   //#region InfinityScroll Yüklemeye devam etsin mi?
-  /* const [firstComponentRendered, setFirstComponentRendered] = useState(false); */
   const [componentRenderedTime, setComponentRenderedTime] = useState(new Date());
   const [willComponentRender, setWillComponentRender] = useState(true);
+
+  const canWeLoadNext = async () => {
+    const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 10, false);
+    if(isItFast) {
+      setWillComponentRender(false);
+    }
+    else {
+      if(items.length === 0) {
+        const response = await getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue);
+        console.log(response);
+        if(response.penalty === false) {
+          setItems([]);
+        }
+        else {
+          setItems(response.data);
+          getDynamicPage(pageCount, response.data, setLoadedPages, setPageCount);
+          setComponentRenderedTime(getCurrentTime());
+        }
+      }
+      else {
+        getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
+        setComponentRenderedTime(getCurrentTime());
+      }
+    }
+ }
   //#endregion
 
    //#region REACT-WAYPOINT
@@ -49,33 +61,6 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
    }, []);
    //#endregion REACT-WAYPOINT
 
-   //#region can we load?
-   const canWeLoadNext = () => {
-      console.log("loaded next!!!");
-      const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 1, true);
-      if(isItFast) {
-        console.log("fast");
-        setWillComponentRender(false);
-      }
-      else {
-        console.log("fast değil");
-        /* if(!topCPO && userInfo.id && userInfo.ci && items.length === 0) {
-          console.log("items çekildi");
-          getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue, setItems);
-          getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-          setComponentRenderedTime(getCurrentTime());
-        }
-        else {
-          console.log("items zaten var. Length: ", items.length);
-          getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-          setComponentRenderedTime(getCurrentTime());
-        } */
-        /* getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-          setComponentRenderedTime(getCurrentTime()); */
-      }
-   }
-   //#endregion
-
   return (
     <>
       <ClassicArticleBot
@@ -92,20 +77,7 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
         <InfiniteScroll
           scrollThreshold={0.93}
           dataLength={loadedPages.length}
-          /* next={ willComponentRender && (() => {
-                const isItFast = getCalculateTimeDifferenceInSeconds(componentRenderedTime, getCurrentTime(), 1, false);
-                if(isItFast) {
-                  setWillComponentRender(false);
-                }
-                else {
-                  getDynamicPage(pageCount, items, setLoadedPages, setPageCount);
-                  setComponentRenderedTime(getCurrentTime());
-                }
-              }
-            )
-          } */
-          next={ willComponentRender && canWeLoadNext() }
-          //! items.length -> burası mozilla'da hata veriyor.
+          next={ willComponentRender && canWeLoadNext }
           hasMore={() => pageCount < items.length}
           >
             {

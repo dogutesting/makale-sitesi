@@ -18,7 +18,7 @@ export function Wrapper({ children }) {
   const [nightMode, setNightMode] = useState(null);
   
   const [supportWebp, setSupportWebp] = useState(true);
-  const [userInfo, setUserInfo] = useState({id: null, city: null});
+  const [userInfo, setUserInfo] = useState({id: null, ci: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
   //* Mobile mi değil mi?
@@ -73,23 +73,23 @@ export function Wrapper({ children }) {
 
   //* connect with: setStateUserInfo
   const getGeoInfos = async () => {
+    /* country: data.countryName, */
     /* const geoInfos = await fetch("https://freeipapi.com/api/json")
     .then(response => response.json())
     .then((data) => ({
-          country: data.countryName,
-          city: data.cityName
+          
+          ci: data.cityName
       })
     );
     
     return geoInfos; */
     return {
-      country: "Türkiye",
-      city: "Adana"
+      ci: "Adana"
     }
   }
 
   //* connect with: setStateUserInfo
-  const setCookies = (id, city) => {
+  const setCookies = (id, ci) => {
 
     let expirationDate = null;
     if(id) {
@@ -97,22 +97,22 @@ export function Wrapper({ children }) {
       expirationDate.setFullYear(expirationDate.getFullYear() + 1);
     }
 
-    if(id && city) {
+    if(id && ci) {
       cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
-      cookies.set('ci', city, { secure: true, sameSite: 'Strict' });
+      cookies.set('ci', ci, { secure: true, sameSite: 'Strict' });
     }
-    else if(id && !city) {
+    else if(id && !ci) {
       cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
     }
-    else if(!id && city) {
-      cookies.set('ci', city, { secure: true, sameSite: 'Strict' });
+    else if(!id && ci) {
+      cookies.set('ci', ci, { secure: true, sameSite: 'Strict' });
     }
   }
 
-  const setStates = (id, city) => {
+  const setStates = (id, ci) => {
     setUserInfo({
       "id": id,
-      "city": city
+      "ci": ci
     })
   }
 
@@ -121,29 +121,29 @@ export function Wrapper({ children }) {
   const setStateUserInfo = async () => {
     
       const id_cookie = cookies.get("id");
-      const city_cookie = cookies.get("ci");
+      const ci_cookie = cookies.get("ci");
 
-      if(id_cookie && city_cookie) {
-        setStates(id_cookie, city_cookie);
+      if(id_cookie && ci_cookie) {
+        setStates(id_cookie, ci_cookie);
       }
-      else if(id_cookie && !city_cookie) {
+      else if(id_cookie && !ci_cookie) {
         const geoInfos = await getGeoInfos();
-        const city = await fetch(otherServer+"/oa/cry", {
+        const ci = await fetch(otherServer+"/oa/cry", {
           method: "POST",
           headers: {
             'Content-Type': 'application/json',
             /* 'Accept': 'application/json' */
           },
           body: JSON.stringify({
-            "val": geoInfos.city
+            "val": geoInfos.ci
           })
         }).then(res => res.json()).then(data => data.cry);
 
-        setStates(id_cookie, city);
+        setStates(id_cookie, ci);
 
-        setCookies(null, city);
+        setCookies(null, ci);
       }
-      else if(!id_cookie && city_cookie) {
+      else if(!id_cookie && ci_cookie) {
         const geoInfos = await getGeoInfos();
         const id = await fetch('/api/userKey', {
           method: 'POST',
@@ -159,7 +159,7 @@ export function Wrapper({ children }) {
           })
         }).then(res => res.json()).then(data => data.uuid);
         
-        setStates(id, city_cookie);
+        setStates(id, ci_cookie);
 
         setCookies(id, null);
       }
@@ -180,19 +180,19 @@ export function Wrapper({ children }) {
           })
         }).then(res => res.json()).then(data => data.uuid);
 
-        const city = await fetch(otherServer+"/oa/cry", {
+        const ci = await fetch(otherServer+"/oa/cry", {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            "val": geoInfos.city
+            "val": geoInfos.ci
           })
         }).then(res => res.json()).then(data => data.cry);
        
-        setStates(id, city);
+        setStates(id, ci);
 
-        setCookies(id, city);
+        setCookies(id, ci);
       }
   }
 
@@ -207,7 +207,7 @@ export function Wrapper({ children }) {
         "type": type,
         user: {
           "id": userInfo.id,
-          "ci": userInfo.city
+          "ci": userInfo.ci
         },
         status: {
           "pathname": pathname,

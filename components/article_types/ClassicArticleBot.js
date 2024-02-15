@@ -5,10 +5,13 @@ import OtherContents from "../OtherContents";
 import Ana_gorsel from "../mini_components/AnaGorsel";
 import Custom_Waypoint from "../mini_components/CustomWaypoint";
 import Ens_all from "../mini_components/ens/EnsAll";
+import { useState } from "react";
 
 const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor}) => {
   const { baslik, description, keywordsArray, ana_resim,
-     url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray, defaultRecommends  } = articleConstructor;
+     url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray  } = articleConstructor;
+
+    const [bottomChecker, setBottomChecker] = useState(false);
 
   return (
     <Main>
@@ -36,10 +39,10 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
           <hr className='split'/>
 
           <Ens_all jsonContentArray={jsonContentArray} sayfaUrl={url}
-           kategori={kategori} currentPageOperations={currentPageOperations}/>
+           kategori={kategori} currentPageOperations={currentPageOperations} setBottomChecker={setBottomChecker}/>
         </article>
 
-        <OtherContents currentUrl={url} defaultRecommends={defaultRecommends}/>
+        <OtherContents currentUrl={url} bottomChecker={bottomChecker}/>
     </Main>
   );
 };

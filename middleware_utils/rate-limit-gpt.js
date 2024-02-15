@@ -1,14 +1,15 @@
 const DEFAULT_TIMEOUT = 10000;
 
+import numberOfPages from '../numberOfPages.json'; //npm run build sırasında oluşturuluyor ve sonradan çalışıyor.
+
 export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimit = 3, dailyLimit = 3) {
-    
     
     //* All Request Types
     //*----------------------
     //* auk
     //* gui
     //* guil
-    //* middleware
+    //* middleware -> zaten server tarafında istek atılıyor
     //* top-waypoint
     //* bottom-waypoint
 
@@ -18,24 +19,24 @@ export default async function rateLimitMiddleware(req, res, ipLimits, minuteLimi
     
     switch (request_type) {
         case "auk":
-            minuteLimit = 30;
-            dailyLimit = 30;
+            minuteLimit = 30; //* SABİT
+            dailyLimit = 30; //* SABİT
             break;
         case "gui":
             minuteLimit = 10;
-            dailyLimit = 100;
+            dailyLimit = numberOfPages.numberOfPages * 5; //! *= 5
             break;
         case "guil":
             minuteLimit = 5;
-            dailyLimit = 50;
+            dailyLimit = numberOfPages.numberOfPages * 2; //! makale sayısı ile bağlantılı *=2
             break;
-        case "top-waypoint":
-            minuteLimit = 10;
-            dailyLimit = 100;
+        case "top-waypoint": 
+            minuteLimit = 6;
+            dailyLimit = numberOfPages.numberOfPages * 3; //! makale sayısı ile bağlantılı *= 3
             break;
         case "bottom-waypoint":
-            minuteLimit = 10;
-            dailyLimit = 100;
+            minuteLimit = 6;
+            dailyLimit = numberOfPages.numberOfPages * 3; //! makale sayısı ile bağlantılı *= 3
             break;
     }
     

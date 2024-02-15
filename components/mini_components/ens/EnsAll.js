@@ -8,7 +8,7 @@ import Kunye from './Kunye';
 
 
 
-export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperations}) {
+export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperations, setBottomChecker}) {
   const { supportWebp, showToast, nightMode, topLevelUrl } = useAppContext();
   const items = [];
 
@@ -45,7 +45,7 @@ export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperation
 
       if((index + 1) === 9) {
         items.push(
-            <Custom_Waypoint key={"bottom_wp_"+(index+1)} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations}/>
+            <Custom_Waypoint key={"bottom_wp_"+(index+1)} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations} setBottomChecker={setBottomChecker}/>
         )
       }
 

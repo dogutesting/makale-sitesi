@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 //#region //* Sonsuz akış için tek seferlik içerik çekici
-export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageValue, setItems) => {
+export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageValue) => {
     const res = await fetch(topLevelUrl+"/api/userKey", {
       method: "POST",
       headers: { 
@@ -11,7 +11,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
         "req": "guil",
         "data": {
           "id": userInfo.id,
-          "ci": userInfo.city,
+          "ci": userInfo.ci,
           "currentUrl": currentPageValue
           /* "date": getCurrentTime() */
         }
@@ -19,23 +19,10 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
     })
     if(res.ok) {
       const response = await res.json();
-      setItems(response.data);
+      return {penalty: response.penalty, data: response.data};
     }
     else {
-      //! buradaki hataları mysql'e kaydet
-      /* console.log("%i Hata: " + res.statusText, red); */
-      fetch(topLevelUrl+"/api/error", {
-          method: "POST",
-          headers: {"Content-Type": "application/json"},
-          body: JSON.stringify({
-            "type": "other",
-            "location": "getAllArticlesForUser",
-            "error": res.status + " - " + res.statusText  
-          })
-        }
-      ).catch(error => {
-        //
-      }) 
+      return false;
     }
 }
 //* Sonsuz akış için dinamik sayfa yükleyici
@@ -80,7 +67,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
       "req": "gui",
       "data": {
         "id": userInfo.id,
-        "ci": userInfo.city,
+        "ci": userInfo.ci,
         "currentUrl": currentUrl,
         "isItMobile": isItMobile
       }
@@ -88,10 +75,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
   });
   if(res.ok) {
     const response = await res.json();
-    if(response.penalty) {
-      return false;
-    }
-    return response.data;
+    return {penalty: response.penalty, data: response.data};
   }
   else {
     /* console.log("else kısmındayız"); */

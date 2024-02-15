@@ -15,6 +15,9 @@ const ipLimits = new LRUCache({
 });
 //#endregion
 
+
+
+
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
 function showWithColor(color, text) {
@@ -26,14 +29,76 @@ function showWithColor(color, text) {
 let currentUrl = "";
 let numberOfContents = 4;
 
+//#region //* TOP 4
+let top4 = [];
+const getMostTop4 = async () => {
+    let connection = null;
+    try {
+        connection = await connectToDatabase();
+        const [rows] = await connection.execute(`
+        SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+        COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
+        FROM makaleler m 
+        LEFT JOIN clicks c ON c.url = m.url 
+        GROUP BY m.url 
+        ORDER BY clickCount DESC LIMIT ?`, [numberOfContents]);
+        const withoutClickCount = rows.map(item => {
+            const newItem = { ...item };
+            delete newItem["clickCount"];
+            return newItem;
+        });
+        top4 = withoutClickCount;
+    }
+    catch(err) {
+        top4 = [
+            {
+                url: 'en-yuksek-imdb-puanina-sahip-10-dizi',
+                baslik: 'En Yüksek imdb Puanına Sahip 10 Dizi',
+                resimYolu: '/images/ana_gorseller/enonlar-en-yuksek-imdb-puanina-sahip-10-dizi.png',
+                paragraf: 'Televizyonun altın çağında, bazı diziler sadece ekran başında geçirilen saatleri doldurmakla kalmaz'
+            },
+            {
+              url: 'en-yuksek-imdb-puanina-sahip-10-film',
+              baslik: 'En Yüksek imdb Puanına Sahip 10 Film',
+              resimYolu: '/images/ana_gorseller/enonlar-en-yuksek-imdb-puanina-sahip-10-film.png',
+              paragraf: 'Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, ruhumuza dokunur ve biz'
+            },
+            {
+              url: 'en-iyi-10-1000-cc-naked-motosiklet',
+              baslik: 'En İyi 10 1000 CC Naked Motosiklet',
+              resimYolu: '/images/ana_gorseller/enonlar-en-iyi-10-1000-cc-naked-motosiklet.png',
+              paragraf: '1000cc sınıfı naked motosikletler, tecrübeli motosiklet sürücülerinin ellerinde bile agresifliğini v'
+            },
+            {
+                url: 'en-iyi-10-1000-cc-super-sport-motosiklet',
+                baslik: 'En İyi 10 1000 CC Super Sport Motosiklet',
+                resimYolu: '/images/ana_gorseller/enonlar-en-iyi-10-1000-cc-super-sport-motosiklet.png',
+                paragraf: 'Süper spor motosikletler, mühendislik ve tasarımın zirvesini temsil eder. Bu hız canavarları'
+            }
+          ];
+    }
+    finally {
+        connection && connection.end();
+    }
+}
+const setIntervalWithFunc = () => {
+    getMostTop4();
+    setInterval(getMostTop4, 1000 * 60 * 60 * 24);
+} 
+
+setIntervalWithFunc();
+
+//#endregion
+
 export default async function handler (req, res) {
     if(req.method === 'POST') {
 
-        const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
-        // Byte cinsinden alınan boyutu megabayt cinsine çevirin
-        const requestDataSizeInKB = requestBodySizeInBytes / (1024); // Byte'ı Kilobyte çevir?
-        // İsteğin boyutunu konsola yazdırın (isteğin boyutunu kontrol etmek için)
+        /* const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
+        const requestDataSizeInKB = requestBodySizeInBytes / (1024);
         console.log('Request size:', requestDataSizeInKB, 'KB');
+        if(requestBodySizeInBytes > 1.0) {
+            res.status(500).end("çok büyük boyut")
+        } */
 
 
         try {
@@ -41,10 +106,18 @@ export default async function handler (req, res) {
             const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             if (!IsRateLimitPassed) {
                 console.log("çok fazla istek atıyor.");
-                res.status(200).json({penalty: true})
+                if(req.body.req === "guil") {
+                    res.status(200).json({penalty: true, data: [], "sanic": "enonlar.com/sanic.jpg"})
+                }
+                if(req.body.req === "gui") {
+                    res.status(200).json({penalty: true, data: top4, "sanic": "enonlar.com/sanic.jpg"})
+                }
+                else {
+                    res.status(200).json({penalty: true, "sanic": "enonlar.com/sanic.jpg"});
+                }
             }
             else {
-                console.log("İstek yapabilir..");
+                /* console.log("İstek yapabilir.."); */
                 const jsonBody = req.body;
 
                 //auk'tan aynı ip adresi üzerinden sadece günde 25 istek yapılabilir 
@@ -57,7 +130,7 @@ export default async function handler (req, res) {
 
                 //geri kalanlar normal kurallara tabii olacak
                 if(jsonBody.req === 'gui') { //* get-user-info
-                    console.log("gui isteği yapıldı");
+                    /* console.log("gui isteği yapıldı"); */
 
                     currentUrl = jsonBody.data.currentUrl;
                     numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
@@ -69,10 +142,9 @@ export default async function handler (req, res) {
                         return newItem;
                     });
                     res.status(200).json({data: responseClickCount});
-                    /* res.status(200).json({data: response}); */
                 }
                 if(jsonBody.req === "guil") { //* get-user-info-limitless
-                    console.log("guil isteği yapıldı");
+                    /* console.log("guil isteği yapıldı"); */
 
                     currentUrl = jsonBody.data.currentUrl;
                     const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
@@ -130,10 +202,9 @@ async function addUser(geo, date) {
                                                     city,
                                                     country,
                                                     date) 
-                                                    VALUES (?, ?, ?, ?)`,
+                                                    VALUES (?, ?, ?)`,
                                                     [uuid,
                                                     geo.city,
-                                                    geo.country,
                                                     date]
                             );
         return uuid;

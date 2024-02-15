@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Sayfa dosyalarının bulunduğu klasörü belirtin
-const pagesDirectory = path.join(process.cwd(), '../pages');
+const pagesDirectory = path.join(__dirname, '../pages');
 
 // Sayfa dosyalarını listele
 const pageFiles = fs.readdirSync(pagesDirectory);
@@ -83,4 +83,8 @@ pageFile.includes("404.js")) {return false}
 });
 
 //! mysql kodu oluşturuluyor.
-console.log("INSERT INTO makaleler (url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf, anahtarlar) VALUES "+values.join(",")+" ON DUPLICATE KEY UPDATE baslik = VALUES(baslik), resimYolu = VALUES(resimYolu), eklenmeTarihi = VALUES(eklenmeTarihi), okunmaSuresi = VALUES(okunmaSuresi), kategori = VALUES(kategori), paragraf = VALUES(paragraf), anahtarlar = VALUES(anahtarlar);");
+const sql_query = "INSERT INTO makaleler (url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf, anahtarlar) VALUES "+values.join(",")+" ON DUPLICATE KEY UPDATE baslik = VALUES(baslik), resimYolu = VALUES(resimYolu), eklenmeTarihi = VALUES(eklenmeTarihi), okunmaSuresi = VALUES(okunmaSuresi), kategori = VALUES(kategori), paragraf = VALUES(paragraf), anahtarlar = VALUES(anahtarlar);"
+//console.log(sql_query);
+
+/* fs.writeFileSync("insert_makaleler.sql", sql_query); */
+fs.writeFileSync(path.join(__dirname, '../sql/insert_makaleler.sql'), sql_query);

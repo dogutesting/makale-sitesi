@@ -5,29 +5,20 @@ import { useAppContext } from '@/context/ContextProvider';
 import { useEffect, useState } from 'react';
 import { getOtherContentArticles } from './functions/infinityScrollAndGetNewArticle';
 
-export default function OtherContents({currentUrl, defaultRecommends}) {
+export default function OtherContents({currentUrl, bottomChecker}) {
 
   const { userInfo, topLevelUrl, supportWebp, isItMobile } = useAppContext();
   const [others, setOthers] = useState([]);
 
   const checkRequestStatus = async () => {
-    //! EĞER RESPONSE ZAMAN AŞIMINDA İSE ÖNCEKİNİ KULLAN, 
-    //! EĞER ÖNCEKİ YOK İSE DEFAULT'U KULLAN  
-
     const response = await getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile);
-    if(!response) {
-      setOthers(defaultRecommends);
-    }
-    else {
-      setOthers(response);
-    }
+    setOthers(response.data);
   }
-
   useEffect(() => {
-    if(userInfo.id && userInfo.city && typeof isItMobile === "boolean") {
-      checkRequestStatus();
+    if(bottomChecker) {
+      checkRequestStatus(); 
     }
-  }, [userInfo, isItMobile]);
+  }, [bottomChecker])
 
   return (
     <>
