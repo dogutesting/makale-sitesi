@@ -1,7 +1,9 @@
 import colors, { random } from 'colors';
-import { connectToDatabase } from '@/lib/mysql';
 import { v4 as uuidv4 } from 'uuid';
-import rateLimitMiddleware from '../../middleware_utils/rate-limit-gpt';
+import CryptoJS from "crypto-js";
+
+import { connectToDatabase } from '@/lib/mysql';
+import rateLimitMiddleware from '@/lib/rate-limit-gpt';
 
 import LRUCache from 'lru-cache';
 
@@ -14,9 +16,6 @@ const ipLimits = new LRUCache({
   ttl: MAX_TIMEOUT
 });
 //#endregion
-
-
-
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
@@ -100,12 +99,10 @@ export default async function handler (req, res) {
             res.status(500).end("çok büyük boyut")
         } */
 
-
         try {
-
             const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             if (!IsRateLimitPassed) {
-                console.log("çok fazla istek atıyor.");
+                /* console.log("çok fazla istek atıyor."); */
                 if(req.body.req === "guil") {
                     res.status(200).json({penalty: true, data: [], "sanic": "enonlar.com/sanic.jpg"})
                 }
@@ -119,19 +116,16 @@ export default async function handler (req, res) {
             else {
                 /* console.log("İstek yapabilir.."); */
                 const jsonBody = req.body;
-
-                //auk'tan aynı ip adresi üzerinden sadece günde 25 istek yapılabilir 
+                
                 if(jsonBody.req === 'auk') { //* add-user-key
                     /* console.log("auk isteği yapıldı"); */
-
                     res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
                                                                 jsonBody.data.date)});
                 }
 
-                //geri kalanlar normal kurallara tabii olacak
+                //#region //* Get user info and limitles
                 if(jsonBody.req === 'gui') { //* get-user-info
                     /* console.log("gui isteği yapıldı"); */
-
                     currentUrl = jsonBody.data.currentUrl;
                     numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
                     const response = await getUserInfo(jsonBody.data.id,
@@ -145,33 +139,34 @@ export default async function handler (req, res) {
                 }
                 if(jsonBody.req === "guil") { //* get-user-info-limitless
                     /* console.log("guil isteği yapıldı"); */
-
                     currentUrl = jsonBody.data.currentUrl;
                     const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
                     res.status(200).json({data: response});
                 }
-            }
+                //#endregion
 
-            //her türlü buraya geçiyor.
-            //#region
-            /* const jsonBody = req.body;
-            if(jsonBody.req === 'auk') { //* add-user-key
-                res.status(200).json({"uuid": await addUser(jsonBody.data.geo,
-                                                            jsonBody.data.date)});
+                //#region //* ADD CLICK OLAYLARI
+                if(jsonBody.req === "middleware" && jsonBody.auth === "Dm4i5dS") {
+                    addUserClick(jsonBody.req.body, "middleware");
+                    res.status(200).end("ok");
+                }
+                if(jsonBody.req === "waypoint") {
+                    res.status(200).end("ok");
+
+                    if(jsonBody.type === "top-waypoint") {
+                        addUserClick(jsonBody.data, "top-waypoint");
+                    }
+                    if(jsonBody.type === "bottom-waypoint") {
+                        addUserClick(jsonBody.data, "bottom-waypoint");
+                    }
+                }
+                if(jsonBody.req === "cry") {
+                    res.status(200).json({"cry": kriptoloji(true, jsonBody.data.ci)});
+                }
+                //#endregion
+
+                res.status(403).end();
             }
-            if(jsonBody.req === 'gui') { //* get-user-info
-                currentUrl = jsonBody.data.currentUrl;
-                numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
-                const response = await getUserInfo(jsonBody.data.id,
-                                                   jsonBody.data.ci);
-                res.status(200).json({data: response});
-            }
-            if(jsonBody.req === "guil") { //* get-user-info-limitless
-                currentUrl = jsonBody.data.currentUrl;
-                const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
-                res.status(200).json({data: response});
-            } */
-            //#endregion
         } catch (error) {
             console.log(colors.red("hata: ", error));
             res.status(500).end();
@@ -181,12 +176,65 @@ export default async function handler (req, res) {
     }
 }
 
+//#region //* ADD CLICK FUNCTIONS
+async function addUserClick(body, type) {
+    const {user, status} = body;
+    
+    let connection = null;
+    try {
+        connection = await connectToDatabase();
 
+        //* kullanıcı var mı?
+        if(!user.id || !user.ci || !status.pathname || !status.date) {
+            return false;
+        }
+        else {
+            const [kullanici_var_mi] = await connection.execute("SELECT user_uuid FROM users WHERE user_uuid = ?", 
+            [user.id]);
+            if(kullanici_var_mi.length !== 1) {
+                return false;
+            }
+        }
 
+        //* pathname
+        let kategori;
+        const [rows] = await connection.execute("SELECT kategori FROM makaleler WHERE url = ?", [status.pathname]);
+        if(rows.length > 0) {
+            kategori = rows[0].kategori;
+
+            const decrypted_city = kriptoloji(false, user.ci);
+            await connection.execute(`INSERT INTO clicks 
+            (url, time, kategori, type, city, clicked_user_uuid) 
+            VALUES (?, ?, ?, ?, ?, ?)`, 
+            [status.pathname, status.date, kategori, type, decrypted_city, user.id]);
+        }
+        /*
+        else {
+            kategori = "bos"
+        }
+        */
+    } catch (error) {
+        console.log("hata sebebi: ", error);
+    } finally {
+        connection && connection.end();
+    }
+}
+
+const kriptoloji = (encry, text) => {
+    let value = "";
+    if(encry) {
+      value = CryptoJS.AES.encrypt(text, "D++;").toString();
+    }
+    else {
+      value = CryptoJS.AES.decrypt(text, "D++;").toString(CryptoJS.enc.Utf8);
+    }
+    return value;
+}
+//#endregion
 
 //#region //* handler fonksiyonları
 async function addUser(geo, date) {
-   let connection;
+    let connection;
     try {
     connection = await connectToDatabase();
     let uuid;
@@ -199,17 +247,16 @@ async function addUser(geo, date) {
     } while (!uuid);
     
     await connection.execute(`INSERT INTO users (user_uuid,
-                                                    city,
-                                                    country,
-                                                    date) 
-                                                    VALUES (?, ?, ?)`,
-                                                    [uuid,
-                                                    geo.city,
-                                                    date]
+                                                city,
+                                                date) 
+                                                VALUES (?, ?, ?)`,
+                                                [uuid,
+                                                geo,
+                                                date]
                             );
         return uuid;
    } catch (error) {
-    throw error
+    //throw error
    } finally {
     connection && connection.end();
    }

@@ -19,7 +19,7 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
         setCurrentPageProp(startedUrl);
         if(!looked && currentPageOperations.isSetable) {
           setLooked(true);
-          //addClick(startedUrl, name);
+          addClick(startedUrl, name+"-waypoint");
         }
       }
 
@@ -28,7 +28,7 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
         if(!looked2) {
           setLooked2(true);
           setBottomChecker(true);
-          //addClick(startedUrl, name);
+          addClick(startedUrl, name+"-waypoint");
         }
       }
     }

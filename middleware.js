@@ -1,17 +1,21 @@
 import { NextResponse } from 'next/server';
 
 /* let num = 0; */
-const click_server_name = "http://localhost:4541";
+const click_server_name = "http://localhost:3000";
+
+//! buraya bir tane lrucache koymamız lazım
 
 export default function middleware(request) {
   const response = NextResponse.next();
+
+  //! middleware içerisinde aynı kullanıcının tekrar tekrar aynı url'yi veya olmayan url'leri eklemesi engellenmeli.
 
   if(request.method === "GET") {
     if(request.nextUrl.pathname !== "/" && request.nextUrl.pathname !== "/404") {
       const pathname_1 = request.nextUrl.pathname.substring(1);
       const id = request.cookies.get("id")?.value;
       const ci = request.cookies.get("ci")?.value;
-      customFetch(id, ci, pathname_1);    
+      /* customFetch(id, ci, pathname_1);     */
     }
   }
 
@@ -48,14 +52,17 @@ const customFetch = (id, ci, pathname, main=false) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        auth: "m4i5d",
-        user: {
-          id: id,
-          ci: ci  
-        },
-        status: {
-          pathname: pathname,
-          date: getDateAndTime()
+        req: "middleware",
+        auth: "Dm4i5dS",
+        body: {
+          user: {
+            id: id,
+            ci: ci  
+          },
+          status: {
+            pathname: pathname,
+            date: getDateAndTime()
+          }
         }
       })
     }).catch(error => {

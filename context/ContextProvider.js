@@ -6,7 +6,6 @@ const AppContext = createContext();
 export function useAppContext() {
   return useContext(AppContext);
 }
-const otherServer = "http://" + "localhost:4541";
 const topLevelUrl = "http://" + "localhost:3000";
 let cookies = null;
 
@@ -14,9 +13,7 @@ export function Wrapper({ children }) {
 
   const router = useRouter();
 
-  /* const [nightMode, setNightMode] = useState(false); */
-  const [nightMode, setNightMode] = useState(null);
-  
+  const [nightMode, setNightMode] = useState(null);  
   const [supportWebp, setSupportWebp] = useState(true);
   const [userInfo, setUserInfo] = useState({id: null, ci: null});
   const [isItMobile, setIsItMobile] = useState(null);
@@ -128,14 +125,16 @@ export function Wrapper({ children }) {
       }
       else if(id_cookie && !ci_cookie) {
         const geoInfos = await getGeoInfos();
-        const ci = await fetch(otherServer+"/oa/cry", {
+        const ci = await fetch(topLevelUrl+"/api/userKey", {
           method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-            /* 'Accept': 'application/json' */
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            "val": geoInfos.ci
+            req: "cry",
+            "data": {
+              "ci": geoInfos.ci
+            }
           })
         }).then(res => res.json()).then(data => data.cry);
 
@@ -145,7 +144,7 @@ export function Wrapper({ children }) {
       }
       else if(!id_cookie && ci_cookie) {
         const geoInfos = await getGeoInfos();
-        const id = await fetch('/api/userKey', {
+        const id = await fetch(topLevelUrl+'/api/userKey', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', 
@@ -153,8 +152,8 @@ export function Wrapper({ children }) {
           body: JSON.stringify({
             req: "auk",
             "data": {
-              "date": getDateAndTime(),
-              "geo": geoInfos
+              "geo": geoInfos.ci,
+              "date": getDateAndTime()
             }
           })
         }).then(res => res.json()).then(data => data.uuid);
@@ -174,19 +173,22 @@ export function Wrapper({ children }) {
           body: JSON.stringify({
             req: "auk",
             "data": {
-              "date": getDateAndTime(),
-              "geo": geoInfos
+              "geo": geoInfos.ci,
+              "date": getDateAndTime()
             }
           })
         }).then(res => res.json()).then(data => data.uuid);
 
-        const ci = await fetch(otherServer+"/oa/cry", {
+        const ci = await fetch(topLevelUrl+"/api/userKey", {
           method: "POST",
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            "val": geoInfos.ci
+            req: "cry",
+            "data": {
+              "ci": geoInfos.ci
+            }
           })
         }).then(res => res.json()).then(data => data.cry);
        
@@ -198,20 +200,23 @@ export function Wrapper({ children }) {
 
   //* connect with: rota kayıt //Güncellendi
   const addClick = (pathname, type) => {
-    fetch(otherServer+"/c-event/waypoint", {
+    fetch(topLevelUrl+"/api/userKey", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        req: "waypoint",
         "type": type,
-        user: {
-          "id": userInfo.id,
-          "ci": userInfo.ci
-        },
-        status: {
-          "pathname": pathname,
-          "date": getDateAndTime()
+        "data": {
+          user: {
+            "id": userInfo.id,
+            "ci": userInfo.ci
+          },
+          status: {
+            "pathname": pathname,
+            "date": getDateAndTime()
+          }
         }
       })
     }).catch(error => {

@@ -25,7 +25,7 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
     else {
       if(items.length === 0) {
         const response = await getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue);
-        console.log(response);
+        /* console.log(response); */
         if(response.penalty === false) {
           setItems([]);
         }
