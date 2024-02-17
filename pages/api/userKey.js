@@ -2,19 +2,18 @@ import colors, { random } from 'colors';
 import { v4 as uuidv4 } from 'uuid';
 import CryptoJS from "crypto-js";
 
-import { connectToDatabase } from '@/lib/mysql';
-import rateLimitMiddleware from '@/lib/rate-limit-gpt';
 
+import { connectToDatabase } from '@/lib/mysql';
+
+import rateLimitMiddleware from '@/lib/rate-limit-gpt';
 import LRUCache from 'lru-cache';
+import CONSTS from '@/consts.json'
+
 
 //#region //* rate-limit
-/* const MAX_TIMEOUT = 1 * 10 * 1000; //* 1 gün limit */ 
-const MAX_TIMEOUT = 4 * 60 * 60 * 1000; //* 4 saat olarak ayarlandı
+/* const MAX_TIMEOUT = 4 * 60 * 60 * 1000; //* 4 saat olarak ayarlandı */
  
-const ipLimits = new LRUCache({
-  max: 1000, // Maximum öğe sayısı
-  ttl: MAX_TIMEOUT
-});
+const ipLimits = new LRUCache(CONSTS.LRU_OBJECT);
 //#endregion
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
@@ -114,6 +113,9 @@ export default async function handler (req, res) {
                 }
             }
             else {
+
+
+
                 /* console.log("İstek yapabilir.."); */
                 const jsonBody = req.body;
                 

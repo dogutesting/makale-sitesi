@@ -77,9 +77,12 @@ V -> getAllArticlesForUser her seferinde bütün tabloyu taraması engellenmeli
 V? default olarak 4mb veri yollama limiti varmış next.js'in. Eğer kafama takılır ise nginx üzerinden kontrol ederim
 -> hem click-server'a hemde next.js server'ına post veri yollama limiti eklenmeli 1 gb veri yollayarak sistemi yormamalı.
 
-! -> SERVER.JS dosyasındaki yollar userKey içerisine geri eklenecek.
+V -> SERVER.JS dosyasındaki yollar userKey içerisine geri eklenecek.
 
--> getArticle sayfasına istek atma limiti eklenecek
+! -> getArticle sayfasına istek atma limiti eklenecek 
+	/* ip adresini gerçekten alabiliyor muyum bunu test etmem lazım
+	bunu test edebilmem için sunucuyu satın alıp, sunucuda testler yapmam gerekiyor
+
 
 
 
