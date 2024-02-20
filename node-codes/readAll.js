@@ -14,7 +14,7 @@ pageFiles.forEach((pageFile) => {
 
  if(!pageFile.includes(".js") || pageFile.includes("index.js") || pageFile.includes("_app.js") || 
 pageFile.includes("_document.js") || pageFile.includes("test.js") || pageFile.includes("old_index.js") ||
-pageFile.includes("404.js")) {return false}
+pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return false}
 
     const pagePath = path.join(pagesDirectory, pageFile);
     const pageContent = fs.readFileSync(pagePath, 'utf-8');

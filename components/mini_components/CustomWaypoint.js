@@ -36,7 +36,7 @@ export default function Custom_Waypoint ({customKey, name, startedUrl, currentPa
   return (
       <Waypoint key={customKey} onEnter={() => _fun_onEnter()}
        scrollableAncestor={currentPageOperations.ancestor}>
-        <div style={{backgroundColor: "red", color: "white"}}>{name}</div>
+        {/* <div style={{backgroundColor: "red", color: "white"}}>{name}</div> */}
       </Waypoint>
   );
 }

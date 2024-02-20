@@ -4,7 +4,7 @@ const path = require('path');
 const pagesDirectory = path.join(__dirname, '../pages');
 const files = fs.readdirSync(pagesDirectory);
 const pageFiles = files.filter(file => file.endsWith('.js'));
-const NUMBER_OF_PAGES = pageFiles.length - 5;
+const NUMBER_OF_PAGES = pageFiles.length - 6;
 
 const MAX_USER = 1000;
 const MAX_TIMEOUT = 4 * 60 * 60 * 1000; //* 4 saat olarak ayarlandı

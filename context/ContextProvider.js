@@ -18,6 +18,19 @@ export function Wrapper({ children }) {
   const [userInfo, setUserInfo] = useState({id: null, ci: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
+  const [cookie_policy_div, setCookiePolicyDiv] = useState(null);
+
+  //* Politikaya izin verildi mi?
+  const getCookiePolicy = () => {
+    const status = cookies.get("cookiepolicy_status");
+    if(status === 1) {
+      setCookiePolicyDiv(false);
+    }
+    else {
+      setCookiePolicyDiv(true);
+    }
+  }
+
   //* Mobile mi değil mi?
   function hasTouchSupport() {
     return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -74,7 +87,6 @@ export function Wrapper({ children }) {
     /* const geoInfos = await fetch("https://freeipapi.com/api/json")
     .then(response => response.json())
     .then((data) => ({
-          
           ci: data.cityName
       })
     );
@@ -116,7 +128,8 @@ export function Wrapper({ children }) {
   //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
-    
+      //! EĞER KULLANICI COOKİE KULLANIMINA İZİN VERDİYSE BUNU ÇALIŞTIR
+
       const id_cookie = cookies.get("id");
       const ci_cookie = cookies.get("ci");
 
@@ -200,6 +213,7 @@ export function Wrapper({ children }) {
 
   //* connect with: rota kayıt //Güncellendi
   const addClick = (pathname, type) => {
+    //! EĞER KULLANICI COOKİE KULLANIMINA İZİN VERDİYSE BUNU ÇALIŞTIR
     fetch(topLevelUrl+"/api/userKey", {
       method: "POST",
       headers: {
@@ -257,12 +271,14 @@ export function Wrapper({ children }) {
     (async () => {
       const jsCookie = await import('js-cookie');
       cookies = jsCookie.default;
+      getCookiePolicy();
+      //* eğer cookie'lere izin verdiyse stateuserinfo'yu başlat
       await setStateUserInfo();
     })();
   }, []);
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo, showToast, addClick, isItMobile}}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo, showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv}}>
       {children}
     </AppContext.Provider>
   );
