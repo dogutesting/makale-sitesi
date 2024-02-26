@@ -18,15 +18,18 @@ export function Wrapper({ children }) {
   const [userInfo, setUserInfo] = useState({id: null, ci: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
-  const [cookie_policy_div, setCookiePolicyDiv] = useState(null);
+  const [cookie_policy_div, setCookiePolicyDiv] = useState(false);
 
   //* Politikaya izin verildi mi?
   const getCookiePolicy = () => {
     const status = cookies.get("cookiepolicy_status");
-    if(status === 1) {
+    if(status === "1") {
       setCookiePolicyDiv(false);
     }
     else {
+      const expirationDate = new Date();
+      expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+      cookies.set('cookiepolicy_status', 0, { sameSite: 'Strict', expires: expirationDate });
       setCookiePolicyDiv(true);
     }
   }

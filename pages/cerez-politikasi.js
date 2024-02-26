@@ -6,6 +6,7 @@ export default function CookiePolicy () {
         <h1>ÇEREZLERE DAİR AYDINLATMA METNİ</h1>
         <p>Bu metin, 6698 sayılı Kişisel Verilerin Korunması Kanunu’nun (Kanun) 10’uncu maddesi ile Aydınlatma Yükümlülüğünün Yerine Getirilmesinde Uyulacak Usul ve Esaslar Hakkında Tebliğ kapsamında veri sorumlusu sıfatıyla <b>enonlar.com</b> tarafından tarafından hazırlanmıştır.</p>
         <p>Bu Çerez Aydınlatma Metni’nin amacı, internet sitemizde kullanılan çerezlerin cihazınıza yerleştirilmesi aracılığıyla otomatik yolla elde edilen kişisel verilerin işlenmesine ilişkin olarak, hangi amaçlarla hangi tür çerezleri kullandığımız, hukuki sebebi ve haklarınız hakkında sizlere bilgi vermektir.</p>
+        <p>Bu sayfadaki Çerez Aydınlatma Metni aynı zamanda Avrupa Birliği bölgeleri için istenilen Genel Veri Koruma Tüzüğünü(GDPR) de içermektedir.</p>
 
         <h2>Çerez Nedir?</h2>
         <p>Çerez, bir web sitesi ziyaret edildiğinde sabit sürücüde veya tarayıcı klasöründe depolanan metin dosyasıdır. Çerezler aracılığı ile web sitesi ziyaretçilerine sunulan hizmetin daha hızlı ve işlevsel olması amaçlanmaktadır. Web sitesi ziyaretçisine göre kişiselleştirilmiş bir çevrimiçi ortamın sağlanması çerezler aracılığı ile mümkün olmaktadır. Ziyaretçilerimiz çerez kullanımına ilişkin tercihlerini belirleyebilmekte ve değiştirebilmektedir. Aynı şekilde ziyaretçi çerezlerin silinmesini talep etme hakkına da sahiptir.</p>
@@ -59,12 +60,22 @@ export default function CookiePolicy () {
                     <th>Çerez Tipi</th>
                 </tr>
                 <tr>
-                    <td>Örnek Çerez Adı Biraz Daha Uzun Diyelim</td>
+                    <td>id</td>
                     <td>Çerezin işlevinin uzun bir açıklaması burada yazılıyor olacak</td>
                     <td>Oturum Çerezi</td>
                 </tr>
                 <tr>
-                    <td>Örnek Çerez Adı</td>
+                    <td>ci</td>
+                    <td>Şu bu işe yarıyor</td>
+                    <td>Oturum Çerezi</td>
+                </tr>
+                <tr>
+                    <td>Google Ad Çerezleri</td>
+                    <td>Şu bu işe yarıyor</td>
+                    <td>Oturum Çerezi</td>
+                </tr>
+                <tr>
+                    <td>Google Site Traffic Çerezleri</td>
                     <td>Şu bu işe yarıyor</td>
                     <td>Oturum Çerezi</td>
                 </tr>
@@ -72,10 +83,10 @@ export default function CookiePolicy () {
         </table>
 
         <h2>Tanımlama Bilgilerini İstediğim Vakitte Silebilir Miyim?</h2>
-                <p>Tanımlama bilgileri 1 yıl süreliğine tarayıcınızda kayıtlı kalır ve süre dolduktan sonra otomatik olarak silinir. Ayrıca istediğiniz zaman bu tanımlama bilgilerini(cookies) tarayıcınızdan silebilirsiniz.</p>
+        <p>Tanımlama bilgileri 1 yıl süreliğine tarayıcınızda kayıtlı kalır ve süre dolduktan sonra otomatik olarak silinir. Ayrıca istediğiniz zaman bu tanımlama bilgilerini(cookies) tarayıcınızdan silebilirsiniz.</p>
 
         <h2>Kullanıcının Verilere Erişim Hakkı ve Talepleri</h2>
-        <p>Kullanıcılar, KVKK’nın 11’inci maddesi kapsamında kendilerine tanınan hak ve yetkiler çerçevesinde, Rasyotek’e başvurarak kendileriyle ilgili:</p>
+        <p>Kullanıcılar, KVKK’nın 11’inci maddesi kapsamında kendilerine tanınan hak ve yetkiler çerçevesinde, enonlar.com sitesine başvurarak kendileriyle ilgili:</p>
 
         <ul>
             <li>Kişisel veri işlenip işlenmediğini öğrenme,</li>
@@ -90,12 +101,17 @@ export default function CookiePolicy () {
         </ul>
 
         <p>Yukarıda sıralanan haklarınıza yönelik taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ’de yer alan asgari şartları içerecek şekilde, info@enonlar.com adresine mail yolu ile ulaşabilirsiniz.</p>
+        <b>Veya sadece site üzerinde tanımlanan çerezleri silebilirsiniz. Çerezlerdeki bilgiler olmadan sunucuda tutulan verilerin kime ait olduğunu anlamanın hiçbir yöntemi bulunmamaktadır.</b>
 
         <h2>Çerezleri Kontrol Etme ve Silme</h2>
         <p>Çerezlerin kullanımına ilişkin tercihlerinizi değiştirmek ya da çerezleri engellemek veya silmek için tarayıcınızın ayarlarını değiştirmeniz yeterlidir. Birçok tarayıcı çerezleri kontrol edebilmeniz için size çerezleri kabul etme veya reddetme, yalnızca belirli türdeki çerezleri kabul etme ya da bir web sitesi cihazınıza çerez depolamayı talep ettiğinde tarayıcı tarafından uyarılma seçeneği sunar. Aynı zamanda daha önce tarayıcınıza kaydedilmiş çerezlerin silinmesi de mümkündür. Çerezleri kontrol edilmesine veya silinmesine ilişkin işlemler kullandığınız tarayıcıya göre değişebilmektedir. Bazı popüler tarayıcıların çerezlere izin verme ya da çerezleri engelleme veya silme talimatlarına aşağıda gösterilmiştir.</p>
 
+        <h1>BURAYA POPÜLER TARAYICILARDA ÇEREZ SİLME YÖNTEMİ GELECEK</h1>
+
         <h2>Çerezlerin Kullanılmasını Nasıl Engelleyebilirsiniz?</h2>
         <p>Çerezlerin kullanılması Web Sitesi'nin daha iyi hizmet vermekle birlikte eğer dilerseniz çerezlerin kullanılmasını engelleyebilirsiniz. Ancak bu takdirde sitenin tam olarak işlevini gösterememesi ve tüm özelliklerinden yararlanamayabileceğinizi unutmayınız. Çerezlerin kullanılmasını engellemek için kullandığınız internet tarayıcınızın ayarlarınızı değiştirmeniz gerekmektedir. Bu değişiklikler kullandığınız cihaz ve internet tarayıcısına göre değişiklik göstermektedir. Aşağıda farklı internet tarayıcıları üzerinden çerezlerin kullanılmasını engellemek için hangi adımların izlenmesi gerektiğine ilişkin bilgiler yer almaktadır:</p>
+
+        <h1>FARKLI İNTERNET TARAYICILARINDA ÇEREZLERİN KULLANILMASINI ENGELLEME İŞLEMİ</h1>
     </Main>
   );
 }

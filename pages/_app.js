@@ -6,49 +6,6 @@ import Head from 'next/head';
 
 export default function App({ Component, pageProps}) {
 
-  /*
-{
-  "@context": "http://schema.org",
-  "@type": "WebSite",
-  "url": "https://onedio.com",
-  "potentialAction": [
-    {
-      "@type": "SearchAction",
-      "target": "https://onedio.com/ara/haber/{queryKeyword}",
-      "query-input": "required name=queryKeyword"
-    }
-  ]
-}
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "Onedio",
-  "url": "https://onedio.com",
-  "sameAs": [
-    "onedio.com",
-    "https://www.facebook.com/onediocom",
-    "https://twitter.com/onediocom",
-    "https://www.instagram.com/onediocom/",
-    "https://youtube.com/onediotube",
-    "https://news.google.com/publications/CAAqBwgKMIGmrAsw_rDEAw?ceid=TR:tr&oc=3&hl=tr&gl=TR",
-    "https://tr.wikipedia.org/wiki/Onedio"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Ankara",
-    "addressRegion": "TR",
-    "postalCode": "06510",
-    "streetAddress": "Mustafa Kemal Mah. Dumlupınar Bulv. No:280 (Yeni ODTÜ Teknokent Binası) Kat:4 No:2 06530 Çankaya/Ankara"
-  },
-  "telephone": "0 312 969 33 96",
-  "email": "onedio@onedio.com",
-  "logo": "https://onedio.com/images/logo/onedio-new2x-new.png"
-}
-
-  */
-
-  /* herhangi bir problem çıkar ise bu sayfayı sadece index'e koy */
-
   function addMainJsonLd() {
     return {
       __html: `[
