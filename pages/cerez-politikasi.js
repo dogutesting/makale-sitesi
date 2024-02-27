@@ -1,6 +1,7 @@
 import Main from "@/components/Main";
 
 export default function CookiePolicy () {
+
   return (
     <Main>
         <h1>ÇEREZLERE DAİR AYDINLATMA METNİ</h1>
@@ -52,7 +53,7 @@ export default function CookiePolicy () {
 
         <h2>Enonlar.com İnternet Sitesinde Kullanılan Çerezler</h2>
         
-        <table id="cookie-table">
+        <table className="cookie-table">
             <tbody>
                 <tr>
                     <th>Çerez Adı</th>
@@ -60,27 +61,109 @@ export default function CookiePolicy () {
                     <th>Çerez Tipi</th>
                 </tr>
                 <tr>
-                    <td>id</td>
-                    <td>Çerezin işlevinin uzun bir açıklaması burada yazılıyor olacak</td>
+                    <td>ID</td>
+                    <td>
+                    ID çerezi sevebileceğiniz makaleleri önermek için faydalıdır.
+                       Sitedeki <b>sonsuz kaydırma</b> özelliğini için gerekli bir çerezdir. 
+                       ID çerezi 1 yıl boyunca tarayıcınızda saklanır ve süre sonunda yok edilir. 
+                       Okuduğunuz makalelere benzer makaleleri önermek için kullanılır.
+                        Makale linklerine tıklama, url aracılığı ile sayfa isteme, sayfa başına
+                         veya sonuna varma gibi işlemler sunucuya iletilir ve sistem tarafından atanan bir ID ile
+                          kayıt altına alınır. Kayıt altına alınan veri ile hoşunuza gidebilecek makaleler tahmin edilir ve
+                           size öneriler kısmında veya sonsuz kaydırma esnasında sunulur.
+                    </td>
+                    <td>Kalıcı Çerez(1 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>CI</td>
+                    <td>CI çerezi IP adresinizi kullanarak bulunduğunuz şehri tahmin etmeye çalışır. Şehrinizde popüler olan makaleleri veya 
+                         içerikleri tespit ederek size bunları sunmamızı ve güncel bilgilere erişmenizi sağlamaktadır. IP adresiniz 3. taraf bir API yardımı ile veya sistemdeki IP karşılaştırma sistemi ile 
+                         çözümlenerek bulunduğunuz konum tahmin edilmeye çalışılır. Sadece bulunduğunuz şehri tahmin edebilir ve her zaman doğru sonuç vermez. Örneğin: İstanbul'da yaşıyor iseniz bu çerez sadece İstanbul dönderecektir ve bunu
+                         şifrelenmiş(crypted) bir şekilde oturum çerezi olarak saklar. İnternet sitesi sayfasını kapattığınızda anında yok edilir. Her zaman doğru çalışmaz çünkü IP adresini tahmine dayalı 
+                         olarak çözümlemeye çalışır. Örneğin: İstanbul'da yaşamanıza rağmen Konya olarak gösterebilir.
+                         </td>
                     <td>Oturum Çerezi</td>
                 </tr>
                 <tr>
-                    <td>ci</td>
-                    <td>Şu bu işe yarıyor</td>
-                    <td>Oturum Çerezi</td>
+                    <td>cookiepolicy_status</td>
+                    <td>Çerez politikasının onaylanıp onaylanmadığını tutar.</td>
+                    <td>Kalıcı Çerez(1 Yıl)</td>
                 </tr>
                 <tr>
-                    <td>Google Ad Çerezleri</td>
-                    <td>Şu bu işe yarıyor</td>
-                    <td>Oturum Çerezi</td>
+                    <td>cookies_accepted</td>
+                    <td>Hangi çerezlerin kabul edildiği bilgisini tutar.</td>
+                    <td>Kalıcı Çerez(1 Yıl)</td>
                 </tr>
                 <tr>
-                    <td>Google Site Traffic Çerezleri</td>
-                    <td>Şu bu işe yarıyor</td>
-                    <td>Oturum Çerezi</td>
+                    <td>_ga</td>
+                    <td>Google Site Trafiği Çerezi: Kullanıcıları ve oturumları ayırt eder.</td>
+                    <td>Kalıcı Çerez(2 yıl)</td>
+                </tr>
+                <tr>
+                    <td>_gid</td>
+                    <td>Google Site Trafiği Çerezi: Kullanıcıları rastgele bir kimlikle tanımlar.</td>
+                    <td>Kalıcı Çerez(24 Saat)</td>
+                </tr>
+                <tr>
+                    <td>_gat</td>
+                    <td>Google Site Trafiği Çerezi: Google Analytics tarafından sayfa görüntüleme isteklerini sınırlamak için kullanılır.</td>
+                    <td>Kalıcı Çerez(1 Dakika)</td>
+                </tr>
+                <tr>
+                    <td>NID</td>
+                    <td>Google Ad Kütüphane Çerezi: Kullanıcının Google hesabıyla ilişkili kimliği depolar.</td>
+                    <td>Kalıcı Çerez(6 Ay)</td>
+                </tr>
+                <tr>
+                    <td>CONSENT</td>
+                    <td>Google Ad Kütüphane Çerezi: Kullanıcının çerez rızasını depolar.</td>
+                    <td>Kalıcı Çerez(20 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>1P_JAR</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(1 Ay)</td>
+                </tr>
+                <tr>
+                    <td>ANID</td>
+                    <td>Google Ad Kütüphane Çerezi: Kullanıcıyı reklam takibi için anonim bir şekilde tanımlar.</td>
+                    <td>Kalıcı Çerez(13 Ay)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-3PSID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-APISID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-HSID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-SSID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-SAPISID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
+                </tr>
+                <tr>
+                    <td>__Secure-GAID</td>
+                    <td>Google Ad Kütüphane Çerezi: Google'ın reklam kimliği sisteminin bir parçasıdır.</td>
+                    <td>Kalıcı Çerez(2 Yıl)</td>
                 </tr>
             </tbody>
         </table>
+
+        <p>Yukarıdaki çerezlerin işlevleri, Google tarafından zaman zaman değiştirilebilir. 
+            En güncel bilgiler için Google'ın resmi belgelerine bakmanız önerilir. Çerezleri kabul ederken bunları göz önünde bulundurmanızı rica ediyoruz.</p>
 
         <h2>Tanımlama Bilgilerini İstediğim Vakitte Silebilir Miyim?</h2>
         <p>Tanımlama bilgileri 1 yıl süreliğine tarayıcınızda kayıtlı kalır ve süre dolduktan sonra otomatik olarak silinir. Ayrıca istediğiniz zaman bu tanımlama bilgilerini(cookies) tarayıcınızdan silebilirsiniz.</p>
@@ -103,15 +186,45 @@ export default function CookiePolicy () {
         <p>Yukarıda sıralanan haklarınıza yönelik taleplerinizi, Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ’de yer alan asgari şartları içerecek şekilde, info@enonlar.com adresine mail yolu ile ulaşabilirsiniz.</p>
         <b>Veya sadece site üzerinde tanımlanan çerezleri silebilirsiniz. Çerezlerdeki bilgiler olmadan sunucuda tutulan verilerin kime ait olduğunu anlamanın hiçbir yöntemi bulunmamaktadır.</b>
 
-        <h2>Çerezleri Kontrol Etme ve Silme</h2>
+        <h2>Çerezleri Kontrol Etme, Silme Veya Engelleme</h2>
         <p>Çerezlerin kullanımına ilişkin tercihlerinizi değiştirmek ya da çerezleri engellemek veya silmek için tarayıcınızın ayarlarını değiştirmeniz yeterlidir. Birçok tarayıcı çerezleri kontrol edebilmeniz için size çerezleri kabul etme veya reddetme, yalnızca belirli türdeki çerezleri kabul etme ya da bir web sitesi cihazınıza çerez depolamayı talep ettiğinde tarayıcı tarafından uyarılma seçeneği sunar. Aynı zamanda daha önce tarayıcınıza kaydedilmiş çerezlerin silinmesi de mümkündür. Çerezleri kontrol edilmesine veya silinmesine ilişkin işlemler kullandığınız tarayıcıya göre değişebilmektedir. Bazı popüler tarayıcıların çerezlere izin verme ya da çerezleri engelleme veya silme talimatlarına aşağıda gösterilmiştir.</p>
 
-        <h1>BURAYA POPÜLER TARAYICILARDA ÇEREZ SİLME YÖNTEMİ GELECEK</h1>
+        <table className="cookie-table">
+            <tbody>
+                <tr>
+                    <th>Tarayıcı Adı</th>
+                    <th>Tarayıcı Ayarları</th>
+                </tr>
+                <tr>
+                    <td>Google</td>
+                    <td>Tarayıcınızın adres bölümünde yer alan, "kilit işareti"ni tıklayarak "Çerezler" sekmesinden çerezlere izin verebilir veya engelleyebilirsiniz.</td>
+                </tr>
+                <tr>
+                    <td>Opera</td>
+                    <td>Tarayıcınızın "Tercihler" bölümünde "Gelişmiş"i seçerek "Çerezler" bölümünden çerez yönetimini yapabilirsiniz.</td>
+                </tr>
+                <tr>
+                    <td>Safari</td>
+                    <td>Bilgisayarda "Safari" menü butonuna basıp ardından "Tercihler" sekmesine tıklayın. "Gizlilik" bölümünden "Tüm Çerezleri Engelle" seçeneğini seçerek çerezleri engelleyebilirsiniz. Telefonunuzdan ise tarayıcı açıp adres barı yanındaki "Daha Fazlası" seçeneğine tıklayıp ardından "Ayarlar" sekmesine tıklayın. "Site Ayarları"na tıklayıp ardından "Çerezler" bölümüne geçerek "Çerezleri Kapat" seçeneğini seçebilirsiniz. </td>
+                </tr>
+                <tr>
+                    <td>Mozilla Firefox</td>
+                    <td>Tarayıcınızın sağ üst köşesinde yer alan "menüyü aç" sekmesinin ardından "Seçenekler" görselini tıklayarak ve "Gizlilik ve Güvenlik" butonunu kullanarak çerezleri yönetebilirsiniz.</td>
+                </tr>
+                <tr>
+                    <td>Internet Explorer</td>
+                    <td>Tarayıcınızın sağ üst bölümünde yer alan "Araçlar" bölümünden güvenlik sekmesine tıklayarak "izin ver" veya "izin verme" şeklinde çerezleri yönetebilirsiniz.</td>
+                </tr>
+            </tbody>
+        </table>
 
-        <h2>Çerezlerin Kullanılmasını Nasıl Engelleyebilirsiniz?</h2>
-        <p>Çerezlerin kullanılması Web Sitesi'nin daha iyi hizmet vermekle birlikte eğer dilerseniz çerezlerin kullanılmasını engelleyebilirsiniz. Ancak bu takdirde sitenin tam olarak işlevini gösterememesi ve tüm özelliklerinden yararlanamayabileceğinizi unutmayınız. Çerezlerin kullanılmasını engellemek için kullandığınız internet tarayıcınızın ayarlarınızı değiştirmeniz gerekmektedir. Bu değişiklikler kullandığınız cihaz ve internet tarayıcısına göre değişiklik göstermektedir. Aşağıda farklı internet tarayıcıları üzerinden çerezlerin kullanılmasını engellemek için hangi adımların izlenmesi gerektiğine ilişkin bilgiler yer almaktadır:</p>
-
-        <h1>FARKLI İNTERNET TARAYICILARINDA ÇEREZLERİN KULLANILMASINI ENGELLEME İŞLEMİ</h1>
+        <h2>Çerez Anlaşmasının Güvenliği</h2>
+        <p>Gerçek imzanızı alamadığımız için çerezlerin hepsini veya kısmi bir miktarını kabul etmenizin ardından bu seçiminiz çerez olarak kayıt edilir.
+             Bu kayıt aynı zamanda elektronik imza olarak sınıflandırılmaktadır.
+              Bilgisayarınızın tarayıcısında kayıt altına alınan bu anlaşma çerezinin(cookiepoliciy_status ve cookies_accepted adları ile 2 tane çerez kayıt edilir) sizin tarafınızdan veya
+               kötü niyetli kişiler tarafından değiştirilip bizim (enonlar.com) aleyhimize kullanılması gibi durumlardan dolayı, kişisel bilgisayarınızı kötü niyetli kişilerden korumak veya verileri bilerek
+                veya bilmeyerek değiştirmeme sorumluluğu size aittir.</p>
+        <div style={{marginBottom: "200px"}}></div>
     </Main>
   );
 }

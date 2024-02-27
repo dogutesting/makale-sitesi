@@ -6,8 +6,11 @@ const AppContext = createContext();
 export function useAppContext() {
   return useContext(AppContext);
 }
+
 const topLevelUrl = "http://" + "localhost:3000";
+const domainNameForCookies = "localhost"; //!siteye yüklenince enonlar.com yapılması lazım
 let cookies = null;
+
 
 export function Wrapper({ children }) {
 
@@ -25,12 +28,14 @@ export function Wrapper({ children }) {
     const status = cookies.get("cookiepolicy_status");
     if(status === "1") {
       setCookiePolicyDiv(false);
+      return true;
     }
     else {
       const expirationDate = new Date();
       expirationDate.setFullYear(expirationDate.getFullYear() + 1);
-      cookies.set('cookiepolicy_status', 0, { sameSite: 'Strict', expires: expirationDate });
+      cookies.set('cookiepolicy_status', 0, { domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate });
       setCookiePolicyDiv(true);
+      return false;
     }
   }
 
@@ -110,14 +115,14 @@ export function Wrapper({ children }) {
     }
 
     if(id && ci) {
-      cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
-      cookies.set('ci', ci, { secure: true, sameSite: 'Strict' });
+      cookies.set('id', id, { secure: true, domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+      cookies.set('ci', ci, { secure: true, domain: domainNameForCookies, sameSite: 'Strict' });
     }
     else if(id && !ci) {
-      cookies.set('id', id, { secure: true, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+      cookies.set('id', id, { secure: true, domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
     }
     else if(!id && ci) {
-      cookies.set('ci', ci, { secure: true, sameSite: 'Strict' });
+      cookies.set('ci', ci, { secure: true, domain: domainNameForCookies, sameSite: 'Strict' });
     }
   }
 
@@ -131,7 +136,17 @@ export function Wrapper({ children }) {
   //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
-      //! EĞER KULLANICI COOKİE KULLANIMINA İZİN VERDİYSE BUNU ÇALIŞTIR
+      /* if(cookies.get("cookiepolicy_status") === "1" && JSON.parse(cookies.get("cookies_accepted")) === true) { */
+      if(cookies.get("cookiepolicy_status") === "1") {
+        const accepteds = JSON.parse(cookies.get("cookies_accepted"));
+        //! id, ci, google ad, google traffic
+        //! EĞER COOKIE İZNİ VERİLMEDİ İSE BURADA TANIMLAMALARI KAPATMAK GEREKİYOR.
+
+        //! BENCE BURASI YERİNE AŞAĞIDA KONTROL EDİLEBİLİR
+      }
+      else {
+        return false;
+      }
 
       const id_cookie = cookies.get("id");
       const ci_cookie = cookies.get("ci");
@@ -217,6 +232,7 @@ export function Wrapper({ children }) {
   //* connect with: rota kayıt //Güncellendi
   const addClick = (pathname, type) => {
     //! EĞER KULLANICI COOKİE KULLANIMINA İZİN VERDİYSE BUNU ÇALIŞTIR
+
     fetch(topLevelUrl+"/api/userKey", {
       method: "POST",
       headers: {
@@ -281,7 +297,8 @@ export function Wrapper({ children }) {
   }, []);
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo, showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv}}>
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo,
+     showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv, domainNameForCookies}}>
       {children}
     </AppContext.Provider>
   );

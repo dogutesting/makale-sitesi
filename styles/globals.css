@@ -717,6 +717,11 @@ ul li {
   transition: .4s;
 }
 
+input:checked + .zor_checkbox_slider {
+  cursor: not-allowed;
+  background-color: grey !important;
+}
+
 input:checked + .slider {
   background-color: #2196F3;
 }
@@ -743,31 +748,45 @@ input:checked + .slider:before {
 /* Cookie Div */
 
 /* Table */
-#cookie-table {
+
+/*Cookie Delete Button */
+#cookie_delete_button {
   width: 100%;
+  background-color: red;
+  cursor: pointer;
+}
+/*Cookie Delete Button */
+.cookie-table {
+  
+}
+.cookie-table {
+  width: 100%;
+  border: 1px solid black;
   border-spacing: 0;
-  border: 2px solid black;
   border-radius: 4px;
 }
-#cookie-table th {
+.cookie-table tbody th {
   padding: 8px;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
+  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* border-bottom: 1px solid black;
+  border-right: 1px solid black; */
 }
-#cookie-table th:last-child {
-  border-right: 0;
+.cookie-table tbody th:last-child {
+  /* border-right: 0; */
 }
-#cookie-table td {
+.cookie-table tbody td {
   padding: 6px;
   text-align: center;
+  border: 1px solid grey;
   /* border-bottom: 1px solid grey; */
-  border-bottom: 1px solid grey;
-  border-right: 1px solid grey;
+  /* border-bottom: 1px solid grey;
+  border-right: 1px solid grey; */
 }
-#cookie-table tr:last-child {
+.cookie-table tbody tr:last-child {
   border-bottom: 0;
 }
-#cookie-table td:last-child {
+.cookie-table tbody td:last-child {
   border-right: 0;
 }
 /* Table */

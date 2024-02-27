@@ -6,18 +6,13 @@ import { useEffect, useState } from 'react';
 
 export default function Main({children}) {
     
-  const { nightMode, setNightMode, cookie_policy_div, setCookiePolicyDiv } = useAppContext();
+  const { nightMode, setNightMode, cookie_policy_div, setCookiePolicyDiv, domainNameForCookies } = useAppContext();
 
   const [cerez_yonetim_sayfasi, setCerezYonetimSayfasi] = useState(false);
 
-  /* const [checked_map, setCheckedMap] = useState(new Map([
-                                                          ["checkbox_1", true], 
-                                                          ["checkbox_2", true],
-                                                          ["checkbox_3", true]
-                                                        ])); */
-
   const [checked_map, setCheckedMap] = useState({
-    "id_and_ci": true,
+    "id": true,
+    "ci": true,
     "custom_ad": true,
     "site_traffic": true,
   })
@@ -36,8 +31,8 @@ export default function Main({children}) {
     const cookies = jsCookie.default;
     const expirationDate = new Date();
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
-    cookies.set('cookiepolicy_status', "1", { sameSite: 'Strict', expires: expirationDate });
-    cookies.set('cookies_accepted', JSON.stringify(checked_map), {sameSite: "Strict", expires: expirationDate});
+    cookies.set('cookiepolicy_status', "1", { domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate });
+    cookies.set('cookies_accepted', JSON.stringify(checked_map), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
   }
 
   const accept_all_cookie = async () => {
@@ -47,13 +42,14 @@ export default function Main({children}) {
     const cookies = jsCookie.default;
     const expirationDate = new Date();
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
-    cookies.set('cookiepolicy_status', "1", { sameSite: 'Strict', expires: expirationDate });
+    cookies.set('cookiepolicy_status', "1", { domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate });
 
     cookies.set('cookies_accepted', JSON.stringify({
-      "id_and_ci": true,
+      "id": true,
+      "ci": true,
       "custom_ad": true,
       "site_traffic": true,
-    }), {sameSite: "Strict", expires: expirationDate});
+    }), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
   }
 
   useEffect(() => {
@@ -75,7 +71,7 @@ export default function Main({children}) {
           cookie_policy_div === true && (
             <div id='cookie_div'>
               <h1>Web Sitemiz Çerez Kullanıyor</h1>
-              <p>Tanımlama bilgilerini; sitemizin doğru şekilde çalışmasını sağlamak, içerikleri ve reklamları kişiselleştirmek ve site trafiğimizi analiz etmek için kullanıyoruz. Çerezler hakkında daha fazla bilgi için <Link href={"/cerez-politikasi"}>Çerez Politikası</Link> sayfamızı ziyaret edebilirsiniz. 'Kabul Et' seçeneğiyle Çerez Politikasını hızlıca kabul edebilirsiniz ve bu uyarı bir yıl boyunca <b>tekrar gösterilmez.</b></p>
+              <p>Tanımlama bilgilerini; sitemizin doğru şekilde çalışmasını sağlamak, içerikleri ve reklamları kişiselleştirerek deneyiminizi geliştirmek ve site trafiğimizi analiz etmek için kullanıyoruz. Çerezler hakkında daha fazla bilgi için <Link href={"/cerez-politikasi"}>Çerez Politikası</Link> sayfamızı ziyaret edebilirsiniz. 'Kabul Et' seçeneğiyle Çerez Politikasını hızlıca kabul edebilirsiniz ve bu uyarı bir yıl boyunca <b>tekrar gösterilmez.</b></p>
               <div id='cookie_buttons'>
                 <button onClick={() => { setCerezYonetimSayfasi(true); setCookiePolicyDiv(false)}}>Çerez Yönetimi</button>
                 <button onClick={() => { accept_all_cookie();}}>Tüm Çerezleri Kabul Et</button>
@@ -94,44 +90,79 @@ export default function Main({children}) {
                 <div id='cc_center'>
                   <div>
                     <div className='slider_button_container'>
-                      <h2> ID ve CI çerezi</h2>
+                      <h2> Zorunlu Tanımlamalar</h2>
                       <label className="switch">
-                        <input type="checkbox" name='id_and_ci' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked/>
+                        <input type="checkbox" defaultChecked="true" disabled="disabled"/>
+                        <span className="slider round zor_checkbox_slider"></span>
+                      </label>
+                    </div>
+                    <hr></hr>
+                    <p>Sitenin doğru çalışması için gerekli tanımlamaları içerir. Bunlardan biri <b>gece modunun</b> aktiflik değeri diğeri ise cihazın <b>web-p</b> resim formatını destekleyip desteklemediğinin tanımlanmasıdır. 
+                    Bu tanımlamalar çerez sınıfına girmemektedir çünkü tarayıcınızın <b>Local Storage(Yerel Depolama)</b> alanına kayıt edilmektedir.  
+                    Tarayıcınızın ayarlarından (Depolama - Yerel Verileri Temizle) kısmına giderek kolaylıkla kaldırabilirsiniz. Gece modu ile internet sitesinin renk modunu önceden seçtiğiniz değer ile başlatmak için kullanıyoruz. 
+                    Web-p resim formatını destekleyip desteklemediğini öğrenerek sitenin daha hızlı yüklenmesini amaçlıyoruz. Herhangi bir kişisel veri içermediği ve internet sitesinin doğru çalışması için bunlar zorunludur.</p>
+                  </div>
+
+                  <div>
+                    <div className='slider_button_container'>
+                      <h2> ID Çerezi</h2>
+                      <label className="switch">
+                        <input type="checkbox" name='id' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>ID ve CI çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
-                       ID çerezi 1 yıl boyunca tarayıcınızda saklanır ve süre sonunda yok edilir.
-                        Okuduğunuz makalelere benzer makaleleri önermek için kullanılır.
-                         CI çerezi sadece oturum süresince tarayıcınızda tutulur.
-                          Sayfa kapandığında bu çerez anında yok edilir.
-                           Şehrinizde popüler makaleleri göstermek için IP üzerinden bulunduğunuz şehir tahmin edilir.
-                            Her zaman doğru sonuç vermez ve sadece bulunduğunuz şehri tahmin edebilir.</p>
+                    <p>ID çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
+                       Sitedeki <b>sonsuz kaydırma</b> özelliğini <b>kullanabilmeniz için</b> bu seçeneğe izin vermeniz gerekmektedir.
+                       ID çerezi 1 yıl boyunca tarayıcınızda saklanır ve süre sonunda yok edilir.  
+                       Okuduğunuz makalelere benzer makaleleri önermek için kullanılır. Makale linklerine tıklama, url aracılığı ile sayfa isteme, 
+                       sayfa başına veya sonuna varma gibi işlemler sunucuya iletilir ve kayıt altına alınır. Kayıt altına alınan veri ile 
+                       hoşunuza gidebilecek makaleler tahmin edilir ve size öneriler kısmında veya sonsuz kaydırma esnasında sunulur.
+                       </p>
+                  </div>
+
+                  <div>
+                    <div className='slider_button_container'>
+                      <h2> CI Çerezi</h2>
+                      <label className="switch">
+                        <input type="checkbox" name='ci' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
+                        <span className="slider round"></span>
+                      </label>
+                    </div>
+                    <hr></hr>
+                    <p>CI çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
+                       Sitedeki <b>sonsuz kaydırma</b> özelliğini <b>kullanabilmeniz için</b> bu seçeneğe izin vermeniz gerekmektedir.
+                       CI çerezi sadece oturum süresince tarayıcınızda tutulur. Sayfa kapandığında bu çerez anında yok edilir. 
+                       Şehrinizde popüler makaleleri göstermek için IP üzerinden bulunduğunuz şehir tahmin edilir. 
+                       Her zaman doğru sonuç vermez ve sadece bulunduğunuz şehri tahmin edebilir. 
+                       Okuduğunuz makalelere benzer makaleleri önermek için kullanılır. Makale linklerine tıklama, url aracılığı ile sayfa isteme, 
+                       sayfa başına veya sonuna varma gibi işlemler sunucuya iletilir ve kayıt altına alınır. Kayıt altına alınan veri ile 
+                       hoşunuza gidebilecek makaleler tahmin edilir ve size öneriler kısmında veya sonsuz kaydırma esnasında sunulur.
+                       </p>
                   </div>
 
                   <div>
                     <div className='slider_button_container'>
                       <h2> Kişiselleştirilmiş Reklamlar</h2>
                       <label className="switch">
-                        <input type="checkbox" name='custom_ad' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked/>
+                        <input type="checkbox" name='custom_ad' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>İlginize uygun reklamları göstermek için tarayıcıya çerezler tanımlar ve çerezleri 3. taraf ile paylaşabilir(Örneğin: Google Reklam Ağı). Reklam kazancımızı arttırmamız için gerekli bir çerezdir.</p>
+                    <p>Reklam kazancımızı arttırmamız için gerekli bir çerezdir. İlginize uygun reklamları göstermek için tarayıcıya çerezler tanımlar ve çerezleri 3. taraf ile paylaşabilir(Örneğin: Google Reklam Ağı).</p>
                   </div>
 
                   <div>
                     <div className='slider_button_container'>
                       <h2> Site Trafiği</h2>
                       <label className="switch">
-                        <input type="checkbox" name='site_traffic' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked/>
+                        <input type="checkbox" name='site_traffic' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>Site trafiğini hesaplamak ve diğer detayları göstermek için kullanılan Google Analytics'in tanımladığı çerezler.</p>
+                    <p>Site trafiğini hesaplamak ve diğer detayları göstermek için kullanılan Google Analytics'in tanımladığı çerezler. Çok görüntülenme alan makaleleri tespit etmemize ve o makalelere benzer makaleler üretmemiz için faydalıdır.</p>
                   </div>
                 </div>
 

@@ -98,6 +98,8 @@ export default async function handler (req, res) {
             res.status(500).end("çok büyük boyut")
         } */
 
+        //ID'yi rastgele kendi tanımlayarak istek atabilir
+
         try {
             const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             if (!IsRateLimitPassed) {
