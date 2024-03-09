@@ -79,17 +79,22 @@ V? default olarak 4mb veri yollama limiti varmış next.js'in. Eğer kafama tak�
 
 V -> SERVER.JS dosyasındaki yollar userKey içerisine geri eklenecek.
 
--> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
-okudum'a basarsa kapat ve bir daha gösterme. Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
+V -> sayfayı kullanarak bazı bilgileri paylaşmayı kabul ettiklerine dair bildirim kutusu gönder,
+okudum'a basarsa kapat ve bir daha gösterme.
 
--> google reklamı eklenmesi gerekiyor
+V -> Cookie Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
+
+! -> google reklam kütüphanesi eklenecek
+-> google traffic kütüphanesi eklenecek
+
+-> middleware.js düzenlenecek
+
 
 ... -> getArticle sayfasına istek atma limiti eklenecek 
 	-> ip adresini gerçekten alabiliyor muyum bunu test etmem lazım
 	bunu test edebilmem için sunucuyu satın alıp, sunucuda testler yapmam gerekiyor
 
 -> sunucuya nginx, fail2ban, certbot yüklenecek
-
 -> sunucuya mail yüklenecek
 
 -> 10 makale daha yaz.

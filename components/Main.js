@@ -5,24 +5,23 @@ import { useEffect, useState } from 'react';
 /* import Footer from '@/components/Footer'; */
 
 export default function Main({children}) {
-    
-  const { nightMode, setNightMode, cookie_policy_div, setCookiePolicyDiv, domainNameForCookies } = useAppContext();
-
-  const [cerez_yonetim_sayfasi, setCerezYonetimSayfasi] = useState(false);
-
-  const [checked_map, setCheckedMap] = useState({
+  
+  let checked_map = {
     "id": true,
     "ci": true,
     "custom_ad": true,
     "site_traffic": true,
-  })
+  }
+
+  const { nightMode, setNightMode, cookie_policy_div, setCookiePolicyDiv, cookieClick, domainNameForCookies } = useAppContext();
+
+  const [cerez_yonetim_sayfasi, setCerezYonetimSayfasi] = useState(false);
 
   const updateMap = (k, v) => {
-    /* setCheckedMap(new Map(checked_map.set(k, v))); */
-    setCheckedMap({
+    checked_map = {
       ...checked_map,
       [k]:v
-    })
+    }
   }
 
   const accept_selected_cookie = async () => {
@@ -33,6 +32,7 @@ export default function Main({children}) {
     expirationDate.setFullYear(expirationDate.getFullYear() + 1);
     cookies.set('cookiepolicy_status', "1", { domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate });
     cookies.set('cookies_accepted', JSON.stringify(checked_map), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
+    cookieClick();
   }
 
   const accept_all_cookie = async () => {
@@ -50,6 +50,7 @@ export default function Main({children}) {
       "custom_ad": true,
       "site_traffic": true,
     }), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
+    cookieClick();
   }
 
   useEffect(() => {
@@ -100,19 +101,26 @@ export default function Main({children}) {
                     <p>Sitenin doğru çalışması için gerekli tanımlamaları içerir. Bunlardan biri <b>gece modunun</b> aktiflik değeri diğeri ise cihazın <b>web-p</b> resim formatını destekleyip desteklemediğinin tanımlanmasıdır. 
                     Bu tanımlamalar çerez sınıfına girmemektedir çünkü tarayıcınızın <b>Local Storage(Yerel Depolama)</b> alanına kayıt edilmektedir.  
                     Tarayıcınızın ayarlarından (Depolama - Yerel Verileri Temizle) kısmına giderek kolaylıkla kaldırabilirsiniz. Gece modu ile internet sitesinin renk modunu önceden seçtiğiniz değer ile başlatmak için kullanıyoruz. 
-                    Web-p resim formatını destekleyip desteklemediğini öğrenerek sitenin daha hızlı yüklenmesini amaçlıyoruz. Herhangi bir kişisel veri içermediği ve internet sitesinin doğru çalışması için bunlar zorunludur.</p>
+                    Web-p resim formatını destekleyip desteklemediğini öğrenerek sitenin daha hızlı yüklenmesini amaçlıyoruz. Herhangi bir kişisel veri içermediği ve internet sitesinin doğru çalışmasını sağladığı için bu seçenek zorunludur.</p>
                   </div>
 
                   <div>
                     <div className='slider_button_container'>
                       <h2> ID Çerezi</h2>
                       <label className="switch">
-                        <input type="checkbox" name='id' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
+                        <input type="checkbox" name='id' onChange={(e) => {
+                                                                            updateMap(e.target.name, e.target.checked);
+                                                                            
+                                                                            const ci_checkbox = document.querySelector("input[name='ci']");
+                                                                            ci_checkbox.checked = e.target.checked;
+                                                                            updateMap(ci_checkbox.name, e.target.checked);
+                                                                          }
+                                                                  } defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>ID çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
+                    <p>ID çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır. <b>CI çerezi ile senkron çalışır.</b>
                        Sitedeki <b>sonsuz kaydırma</b> özelliğini <b>kullanabilmeniz için</b> bu seçeneğe izin vermeniz gerekmektedir.
                        ID çerezi 1 yıl boyunca tarayıcınızda saklanır ve süre sonunda yok edilir.  
                        Okuduğunuz makalelere benzer makaleleri önermek için kullanılır. Makale linklerine tıklama, url aracılığı ile sayfa isteme, 
@@ -125,12 +133,19 @@ export default function Main({children}) {
                     <div className='slider_button_container'>
                       <h2> CI Çerezi</h2>
                       <label className="switch">
-                        <input type="checkbox" name='ci' onChange={(e) => updateMap(e.target.name, e.target.checked)} defaultChecked="true"/>
+                        <input type="checkbox" name='ci' onChange={(e) => {
+                          updateMap(e.target.name, e.target.checked);
+
+                          const id_checkbox = document.querySelector("input[name='id']");
+                          id_checkbox.checked = e.target.checked;
+                          updateMap(id_checkbox.name, e.target.checked);
+                        }}
+                        defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>CI çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
+                    <p>CI çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır. <b>ID çerezi ile senkron çalışır.</b>
                        Sitedeki <b>sonsuz kaydırma</b> özelliğini <b>kullanabilmeniz için</b> bu seçeneğe izin vermeniz gerekmektedir.
                        CI çerezi sadece oturum süresince tarayıcınızda tutulur. Sayfa kapandığında bu çerez anında yok edilir. 
                        Şehrinizde popüler makaleleri göstermek için IP üzerinden bulunduğunuz şehir tahmin edilir. 

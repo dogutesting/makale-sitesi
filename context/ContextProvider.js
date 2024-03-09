@@ -39,6 +39,11 @@ export function Wrapper({ children }) {
     }
   }
 
+  //* cookie tıklama olayı
+  async function cookieClick() {
+    await setStateUserInfo();
+  }
+
   //* Mobile mi değil mi?
   function hasTouchSupport() {
     return 'ontouchstart' in window || navigator.maxTouchPoints > 0;
@@ -136,125 +141,182 @@ export function Wrapper({ children }) {
   //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
-      /* if(cookies.get("cookiepolicy_status") === "1" && JSON.parse(cookies.get("cookies_accepted")) === true) { */
-      if(cookies.get("cookiepolicy_status") === "1") {
-        const accepteds = JSON.parse(cookies.get("cookies_accepted"));
-        //! id, ci, google ad, google traffic
-        //! EĞER COOKIE İZNİ VERİLMEDİ İSE BURADA TANIMLAMALARI KAPATMAK GEREKİYOR.
 
-        //! BENCE BURASI YERİNE AŞAĞIDA KONTROL EDİLEBİLİR
+      const id_cookie = cookies.get("id");
+      const ci_cookie = cookies.get("ci");
+      /* let id_cookie = null, ci_cookie = null; */
+
+      if(cookies.get("cookiepolicy_status") === "1") {
+        const accepteds_cookies = cookies.get("cookies_accepted");
+        if(!accepteds_cookies) {
+          cookies.get("cookiepolicy_status") === "0";
+          return false;
+        }
+        const accepteds = JSON.parse(accepteds_cookies);
+        
+        if(accepteds.id && accepteds.ci) {
+          if(id_cookie && ci_cookie) {
+            setStates(id_cookie, ci_cookie);
+          }
+          else if(id_cookie && !ci_cookie) {
+            const geoInfos = await getGeoInfos();
+            const ci = await fetch(topLevelUrl+"/api/userKey", {
+              method: "POST",
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                req: "cry",
+                "data": {
+                  "ci": geoInfos.ci
+                }
+              })
+            }).then(res => res.json()).then(data => data.cry);
+    
+            setStates(id_cookie, ci);
+    
+            setCookies(null, ci);
+          }
+          else if(!id_cookie && ci_cookie) {
+            const geoInfos = await getGeoInfos();
+            const id = await fetch(topLevelUrl+'/api/userKey', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json', 
+              },
+              body: JSON.stringify({
+                req: "auk",
+                "data": {
+                  "geo": geoInfos.ci,
+                  "date": getDateAndTime()
+                }
+              })
+            }).then(res => res.json()).then(data => data.uuid);
+            
+            setStates(id, ci_cookie);
+    
+            setCookies(id, null);
+          }
+          else {
+            const geoInfos = await getGeoInfos();
+    
+            const id = await fetch(topLevelUrl+'/api/userKey', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                req: "auk",
+                "data": {
+                  "geo": geoInfos.ci,
+                  "date": getDateAndTime()
+                }
+              })
+            }).then(res => res.json()).then(data => data.uuid);
+    
+            const ci = await fetch(topLevelUrl+"/api/userKey", {
+              method: "POST",
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                req: "cry",
+                "data": {
+                  "ci": geoInfos.ci
+                }
+              })
+            }).then(res => res.json()).then(data => data.cry);
+           
+            setStates(id, ci);
+    
+            setCookies(id, ci);
+          }
+        }
+        if(accepteds.id && !accepteds.ci) {
+          const id = await fetch(topLevelUrl+'/api/userKey', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify({
+              req: "auk",
+              "data": {
+                "geo": "ci-bos",
+                "date": getDateAndTime()
+              }
+            })
+          }).then(res => res.json()).then(data => data.uuid);
+          
+          setStates(id, "ci-bos");
+  
+          setCookies(id, null);
+        }
+        if(!accepteds.id && accepteds.ci) {
+          const geoInfos = await getGeoInfos();
+          const ci = await fetch(topLevelUrl+"/api/userKey", {
+            method: "POST",
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              req: "cry",
+              "data": {
+                "ci": geoInfos.ci
+              }
+            })
+          }).then(res => res.json()).then(data => data.cry);
+  
+          setStates("id-bos", ci);
+  
+          setCookies(null, ci);
+        }
+        if(!accepteds.id && !accepteds.ci) {
+          return false;
+        }
       }
       else {
         return false;
       }
 
-      const id_cookie = cookies.get("id");
-      const ci_cookie = cookies.get("ci");
-
-      if(id_cookie && ci_cookie) {
-        setStates(id_cookie, ci_cookie);
-      }
-      else if(id_cookie && !ci_cookie) {
-        const geoInfos = await getGeoInfos();
-        const ci = await fetch(topLevelUrl+"/api/userKey", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            req: "cry",
-            "data": {
-              "ci": geoInfos.ci
-            }
-          })
-        }).then(res => res.json()).then(data => data.cry);
-
-        setStates(id_cookie, ci);
-
-        setCookies(null, ci);
-      }
-      else if(!id_cookie && ci_cookie) {
-        const geoInfos = await getGeoInfos();
-        const id = await fetch(topLevelUrl+'/api/userKey', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json', 
-          },
-          body: JSON.stringify({
-            req: "auk",
-            "data": {
-              "geo": geoInfos.ci,
-              "date": getDateAndTime()
-            }
-          })
-        }).then(res => res.json()).then(data => data.uuid);
-        
-        setStates(id, ci_cookie);
-
-        setCookies(id, null);
-      }
-      else {
-        const geoInfos = await getGeoInfos();
-
-        const id = await fetch(topLevelUrl+'/api/userKey', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            req: "auk",
-            "data": {
-              "geo": geoInfos.ci,
-              "date": getDateAndTime()
-            }
-          })
-        }).then(res => res.json()).then(data => data.uuid);
-
-        const ci = await fetch(topLevelUrl+"/api/userKey", {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            req: "cry",
-            "data": {
-              "ci": geoInfos.ci
-            }
-          })
-        }).then(res => res.json()).then(data => data.cry);
-       
-        setStates(id, ci);
-
-        setCookies(id, ci);
-      }
+      
+      
   }
 
   //* connect with: rota kayıt //Güncellendi
-  const addClick = (pathname, type) => {
-    //! EĞER KULLANICI COOKİE KULLANIMINA İZİN VERDİYSE BUNU ÇALIŞTIR
-
-    fetch(topLevelUrl+"/api/userKey", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        req: "waypoint",
-        "type": type,
-        "data": {
-          user: {
-            "id": userInfo.id,
-            "ci": userInfo.ci
-          },
-          status: {
-            "pathname": pathname,
-            "date": getDateAndTime()
+  const addClick = async (pathname, type) => {
+    const doAddClick = () => {
+      fetch(topLevelUrl+"/api/userKey", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          req: "waypoint",
+          "type": type,
+          "data": {
+            user: {
+              "id": userInfo.id,
+              "ci": userInfo.ci
+            },
+            status: {
+              "pathname": pathname,
+              "date": getDateAndTime()
+            }
           }
-        }
-      })
-    }).catch(error => {
-      //
-    });
+        })
+      }).catch(error => {
+        //
+      });
+    }
+    
+    if(userInfo.id !== null && userInfo.ci !== null && userInfo.id !== "id-bos") {
+      console.log(userInfo.id + " - " + userInfo.ci);
+      doAddClick();
+    }
+    /* else {
+      await setStateUserInfo();
+    } */
+
   }
   //* connect with: gece mod doğrulayıcı
   const getMode = () => {
@@ -290,15 +352,16 @@ export function Wrapper({ children }) {
     (async () => {
       const jsCookie = await import('js-cookie');
       cookies = jsCookie.default;
-      getCookiePolicy();
-      //* eğer cookie'lere izin verdiyse stateuserinfo'yu başlat
-      await setStateUserInfo();
+
+      if(getCookiePolicy()) {
+        await setStateUserInfo();
+      }
     })();
   }, []);
 
   return (
     <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo,
-     showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv, domainNameForCookies}}>
+     showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv, cookieClick, domainNameForCookies}}>
       {children}
     </AppContext.Provider>
   );

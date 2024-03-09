@@ -6,7 +6,7 @@ import CryptoJS from "crypto-js";
 import { connectToDatabase } from '@/lib/mysql';
 
 import rateLimitMiddleware from '@/lib/rate-limit-gpt';
-import LRUCache from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 import CONSTS from '@/consts.json'
 
 

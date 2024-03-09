@@ -408,8 +408,6 @@ ul li {
   margin-top: 10px;
   overflow: hidden;
   white-space: nowrap;
-
-  overflow: hidden;
   user-select: none;
 }
 
@@ -624,6 +622,8 @@ ul li {
   top: 0;
   left: 0;
   width: 100%;
+  /* overflow-y: auto; */
+  min-width: 400px;
   height: 100vh;
   background-color: rgb(68, 68, 68);
   color: rgba(255, 255, 255, 0.9) !important;
@@ -756,9 +756,7 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 /*Cookie Delete Button */
-.cookie-table {
-  
-}
+
 .cookie-table {
   width: 100%;
   border: 1px solid black;
@@ -772,9 +770,7 @@ input:checked + .slider:before {
   /* border-bottom: 1px solid black;
   border-right: 1px solid black; */
 }
-.cookie-table tbody th:last-child {
-  /* border-right: 0; */
-}
+
 .cookie-table tbody td {
   padding: 6px;
   text-align: center;
@@ -795,9 +791,7 @@ input:checked + .slider:before {
 /* Tablet and Mobile Screen */
 
 @media only screen and (min-width: 4000px) and (max-width: 8000px) {
-  #custom_cookie {
-    /* background-color: red; */
-  }
+
   .switch {
     width: calc(2*90px) !important;
     height: calc(2*56px) !important;

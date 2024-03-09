@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import LRUCache from 'lru-cache';
+import { LRUCache } from 'lru-cache';
 import CONSTS from '@/consts.json';
 
 const click_server_name = "http://localhost:3000";
@@ -13,18 +13,24 @@ export default function middleware(request) {
   const response = NextResponse.next();
   if(request.method === "GET") {
     if(request.nextUrl.pathname !== "/" && request.nextUrl.pathname !== "/404") {
+
+      /*
       const pathname_1 = request.nextUrl.pathname.substring(1);
       const id = request.cookies.get("id")?.value;
       const ci = request.cookies.get("ci")?.value;
+      */
+
       /* const ip_address = request.ip === undefined ? request.headers['x-forwarded-for'] : request.ip; */
-      /* const ip_addres = (() => {
+      /*
+      const ip_addres = (() => {
         if(request.ip === undefined || request.ip === "") {
             return request.headers['x-forwarded-for'];
                                    'x-forwarded-for'
         }
         return request.ip;
-      })(); */
+      })();
       console.log(request.headers['x-real-ip']);
+      */
       
     }
   }
