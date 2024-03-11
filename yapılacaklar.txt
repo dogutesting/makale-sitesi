@@ -84,10 +84,10 @@ okudum'a basarsa kapat ve bir daha gösterme.
 
 V -> Cookie Okudum'a bastıktan sonra tanımlamalara izin ver(city, id).
 
-! -> google reklam kütüphanesi eklenecek
--> google traffic kütüphanesi eklenecek
+v.. -> google reklam kütüphanesi eklenecek
+v.. -> google traffic kütüphanesi eklenecek
 
--> middleware.js düzenlenecek
+! -> middleware.js düzenlenecek
 
 
 ... -> getArticle sayfasına istek atma limiti eklenecek 
