@@ -21,8 +21,8 @@ const customFetch = (id, ci, pathname) => {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      req: "waypoint",
-      "type": type,
+      req: "middleware",
+      auth: "Dm4i5dS",
       "data": {
         user: {
           "id": id,

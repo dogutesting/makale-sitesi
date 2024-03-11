@@ -151,7 +151,7 @@ export default async function handler (req, res) {
 
                 //#region //* ADD CLICK OLAYLARI
                 if(jsonBody.req === "middleware" && jsonBody.auth === "Dm4i5dS") {
-                    addUserClick(jsonBody.req.body, "middleware");
+                    addUserClick(jsonBody.data, "middleware");
                     res.status(200).end("ok");
                 }
                 if(jsonBody.req === "waypoint") {
