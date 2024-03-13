@@ -8,7 +8,7 @@ export default function Main({children}) {
   
   let checked_map = {
     "id": true,
-    "ci": true,
+    /* "ci": true, */
     "custom_ad": true,
     "site_traffic": true,
   }
@@ -46,7 +46,7 @@ export default function Main({children}) {
 
     cookies.set('cookies_accepted', JSON.stringify({
       "id": true,
-      "ci": true,
+      /* "ci": true, */
       "custom_ad": true,
       "site_traffic": true,
     }), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
@@ -74,8 +74,8 @@ export default function Main({children}) {
               <h1>Web Sitemiz Çerez Kullanıyor</h1>
               <p>Tanımlama bilgilerini; sitemizin doğru şekilde çalışmasını sağlamak, içerikleri ve reklamları kişiselleştirerek deneyiminizi geliştirmek ve site trafiğimizi analiz etmek için kullanıyoruz. Çerezler hakkında daha fazla bilgi için <Link href={"/cerez-politikasi"}>Çerez Politikası</Link> sayfamızı ziyaret edebilirsiniz. 'Kabul Et' seçeneğiyle Çerez Politikasını hızlıca kabul edebilirsiniz ve bu uyarı bir yıl boyunca <b>tekrar gösterilmez.</b></p>
               <div id='cookie_buttons'>
-                <button onClick={() => { setCerezYonetimSayfasi(true); setCookiePolicyDiv(false)}}>Çerez Yönetimi</button>
-                <button onClick={() => { accept_all_cookie();}}>Tüm Çerezleri Kabul Et</button>
+                <button className='cookie_button' onClick={() => { setCerezYonetimSayfasi(true); setCookiePolicyDiv(false)}}>Çerez Yönetimi</button>
+                <button className='cookie_button' onClick={() => { accept_all_cookie();}}>Tüm Çerezleri Kabul Et</button>
               </div>
             </div>
           )
@@ -111,25 +111,27 @@ export default function Main({children}) {
                         <input type="checkbox" name='id' onChange={(e) => {
                                                                             updateMap(e.target.name, e.target.checked);
                                                                             
-                                                                            const ci_checkbox = document.querySelector("input[name='ci']");
+                                                                            //! ci iptal edildi
+                                                                            /* const ci_checkbox = document.querySelector("input[name='ci']");
                                                                             ci_checkbox.checked = e.target.checked;
-                                                                            updateMap(ci_checkbox.name, e.target.checked);
+                                                                            updateMap(ci_checkbox.name, e.target.checked); */
                                                                           }
                                                                   } defaultChecked="true"/>
                         <span className="slider round"></span>
                       </label>
                     </div>
                     <hr></hr>
-                    <p>ID çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır. <b>CI çerezi ile senkron çalışır.</b>
-                       Sitedeki <b>sonsuz kaydırma</b> özelliğini <b>kullanabilmeniz için</b> bu seçeneğe izin vermeniz gerekmektedir.
+                    <p>ID çerezi tarayıcınızda tutulur, sevebileceğiniz makaleleri önermek için faydalıdır.
+                       Sitedeki <b>sonsuz kaydırma</b> özelliğinin <b>doğru şekilde çalışabilmesi için</b> bu seçeneğe izin vermeniz gerekmektedir.
                        ID çerezi 1 yıl boyunca tarayıcınızda saklanır ve süre sonunda yok edilir.  
                        Okuduğunuz makalelere benzer makaleleri önermek için kullanılır. Makale linklerine tıklama, url aracılığı ile sayfa isteme, 
                        sayfa başına veya sonuna varma gibi işlemler sunucuya iletilir ve kayıt altına alınır. Kayıt altına alınan veri ile 
                        hoşunuza gidebilecek makaleler tahmin edilir ve size öneriler kısmında veya sonsuz kaydırma esnasında sunulur.
                        </p>
                   </div>
-
-                  <div>
+                                                                
+                  {//! ci iptal edildi
+                  /* <div>
                     <div className='slider_button_container'>
                       <h2> CI Çerezi</h2>
                       <label className="switch">
@@ -154,7 +156,7 @@ export default function Main({children}) {
                        sayfa başına veya sonuna varma gibi işlemler sunucuya iletilir ve kayıt altına alınır. Kayıt altına alınan veri ile 
                        hoşunuza gidebilecek makaleler tahmin edilir ve size öneriler kısmında veya sonsuz kaydırma esnasında sunulur.
                        </p>
-                  </div>
+                  </div> */}
 
                   <div>
                     <div className='slider_button_container'>
@@ -182,8 +184,8 @@ export default function Main({children}) {
                 </div>
 
                 <div id='cc_bottom'>
-                  <button onClick={accept_selected_cookie}>İşaretli Çerezleri Kabul Et</button>
-                  <button onClick={accept_all_cookie}>Tüm Çerezleri Kabul Et</button>
+                  <button className='cookie_button' onClick={accept_selected_cookie}>İşaretli Çerezleri Kabul Et</button>
+                  <button className='cookie_button' onClick={accept_all_cookie}>Tüm Çerezleri Kabul Et</button>
                 </div>
               </div>
           )

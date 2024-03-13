@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import SITE_INFOS from '@/site_infos.json';
 
 const AppContext = createContext();
 
@@ -7,10 +8,9 @@ export function useAppContext() {
   return useContext(AppContext);
 }
 
-const topLevelUrl = "http://" + "localhost:3000";
-const domainNameForCookies = "localhost"; //!siteye yüklenince enonlar.com yapılması lazım
-let cookies = null;
+const { TOP_LEVEL_URL:topLevelUrl, JUST_URL: domainNameForCookies } = SITE_INFOS;
 
+let cookies = null;
 
 export function Wrapper({ children }) {
 
@@ -18,7 +18,8 @@ export function Wrapper({ children }) {
 
   const [nightMode, setNightMode] = useState(null);  
   const [supportWebp, setSupportWebp] = useState(true);
-  const [userInfo, setUserInfo] = useState({id: null, ci: null});
+  /* const [userInfo, setUserInfo] = useState({id: null, ci: null}); */
+  const [userInfo, setUserInfo] = useState({id: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
   const [cookie_policy_div, setCookiePolicyDiv] = useState(false);
@@ -95,25 +96,28 @@ export function Wrapper({ children }) {
   }
 
   //* connect with: setStateUserInfo
-  const getGeoInfos = async () => {
-    /* country: data.countryName, */
-    /* const geoInfos = await fetch("https://freeipapi.com/api/json")
-    .then(response => response.json())
-    .then((data) => ({
-          ci: data.cityName
-      })
-    );
-    
-    return geoInfos; */
-    return {
-      ci: "Adana"
+  //! ci iptal edildi.
+  /* const getGeoInfos = async () => {
+    if(domainNameForCookies === "enonlar.com") {
+      const geoInfos = await fetch("https://freeipapi.com/api/json")
+        .then(response => response.json())
+        .then((data) => ({
+            ci: data.cityName
+          })
+        );
+      
+      return geoInfos;
     }
-  }
+    else {
+      return {
+        ci: "Adana"
+      }
+    }
+  } */
 
   //* connect with: setStateUserInfo
-  const setCookies = (id, ci) => {
-
-    let expirationDate = null;
+  /* const setCookies = (id, ci) => { */
+    /* let expirationDate = null;
     if(id) {
       expirationDate = new Date();
       expirationDate.setFullYear(expirationDate.getFullYear() + 1);
@@ -129,12 +133,13 @@ export function Wrapper({ children }) {
     else if(!id && ci) {
       cookies.set('ci', ci, { secure: true, domain: domainNameForCookies, sameSite: 'Strict' });
     }
-  }
+  } */
 
-  const setStates = (id, ci) => {
+  /* const setStates = (id, ci) => { */
+  const setStates = (id) => {
     setUserInfo({
       "id": id,
-      "ci": ci
+      /* "ci": ci */
     })
   }
 
@@ -143,18 +148,48 @@ export function Wrapper({ children }) {
   const setStateUserInfo = async () => {
 
       const id_cookie = cookies.get("id");
-      const ci_cookie = cookies.get("ci");
+      /* const ci_cookie = cookies.get("ci"); */
       /* let id_cookie = null, ci_cookie = null; */
 
       if(cookies.get("cookiepolicy_status") === "1") {
         const accepteds_cookies = cookies.get("cookies_accepted");
+
         if(!accepteds_cookies) {
-          cookies.get("cookiepolicy_status") === "0";
+          cookies.get("cookiepolicy_status") == "0";
           return false;
         }
+
         const accepteds = JSON.parse(accepteds_cookies);
-        
-        if(accepteds.id && accepteds.ci) {
+  
+        if(!accepteds.id) {
+          return false;
+        }
+        else {
+          if(id_cookie) {
+            setStates(id_cookie);
+          }
+          else {
+            const id = await fetch(topLevelUrl+'/api/userKey', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                req: "auk",
+                "data": {
+                  "date": getDateAndTime()
+                }
+              })
+            }).then(res => res.json()).then(data => data.uuid);
+  
+            const expirationDate = new Date();
+            expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+            cookies.set('id', id, { secure: true, domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+          }
+        }
+
+        //! iptal edildi
+        /* if(accepteds.id && accepteds.ci) {
           if(id_cookie && ci_cookie) {
             setStates(id_cookie, ci_cookie);
           }
@@ -272,12 +307,11 @@ export function Wrapper({ children }) {
         }
         if(!accepteds.id && !accepteds.ci) {
           return false;
-        }
+        } */
       }
       else {
         return false;
       }
-      
   }
 
   //* connect with: rota kayıt //Güncellendi
@@ -307,13 +341,12 @@ export function Wrapper({ children }) {
       });
     }
     
-    if(userInfo.id !== null && userInfo.ci !== null && userInfo.id !== "id-bos") {
-      console.log(userInfo.id + " - " + userInfo.ci);
+    /* const accepteds_cookies = cookies.get("cookies_accepted");
+    const accepteds = JSON.parse(accepteds_cookies); */
+
+    if(userInfo.id !== null) {
       doAddClick();
     }
-    /* else {
-      await setStateUserInfo();
-    } */
 
   }
   //* connect with: gece mod doğrulayıcı

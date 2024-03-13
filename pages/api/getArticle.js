@@ -6,11 +6,11 @@ export default async (req, res) => {
 
   const { kategori, sayfa } = req.query;
   const currentCategory = kategori === undefined ? "hepsi" : kategori; //hepsi
-  const currentPageOffset = sayfa === 1 ? 0 : (sayfa - 1) * 10; //offset ayarı
+  const currentPageOffset0 = sayfa === 1 ? 0 : (sayfa - 1) * 10; //offset ayarı
 
   const db = await connectToDatabase();
   try {
-    
+    const currentPageOffset = currentPageOffset0.toString();
     const [articles] = await db.execute( 
         
       currentCategory !== 'hepsi' ?

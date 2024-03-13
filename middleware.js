@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
+import SITE_INFOS from '@/site_infos.json';
 
-const topLevelUrl = "http://localhost:3000";
+const { TOP_LEVEL_URL } = SITE_INFOS;
 
 const getDateAndTime = () => {
   const now = new Date();
@@ -10,12 +11,11 @@ const getDateAndTime = () => {
   const ay = (now.getMonth() + 1).toString().padStart(2, '0'); // Ay 0'dan başladığı için +1 ekliyoruz.
   const yil = now.getFullYear();
   const tarihVeSaat = `${saat}:${dakika}-${gun}.${ay}.${yil}`;
-  //setCurrentDate(tarihVeSaat);
   return tarihVeSaat;
 }
 
-const customFetch = (id, ci, pathname) => {
-  fetch(topLevelUrl+"/api/userKey", {
+const customFetch = (id, pathname) => {
+  fetch(TOP_LEVEL_URL+"/api/userKey", {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
@@ -26,7 +26,6 @@ const customFetch = (id, ci, pathname) => {
       "data": {
         user: {
           "id": id,
-          "ci": ci
         },
         status: {
           "pathname": pathname,
@@ -45,8 +44,7 @@ export default function middleware(request) {
     if(request.nextUrl.pathname !== "/" && request.nextUrl.pathname !== "/404") {
       const pathname_1 = request.nextUrl.pathname.substring(1);
       let id = request.cookies.get("id")?.value || "cookie-id";
-      let ci = request.cookies.get("ci")?.value || "cookie-ci";
-      customFetch(id, ci, pathname_1)
+      customFetch(id, pathname_1)
     }
   }
 

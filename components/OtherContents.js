@@ -12,6 +12,7 @@ export default function OtherContents({currentUrl, bottomChecker}) {
 
   const checkRequestStatus = async () => {
     const response = await getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile);
+    console.log("response: ", response);
     setOthers(response.data);
   }
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function OtherContents({currentUrl, bottomChecker}) {
       <h2 className='other-h2'>Diğer İçerikler</h2>
       <div className='other_contents'>
         {
-          others.length > 0 && others.map((other, index) => (
+          others && others.length > 0 && others.map((other, index) => (
             <ArticleBox
               key={index}
               supportWebp={supportWebp}

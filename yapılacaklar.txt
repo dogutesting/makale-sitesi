@@ -15,6 +15,16 @@
 -> sayfa içi h1 yanlarına paylaş ikonu ekle
 	-> V
 
+
+
+
+!!!->  ip ile city bulma client tarafında yapılması baya sıkıntılı bir durum.
+		bundan dolayı ip kodlarını internet sitesinden kaldırıyorum.
+	 	Eğer kullanıcı sayısı artar ise city ile alakalı makale gösterme işlemini backend tarafında yaparım.
+
+
+
+
 -> details içindeki ul ve li'ler hatalı gözüküyor
 		
 -> addClick'deki / olayı kaldırılsın, performans için V

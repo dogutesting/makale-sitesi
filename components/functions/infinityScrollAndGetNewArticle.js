@@ -11,7 +11,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
         "req": "guil",
         "data": {
           "id": userInfo.id,
-          "ci": userInfo.ci,
+          /* "ci": userInfo.ci, */
           "currentUrl": currentPageValue
           /* "date": getCurrentTime() */
         }
@@ -20,6 +20,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
     if(res.ok) {
       const response = await res.json();
       return {penalty: response.penalty, data: response.data};
+      //return response;
     }
     else {
       return false;
@@ -67,7 +68,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
       "req": "gui",
       "data": {
         "id": userInfo.id,
-        "ci": userInfo.ci,
+        /* "ci": userInfo.ci, */
         "currentUrl": currentUrl,
         "isItMobile": isItMobile
       }
@@ -76,6 +77,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
   if(res.ok) {
     const response = await res.json();
     return {penalty: response.penalty, data: response.data};
+    //return response;
   }
   else {
     /* console.log("else kısmındayız"); */

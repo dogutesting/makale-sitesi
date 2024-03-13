@@ -1,10 +1,10 @@
 import En from '@/components/mini_components/ens/En';
 import Reklam from '@/components/mini_components/Reklam';
+import Kunye from './Kunye';
 import { useAppContext } from '@/context/ContextProvider';
 import Link from 'next/link';
 import Custom_Waypoint from '../CustomWaypoint';
 import cHtmlToJsx from '@/components/functions/convertHTMLtoJSX';
-import Kunye from './Kunye';
 
 
 

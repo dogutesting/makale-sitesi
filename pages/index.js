@@ -97,7 +97,7 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
       }
       `;
   }
-  const uniqueJSON = addUniqueArrToJsonLd(categories);
+  const uniqueJSON = addUniqueArrToJsonLd(cats);
   //Head için LD+JSON
 
   useEffect(() => {
