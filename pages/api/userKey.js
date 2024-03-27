@@ -344,6 +344,7 @@ async function getUserInfoLimitless(id, city) {
 }
 
 async function getUserInfo(id) {
+    console.log("id: ", id);
     let connection;
     try {
         connection = await connectToDatabase();
@@ -421,25 +422,21 @@ async function getUserInfo(id) {
             //*   bundan dolayı alt tarafa ekstra bir kod daha ekleyeceğim.
 
             if(oneCat.length < numberOfContents) {
+                const oneCat_URLs = oneCat.length === 0 ? [""] : oneCat.map(item => item.url);
+                const oneCat_placeholders = oneCat_URLs.map(() => '?').join(', ');
                 const eksik = numberOfContents - oneCat.length;
-                const [tiklanmamisKategori] = await connection.execute(`
-                SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori
-                FROM makaleler  
-                WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-                AND url != "${currentUrl}"
+                const [otherCats] = await connection.execute(`
+                SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
+                FROM makaleler 
+                WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
+                AND url != "${currentUrl}" 
+                AND url NOT IN (${oneCat_placeholders})
                 GROUP BY url 
                 ORDER BY id DESC 
-                LIMIT ?`, [enFazlaTiklananKategoriler[0], id, eksik]);
+                LIMIT ?`, [enFazlaTiklananKategoriler[0], id, ...oneCat_URLs, eksik]);
 
-                console.log("tıklanmamış kategori: ", tiklanmamisKategori);
-
-                //! burada kaldın
-                //! oneCat içerisindeki ile tiklanmamisKategori çelisiyor.
-
-                oneCat.concat(tiklanmamisKategori);
+                oneCat.push(...otherCats);
             }
-
-            console.log("concat sonrası: ", oneCat);
 
             if(oneCat.length < numberOfContents) {
                 const eksik = numberOfContents - oneCat.length;
@@ -458,8 +455,8 @@ async function getUserInfo(id) {
             }
         }
         else {
-
-            const take_n_article = numberOfContents === 2 ? 1 : 2;
+            
+            /* const take_n_article = numberOfContents === 2 ? 1 : 2;
             let stepNumber = 0;
             let eldekiMakaleler = [];
 
@@ -494,11 +491,23 @@ async function getUserInfo(id) {
                 stepNumber++;
             }
 
-            return eldekiMakaleler;
+            return eldekiMakaleler; */
+            const [oneCat] = await connection.execute(`
+            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != "${currentUrl}"
+            GROUP BY c.url 
+            ORDER BY clickCount DESC 
+            LIMIT ?`, [id, enFazlaTiklananKategoriler[0], id, numberOfContents]);
+            return oneCat;
         }
 
     } catch (error) {
-        throw "Get user info: " + error;
+        throw "Get user info'da hata! : " + error;
     } finally {
         connection && connection.end();
     }

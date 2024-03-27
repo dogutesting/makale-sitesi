@@ -9,8 +9,10 @@ export function useAppContext() {
 }
 
 const { TOP_LEVEL_URL:topLevelUrl, JUST_URL: domainNameForCookies } = SITE_INFOS;
-
 let cookies = null;
+
+let userInfo = {id: null};
+//! userInfo hızlıca yüklenmediği için addClick ve getOtherContents işlemleri hızlı çalışmıyor.
 
 export function Wrapper({ children }) {
 
@@ -19,7 +21,7 @@ export function Wrapper({ children }) {
   const [nightMode, setNightMode] = useState(null);  
   const [supportWebp, setSupportWebp] = useState(true);
   /* const [userInfo, setUserInfo] = useState({id: null, ci: null}); */
-  const [userInfo, setUserInfo] = useState({id: null});
+  //const [userInfo, setUserInfo] = useState({id: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
   const [cookie_policy_div, setCookiePolicyDiv] = useState(false);
@@ -137,10 +139,11 @@ export function Wrapper({ children }) {
 
   /* const setStates = (id, ci) => { */
   const setStates = (id) => {
-    setUserInfo({
+    /* setUserInfo({
       "id": id,
-      /* "ci": ci */
-    })
+    }) */
+    //userInfo = {...userInfo, "id": id};
+    userInfo = {"id": id};
   }
 
   //fav user: 7bb32417-c76c
@@ -328,7 +331,7 @@ export function Wrapper({ children }) {
           "data": {
             user: {
               "id": userInfo.id,
-              "ci": userInfo.ci
+              /* "ci": userInfo.ci */
             },
             status: {
               "pathname": pathname,
