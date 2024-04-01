@@ -4,15 +4,25 @@ import ArticleBox from '@/components/mini_components/ArticleBox';
 import { useAppContext } from '@/context/ContextProvider';
 import { useEffect, useState } from 'react';
 import { getOtherContentArticles } from './functions/infinityScrollAndGetNewArticle';
+import Cookies from 'js-cookie';
+
 
 export default function OtherContents({currentUrl, bottomChecker}) {
 
-  const { userInfo, topLevelUrl, supportWebp, isItMobile } = useAppContext();
+  const { topLevelUrl, supportWebp, isItMobile } = useAppContext();
   const [others, setOthers] = useState([]);
 
   const checkRequestStatus = async () => {
-    const response = await getOtherContentArticles(topLevelUrl, userInfo, currentUrl, isItMobile);
-    console.log("response: ", response);
+    let id = null;
+    const accept_list = Cookies.get("cookies_accepted");
+    if(accept_list) {
+      const accept_json = JSON.parse(accept_list);
+      if(accept_json.id) {
+        id = Cookies.get("id");
+      }
+    }
+
+    const response = await getOtherContentArticles(topLevelUrl, id, currentUrl, isItMobile);
     setOthers(response.data);
   }
   useEffect(() => {

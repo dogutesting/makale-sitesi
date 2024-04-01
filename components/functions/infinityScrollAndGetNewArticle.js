@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 //#region //* Sonsuz akış için tek seferlik içerik çekici
-export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageValue) => {
+export const getAllArticlesForUser = async (topLevelUrl, id, currentPageValue) => {
     const res = await fetch(topLevelUrl+"/api/userKey", {
       method: "POST",
       headers: { 
@@ -10,8 +10,7 @@ export const getAllArticlesForUser = async (topLevelUrl, userInfo, currentPageVa
       body: JSON.stringify({
         "req": "guil",
         "data": {
-          "id": userInfo.id,
-          /* "ci": userInfo.ci, */
+          "id": id,
           "currentUrl": currentPageValue
           /* "date": getCurrentTime() */
         }
@@ -58,7 +57,7 @@ export function getCalculateTimeDifferenceInSeconds(date1, date2, timer=5.5, log
 //#endregion
 
 //#region //* Sayfa altındaki öneri kutuları (OtherContents)
-export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl, isItMobile) => {
+export const getOtherContentArticles = async (topLevelUrl, id, currentUrl, isItMobile) => {
   const res = await fetch(topLevelUrl+"/api/userKey", {
     method: "POST",
     headers: { 
@@ -67,8 +66,7 @@ export const getOtherContentArticles = async (topLevelUrl, userInfo, currentUrl,
     body: JSON.stringify({
       "req": "gui",
       "data": {
-        "id": userInfo.id,
-        /* "ci": userInfo.ci, */
+        "id": id,
         "currentUrl": currentUrl,
         "isItMobile": isItMobile
       }

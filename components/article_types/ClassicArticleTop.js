@@ -3,9 +3,10 @@ import ClassicArticleBot from "./ClassicArticleBot";
 import { useState, useEffect} from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { getAllArticlesForUser, getDynamicPage, getCurrentTime, getCalculateTimeDifferenceInSeconds } from '@/components/functions/infinityScrollAndGetNewArticle';
+import Cookies from 'js-cookie';
 
 export default function ClassicArticleTop ({topCPO, articleConstructor}) {
-  const { nightMode, topLevelUrl, userInfo } = useAppContext();
+  const { nightMode, topLevelUrl } = useAppContext();
 
   //#region INFINITYSCROLL | //! eğer topCPO yok ise farklı bir dosyadan dynamic import mu etsek? Taktım bu bellek israfına.
   const [items, setItems] = useState([]);
@@ -24,8 +25,17 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
     }
     else {
       if(items.length === 0) {
-        const response = await getAllArticlesForUser(topLevelUrl, userInfo, currentPageValue);
-        /* console.log(response); */
+
+        let id = null;
+        const accept_list = Cookies.get("cookies_accepted");
+        if(accept_list) {
+          const accept_json = JSON.parse(accept_list);
+          if(accept_json.id) {
+            id = Cookies.get("id");
+          }
+        }
+
+        const response = await getAllArticlesForUser(topLevelUrl, Cookies.get('id'), currentPageValue);
         if(response.penalty === false) {
           setItems([]);
         }

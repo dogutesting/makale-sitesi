@@ -101,6 +101,8 @@ export default async function handler (req, res) {
         //ID'yi rastgele kendi tanımlayarak istek atabilir
 
         try {
+            console.log("Burası neden anasayfanın imagelerini alıyor");
+
             const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             if (!IsRateLimitPassed) {
                 /* console.log("çok fazla istek atıyor."); */
@@ -126,23 +128,34 @@ export default async function handler (req, res) {
 
                 //#region //* Get user info and limitles
                 if(jsonBody.req === 'gui') { //* get-user-info
-                    /* console.log("gui isteği yapıldı"); */
                     currentUrl = jsonBody.data.currentUrl;
                     numberOfContents = jsonBody.data.isItMobile ? 2 : 4;
-                    const response = await getUserInfo(jsonBody.data.id,
-                                                       jsonBody.data.ci);
-                    const responseClickCount = response.map(item => {
-                        const newItem = { ...item };
-                        delete newItem["clickCount"];
-                        return newItem;
-                    });
-                    res.status(200).json({data: responseClickCount});
+                    
+                    //* cookie id izni verildi ise çalışsın
+                    const gui_id = jsonBody.data.id;
+                    if(gui_id == null) {
+                        res.status(200).json({data: top4});
+                    }
+                    else {
+                        const response = await getUserInfo(jsonBody.data.id);
+                                        /* ci kaldırıldı ,jsonBody.data.ci); */
+                        const responseWithoutClickCount = response.map(item => {
+                            const newItem = { ...item };
+                            delete newItem["clickCount"];
+                            return newItem;
+                        });
+                        res.status(200).json({data: responseWithoutClickCount});
+                    }
                 }
                 if(jsonBody.req === "guil") { //* get-user-info-limitless
-                    /* console.log("guil isteği yapıldı"); */
                     currentUrl = jsonBody.data.currentUrl;
-                    const response = await getUserInfoLimitless(jsonBody.data.id, jsonBody.data.ci);
-                    res.status(200).json({data: response});
+
+                    //* cookie id izni verildi ise çalışsın
+                    const guil_id = jsonBody.data.id;
+                    if(guil_id) {
+                        const response = await getUserInfoLimitless(guil_id, jsonBody.data.ci);
+                        res.status(200).json({data: response});
+                    }
                 }
                 //#endregion
 
@@ -249,7 +262,8 @@ async function addUser(date) {
    }
 }
 
-async function getUserInfoLimitless(id, city) {
+/* async function getUserInfoLimitless(id, city) { */
+async function getUserInfoLimitless(id) {
     //! BURASI BÜTÜN MAKALELERİ DÖNÜYOR, BURADA BİR DÜZENLEME KESİNLİKLE GEREKLİ
     //! 1000 TANE MAKALE OLSA 1000 TANE Mİ DÖNECEK? 
     let connection;
@@ -344,7 +358,6 @@ async function getUserInfoLimitless(id, city) {
 }
 
 async function getUserInfo(id) {
-    console.log("id: ", id);
     let connection;
     try {
         connection = await connectToDatabase();
@@ -362,7 +375,7 @@ async function getUserInfo(id) {
         const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
-
+            //console.log("buradayız1 ve id: " + id);
             return await setArticleTo(connection, null, numberOfContents);
 
             //! kaldırıldı: city |
@@ -384,6 +397,7 @@ async function getUserInfo(id) {
 
         }
         else if(enFazlaTiklananKategoriler.length === 1) { // eğer kullanıcı 1 kategoride bir şeylere bakmış ise
+            //console.log("buradayız2");
             //! kaldırıldı: city |
             /* const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, numberOfContents);
             const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (numberOfContents-categoryAndCity.length), categoryAndCity);    
@@ -440,7 +454,7 @@ async function getUserInfo(id) {
 
             if(oneCat.length < numberOfContents) {
                 const eksik = numberOfContents - oneCat.length;
-                const gRA = getRandomArticle(connection, id, eksik, oneCat);
+                const gRA = await getRandomArticle(connection, id, eksik, oneCat);
                 const moded = oneCat.concat(gRA);
 
                 if(moded.length === numberOfContents) {
@@ -455,43 +469,13 @@ async function getUserInfo(id) {
             }
         }
         else {
-            
-            /* const take_n_article = numberOfContents === 2 ? 1 : 2;
-            let stepNumber = 0;
-            let eldekiMakaleler = [];
 
-            while(eldekiMakaleler.length !== numberOfContents) {
+            //! İLGİNÇ bir durum şu clickCount her kullanıcıdan her bir url için birer olarak mı sayılacak yoksa
+                //! bir kullanıcı 300-cc-supersport linkine 100 kere tıkladı diğer 5 kullanıcıda birer defa tıkladı 105 olarak mı dönecek?
+            //! alt taraftaki sql kodu sıfır sonuç dönüyor
 
-                if(stepNumber > enFazlaTiklananKategoriler.length - 1) {
-                    const eksik = numberOfContents - eldekiMakaleler.length;
-                    const gRA = getRandomArticle(connection, id, eksik, oneCat);
-                    const moded = eldekiMakaleler.concat(gRA);
+            console.log(enFazlaTiklananKategoriler[0] + " - " + enFazlaTiklananKategoriler[1]);
 
-                    if(moded.length === numberOfContents) {
-                        return moded;
-                    }
-                    else {
-                        return await setArticleTo(connection, moded, numberOfContents);
-                    }
-                }
-
-                const [oneCat] = await connection.execute(`
-                SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-                COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
-                FROM clicks c 
-                JOIN makaleler m ON c.url = m.url 
-                WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
-                AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-                AND m.url != "${currentUrl}"
-                GROUP BY c.url 
-                ORDER BY clickCount DESC 
-                LIMIT ?`, [id, enFazlaTiklananKategoriler[stepNumber], id, take_n_article]);
-                
-                eldekiMakaleler.concat(oneCat);
-                stepNumber++;
-            }
-
-            return eldekiMakaleler; */
             const [oneCat] = await connection.execute(`
             SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
             COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
@@ -502,8 +486,125 @@ async function getUserInfo(id) {
             AND m.url != "${currentUrl}"
             GROUP BY c.url 
             ORDER BY clickCount DESC 
-            LIMIT ?`, [id, enFazlaTiklananKategoriler[0], id, numberOfContents]);
+            LIMIT ?`, [id, "dizi", id, 4]);
+
+                console.log(oneCat);
+
             return oneCat;
+
+
+            /* SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.clicked_user_uuid != "ce35c224-2bb9" AND m.kategori = "motosiklet" 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = "ce35c224-2bb9")
+            AND m.url != "en-iyi-10-1000-cc-naked-motosiklet"
+            GROUP BY c.url 
+            ORDER BY clickCount DESC 
+            LIMIT 6 */
+
+            /* AND m.kategori = "motosiklet" AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = "ce35c224-2bb9")
+            AND m.url != "en-iyi-10-1000-cc-naked-motosiklet"
+            GROUP BY c.url 
+            ORDER BY clickCount DESC */
+
+            console.log("kategoriler: " + enFazlaTiklananKategoriler);
+
+            const take_n_article = numberOfContents === 2 ? 1 : 2;
+            let stepNumber = 0;
+            let eldekiMakaleler = [];
+
+            while(eldekiMakaleler.length !== numberOfContents) {
+
+                //console.log("Kategori n: " + enFazlaTiklananKategoriler[stepNumber]);
+
+                if(stepNumber > enFazlaTiklananKategoriler.length - 1) {
+                    //console.log("stepnumber: " + stepNumber + " | " + (enFazlaTiklananKategoriler.length - 1));
+                    //console.log("eldeki makaleler: " + eldekiMakaleler);
+
+                    const eksik = numberOfContents - eldekiMakaleler.length;
+                    const gRA = getRandomArticle(connection, id, eksik, eldekiMakaleler);
+                    const moded = eldekiMakaleler.concat(gRA);
+
+                    if(moded.length === numberOfContents) {
+                        return moded;
+                    }
+                    else {
+                        return await setArticleTo(connection, moded, numberOfContents);
+                    }
+                }
+
+                
+                
+                console.log("oneCat: " + oneCat);
+
+                eldekiMakaleler.concat(oneCat);
+                stepNumber++;
+            }
+
+            return eldekiMakaleler;
+            
+            /* const [firstCat] = await connection.execute(`
+            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
+            FROM clicks c 
+            JOIN makaleler m ON c.url = m.url 
+            WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
+            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+            AND m.url != "${currentUrl}"
+            GROUP BY c.url 
+            ORDER BY clickCount DESC 
+            LIMIT ?`, [id, enFazlaTiklananKategoriler[0], id, numberOfContents / 2]);
+
+            const firstCat_URLs = firstCat.length === 0 ? [""] : firstCat.map(item => item.url);
+            const firstCat_placeholders = firstCat_URLs.map(() => '?').join(', ');
+            const eksik = numberOfContents - firstCat.length;
+            
+            const [secondCats] = await connection.execute(`
+            SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
+            FROM makaleler 
+            WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
+            AND url != "${currentUrl}" 
+            AND url NOT IN (${firstCat_placeholders})
+            GROUP BY url 
+            ORDER BY id DESC 
+            LIMIT ?`, [enFazlaTiklananKategoriler[1], id, ...firstCat_URLs, eksik]);
+            firstCat.concat(secondCats);
+
+            if(firstCat.length < numberOfContents) {
+                const firstCat_URLs = firstCat.length === 0 ? [""] : firstCat.map(item => item.url);
+                const firstCat_placeholders = firstCat_URLs.map(() => '?').join(', ');
+                const eksik = numberOfContents - firstCat.length;
+                
+                const [firstCatAgain] = await connection.execute(`
+                SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
+                FROM makaleler 
+                WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
+                AND url != "${currentUrl}" 
+                AND url NOT IN (${firstCat_placeholders})
+                GROUP BY url 
+                ORDER BY id DESC 
+                LIMIT ?`, [enFazlaTiklananKategoriler[0], id, ...firstCat_URLs, eksik]);
+
+            }
+
+
+            if(firstCat.length < numberOfContents) {
+                const kalan = numberOfContents - firstCat.length;
+                const gRA = await getRandomArticle(connection, id, kalan, firstCat);
+                firstCat.concat(gRA);
+
+                if(firstCat.length === numberOfContents) {
+                    return firstCat;
+                }
+                else {
+                    return await setArticleTo(connection, firstCat, numberOfContents);
+                }
+            }
+            else {
+                return firstCat;
+            } */
         }
 
     } catch (error) {

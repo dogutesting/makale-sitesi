@@ -43,7 +43,7 @@ export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperation
         addHr = false;
       }
 
-      if((index + 1) === 9) {
+      if((index + 1) === 10) {
         items.push(
             <Custom_Waypoint key={"bottom_wp_"+(index+1)} name={"bottom"} startedUrl={sayfaUrl} currentPageOperations={currentPageOperations} setBottomChecker={setBottomChecker}/>
         )

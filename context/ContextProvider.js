@@ -20,8 +20,6 @@ export function Wrapper({ children }) {
 
   const [nightMode, setNightMode] = useState(null);  
   const [supportWebp, setSupportWebp] = useState(true);
-  /* const [userInfo, setUserInfo] = useState({id: null, ci: null}); */
-  //const [userInfo, setUserInfo] = useState({id: null});
   const [isItMobile, setIsItMobile] = useState(null);
 
   const [cookie_policy_div, setCookiePolicyDiv] = useState(false);
@@ -137,15 +135,6 @@ export function Wrapper({ children }) {
     }
   } */
 
-  /* const setStates = (id, ci) => { */
-  const setStates = (id) => {
-    /* setUserInfo({
-      "id": id,
-    }) */
-    //userInfo = {...userInfo, "id": id};
-    userInfo = {"id": id};
-  }
-
   //fav user: 7bb32417-c76c
   //* connect with: main
   const setStateUserInfo = async () => {
@@ -169,7 +158,7 @@ export function Wrapper({ children }) {
         }
         else {
           if(id_cookie) {
-            setStates(id_cookie);
+            userInfo.id = id_cookie;
           }
           else {
             const id = await fetch(topLevelUrl+'/api/userKey', {
@@ -188,6 +177,7 @@ export function Wrapper({ children }) {
             const expirationDate = new Date();
             expirationDate.setFullYear(expirationDate.getFullYear() + 1);
             cookies.set('id', id, { secure: true, domain: domainNameForCookies, sameSite: 'Strict', expires: expirationDate, priority: 'High' });
+            userInfo.id = id;
           }
         }
 
@@ -331,7 +321,6 @@ export function Wrapper({ children }) {
           "data": {
             user: {
               "id": userInfo.id,
-              /* "ci": userInfo.ci */
             },
             status: {
               "pathname": pathname,
@@ -394,7 +383,7 @@ export function Wrapper({ children }) {
   }, []);
 
   return (
-    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl, userInfo,
+    <AppContext.Provider value={{ nightMode, setNightMode, supportWebp, topLevelUrl,
      showToast, addClick, isItMobile, cookie_policy_div, setCookiePolicyDiv, cookieClick, domainNameForCookies}}>
       {children}
     </AppContext.Provider>
