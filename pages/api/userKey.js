@@ -32,12 +32,13 @@ let top4 = [];
 const getMostTop4 = async () => {
     let connection = null;
     try {
+        //! henüz tıklanma olmadığı için alt taraftaki kod doğru çalışmayacak.
         connection = await connectToDatabase();
         const [rows] = await connection.execute(`
         SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
         COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
         FROM makaleler m 
-        LEFT JOIN clicks c ON c.url = m.url 
+        INNER JOIN clicks c ON c.url = m.url 
         GROUP BY m.url 
         ORDER BY clickCount DESC LIMIT ?`, [numberOfContents]);
         const withoutClickCount = rows.map(item => {
@@ -45,7 +46,26 @@ const getMostTop4 = async () => {
             delete newItem["clickCount"];
             return newItem;
         });
-        top4 = withoutClickCount;
+
+        //top4 = withoutClickCount;
+        //connection = await connectToDatabase();
+
+        if(rows.length < numberOfContents) {
+            const [rows2] = await connection.execute(`
+            SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, 
+            FROM makaleler  
+            ORDER BY id DESC LIMIT ?`, [(numberOfContents - rows.length)]);
+            const withoutClickCount2 = rows2.map(item => {
+                const newItem = { ...item };
+                delete newItem["clickCount"];
+                return newItem;
+            });
+
+            top4 = withoutClickCount.push(...withoutClickCount2);
+        }
+        else {
+            top4 = withoutClickCount;
+        }
     }
     catch(err) {
         top4 = [
@@ -191,6 +211,17 @@ export default async function handler (req, res) {
     }
 }
 
+const getDateAndTime = () => {
+    const now = new Date();
+    const saat = now.getHours().toString().padStart(2, '0');
+    const dakika = now.getMinutes().toString().padStart(2, '0');
+    const gun = now.getDate().toString().padStart(2, '0');
+    const ay = (now.getMonth() + 1).toString().padStart(2, '0'); // Ay 0'dan başladığı için +1 ekliyoruz.
+    const yil = now.getFullYear();
+    const tarihVeSaat = `${saat}:${dakika}-${gun}.${ay}.${yil}`;
+    return tarihVeSaat;
+}
+
 //#region //* ADD CLICK FUNCTIONS
 async function addUserClick(body, type) {
     const {user, status} = body;
@@ -217,10 +248,26 @@ async function addUserClick(body, type) {
         if(rows.length > 0) {
             kategori = rows[0].kategori;
         }
-        /* else {
-            kategori = "bos";
-        } */
+        else {
+            return false;
+        }
 
+        //* 10 dakika içerisinde aynı url'ye ekleme yaptı mı?
+        const [row] = await connection.execute("SELECT time FROM clicks WHERE clicked_user_uuid = ? AND url = ? ORDER BY id DESC LIMIT 1", [user.id, status.pathname]);
+        if(row.length !== 0) {
+            const dateString = row[0].time;
+            const [saatDakika, gunAyYil] = dateString.split('-');
+            const [saat, dakika] = saatDakika.split(':');
+            const [gun, ay, yil] = gunAyYil.split('.');
+    
+            const dateObject = new Date(parseInt(yil), parseInt(ay) - 1, parseInt(gun), parseInt(saat), parseInt(dakika));
+            const now = new Date();
+            const differenceInMinutes = (now.getTime() - dateObject.getTime()) / (1000 * 60);
+            if(differenceInMinutes <= 60) {
+                return false;
+            }
+        }
+        //* -----------------------------------------------------------------------------------------------------------------------------------
         await connection.execute(`INSERT INTO clicks 
         (url, time, kategori, type, clicked_user_uuid) 
         VALUES (?, ?, ?, ?, ?)`, 
@@ -365,250 +412,111 @@ async function getUserInfo(id) {
         const [rows] = await connection.execute(
             "SELECT kategori, COUNT(*) AS sayi " +
             "FROM clicks " +
-            "WHERE clicked_user_uuid = ? AND url != ? AND kategori != 'bos' " +
+            "WHERE clicked_user_uuid = ? " +
             "GROUP BY kategori " +
-            "ORDER BY sayi DESC " +
-            "LIMIT 2",
-            [id, "/"]
+            "ORDER BY sayi DESC ",
+            [id]
         );
 
         const enFazlaTiklananKategoriler = rows.map((row) => row.kategori);
+        
+        const eldekiMakaleler = [];
 
         if(enFazlaTiklananKategoriler.length === 0) { //eğer kullanıcı yeni ise
-            //console.log("buradayız1 ve id: " + id);
-            return await setArticleTo(connection, null, numberOfContents);
+            /* console.log("buradayız1 ve id: " + id); */
 
-            //! kaldırıldı: city |
-            /* const cityMost = await getMostClickedFromCity(connection, null, city, id, numberOfContents);
-
-            if(cityMost.length < numberOfContents) {
-                const randomArticle = await getRandomArticle(connection, id, (numberOfContents - cityMost.length), cityMost);
-                const f1 = cityMost.concat(randomArticle);
-                if(f1.length < numberOfContents) {
-                    return await setArticleTo(connection, f1, (numberOfContents - f1.length));
-                }
-                else {
-                    return f1;
-                }
+            const gca = getClickedArticles(connection, id, numberOfContents, null);
+            if(gca.length < numberOfContents) {
+                const sat = await setArticleTo(connection, gca, (numberOfContents - gca.length));
+                gca.push(...sat);
             }
-            else {
-                return cityMost;
-            } */
-
+            return gca;
         }
         else if(enFazlaTiklananKategoriler.length === 1) { // eğer kullanıcı 1 kategoride bir şeylere bakmış ise
-            //console.log("buradayız2");
-            //! kaldırıldı: city |
-            /* const categoryAndCity = await getMostClickedFromCity(connection, enFazlaTiklananKategoriler[0], city, id, numberOfContents);
-            const nullAndCity = await getMostClickedFromCity(connection, null, city, id, (numberOfContents-categoryAndCity.length), categoryAndCity);    
-            let moded = categoryAndCity.concat(nullAndCity);
+            /* console.log("buradayız 2"); */
 
-            if(moded.length < numberOfContents) {
-                const randomArticle = await getRandomArticle(connection, id, (numberOfContents - moded.length), moded);
-                const f1 = moded.concat(randomArticle);
-                if(f1.length < numberOfContents) {
-                    return await setArticleTo(connection, f1, (numberOfContents - f1.length));
-                }
-                else {
-                    return f1;
-                }
-            }
-            else {
-                return moded;
-            } */
-            //!---------------
+            const oneCat = await getClickedArticlesWithCategorie(connection, id, numberOfContents, null, enFazlaTiklananKategoriler[0]);
+            eldekiMakaleler.push(...oneCat);
 
-            //! geri dön
-            const [oneCat] = await connection.execute(`
-            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
-            FROM clicks c 
-            JOIN makaleler m ON c.url = m.url 
-            WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
-            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-            AND m.url != "${currentUrl}"
-            GROUP BY c.url 
-            ORDER BY clickCount DESC 
-            LIMIT ?`, [id, enFazlaTiklananKategoriler[0], id, numberOfContents]);
+            if(eldekiMakaleler.length < numberOfContents) {
+                const sawct = await setArticleWithCategoriTo(connection, id, eldekiMakaleler, enFazlaTiklananKategoriler[0], (numberOfContents - eldekiMakaleler.length)); 
+                eldekiMakaleler.push(...sawct);
 
-            //* yukarıda sadece makaleler ile tıklananları url'lerden birleştiriyor.
-            //*  eğer kullanıcının tıklamadığı veya insanların tıklamadığı aynı kategoride makaleler var ise bunları çekemiyor
-            //*   bundan dolayı alt tarafa ekstra bir kod daha ekleyeceğim.
-
-            if(oneCat.length < numberOfContents) {
-                const oneCat_URLs = oneCat.length === 0 ? [""] : oneCat.map(item => item.url);
-                const oneCat_placeholders = oneCat_URLs.map(() => '?').join(', ');
-                const eksik = numberOfContents - oneCat.length;
-                const [otherCats] = await connection.execute(`
-                SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
-                FROM makaleler 
-                WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
-                AND url != "${currentUrl}" 
-                AND url NOT IN (${oneCat_placeholders})
-                GROUP BY url 
-                ORDER BY id DESC 
-                LIMIT ?`, [enFazlaTiklananKategoriler[0], id, ...oneCat_URLs, eksik]);
-
-                oneCat.push(...otherCats);
-            }
-
-            if(oneCat.length < numberOfContents) {
-                const eksik = numberOfContents - oneCat.length;
-                const gRA = await getRandomArticle(connection, id, eksik, oneCat);
-                const moded = oneCat.concat(gRA);
-
-                if(moded.length === numberOfContents) {
-                    return moded;
-                }
-                else {
-                    return await setArticleTo(connection, moded, numberOfContents);
+                if( eldekiMakaleler.length < numberOfContents) {
+                    const gca = await getClickedArticles(connection, id, (numberOfContents - eldekiMakaleler.length), eldekiMakaleler);
+                    eldekiMakaleler.push(...gca);
+                    if(eldekiMakaleler.length < numberOfContents) {
+                        const kesinDoldurur = await setArticleTo(connection, eldekiMakaleler, (numberOfContents - eldekiMakaleler.length));
+                        eldekiMakaleler.push(...kesinDoldurur);
+                    }
                 }
             }
-            else {
-                return oneCat;
-            }
+            return eldekiMakaleler;
         }
         else {
+            /* console.log("buradayız 3"); */
 
-            //! İLGİNÇ bir durum şu clickCount her kullanıcıdan her bir url için birer olarak mı sayılacak yoksa
-                //! bir kullanıcı 300-cc-supersport linkine 100 kere tıkladı diğer 5 kullanıcıda birer defa tıkladı 105 olarak mı dönecek?
-            //! alt taraftaki sql kodu sıfır sonuç dönüyor
-
-            console.log(enFazlaTiklananKategoriler[0] + " - " + enFazlaTiklananKategoriler[1]);
-
-            const [oneCat] = await connection.execute(`
-            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
-            FROM clicks c 
-            JOIN makaleler m ON c.url = m.url 
-            WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
-            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-            AND m.url != "${currentUrl}"
-            GROUP BY c.url 
-            ORDER BY clickCount DESC 
-            LIMIT ?`, [id, "dizi", id, 4]);
-
-                console.log(oneCat);
-
-            return oneCat;
-
-
-            /* SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
-            FROM clicks c 
-            JOIN makaleler m ON c.url = m.url 
-            WHERE c.clicked_user_uuid != "ce35c224-2bb9" AND m.kategori = "motosiklet" 
-            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = "ce35c224-2bb9")
-            AND m.url != "en-iyi-10-1000-cc-naked-motosiklet"
-            GROUP BY c.url 
-            ORDER BY clickCount DESC 
-            LIMIT 6 */
-
-            /* AND m.kategori = "motosiklet" AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = "ce35c224-2bb9")
-            AND m.url != "en-iyi-10-1000-cc-naked-motosiklet"
-            GROUP BY c.url 
-            ORDER BY clickCount DESC */
-
-            console.log("kategoriler: " + enFazlaTiklananKategoriler);
-
-            const take_n_article = numberOfContents === 2 ? 1 : 2;
-            let stepNumber = 0;
-            let eldekiMakaleler = [];
-
-            while(eldekiMakaleler.length !== numberOfContents) {
-
-                //console.log("Kategori n: " + enFazlaTiklananKategoriler[stepNumber]);
-
-                if(stepNumber > enFazlaTiklananKategoriler.length - 1) {
-                    //console.log("stepnumber: " + stepNumber + " | " + (enFazlaTiklananKategoriler.length - 1));
-                    //console.log("eldeki makaleler: " + eldekiMakaleler);
-
-                    const eksik = numberOfContents - eldekiMakaleler.length;
-                    const gRA = getRandomArticle(connection, id, eksik, eldekiMakaleler);
-                    const moded = eldekiMakaleler.concat(gRA);
-
-                    if(moded.length === numberOfContents) {
-                        return moded;
-                    }
-                    else {
-                        return await setArticleTo(connection, moded, numberOfContents);
-                    }
+            for(var i = 0; i < enFazlaTiklananKategoriler.length; i++) {
+                if(eldekiMakaleler.length === numberOfContents) {
+                    return eldekiMakaleler;
                 }
-
-                
-                
-                console.log("oneCat: " + oneCat);
-
-                eldekiMakaleler.concat(oneCat);
-                stepNumber++;
+                const kategori = enFazlaTiklananKategoriler[i];
+                const gcawc = await getClickedArticlesWithCategorie(connection, id, numberOfContents / 2, null, kategori);
+                eldekiMakaleler.push(...gcawc);
             }
 
+            if(eldekiMakaleler.length === numberOfContents) {
+                return eldekiMakaleler;
+            }
+
+            const toplam_eksik = numberOfContents - eldekiMakaleler.length;
+            let eksik = toplam_eksik;
+            if(toplam_eksik === 4 || toplam_eksik === 2) {
+                eksik = toplam_eksik / 2;
+            }
+
+            for(var i = 0; i < enFazlaTiklananKategoriler.length; i++) {
+                if(eldekiMakaleler.length === numberOfContents) {
+                    return eldekiMakaleler;
+                }
+                const kategori = enFazlaTiklananKategoriler[i];
+                const sawct = await setArticleWithCategoriTo(connection, id, eldekiMakaleler, kategori, eksik);
+                eldekiMakaleler.push(...sawct);
+            }
+
+            if(eldekiMakaleler.length === numberOfContents) {
+                return eldekiMakaleler;
+            }
+
+            for(var i = 0; i < enFazlaTiklananKategoriler.length; i++) {
+                if(eldekiMakaleler.length === numberOfContents) {
+                    return eldekiMakaleler;
+                }
+                const kategori = enFazlaTiklananKategoriler[i];
+                const sawct = await setArticleWithCategoriTo(connection, id, eldekiMakaleler, kategori, (numberOfContents - eldekiMakaleler.length));
+                eldekiMakaleler.push(...sawct);
+            }
+
+            if(eldekiMakaleler.length === numberOfContents) {
+                return eldekiMakaleler;
+            }
+
+            const gca = await getClickedArticles(connection, id, (numberOfContents - eldekiMakaleler.length));
+            eldekiMakaleler.push(...gca);
+
+            if(eldekiMakaleler.length === numberOfContents) {
+                return eldekiMakaleler;
+            }
+
+            const sao = setArticleTo(connection, eldekiMakaleler, (numberOfContents - eldekiMakaleler.length));
+            eldekiMakaleler.push(...sao);
             return eldekiMakaleler;
-            
-            /* const [firstCat] = await connection.execute(`
-            SELECT c.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-            COUNT(DISTINCT c.clicked_user_uuid) AS clickCount, m.kategori
-            FROM clicks c 
-            JOIN makaleler m ON c.url = m.url 
-            WHERE c.clicked_user_uuid != ? AND m.kategori = ? 
-            AND m.url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-            AND m.url != "${currentUrl}"
-            GROUP BY c.url 
-            ORDER BY clickCount DESC 
-            LIMIT ?`, [id, enFazlaTiklananKategoriler[0], id, numberOfContents / 2]);
 
-            const firstCat_URLs = firstCat.length === 0 ? [""] : firstCat.map(item => item.url);
-            const firstCat_placeholders = firstCat_URLs.map(() => '?').join(', ');
-            const eksik = numberOfContents - firstCat.length;
-            
-            const [secondCats] = await connection.execute(`
-            SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
-            FROM makaleler 
-            WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
-            AND url != "${currentUrl}" 
-            AND url NOT IN (${firstCat_placeholders})
-            GROUP BY url 
-            ORDER BY id DESC 
-            LIMIT ?`, [enFazlaTiklananKategoriler[1], id, ...firstCat_URLs, eksik]);
-            firstCat.concat(secondCats);
-
-            if(firstCat.length < numberOfContents) {
-                const firstCat_URLs = firstCat.length === 0 ? [""] : firstCat.map(item => item.url);
-                const firstCat_placeholders = firstCat_URLs.map(() => '?').join(', ');
-                const eksik = numberOfContents - firstCat.length;
-                
-                const [firstCatAgain] = await connection.execute(`
-                SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf, kategori 
-                FROM makaleler 
-                WHERE kategori = ? AND url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?) 
-                AND url != "${currentUrl}" 
-                AND url NOT IN (${firstCat_placeholders})
-                GROUP BY url 
-                ORDER BY id DESC 
-                LIMIT ?`, [enFazlaTiklananKategoriler[0], id, ...firstCat_URLs, eksik]);
-
-            }
-
-
-            if(firstCat.length < numberOfContents) {
-                const kalan = numberOfContents - firstCat.length;
-                const gRA = await getRandomArticle(connection, id, kalan, firstCat);
-                firstCat.concat(gRA);
-
-                if(firstCat.length === numberOfContents) {
-                    return firstCat;
-                }
-                else {
-                    return await setArticleTo(connection, firstCat, numberOfContents);
-                }
-            }
-            else {
-                return firstCat;
-            } */
         }
 
     } catch (error) {
-        throw "Get user info'da hata! : " + error;
+        return top4;
+        //throw "Get user info'da hata! : " + error;
     } finally {
         connection && connection.end();
     }
@@ -651,8 +559,8 @@ async function getUserInfo(id) {
     }
 } */
 
-//* kullanıcının tıklamadığı rastgele makaleler getir
-async function getRandomArticle(connection, id, num, rows=null) {
+//* diğer insanların tıkladığı aynı kategorideki makaleleri getir //1 V
+async function getClickedArticlesWithCategorie(connection, id, num, rows, category) {
     const urls = rows == null || rows.length === 0 ? [""] : rows.map(row=>row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
@@ -660,7 +568,47 @@ async function getRandomArticle(connection, id, num, rows=null) {
     SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
     COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
     FROM makaleler m 
-    LEFT JOIN clicks c ON c.url = m.url 
+    INNER JOIN clicks c ON c.url = m.url 
+    WHERE m.url NOT IN ( 
+    SELECT DISTINCT url 
+    FROM clicks 
+    WHERE clicked_user_uuid = ?) AND m.url NOT IN (${placeholders}) 
+    AND m.url != "${currentUrl}" 
+    AND m.kategori = ? 
+    GROUP BY m.url 
+    ORDER BY clickCount DESC 
+    LIMIT ?`, [id, ...urls, category, num]);
+
+    return randomRows;
+}
+
+//* verilen sayıya KATEGORİ ile tamamla //2 V
+async function setArticleWithCategoriTo(connection, id, rows, category, num) {
+    const urls = rows === null || rows.length === 0 ? [""] : rows.map(row => row.url);
+    const placeholders = urls.map(() => '?').join(', ');
+
+    const [randomRows] = await connection.execute(`
+    SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf
+    FROM makaleler 
+    WHERE url NOT IN (${placeholders}) AND 
+    url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+    AND url != "${currentUrl}" 
+    AND kategori = ?
+    ORDER BY id DESC LIMIT ?`, [...urls, id, category, num]);
+    
+    return randomRows;
+}
+
+//* kullanıcının tıklamadığı ama diğer insanların tıkladığı kategorisiz makaleleri getir //3 V
+async function getClickedArticles(connection, id, num, rows) {
+    const urls = rows == null || rows.length === 0 ? [""] : rows.map(row=>row.url);
+    const placeholders = urls.map(() => '?').join(', ');
+
+    const [randomRows] = await connection.execute(`
+    SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
+    FROM makaleler m 
+    INNER JOIN clicks c ON c.url = m.url 
     WHERE m.url NOT IN ( 
     SELECT DISTINCT url 
     FROM clicks 
@@ -669,68 +617,21 @@ async function getRandomArticle(connection, id, num, rows=null) {
     GROUP BY m.url 
     ORDER BY clickCount DESC 
     LIMIT ?`, [id, ...urls, num]);
+    
     return randomRows;
 }
 
-//* Verilen sayıya tamamla
+//* Verilen sayıya KATEGORİ olmadan tamamla //4 V
 async function setArticleTo(connection, rows, num) {
     const urls = rows === null || rows.length === 0 ? [""] : rows.map(row => row.url);
     const placeholders = urls.map(() => '?').join(', ');
 
     const [randomRows] = await connection.execute(`
-    SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
-    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
-    FROM makaleler m 
-    LEFT JOIN clicks c ON c.url = m.url 
-    WHERE m.url NOT IN (${placeholders}) 
-    AND m.url != "${currentUrl}"
-    GROUP BY m.url 
-    ORDER BY clickCount DESC LIMIT ?`, [...urls, num]);
-    return rows.concat(randomRows);
+    SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf
+    FROM makaleler 
+    WHERE url NOT IN (${placeholders}) 
+    AND url != "${currentUrl}"
+    ORDER BY id DESC LIMIT ?`, [...urls, num]);
+
+    return randomRows;
 }
-
-//! kaldırıldı: city | 
-/* async function setRangeBetweenRandomArticle(connection, kategori1, kategori2, id, bitir) {
-
-    if(kategori1.length === kategori2.length) {
-        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 2);
-        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 2);
-        const kat12 = kat1.concat(kat2);
-        
-        if(kat12.length < numberOfContents) {
-            const randomArticles = await getRandomArticle(connection, id, (numberOfContents - kat12.length), kat12);
-            const grawc = kat12.concat(randomArticles);
-
-            if(grawc.length === numberOfContents) {
-                return grawc;
-            }
-            else {
-                return await setArticleTo(connection, grawc, (numberOfContents - grawc.length));
-            }
-        }
-        else {
-            return kat12;
-        }
-    }
-    else {
-        const kat1 = await getMostClickedFromCity(connection, kategori1, city, id, 3);
-        const kat2 = await getMostClickedFromCity(connection, kategori2, city, id, 1);
-        const kat12 = kat1.concat(kat2);
-
-        if(kat12.length < numberOfContents) {
-            const randomArticles = await getRandomArticle(connection, id, (numberOfContents - kat12.length), kat12);
-            const grawc = kat12.concat(randomArticles);
-
-            if(grawc.length === numberOfContents) {
-                return grawc;
-            }
-            else {
-                return await setArticleTo(connection, grawc, (numberOfContents - grawc.length));
-            }
-        }
-        else {
-            return kat12;
-        }
-    }
-} */
-//#endregion

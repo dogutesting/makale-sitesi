@@ -1,4 +1,7 @@
 
+! -> click eklemiyor
+
+
 -> ip adresini gerçekten alabiliyor muyum bunu test etmem lazım yoksa istek limiti için yazdığım rate-limit-gpt doğru çalışmaz
 
 

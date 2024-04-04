@@ -30,9 +30,6 @@ export default function Document() {
 
       </Head>
         
-        
-        <script async src=""></script>
-        
       <body> 
         <Main />
         <NextScript />

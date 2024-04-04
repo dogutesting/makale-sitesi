@@ -67,39 +67,7 @@ CREATE TABLE `hatalar` (
 -- Tablo döküm verisi `hatalar`
 --
 
-INSERT INTO `hatalar` (`id`, `location`, `hata`) VALUES
-(105, 'other-contents', '500 - Internal Server Error'),
-(106, 'other-contents', '500 - Internal Server Error'),
-(107, 'other-contents', '500 - Internal Server Error'),
-(108, 'other-contents', '500 - Internal Server Error'),
-(109, 'other-contents', '500 - Internal Server Error'),
-(110, 'other-contents', '500 - Internal Server Error'),
-(111, 'other-contents', '500 - Internal Server Error'),
-(112, 'other-contents', '500 - Internal Server Error'),
-(113, 'other-contents', '500 - Internal Server Error'),
-(114, 'other-contents', '500 - Internal Server Error'),
-(115, 'other-contents', '500 - Internal Server Error'),
-(116, 'other-contents', '500 - Internal Server Error'),
-(117, 'other-contents', '500 - Internal Server Error'),
-(118, 'other-contents', '500 - Internal Server Error'),
-(119, 'other-contents', '500 - Internal Server Error'),
-(120, 'other-contents', '500 - Internal Server Error'),
-(121, 'other-contents', '500 - Internal Server Error'),
-(122, 'other-contents', '500 - Internal Server Error'),
-(123, 'other-contents', '500 - Internal Server Error'),
-(124, 'other-contents', '500 - Internal Server Error'),
-(125, 'other-contents', '500 - Internal Server Error'),
-(126, 'other-contents', '500 - Internal Server Error'),
-(127, 'other-contents', '500 - Internal Server Error'),
-(128, 'other-contents', '500 - Internal Server Error'),
-(129, 'other-contents', '500 - Internal Server Error'),
-(130, 'other-contents', '500 - Internal Server Error'),
-(131, 'other-contents', '500 - Internal Server Error'),
-(132, 'other-contents', '500 - Internal Server Error'),
-(133, 'other-contents', '500 - Internal Server Error'),
-(134, 'other-contents', '500 - Internal Server Error'),
-(135, 'other-contents', '500 - Internal Server Error'),
-(136, 'other-contents', '500 - Internal Server Error');
+
 
 -- --------------------------------------------------------
 
