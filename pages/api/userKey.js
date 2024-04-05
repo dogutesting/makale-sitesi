@@ -1,6 +1,6 @@
-import colors, { random } from 'colors';
+/* import colors, { random } from 'colors'; */
 import { v4 as uuidv4 } from 'uuid';
-import CryptoJS, { mode } from "crypto-js";
+/* import CryptoJS, { mode } from "crypto-js"; */
 
 
 import { connectToDatabase } from '@/lib/mysql';
@@ -18,11 +18,11 @@ const ipLimits = new LRUCache(CONSTS.LRU_OBJECT);
 
 /* const DEFAULT_TABLE = "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler"; */
 
-function showWithColor(color, text) {
+/* function showWithColor(color, text) {
     console.log(colors[color]("¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯"));
     console.log(colors[color](text));
     console.log(colors[color]("_________________________________________________"));    
-}
+} */
 
 let currentUrl = "";
 let numberOfContents = 4;
@@ -121,10 +121,11 @@ export default async function handler (req, res) {
         //ID'yi rastgele kendi tanımlayarak istek atabilir
 
         try {
-            console.log("Burası neden anasayfanın imagelerini alıyor");
+            
+            //const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
+            //if (!IsRateLimitPassed) {
 
-            const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
-            if (!IsRateLimitPassed) {
+            if (req.body.req !== "middleware" && await rateLimitMiddleware(req, res, ipLimits) === false) {
                 /* console.log("çok fazla istek atıyor."); */
                 if(req.body.req === "guil") {
                     res.status(200).json({penalty: true, data: [], "sanic": "https://enonlar.com/sanic.jpg"})
@@ -137,7 +138,6 @@ export default async function handler (req, res) {
                 }
             }
             else {
-
                 const jsonBody = req.body;
                 /* console.log("İstek yapabilir..", jsonBody); */
                 
@@ -157,14 +157,19 @@ export default async function handler (req, res) {
                         res.status(200).json({data: top4});
                     }
                     else {
-                        const response = await getUserInfo(jsonBody.data.id);
-                                        /* ci kaldırıldı ,jsonBody.data.ci); */
-                        const responseWithoutClickCount = response.map(item => {
-                            const newItem = { ...item };
-                            delete newItem["clickCount"];
-                            return newItem;
-                        });
-                        res.status(200).json({data: responseWithoutClickCount});
+                        if(!jsonBody.data.id && top4.length !== 0) {
+                            res.status(200).json({data: top4});
+                        }
+                        else {
+                            const response = await getUserInfo(jsonBody.data.id);
+                                            /* ci kaldırıldı ,jsonBody.data.ci); */
+                            const responseWithoutClickCount = response.map(item => {
+                                const newItem = { ...item };
+                                delete newItem["clickCount"];
+                                return newItem;
+                            });
+                            res.status(200).json({data: responseWithoutClickCount});
+                        }
                     }
                 }
                 if(jsonBody.req === "guil") { //* get-user-info-limitless
@@ -202,24 +207,15 @@ export default async function handler (req, res) {
 
                 res.status(403).end();
             }
+
+
         } catch (error) {
-            console.log(colors.red("hata: ", error));
+            /* console.log(colors.red("hata: ", error)); */
             res.status(500).end();
         }
     } else {
         res.status(405).end();
     }
-}
-
-const getDateAndTime = () => {
-    const now = new Date();
-    const saat = now.getHours().toString().padStart(2, '0');
-    const dakika = now.getMinutes().toString().padStart(2, '0');
-    const gun = now.getDate().toString().padStart(2, '0');
-    const ay = (now.getMonth() + 1).toString().padStart(2, '0'); // Ay 0'dan başladığı için +1 ekliyoruz.
-    const yil = now.getFullYear();
-    const tarihVeSaat = `${saat}:${dakika}-${gun}.${ay}.${yil}`;
-    return tarihVeSaat;
 }
 
 //#region //* ADD CLICK FUNCTIONS
@@ -309,10 +305,51 @@ async function addUser(date) {
    }
 }
 
+async function limitlessIDless() {
+    const [current_url_kategori] = await connection.execute("SELECT kategori FROM makaleler WHERE url = ?", [currentUrl]);
+    const max = 10;
+    
+    const [diger_insanlarin_tikladiklari] = await connection.execute(`
+    SELECT m.url, m.baslik, m.resimYolu, SUBSTRING(m.paragraf, 1, 100) as paragraf, 
+    COUNT(DISTINCT c.clicked_user_uuid) AS clickCount
+    FROM makaleler m 
+    INNER JOIN clicks c ON c.url = m.url 
+    WHERE m.url != ?  
+    AND m.kategori = ? 
+    GROUP BY m.url 
+    ORDER BY clickCount DESC 
+    LIMIT ?`, [currentUrl, current_url_kategori[0], max])
+
+    
+    if(diger_insanlarin_tikladiklari.length === max) {
+        return diger_insanlarin_tikladiklari;
+    }
+    else {
+        const diger_insanlarin_tikladiklari_URLs = diger_insanlarin_tikladiklari.length === 0 ? [""] : diger_insanlarin_tikladiklari.map(item => item.url);
+        const placeholders_1 = diger_insanlarin_tikladiklari_URLs.map(() => '?').join(', ');
+
+        const [kategori_ile_tamamla] = await connection.execute(`
+        SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf
+        FROM makaleler 
+        WHERE url NOT IN (${placeholders_1}) AND 
+        url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
+        AND url != ?  
+        AND kategori = ?
+        ORDER BY id DESC LIMIT ?`, [currentUrl, current_url_kategori, (max - diger_insanlarin_tikladiklari.length)]);
+        diger_insanlarin_tikladiklari.push(...kategori_ile_tamamla);
+        return diger_insanlarin_tikladiklari.filter(item => item !== "string" && item !== "" && item !== null && item !== undefined);
+    }
+}
+
 /* async function getUserInfoLimitless(id, city) { */
 async function getUserInfoLimitless(id) {
     //! BURASI BÜTÜN MAKALELERİ DÖNÜYOR, BURADA BİR DÜZENLEME KESİNLİKLE GEREKLİ
     //! 1000 TANE MAKALE OLSA 1000 TANE Mİ DÖNECEK? 
+
+    if(!id) {
+        return await limitlessIDless();
+    }
+
     let connection;
     try {
         connection = await connectToDatabase();
@@ -396,9 +433,7 @@ async function getUserInfoLimitless(id) {
             return top_to_bot_clicks_URLs.concat(top_to_bot_makales.map(item => item.url)).filter(item => item !== "string" && item !== "" && item !== null && item !== undefined);
         }
     } catch (error) {
-        /* throw error; */
-        showWithColor("red", "!!!!!!!!!!HATA!!!!!!!!!!")
-        console.log(error);
+        return await limitlessIDless();
     } finally {
         connection && connection.end();
     }
@@ -573,11 +608,11 @@ async function getClickedArticlesWithCategorie(connection, id, num, rows, catego
     SELECT DISTINCT url 
     FROM clicks 
     WHERE clicked_user_uuid = ?) AND m.url NOT IN (${placeholders}) 
-    AND m.url != "${currentUrl}" 
+    AND m.url != ?  
     AND m.kategori = ? 
     GROUP BY m.url 
     ORDER BY clickCount DESC 
-    LIMIT ?`, [id, ...urls, category, num]);
+    LIMIT ?`, [id, ...urls, currentUrl, category, num]);
 
     return randomRows;
 }
@@ -592,9 +627,9 @@ async function setArticleWithCategoriTo(connection, id, rows, category, num) {
     FROM makaleler 
     WHERE url NOT IN (${placeholders}) AND 
     url NOT IN (SELECT DISTINCT url FROM clicks WHERE clicked_user_uuid = ?)
-    AND url != "${currentUrl}" 
+    AND url != ?  
     AND kategori = ?
-    ORDER BY id DESC LIMIT ?`, [...urls, id, category, num]);
+    ORDER BY id DESC LIMIT ?`, [...urls, id, currentUrl, category, num]);
     
     return randomRows;
 }
@@ -613,10 +648,10 @@ async function getClickedArticles(connection, id, num, rows) {
     SELECT DISTINCT url 
     FROM clicks 
     WHERE clicked_user_uuid = ?) AND m.url NOT IN (${placeholders}) 
-    AND m.url != "${currentUrl}"
+    AND m.url != ?
     GROUP BY m.url 
     ORDER BY clickCount DESC 
-    LIMIT ?`, [id, ...urls, num]);
+    LIMIT ?`, [id, ...urls, currentUrl, num]);
     
     return randomRows;
 }
@@ -630,8 +665,8 @@ async function setArticleTo(connection, rows, num) {
     SELECT url, baslik, resimYolu, SUBSTRING(paragraf, 1, 100) as paragraf
     FROM makaleler 
     WHERE url NOT IN (${placeholders}) 
-    AND url != "${currentUrl}"
-    ORDER BY id DESC LIMIT ?`, [...urls, num]);
+    AND url != ?
+    ORDER BY id DESC LIMIT ?`, [...urls, currentUrl, num]);
 
     return randomRows;
 }
