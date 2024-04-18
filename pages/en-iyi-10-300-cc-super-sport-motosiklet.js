@@ -2,10 +2,13 @@ import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi300ccSuperMain({topCPO}) {
+
+  //! A2 sınıfı ehliyet gerekiyor, bu ehliyeti alabilmek için minimum 18 yaşında olmak gerekiyor.
+
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-300-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 300 CC Super Sport Motosiklet";
-  const metin = "Supersport motosikletler, genellikle onları sürmenin kendine has bir stil ve tecrübe gerektirdiği bir araç kategorisidir. 300cc'lik motorlar, genellikle orta seviye sürücüler için idealdir ve yeni başlayanlar için bile uygun olabilir. Tasarım, performans, kullanılabilirlik ve fiyat gibi kritik faktörleri değerlendirerek, bu segmentteki en iyi seçenekleri belirledik. Motosiklet dünyasının estetik ve performans harmanını sunan supersport kategorisi, motor sporlarına olan tutkunuzu kesinlikle alevlendirecek. Makalemizin devamında, her bir motosikletin detaylı incelemesini ve benzersiz özelliklerini bulabilirsiniz. Sizleri, 300cc süpersport motosikletlerin hızlı, estetik ve heyecan verici dünyasına davet ediyoruz.";
+  const metin = "Supersport motosikletler, genellikle onları sürmenin kendine has bir stil ve tecrübe gerektirdiği bir araç kategorisidir. 300 cc lik motorlar, genellikle orta seviye sürücüler için idealdir ve yeni başlayanlar için bile uygun olabilir. Tasarım, performans, kullanılabilirlik ve fiyat gibi kritik faktörleri değerlendirerek, bu segmentteki en iyi seçenekleri belirledik. 300 cc motor kaç basar? Üzerindeki ağırlığa ve üreticiye göre değişmekle birlikte 300 cc motor kaç km hız yapar sorusunun cevabı ortalama 160 km/s olarak cevaplanabilir. Motosiklet dünyasının estetik ve performans harmanını sunan supersport kategorisi, motor sporlarına olan tutkunuzu kesinlikle alevlendirecek. 300 cc motor ehliyeti alabilmek için şartların ve ehliyetin sınıfından bahsedelim. Minimum 18 yaşında ve minimum A2 ehliyetine sahip olmanız gerekmektedir. Şimdi sizleri, 300 cc süpersport motosikletlerin hızlı, estetik ve heyecan verici dünyasına davet ediyoruz. Hadi birlikte 300 cc motor modellerini incelemeye başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +25,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
       "name": "TVS Apache RR 310",
       "image": "/images/motosiklet/tvs_apache_rr_310.png",
       "ozellikler": {
+        "TVS Apache RR 310 özellikleri": "",
           "Ülke": "Hindistan",
           "Firma": "TVS Motor Company",
           "Tip": "Supersport",
@@ -40,6 +44,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
       "name": "CFMoto 300SR",
       "image": "/images/motosiklet/cfmoto_300sr.jpg",
       "ozellikler": {
+        "CFMoto 300SR özellikleri": "",
           "Ülke": "Çin",
           "Firma": "CFMoto",
           "Tip": "Supersport",
@@ -58,6 +63,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Benelli Tornado 302R",
     "image": "/images/motosiklet/benelli_302r.png",
     "ozellikler": {
+      "Benelli Tornado 302R özellikleri": "",
         "Firma": "Benelli",
         "Tip": "Supersport",
         "Motor Hacmi": "300 cc",
@@ -76,6 +82,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Hyosung GT300R",
     "image": "/images/motosiklet/hyosung_gt_300r.png",
     "ozellikler": {
+      "Hyosung GT300R özellikleri": "",
         "Firma": "Hyosung",
         "Tip": "Supersport",
         "Motor Hacmi": "300 cc",
@@ -94,6 +101,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Kawasaki Ninja 400",
     "image": "/images/motosiklet/kawasaki_ninja_400.png",
     "ozellikler": {
+      "Kawasaki Ninja 400 özellikleri": "",
         "Firma": "Kawasaki",
         "Tip": "Supersport",
         "Motor Hacmi": "399 cc",
@@ -104,7 +112,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "14 Litre"
     },
-    "paragraf": "Hyosung GT300R, Güney Kore'nin otomotiv endüstrisinden çıkma, sportif tasarımı ve kompakt yapısıyla dikkat çeker. Motorun düşük ve orta devir performansı tatminkar, yüksek devirlerde ise motorun canlılığı hissedilir. Yol tutuşu sağlam, fren performansı ise ortalamanın üzerinde. Gidonun pozisyonu ve hassasiyeti, virajlarda rahat manevralar yapmanıza olanak tanır. Ağırlığı, motorun stabilitesini artırır, fakat hızlanma ve manevra kabiliyetini biraz kısıtlar. Hyosung GT300R, uygun fiyatlı ve performans odaklı bir süpersport motosiklet arayanlar için cazip bir seçenek sunar."
+    "paragraf": "Kawasaki Ninja 400, küçük kardeşi 300 cc lik versiyonuna nazaran biraz daha fazla güç isteyen güç ve hız tutkunları için iyi bir seçenek oluyor. Motorun düşük devir performansı küçük kardeşi gibi başarılı ama yüksek devirlerde tarifi olmayan bir şeye dönüşüyor. Şekli şemalı güzel ama plastik parçalar nedense yerine tam oturmamış gibi, parmağınız ile hafifçe itince her parçası oynuyor. Frenler küçük kardeşine kısayla ilginç bir şekilde o kadar iyi değil(belki plastik parçalarının oynaması bana öyle hissettirmiş olabilir). Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda ve ani manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış ve bu da motorun manevra kabiliyetini artırır. Kawasaki Ninja 300, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip ama tasarım konusunda ve hissiyat konusunda küçük kardeşinden yukarı konuma yerleştirdik."
   },
   {
     "num": "5",
@@ -112,6 +120,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Kawasaki Ninja 300",
     "image": "/images/motosiklet/kawasaki_ninja_300.png",
     "ozellikler": {
+      "Kawasaki Ninja 300 özellikleri": "",
         "Firma": "Kawasaki",
         "Tip": "Supersport",
         "Motor Hacmi": "300 cc",
@@ -122,7 +131,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "17 Litre"
     },
-    "paragraf": "Kawasaki Ninja 300, Japonya'nın mühendislik mirasını yansıtan, sportif ve aerodinamik tasarımıyla göz doldurur. Motorun düşük devir performansı başarılı, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda ve ani manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış ve bu da motorun manevra kabiliyetini artırır. Kawasaki Ninja 300, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip."
+    "paragraf": "Kawasaki Ninja 300, Japonya'nın mühendislik mirasını yansıtan, sportif ve aerodinamik tasarımıyla göz doldurur. 300 cc Kawasaki motor düşük devir performansı başarılı, yüksek devirlerde ise canlı ve atak. Yol tutuşu mükemmel, frenler etkili ve dozajlı. Gidon hassasiyeti ve ergonomik pozisyonu, virajlarda ve ani manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış ve bu da motorun manevra kabiliyetini artırır. Kawasaki Ninja 300, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde önemli bir yere sahip."
   },
   {
     "num": "4",
@@ -130,6 +139,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Honda CBR300R",
     "image": "/images/motosiklet/honda_cbr_300r.png",
     "ozellikler": {
+      "Honda CBR300R özellikleri": "",
         "Firma": "Honda",
         "Tip": "Supersport",
         "Motor Hacmi": "300 cc",
@@ -148,6 +158,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "KTM RC 390",
     "image": "/images/motosiklet/ktm_rc_390.png",
     "ozellikler": {
+      "KTM RC 390 özellikleri": "",
         "Firma": "KTM",
         "Tip": "Supersport",
         "Motor Hacmi": "373 cc",
@@ -166,6 +177,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "BMW G310RR",
     "image": "/images/motosiklet/bmw_g310_rr.png",
     "ozellikler": {
+      "BMW G310RR özellikleri": "",
         "Firma": "BMW",
         "Tip": "Supersport",
         "Motor Hacmi": "313 cc",
@@ -184,6 +196,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
     "name": "Yamaha YZF-R3",
     "image": "/images/motosiklet/yamaha_yzf_r3.png",
     "ozellikler": {
+      "Yamaha YZF-R3 özellikleri": "",
         "Firma": "Yamaha",
         "Tip": "Supersport",
         "Motor Hacmi": "321 cc",
@@ -194,7 +207,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "14 Litre"
     },
-    "paragraf": "Yamaha YZF-R3, Japonya'nın mühendislik ustalığı ve estetik anlayışını mükemmel bir şekilde birleştiriyor. Motorun düşük devir performansı tatminkar, yüksek devirlerde ise canlı ve atak. Yol tutuşu etkileyici, frenler dozajlı ve etkili. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini artırır. Yamaha YZF-R3, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde rekabetçi ve popüler bir seçenek. Genç ve deneyimli sürücüler arasında popüler bir seçenektir. Her sürüşte yanınızda olacak bir arkadaş gibi, güvenilirliği ve dayanıklılığı ile bilinir. Ek olarak, Yamaha'nın geniş servis ve yedek parça ağı, bu modeli uzun vadede de cazip kılar. Her açıdan Yamaha YZF-R3, süpersport motosiklet segmentinde kendine sağlam bir yer bulmuş durumda."
+    "paragraf": "Ülkemize yakın zamanda gelmesi planlanan R25'ten sonra başka bir şaheser daha. Yamaha YZF-R3, 300 cc racing motorları arasında R25'ten sonra en popüler motosikletlerden biri. Japonya'nın mühendislik ustalığı ve estetik anlayışını mükemmel bir şekilde birleştiriyor. Yamaha 300 cc motoru düşük devir performansı tatminkar, yüksek devirlerde ise canlı ve atak. Yol tutuşu etkileyici, frenler dozajlı ve etkili. Gidonun hassasiyeti, virajlarda ve hızlı manevralarda sürücüye güven verir. Ağırlığı dengeli dağıtılmış, bu da motorun manevra kabiliyetini artırır. Yamaha YZF-R3, estetik tasarımı, üstün performansı ve mükemmel yol tutuşu ile 300cc süpersport segmentinde rekabetçi ve popüler bir seçenek. Genç ve deneyimli sürücüler arasında popüler bir seçenektir. Her sürüşte yanınızda olacak bir arkadaş gibi, güvenilirliği ve dayanıklılığı ile bilinir. Ek olarak, Yamaha'nın geniş servis ve yedek parça ağı, bu modeli uzun vadede de cazip kılar. Her açıdan Yamaha YZF-R3, süpersport motosiklet segmentinde kendine sağlam bir yer bulmuş durumda."
   }
   ];
 

@@ -5,7 +5,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-125-cc-scooter-motosiklet";
   const baslik = "En İyi 10 125 CC Scooter Motosiklet";
-  const metin = "Scooter motosikletler, şehir içi ulaşımda rahatlık ve konfor arayanlar için ideal bir seçenektir. Küçük boyutları sayesinde scooterlar yoğun trafikte rahat hareket edebilme ve park sorununu minimalize edebilme avantajları sunar. 100cc ve 125cc motor hacmine sahip scooter modelleri ise, hem yeni başlayanlar hem de deneyimli sürücüler için uygun bir seçim olabilir. Bu motor hacimleri, günlük şehir içi kullanım için yeterli performansı, ekonomik yakıt tüketimini ve düşük bakım maliyetlerini bir araya getirir. 100cc ve 125cc scooterlar, genelde LED farlar, dijital gösterge panelleri, geniş depolama alanları ve modern güvenlik özellikleri gibi konfor ve fonksiyonellik özellikleri sunar. Ayrıca, bu hacimdeki scooterlar genellikle uygun fiyatlı seçenekler sunar, bu da onları gençler, öğrenciler ve bütçesini düşünen sürücüler için cazip kılar. İşte karşınızda, Türkiye'deki en popüler 10 adet 125cc ve 100cc scooter modeli. Listemize başlayalım!";
+  const metin = "Scooter motosikletler, şehir içi ulaşımda rahatlık ve konfor arayanlar için ideal bir seçenektir. En iyi 125 cc scooter motor modellerini sizin için derledik. 125 cc scooter önerisi olarak birden fazla seçenek sunulabilir. Bunlar arasında en popüler olanlar(tahmin edebileceğiniz gibi) 125 cc scooter honda ve 125 cc scooter yamaha. Motosiklet piyasasını domine eden bu iki firma gerçekten diğer motosiklet kategorilerinde olduğu gibi scooter kategorisinde de güzel işler çıkarmışlar. Ama yinede Honda scooter modeli ile Yamaha scooter modeli dışındaki scooter önerilerimizi bakmanızı tavsiye ediyoruz. Fiyat ve tasarım olarak bu iki devden daha iyi bir seçenek bulabilirsiniz. Aşağıdaki listedeki scooterlar küçük boyutları sayesinde yoğun trafikte rahat hareket edebilme ve park sorununu minimalize edebilme avantajları sunar. 100cc ve 125cc motor hacmine sahip scooter modelleri ise, hem yeni başlayanlar hem de deneyimli sürücüler için uygun bir seçim olabilir. Bu motor hacimleri, günlük şehir içi kullanım için yeterli performansı, ekonomik yakıt tüketimini ve düşük bakım maliyetlerini bir araya getirir. 100cc ve 125cc scooterlar, genelde LED farlar, dijital gösterge panelleri, geniş depolama alanları ve modern güvenlik özellikleri gibi konfor ve fonksiyonellik özellikleri sunar. Ayrıca, bu hacimdeki scooterlar genellikle uygun fiyatlı seçenekler sunar, bu da onları gençler, öğrenciler ve bütçesini düşünen sürücüler için cazip kılar. Genç demişken 125 cc motor hacmine sahip bir scooter kullanabilmek için yaş sınırı 16 ve A1 sınıfı bir ehliyete sahip olmanız gerekir. Bu açıklamadan sonra şimdi, Türkiye'deki en popüler 10 adet 125cc ve 100cc scooter modeli listemize başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "scooter"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Hero Pleasure 100",
         "image": "/images/motosiklet/hero_pleasure_100.png",
         "ozellikler": {
+            "Hero Pleasure 100 özellikleri": "",
             "Ülke": "Hindistan",
             "Firma": "Hero",
             "Tip": "Scooter",
@@ -40,6 +41,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Honda Activa 100",
         "image": "/images/motosiklet/honda_activa_100.png",
         "ozellikler": {
+            "Honda Activa 100 özellikleri": "",
             "Ülke": "Japonya",
             "Firma": "Honda",
             "Tip": "Scooter",
@@ -58,6 +60,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "TVS Wego 110",
         "image": "/images/motosiklet/tvs_wego_110.png",
         "ozellikler": {
+            "TVS Wego 110 özellikleri": "",
             "Ülke": "Hindistan",
             "Firma": "TVS",
             "Tip": "Scooter",
@@ -76,6 +79,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "TVS Jupiter 125",
         "image": "/images/motosiklet/tvs_jupiter_125.png",
         "ozellikler": {
+            "TVS Jupiter 125 özellikleri": "",
             "Ülke": "Hindistan",
             "Firma": "TVS",
             "Tip": "Scooter",
@@ -94,6 +98,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     "name": "Suzuki Burgman Street 125 EX",
     "image": "/images/motosiklet/suzuki_burgman_street_125.png",
     "ozellikler": {
+        "Suzuki Burgman Street 125 EX özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Suzuki",
         "Tip": "Scooter",
@@ -104,7 +109,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "Ağırlık": "110 kg",
         "Yakıt Kapasitesi": "5.6 Litre"
     },
-    "paragraf": "Suzuki Burgman Street 125, premium scooter segmentinde yer alan bir modeldir ve geniş iç hacmi, konforlu sürüş pozisyonu ile dikkat çeker. Suzuki'nin Japon mühendisliği ve kalitesi, bu scooter modelini güvenilir ve dayanıklı bir seçenek haline getirir. LED farlar, dijital gösterge paneli ve geniş depolama alanı gibi modern özellikler, Suzuki Burgman Street 125'i hem fonksiyonel hem de estetik açıdan cazip bir seçenek haline getirir. 125 cc motor hacmi ve iyi tasarlanmış süspansiyon sistemi, hem şehir içi hem de şehirlerarası yolculuklar için uygun bir performans ve konfor sunar."
+    "paragraf": "125 cc suzuki scooter olarak karşımıza Suzuki Burgman Street 125 cc modeli çıkıyor. Premium scooter segmentinde yer alan bir modeldir ve geniş iç hacmi, konforlu sürüş pozisyonu ile dikkat çeker. Suzuki'nin Japon mühendisliği ve kalitesi, bu scooter modelini güvenilir ve dayanıklı bir seçenek haline getirir. LED farlar, dijital gösterge paneli ve geniş depolama alanı gibi modern özellikler, Suzuki Burgman Street 125'i hem fonksiyonel hem de estetik açıdan cazip bir seçenek haline getirir. 125 cc motor hacmi ve iyi tasarlanmış süspansiyon sistemi, hem şehir içi hem de şehirlerarası yolculuklar için uygun bir performans ve konfor sunar."
     },         
     {
         "num": "5",
@@ -112,6 +117,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Vespa LX 125",
         "image": "/images/motosiklet/vespa_lx_125.png",
         "ozellikler": {
+            "Vespa LX 125 özellikleri": "",
             "Ülke": "İtalya",
             "Firma": "Vespa",
             "Tip": "Scooter",
@@ -122,7 +128,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
             "Ağırlık": "114 kg",
             "Yakıt Kapasitesi": "7 Litre"
         },
-        "paragraf": "Vespa LX 125, İtalyan zarafeti ve tarihi ile tanınan Vespa'nın ikonik scooter modellerinden biridir. Klasik Vespa tasarımı ve yüksek kaliteli malzemeler, LX 125'i scooter pazarında benzersiz bir seçenek haline getirir. 125 cc motor hacmi ve iyi tasarlanmış süspansiyon sistemi, hem şehir içi hem de şehirlerarası sürüşler için uygun bir performans ve konfor sunar. Retro tasarımı ve premium kalite hissi, Vespa LX 125'i scooter meraklıları için cazip bir seçenek haline getirir. Ayrıca, bu modelde bulunan modern özellikler ve güvenlik sistemleri, günlük sürüş deneyimini daha güvenli ve keyifli hale getirir."
+        "paragraf": "Vespa LX 125, İtalyan zarafeti ve tarihi ile tanınan Vespa'nın ikonik scooter modellerinden biridir. 125 cc Vespa klasik Vespa tasarımı ve yüksek kaliteli malzemeler ile LX 125'i scooter pazarında benzersiz bir seçenek haline getirir. Vespa 125 cc motor hacmi ve iyi tasarlanmış süspansiyon sistemi, hem şehir içi hem de şehirlerarası sürüşler için uygun bir performans ve konfor sunar. Retro tasarımı ve premium kalite hissi, Vespa LX 125'i scooter meraklıları için cazip bir seçenek haline getirir. Ayrıca, bu modelde bulunan modern özellikler ve güvenlik sistemleri, günlük sürüş deneyimini daha güvenli ve keyifli hale getirir."
     },
     {
         "num": "4",
@@ -130,6 +136,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Aprilia SR GT 125",
         "image": "/images/motosiklet/aprilia_sr_gt_125.png",
         "ozellikler": {
+            "Aprilia SR GT 125 özellikleri": "",
             "Ülke": "İtalya",
             "Firma": "Aprilia",
             "Tip": "Scooter",
@@ -148,6 +155,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "TVS Ntorq 125",
         "image": "/images/motosiklet/tvs_ntorq_125.png",
         "ozellikler": {
+            "TVS Ntorq 125": "",
             "Ülke": "Hindistan",
             "Firma": "TVS",
             "Tip": "Scooter",
@@ -166,6 +174,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Yamaha Ray ZR 125",
         "image": "/images/motosiklet/yamaha_ray_zr_125.png",
         "ozellikler": {
+            "Yamaha Ray ZR 125": "",
             "Ülke": "Japonya",
             "Firma": "Yamaha",
             "Tip": "Scooter",
@@ -176,7 +185,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
             "Ağırlık": "99 kg",
             "Yakıt Kapasitesi": "5.2 Litre"
         },
-        "paragraf": "Yamaha Ray ZR 125, genç ve enerjik tasarımı ile dikkat çeken bir scooter modelidir. 125 cc motor hacmi, günlük sürüşler için yeterli performansı sunar. LED farlar, dijital gösterge paneli ve geniş depolama alanı gibi modern özellikler, RayZR 125'i hem pratik hem de estetik açıdan cazip bir seçenek haline getirir. Yamaha'nın Japon kalitesi ve mühendisliği, bu scooter'ı güvenilir ve dayanıklı bir seçenek yapar. Yumuşak süspansiyon sistemi ve konforlu koltuk, uzun süreli sürüşler için bile uygun bir konfor sunar. Ayrıca, ekonomik yakıt tüketimi ve düşük bakım maliyetleri, Yamaha RayZR 125'i uygun maliyetli bir scooter seçeneği haline getirir."
+        "paragraf": "Yamaha Ray ZR 125, genç ve enerjik tasarımı ile dikkat çeken bir scooter modelidir. Yamaha 125 cc scooter ile günlük sürüşler için yeterli performansı sunar. LED farlar, dijital gösterge paneli ve geniş depolama alanı gibi modern özellikler, RayZR 125'i hem pratik hem de estetik açıdan cazip bir seçenek haline getirir. Yamaha'nın Japon kalitesi ve mühendisliği, bu scooter'ı güvenilir ve dayanıklı bir seçenek yapar. Yumuşak süspansiyon sistemi ve konforlu koltuk, uzun süreli sürüşler için bile uygun bir konfor sunar. Ayrıca, ekonomik yakıt tüketimi ve düşük bakım maliyetleri, Yamaha RayZR 125'i uygun maliyetli bir scooter seçeneği haline getirir."
     },
     {
         "num": "1",
@@ -184,6 +193,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
         "name": "Honda Activa 125",
         "image": "/images/motosiklet/honda_activa_125.png",
         "ozellikler": {
+            "Honda Activa 125": "",
             "Ülke": "Japonya",
             "Firma": "Honda",
             "Tip": "Scooter",
@@ -194,7 +204,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
             "Ağırlık": "108 kg",
             "Yakıt Kapasitesi": "5.3 Litre"
         },
-        "paragraf": "Honda Activa 125, scooter segmentinin liderlerinden biri olarak bilinir ve güvenilirliği, düşük bakım maliyetleri ve mükemmel yakıt verimliliği ile tanınır. 125 cc motor hacmi, günlük şehir içi sürüşler için yeterli performans sunar. LED farlar, dijital gösterge paneli ve geniş bagaj alanı gibi özellikler, Honda Activa 125'i hem fonksiyonel hem de modern bir scooter haline getirir. Konforlu koltuk ve yumuşak süspansiyon sistemi, uzun süreli sürüşler için bile uygun bir konfor sunar. Honda'nın üstün Japon mühendisliği ve kalitesi, bu modeli scooter pazarında güvenilir ve tercih edilen bir seçenek yapar."
+        "paragraf": "Honda 125 cc scooter pazarında kendine en baş köşeyi almayı başarmış. Honda 125 cc motor modelleri arasında yedek parçanın ucuzluğu, sağlam malzemeler ve diğer bir çok özellik sayesinde sıranın ilk başında emin bir şekilde duruyor. Honda Activa 125, scooter segmentinin liderlerinden biri olarak bilinir ve güvenilirliği, düşük bakım maliyetleri ve mükemmel yakıt verimliliği ile tanınır. 125 cc motor hacmi, günlük şehir içi sürüşler için yeterli performans sunar. LED farlar, dijital gösterge paneli ve geniş bagaj alanı gibi özellikler, Honda Activa 125'i hem fonksiyonel hem de modern bir scooter haline getirir. Konforlu koltuk ve yumuşak süspansiyon sistemi, uzun süreli sürüşler için bile uygun bir konfor sunar. Honda'nın üstün Japon mühendisliği ve kalitesi, bu modeli scooter pazarında güvenilir ve tercih edilen bir seçenek yapar."
     }
     
   

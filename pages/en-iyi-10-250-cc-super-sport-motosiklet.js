@@ -5,7 +5,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-250-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 250 CC Super Sport Motosiklet";
-  const metin = "250cc'lik supersport motosikletler, hem performansları hem de estetik tasarımları ile genç ve enerjik sürücülerin ilgisini çekiyor. Estetik ve atik yapılarıyla, her bir virajda sizi motosiklet tutkunuzun yeni boyutlarına taşıyor. Bu makalemizde, piyasada bulabileceğiniz en iyi 10 250cc'lik supersport motosikleti derledik. İster şehir içinde hızlı manevralar, ister uzun yolda rüzgarla dans etmek olsun, bu motosikletler ile eğlenceyi hissedeceksiniz. Hangi modelin sizi en çok heyecanlandırdığını keşfedin!";
+  const metin = "250 lik supersport motosikletler, hem performansları hem de estetik tasarımları ile genç ve enerjik sürücülerin ilgisini çekiyor. Estetik ve atik yapılarıyla, her bir virajda sizi motosiklet tutkunuzun yeni boyutlarına taşıyor. Bu makalemizde, piyasada bulabileceğiniz en iyi 10 250 cc supersport motosikletleri derledik. 250 cc super sport motorlar ister şehir içinde hızlı manevralar, ister uzun yolda rüzgarla dans etmek olsun eğlenmek için birebir. 250 cc racing motorlar yapıları gereği rüzgarı delmeye daha müsaittir bu yapıları 250 cc supersport motorları sürenler için adeta bir yarış pistinde sürüyormuş havası verir. 250 cc motor önerileri sunduğumuz bu yazımızda super sport olanları sıraladık.  Hangi modelin sizi en çok heyecanlandırdığını 250 cc racing motor önerileri makalemizde karşılaştırma yaparak keşfedin. 250 cc motor önerilerine geçmeden önce 250 cc motor hangi ehliyet ile kullanılır? ve 250 cc motor ehliyeti kaç yaşında alınır? sorularını cevaplayalım. 250 cc motor hacmine sahip motosikletler için yasalar A2 ehliyeti ve 18 yaşını doldurmuş olmayı şart koşmaktadır. Bu soruları cevaplandırdığımıza göre hadi hemen yazımıza başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
       "name": "Daelim Roadwin 250",
       "image": "/images/motosiklet/daelim_roadwin_250.jpg",
       "ozellikler": {
+          "daelim roadwin 250 özellikleri": "",
           "Ülke": "Güney Kore",
           "Firma": "Daelim",
           "Tip": "Supersport",
@@ -40,6 +41,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
       "name": "Taro 250R",
       "image": "/images/motosiklet/taro_250r.png",
       "ozellikler": {
+          "taro 250 r özellikleri": "",
           "Ülke": "Çin",
           "Firma": "Yuki Motor",
           "Tip": "Supersport",
@@ -58,6 +60,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Megelli Sport 250 R",
     "image": "/images/motosiklet/megelli_sport_250_r.jpg",
     "ozellikler": {
+        "megelli sport 250 r özellikleri": "",
         "Ülke": "İngiltere",
         "Firma": "Megelli",
         "Tip": "Supersport",
@@ -76,6 +79,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
       "name": "Hyosung GD250R",
       "image": "/images/motosiklet/hyosung_gd250r.jpg",
       "ozellikler": {
+          "hyosung gd250r özellikleri": "",
           "Ülke": "Güney Kore",
           "Firma": "Hyosung",
           "Tip": "Supersport",
@@ -94,6 +98,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Suzuki GSX-250R",
     "image": "/images/motosiklet/suzuki_gsx_250r.jpg",
     "ozellikler": {
+        "suzuki 250 r özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Suzuki",
         "Tip": "Supersport",
@@ -112,6 +117,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "KTM RC 250",
     "image": "/images/motosiklet/ktm_rc_250.jpg",
     "ozellikler": {
+        "ktm rc 250 özellikleri": "",
         "Ülke": "Avusturya",
         "Firma": "KTM",
         "Tip": "Supersport",
@@ -130,6 +136,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Kawasaki Ninja 250SL",
     "image": "/images/motosiklet/kawasaki_ninja_250sl.png",
     "ozellikler": {
+        "kawasaki ninja 250 sl özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Kawasaki",
         "Tip": "Supersport",
@@ -148,6 +155,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Kawasaki Ninja 250R",
     "image": "/images/motosiklet/kawasaki_ninja_250r.jpg",
     "ozellikler": {
+        "kawasaki ninja 250 r özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Kawasaki",
         "Tip": "Supersport",
@@ -166,6 +174,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Honda CBR250R",
     "image": "/images/motosiklet/honda_cbr_250r.png",
     "ozellikler": {
+        "honda cbr 250 özellikleri": "",
         "Firma": "Honda",
         "Tip": "Supersport",
         "Motor Hacmi": "250 cc",
@@ -176,7 +185,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "13 Litre"
     },
-    "paragraf": "Japonya'da kurulmuş Japon otomotiv firmasının gözde ürünlerinden Honda CBR250R, güzel tasarımı ve performansına göre dengeli yakıt tüketimini bir araya getiriyor. Zarif tasarımı ve sportif hatları ile göz alıcı. Motor, düşük devirlerde bile tatminkar bir tork sunuyor, yüksek devirlerde ise adrenalinin doruklarına çıkıyor. Yol tutuşu, fren performansı ve süspansiyon sistemi, sürücüye tam bir kontrol ve güven duygusu sunuyor. Honda'nın bu zarif makinesi, günlük sürüşlerde konfor ve spor sürüşlerde performans arayanlar için ideal bir tercih. Her virajda ve düzlükte, CBR250R'nin sportif ruhu ve mühendislik harikası yapısı, sürücüyü motosiklet aşkının derinliklerine çekiyor."
+    "paragraf": "Honda 250 cc supersport Japonya'da kurulmuş Japon otomotiv firmasının gözde ürünlerinden Honda CBR250R, güzel tasarımı ve performansına göre dengeli yakıt tüketimini bir araya getirilmiş bir modeli. Zarif tasarımı ve sportif hatları ile göz alıcı. Motor, düşük devirlerde bile tatminkar bir tork sunuyor, yüksek devirlerde ise adrenalinin doruklarına çıkıyor. Yol tutuşu, fren performansı ve süspansiyon sistemi, sürücüye tam bir kontrol ve güven duygusu sunuyor. Honda'nın bu zarif makinesi, günlük sürüşlerde konfor ve spor sürüşlerde performans arayanlar için ideal bir tercih. Her virajda ve düzlükte, CBR250R'nin sportif ruhu ve mühendislik harikası yapısı, sürücüyü motosiklet aşkının derinliklerine çekiyor."
   },
   {
     "num": "1",
@@ -184,6 +193,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
     "name": "Yamaha YZF-R25",
     "image": "/images/motosiklet/yamaha_yzf_r25.jpg",
     "ozellikler": {
+        "yamaha r25 özellikleri": "",
         "Firma": "Yamaha",
         "Tip": "Supersport",
         "Motor Hacmi": "250 cc",
@@ -194,7 +204,7 @@ export default function Eniyi250ccSuperMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "14.3 Litre"
     },
-    "paragraf": "Bir Japon tasarım harikası, motosiklet mi müzik aleti mi anlaması zor Yamaha YZF-R25, spor motosiklet dünyasının kalbinde yer alıyor. Sadece gözleri değil, kalbi de fetheden bir motosiklet. Her bir detayı, sürücüsüyle birlikte asfaltın üzerinde adeta bir simfoni oluşturuyor. Motor, düşük devirlerde bile canlılığını hissettiriyor, yüksek devirlerde ise adeta bir kartal gibi göğsünü kabartıyor. Yol tutuşu, fren performansı ve süspansiyon, sizi her anlamda destekliyor, her virajda sizinle birlikte nefes alıyor. Yamaha'nın bu başyapıtı, sadece yol tutuşu ve performansı ile değil, aynı zamanda estetik tasarımı ve mühendislik harikası yapısı ile de sürücülerin kalbinde taht kuruyor. Yamaha YZF-R25 ile asfaltın her bir karışını hissederken, motosiklet tutkunuzun sınırlarını zorlayacaksınız."
+    "paragraf": "Bir Japon tasarım harikası, motosiklet mi müzik aleti mi anlaması zor Yamaha YZF-R25 kısa adıyla R25. Herkesin en az bir kere gördüğü veya duyduğu bu spor motosiklet, 250 cc motor önerilerinin kalbinde yer alıyor.Yamaha 250 cc supersport modeli ile sadece gözleri değil, kalbi de fetheden bir motosiklet. Her bir detayı, sürücüsüyle birlikte asfaltın üzerinde adeta bir simfoni oluşturuyor. Yamaha 250 cc racing kategorisinde tartışılmaz bir konuma sahip, bu motosiklet düşük devirlerde bile canlılığını hissettiriyor, yüksek devirlerde ise gönülde tarifi olmayan bir duygu oluşturuyor. Yol tutuşu, fren performansı ve süspansiyon, sizi her anlamda destekliyor, her virajda sizinle birlikte nefes alıyor. Yamaha'nın bu başyapıtı, sadece yol tutuşu ve performansı ile değil, aynı zamanda estetik tasarımı ve mühendislik harikası yapısı ile de sürücülerin kalbinde yerini çoktan almış durumda. Bu kadar övgüden sonra şunu eklemem gerek: oturma yeri sert ve genişliğini ufak buldum ama ilginç bir şekilde oturma pozisyonu üzerine yatmayı gerektirmiyor daha rahat bir oturuş pozisyonu sunuyor. Hem gözünüze hem sürüş keyfinize etkisi çok yüksek olan bu motosiklet 1. sıradan hiç düşeceğe benzemiyor."
   }
   ];
 

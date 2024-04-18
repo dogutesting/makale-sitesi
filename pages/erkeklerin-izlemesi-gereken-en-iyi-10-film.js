@@ -6,7 +6,7 @@ export default function MansNeedWatch({topCPO}) {
   //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
   const url = "erkeklerin-izlemesi-gereken-en-iyi-10-film";
   const baslik = "Erkeklerin İzlemesi Gereken En İyi 10 Film";
-  const metin = "2023 yılında erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş bu filmler, size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken, karakter oluşturma yolculuğunda rehber olabilecek 10 film.";
+  const metin = "erkeklerin izlemesi gereken 10 filmi sizler için derledik. Gerçek bir erkeğe dönüşmekte size yardımcı olacak bu filmlere göz atın. Eğer karşılaştığınız zorluklar ve duygusal fırtınalar karşısında sarsılmaz bir karakter oluşturma hedefiniz varsa, doğru yerdesiniz. Erkekliğin ve karakterin derinliklerine dalmak isteyenler için özenle seçilmiş erkeklerin izlemesi gereken filmler listemiz size ilham verecektir. İşte erkeklerin mutlaka izlemesi gereken filmler size karakter oluşturma yolculuğunda rehber olabilecek 10 erkek filmleri.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["erkek", "erkekler", "filmi", "filmler", "2023", "adam"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "film"; //türkce karakter olmasin
@@ -175,7 +175,7 @@ export default function MansNeedWatch({topCPO}) {
         "Oyuncular":["Tim Robbins", "Morgan Freeman"],
         "Yönetmen":"Frank Darabont",
       },
-      "paragraf": "<Link href='/en-iyi-10-1000-cc-naked-motosiklet'>HASHA</Link> <Link href='/stephen-king-en-iyi-10-kitap-ve-sinema-uyarlamalari' title='Stephen King'in En İyi 10 Kitabı Ve Bu Kitapların Sinema Uyarlamaları'>Stephen King</Link>'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor."
+      "paragraf": "Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor."
     }
   ];
 

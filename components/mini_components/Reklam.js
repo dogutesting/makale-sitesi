@@ -4,7 +4,7 @@ export default function Reklam() {
   //! Sayfayı terk etmesini engellemek için madde 3'ten önce veya sonra ilgisini çekebilecek yeni makaleye yönlendirilebilir.
   return (
     <section>
-        Reklam bileşeni
+        {/* Reklam bileşeni */}
     </section>
   )
 }

@@ -9,7 +9,7 @@ import { useState } from "react";
 
 const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor}) => {
   const { baslik, description, keywordsArray, ana_resim,
-     url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray  } = articleConstructor;
+     url, jsonList, addDate, okunmaSuresi, kategori, metin, jsonContentArray, bitis_metin=null  } = articleConstructor;
 
     const [bottomChecker, setBottomChecker] = useState(false);
 
@@ -40,6 +40,8 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
 
           <Ens_all jsonContentArray={jsonContentArray} sayfaUrl={url}
            kategori={kategori} currentPageOperations={currentPageOperations} setBottomChecker={setBottomChecker}/>
+
+          {bitis_metin && <p className='end_text'>{bitis_metin}</p>}
         </article>
 
         <OtherContents currentUrl={url} bottomChecker={bottomChecker}/>

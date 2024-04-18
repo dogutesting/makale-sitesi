@@ -5,7 +5,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
     //#region SAYFA TEXT TANIMLAMALARI
     const url = "en-iyi-10-125-cc-naked-motosiklet";
     const baslik = "En İyi 10 125 CC Naked Motosiklet";
-    const metin = "125cc'lik motosikletler, özellikle yeni sürücüler ve gençler için cazip bir seçenek sunar. Hem ekonomik hem de çevik olan bu motosikletler, sürücülerine trafikte kolay manevra kabiliyeti ve sürüş esnekliği sunar. Naked tasarımı, bu kategoriyi daha da çekici kılar; minimal karoseri ve sade tasarım, motosikletin hafifliğini ve atikliğini vurgular. Naked 125cc motosikletler, şehir içi trafikte mükemmel performans sergilerken, aynı zamanda sürücülerine rüzgarla bütünleşme ve doğal bir sürüş deneyimi sunar. Bu motosikletler, genç sürücülerin yanı sıra kısıtlı bir bütçesi olan yetişkinler için de idealdir. Bu makalede, bu kategorideki en popüler 10 modeli derinlemesine inceleyeceğiz. Hangi modelin sizin için en uygun olduğunu belirlemek ve 125cc naked motosikletlerin sunduğu benzersiz deneyimi daha iyi anlamak için okumaya devam edin!";
+    const metin = "125cc'lik motosikletler, özellikle yeni sürücüler ve gençler için cazip bir seçenek sunar. Sizlere 125 cc motor modelleri arasından naked tasarıma sahip 125 cc motor tavsiyesi sunacağız. Naked tasarımdan kastımız önü açık yani bu yazımızı 125 cc önü açık motorlar olarakta algılayabilirsiniz. Hem ekonomik hem de çevik olan bu motosikletler, sürücülerine trafikte kolay manevra kabiliyeti ve sürüş esnekliği sunar. Aynı zamanda 125 cc motor maksimum hızı 100 km/s çok aşmadığı için yeni başlayanlar için uygundur. Peki 125 cc ne kadar yakar? Motor hacmi çok yüksek olmadığı için 125 cc motosikletler ortalama 100 kilometrede 3 litre yakar. Tabii bu değer fabrika tarafından söylenen değerdir. Naked tasarımı, bu motorları daha da çekici kılar; minimal ön gövde ve sade tasarım, motosikletin hafifliğini ve atikliğini arttırır. 125 cc motor ehliyeti yaş sınırı 16 ve ehliyeti A1 grubudur. Naked 125cc motosikletler, şehir içi trafikte mükemmel performans sergilerken, aynı zamanda yeni başlayan sürücüler için öğrenme fırsatı sunar. Bu motosikletler, genç sürücülerin yanı sıra kısıtlı bir bütçesi olan yetişkinler için de idealdir. Bu makalede, bu kategorideki en popüler 10 modeli derinlemesine inceleyeceğiz. Hangi modelin sizin için en uygun olduğunu belirlemek ve 125cc naked motosikletlerin sunduğu benzersiz deneyimi daha iyi anlamak için okumaya devam edin!";
     const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
     const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
     const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Lexmoto LXR 125 SE",
             "image": "/images/motosiklet/lexmoto_ls_n_125.png",
             "ozellikler": {
+                "lexmoto lxr 125 se özellikleri": "",
                 "Ülke": "Çin",
                 "Firma": "Lexmoto",
                 "Tip": "Naked",
@@ -40,6 +41,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Keeway RKF 125",
             "image": "/images/motosiklet/keeway_rkf_125.jpg",
             "ozellikler": {
+                "Keeway RKF 125 özellikleri": "",
                 "Ülke": "Çin",
                 "Firma": "Keeway",
                 "Tip": "Naked",
@@ -58,6 +60,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Husqvarna Svartpilen 125",
             "image": "/images/motosiklet/husqvarna_svartpilen_125.png",
             "ozellikler": {
+                "Husqvarna Svartpilen 125 özellikleri": "",
                 "Ülke": "İsveç",
                 "Firma": "Husqvarna",
                 "Tip": "Naked",
@@ -76,6 +79,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Kawasaki Z125",
             "image": "/images/motosiklet/kawasaki_z125.png",
             "ozellikler": {
+                "Kawasaki Z125 özellikleri": "",
                 "Ülke": "Japonya",
                 "Firma": "Kawasaki",
                 "Tip": "Naked",
@@ -94,6 +98,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Benelli TNT 125",
             "image": "/images/motosiklet/benelli_tnt_125.png",
             "ozellikler": {
+                "Benelli TNT 125 özellikleri": "",
                 "Ülke": "İtalya",
                 "Firma": "Benelli",
                 "Tip": "Naked",
@@ -112,6 +117,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Aprilia Tuono 125",
             "image": "/images/motosiklet/aprilia_tuono_125.png",
             "ozellikler": {
+                "Aprilia Tuono 125 özellikleri": "",
                 "Ülke": "İtalya",
                 "Firma": "Aprilia",
                 "Tip": "Naked",
@@ -130,6 +136,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Suzuki GSX-S125",
             "image": "/images/motosiklet/suzuki_gsx_s125.png",
             "ozellikler": {
+                "Suzuki GSX-S125 özellikleri": "",
                 "Ülke": "Japonya",
                 "Firma": "Suzuki",
                 "Tip": "Naked",
@@ -148,6 +155,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Honda CB125R",
             "image": "/images/motosiklet/honda_cb125r.png",
             "ozellikler": {
+                "Honda CB125R özellikleri": "",
                 "Ülke": "Japonya",
                 "Firma": "Honda",
                 "Tip": "Naked",
@@ -158,7 +166,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
                 "Ağırlık": "126 kg",
                 "Yakıt Kapasitesi": "10.1 Litre"
             },
-            "paragraf": "Japonya'nın prestijli motosiklet üreticilerinden Honda'nın CB125R modeli, modern tasarımı ve sağlam yapı kalitesi ile öne çıkar. Bu model, genç ve yeni sürücüler için mükemmel bir başlangıç motosikletidir. Küçük motor hacmi ve hafifliği sayesinde, CB125R şehir içinde rahat bir sürüş deneyimi sunar. Motorun düşük devirlerde bile iyi bir tork üretmesi ve yakıt verimliliği, bu motosikleti hem eğlenceli hem de ekonomik bir seçenek haline getirir. Frenleri güçlü ve süspansiyon sistemi konforludur, bu da Honda CB125R'yi genç sürücüler için güvenli ve kullanıcı dostu bir seçenek haline getirir."
+            "paragraf": "125 cc honda motor modelleri arasında CBR 125, en az CBR 250 kadar popülerdir. 125 cc honda motora sahip olan ve Japonya'nın prestijli motosiklet üreticilerinden Honda'nın CB125R modeli, sağlam yapı kalitesi ile öne çıkar. Bu model, genç ve yeni sürücüler için mükemmel bir başlangıç motosikletidir. Küçük motor hacmi ve hafifliği sayesinde, CB125R şehir içinde rahat bir sürüş deneyimi sunar. Motorun düşük devirlerde bile iyi bir tork üretmesi ve yakıt verimliliği, bu motosikleti hem eğlenceli hem de ekonomik bir seçenek haline getirir. Frenleri güçlü ve süspansiyon sistemi konforludur, bu da Honda CB125R'yi genç sürücüler için güvenli ve kullanıcı dostu bir seçenek haline getirir."
         },
         {
             "num": "2",
@@ -166,6 +174,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "KTM 125 Duke",
             "image": "/images/motosiklet/ktm_125_duke.png",
             "ozellikler": {
+                "KTM 125 Duke özellikleri": "",
                 "Ülke": "Avusturya",
                 "Firma": "KTM",
                 "Tip": "Naked",
@@ -184,6 +193,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
             "name": "Yamaha MT-125",
             "image": "/images/motosiklet/yamaha_mt_125.png",
             "ozellikler": {
+                "Yamaha MT-125 özellikleri": "",
                 "Ülke": "Japonya",
                 "Firma": "Yamaha",
                 "Tip": "Naked",
@@ -194,7 +204,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
                 "Ağırlık": "140 kg",
                 "Yakıt Kapasitesi": "11.5 Litre"
             },
-            "paragraf": "Japon motosiklet üreticisi Yamaha'nın MT serisinin 125cc'lik üyesi MT-125, genç ve enerjik sürücüler için mükemmel bir seçenektir. Zarif tasarımı ve yüksek kaliteli işçiliği ile dikkat çeker. MT-125, düşük ağırlığı ve kompakt boyutları sayesinde şehir içinde oldukça kullanışlıdır. Motorun düşük ve orta devirlerde bile sağladığı etkileyici tork ve gaz tepkisi, sürücüye güçlü bir performans sunar. MT-125, genç ve enerjik sürücülerin yanı sıra, 125cc sınıfına yeni girenler için de mükemmel bir tercihtir. İdeal boyutları, konforlu sürüş pozisyonu ve mükemmel fren performansı ile Yamaha MT-125, bu sınıftaki en iyi motosikletlerden biridir."
+            "paragraf": "Yamaha 125 cc motorlar arasında kendisine baş köşeyi kapmayı bu minik canavar ile başardı. Diğer bir adıyla mt 125 Yamaha'nın en sevilen modellerinden biridir. Japon motosiklet üreticisi Yamaha'nın MT serisinin 125cc'lik üyesi MT-125, genç ve enerjik sürücüler için mükemmel bir seçenektir. Zarif tasarımı ve yüksek kaliteli işçiliği ile dikkat çeker. MT-125, düşük ağırlığı ve kompakt boyutları sayesinde şehir içinde oldukça kullanışlıdır. Motorun düşük ve orta devirlerde bile sağladığı etkileyici tork ve gaz tepkisi, sürücüye güçlü bir performans sunar. MT-125, genç ve enerjik sürücülerin yanı sıra, 125 cc yamaha motor sınıfına yeni girenler için de mükemmel bir tercihtir. İdeal boyutları, konforlu sürüş pozisyonu ve mükemmel fren performansı ile Yamaha MT-125, bu sınıftaki en iyi motosikletlerden biridir."
         }
     ];
 

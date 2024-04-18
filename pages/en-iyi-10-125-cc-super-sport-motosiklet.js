@@ -5,7 +5,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
   //#region SAYFA TANIMLAMALARI
   const url = "en-iyi-10-125-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 125 CC Super Sport Motosiklet";
-  const metin = "125cc'lik supersport motosikletler, motosiklet dünyasının heyecan verici bir bölümünü temsil eder. Hem yeni başlayanlar hem de genç sürücüler için tasarlanmış bu makineler, sürücülerine yarışçı ruhunu, hızı ve esnekliği ilk elden deneyimleme fırsatı sunar. Estetik tasarımları, aerodinamik yapıları ve sportif karakterleri, sürücülerini sıkı bir yol tutuşu ve duyarlı manevra kabiliyeti ile buluşturur. Özellikle genç ve enerjik sürücüler için tasarlanmış bu motosikletler, onlara sürüş becerilerini geliştirme ve motor sporlarına olan ilgilerini derinleştirme fırsatı verir. Ayrıca, bu segmentteki motosikletler genellikle ekonomik yakıt tüketimi ve uygun fiyatlı bakım maliyetleri sunarak, bütçe dostu bir sürüş deneyimi sağlar. 125cc'lik supersport motosikletlerin sunduğu bu eşsiz deneyimi yaşamak ve bu sınıfın en iyi modellerini keşfetmek adına, makalemizi okuyarak bu küçük canavarlar hakkında detaylı bilgi edinin.";
+  const metin = "125cc'lik supersport motosikletler, motosiklet dünyasının heyecan verici bir bölümünü temsil eder. Hem yeni başlayanlar hem de genç sürücüler için tasarlanmış bu makineler, sürücülerine yarışçı ruhunu, hızı ve esnekliği ilk elden deneyimleme fırsatı sunar. En iyi 125 cc supersport motorları sizler için derledik, bu yazımızı 125 cc motor tavsiyesi olarak kullanabilirsiniz. En iyi 125 cc motorlar kişiden kişiye farklılık göstereceğinin farkındayız o yüzden şimdiden sıralama konusunun birazda kişisel bir tercih olduğunun bilinmesini istiyoruz. Estetik tasarımları, aerodinamik yapıları ve sportif karakterleri işte bunlar racing motorların sürücülerine sunduğu özelliklerden bir kaçı. Özellikle 125 cc super sport motorlar genç ve enerjik sürücüler için tasarlanmıştır, onlara sürüş becerilerini geliştirme ve motor sporlarına olan ilgilerini derinleştirme fırsatı verir. En iyi 125 cc racing motorlarını listelerken acemi ve yarış tutkunu gençleri düşünmez isek olmaz. Bu segmentteki motosikletler genellikle ekonomik yakıt tüketimi ve uygun fiyatlı bakım maliyetleri sunarak, bütçe dostu bir sürüş deneyimi sağlar. 125 cc racing motorların sunduğu bu eşsiz deneyimin yanında 125 cc yarış motorları motor hacimlerinden dolayı genç sürücülerin racing motosiklet dünyasına atılması için gayet iyi bir tercih. Başlamadan önce 125 cc motor hacmine sahip bir motosiklet kullanabilmek için yaş sınırı 16 ve A1 sınıfı bir ehliyete sahip olmanız gerekmektedir. Şimdi sizler için derlediğimiz 125 cc racing motor önerilerine başlayabiliriz.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "125cc", "motosiklet", "super", "sport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Sinnis GPX 125",
           "image": "/images/motosiklet/sinnis_gpx_125.jpg",
           "ozellikler": {
+            "Sinnis GPX 125 özellikleri": "",
               "Ülke": "Birleşik Krallık",
               "Firma": "Sinnis",
               "Tip": "Super Sport",
@@ -32,7 +33,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "134 kg",
               "Yakıt Kapasitesi": "13.5 Litre"
           },
-          "paragraf": "Birleşik Krallık menşeili Sinnis, GP 125 modeli ile 125cc sınıfında rekabet ediyor. Bu model, 125cc'lik motor hacmi ve uygun fiyatı ile dikkat çekiyor. Sinnis GP 125, yeni başlayanlar için uygun, basit ve erişilebilir bir seçenek sunuyor. Hafifliği ve kompakt yapısı sayesinde kullanıcılarına rahat bir sürüş deneyimi sağlıyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi oldukça düşük ve bu da onu ekonomik bir seçenek haline getiriyor. Fakat, genel performansı ve donanımları daha pahalı ve premium modeller kadar tatmin edici değil."
+          "paragraf": "125 cc racing motor modellerine ilk olarak Birleşik Krallık menşeili Sinnis, GP 125 modeli ile başlayalım. Bu model, 125cc'lik motor hacmi ve uygun fiyatı ile dikkat çekiyor. Sinnis GP 125, yeni başlayanlar için uygun, basit ve erişilebilir bir seçenek sunuyor. Hafifliği ve kompakt yapısı sayesinde kullanıcılarına rahat bir sürüş deneyimi sağlıyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi oldukça düşük ve bu da onu ekonomik bir seçenek haline getiriyor. Fakat, genel performansı ve donanımları daha pahalı ve premium modeller kadar tatmin edici değil."
       },
       {
           "num": "9",
@@ -40,6 +41,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Lexmoto LXR 125",
           "image": "/images/motosiklet/lexmoto_lxr_125.png",
           "ozellikler": {
+            "Lexmoto LXR 125 özellikleri": "",
               "Ülke": "Birleşik Krallık",
               "Firma": "Lexmoto",
               "Tip": "Super Sport",
@@ -50,7 +52,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "142 kg",
               "Yakıt Kapasitesi": "13.8 Litre"
           },
-          "paragraf": "Birleşik Krallık'tan bir diğer 125cc süper sport motosiklet olan Lexmoto LXR 125, genç ve yeni başlayan sürücüler için tasarlanmış. Hem şehir içi hem de şehir dışı sürüşler için uygun olan LXR 125, hafifliği ve kolay manevra kabiliyeti ile biliniyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi konusunda oldukça ekonomik olan bu model, düşük maliyetli bir süper sport motosiklet arayanlar için ideal bir seçenek. Ancak, donanım ve performans açısından daha pahalı modellerle kıyaslandığında biraz daha sade bir profil çiziyor."
+          "paragraf": "125 cc yarış motoru listemizdeki bir sonraki sırada yine Birleşik Krallık'tan bir motosiklet var. 125cc süper sport motosiklet olan Lexmoto LXR 125, genç ve yeni başlayan sürücüler için tasarlanmış. Hem şehir içi hem de şehir dışı sürüşler için uygun olan LXR 125, hafifliği ve kolay manevra kabiliyeti ile biliniyor. Max hızı ve 0-100 km/s hızlanması, bu sınıfta beklenen performansı sunuyor. Yakıt tüketimi konusunda oldukça ekonomik olan bu model, düşük maliyetli bir süper sport motosiklet arayanlar için ideal bir seçenek. Ancak, donanım ve performans açısından daha pahalı modellerle kıyaslandığında biraz daha sade bir profil çiziyor."
       },
       {
           "num": "8",
@@ -58,6 +60,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Derbi GPR 125",
           "image": "/images/motosiklet/derbi_gpr_125.png",
           "ozellikler": {
+            "Derbi GPR 125 özellikleri": "",
               "Ülke": "İspanya",
               "Firma": "Derbi",
               "Tip": "Super Sport",
@@ -76,6 +79,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Aprilia Tuono 125",
           "image": "/images/motosiklet/aprilia_tuono_125.png",
           "ozellikler": {
+            "Aprilia Tuono 125 özellikleri": "",
               "Ülke": "İtalya",
               "Firma": "Aprilia",
               "Tip": "Super Sport",
@@ -94,6 +98,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Kawasaki Ninja 125",
           "image": "/images/motosiklet/kawasaki_ninja_125.png",
           "ozellikler": {
+            "Kawasaki Ninja 125 özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Kawasaki",
               "Tip": "Super Sport",
@@ -104,7 +109,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "148 kg",
               "Yakıt Kapasitesi": "11 Litre"
           },
-          "paragraf": "Japon motosiklet devi Kawasaki'nin genç ve yeni sürücüler için sunduğu Ninja 125, markanın prestijli Ninja serisinin küçük motorlu bir temsilcisidir. Sportif ve aerodinamik tasarımı sayesinde Ninja 125, genç sürücülerin dikkatini çekiyor ve onlara supersport motosiklet sürüş deneyimini yaşatmayı amaçlıyor. 125cc motor hacmi, Ninja 125'i günlük kullanım ve kısa mesafeli turlar için uygun kılar, aynı zamanda düşük yakıt tüketimi sayesinde ekonomik bir seçenek sunar. Motosiklet, rüzgarı kesen tasarımı ve sportif pozisyonu sayesinde hızlı sürüşlerde bile iyi bir yol tutuşu ve denge sunuyor. Frenleri güçlü ve etkili, bu da genç sürücülerin kendilerini güvende hissetmelerini sağlar. Kawasaki Ninja 125, genç sürücülerin supersport segmentine giriş yapmaları için uygun ve ekonomik bir seçenektir."
+          "paragraf": "Ülkemizde henüz olmamasına rağmen hem tasarım hem de özellik bakımından çok beğendiğim için bu motosikleti super sport motosiklet listesine koymak istedim. Japon motosiklet ve ağır sanayi devi Kawasaki'nin genç ve yeni sürücüler için sunduğu Ninja 125, markanın prestijli Ninja serisinin küçük motorlu bir temsilcisidir. Sportif ve aerodinamik tasarımı sayesinde Ninja 125, genç sürücülerin dikkatini çekiyor ve onlara supersport motosiklet sürüş deneyimini yaşatmayı amaçlıyor. 125cc motor hacmi, Ninja 125'i günlük kullanım ve kısa mesafeli turlar için uygun kılar, aynı zamanda düşük yakıt tüketimi sayesinde ekonomik bir seçenek sunar. Motosiklet, rüzgarı kesen tasarımı ve sportif pozisyonu sayesinde hızlı sürüşlerde bile iyi bir yol tutuşu ve denge sunuyor. Frenleri güçlü ve etkili, bu da genç sürücülerin kendilerini güvende hissetmelerini sağlar. Kawasaki Ninja 125, genç sürücülerin supersport segmentine giriş yapmaları için uygun ve ekonomik bir seçenektir."
       },
       {
           "num": "5",
@@ -112,6 +117,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Aprilia RS4 125",
           "image": "/images/motosiklet/aprilia_rs4_125.png",
           "ozellikler": {
+            "Aprilia RS4 125 özellikleri": "",
               "Ülke": "İtalya",
               "Firma": "Aprilia",
               "Tip": "Super Sport",
@@ -130,6 +136,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Suzuki GSX-R125",
           "image": "/images/motosiklet/suzuki_gsx_r125.png",
           "ozellikler": {
+            "Suzuki GSX R125 özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Suzuki",
               "Tip": "Super Sport",
@@ -148,6 +155,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "KTM RC 125",
           "image": "/images/motosiklet/ktm_rc_125.png",
           "ozellikler": {
+            "KTM RC 125 özellikleri": "",
               "Ülke": "Avusturya",
               "Firma": "KTM",
               "Tip": "Super Sport",
@@ -158,7 +166,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "135 kg",
               "Yakıt Kapasitesi": "10 Litre"
           },
-          "paragraf": "Avusturya'nın efsanevi motosiklet üreticisi KTM, RC 125 modeliyle genç ve yeni başlayan sürücüler için bir başlangıç seviyesi supersport motosikleti sunuyor. Motosikletin keskin ve agresif tasarımı, KTM'nin spor motosikletlerdeki uzmanlığını ve yarış DNA'sını yansıtıyor. 125cc motor hacmi, RC 125'i hem uygun fiyatlı hem de yakıt verimli kılıyor. Motosiklet, genç sürücülere sportif bir sürüş deneyimi sunarken, aynı zamanda kullanıcı dostu ve affedici bir sürüş karakteristiği sergiliyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar. Ayrıca, KTM RC 125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. RC 125, genç ve enerjik sürücüler için mükemmel bir seçenektir."
+          "paragraf": "125 cc motor modelleri racing kategorisinde agresifliği ile tanınan Avusturya'nın efsanevi motosiklet üreticisi KTM, RC 125 modeliyle genç ve yeni başlayan sürücüler için bir başlangıç seviyesi supersport motosikleti sunuyor. Motosikletin keskin ve agresif tasarımı, KTM'nin spor motosikletlerdeki uzmanlığını ve yarış DNA'sını yansıtıyor. 125cc motor hacmi, RC 125'i hem uygun fiyatlı hem de yakıt verimli kılıyor. Motosiklet, genç sürücülere sportif bir sürüş deneyimi sunarken, aynı zamanda kullanıcı dostu ve affedici bir sürüş karakteristiği sergiliyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar. Ayrıca, KTM RC 125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. RC 125, genç ve enerjik sürücüler için mükemmel bir seçenektir."
       },
       {
           "num": "2",
@@ -166,6 +174,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Honda CBR125R",
           "image": "/images/motosiklet/honda_cbr125r.png",
           "ozellikler": {
+            "Honda CBR 125R özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Honda",
               "Tip": "Super Sport",
@@ -176,7 +185,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "136.9 kg",
               "Yakıt Kapasitesi": "13 Litre"
           },
-          "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden biri olan Honda'nın CBR125R modeli, küçük motor hacmine rağmen heyecan verici bir sürüş deneyimi sunuyor. CBR125R, sürücülerine, kompakt boyutları ve hafifliği sayesinde, harika bir manevra kabiliyeti ve kolay kontrol imkanı tanır. Motosiklet, aerodinamik tasarımı ve sportif görünümü ile dikkat çekerken, performansı ve yakıt verimliliği ile de genç ve deneyimsiz sürücüler için ideal bir seçimdir. Honda'nın güvenilirliği ve dayanıklılığı, CBR125R'yi 125cc super sport motosiklet kategorisinde popüler bir seçenek haline getirir."
+          "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden biri olan Honda'nın CBR125R modeli, küçük motor hacmine rağmen heyecan verici bir sürüş deneyimi sunuyor. 125 cc motor modelleri Honda için gençlere ürünlerini göstermek için iyi bir platform. CBR125R, sürücülerine, kompakt boyutları ve hafifliği sayesinde, harika bir manevra kabiliyeti ve kolay kontrol imkanı tanır. Motosiklet, aerodinamik tasarımı ve sportif görünümü ile dikkat çekerken, performansı ve yakıt verimliliği ile de genç ve deneyimsiz sürücüler için ideal bir seçimdir. Honda'nın güvenilirliği ve dayanıklılığı, CBR125R'yi 125cc super sport motosiklet kategorisinde popüler bir seçenek haline getirir."
       },
       {
           "num": "1",
@@ -184,6 +193,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
           "name": "Yamaha YZF-R125",
           "image": "/images/motosiklet/yamaha_yzf_r125.png",
           "ozellikler": {
+            "Yamaha YZF R125 özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Yamaha",
               "Tip": "Super Sport",
@@ -194,7 +204,7 @@ export default function Eniyi125ccSuperMain({topCPO}) {
               "Ağırlık": "142 kg",
               "Yakıt Kapasitesi": "11.5 Litre"
           },
-          "paragraf": "Japonya'nın köklü motosiklet üreticisi Yamaha, YZF-R125 modeli ile genç ve yeni başlayan sürücüler için üstün bir giriş seviyesi supersport motosiklet sunuyor. YZF-R125'in keskin ve aerodinamik tasarımı, motosikletin sportif karakterini ve Yamaha'nın yarış DNA'sını vurguluyor. 125cc'lik motoru, iyi bir yakıt verimliliği ve yeterli bir performans sunarken, motosikletin kompakt boyutları ve hafif yapısı, yeni sürücüler için sürüşü kolay ve kontrol edilebilir kılıyor. YZF-R125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar, ve YZF-R125, genç sürücüler için güvenli ve eğlenceli bir sürüş deneyimi sunuyor. YZF-R125, sportif tasarımı, güvenilir performansı ve kullanıcı dostu sürüş karakteristikleri ile 125cc supersport segmentinde lider bir konumda bulunuyor."
+          "paragraf": "125 cc motor modelleri Yamaha olmadan olmaz. Japonya'nın köklü motosiklet üreticisi Yamaha, YZF-R125 modeli ile genç ve yeni başlayan sürücüler için üstün bir giriş seviyesi supersport motosiklet sunuyor. YZF-R125'in keskin ve aerodinamik tasarımı, motosikletin sportif karakterini ve Yamaha'nın yarış DNA'sını vurguluyor. 125cc'lik motoru, iyi bir yakıt verimliliği ve yeterli bir performans sunarken, motosikletin kompakt boyutları ve hafif yapısı, yeni sürücüler için sürüşü kolay ve kontrol edilebilir kılıyor. YZF-R125, genç sürücülerin sürüş becerilerini geliştirmeleri ve supersport motosiklet sürüşüne alışmaları için mükemmel bir platform sunuyor. Yol tutuşu ve fren performansı, bu segmentteki diğer motosikletlerle karşılaştırıldığında oldukça tatminkar, ve YZF-R125, genç sürücüler için güvenli ve eğlenceli bir sürüş deneyimi sunuyor. YZF-R125, sportif tasarımı, güvenilir performansı ve kullanıcı dostu sürüş karakteristikleri ile 125cc supersport segmentinde lider bir konumda bulunuyor."
       }
   ];
 

@@ -3,10 +3,12 @@ import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi1000ccNakedMain({topCPO}) {
 
+  //! A sınıfı ehliyet gerekiyor, bu ehliyeti alabilmek için minimum 20 yaşında olmak gerekiyor.
+
   //#region SAYFA TEXT DEĞERLERİ VE JSON+LD
   const url = "en-iyi-10-1000-cc-naked-motosiklet";
   const baslik = "En İyi 10 1000 CC Naked Motosiklet";
-  const metin = "1000cc sınıfı naked motosikletler, tecrübeli motosiklet sürücülerinin ellerinde bile agresifliğini ve yırtıcılığını bırakmayan, adrenalini zirveye taşıyan makinalardır. Bu devasa güçler, her bir gaz hareketiyle kendini gösterirken, derin ve tok egzoz notaları ile çevrenizdeki herkesin dikkatini çeker. İster şehir içinde ister açık yolda olsun, bu motosikletler sürücülerine her zaman tam kontrollü bir agresiflik sunar. Yüksek performansları, sofistike teknolojileri ve etkileyici tasarımları ile bu makinalar, sadece hız ve güç tutkunlarına hitap eder. Bu makalede, bu sınıfın en iyi temsilcilerini detaylarıyla inceliyor ve sizi bu benzersiz deneyimi keşfetmeye davet ediyoruz. Okurken heyecanlanacak ve belki de bir sonraki motosikletinizi seçerken bu listeye göz atacaksınız.";
+  const metin = "1000 cc lik motorlarda bugün sınıfı naked motosikletleri inceliyoruz. Tecrübeli motosiklet sürücülerinin ellerinde bile 1000 cc motor agresifliğini ve yırtıcılığını bırakmaz. 10000 cc motor markalarından her biri adrenalinizi zirveye taşımak için özel olarak tasarlanmış makinalardır. Bu devasa güçler, her bir gaz hareketiyle kendini gösterirken, derin ve tok egzoz notaları ile çevrenizdeki herkesin dikkatini çeker. İster şehir içinde ister açık yolda olsun, bu motosikletler sürücülerine her zaman tam kontrollü bir agresiflik sunar. Yüksek performansları, sofistike teknolojileri ve etkileyici tasarımları ile bu makinalar, sadece hız ve güç tutkunlarına hitap eder. Bu makalede, bu sınıfın en iyi temsilcilerini detaylarıyla inceliyor ve sizi bu benzersiz deneyimi keşfetmeye davet ediyoruz. 1000 cc lik motor ehliyeti kaç yaşında alınır minimum 20 yaşında ve 1000 cc motor hangi ehliyet sorusunun cevabı minimum A sınıfıdır. 1000 cc motor ehliyetini öğrendiğimize göre makalemize göz atmaya hazır mısınız? Okurken heyecanlanacak ve belki de bir sonraki motosikletinizi seçerken bu listeye göz atacaksınız.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -23,6 +25,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Kawasaki Z1000",
       "image": "/images/motosiklet/kawasaki_z1000.jpg",
       "ozellikler": {
+        "Kawasaki Z1000 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Kawasaki",
         "Tip": "Naked",
@@ -41,6 +44,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Aprilia Tuono V4 1100 RR",
       "image": "/images/motosiklet/aprilia_tuono_v4_1100_rr.png",
       "ozellikler": {
+        "Aprilia Tuono V4 1100 RR özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Aprilia",
         "Tip": "Naked",
@@ -59,6 +63,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Ducati Monster 1200",
       "image": "/images/motosiklet/ducati_monster_1200.png",
       "ozellikler": {
+        "Ducati Monster 1200 özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Ducati",
         "Tip": "Naked",
@@ -77,6 +82,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Yamaha MT-10",
       "image": "/images/motosiklet/yamaha_mt_10.png",
       "ozellikler": {
+        "Yamaha MT 10 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Yamaha",
         "Tip": "Naked",
@@ -95,6 +101,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "KTM 1290 Super Duke R",
       "image": "/images/motosiklet/ktm_1290_super_duke_r.png",
       "ozellikler": {
+        "KTM 1290 Super Duke R özellikleri": "",
         "Ülke": "Avusturya",
         "Firma": "KTM",
         "Tip": "Naked",
@@ -113,6 +120,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Honda CB1000R",
       "image": "/images/motosiklet/honda_cb1000r.png",
       "ozellikler": {
+        "Honda CB1000R özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Honda",
         "Tip": "Naked",
@@ -131,6 +139,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Suzuki GSX-S1000",
       "image": "/images/motosiklet/suzuki_gsx_s1000.png",
       "ozellikler": {
+        "Suzuki GSX S1000 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Suzuki",
         "Tip": "Naked",
@@ -149,6 +158,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "BMW S1000R",
       "image": "/images/motosiklet/bmw_s1000r.png",
       "ozellikler": {
+        "BMW S1000R özellikleri": "",
         "Ülke": "Almanya",
         "Firma": "BMW",
         "Tip": "Naked",
@@ -167,6 +177,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "MV Agusta Brutale 1000 RR",
       "image": "/images/motosiklet/mv_agusta_brutale_1000rr.png",
       "ozellikler": {
+        "MV Agusta Brutale 1000 RR özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "MV Agusta",
         "Tip": "Naked",
@@ -185,6 +196,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
       "name": "Ducati Streetfighter V4",
       "image": "/images/motosiklet/ducati_streetfighter_v4.png",
       "ozellikler": {
+        "Ducati Streetfighter V4 özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Ducati",
         "Tip": "Naked",

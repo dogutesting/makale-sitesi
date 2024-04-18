@@ -2,10 +2,13 @@ import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi300ccNakedMain({topCPO}) {
+
+  //! A2 sınıfı ehliyet gerekiyor, bu ehliyeti alabilmek için minimum 18 yaşında olmak gerekiyor.
+
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-300-cc-naked-motosiklet";
   const baslik = "En İyi 10 300 CC Naked Motosiklet";
-  const metin = "300cc motor hacmi, genellikle başlangıç ve orta seviye sürücüler için idealdir, çünkü hem şehir içi hem de uzun mesafeli sürüşler için yeterli güç sunar. Naked motosikletlerin minimalist tasarımı, daha düşük ağırlık ve rahat sürüş pozisyonu, bu tarz motosikletleri hem günlük kullanım hem de maceralı sürüşler için cazip kılar. Listemizdeki zarif tasarımlı ve performans odaklı motosikletler, bu segmentin ne kadar çekici ve heyecan verici olduğunu gösteriyor. Hadi listeyi inceleyelim!";
+  const metin = "300 cc lik motorlar, genellikle başlangıç ve orta seviye sürücüler için idealdir, çünkü hem şehir içi hem de uzun mesafeli sürüşler için yeterli güç sunar. Naked motosikletlerin (yani önü açık motosikletlerin) minimalist tasarımı, daha düşük ağırlık ve rahat sürüş pozisyonu, bu tarz motosikletleri hem günlük kullanım hem de maceralı sürüşler için cazip kılar. Listemizdeki en iyi 300 cc motorlar zarif tasarımlı ve performans odaklı motosikletlerdir. 300 cc motor modelleri aldıkları ilgiden dolayı bu segmentin ne kadar çekici ve heyecan verici olduğunu gösteriyor. Yazımıza başlamadan önce sıkça sorulan sorulardan bazılarını cevaplayalım. Örneğin: 300 cc motor kaç basar? Üzerindeki ağırlığa ve üreticiye göre değişmekle birlikte 300 cc motor kaç km hız yapar? sorusunun cevabı ortalama 160 km/s olarak cevaplanabilir. Bir diğer soru ise 300 cc motor ne kadar yakar? Benzin tüketimi şehir içinde 100 km'de en iyi ihtimalle 6 litreyi bulabiliyor. Üretici firma nedense 4 litre diyor ama sanırım üreticilerin testleri çok steril ortamda gerçekleşiyor olabilir. Listemize başlamadan önce 300 cc motor ehliyeti alabilmek için şartların ve ehliyetin sınıfından bahsedelim. Minimum 18 yaşında ve minimum A2 ehliyetine sahip olmanız gerekmektedir. Şimdi hadi birlikte 300 cc motosikletlerin listesini inceleyelim!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "300cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +25,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
       "name": "CFMoto 300NK",
       "image": "/images/motosiklet/cfmoto_300nk.png",
       "ozellikler": {
+        "CFMoto 300NK özellikleri": "",
           "Ülke": "Çin",
           "Firma": "CFMoto",
           "Tip": "Naked",
@@ -40,6 +44,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
       "name": "Husqvarna Vitpilen 401",
       "image": "/images/motosiklet/husqvarna_vitpilen_401.png",
       "ozellikler": {
+        "Husqvarna Vitpilen 401 özellikleri": "",
           "Ülke": "İsveç",
           "Firma": "Husqvarna",
           "Tip": "Naked",
@@ -50,7 +55,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
           "Ağırlık": "157 kg",
           "Yakıt Kapasitesi": "9.5 Litre"
       },
-      "paragraf": "İsveç kökenli Husqvarna'nın Vitpilen 401 modeli, minimalist ve modern tasarımı ile dikkat çeker. Hafif ve kompakt yapıda olan bu motosiklet, şehir içi kullanım için ideal. Güçlü motoru ve dikkat çekici hızlanması, sürüş deneyimini eğlenceli hale getiriyor. Gidon ve gaz tepkileri, sürücüyü tatmin edecek düzeyde. Sürüş pozisyonu sportif ve yol tutuşu güven verici. Fren performansı ve süspansiyon sistemi, sınıfının beklentilerini karşılıyor. Genel olarak, Vitpilen 401, şık görünümü ve performansı ile naked sınıfında farklı bir seçenek sunuyor."
+      "paragraf": "Evet biliyoruz 300 cc değil ama nedense listeye koyasımız geldi. İsveç kökenli Husqvarna'nın Vitpilen 401 modeli, minimalist ve modern tasarımı ile dikkat çeker. Hafif ve kompakt yapıda olan bu motosiklet, şehir içi kullanım için ideal. Güçlü motoru ve dikkat çekici hızlanması, sürüş deneyimini eğlenceli hale getiriyor. Gidon ve gaz tepkileri, sürücüyü tatmin edecek düzeyde. Sürüş pozisyonu sportif ve yol tutuşu güven verici. Fren performansı ve süspansiyon sistemi, sınıfının beklentilerini karşılıyor. Genel olarak, Vitpilen 401, şık görünümü ve performansı ile naked sınıfında farklı bir seçenek sunuyor."
   }, 
   {
     "num": "8",
@@ -58,6 +63,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "TVS Apache RTR 310",
     "image": "/images/motosiklet/tvs_apache_rtr_310.png",
     "ozellikler": {
+      "TVS Apache RTR 310 özellikleri": "",
         "Firma": "TVS",
         "Tip": "Naked",
         "Motor Hacmi": "313 cc",
@@ -76,6 +82,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "Kawasaki Z400",
     "image": "/images/motosiklet/kawasaki_z400.jpg",
     "ozellikler": {
+      "Kawasaki Z400 özellikleri": "",
         "Firma": "Kawasaki",
         "Tip": "Naked",
         "Motor Hacmi": "399 cc",
@@ -86,7 +93,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "14 Litre"
     },
-    "paragraf": "Japonya'nın prestijli motosiklet üreticilerinden Kawasaki'nin Z400 modeli, hafiflik ve kompakt yapıyı performansla birleştiriyor. Düşük ağırlık merkezi ve kompakt motor tasarımı, motorun hızlı ve tepkisel olmasını sağlıyor. Z400, özellikle düşük ve orta devirlerde güçlü bir tork sunuyor. Sert süspansiyon sistemi, motorun yol tutuşunu ve sürüş dinamiklerini iyileştiriyor. Gidon ve gaz tepkileri son derece hassas, bu da motoru hızlı ve çevik kılıyor. Kullanıcı dostu ergonomisi ve konforlu sürüş pozisyonu, Kawasaki Z400'ü uzun sürüşler için uygun hale getiriyor. Fren performansı ve ABS sistemi, güvenli bir sürüş deneyimi sağlıyor."
+    "paragraf": "Evet haklısınız bu da 300 cc kawasaki motor değil. 300 cc naked motosiklet bulmakta biraz zorlandık, kabul ediyoruz. Japonya'nın prestijli motosiklet üreticilerinden Kawasaki'nin Z400 modeli, hafiflik ve kompakt yapıyı performansla birleştiriyor. Düşük ağırlık merkezi ve kompakt motor tasarımı, motorun hızlı ve tepkisel olmasını sağlıyor. Z400, özellikle düşük ve orta devirlerde güçlü bir tork sunuyor. Sert süspansiyon sistemi, motorun yol tutuşunu ve sürüş dinamiklerini iyileştiriyor. Gidon ve gaz tepkileri son derece hassas, bu da motoru hızlı ve çevik kılıyor. Kullanıcı dostu ergonomisi ve konforlu sürüş pozisyonu, Kawasaki Z400'ü uzun sürüşler için uygun hale getiriyor. Fren performansı ve ABS sistemi, güvenli bir sürüş deneyimi sağlıyor."
   },
   {
     "num": "6",
@@ -94,6 +101,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "Benelli TNT 300",
     "image": "/images/motosiklet/benelli-tnt-300.png",
     "ozellikler": {
+      "Benelli TNT 300 özellikleri": "",
         "Firma": "Benelli",
         "Tip": "Naked",
         "Motor Hacmi": "300 cc",
@@ -112,6 +120,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "Honda CB300R",
     "image": "/images/motosiklet/honda_cb300r.png",
     "ozellikler": {
+      "Honda CB300R özellikleri": "",
         "Firma": "Honda",
         "Tip": "Naked",
         "Motor Hacmi": "300 cc",
@@ -122,7 +131,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "10 Litre"
     },
-    "paragraf": "Japon mühendisliği ile üretilen Honda CB300R, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Yalın ve modern tasarımı, genç ve enerjik sürücülerin beklentilerini karşılar. Motor performansı, düşük ve orta devirlerde güçlü, yüksek devirlerde ise canlıdır. Konforlu sürüş pozisyonu, şehir içi ve uzun yol sürüşlerinde sürücüyü yormaz. Yol tutuşu ve süspansiyon sistemi, Honda'nın kalitesini gösteriyor. Gaz tepkisi ve fren performansı, sürücüye tam kontrol sağlıyor. CB300R, dayanıklılığı ve düşük yakıt tüketimi ile de uzun vadede ekonomik bir seçenek sunar."
+    "paragraf": "Japon mühendisliği ile üretilen Honda CB300R, sofistike tasarımı ve mükemmel işçiliği ile dikkat çeker. Honda 300 cc motor yalın ve modern tasarımı, genç ve enerjik sürücülerin beklentilerini karşılar. Motor performansı, düşük ve orta devirlerde güçlü, yüksek devirlerde ise canlıdır. Konforlu sürüş pozisyonu, şehir içi ve uzun yol sürüşlerinde sürücüyü yormaz. Yol tutuşu ve süspansiyon sistemi, Honda'nın kalitesini gösteriyor. Gaz tepkisi ve fren performansı, sürücüye tam kontrol sağlıyor. CB300R, dayanıklılığı ve düşük yakıt tüketimi ile de uzun vadede ekonomik bir seçenek sunar."
   },
   {
       "num": "4",
@@ -130,6 +139,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
       "name": "BMW G 310 R",
       "image": "/images/motosiklet/bmw_g310r.png",
       "ozellikler": {
+        "BMW G 310 R özellikleri": "",
           "Firma": "BMW",
           "Tip": "Naked",
           "Motor Hacmi": "313 cc",
@@ -148,6 +158,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
       "name": "KTM Duke 390",
       "image": "/images/motosiklet/ktm_duke_390.png",
       "ozellikler": {
+        "KTM Duke 390 özellikleri": "",
           "Firma": "KTM",
           "Tip": "Naked",
           "Motor Hacmi": "373 cc",
@@ -166,6 +177,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "Kawasaki Z300",
     "image": "/images/motosiklet/kawasaki_z300.png",
     "ozellikler": {
+      "Kawasaki Z300 özellikleri": "",
         "Firma": "Kawasaki",
         "Tip": "Naked",
         "Motor Hacmi": "300 cc",
@@ -184,6 +196,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
     "name": "Yamaha MT-03",
     "image": "/images/motosiklet/yamaha_mt_03.png",
     "ozellikler": {
+      "Yamaha MT-03 özellikleri": "",
         "Firma": "Yamaha",
         "Tip": "Naked",
         "Motor Hacmi": "321 cc",
@@ -194,7 +207,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
         "Ülke": "Japonya",
         "Yakıt Kapasitesi": "15 Litre"
     },
-    "paragraf": "Japon üretici Yamaha'nın MT-03 modeli, sportif ve agresif tasarımı ile dikkat çeker. 321cc motor hacmi, tatmin edici bir performans ve dinamik bir sürüş deneyimi sunar. Yol tutuşu ve süspansiyon sistemi, sportif sürüşleri destekler ve konforu korur. Gaz tepkimesi hızlı, frenler güçlü ve hassas. MT-03, hem estetik hem de performans açısından, bu segmentteki sürücüler için etkileyici bir seçenektir."
+    "paragraf": "Japon üretici Yamaha'nın MT-03 modeli, sportif ve agresif tasarımı ile dikkat çeker. 321cc motor hacmi, tatmin edici bir performans ve dinamik bir sürüş deneyimi sunar. Bu 300 cc kawasaki motor yol tutuşu ve süspansiyon sistemi, sportif sürüşleri destekler ve konforu korur. Gaz tepkimesi hızlı, frenler güçlü ve hassas. MT-03, hem estetik hem de performans açısından, bu segmentteki sürücüler için etkileyici bir seçenektir."
   }
   ];
   

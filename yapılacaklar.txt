@@ -1,3 +1,5 @@
+-> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
+
 test edilecek -> google reklam kütüphanesi eklenecek
 test edilecek -> google traffic kütüphanesi eklenecek
 

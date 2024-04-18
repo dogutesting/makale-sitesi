@@ -2,10 +2,13 @@ import moviesAndSeriesJson from '@/components/functions/moviesAndSeriesJson';
 import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi600ccSuperMain({topCPO}) {
+
+  //! A2 sınıfı ehliyet gerekiyor, bu ehliyeti alabilmek için minimum 18 yaşında olmak gerekiyor.
+
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-600-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 600 CC Super Sport Motosiklet";
-  const metin = "600cc super sport motosikletler, hız tutkunlarının ve pist aslanlarının gözdesidir. Aerodinamik tasarımları sayesinde rüzgarı delebilir ve saniyeler içinde yüksek hızlara ulaşabilirler. Bu makinalar, sadece deneyimli sürücüler için tasarlanmıştır; çünkü bu güçlü makinelerin kontrolü, tam bir beceri ister. Özellikle pist günlerinde ya da açık yollarda, 600cc'nin altındaki süper sport motosikletler, sürücüsüne adeta kanatlandırır gibi hissettirir. Bu makalede, piyasadaki en popüler 600cc super sport motosikletleri inceliyor ve her birinin eşsiz özelliklerini detaylıca ele alıyoruz. Makalemize göz atmaya hazır mısınız? Heyecanlandırıcı bir sürüş deneyimi sizi bekliyor!";
+  const metin = "600 cc lik motorlar listemizde şahane motosikletlerimiz var. 600 cc super sport motosikletler, hız tutkunlarının ve pist aslanlarının gözdesidir. Aerodinamik tasarımları sayesinde rüzgarı delebilir ve saniyeler içinde yüksek hızlara ulaşabilirler. Bu makinalar, sadece deneyimli sürücüler için tasarlanmıştır; çünkü bu güçlü makinelerin kontrolü, tam bir beceri ister. Özellikle pist günlerinde ya da açık yollarda, 600cc'nin altındaki süper sport motosikletler, sürücüsüne adeta kanatlandırır gibi hissettirir. Bu makalede, piyasadaki en popüler 600cc super sport motosikletleri inceliyor ve her birinin eşsiz özelliklerini detaylıca ele alıyoruz. 600 cc motoru hangi ehliyet kullanır minimum 18 yaşında ve minimum A2 ehliyetine sahip olmanız gerekmektedir. 600 cc motor ehliyetini öğrendiğimize göre makalemize göz atmaya hazır mısınız? Heyecanlandırıcı bir sürüş deneyimi sizi bekliyor!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "600cc", "motosiklet", "supersport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +25,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Aprilia RS 660",
       "image": "/images/motosiklet/aprilia_rs_660.png",
       "ozellikler": {
+        "Aprilia RS 660 özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Aprilia",
         "Tip": "Super Sport",
@@ -40,6 +44,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Triumph Daytona 675",
       "image": "/images/motosiklet/triumph_daytona_675.png",
       "ozellikler": {
+        "Triumph Daytona 675 özellikleri": "",
         "Ülke": "İngiltere",
         "Firma": "Triumph",
         "Tip": "Super Sport",
@@ -58,6 +63,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Honda CBR500R",
       "image": "/images/motosiklet/honda_cbr_500r.png",
       "ozellikler": {
+        "Honda CBR500R özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Honda",
         "Tip": "Supersport",
@@ -76,6 +82,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Yamaha YZF-R7",
       "image": "/images/motosiklet/yamaha_yzf_r7.jpg",
       "ozellikler": {
+        "Yamaha R7 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Yamaha",
         "Tip": "Super Sport",
@@ -94,6 +101,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "MV Agusta F3 675",
       "image": "/images/motosiklet/mv_agusta_f3_675.png",
       "ozellikler": {
+        "MV Agusta F3 675 özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "MV Agusta",
         "Tip": "Super Sport",
@@ -112,6 +120,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Triumph Daytona 675R",
       "image": "/images/motosiklet/triumph_daytona_675r.png",
       "ozellikler": {
+        "Triumph Daytona 675R özellikleri": "",
         "Ülke": "İngiltere",
         "Firma": "Triumph",
         "Tip": "Super Sport",
@@ -130,6 +139,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Suzuki GSX-R600",
       "image": "/images/motosiklet/suzuki_gsx_r600.png",
       "ozellikler": {
+        "Suzuki GSX R600 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Suzuki",
         "Tip": "Super Sport",
@@ -148,6 +158,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Kawasaki Ninja ZX-6R",
       "image": "/images/motosiklet/kawasaki_ninja_zx_6r.jpg",
       "ozellikler": {
+        "Kawasaki Ninja ZX 6R özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Kawasaki",
         "Tip": "Super Sport",
@@ -166,6 +177,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Honda CBR600RR",
       "image": "/images/motosiklet/honda_cbr_600rr.png",
       "ozellikler": {
+        "Honda CBR600RR özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Honda",
         "Tip": "Super Sport",
@@ -184,6 +196,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
       "name": "Yamaha YZF-R6",
       "image": "/images/motosiklet/yamaha_yzf_r6.png",
       "ozellikler": {
+        "Yamaha YZF R6 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Yamaha",
         "Tip": "Super Sport",
@@ -194,7 +207,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
         "Ağırlık": "190 kg",
         "Yakıt Kapasitesi": "17 litre"
       },
-      "paragraf": "Yamaha'nın süper spor klasmanındaki efsanesi YZF-R6, nefes kesen performansı ve keskin hatları ile ön plana çıkar. Yol tutuşu ve fren performansı sınıfının en iyileri arasında, motorun gücü ve hızlanma kabiliyeti ise sizi adeta kanatlandırır. Yakıt tüketimi biraz yüksek, ancak bu, R6'nın sunduğu eşsiz sürüş deneyimini gölgeleyemez. Sele rahatlığı ve aerodinamik yapısı, uzun sürüşlerde bile konfor sunar. YZF-R6, her açıdan mükemmel bir süper spor motosiklet deneyimi vaat eder."
+      "paragraf": "600 cc racing motorlar yazımızın en başına geldik. Yamaha'nın süper spor klasmanındaki efsanesi YZF-R6, nefes kesen performansı ve keskin hatları ile ön plana çıkar. 600 cc yamaha yol tutuşu ve fren performansı sınıfının en iyileri arasında, motorun gücü ve hızlanma kabiliyeti ise sizi adeta kanatlandırır. Yakıt tüketimi biraz yüksek, ancak bu, R6'nın sunduğu eşsiz sürüş deneyimini gölgeleyemez. Sele rahatlığı ve aerodinamik yapısı, uzun sürüşlerde bile konfor sunar. YZF-R6, her açıdan mükemmel bir süper spor motosiklet deneyimi vaat eder."
     }
   ];
 

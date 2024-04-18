@@ -7,11 +7,12 @@ export default function MostMoviesMain({topCPO}) {
   const url = "en-yuksek-imdb-puanina-sahip-10-film";
   const baslik = "En Yüksek imdb Puanına Sahip 10 Film";
   const metin = `Sinemanın büyülü dünyasında, bazı filmler sadece eğlendirmekten öteye geçer, 
-  ruhumuza dokunur ve bizi derinden etkiler. Onların bizdeki değeri farklıdır. IMDb'nin en iyi filmler listesinde yer alan bu yapıtlar, 
+  ruhumuza dokunur ve bizi derinden etkiler. Onların bizdeki değeri farklıdır. İnsanların çoğunluğunu etkileyen imdb puanı yüksek filmleri sizleri de etkilemesi için derledik.  
   sadece teknik başarısıyla değil, aynı zamanda evrensel temaları, duygusal derinlikleri ve etkileyici karakterleriyle de ön plana çıkar. 
-  IMDb'nin en yüksek puanlı filmi olan ve listeye damgasını vuran bu eserler, 
-  izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. 
-  İşte sinemanın zirvesine ulaşmış, her sinemaseverin hayatında en az bir kez izlemesi gereken IMDb en iyi 10 film listesi.`;
+  En yüksek imdb puanlı filmler olan ve listelerin en sevilen bu şaheserlere kısa bir dalış yapacağız.  
+  Bu imdb top 10 filmi izleyiciye hayatın farklı yönlerini, insan doğasını ve toplumsal değerleri sorgulama fırsatı sunar. Bu filmler diğerlerinden ayrı sınıflandırılır çünkü bu kadar yüksek imdb puanınlı filmler çok az 
+  çekilir. Aynı zamanda bu filmleri imdb puanı yüksek yabancı filmler olarakta algılayabiliriz çünkü içerisinde henüz bir Türk yapımı film yok.
+  İşte sinemanın zirvesine ulaşmış imdb puanı yüksek yabancı filmler, her sinemaseverin hayatında en az bir kez izlemesi gereken imdb ilk 10 filmini sizlere sunuyoruz.`;
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "yuksek", "imdb", "puani", "filmler"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "film"; //türkce karakter olmasin

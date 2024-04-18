@@ -1,6 +1,6 @@
 import { parse } from 'node-html-parser';
 
-export default function json_list(articleInfos, type, metin, arr) {
+export default function json_list(articleInfos, type, metin, arr, bitis_metin = "") {
   
   function escapeString(input) {
     return input.replace(/"/g, "'");
@@ -101,7 +101,7 @@ export default function json_list(articleInfos, type, metin, arr) {
   })
 
   //const articleBody = escapeString(summaryText.props.children + articleText);
-  const articleBody = escapeString(metin + articleText);
+  const articleBody = escapeString(metin + " " + articleText + " " + bitis_metin);
   const wordCount = articleBody.split(" ").length;
 
   const readTime = Math.round((wordCount * 0.33) / 60)

@@ -5,7 +5,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
   //#region SAYFA TANIMLAMALARI
   const url = "en-iyi-10-250-cc-scooter-motosiklet";
   const baslik = "En İyi 10 250 CC Scooter Motosiklet";
-  const metin = "Şehir hayatının yoğun temposunda hız, konfor ve stil arayanlar için 250cc scooter motosikletler mükemmel bir tercih sunar. Bu motor hacmi, şehir içinde hızlı ve çevik hareket etme imkanı sağlarken, şehirler arası yolculuklarda da yeterli performansı ve rahatlığı sunar. 250cc scooterlar, genellikle güçlü motorları, geniş oturma alanları ve yüksek depolama kapasiteleri ile öne çıkarlar. Bu segmentteki modeller, hem deneyimli sürücüler için hem de performanstan ödün vermek istemeyen yeni başlayanlar için idealdir. Modern teknolojik donanımlar, gelişmiş güvenlik özellikleri ve aerodinamik tasarımlar, 250cc scooterların günlük kullanımda pratikliğini ve sürüş keyfini artırır. Uzun yolculuklar ve şehir içi trafikte eşsiz bir sürüş deneyimi sunan bu modeller, hem tasarım hem de işlevsellik açısından beklentileri karşılar. İşte Türkiye'deki en popüler ve sevilen 10 adet 250cc scooter modeli, bu dinamik ve heyecan verici scooterları incelemeye başlayalım.";
+  const metin = "Şehir hayatının yoğun temposunda hız, konfor ve stil arayanlar için 250cc scooter motosikletler mükemmel bir tercih sunar. 250 cc scooter motorlar, şehir içinde hızlı ve çevik hareket etme imkanı sağlarken, şehirler arası yolculuklarda da yeterli performansı ve rahatlığı sunar. 250 cc scooter modelleri, genellikle güçlü motorları, geniş oturma alanları ve yüksek depolama kapasiteleri ile öne çıkarlar. 250 lik scooter modelleri, hem deneyimli sürücüler için hem de performanstan ödün vermek istemeyen yeni başlayanlar için idealdir. Modern teknolojik donanımlar, gelişmiş güvenlik özellikleri ve aerodinamik tasarımları ile 250 cc scooter önerisini size sunmaktan mutluluk duyuyoruz. Aşağıdaki maddelerde 250 cc scooter tavsiyesini size günlük kullanımda pratik ve sürüş keyfini baz alarak inceleyip sizlere sunuyoruz. Uzun yolculuklar ve şehir içi trafikte eşsiz bir sürüş deneyimi sunan bu modeller, hem tasarım hem de işlevsellik açısından beklentileri karşılar. 250 cc motor önerilerine geçmeden önce 250 cc motor hangi ehliyet ile kullanılır? ve 250 cc motor ehliyeti kaç yaşında alınır? sorularını cevaplayalım. 250 cc motor hacmine sahip motosikletler için yasalar A2 ehliyeti ve 18 yaşını doldurmuş olmayı şart koşmaktadır. Ehliyet sorularını cevaplandırdıktan sonra işte Türkiye'deki en popüler ve sevilen 10 adet 250cc scooter modelini incelemeye başlayalım.";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "scooter"];
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
       "name": "Daelim S3 Advance 250",
       "image": "/images/motosiklet/daelim_s3_advance_250.png",
       "ozellikler": {
+        "Daelim S3 Advance 250 özellikleri": "",
         "Ülke": "Güney Kore",
         "Firma": "Daelim",
         "Tip": "Scooter",
@@ -40,6 +41,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
       "name": "Kymco Xciting 250",
       "image": "/images/motosiklet/kymco_xciting_250.png",
       "ozellikler": {
+        "Kymco Xciting 250 özellikleri": "",
         "Ülke": "Tayvan",
         "Firma": "Kymco",
         "Tip": "Scooter",
@@ -58,6 +60,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
       "name": "RKS Vieste 249",
       "image": "/images/motosiklet/rks_vieste_249.png",
       "ozellikler": {
+        "RKS Vieste 249 özellikleri": "",
         "Ülke": "Çin",
         "Firma": "RKS",
         "Tip": "Scooter",
@@ -76,6 +79,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
       "name": "Yuki T11 Explorer Maxi Scooter",
       "image": "/images/motosiklet/yuki_t11_explorer_maxi_scooter.png",
       "ozellikler": {
+        "Yuki T11 Explorer Maxi Scooter": "",
         "Ülke": "Çin",
         "Firma": "Yuki",
         "Tip": "Scooter",
@@ -86,7 +90,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
         "Ağırlık": "148 Kg",
         "Yakıt Kapasitesi": "13 Litre"
       },
-      "paragraf": "Yuki T11 Explorer Maxi Scooter, şehir içinde ve dışında kullanım için ideal, dinamik bir scooter modelidir. 250cc motor hacmi ile güçlü performans sunar ve 120 km/s maksimum hıza ulaşabilir. Yuki T11 Explorer, modern tasarımı ve geniş bagaj alanı ile hem günlük ihtiyaçları karşılar hem de uzun yolculuklarda konfor sunar. Güçlü frenleme sistemi ve etkileyici yol tutuşu güvenliği artırırken, hafif yapısı manevra kabiliyetini iyileştirir. Bu model, özellikle fiyat-performans oranıyla dikkat çekerek, kaliteli bir sürüş deneyimi sunar."
+      "paragraf": "Yuki T11 Explorer Maxi Scooter, şehir içinde ve dışında kullanım için ideal, dinamik bir scooter modelidir. Yuki 250 lik scooter motor hacmi ile güçlü performans sunar ve 120 km/s maksimum hıza ulaşabilir. Yuki T11 Explorer, modern tasarımı ve geniş bagaj alanı ile hem günlük ihtiyaçları karşılar hem de uzun yolculuklarda konfor sunar. Güçlü frenleme sistemi ve etkileyici yol tutuşu güvenliği artırırken, hafif yapısı manevra kabiliyetini iyileştirir. Bu model, özellikle fiyat-performans oranıyla dikkat çekerek, kaliteli bir sürüş deneyimi sunar."
     },
     {
       "num": "6",
@@ -94,6 +98,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
       "name": "SYM Joymax 250i ABS",
       "image": "/images/motosiklet/sym_joymax_250i_abs.png",
       "ozellikler": {
+        "SYM Joymax 250i ABS özellikleri": "",
         "Ülke": "Tayvan",
         "Firma": "SYM",
         "Tip": "Scooter",
@@ -104,7 +109,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
         "Ağırlık": "178 Kg",
         "Yakıt Kapasitesi": "12 Litre"
       },
-      "paragraf": "Tayvan menşeli SYM, Joymax 250i ABS modeliyle scooter segmentinde önemli bir yere sahip. Bu model, 250cc motor hacmi, hızlı hızlanma ve 122 km/s maksimum hızı ile dikkat çekiyor. Joymax 250i ABS, özellikle ABS fren sistemiyle güvenliği ön plana çıkarıyor. Geniş ve konforlu koltuk yapısı, uzun yolculuklar için idealdir. Ergonomik tasarımı ve yüksek depolama kapasitesi, günlük kullanım için son derece pratik özellikler sunar. Bu scooter, şehir içi ve dışı kullanımda mükemmel manevra kabiliyeti ve yol tutuşu ile öne çıkar."
+      "paragraf": "Tayvan menşeli, Joymax 250i ABS modeliyle SYM 250 lik scooter segmentinde önemli bir yere sahip. Bu model, 250cc motor hacmi, hızlı hızlanma ve 122 km/s maksimum hızı ile dikkat çekiyor. Joymax 250i ABS, özellikle ABS fren sistemiyle güvenliği ön plana çıkarıyor. Geniş ve konforlu koltuk yapısı, uzun yolculuklar için idealdir. Ergonomik tasarımı ve yüksek depolama kapasitesi, günlük kullanım için son derece pratik özellikler sunar. Bu scooter, şehir içi ve dışı kullanımda mükemmel manevra kabiliyeti ve yol tutuşu ile öne çıkar."
     },
       {
           "num": "5",
@@ -112,6 +117,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
           "name": "Piaggio X Evo 250",
           "image": "/images/motosiklet/piaggio_x_evo_250.png",
           "ozellikler": {
+              "Piaggio X Evo 250 özellikleri": "",
               "Ülke": "İtalya",
               "Firma": "Piaggio",
               "Tip": "Scooter",
@@ -130,6 +136,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
           "name": "KYMCO X-Town CT 250",
           "image": "/images/motosiklet/kymco_x_town_ct250.png",
           "ozellikler": {
+            "KYMCO X Town CT 250 özellikleri": "",
               "Ülke": "Tayvan",
               "Firma": "KYMCO",
               "Tip": "Scooter",
@@ -148,6 +155,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
           "name": "Suzuki Burgman 250",
           "image": "/images/motosiklet/suzuki_burgman_250.jpg",
           "ozellikler": {
+            "Suzuki Burgman 250 özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Suzuki",
               "Tip": "Scooter",
@@ -166,6 +174,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
           "name": "Honda Forza 250",
           "image": "/images/motosiklet/honda_forza_250.jpg",
           "ozellikler": {
+            "Honda Forza 250 özellikleri": "",
               "Ülke": "Japonya",
               "Firma": "Honda",
               "Tip": "Scooter",
@@ -176,7 +185,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
               "Ağırlık": "162 Kg",
               "Yakıt Kapasitesi": "11.5 Litre"
           },
-          "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden Honda'nın prestijli modeli Forza 250, şık tasarımı ve etkileyici performansı ile tanınır. 250cc motor hacmi ve 135 km/s maksimum hızı ile hem şehir içi hem de şehir dışı kullanımda mükemmel bir sürüş deneyimi sunar. Forza 250, ergonomik oturma düzeni ve geniş bagaj kapasitesi ile uzun yolculuklar için idealdir. Ayrıca, gelişmiş frenleme sistemi ve etkileyici yol tutuşu ile güvenlik konusunda da öne çıkar. Honda Forza 250, modern teknoloji ve üstün sürüş kalitesini bir araya getirerek scooter segmentindeki iddialı konumunu korur."
+          "paragraf": "Japonya'nın önde gelen motosiklet üreticilerinden Honda'nın prestijli modeli Forza 250, şık tasarımı ve etkileyici performansı ile tanınır. Honda 250 lik scooter motor hacmi ve 135 km/s maksimum hızı ile hem şehir içi hem de şehir dışı kullanımda mükemmel bir sürüş deneyimi sunar. Forza 250, ergonomik oturma düzeni ve geniş bagaj kapasitesi ile uzun yolculuklar için idealdir. Ayrıca, gelişmiş frenleme sistemi ve etkileyici yol tutuşu ile güvenlik konusunda da öne çıkar. Honda Forza 250, modern teknoloji ve üstün sürüş kalitesini bir araya getirerek scooter segmentindeki iddialı konumunu korur."
       },
       {
         "num": "1",
@@ -184,6 +193,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
         "name": "Yamaha XMAX 250",
         "image": "/images/motosiklet/yamaha_xmax_250.jpg",
         "ozellikler": {
+          "Yamaha XMAX 250 özellikleri": "",
           "Ülke": "Japonya",
           "Firma": "Yamaha",
           "Tip": "Scooter",
@@ -194,7 +204,7 @@ export default function Eniyi250ccScooterMain({topCPO}) {
           "Ağırlık": "179 Kg",
           "Yakıt Kapasitesi": "13.2 Litre",
         },
-        "paragraf": "Yamaha'nın ünlü modeli XMAX 250, 250cc motor hacmi ve 140 km/s maksimum hızı ile özellikle şehir içi ve dışı kullanımlarda mükemmel performans sergiler. Şık ve aerodinamik tasarımı, uzun yolculuklar için konfor ve rahatlık sağlar. XMAX 250, gelişmiş frenleme sistemi ve üstün yol tutuşu özellikleri ile güvenli bir sürüş deneyimi sunar. Geniş depolama alanı ve ergonomik koltuk yapısı, günlük kullanım için idealdir. Yamaha'nın bu modeli, hem estetik hem de teknik özellikler açısından scooter segmentindeki lider konumunu korumaktadır."
+        "paragraf": "Listemizin birinci sıralarında görmeye alışık olduğumuz bir marka. Yamaha'nın ünlü modeli XMAX 250, 250cc motor hacmi ve 140 km/s maksimum hızı ile özellikle şehir içi ve dışı kullanımlarda mükemmel performans sergiler. Yamaha 250 lik scooter segmentine yakışır şık ve aerodinamik tasarımı, uzun yolculuklar için konfor ve rahatlık sağlar. XMAX 250, gelişmiş frenleme sistemi ve üstün yol tutuşu özellikleri ile güvenli bir sürüş deneyimi sunar. Geniş depolama alanı ve ergonomik koltuk yapısı, günlük kullanım için idealdir. Yamaha'nın bu modeli, hem estetik hem de teknik özellikler açısından scooter segmentindeki lider konumunu korumaktadır."
         }
   ];
 

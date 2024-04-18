@@ -5,7 +5,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
   //#region SAYFA TANIMLAMALARI
   const url = "en-iyi-10-250-cc-naked-motosiklet";
   const baslik = "En İyi 10 250 CC Naked Motosiklet";
-  const metin = "250cc naked motosikletler, hafiflikleri, atik yapıları ve şehir içi kullanım kolaylıkları ile bilinirler. İster yeni başlayan bir sürücü olun, ister deneyimli bir motor tutkunu, bu segmentteki motosikletler, sade ve fonksiyonel tasarımları ile geniş bir kitleye hitap ediyor. Aşağıda, birbirinden estetik ve performanslı en iyi 10 250cc naked motosikleti detaylı özellikleri ve teknik analizler ışığında sıralayarak sizler için bir araya getiriyoruz. Her bir motosikletin tasarımından, motor performansına, kullanım kolaylığına kadar birçok detayı bulacaksınız. İyi okumalar!";
+  const metin = "250cc naked motosikletler, hafiflikleri, atik yapıları ve şehir içi kullanım kolaylıkları ile bilinirler. İster yeni başlayan bir sürücü olun, ister deneyimli bir motor tutkunu, 250 cc naked segmentindeki motosikletler, sade ve fonksiyonel tasarımları ile geniş bir kitleye hitap ediyor. Naked tasarımdan kastımız önü açık motorlar, yani bu yazıyı 250 cc önü açık motorlar olarakta algılayabilirsiniz. Aşağıda, birbirinden estetik ve performanslı en iyi 10 250cc naked motosikleti detaylı özellikleri ve teknik analizler ışığında sıralayarak sizler için bir araya getiriyoruz. 250 cc motor önerilerine geçmeden önce 250 cc motor hangi ehliyet ile kullanılır? ve 250 cc motor ehliyeti kaç yaşında alınır? sorularını cevaplayalım. 250 cc motor hacmine sahip motosikletler için yasalar A2 ehliyeti ve 18 yaşını doldurmuş olmayı şart koşmaktadır. Şimdi bu soruyu cevaplandırdığımıza göre her bir motosikletin tasarımından, motor performansına, kullanım kolaylığına kadar birçok detayı incelemeye başlayalım. İyi okumalar!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "250cc", "motosiklet", "naked"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -22,6 +22,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Husqvarna Svartpilen 250",
           "image": "/images/motosiklet/husqvarna_svartpilen_250.png",
           "ozellikler": {
+              "Husqvarna Svartpilen 250 özellikleri": "",
               "Firma": "Husqvarna",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -40,6 +41,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Bajaj Dominar 250",
           "image": "/images/motosiklet/bajaj_dominar_250d.png",
           "ozellikler": {
+            "Bajaj Dominar 250 özellikleri": "",
               "Firma": "Bajaj",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -58,6 +60,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "CFMoto 250NK",
           "image": "/images/motosiklet/cfmoto_250nk.png",
           "ozellikler": {
+            "CFMoto 250NK özellikleri": "",
               "Firma": "CFMoto",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -76,6 +79,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Kawasaki Z250",
           "image": "/images/motosiklet/kawasaki_z250.png",
           "ozellikler": {
+            "Kawasaki Z250 özellikleri": "",
               "Firma": "Kawasaki",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -94,6 +98,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Suzuki Gixxer 250",
           "image": "/images/motosiklet/suzuki_gixxer_250.jpg",
           "ozellikler": {
+            "Suzuki Gixxer 250 özellikleri": "",
               "Firma": "Suzuki",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -112,6 +117,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Benelli TNT 25",
           "image": "/images/motosiklet/benelli_tnt_25.png",
           "ozellikler": {
+            "Benelli TNT 25 özellikleri": "",
               "Firma": "Benelli",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -130,6 +136,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "KTM 250 Duke",
           "image": "/images/motosiklet/ktm_250_duke.jpg",
           "ozellikler": {
+            "KTM 250 Duke özellikleri": "",
               "Firma": "KTM",
               "Tip": "Naked",
               "Motor Hacmi": "250 cc",
@@ -148,6 +155,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "BMW G 310 R",
           "image": "/images/motosiklet/bmw_g310r.png",
           "ozellikler": {
+              "BMW G 310 R özellikleri": "",
               "Firma": "BMW",
               "Tip": "Naked",
               "Motor Hacmi": "310 cc",
@@ -166,6 +174,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Honda CB300R",
           "image": "/images/motosiklet/honda_cb300r.png",
           "ozellikler": {
+            "Honda CB300R özellikleri": "",
               "Firma": "Honda",
               "Tip": "Naked",
               "Motor Hacmi": "286 cc",
@@ -184,6 +193,7 @@ export default function Eniyi250ccNakedMain({topCPO}) {
           "name": "Yamaha MT-25",
           "image": "/images/motosiklet/yamaha_mt25.png",
           "ozellikler": {
+            "Yamaha MT 25 özellikleri": "",
               "Firma": "Yamaha",
               "Tip": "Naked",
               "Motor Hacmi": "249 cc",

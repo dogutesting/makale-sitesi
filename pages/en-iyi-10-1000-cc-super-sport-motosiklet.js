@@ -3,10 +3,12 @@ import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function Eniyi1000ccSuperMain({topCPO}) {
   
+  //! A sınıfı ehliyet gerekiyor, bu ehliyeti alabilmek için minimum 20 yaşında olmak gerekiyor.
+
   //#region SAYFA TEXT TANIMLAMALARI
   const url = "en-iyi-10-1000-cc-super-sport-motosiklet";
   const baslik = "En İyi 10 1000 CC Super Sport Motosiklet";
-  const metin = "Süper spor motosikletler, mühendislik ve tasarımın zirvesini temsil eder. Bu hız canavarları, sadece dikkatli ve tecrübeli sürücüler için tasarlanmıştır. Her bir detay, sürücüsüne unutulmaz bir deneyim yaşatmak amacıyla özenle düşünülmüştür. İster pistte ister açık yolda olsun, bu motosikletler adrenalinin en saf halini sunar. Bu makalede, piyasadaki en iyi 10 süper spor motosikleti detaylı bir şekilde inceliyoruz. Hangi canavarın sizi en çok heyecanlandıracağını görmek için okumaya devam edin!";
+  const metin = "Süper spor motosikletler, 1000 cc lik motorlar mühendislik ve tasarımın zirvesini temsil eder. Bu hız canavarları, sadece dikkatli ve tecrübeli sürücüler için tasarlanmıştır. Her bir detay, sürücüsüne unutulmaz bir deneyim yaşatmak amacıyla özenle düşünülmüştür. İster pistte ister açık yolda olsun, bu motosikletler adrenalinin en saf halini sunar. Bu makalede, piyasadaki en iyi 10 süper spor motosikleti detaylı bir şekilde inceliyoruz. 1000 cc lik motor ehliyeti kaç yaşında alınır minimum 20 yaşında ve 1000 cc motor hangi ehliyet sorusunun cevabı minimum A sınıfıdır. Hangi canavarın sizi en çok heyecanlandıracağını görmek için okumaya başlayalım!";
   const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
   const keywordsArray = ["en", "iyi", "1000cc", "motosiklet", "supersport"]; //burada türkçe karakter olacak mı bir fikrim yok
   const kategori = "motosiklet"; //türkce karakter olmasin
@@ -23,6 +25,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Yamaha YZF-R7",
       "image": "/images/motosiklet/yamaha_yzf_r7.jpg",
       "ozellikler": {
+        "Yamaha YZF R7 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Yamaha",
         "Tip": "Super Sport",
@@ -41,6 +44,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "KTM 1190 RC8 R",
       "image": "/images/motosiklet/ktm_rc8r.jpg",
       "ozellikler": {
+        "KTM 1190 RC8 R özellikleri": "",
         "Ülke": "Avusturya",
         "Firma": "KTM",
         "Tip": "Super Sport",
@@ -59,6 +63,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "MV Agusta F4 RR",
       "image": "/images/motosiklet/mv_agusta_f4_rr.png",
       "ozellikler": {
+        "MV Agusta F4 RR özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "MV Agusta",
         "Tip": "Super Sport",
@@ -74,9 +79,10 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
     {
       "num": "7",
       "url": "https://enonlar.com/${url}#bolum-7",
-      "name": "Suzuki GSX-R1000",
+      "name": "Suzuki GSX R1000",
       "image": "/images/motosiklet/suzuki_gsx_r1000.png",
       "ozellikler": {
+        "Suzuki GSX R1000 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Suzuki",
         "Tip": "Super Sport",
@@ -95,6 +101,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Honda CBR1000RR",
       "image": "/images/motosiklet/honda_cbr1000rr.png",
       "ozellikler": {
+        "Honda CBR1000RR özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Honda",
         "Tip": "Super Sport",
@@ -113,6 +120,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Kawasaki Ninja ZX-10R",
       "image": "/images/motosiklet/kawasaki_ninja_zx_10r.png",
       "ozellikler": {
+        "Kawasaki Ninja ZX 10R özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Kawasaki",
         "Tip": "Super Sport",
@@ -131,6 +139,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Yamaha YZF-R1",
       "image": "/images/motosiklet/yamaha_yzf_r1.png",
       "ozellikler": {
+        "Yamaha YZF R1 özellikleri": "",
         "Ülke": "Japonya",
         "Firma": "Yamaha",
         "Tip": "Super Sport",
@@ -149,6 +158,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Aprilia RSV4 1100 Factory",
       "image": "/images/motosiklet/aprilia_rsv4_1100_factory.png",
       "ozellikler": {
+        "Aprilia RSV4 1100 Factory özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Aprilia",
         "Tip": "Super Sport",
@@ -167,6 +177,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "Ducati Panigale V4",
       "image": "/images/motosiklet/ducati_panigale_v4.png",
       "ozellikler": {
+        "Ducati Panigale V4 özellikleri": "",
         "Ülke": "İtalya",
         "Firma": "Ducati",
         "Tip": "Super Sport",
@@ -185,6 +196,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
       "name": "BMW S1000RR",
       "image": "/images/motosiklet/bmw_s1000rr.png",
       "ozellikler": {
+        "BMW S1000RR özellikleri": "",
         "Ülke": "Almanya",
         "Firma": "BMW",
         "Tip": "Super Sport",
