@@ -32,6 +32,13 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
 
           <Ana_gorsel ana_resim={ana_resim} baslik={baslik} isItPri={currentPageOperations.isSetable === false ? true : false}/>
           <p className='summary_text'>{metin}</p>
+
+          <ins className="adsbygoogle"
+          style={{display: "block", marginTop: "18px", marginBottom: "18px"}}
+          data-ad-client="ca-pub-1092443878501202"
+          data-ad-slot="2539634822"
+          data-ad-format="auto"
+          data-full-width-responsive="true" />
           
           { currentPageOperations && currentPageOperations.currentPageValue !== null 
           && <Custom_Waypoint customKey={"top_wp_"+url} name={"top"} startedUrl={url} currentPageOperations={currentPageOperations}/> }
@@ -45,6 +52,12 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
         </article>
 
         <OtherContents currentUrl={url} bottomChecker={bottomChecker}/>
+
+        <ins class="adsbygoogle"
+        style={{display:"block", marginTop: "18px", marginBottom: "18px"}}
+        data-ad-format="autorelaxed"
+        data-ad-client="ca-pub-1092443878501202"
+        data-ad-slot="9529399214"/>
     </Main>
   );
 };

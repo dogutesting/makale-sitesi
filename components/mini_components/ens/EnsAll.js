@@ -33,15 +33,17 @@ export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperation
         </section>
       )
 
-      items.push(<hr key={index+"hr1"} className='split'/>);
+      
       
       let addHr = true;
       if ((index + 1) % 3 === 0 && (index + 1) != 10) {
         items.push(
-          <Reklam key={index+"r"} />
+          <Reklam key={index+"_r"} />
         );
         addHr = false;
       }
+
+      items.push(<hr key={index+"hr1"} className='split'/>);
 
       if((index + 1) === 10) {
         items.push(
@@ -49,7 +51,7 @@ export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperation
         )
       }
 
-      !addHr && items.push(<hr key={index+"hr2"} className='split'/>);
+      /* !addHr && items.push(<hr key={index+"hr2"} className='split'/>); */
   });
 
   return (

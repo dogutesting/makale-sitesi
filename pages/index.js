@@ -7,6 +7,7 @@ import Pagination from '@/components/mini_components/Pagination';
 import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import Script from 'next/script';
 
 export async function getServerSideProps( { query, req, res }) {
     res.setHeader(
@@ -110,6 +111,15 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
       router.push("/404");
     }
   }, [articles])
+
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      //console.log(err);
+    }
+  }, []);
+  
   return (
     <>
         <Head>
@@ -133,6 +143,7 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
                 dangerouslySetInnerHTML={{__html: uniqueJSON}}
                 key="article-jsonld"
             />
+            
         </Head>
         
         <Main>
@@ -145,10 +156,23 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
 
             <hr className={['top-split-index', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
 
+            <ins className="adsbygoogle"
+            style={{display: "block"}}
+            data-ad-client="ca-pub-1092443878501202"
+            data-ad-slot="6124506676"
+            data-ad-format="auto"
+            data-full-width-responsive="true"/>
+
             <Posts posts={articles} nightMode={nightMode} supportWebp={supportWebp} setHandleCategory={setHandleCategory}/>
 
             <hr className={['top_split bot_split', nightMode ? 'top-split-night' : 'top-split-normal'].join(' ')}/>
             {paginationCount > 1 && <Pagination max={paginationCount} active={currentPageState} setActive={setCurrentPageState} category={handleCategory}/>}
+
+            <ins className="adsbygoogle"
+            style={{display: "block", marginTop: "20px"}}
+            data-ad-format="autorelaxed"
+            data-ad-client="ca-pub-1092443878501202"
+            data-ad-slot="8370546005"/>
         </Main>
     </>
   );

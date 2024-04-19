@@ -3,8 +3,17 @@ import '@/styles/globals.css'
 
 import { Wrapper } from '@/context/ContextProvider';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 export default function App({ Component, pageProps}) {
+
+  useEffect(() => {
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    } catch (err) {
+      //console.log(err);
+    }
+  }, []);
 
   function addMainJsonLd() {
     return {
