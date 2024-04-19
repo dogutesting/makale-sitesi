@@ -3,6 +3,12 @@ import Script from "next/script";
 
 export default function Document() {
 
+  /*
+   Aşağıdaki scriptlerden 
+   -> kişisel reklam
+   -> page anality sadece kullanıcı izin verdi ise aktif hale getirilecek
+  */
+
   return (
     <Html lang="tr">
       <Head>

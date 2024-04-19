@@ -207,7 +207,7 @@ export default function Eniyi1000ccSuperMain({topCPO}) {
         "Ağırlık": "197 kg",
         "Yakıt Kapasitesi": "17.5 Litre"
       },
-      "paragraf": "Alman mühendisliğinin bir şaheseri olan BMW S1000RR, üstün performansı ve sürücü dostu özellikleri ile tanınır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ve ergonomik yapısı uzun sürüşler için ideal. S1000RR, sportif performansı ve günlük kullanım kolaylığı ile hem pist hem de açık yolda mükemmel bir deneyim sunar."
+      "paragraf": "Listemizin super sport kategorisinde en iyi 1000 cc motoruna bir Alman devini seçtik. Alman mühendisliğinin bir şaheseri olan BMW S1000RR, üstün performansı ve sürücü dostu özellikleri ile tanınır. Motorun hızlanma kabiliyeti ve yüksek hızları etkileyici, yol tutuşu ise sınıfının en iyilerindendir. Yakıt kapasitesi ve tüketimi dengeli, sele konforu ve ergonomik yapısı uzun sürüşler için ideal. S1000RR, sportif performansı ve günlük kullanım kolaylığı ile hem pist hem de açık yolda mükemmel bir deneyim sunar."
     }
     
   ];
