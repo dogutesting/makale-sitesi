@@ -9,8 +9,8 @@ export default function Main({children}) {
   let checked_map = {
     "id": true,
     /* "ci": true, */
-    "custom_ad": true,
-    "site_traffic": true,
+    /* "custom_ad": true,
+    "site_traffic": true, */
   }
 
   const { nightMode, setNightMode, cookie_policy_div, setCookiePolicyDiv, cookieClick, domainNameForCookies } = useAppContext();
@@ -47,8 +47,8 @@ export default function Main({children}) {
     cookies.set('cookies_accepted', JSON.stringify({
       "id": true,
       /* "ci": true, */
-      "custom_ad": true,
-      "site_traffic": true,
+      /* "custom_ad": true,
+      "site_traffic": true, */
     }), {domain: domainNameForCookies, sameSite: "Strict", expires: expirationDate});
     cookieClick();
   }
@@ -158,7 +158,7 @@ export default function Main({children}) {
                        </p>
                   </div> */}
 
-                  <div>
+                  {/* <div>
                     <div className='slider_button_container'>
                       <h2> Kişiselleştirilmiş Reklamlar</h2>
                       <label className="switch">
@@ -180,7 +180,7 @@ export default function Main({children}) {
                     </div>
                     <hr></hr>
                     <p>Site trafiğini hesaplamak ve diğer detayları göstermek için kullanılan Google Analytics'in tanımladığı çerezler. Çok görüntülenme alan makaleleri tespit etmemize ve o makalelere benzer makaleler üretmemiz için faydalıdır.</p>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div id='cc_bottom'>
