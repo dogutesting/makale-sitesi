@@ -111,5 +111,8 @@ const xml = create({
     '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
     url: urlArrayForXml
   }
-}).end({ prettyPrint: true });
-fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), xml);
+}).end({ prettyPrint: true, headless: true });
+const xmlDeclaration = '<?xml version="1.0" encoding="UTF-8"?>';
+const xmlWithEncodingHead = xmlDeclaration + "\n" + xml;
+
+fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), xmlWithEncodingHead);

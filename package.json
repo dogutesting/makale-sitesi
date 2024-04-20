@@ -1,6 +1,6 @@
 {
   "name": "makale-sitesi",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev_color": "node -r colors src/index.js",
