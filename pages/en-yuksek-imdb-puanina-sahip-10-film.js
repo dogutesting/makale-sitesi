@@ -35,7 +35,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"8.8/10",
           "metascore": "90",
           "Oyuncular":["Clint Eastwood", "Lee Van Cleef", "Eli Wallach"],
-          "Yönetmen":"Sergio Leone"
+          "Yönetmen":"Sergio Leone",
+          "Değerlendirme": "810000"
         },
         "paragraf": "'Il buono, il brutto, il cattivo', Sergio Leone'nin yönettiği, Ennio Morricone'nin unutulmaz müziğiyle süslenmiş bir Vahşi Batı klasiğidir. Clint Eastwood, Lee Van Cleef ve Eli Wallach'ın başrollerini paylaştığı film, Amerikan İç Savaşı sırasında üç silahşörün, gizli bir defineyi bulma yarışındaki maceralarını anlatıyor. Filmdeki karakterler arasındaki ilişkiler, dinamikler ve etkileyici sahneler, onu tüm zamanların en iyi Vahşi Batı filmlerinden biri yapar. Film aynı zamanda hayatta kalma, hırs, ihanet ve onur temalarını derinlemesine işler."
       },
@@ -51,7 +52,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"8.8/10",
           "metascore": "92",
           "Oyuncular":["Liv Tyler", "Sean Astin", "Sean Bean"],
-          "Yönetmen":"Peter Jackson"
+          "Yönetmen":"Peter Jackson",
+          "Değerlendirme": "2000000"
         },
         "paragraf": "Orta Dünya'nın kaderini belirleyecek olan Yüzük'ü yok etme görevini üstlenen Frodo ve arkadaşlarının epik yolculuğunu anlatan bu film, fantastik edebiyatın en ünlü eserlerinden birinin sinemaya uyarlamasıdır. Görsel efektleri, müzikleri ve hikayesiyle büyüleyici bir deneyim sunar."
     },
@@ -67,7 +69,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"8.9/10",
           "metascore": "95",
           "Oyuncular":["Uma Thurman", "John Travolta", "Samuel L. Jackson"],
-          "Yönetmen":"Quentin Tarantino"
+          "Yönetmen":"Quentin Tarantino",
+          "Değerlendirme": "2200000"
         },
         "paragraf": "Quentin Tarantino'nun özgün anlatım tarzıyla hazırladığı bu film, farklı hikayeleri bir araya getirerek izleyiciye sıradışı bir deneyim sunar. Film, suç dünyasının karanlık yüzünü, mizahi bir dille gösteriyor. Tarantino'nun eşsiz diyalogları ve karakter derinliği, filmin unutulmaz olmasını sağlıyor."
     },
@@ -83,7 +86,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.0/10",
           "metascore": "94",
           "Oyuncular":["Liv Tyler", "Sean Astin", "Elijah Wood"],
-          "Yönetmen":"Peter Jackson"
+          "Yönetmen":"Peter Jackson",
+          "Değerlendirme": "2000000"
         },
         "paragraf": "Orta Dünya'nın kaderini belirleyecek olan son savaşın anlatıldığı bu film, Frodo ve Sam'in Yüzük'ü yok etme görevini tamamlamaya çalışmalarını, Aragorn'un kral olarak taç giymesini ve diğer karakterlerin kendi yollarını bulmalarını anlatır. Epik savaş sahneleri, duygusal anlar ve muhteşem görsel efektlerle dolu bu film, serinin muazzam bir finali olarak karşımıza çıkıyor."
     },
@@ -99,7 +103,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.0/10",
           "metascore": "95",
           "Oyuncular":["Liam Neeson", "Ralph Fiennes", "Ben Kingsley"],
-          "Yönetmen":"Steven Spielberg"
+          "Yönetmen":"Steven Spielberg",
+          "Değerlendirme": "1400000"
         },
         "paragraf": "Steven Spielberg'in yönettiği bu film, gerçek bir hikayeye dayanmaktadır. İkinci Dünya Savaşı sırasında Nazi işgali altındaki Polonya'da, işadamı Oskar Schindler'in Yahudi işçileri kurtarma çabalarını anlatır. Film, insanlık, fedakarlık ve umut temalarını işleyerek, izleyenler üzerinde derin bir etki bırakır."
     },
@@ -115,7 +120,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.0/10",
           "metascore": "97",
           "Oyuncular":["Henry Fonda", "Martin Balsam", "Lee J. Cobb"],
-          "Yönetmen":"Sidney Lumet"
+          "Yönetmen":"Sidney Lumet",
+          "Değerlendirme": "864000"
         },
         "paragraf": "12 Angry Men, bir jüri odasında geçen ve bir cinayet davasını tartışan 12 jüri üyesinin hikayesini anlatan sade ama etkili bir filmdir. Film, önyargıların, bireysel deneyimlerin ve adaletin doğasının derinlemesine incelenmesiyle dikkat çeker. Her bir jüri üyesinin kendi inançları ve değerleriyle nasıl mücadele ettiğini göstererek, izleyiciye adaletin ne anlama geldiğini sorgulatır."
     },
@@ -132,6 +138,7 @@ export default function MostMoviesMain({topCPO}) {
           "metascore": "90",
           "Oyuncular":["Al Pacino", "Robert De Niro", "Robert Duvall"],
           "Yönetmen":"Francis Ford Coppola",
+          "Değerlendirme": "1400000"
         },
         "paragraf": "Baba serisinin ikinci filmi olan 'The Godfather Part II', Corleone ailesinin hikayesini devam ettiriyor ve aynı zamanda Vito Corleone'nin gençliğini ve nasıl bir suç lordu haline geldiğini anlatıyor. Film, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alırken, aynı zamanda Amerikan rüyasının karanlık yüzünü de gözler önüne serer."
     },
@@ -147,7 +154,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.0/10",
           "metascore": "84",
           "Oyuncular":["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
-          "Yönetmen":"Christopher Nolan"
+          "Yönetmen":"Christopher Nolan",
+          "Değerlendirme": "2900000"
         },
         "paragraf": "Christopher Nolan'ın yönetmenliğindeki bu film, Batman'in Joker ile olan mücadelesini anlatıyor. Heath Ledger'ın unutulmaz performansıyla Joker karakterini hayata geçirdiği film, iyi ve kötü arasındaki sınırın ne kadar belirsiz olabileceğini gösteriyor. Aynı zamanda, bir kahramanın toplum üzerindeki etkisini ve bir suçlunun bir şehri nasıl kaosa sürükleyebileceğini de ele alıyor."
     },
@@ -163,7 +171,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.2/10",
           "metascore": "100",
           "Oyuncular":["Marlon Brando", "Al Pacino", "James Caan"],
-          "Yönetmen":"Francis Ford Coppola"
+          "Yönetmen":"Francis Ford Coppola",
+          "Değerlendirme": "2000000"
         },
         "paragraf": "Corleone ailesinin hikayesini anlatan bu epik film, mafya dünyasının iç yüzünü, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alır. Film, aynı zamanda Amerikan rüyasına, ailenin toplumdaki yerine ve suçun cazibesine dair sorgulamalar yapar."
     },
@@ -179,7 +188,8 @@ export default function MostMoviesMain({topCPO}) {
           "imdb":"9.3/10",
           "metascore": "82",
           "Oyuncular":["Tim Robbins", "Morgan Freeman"],
-          "Yönetmen":"Frank Darabont"
+          "Yönetmen":"Frank Darabont",
+          "Değerlendirme": "2900000"
         },
         "paragraf": "Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatır. Film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj verir."
     }  

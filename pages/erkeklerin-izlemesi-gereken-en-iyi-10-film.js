@@ -29,7 +29,8 @@ export default function MansNeedWatch({topCPO}) {
         "imdb":"7.2/10",
         "metascore": "65",
         "Oyuncular":["Will Smith", "Alice Braga"],
-        "Yönetmen":"Francis Lawrence"
+        "Yönetmen":"Francis Lawrence",
+        "Değerlendirme": "813000"
       },
       "paragraf": "Will Smith'in başrolde olduğu bu film, virüs sebebiyle insanoğlunun neredeyse tamamen yok olduğu bir dünyada, hayatta kalan bir bilim adamının hikayesini anlatıyor. Yalnızlık, hayatta kalma ve umut temalarının işlendiği bu filmde, bir erkeğin şartlar ne olursa olsun uyum sağlaması, hayatta kalması ve problem çözmeye devam etmesine güzel bir örnek sunuyor."
     },
@@ -46,6 +47,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "52",
         "Oyuncular":["Gerard Butler", "Lena Headey"],
         "Yönetmen":"Zack Snyder",
+        "Değerlendirme": "863000"
       },
       "paragraf": "300 Spartalı, Antik Yunan'da Pers İmparatorluğu'na karşı mücadele eden 300 Spartalı savaşçının destansı hikayesini anlatıyor. Film, erkekliğin ve maskülenliğin sadece zaferlerle değil, aynı zamanda fedakarlık, dayanışma, onur ve cesaret gibi değerlerle de tanımlandığını gösteriyor. Spartalıların karşılaştığı zorluklar ve onların bu zorluklar karşısında sergilediği dayanıklılık, izleyicilere erkekliğin ne anlama geldiğini ve erkekliğin doğasını, feda edilebilirliğini ve onurlu bir amaç uğruna ne kadar ileri gidilebileceğini sorgulatıyor. Filmdeki savaşçıların karşılaştığı son, erkekliğin bazen kişisel bir kazanç sağlamadan da anlamlı ve değerli olabileceğine dair güçlü bir mesaj veriyor."
     },
@@ -62,6 +64,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "64",
         "Oyuncular":["Will Smith", "Thandiwe Newton", "Jaden Smith"],
         "Yönetmen":"Gabriele Muccino",
+        "Değerlendirme": "560000"
       },
       "paragraf": "Gerçek bir hikayeden uyarlanan bu film, bir baba ve oğlunun hayatta kalma mücadelesini anlatıyor. Will Smith ve gerçek oğlu Jaden Smith'in başrollerde olduğu bir filmde, hayallerini gerçekleştirmenin ne kadar zorluklarla dolu bir süreç olduğunu gösteriyor. Hepimizin büyük hayalleri vardır, ancak onlara ulaşmak genellikle kolay değildir. Bu film, büyük hayallerin gerçekleşmesi için katlanılması gereken zorlukları etkileyici bir şekilde anlatıyor. Karakterlerin basketbol oynarken oğlu ile paylaştığı bu söz maskülenliğin ve filmin ana temasını güzel bir şekilde vurguluyor, 'Bir hayalin varsa onu koruman gerek. İnsanlar bir şey yapamaz ve seninde yapamayacağını söylerler. Bir şey yapmak istiyorsan gidip onu zorla al.'"
     },
@@ -78,6 +81,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "81",
         "Oyuncular":["Ryan Gosling", "Ana de Armas"],
         "Yönetmen":"Denis Villeneuve",
+        "Değerlendirme": "664000"
       },
       "paragraf": "Denis Villeneuve'un yönetmenliğindeki Blade Runner 2049, siberpunk'ın kurucu filmi olan orijinal Blade Runner'ın devamı niteliğindedir. Görsel efektleri ve derin karakter analizleriyle birlikte Blade Runner 2049 çok katmanlı bir film. Ana konusu yaratıcılık, kimlik, insanlık ve yapay zeka üzerine derinlemesine bir sorgulama içeriyor. Film kesinlikle bir başyapıt ama biz filmin bu konuları yerine farklı tarafları ile ilgileneceğiz. Bizim ilgilendiğimiz taraf bir kopya erkeğin duygusal yükümlülüklerini, hayal kırıklıklarını ve içsel savaşlarını ele alıyor. K'nin yaşadığı içsel çatışmalar ve kendini bulma arayışı, birçok erkeğin hayatında karşılaştığı duygusal zorluklar ve bu zorlukların sonuçlarında kendilerini nasıl bir duygu durumu içerisinde bulduklarına güzel bir örnek. Öte yandan, sanal partner Joi'nin temsil ettiği idealize edilmiş kadın fantezisi, gerçek hayatta mükemmel bir partnerin var olmadığını kabullenmemiz için iyi bir örnek. Bu filmin, ana konusu dışında erkekliğin ve maskülenliğin modern dünyadaki karmaşıklığını başarılı bir şekilde ele aldığını düşünüyorum."
     },
@@ -94,6 +98,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "68",
         "Oyuncular":["Mel Gibson", "Sophie Marceau"],
         "Yönetmen":"Randall Wallace",
+        "Değerlendirme": "1100000"
       },
       "paragraf": "Skotyalı savaşçı William Wallace'ın gerçek yaşam hikayesini temel alan bu epik film, özgürlük, onur ve aşk uğruna verilen mücadelenin etkileyici bir portresini sunar. Mel Gibson'un hem yönetip hem başrolde oynadığı film, özgürlüğünü kaybettiği zaman bir erkeğin ne kadar ileri gidebileceğini gösteriyor. Tarihi olayları dramatik bir şekilde sunan Cesur Yürek, erkekliğin, liderliğin ve direncin ne anlama geldiğini derinlemesine anlatıyor."
     },
@@ -110,6 +115,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "67",
         "Oyuncular":["Russell Crowe", "Joaquin Phoenix", "Connie Nielsen"],
         "Yönetmen":"Ridley Scott",
+        "Değerlendirme": "1600000"
       },
       "paragraf": "Roma İmparatorluğu'nun göz kamaştıran döneminde geçen bu epik film, ailesi hain bir prens tarafından öldürülen bir generalin sadece fiziksel değil, duygusal ve manevi mücadelesini de anlatır. Gladyatör arenalarında hayatta kalmak için savaşırken, Maximus sadece bedenen değil, ruhen de bir savaşçıya dönüşür. Onun bu zorlu yolculuğu, erkekliğin derinliklerini, onurunu, sadakatini ve fedakarlığını gözler önüne seriyor."
     },
@@ -126,6 +132,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "62",
         "Oyuncular":["Edward Norton"],
         "Yönetmen":"Tony Kaye",
+        "Değerlendirme": "1200000"
       },
       "paragraf": "Neo-Nazi bir grubun içinde büyüyen bir genç olan Derek'in dönüşümünü anlatan bu film, ırkçılığın, nefretin ve şiddetin yıkıcı etkilerine odaklanır. Edward Norton'un başroldeki performansıyla dikkat çeken film, toplumsal konuları cesurca ele alışıyla bilinir. Film, maskülenliğin sadece fiziksel şiddetle değil, aynı zamanda kişisel gelişim ve değişimle de ilgili olduğunu ortaya koyar. Maskülenliğin sadece yıkıcılık ve zorbalıkla sınırlı olmadığını, bununla birlikte karakterimizi şekillendirme ve çevremizdeki insanlara olumlu etkilerde bulunma potansiyelimiz olduğunu vurgular."
     },
@@ -142,6 +149,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "67",
         "Oyuncular":["Brad Pitt", "Edward Norton"],
         "Yönetmen":"David Fincher",
+        "Değerlendirme": "2300000"
       },
       "paragraf": "Fight Club, erkeklik ve maskülenlik kavramlarına dair en akılda kalıcı filmlerden biridir. David Fincher yönetmenliğindeki bu eser, Chuck Palahniuk'un aynı adlı romanından uyarlanmıştır. Tüketim toplumu, erkekliğin krizi ve bireysel özgürlük temasları üzerine keskin bir eleştiri sunar. Brad Pitt ve Edward Norton'un başrolde olduğu film, izleyiciyi derinden etkileyen bir finalle sonlanır. Modern toplumun getirdiği görünmez kısıtlamalara dikkat çekerken, erkeklerin maskülenliği geri kazanma yolunda diğer erkeklerle kurduğu bağın önemini açık bir şekilde vurgular."
     },
@@ -158,6 +166,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "100",
         "Oyuncular":["Marlon Brando", "Al Pacino"],
         "Yönetmen":"Francis Ford Coppola",
+        "Değerlendirme": "2000000"
       },
       "paragraf": "Francis Ford Coppola'nın yönettiği bu efsane film, mafya ailesinin iç yüzünü, aile bağlarını, iktidar mücadelesini ve onur kavramını derinlemesine ele alır. Sinema tarihindeki en ikonik filmlerden biri olarak kabul edilir. Aynı zamanda erkekliğin, baba-oğul ilişkisinin ve liderlik etiğinin karmaşıklığını, erkeklerin aileleri ve onurları uğruna neleri feda edebileceğini gözler önüne serer. Bu bağlamda, film, erkeklerin ailevi ve toplumsal beklentilere nasıl yanıt verdiğini, maskülenliğin aile ve onur üzerindeki etkilerini inceler."
     },
@@ -174,6 +183,7 @@ export default function MansNeedWatch({topCPO}) {
         "metascore": "82",
         "Oyuncular":["Tim Robbins", "Morgan Freeman"],
         "Yönetmen":"Frank Darabont",
+        "Değerlendirme": "2900000"
       },
       "paragraf": "Stephen King'in kısa hikayesinden uyarlanan bu film, Andy Dufresne'nin suçsuz yere mahkum edildiği Shawshank hapishanesinde geçirdiği yılları ve orada kurduğu dostlukların hikayesini anlatıyor. Tim Robbins ve Morgan Freeman'ın başrollerde olduğu film, umut, özgürlük ve insani direncin gücüne dair sıcak bir mesaj veriyor. Suçsuz dahi olsan hayatın sana karşı acımasızlıkları ile başa çıkmaktan başka çarenin olmadığını anlatan bu film, ayrıca imdb 1. sıradaki film olarakta uzun süredir liderliğini koruyor ve birçok kişi tarafından tüm zamanların en iyi filmi olarak kabul ediliyor."
     }

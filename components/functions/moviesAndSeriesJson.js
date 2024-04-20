@@ -27,6 +27,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
               "url": item.url,
               "name": item.name,
               "image": item.image,
+              "genre": item.ozellikler["Kategori"].map(item => cleanText(item)),
               "dateCreated": cleanText(item.ozellikler["Yıl"]),
               "director": {
                   "@type": "Person",
@@ -34,8 +35,9 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
                 },
               "actor": item.ozellikler["Oyuncular"].map(item => cleanText(item)),
               "duration": item.ozellikler["Süre"],
-              "aggregateRating": {
-                "@type": "AggregateRating",
+              "rating": {
+                /* "@type": "AggregateRating", */
+                "@type": "Rating",
                 "ratingValue": cleanText(item.ozellikler["imdb"]),
                 "bestRating": "10"
               }
@@ -54,6 +56,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
           "position": (index+1),
           "item": {
             "@type": "TVSeries",
+            "genre": item.ozellikler["Kategori"].map(item => cleanText(item)),
             "url": item.url,
             "name": item.name,
             "image": item.image,
@@ -73,7 +76,8 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": item.ozellikler["imdb"],
-              "bestRating": "10"
+              "bestRating": "10",
+              "ratingCount": item.ozellikler["Değerlendirme"]
             }
           }
         }

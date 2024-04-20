@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-yapılacaklar.txt
-yeni-makale-fikirleri.txt
+/yapılacaklar.txt
+/yeni-makale-fikirleri.txt

@@ -29,7 +29,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.2",
           "metascore":"83",
           "Oyuncular": ["Neil deGrasse Tyson"],
-          "Yönetmen": "Neil deGrasse Tyson"
+          "Yönetmen": "Neil deGrasse Tyson",
+          "Değerlendirme": "128000"
         },
         "paragraf": "Cosmos: A Spacetime Odyssey, evrenin sırlarını anlamak için bilimin penceresinden bakıyor. Neil deGrasse Tyson'ın etkileyici anlatımıyla, izleyiciyi kozmosun derinliklerine götüren bu dizi, hem bilgilendirici hem de görsel bir şölen sunuyor."
     },
@@ -45,7 +46,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.2",
           "metascore":"92",
           "Oyuncular": ["James Gandolfini", "Edie Falco", "Steven Van Zandt"],
-          "Yönetmen": "David Chase"
+          "Yönetmen": "David Chase",
+          "Değerlendirme": "470000"
         },
         "paragraf": "The Sopranos, Amerikan mafya hayatının gerçekçi bir portresini sunarken, aile ve iş yaşantısının karmaşıklığını da ele alıyor. Tony Soprano'nun hem bir aile babası hem de bir mafya lideri olarak yaşadığı içsel çatışmalar, diziye derinlik katıyor."
     },
@@ -61,7 +63,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.3",
           "metascore":"97",
           "Oyuncular": ["David Attenborough"],
-          "Yönetmen": "David Attenborough"
+          "Yönetmen": "David Attenborough",
+          "Değerlendirme": "46000"
         },
         "paragraf": "Blue Planet II, denizlerin ve okyanusların gizemli dünyasını gözler önüne seriyor. David Attenborough'nun eşsiz anlatımı ile deniz canlılarının hayatlarına tanık oluyoruz. Bu dizi, doğanın güzelliklerini ve hassasiyetlerini bizlere hatırlatıyor."
     },
@@ -77,7 +80,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.3",
           "metascore":"90",
           "Oyuncular": ["Zach Tyler", "Mae Whitman", "Jack De Sena"],
-          "Yönetmen": "Michael Dante DiMartino, Bryan Konietzko"
+          "Yönetmen": "Michael Dante DiMartino, Bryan Konietzko",
+          "Değerlendirme": "372000"
         },
         "paragraf": "Avatar: The Last Airbender, elementleri kontrol edebilen bükücülerin dünyasında geçiyor. Genç Avatar Aang'in yolculuğunu anlatan bu dizi, dostluk, onur ve fedakarlık temasları üzerine odaklanıyor."
     },
@@ -93,7 +97,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.3",
           "metascore":"91",
           "Oyuncular": ["Dominic West", "Idris Elba", "Michael K. Williams"],
-          "Yönetmen": "David Simon"
+          "Yönetmen": "David Simon",
+          "Değerlendirme": "377000"
         },
         "paragraf": "The Wire, Baltimore şehrinin hem sokaklarında hem de koridorlarında cereyan eden suç, politika ve medya olaylarını ele alıyor. Dizi, kentsel yaşamın ve sistemlerin karmaşıklığına derinlemesine bir bakış sunuyor."
     },
@@ -109,7 +114,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.3",
           "metascore":"82",
           "Oyuncular": ["Jessie Buckley", "Jared Harris", "Stellan Skarsgård"],
-          "Yönetmen": "Johan Renck"
+          "Yönetmen": "Johan Renck",
+          "Değerlendirme": "863000"
         },
         "paragraf": "Chernobyl, tarihin en büyük nükleer felaketlerinden birini detaylı bir şekilde ele alıyor. İnsan hatalarının ve bürokrasinin getirdiği korkunç sonuçları gözler önüne seren bu dizi, izleyiciye derinden etkileyen bir deneyim sunuyor."
     },
@@ -125,7 +131,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.4",
           "metascore":"87",
           "Oyuncular": ["Damian Lewis", "Ron Livingston", "David Schwimmer"],
-          "Yönetmen": "David Frankel, Phil Alden Robinson"
+          "Yönetmen": "David Frankel, Phil Alden Robinson",
+          "Değerlendirme": "526000"
         },
         "paragraf": "Band of Brothers, II. Dünya Savaşı sırasında Easy Company'nin Avrupa'da yaşadığı olayları anlatıyor. Savaşın zorlukları, askerlerin arasındaki kardeşlik bağları ve liderlik teması bu diziyi unutulmaz kılıyor."
     },
@@ -141,7 +148,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.4",
           "metascore":"91",
           "Oyuncular": ["David Attenborough"],
-          "Yönetmen": "David Attenborough"
+          "Yönetmen": "David Attenborough",
+          "Değerlendirme": "220000"
         },
         "paragraf": "Planet Earth, dünyamızın doğal güzelliklerini ve vahşi yaşamını ultra yüksek çözünürlükte gözler önüne seriyor. David Attenborough'nun rehberliğinde, doğanın eşsiz manzaralarına ve canlılarına şahit oluyoruz."
     },
@@ -157,7 +165,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.5",
           "metascore":"96",
           "Oyuncular": ["David Attenborough"],
-          "Yönetmen": "David Attenborough"
+          "Yönetmen": "David Attenborough",
+          "Değerlendirme": "158000"
         },
         "paragraf": "Planet Earth II, doğanın harikalarını ve vahşi yaşamı daha yakından keşfetmemize olanak tanıyor. İzleyici, şehirlerdeki hayvanlardan uzak ormanlara kadar geniş bir yelpazede doğal yaşama tanık oluyor."
     },
@@ -173,7 +182,8 @@ export default function MostSeriesMain({topCPO}) {
           "imdb": "9.5",
           "metascore":"87",
           "Oyuncular": ["Bryan Cranston", "Aaron Paul", "Anna Gunn"],
-          "Yönetmen": "Vince Gilligan"
+          "Yönetmen": "Vince Gilligan",
+          "Değerlendirme": "2100000"
         },
         "paragraf": "Breaking Bad, kimya öğretmeni Walter White'ın kanser teşhisi sonrası uyuşturucu üreticisi ve satıcısına dönüşmesini anlatıyor. Ailevi sorumlulukları ve hayatta kalma mücadelesi, Walter'ın moral değerlerini sorgulamasına neden oluyor."
     }
