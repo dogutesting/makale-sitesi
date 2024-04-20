@@ -66,7 +66,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
             "name": item.name,
             "image": item.image,
             "startDate": startDate,
-            ...(endDate && {"endDate": endDate}), // Eğer endDate varsa ekliyoruz
+            /* ...(endDate && {"endDate": endDate}), // Eğer endDate varsa ekliyoruz */
             "numberOfSeasons": item.eps,  // Serinin bölüm sayısını ekledik
             "director": {
                 "@type": "Person",

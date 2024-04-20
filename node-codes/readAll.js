@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { create } = require('xmlbuilder2');
 
 // Sayfa dosyalarının bulunduğu klasörü belirtin
 const pagesDirectory = path.join(__dirname, '../pages');
@@ -8,6 +9,10 @@ const pagesDirectory = path.join(__dirname, '../pages');
 const pageFiles = fs.readdirSync(pagesDirectory);
 
 let values = [];
+let urlArrayForXml = [
+  {loc: "https://enonlar.com/", 
+  lastmod: new Date().toISOString().split('.')[0]+"+03:00"}
+];
 
 // Her sayfanın içeriğini okuyun
 pageFiles.forEach((pageFile) => {
@@ -22,6 +27,7 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const urlRegex = /const\s+url\s*=\s*"([^"]+)"/;
     const baslikRegex = /const\s+baslik\s*=\s*"([^"]+)"/;
     const eklenmeTarihiRegex = /const\s+addDate\s*=\s*"([^"]+)"/;
+    const degistirilmeTarihiRegex = /const\s+degistirilmeTarihi\s*=\s*"([^"]+)"/;
     const kategoriRegex = /const\s+kategori\s*=\s*"([^"]+)"/;
     const okunmaSuresiRegex = /const\s+okunmaSuresi\s*=\s*"([^"]+)"/;
     const metinRegex = /const\s+metin\s*=\s*"([^"]+)"/;
@@ -30,6 +36,7 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const urlMatch = pageContent.match(urlRegex);
     const baslikMatch = pageContent.match(baslikRegex);
     const eklenmeTarihiMatch = pageContent.match(eklenmeTarihiRegex);
+    const degistirilmeTarihiMatch = pageContent.match(degistirilmeTarihiRegex);
     const kategoriMatch = pageContent.match(kategoriRegex);
     const okunmaSuresiMatch = pageContent.match(okunmaSuresiRegex);
     const metinMatch = pageContent.match(metinRegex);
@@ -38,6 +45,7 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const url = urlMatch ? urlMatch[1] : '';
     const baslik = baslikMatch ? baslikMatch[1] : '';
     const eklenmeTarihi = eklenmeTarihiMatch ? eklenmeTarihiMatch[1] : '';
+    const degistirilmeTarihi = degistirilmeTarihiMatch ? degistirilmeTarihiMatch[1] : '';
     const kategori = kategoriMatch ? kategoriMatch[1] : '';
     const okunmaSuresi = okunmaSuresiMatch ? okunmaSuresiMatch[1] : '';
     const metin = metinMatch ? metinMatch[1] : '';
@@ -80,6 +88,14 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     //const resimYolu0 = resimYolu.split(":")[1].replace(/[`',]/g, "");
     const spreadMetinxD = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
     values.push('("'+url.trim()+'", "'+baslik.trim()+'", "'+anaResim+'", "'+eklenmeTarihi.trim()+'", "'+okunmaSuresi.trim()+'", "'+kategori.trim()+'", "'+spreadMetinxD+'", "'+keywords+'")');
+
+    //!xml creator
+    //url
+    //degistirilmeTarihi
+    urlArrayForXml.push({
+      loc: "https://enonlar.com/"+url.trim(), 
+      lastmod: degistirilmeTarihi.trim()
+    });
 });
 
 //! mysql kodu oluşturuluyor.
@@ -88,3 +104,12 @@ const sql_query = "INSERT INTO makaleler (url, baslik, resimYolu, eklenmeTarihi,
 
 /* fs.writeFileSync("insert_makaleler.sql", sql_query); */
 fs.writeFileSync(path.join(__dirname, '../sql/insert_makaleler.sql'), sql_query);
+
+//! xml creator
+const xml = create({
+  urlset: {
+    '@xmlns': 'http://www.sitemaps.org/schemas/sitemap/0.9',
+    url: urlArrayForXml
+  }
+}).end({ prettyPrint: true });
+fs.writeFileSync(path.join(__dirname, '../public/sitemap.xml'), xml);

@@ -7,7 +7,7 @@ import Pagination from '@/components/mini_components/Pagination';
 import { useAppContext } from '@/context/ContextProvider';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import Script from 'next/script';
+/* import Script from 'next/script'; */
 
 export async function getServerSideProps( { query, req, res }) {
     res.setHeader(
