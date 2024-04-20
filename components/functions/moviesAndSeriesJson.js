@@ -23,7 +23,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
             "@type": "ListItem",
             "position": (index+1),
             "item": {
-              "@type": type,
+              "@type": "Movie",
               "url": item.url,
               "name": item.name,
               "image": item.image,
@@ -33,13 +33,18 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
                   "@type": "Person",
                   "name": cleanText(item.ozellikler["Yönetmen"])
                 },
-              "actor": item.ozellikler["Oyuncular"].map(item => cleanText(item)),
+              "actor": item.ozellikler["Oyuncular"].map(actor => {
+                return {
+                  "@type": "Person",
+                  "name": cleanText(actor)
+                };
+              }),
               "duration": item.ozellikler["Süre"],
-              "rating": {
-                /* "@type": "AggregateRating", */
-                "@type": "Rating",
+              "aggregateRating": {
+                "@type": "aggregateRating",
                 "ratingValue": cleanText(item.ozellikler["imdb"]),
-                "bestRating": "10"
+                "bestRating": "10",
+                "ratingCount": item.ozellikler["Değerlendirme"]
               }
             }
           }
