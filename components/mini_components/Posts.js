@@ -9,7 +9,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
             index == 2 || index == 5 || index == 8 ? (
               <>
                 <ContentBox
-                    key={index}
+                    key={index+"_n1"}
                     url={row.url}
                     baslik={row.baslik}
                     resim={row.resimYolu}
@@ -35,7 +35,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
             :
             (
               <ContentBox
-                  key={index}
+                  key={index+"_n2"}
                   url={row.url}
                   baslik={row.baslik}
                   resim={row.resimYolu}

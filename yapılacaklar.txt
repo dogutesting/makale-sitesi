@@ -1,23 +1,17 @@
 -> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
+-> footer eklenebilir
+-> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir
+-> fuse kütüphanesi ile arama barı eklenebilinir
 
 test edilecek -> google reklam kütüphanesi eklenecek
 test edilecek -> google traffic kütüphanesi eklenecek
 
--> sunucuya nginx, fail2ban, certbot yüklenecek
--> sunucuya mail yüklenecek (defdo mailden sorumlu olarak ayarlanacak)
--> 10 makale daha yaz.
-
--> limitless'e bakılması gerekiyor.
 
 -> ustalar.enonlar.com : adana parke ustaları
 
--> console.log'ları yayınlamadan önce kaldır. Özellikle userKey gibi dosyalarda.
--> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir
+
 -> kullanılmayan npm i kütüphanelerini bul ve sil
 -> Lighthouse'da hata var mı diye kontrol (dosya boyutlarını küçültmek için minify (bundle)
 	 veya https://github.com/johnagan/clean-webpack-plugin)
 -> google search console'da hata var mı diye kontrol et
 -> günde minimum 1 makale yaz ve diğer proje üzerinde çalış
-
-Belki:
-	-> fuse kütüphanesi ile arama barı eklenebilinir
