@@ -53,7 +53,7 @@ const ClassicArticleBot = ({currentPageOperations, nightMode, articleConstructor
 
         <OtherContents currentUrl={url} bottomChecker={bottomChecker}/>
 
-        <ins class="adsbygoogle"
+        <ins className="adsbygoogle"
         style={{display:"block", marginTop: "18px", marginBottom: "18px"}}
         data-ad-format="autorelaxed"
         data-ad-client="ca-pub-1092443878501202"
