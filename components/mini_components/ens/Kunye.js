@@ -1,10 +1,10 @@
 import Link from 'next/link';
 export default function Kunye({ozellikler, parseHtml}) {    
-    const ozelliklerArray = Object.entries(ozellikler);
+    const ozelliklerArray = ozellikler !== null ? Object.entries(ozellikler) : ozellikler;
 
     return (
       <aside className='kunye'>
-        {
+        { ozelliklerArray &&
           ozelliklerArray.map(([anahtar, deger], index) => {
             if(deger != "0" || deger != "") {
               return (

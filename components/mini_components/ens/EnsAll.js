@@ -27,7 +27,7 @@ export default function EnsAll({jsonContentArray, sayfaUrl, currentPageOperation
               nightMode={nightMode}
               topLevelUrl={topLevelUrl}
               sayfaUrl={sayfaUrl}>
-                <Kunye ozellikler={item.ozellikler} parseHtml={cHtmlToJsx}/>
+                <Kunye ozellikler={item.ozellikler ? item.ozellikler : null} parseHtml={cHtmlToJsx}/>
                 <p>{cHtmlToJsx(item.paragraf)}</p>
           </En>
         </section>

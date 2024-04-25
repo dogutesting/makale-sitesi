@@ -1,15 +1,16 @@
 import Head from "next/head"
 import nf_styles from '@/styles/not_found.module.css';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-/* import Cookies from 'js-cookie'; */
+import SITE_INFOS from '@/site_infos.json';
 
 //! Öneri
 //! (Örneğin: neil gibson filmleri -> böyle bir sayfa yok 404 yönlendirildi -> 404'de neil-gibson anahtar kelimesi içeren url'lere bakılıp, en iyi 10 neil gibson kitabı sunulabilir vs vs.)
 
 export default function ErrorPage() {
+
+  const { TOP_LEVEL_URL } = SITE_INFOS;
   const [nightMode, setNightMode] = useState(false);
-  const router = useRouter();
+  /* const router = useRouter(); */
 
   /* const getDateAndTime = () => {
     const now = new Date();
@@ -56,6 +57,7 @@ export default function ErrorPage() {
 
   useEffect(() => {
     getMode();
+    window.history.replaceState(window.history.state, "", TOP_LEVEL_URL+"/404");
     /* const { asPath } = router;
     recordNotFound(asPath, getDateAndTime(), Cookies.get("id")); */
   }, []);
