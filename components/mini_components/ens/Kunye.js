@@ -1,6 +1,6 @@
 import Link from 'next/link';
 export default function Kunye({ozellikler, parseHtml}) {    
-    const ozelliklerArray = ozellikler !== null ? Object.entries(ozellikler) : ozellikler;
+    const ozelliklerArray = Object.entries(ozellikler);
 
     return (
       <aside className='kunye'>
