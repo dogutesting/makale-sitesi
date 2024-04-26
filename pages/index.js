@@ -102,6 +102,7 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
   //Head için LD+JSON
 
   useEffect(() => {
+    setCurrentPageState(1);
     newCategoriesSequence(cats, currentCategory);
   }, [currentCategory]);
 

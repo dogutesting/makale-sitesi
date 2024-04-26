@@ -53,9 +53,6 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
             <span className='category' onClick={(e) => {goTag(e, kategori);}}>{kategori}</span>
           </div>
         </div>
-
-        
-
     </Link>
   )
 }

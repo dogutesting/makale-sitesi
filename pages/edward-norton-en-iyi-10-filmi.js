@@ -102,7 +102,8 @@ const jsonContentArray = [
       "imdb": "7.6/10",
       "metascore": "67",
       "Oyuncular": [
-        "Edward Norton"
+        "Edward Norton",
+        "Rosario Dawson"
       ],
       "Yönetmen": "Spike Lee"
     },
@@ -189,7 +190,8 @@ const jsonContentArray = [
       "metascore": "87",
       "Oyuncular": [
         "Michael Keaton",
-        "Edward Norton"
+        "Edward Norton",
+        "Emma Stone"
       ],
       "Yönetmen": "Alejandro González Iñárritu"
     },
@@ -232,8 +234,8 @@ const jsonContentArray = [
       "imdb": "8.8/10",
       "metascore": "67",
       "Oyuncular": [
-        "Brad Pitt",
-        "Edward Norton"
+        "Edward Norton",
+        "Brad Pitt"
       ],
       "Yönetmen": "David Fincher"
     },

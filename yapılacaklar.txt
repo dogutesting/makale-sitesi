@@ -1,3 +1,5 @@
+-> sayfa 2'de iken kategori değiştirilince 
+
 -> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
 -> footer eklenebilir
 -> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir

@@ -7,7 +7,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
       {
         posts.map((row, index) => (
             index == 2 || index == 5 || index == 8 ? (
-              <>
+              <div key={index+"_n0"}>
                 <ContentBox
                     key={index+"_n1"}
                     url={row.url}
@@ -30,7 +30,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
                 data-ad-slot="9300484291"
                 data-ad-format="auto"
                 data-full-width-responsive="true"/>
-              </>
+              </div>
             )
             :
             (

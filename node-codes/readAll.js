@@ -99,7 +99,7 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
 });
 
 //! mysql kodu oluşturuluyor.
-const sql_query = "INSERT INTO makaleler (url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf, anahtarlar) VALUES "+values.join(",")+" ON DUPLICATE KEY UPDATE baslik = VALUES(baslik), resimYolu = VALUES(resimYolu), eklenmeTarihi = VALUES(eklenmeTarihi), okunmaSuresi = VALUES(okunmaSuresi), kategori = VALUES(kategori), paragraf = VALUES(paragraf), anahtarlar = VALUES(anahtarlar);"
+const sql_query = "DELETE FROM makaleler; INSERT INTO makaleler (url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf, anahtarlar) VALUES "+values.join(",")+" ON DUPLICATE KEY UPDATE baslik = VALUES(baslik), resimYolu = VALUES(resimYolu), eklenmeTarihi = VALUES(eklenmeTarihi), okunmaSuresi = VALUES(okunmaSuresi), kategori = VALUES(kategori), paragraf = VALUES(paragraf), anahtarlar = VALUES(anahtarlar);"
 //console.log(sql_query);
 
 /* fs.writeFileSync("insert_makaleler.sql", sql_query); */
