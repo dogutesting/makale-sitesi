@@ -1,4 +1,7 @@
--> sayfa 2'de iken kategori değiştirilince 
+-> enonlar | hepsiburada | trendyol | n11 karşılaştırma
+	en 10 xiaomi mi robot
+	en 10 deep freeze
+	en 10 yağsız pişirme bilmem neyi
 
 -> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
 -> footer eklenebilir

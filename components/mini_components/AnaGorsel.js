@@ -1,3 +1,4 @@
+import React from "react";
 import Image from "next/image"
 import { useAppContext } from "@/context/ContextProvider";
 
@@ -15,10 +16,10 @@ export default function Ana_gorsel({ana_resim, baslik, isItPri}) {
                 />                        
             ) : (
                 <img
-                loading=''
+                loading={isItPri ? 'eager' : 'lazy'}
                 className='us-image image-container-image-top'
                 src={ana_resim}
-                alt={"Makale ana görseli"}
+                alt={baslik + " ana görseli"}
                 /> 
             )
         }
