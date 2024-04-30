@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSuresi, kategori, paragraf, pri, nightMode, supportWebp, setHandleCategory}) {
-
+  const router = useRouter();
   const goTag = (e, kategori) => {
     e.preventDefault();
     setHandleCategory(kategori);
-    window.scrollTo(0, 0);
+    router.push("/?kategori="+kategori);
+    /* window.scrollTo(0, 0); */
   }
-
-  //pri && console.log("priority: " + pri + " - ");
 
   return (
     <Link className={['index-content-box', nightMode ? 'icb-night' : 'icb-light'].join(' ')} href={url}>

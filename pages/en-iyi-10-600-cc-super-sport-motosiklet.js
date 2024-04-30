@@ -21,7 +21,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
   const jsonContentArray = [
     {
       "num": "10",
-      "url": "https://enonlar.com/${url}#bolum-10",
+      "url": `https://enonlar.com/${url}#bolum-10`,
       "name": "Aprilia RS 660",
       "image": "/images/motosiklet/aprilia_rs_660.png",
       "ozellikler": {
@@ -40,7 +40,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "9",
-      "url": "https://enonlar.com/${url}#bolum-10",
+      "url": `https://enonlar.com/${url}#bolum-10`,
       "name": "Triumph Daytona 675",
       "image": "/images/motosiklet/triumph_daytona_675.png",
       "ozellikler": {
@@ -59,7 +59,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "8",
-      "url": "https://enonlar.com/${url}#bolum-11",
+      "url": `https://enonlar.com/${url}#bolum-11`,
       "name": "Honda CBR500R",
       "image": "/images/motosiklet/honda_cbr_500r.png",
       "ozellikler": {
@@ -78,7 +78,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "7",
-      "url": "https://enonlar.com/${url}#bolum-7",
+      "url": `https://enonlar.com/${url}#bolum-7`,
       "name": "Yamaha YZF-R7",
       "image": "/images/motosiklet/yamaha_yzf_r7.jpg",
       "ozellikler": {
@@ -97,7 +97,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "6",
-      "url": "https://enonlar.com/${url}#bolum-6",
+      "url": `https://enonlar.com/${url}#bolum-6`,
       "name": "MV Agusta F3 675",
       "image": "/images/motosiklet/mv_agusta_f3_675.png",
       "ozellikler": {
@@ -116,7 +116,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "5",
-      "url": "https://enonlar.com/${url}#bolum-5",
+      "url": `https://enonlar.com/${url}#bolum-5`,
       "name": "Triumph Daytona 675R",
       "image": "/images/motosiklet/triumph_daytona_675r.png",
       "ozellikler": {
@@ -135,7 +135,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "4",
-      "url": "https://enonlar.com/${url}#bolum-4",
+      "url": `https://enonlar.com/${url}#bolum-4`,
       "name": "Suzuki GSX-R600",
       "image": "/images/motosiklet/suzuki_gsx_r600.png",
       "ozellikler": {
@@ -154,7 +154,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "3",
-      "url": "https://enonlar.com/${url}#bolum-3",
+      "url": `https://enonlar.com/${url}#bolum-3`,
       "name": "Kawasaki Ninja ZX-6R",
       "image": "/images/motosiklet/kawasaki_ninja_zx_6r.jpg",
       "ozellikler": {
@@ -173,7 +173,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "2",
-      "url": "https://enonlar.com/${url}#bolum-2",
+      "url": `https://enonlar.com/${url}#bolum-2`,
       "name": "Honda CBR600RR",
       "image": "/images/motosiklet/honda_cbr_600rr.png",
       "ozellikler": {
@@ -192,7 +192,7 @@ export default function Eniyi600ccSuperMain({topCPO}) {
     },
     {
       "num": "1",
-      "url": "https://enonlar.com/${url}#bolum-1",
+      "url": `https://enonlar.com/${url}#bolum-1`,
       "name": "Yamaha YZF-R6",
       "image": "/images/motosiklet/yamaha_yzf_r6.png",
       "ozellikler": {

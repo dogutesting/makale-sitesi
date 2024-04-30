@@ -59,7 +59,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/${url}#bolum-8",
+    "url": `https://enonlar.com/${url}#bolum-8`,
     "name": "Benelli Tornado 302R",
     "image": "/images/motosiklet/benelli_302r.png",
     "ozellikler": {
@@ -78,7 +78,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
 },
 {
     "num": "7",
-    "url": "https://enonlar.com/${url}#bolum-7",
+    "url": `https://enonlar.com/${url}#bolum-7`,
     "name": "Hyosung GT300R",
     "image": "/images/motosiklet/hyosung_gt_300r.png",
     "ozellikler": {
@@ -97,7 +97,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
 },
 {
     "num": "6",
-    "url": "https://enonlar.com/${url}#bolum-6",
+    "url": `https://enonlar.com/${url}#bolum-6`,
     "name": "Kawasaki Ninja 400",
     "image": "/images/motosiklet/kawasaki_ninja_400.png",
     "ozellikler": {
@@ -116,7 +116,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/${url}#bolum-6",
+    "url": `https://enonlar.com/${url}#bolum-6`,
     "name": "Kawasaki Ninja 300",
     "image": "/images/motosiklet/kawasaki_ninja_300.png",
     "ozellikler": {
@@ -135,7 +135,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/${url}#bolum-5",
+    "url": `https://enonlar.com/${url}#bolum-5`,
     "name": "Honda CBR300R",
     "image": "/images/motosiklet/honda_cbr_300r.png",
     "ozellikler": {
@@ -154,7 +154,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/${url}#bolum-4",
+    "url": `https://enonlar.com/${url}#bolum-4`,
     "name": "KTM RC 390",
     "image": "/images/motosiklet/ktm_rc_390.png",
     "ozellikler": {
@@ -173,7 +173,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/${url}#bolum-1",
+    "url": `https://enonlar.com/${url}#bolum-1`,
     "name": "BMW G310RR",
     "image": "/images/motosiklet/bmw_g310_rr.png",
     "ozellikler": {
@@ -192,7 +192,7 @@ export default function Eniyi300ccSuperMain({topCPO}) {
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/${url}#bolum-2",
+    "url": `https://enonlar.com/${url}#bolum-2`,
     "name": "Yamaha YZF-R3",
     "image": "/images/motosiklet/yamaha_yzf_r3.png",
     "ozellikler": {

@@ -21,7 +21,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
   const jsonContentArray = [
     {
       "num": "10",
-      "url": "https://enonlar.com/${url}#bolum-10",
+      "url": `https://enonlar.com/${url}#bolum-10`,
       "name": "Kawasaki Z1000",
       "image": "/images/motosiklet/kawasaki_z1000.jpg",
       "ozellikler": {
@@ -40,7 +40,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "9",
-      "url": "https://enonlar.com/${url}#bolum-9",
+      "url": `https://enonlar.com/${url}#bolum-9`,
       "name": "Aprilia Tuono V4 1100 RR",
       "image": "/images/motosiklet/aprilia_tuono_v4_1100_rr.png",
       "ozellikler": {
@@ -59,7 +59,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "8",
-      "url": "https://enonlar.com/${url}#bolum-8",
+      "url": `https://enonlar.com/${url}#bolum-8`,
       "name": "Ducati Monster 1200",
       "image": "/images/motosiklet/ducati_monster_1200.png",
       "ozellikler": {
@@ -78,7 +78,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "7",
-      "url": "https://enonlar.com/${url}#bolum-7",
+      "url": `https://enonlar.com/${url}#bolum-7`,
       "name": "Yamaha MT-10",
       "image": "/images/motosiklet/yamaha_mt_10.png",
       "ozellikler": {
@@ -97,7 +97,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "6",
-      "url": "https://enonlar.com/${url}#bolum-6",
+      "url": `https://enonlar.com/${url}#bolum-6`,
       "name": "KTM 1290 Super Duke R",
       "image": "/images/motosiklet/ktm_1290_super_duke_r.png",
       "ozellikler": {
@@ -116,7 +116,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "5",
-      "url": "https://enonlar.com/${url}#bolum-5",
+      "url": `https://enonlar.com/${url}#bolum-5`,
       "name": "Honda CB1000R",
       "image": "/images/motosiklet/honda_cb1000r.png",
       "ozellikler": {
@@ -135,7 +135,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "4",
-      "url": "https://enonlar.com/${url}#bolum-4",
+      "url": `https://enonlar.com/${url}#bolum-4`,
       "name": "Suzuki GSX-S1000",
       "image": "/images/motosiklet/suzuki_gsx_s1000.png",
       "ozellikler": {
@@ -154,7 +154,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "3",
-      "url": "https://enonlar.com/${url}#bolum-3",
+      "url": `https://enonlar.com/${url}#bolum-3`,
       "name": "BMW S1000R",
       "image": "/images/motosiklet/bmw_s1000r.png",
       "ozellikler": {
@@ -173,7 +173,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "2",
-      "url": "https://enonlar.com/${url}#bolum-2",
+      "url": `https://enonlar.com/${url}#bolum-2`,
       "name": "MV Agusta Brutale 1000 RR",
       "image": "/images/motosiklet/mv_agusta_brutale_1000rr.png",
       "ozellikler": {
@@ -192,7 +192,7 @@ export default function Eniyi1000ccNakedMain({topCPO}) {
     },
     {
       "num": "1",
-      "url": "https://enonlar.com/${url}#bolum-1",
+      "url": `https://enonlar.com/${url}#bolum-1`,
       "name": "Ducati Streetfighter V4",
       "image": "/images/motosiklet/ducati_streetfighter_v4.png",
       "ozellikler": {

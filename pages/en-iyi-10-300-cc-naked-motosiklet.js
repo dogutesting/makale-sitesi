@@ -21,7 +21,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   const jsonContentArray = [
     {
       "num": "10",
-      "url": "https://enonlar.com/${url}#bolum-10",
+      "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-10",
       "name": "CFMoto 300NK",
       "image": "/images/motosiklet/cfmoto_300nk.png",
       "ozellikler": {
@@ -40,7 +40,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
       "num": "9",
-      "url": "https://enonlar.com/${url}#bolum-9",
+      "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-9",
       "name": "Husqvarna Vitpilen 401",
       "image": "/images/motosiklet/husqvarna_vitpilen_401.png",
       "ozellikler": {
@@ -59,7 +59,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   }, 
   {
     "num": "8",
-    "url": "https://enonlar.com/${url}#bolum-8",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-8",
     "name": "TVS Apache RTR 310",
     "image": "/images/motosiklet/tvs_apache_rtr_310.png",
     "ozellikler": {
@@ -78,7 +78,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/${url}#bolum-7",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-7",
     "name": "Kawasaki Z400",
     "image": "/images/motosiklet/kawasaki_z400.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/${url}#bolum-6",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-6",
     "name": "Benelli TNT 300",
     "image": "/images/motosiklet/benelli-tnt-300.png",
     "ozellikler": {
@@ -116,7 +116,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/${url}#bolum-5",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-5",
     "name": "Honda CB300R",
     "image": "/images/motosiklet/honda_cb300r.png",
     "ozellikler": {
@@ -135,7 +135,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
       "num": "4",
-      "url": "https://enonlar.com/${url}#bolum-4",
+      "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-4",
       "name": "BMW G 310 R",
       "image": "/images/motosiklet/bmw_g310r.png",
       "ozellikler": {
@@ -154,7 +154,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
       "num": "3",
-      "url": "https://enonlar.com/${url}#bolum-3",
+      "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-3",
       "name": "KTM Duke 390",
       "image": "/images/motosiklet/ktm_duke_390.png",
       "ozellikler": {
@@ -173,7 +173,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/Kawasaki-Z300#bolum-11",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-11",
     "name": "Kawasaki Z300",
     "image": "/images/motosiklet/kawasaki_z300.png",
     "ozellikler": {
@@ -192,7 +192,7 @@ export default function Eniyi300ccNakedMain({topCPO}) {
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/${url}#bolum-1",
+    "url": "https://enonlar.com/en-iyi-10-300-cc-naked-motosiklet#bolum-1",
     "name": "Yamaha MT-03",
     "image": "/images/motosiklet/yamaha_mt_03.png",
     "ozellikler": {

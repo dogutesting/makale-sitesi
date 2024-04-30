@@ -18,7 +18,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
   const jsonContentArray = [
     {
         "num": "10",
-        "url": "https://enonlar.com/${url}#bolum-10",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-10",
         "name": "Hero Pleasure 100",
         "image": "/images/motosiklet/hero_pleasure_100.png",
         "ozellikler": {
@@ -37,7 +37,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "9",
-        "url": "https://enonlar.com/${url}#bolum-9",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-9",
         "name": "Honda Activa 100",
         "image": "/images/motosiklet/honda_activa_100.png",
         "ozellikler": {
@@ -56,7 +56,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "8",
-        "url": "https://enonlar.com/${url}#bolum-8",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-8",
         "name": "TVS Wego 110",
         "image": "/images/motosiklet/tvs_wego_110.png",
         "ozellikler": {
@@ -75,7 +75,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "7",
-        "url": "https://enonlar.com/${url}#bolum-7",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-7",
         "name": "TVS Jupiter 125",
         "image": "/images/motosiklet/tvs_jupiter_125.png",
         "ozellikler": {
@@ -94,7 +94,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
     "num": "6",
-    "url": "https://enonlar.com/suzuki_burgman_street_125#bolum-6",
+    "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-6",
     "name": "Suzuki Burgman Street 125 EX",
     "image": "/images/motosiklet/suzuki_burgman_street_125.png",
     "ozellikler": {
@@ -113,7 +113,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },         
     {
         "num": "5",
-        "url": "https://enonlar.com/vespa_lx_125#bolum-5",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-5",
         "name": "Vespa LX 125",
         "image": "/images/motosiklet/vespa_lx_125.png",
         "ozellikler": {
@@ -132,7 +132,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "4",
-        "url": "https://enonlar.com/aprilia_sr_gt_125#bolum-4",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-4",
         "name": "Aprilia SR GT 125",
         "image": "/images/motosiklet/aprilia_sr_gt_125.png",
         "ozellikler": {
@@ -151,7 +151,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "3",
-        "url": "https://enonlar.com/tvs_ntorq_125#bolum-3",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-3",
         "name": "TVS Ntorq 125",
         "image": "/images/motosiklet/tvs_ntorq_125.png",
         "ozellikler": {
@@ -170,7 +170,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "2",
-        "url": "https://enonlar.com/yamaha_ray_zr_125#bolum-2",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-2",
         "name": "Yamaha Ray ZR 125",
         "image": "/images/motosiklet/yamaha_ray_zr_125.png",
         "ozellikler": {
@@ -189,7 +189,7 @@ export default function Eniyi125ccScooterMain({topCPO}) {
     },
     {
         "num": "1",
-        "url": "https://enonlar.com/honda_activa_125#bolum-1",
+        "url": "https://enonlar.com/en-iyi-10-125-cc-scooter-motosiklet#bolum-1",
         "name": "Honda Activa 125",
         "image": "/images/motosiklet/honda_activa_125.png",
         "ozellikler": {

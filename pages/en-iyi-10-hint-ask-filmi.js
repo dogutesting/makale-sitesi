@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://example.com",
+    "url": "https://enonlar.com/en-iyi-10-hint-ask-filmi#bolum-3",
     "name": "Hum Dil De Chuke Sanam",
     "image": "/images/movies/hum_dil_de_chuke_sanam.jpg",
     "ozellikler": {

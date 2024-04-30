@@ -243,7 +243,7 @@ const jsonContentArray = [
   }
 ];
 
-const ana_resim = "/images/ana_gorseller/edward-norton-en-iyi-10-filmi-kapak.jpg" //! SEN DOLDUR
+const ana_resim = "/images/ana_gorseller/edward_norton_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR
 const articleInfos = {url, baslik, description, keywordsArray, ana_resim, kategori, minAge, yazar, eklenmeTarihi, degistirilmeTarihi};
 
 const jsonList = moviesAndSeriesJson(articleInfos,

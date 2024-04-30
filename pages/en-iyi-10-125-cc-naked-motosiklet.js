@@ -56,7 +56,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "8",
-            "url": "https://enonlar.com/${url}#bolum-8",
+            "url": `https://enonlar.com/${url}#bolum-8`,
             "name": "Husqvarna Svartpilen 125",
             "image": "/images/motosiklet/husqvarna_svartpilen_125.png",
             "ozellikler": {
@@ -75,7 +75,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "7",
-            "url": "https://enonlar.com/${url}#bolum-7",
+            "url": `https://enonlar.com/${url}#bolum-7`,
             "name": "Kawasaki Z125",
             "image": "/images/motosiklet/kawasaki_z125.png",
             "ozellikler": {
@@ -94,7 +94,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {//! düzelt
             "num": "6",
-            "url": "https://enonlar.com/${url}#bolum-6",
+            "url": `https://enonlar.com/${url}#bolum-6`,
             "name": "Benelli TNT 125",
             "image": "/images/motosiklet/benelli_tnt_125.png",
             "ozellikler": {
@@ -113,7 +113,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "5",
-            "url": "https://enonlar.com/${url}#bolum-5",
+            "url": `https://enonlar.com/${url}#bolum-5`,
             "name": "Aprilia Tuono 125",
             "image": "/images/motosiklet/aprilia_tuono_125.png",
             "ozellikler": {
@@ -132,7 +132,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "4",
-            "url": "https://enonlar.com/${url}#bolum-4",
+            "url": `https://enonlar.com/${url}#bolum-4`,
             "name": "Suzuki GSX-S125",
             "image": "/images/motosiklet/suzuki_gsx_s125.png",
             "ozellikler": {
@@ -151,7 +151,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "3",
-            "url": "https://enonlar.com/${url}#bolum-3",
+            "url": `https://enonlar.com/${url}#bolum-3`,
             "name": "Honda CB125R",
             "image": "/images/motosiklet/honda_cb125r.png",
             "ozellikler": {
@@ -170,7 +170,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "2",
-            "url": "https://enonlar.com/${url}#bolum-2",
+            "url": `https://enonlar.com/${url}#bolum-2`,
             "name": "KTM 125 Duke",
             "image": "/images/motosiklet/ktm_125_duke.png",
             "ozellikler": {
@@ -189,7 +189,7 @@ export default function Eniyi125ccNakedMain({topCPO}) {
         },
         {
             "num": "1",
-            "url": "https://enonlar.com/${url}#bolum-1",
+            "url": `https://enonlar.com/${url}#bolum-1`,
             "name": "Yamaha MT-125",
             "image": "/images/motosiklet/yamaha_mt_125.png",
             "ozellikler": {
