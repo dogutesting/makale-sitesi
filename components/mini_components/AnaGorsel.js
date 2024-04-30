@@ -9,6 +9,7 @@ export default function Ana_gorsel({ana_resim, baslik, isItPri}) {
         { supportWebp ? (
                 <Image
                 priority={isItPri}
+                /* fetchPriority='auto' */
                 className='image-container-image-top'
                 src={ana_resim} alt={baslik +" ana görseli"}
                 fill

@@ -16,21 +16,21 @@ const kategori = "futbol"; //! SEN DOLDUR
 const minAge = "18";
 const yazar = "I Will";
 const eklenmeTarihi = "2024-04-26T18:23:59+03:00";
-const degistirilmeTarihi = "2024-04-26T18:23:59+03:00";
+const degistirilmeTarihi = "2024-04-30T18:23:59+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
   {
     "num": "10",
     "url": "https://enonlar.com/en-iyi-10-turk-futbolcu#bolum-10",
-    "name": "Mehmet Topal",
-    "image": "/images/futbol/mehmet_topal.jpg",
+    "name": "Arda Turan",
+    "image": "/images/futbol/arda_turan.png",
     "ozellikler": {
       "Doğum Tarihi": "3 Mart 1986",
       "Boyu": "187 cm",
       "Saç Rengi": "Kahverengi"
     },
-    "paragraf": "Mehmet Topal, stabil defansif performansıyla en iyi 10 türk futbolcu listemize girmeyi başarıyor. Uzun yıllar boyunca Türkiye'nin en yetenekli orta saha oyuncuları arasında gösterilen Mehmet, başarıları ile adından söz ettirmiştir."
+    "paragraf": "Arda Turan, kariyeri boyunca sergilediği liderlik ve yetenekler ile Türk futbolunun en parlak yıldızı."
   },
   {
     "num": "9",
@@ -131,14 +131,14 @@ const jsonContentArray = [
   {
     "num": "1",
     "url": "https://enonlar.com/en-iyi-10-turk-futbolcu#bolum-1",
-    "name": "Arda Turan",
-    "image": "/images/futbol/arda_turan.png",
+    "name": "Arda Güler",
+    "image": "/images/futbol/arda_guler.jpg",
     "ozellikler": {
-      "Doğum Tarihi": "30 Ocak 1987",
-      "Boyu": "177 cm",
-      "Saç Rengi": "Kahverengi"
+      "Doğum Tarihi": "25 Şubat 2005",
+      "Boyu": "176 cm",
+      "Saç Rengi": "Kumral"
     },
-    "paragraf": "Arda Turan, kariyeri boyunca sergilediği liderlik ve yetenekler ile Türk futbolunun en parlak yıldızı. Taraflı tarafsız herkesin saygısını kazanan Arda, listenin zirvesinde yer alıyor."
+    "paragraf": "Arda'nın futbol kariyeri, olağanüstü yetenekleri ve oyun zekasıyla dolu bir yolculuk olarak tanımlanabilir. Genç yaşta profesyonel futbol arenasına adım atan Arda Güler, sahada gösterdiği üstün performansıyla dikkatleri üzerine çekti. Oyun stiline hakim olan doğal liderlik ve stratejik düşünme yetenekleri, onu takımının vazgeçilmez bir parçası haline getirdi. Her maçta sahada kendini kanıtlama isteği ve hırslı tutumu, onun gelecekte Türk futbolunun en önemli isimlerinden biri olacağına dair güçlü bir işaret olarak görülüyor. Arda, yetenekleri ve hırsıyla gelecekte hem milli takımın hem de uluslararası sahnedeki başarılarıyla adından söz ettirecek bir isim olarak ön plana çıkıyor. Günümüzde gösterdiği performansı ve yaşının gençliğini göz önüne alınca onu 1. sıraya koymamak elde değil."
   }
 ];
 

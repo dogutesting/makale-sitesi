@@ -25,6 +25,7 @@ export default function En({children, baslik, rsm, rsm_alt, pri, enid, supportWe
                 { supportWebp ? (
                         <Image
                         priority={pri}
+                        /* fetchPriority='auto' */
                         className='image-container-image-center'
                         src={rsm} alt={rsm_alt}
                         fill

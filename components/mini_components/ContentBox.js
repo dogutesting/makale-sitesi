@@ -9,7 +9,6 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
     window.scrollTo(0, 0);
   }
 
-
   //pri && console.log("priority: " + pri + " - ");
 
   return (
@@ -18,8 +17,9 @@ export default function ContentBox({url, baslik, resim, eklenmeTarihi, okunmaSur
                 {
                     supportWebp ? (
                         <Image
-                            className='index-image'
                             priority={pri}
+                            fetchPriority='auto'
+                            className='index-image'
                             src={resim} alt={baslik + " görseli"}
                             fill
                             sizes="(max-width: 500px) 100vw, 40vw"

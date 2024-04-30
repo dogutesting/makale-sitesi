@@ -59,7 +59,8 @@ export default function ClassicArticleTop ({topCPO, articleConstructor}) {
  
    useEffect(() => {
      if(!topCPO) {
-      window.history.replaceState(window.history.state, "", topLevelUrl+"/"+currentPageValue);
+      /* window.history.replaceState(window.history.state, "", topLevelUrl+"/"+currentPageValue); */
+      window.history.replaceState(window.history.state, "", "/"+currentPageValue);
      }
    }, [currentPageValue])
  

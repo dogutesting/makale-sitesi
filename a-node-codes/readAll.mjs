@@ -1,6 +1,13 @@
-const fs = require('fs');
-const path = require('path');
-const { create } = require('xmlbuilder2');
+import { parse } from 'node-html-parser';
+import fs from 'fs';
+import path from 'path';
+import { create } from 'xmlbuilder2';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // Sayfa dosyalarının bulunduğu klasörü belirtin
 const pagesDirectory = path.join(__dirname, '../pages');
@@ -14,12 +21,25 @@ let urlArrayForXml = [
   lastmod: new Date().toISOString().split('.')[0]+"+03:00"}
 ];
 
+let paragrafs = "";
+function cleanText(input) {
+  const root = parse(input);
+  const cleanText = root.textContent;
+  return cleanText;
+}
+function calculateWords(input) {
+  const wordCount = input.split(" ").length;
+  const readTime = Math.round((wordCount * 0.33) / 60);
+  return readTime;
+}
+
+
 // Her sayfanın içeriğini okuyun
 pageFiles.forEach((pageFile) => {
 
  if(!pageFile.includes(".js") || pageFile.includes("index.js") || pageFile.includes("_app.js") || 
 pageFile.includes("_document.js") || pageFile.includes("test.js") || pageFile.includes("old_index.js") ||
-pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return false}
+pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js") || pageFile.includes("en10.js")) {return false}
 
     const pagePath = path.join(pagesDirectory, pageFile);
     const pageContent = fs.readFileSync(pagePath, 'utf-8');
@@ -29,8 +49,9 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const eklenmeTarihiRegex = /const\s+addDate\s*=\s*"([^"]+)"/;
     const degistirilmeTarihiRegex = /const\s+degistirilmeTarihi\s*=\s*"([^"]+)"/;
     const kategoriRegex = /const\s+kategori\s*=\s*"([^"]+)"/;
-    const okunmaSuresiRegex = /const\s+okunmaSuresi\s*=\s*"([^"]+)"/;
+    /* const okunmaSuresiRegex = /const\s+okunmaSuresi\s*=\s*"([^"]+)"/; */
     const metinRegex = /const\s+metin\s*=\s*"([^"]+)"/;
+    const bitisMetinRegex = /const\s+bitis_metin\s*=\s*"([^"]+)"/;
     const anaResimRegex = /const\s+ana_resim\s*=\s*"([^"]+)"/;
 
     const urlMatch = pageContent.match(urlRegex);
@@ -38,8 +59,9 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const eklenmeTarihiMatch = pageContent.match(eklenmeTarihiRegex);
     const degistirilmeTarihiMatch = pageContent.match(degistirilmeTarihiRegex);
     const kategoriMatch = pageContent.match(kategoriRegex);
-    const okunmaSuresiMatch = pageContent.match(okunmaSuresiRegex);
+    /* const okunmaSuresiMatch = pageContent.match(okunmaSuresiRegex); */
     const metinMatch = pageContent.match(metinRegex);
+    const bitisMetinMatch = pageContent.match(bitisMetinRegex);
     const anaResimMatch = pageContent.match(anaResimRegex);
 
     const url = urlMatch ? urlMatch[1] : '';
@@ -47,9 +69,21 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     const eklenmeTarihi = eklenmeTarihiMatch ? eklenmeTarihiMatch[1] : '';
     const degistirilmeTarihi = degistirilmeTarihiMatch ? degistirilmeTarihiMatch[1] : '';
     const kategori = kategoriMatch ? kategoriMatch[1] : '';
-    const okunmaSuresi = okunmaSuresiMatch ? okunmaSuresiMatch[1] : '';
+    /* const okunmaSuresi = okunmaSuresiMatch ? okunmaSuresiMatch[1] : ''; */
     const metin = metinMatch ? metinMatch[1] : '';
+    const bitisMetin = bitisMetinMatch ? bitisMetinMatch[1] : '';
     const anaResim = anaResimMatch ? anaResimMatch[1] : '';
+
+    const paragraphRegex = /"paragraf"\s*:\s*"([^"]+)"/g;
+    let match;
+    paragrafs = "";
+    while ((match = paragraphRegex.exec(pageContent)) !== null) {
+        let paragraf = match[1];
+        paragrafs+=paragraf;
+    }
+
+    const allMetin =  baslik + cleanText(metin) + cleanText(bitisMetin) + cleanText(paragrafs);
+    const readTimeCalc = calculateWords(allMetin);
 
     //! KEYWORDS
     const keywordsRegex = /const\s+keywordsArray\s*=\s*\[([^\]]+)\]/;
@@ -65,29 +99,10 @@ pageFile.includes("404.js") || pageFile.includes("cerez-politikasi.js")) {return
     console.log('Keywords dizisi bulunamadı.');
     }
     //! KEYWORDS
-
-    
-    //! first_image
-    //const satirlar = pageContent.split('\n');
-
-    // Aranan metin
-   /*  const arananMetin = `"num": "10",`;
-    
-    // Aranan metini içeren satırın indeksini bul
-    const indeks = satirlar.findIndex(satir => satir.includes(arananMetin));
-    
-    // İstenen satırı al
-    if (indeks !== -1 && indeks + 3 < satirlar.length) {
-        resimYolu = satirlar[indeks + 3];
-    } else {
-      console.log('İstenen metin bulunamadı veya 3 satır sonrasında başka bir satır yok. Sayfa url: ' + url.trim());
-    } */
-    
-    //! first_image
     
     //const resimYolu0 = resimYolu.split(":")[1].replace(/[`',]/g, "");
     const spreadMetinxD = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
-    values.push('("'+url.trim()+'", "'+baslik.trim()+'", "'+anaResim+'", "'+eklenmeTarihi.trim()+'", "'+okunmaSuresi.trim()+'", "'+kategori.trim()+'", "'+spreadMetinxD+'", "'+keywords+'")');
+    values.push('("'+url.trim()+'", "'+baslik.trim()+'", "'+anaResim+'", "'+eklenmeTarihi.trim()+'", "'+readTimeCalc+'", "'+kategori.trim()+'", "'+spreadMetinxD+'", "'+keywords+'")');
 
     //!xml creator
     //url

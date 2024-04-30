@@ -1,5 +1,6 @@
 import 'normalize.css'
 import '@/styles/globals.css'
+import '@/styles/en10.css'
 
 import { Wrapper } from '@/context/ContextProvider';
 import Head from 'next/head';

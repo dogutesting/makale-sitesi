@@ -16,8 +16,8 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
 
   const handleButtonClick = (buttonText) => {
     setHandleCategory(buttonText);
-    newCategoriesSequence(kategoriler, buttonText);
-    setScrollOffset(0);
+    /* newCategoriesSequence(kategoriler, buttonText); */
+    /* setScrollOffset(0); */
     router.push(`/?kategori=`+buttonText);
   };
   

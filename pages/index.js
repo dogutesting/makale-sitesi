@@ -103,7 +103,7 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
 
   useEffect(() => {
     setCurrentPageState(1);
-    newCategoriesSequence(cats, currentCategory);
+    //newCategoriesSequence(cats, currentCategory);
   }, [currentCategory]);
 
 

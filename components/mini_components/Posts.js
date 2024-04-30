@@ -17,7 +17,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
                     okunmaSuresi={row.okunmaSuresi + " dk"}
                     kategori={row.kategori}
                     paragraf={row.paragraf}
-                    pri={false}
+                    pri={index==0}
                     nightMode={nightMode}
                     supportWebp={supportWebp}
                     setHandleCategory={setHandleCategory}
@@ -43,7 +43,7 @@ const Posts = ({ posts, nightMode, supportWebp, setHandleCategory }) => {
                   okunmaSuresi={row.okunmaSuresi + " dk"}
                   kategori={row.kategori}
                   paragraf={row.paragraf}
-                  pri={false}
+                  pri={index==0}
                   nightMode={nightMode}
                   supportWebp={supportWebp}
                   setHandleCategory={setHandleCategory}

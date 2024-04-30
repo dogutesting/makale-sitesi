@@ -66,7 +66,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
             "name": item.name,
             "image": item.image,
             "startDate": startDate,
-            /* ...(endDate && {"endDate": endDate}), // Eğer endDate varsa ekliyoruz */
+            ...(endDate && {"endDate": endDate}), // Eğer endDate varsa ekliyoruz
             "numberOfSeasons": item.eps,  // Serinin bölüm sayısını ekledik
             "director": {
                 "@type": "Person",
@@ -113,7 +113,7 @@ export default function json_list(articleInfos, type, metin, arr, bitis_metin = 
   const articleBody = escapeString(metin + " " + articleText + " " + bitis_metin);
   const wordCount = articleBody.split(" ").length;
 
-  const readTime = Math.round((wordCount * 0.33) / 60)
+  const readTime = Math.round((wordCount * 0.33) / 60);
 
   return {
     readTimeSpan: readTime,

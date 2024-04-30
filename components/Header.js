@@ -9,7 +9,7 @@ export default function Header({nightMode, setNightMode}) {
 
     return (
     <>
-        <header>
+        <header className={nightMode ? 'night-mode' : 'light-mode'}>
             <div className='side'>
                 
             </div>

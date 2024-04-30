@@ -2,7 +2,7 @@
 	en 10 xiaomi mi robot
 	en 10 deep freeze
 	en 10 yağsız pişirme bilmem neyi
-
+ 
 -> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
 -> footer eklenebilir
 -> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir
@@ -11,9 +11,7 @@
 test edilecek -> google reklam kütüphanesi eklenecek
 test edilecek -> google traffic kütüphanesi eklenecek
 
-
 -> ustalar.enonlar.com : adana parke ustaları
-
 
 -> kullanılmayan npm i kütüphanelerini bul ve sil
 -> Lighthouse'da hata var mı diye kontrol (dosya boyutlarını küçültmek için minify (bundle)

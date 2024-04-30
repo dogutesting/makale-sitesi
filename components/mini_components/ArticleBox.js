@@ -13,6 +13,7 @@ export default function ArticleBox({supportWebp, rsm, rsm_alt, baslik, icerik, l
                         supportWebp ? (
                             <Image
                                 priority={false}
+                                /* fetchPriority='auto' */
                                 src={rsm}
                                 alt={rsm_alt}
                                 fill
