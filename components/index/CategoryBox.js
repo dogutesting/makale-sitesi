@@ -20,6 +20,13 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
     /* setScrollOffset(0); */
     router.push(`/?kategori=`+buttonText);
   };
+
+  useEffect(() => {
+    const { kategori } = router.query;
+    if(kategori !== handleCategory) {
+      setHandleCategory(kategori);
+    }
+  }, [router])
   
   
   const renderButton = (key, buttonText) => {
