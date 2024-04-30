@@ -23,8 +23,14 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
 
   useEffect(() => {
     const { kategori } = router.query;
-    if(kategori !== handleCategory) {
+    
+    if(kategori !== handleCategory && kategori != undefined) {
       setHandleCategory(kategori);
+      router.push(`/?kategori=`+kategori);
+    }
+
+    if(kategori == undefined) {
+      setHandleCategory("hepsi");
     }
   }, [router])
   

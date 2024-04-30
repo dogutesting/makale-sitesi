@@ -3,7 +3,10 @@
 	en 10 deep freeze
 	en 10 yağsız pişirme bilmem neyi
  
--> enonlar logo ve gece modunu sürekli üst kısma yapışık yap, insanlar rahatça gece moduna geçiş yapabilsin
+
+-> Sayfa sayısı 100'ü aşınca pagination'da 10'u aşacak. Bunun çözümünün yapılması lazım.
+-> kategorilerin hepsi eklenmemeli, en çok tıklanan 10 kategori |resimli| olarak eklenebilir.
+
 -> footer eklenebilir
 -> olmayan linklere gidildiğinde url'deki anahtar kelimeler ile mysql'deki anahtar kelimelerden eşleşen şeyler sunulabilir
 -> fuse kütüphanesi ile arama barı eklenebilinir
