@@ -8,7 +8,7 @@ export default function TurkiyeninEnYakisikli10ErkegiMain({topCPO}) {
 //#region SAYFA TEXT TANIMLAMALARI
 const url = "turkiyenin-en-yakisikli-10-erkegi";
 const baslik = "Türkiye'nin En Yakışıklı 10 Erkeği";
-const metin = "Bu makalede, Türkiye'nin en yakışıklı erkeklerini derledik. 'Türkiye'nin en yakışıklı erkeği' kimdir sorusuna yanıt ararken, 'en yakışıklı Türk erkek oyuncular' arasından seçim yapmak hiç de kolay olmadı. İşte 'Türkiye'nin en yakışıklı sıralaması'nda yer alan isimler.";
+const metin = "Bu makalede, Türkiye'nin en yakışıklı erkeklerini derledik. Türkiye'nin en yakışıklı erkeği kimdir sorusuna yanıt ararken, en yakışıklı Türk erkek oyuncular arasından seçim yapmak hiç de kolay olmadı. İşte Türkiye'nin en yakışıklı sıralamasında yer alan isimler.";
 const bitis_metin = "Türkiye'nin en yakışıklı erkekleri listemizi tamamladık. Bu listede yer alan isimler, hem görünüş hem de yetenek bakımından ünlü ve beğenilen isimlerdir. Her biri kendi alanında başarılarını kanıtlamış, Türkiye'nin en yakışıklı erkeği olmak için birbirleriyle yarış içindeler.";
 const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 const keywordsArray = ["turkiye'nin","en","yakisikli","10","erkegi"]; //! BAK

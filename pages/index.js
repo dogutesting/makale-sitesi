@@ -106,6 +106,26 @@ export default function Index({articles, currentPage, cats, paginationCount, cur
     //newCategoriesSequence(cats, currentCategory);
   }, [currentCategory]);
 
+  useEffect(() => {
+    const { kategori, sayfa } = router.query;
+    
+    if(kategori !== handleCategory && kategori != undefined) {
+      setHandleCategory(kategori);
+      router.push(`/?kategori=`+kategori);
+    } 
+
+    if(kategori == undefined) {
+      setHandleCategory("hepsi");
+    }
+
+    if(sayfa == undefined) {
+      setCurrentPageState(1);
+    }
+    else {
+      setCurrentPageState(sayfa);
+    }
+  }, [router])
+
 
   useEffect(() => {
     if(articles.length === 0) {

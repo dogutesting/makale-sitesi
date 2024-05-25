@@ -14,9 +14,10 @@ export default async (req, res) => {
     const [articles] = await db.execute( 
         
       currentCategory !== 'hepsi' ?
-      "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler WHERE kategori = ? ORDER BY eklenmeTarihi DESC LIMIT 10 OFFSET ?"
-      : "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler ORDER BY eklenmeTarihi DESC LIMIT 10 OFFSET ?",
-
+      /* "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler WHERE kategori = ? ORDER BY eklenmeTarihi DESC LIMIT 10 OFFSET ?"
+      : "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler ORDER BY eklenmeTarihi DESC LIMIT 10 OFFSET ?", */
+      "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler WHERE kategori = ? ORDER BY CONCAT('20', MID(eklenmeTarihi, 7, 2), MID(eklenmeTarihi, 4, 2), LEFT(eklenmeTarihi, 2)) DESC LIMIT 10 OFFSET ?"
+      : "SELECT url, baslik, resimYolu, eklenmeTarihi, okunmaSuresi, kategori, paragraf FROM makaleler ORDER BY CONCAT('20', MID(eklenmeTarihi, 7, 2), MID(eklenmeTarihi, 4, 2), LEFT(eklenmeTarihi, 2)) DESC LIMIT 10 OFFSET ?",
       currentCategory !== 'hepsi' ? 
         [currentCategory, currentPageOffset]
         : [currentPageOffset]

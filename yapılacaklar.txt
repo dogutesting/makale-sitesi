@@ -2,6 +2,7 @@
 	en 10 xiaomi mi robot
 	en 10 deep freeze
 	en 10 yağsız pişirme bilmem neyi
+Bu hem sabit linklerde hemde dinamik olarak aranabilmeli.
  
 
 -> Sayfa sayısı 100'ü aşınca pagination'da 10'u aşacak. Bunun çözümünün yapılması lazım.

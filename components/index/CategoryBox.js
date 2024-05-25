@@ -21,7 +21,7 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
     router.push(`/?kategori=`+buttonText);
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     const { kategori } = router.query;
     
     if(kategori !== handleCategory && kategori != undefined) {
@@ -32,7 +32,7 @@ export default function CategoryBox({ router, nightMode, kategoriler, setHandleC
     if(kategori == undefined) {
       setHandleCategory("hepsi");
     }
-  }, [router])
+  }, [router]) */
   
   
   const renderButton = (key, buttonText) => {
