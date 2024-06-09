@@ -111,21 +111,24 @@ setIntervalWithFunc();
 export default async function handler (req, res) {
     if(req.method === 'POST') {
 
-        /* const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
+        //#region //! çok büyük istekleri engellemek istersen alttaki kodu geliştir  
+        /* 
+        const requestBodySizeInBytes = Buffer.byteLength(JSON.stringify(req.body), 'utf8');
         const requestDataSizeInKB = requestBodySizeInBytes / (1024);
         console.log('Request size:', requestDataSizeInKB, 'KB');
         if(requestBodySizeInBytes > 1.0) {
             res.status(500).end("çok büyük boyut")
         } */
+        //#endregion
 
-        //ID'yi rastgele kendi tanımlayarak istek atabilir
+        //ID'yi rastgele kendi tanımlayarak istek atabilir mi? rate-limit.js var atamayabilir
 
         try {
             
             //const IsRateLimitPassed = await rateLimitMiddleware(req, res, ipLimits);
             //if (!IsRateLimitPassed) {
 
-            if (req.body.req !== "middleware" && await rateLimitMiddleware(req, res, ipLimits) === false) {
+            if (req.body.req !== "middleware" &&  req.body.req !== "en10" && await rateLimitMiddleware(req, res, ipLimits) === false) {
                 /* console.log("çok fazla istek atıyor."); */
                 if(req.body.req === "guil") {
                     res.status(200).json({penalty: true, data: [], "sanic": "https://enonlar.com/sanic.jpg"})
@@ -133,6 +136,9 @@ export default async function handler (req, res) {
                 if(req.body.req === "gui") {
                     res.status(200).json({penalty: true, data: top4, "sanic": "https://enonlar.com/sanic.jpg"})
                 }
+                /* if(req.body.req === "en10") {
+                    //! günde 1000'den fazla istek yollayamasın
+                } */
                 else {
                     res.status(200).json({penalty: true, "sanic": "https://enonlar.com/sanic.jpg"});
                 }
@@ -141,6 +147,19 @@ export default async function handler (req, res) {
                 const jsonBody = req.body;
                 /* console.log("İstek yapabilir..", jsonBody); */
                 
+                if(jsonBody.req === 'en10') { //en10 mağaza ürün liste
+                    const response = await en10_all(jsonBody.data);
+                    console.log("userKey - response: ", response);
+                    if(!response) {
+                        res.status(500).send(false);
+                    }
+                    else {
+                        //console.log("başarıyla sunucu cevap verdi.");
+                        //console.log("cevap: ", response);
+                        res.status(200).json(response);
+                    }
+                }
+
                 if(jsonBody.req === 'auk') { //* add-user-key
                     /* console.log("auk isteği yapıldı"); */
                     res.status(200).json({"uuid": await addUser(jsonBody.data.date)});
@@ -275,6 +294,42 @@ async function addUserClick(body, type) {
         connection && connection.end();
     }
 }
+//#endregion
+
+//#region //* EN10 MAĞAZA FONKSIYONLARI
+
+async function en10_all(req) {
+    
+    const { t, ...rest } = req;
+    const url = "http://localhost:3131/en10_" + t;
+
+    const returnFromNode = await fetch(url, {
+        method: 'POST', // HTTP yöntemi
+        headers: {
+        'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            ...rest
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            //throw new Error('Ağ yanıtı hatası oldu');
+            return false;
+        }
+        return response.json();
+    })
+    /* .then(data => {
+        console.log('Başarılı:', data);
+    })
+    .catch(error => {
+        //! burada kendime mesaj yollayabilirim, sistem çalışmayı durdurdu gibi
+        console.error('Hata:', error);
+    }); */
+
+    return returnFromNode;
+}
+
 //#endregion
 
 //#region //* handler fonksiyonları

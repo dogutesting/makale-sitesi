@@ -11,6 +11,15 @@ module.exports = {
       sizeLimit: '10kb'
     }
   } */
+  /* reactStrictMode: true, */
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**"
+      }
+    ]
+  },
 }
 
 /*

@@ -1,26 +1,55 @@
 
-export const all_stores = ["Hepsiburada", "Trendyol", "Amazon", "N11", "Çiçek Sepeti", "Vatan Bilgisayar",
-"Teknosa", "MediaMarkt", "Koçtaş", "Pazarama", "Carrefoursa", "PTT Avm", "Çetinkaya", "Gürgençler", "Turkcell",
-"Migros", "Gratis"];
+export const all_stores = [
+    /* {
+        value: "Hepsiburada", 
+        label:
+            <div>
+                <img src="@/public/images/a_en10/magazalar/hepsiburada.ico"/>
+                <h2>Hepsiburada</h2>
+            </div>
+    },  */
+    "Hepsiburada",
+    "Amazon", 
+    "Trendyol", 
+    "N11", 
+    "Çiçek Sepeti", 
+    "Vatan Bilgisayar",
+    "Teknosa", 
+    "MediaMarkt", 
+    "Koçtaş", 
+    "Pazarama", 
+    "Carrefoursa", 
+    "PTT Avm", 
+    "Çetinkaya", 
+    "Gürgençler", 
+    "Turkcell",
+    "Migros", 
+    "Gratis", 
+    "Bim", 
+    "A101", 
+    "Şok"
+];
 
 export const store_siralamasi = {
     "Hepsiburada": {
-        store_siralama: {
-            "Çok Değerlendirilenler": "yorumsayisi",
-            "En Düşük Fiyat": "artanfiyat",
-            "En Yüksek Fiyat": "azalanfiyat",
-            "Çok Satanlar": "coksatan",
-            "Yüksek Puanlılar": "degerlendirmepuani",
-            "İndirim Oranı": "indirimurunler",
-            "Yeni Eklenen": "enyeni"
-        }
+        "firstValue": "Çok Değerlendirilenler",
+        "allSelects": [
+            "Çok Değerlendirilenler",
+            "En Düşük Fiyat",
+            "En Yüksek Fiyat",
+            "Çok Satanlar",
+            "Yüksek Puanlılar",
+            "İndirim Oranı",
+            "Yeni Eklenen"
+        ]
     },
     "Amazon": {
-        store_siralama: {
-            "Ort. Müşteri Yorumu": "review-rank",
-            "Fiyat: Düşükten Yükseğe": "price-asc-rank",
-            "Fiyat: Yüksekten Düşüğe": "price-desc-rank",
-            "En Son Gelenler": "price-desc-rank"
-        },
+        "firstValue": "Ort. Müşteri Yorumu",
+        "allSelects": [
+            "Ort. Müşteri Yorumu",
+            "Fiyat: Düşükten Yükseğe",
+            "Fiyat: Yüksekten Düşüğe",
+            "En Son Gelenler",
+        ]
     }
 }
