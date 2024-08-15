@@ -62,6 +62,7 @@ const jsonContentArray = [
       "Süre": "2 sa. 3 dk.",
       "Yıl": "2004",
       "imdb": "7.8/10",
+      "Değerlendirme": "629000",
       "metascore": "53"
     },
     "paragraf": "The Notebook, iki sevgilinin yıllar süren aşk hikayesini anlatıyor. Film, imdb puanı yüksek aşk filmler listesinde önemli bir yere sahip ve romantizm arayanların gözdesi."

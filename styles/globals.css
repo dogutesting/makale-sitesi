@@ -231,6 +231,7 @@ header {
 
 .image-container-image-top {
   border-radius: 6px;
+  object-fit: cover;
 }
 
 .image-container-image-center {

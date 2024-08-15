@@ -1,5 +1,5 @@
-import { useAppContext } from '@/context/ContextProvider';
-import Header from "@/components/Header";
+/* import { useAppContext } from '@/context/ContextProvider'; */
+/* import Header from "@/components/Header"; */
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,7 +30,7 @@ import { Hata, Default_StoreList_Component, Default_Comments_Component } from '@
 export default function En10() {
     const { TOP_LEVEL_URL:topLevelUrl } = SITE_INFOS;
 
-    const { nightMode, setNightMode } = useAppContext();
+    /* const { nightMode, setNightMode } = useAppContext(); */
 
     const [activeList, setActiveList] = useState(0);
     const [activeButton, setActiveButton] = useState(1);
@@ -1132,12 +1132,7 @@ export default function En10() {
     }, [dataList]) */
 
     return (
-        <>            
-            <Header nightMode={nightMode} setNightMode={setNightMode}/>
-            <div className={['container', nightMode ? 'link-night' : ''].join(' ')}>
-                <div className='side'>
-                </div>
-                <div className={'main-content'}>
+            <div className='cc'>
                     {/* <div style={{textAlign: "center", marginTop: "10px"}}>Buraya card'lar gelecek...</div> */}
                     <form id='search-top' onSubmit={handleSearch}>
                         <input id="search-input" name="q" type='search' placeholder='Ürün adı ile ara'
@@ -1311,10 +1306,6 @@ export default function En10() {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className='side'>
-                </div>
             </div>
-        </>
     );
   }
