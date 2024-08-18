@@ -42,7 +42,7 @@ const jsonContentArray = [
       "Boyu": "1.92 m",
       "Saç Rengi": "Siyah"
     },
-    "paragraf": "Kenan İmirzalioğlu, Türkiye'nin en yakışıklı erkekleri listesinde 9. sırada. Uzun boyu ve karizmatik yapısıyla dikkat çeken Kenan, 'türkiye'nin en yakışıklı erkeği kim' sorusunun en güçlü adaylarından biri."
+    "paragraf": "Kenan İmirzalioğlu, Türkiye'nin en yakışıklı erkekleri listesinde 9. sırada. Uzun boyu ve karizmatik yapısıyla dikkat çeken Kenan, türkiyenin en yakışıklı erkeği kim sorusunun en güçlü adaylarından biri."
   },
   {
     "num": "8",
@@ -54,7 +54,7 @@ const jsonContentArray = [
       "Boyu": "1.88 m",
       "Saç Rengi": "Kahverengi"
     },
-    "paragraf": "Çağatay Ulusoy, 'Türkiye'nin en yakışıklı erkeği' unvanına sahip olmak için ideal bir aday. 8. sıradaki bu yakışıklı oyuncu, genç kitle üzerinde büyük bir etkiye sahip."
+    "paragraf": "Çağatay Ulusoy, Türkiye'nin en yakışıklı erkeği unvanına sahip olmak için ideal bir aday. 8. sıradaki bu yakışıklı oyuncu, genç kitle üzerinde büyük bir etkiye sahip."
   },
   {
     "num": "7",
@@ -126,7 +126,7 @@ const jsonContentArray = [
       "Boyu": "1.88 m",
       "Saç Rengi": "Kahverengi"
     },
-    "paragraf": "Listemizin ikinci sırasında Barış Arduç bulunuyor. Barış, yakışıklılığı ve yeteneği ile 'Türkiye'nin en yakışıklı erkeği' listesinde üst sıralara oynuyor."
+    "paragraf": "Listemizin ikinci sırasında Barış Arduç bulunuyor. Barış, yakışıklılığı ve yeteneği ile Türkiye'nin en yakışıklı erkeği listesinde üst sıralara oynuyor."
   },
   {
     "num": "1",

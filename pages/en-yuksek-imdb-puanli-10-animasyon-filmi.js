@@ -8,7 +8,7 @@ export default function EnYuksekImdbPuanli10AnimasyonFilmiMain({topCPO}) {
 //#region SAYFA TEXT TANIMLAMALARI
 const url = "en-yuksek-imdb-puanli-10-animasyon-filmi";
 const baslik = "En yüksek IMDB puanlı 10 animasyon filmi";
-const metin = "Animasyon filmleri, her yaş grubundan insanı büyüleyebilen nadir sanat eserleridir. IMDB puanı yüksek animasyonlar, hem görsel hem de hikaye anlamında kalitelerini ispatlamış yapıtlardır. Bu makalede, 'imdb puanı yüksek anime filmler' arasından seçilen 'en yüksek imdb puanlı animeler'i derledik. Her biri ayrı bir dünya olan bu eserler, izleyiciler üzerinde unutulmaz izler bırakmıştır. Şimdi sizlere IMDb puanına göre 'en yüksek imdb puanlı animasyon filmler'i tanıtacağız.";
+const metin = "Animasyon filmleri, her yaş grubundan insanı büyüleyebilen nadir sanat eserleridir. IMDB puanı yüksek animasyonlar, hem görsel hem de hikaye anlamında kalitelerini ispatlamış yapıtlardır. Bu makalede, imdb puanı yüksek anime filmler arasından seçilen en yüksek imdb puanlı animeleri derledik. Her biri ayrı bir dünya olan bu eserler, izleyiciler üzerinde unutulmaz izler bırakmıştır. Şimdi sizlere IMDb puanına göre en yüksek imdb puanlı animasyon filmleri tanıtmaya başlayalım.";
 const bitis_metin = "Bu yazımızda imdb puanı yüksek animeler ile imdb puanı yüksek animasyonları keşfettik. Umarız, bu efsanevi yapıtlar sinema keyfinize keyif katmıştır.";
 const description = metin.length > 157 ? metin.substring(0, 157 - 3) + "..." : metin;
 const keywordsArray = ["en","yuksek","imdb","puanli","10","animasyon","filmi"]; //! BAK
@@ -16,7 +16,7 @@ const kategori = "animasyon"; //! SEN DOLDUR
 const minAge = "18";
 const yazar = "I Will";
 const eklenmeTarihi = "2024-04-26T19:06:19+03:00";
-const degistirilmeTarihi = "2024-04-26T19:06:19+03:00";
+const degistirilmeTarihi = "2024-08-16T22:06:19+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
@@ -41,7 +41,7 @@ const jsonContentArray = [
       "imdb": "7.3/10",
       "Değerlendirme": "154000"
     },
-    "paragraf": "IMDB listesinin 10 numarasında 'Bambi', bir ormanın yavru geyiği ve hayatın zorlukları ile mücadelesini ele alır. Bu film, 'en yüksek imdb puanlı animeler' listemize nostaljik bir başlangıç yapıyor."
+    "paragraf": "IMDB listesinin 10 numarasında Bambi, bir ormanın yavru geyiği ve hayatın zorlukları ile mücadelesini ele alır. Bu film, en yüksek imdb puanlı animeler listemize nostaljik bir başlangıç yapıyor."
   },
   {
     "num": "9",
@@ -65,7 +65,7 @@ const jsonContentArray = [
       "imdb": "7.3/10",
       "Değerlendirme": "148000"
     },
-    "paragraf": "9. sırada ise 'Lady and the Tramp' var. Bir sokak köpeği ile şımarık bir ev köpeğinin aşkını konu alan bu zarif animasyon, 'imdb puanı yüksek animasyonlar' arasında yer alıyor."
+    "paragraf": "9. sırada ise Lady and the Tramp var. Bir sokak köpeği ile şımarık bir ev köpeğinin aşkını konu alan bu zarif animasyon, imdb puanı yüksek animasyonlar arasında yer alıyor."
   },
   {
     "num": "8",
@@ -89,7 +89,7 @@ const jsonContentArray = [
       "imdb": "8.0/10",
       "Değerlendirme": "480000"
     },
-    "paragraf": "8. sıradaki film 'Beauty and the Beast', masalsı bir hikaye ile 'imdb puanı yüksek animasyonlar' listemize romantik bir dokunuş katıyor."
+    "paragraf": "8. sıradaki film Beauty and the Beast, masalsı bir hikaye ile imdb puanı yüksek animasyonlar listemize romantik bir dokunuş katıyor."
   },
   {
     "num": "7",
@@ -113,7 +113,7 @@ const jsonContentArray = [
       "imdb": "8.3/10",
       "Değerlendirme": "892000"
     },
-    "paragraf": "'Toy Story 3', serinin üçüncü filmi olarak, çocukluk oyuncaklarının maceralarını sürdürüyor ve 'en yüksek imdb puanlı animasyon filmler' listesindeki yerini alıyor."
+    "paragraf": "Toy Story 3, serinin üçüncü filmi olarak, çocukluk oyuncaklarının maceralarını sürdürüyor ve en yüksek imdb puanlı animasyon filmler listesindeki yerini alıyor."
   },
   {
     "num": "6",
@@ -137,7 +137,7 @@ const jsonContentArray = [
       "imdb": "8.3/10",
       "Değerlendirme": "1100000"
     },
-    "paragraf": "'Up', yaşlı bir adamın balonlarla uçan eviyle macerasını anlatarak, 'imdb puanı yüksek animeler' listemizde unutulmaz bir iz bırakıyor."
+    "paragraf": "Up, yaşlı bir adamın balonlarla uçan eviyle macerasını anlatarak, imdb puanı yüksek animeler listemizde unutulmaz bir iz bırakıyor."
   },
   {
     "num": "5",
@@ -161,7 +161,7 @@ const jsonContentArray = [
       "imdb": "8.5/10",
       "Değerlendirme": "1100000"
     },
-    "paragraf": "'The Lion King', Afrika savannasında bir aslanın hikayesini epik bir şekilde anlatmakta ve 'imdb puanı yüksek anime filmler' arasında özel bir yere sahip."
+    "paragraf": "The Lion King, Afrika savannasında bir aslanın hikayesini epik bir şekilde anlatmakta ve imdb puanı yüksek anime filmler arasında özel bir yere sahip."
   },
   {
     "num": "4",
@@ -185,7 +185,7 @@ const jsonContentArray = [
       "imdb": "8.6/10",
       "Değerlendirme": "849000"
     },
-    "paragraf": "'Spirited Away', küçük bir kızın büyülü bir dünyadaki serüvenini anlatarak 'en yüksek imdb puanlı animasyon filmler' listemizde dikkat çekiyor."
+    "paragraf": "Spirited Away, küçük bir kızın büyülü bir dünyadaki serüvenini anlatarak en yüksek imdb puanlı animasyon filmler listemizde dikkat çekiyor."
   },
   {
     "num": "3",
@@ -208,7 +208,7 @@ const jsonContentArray = [
       "imdb": "8.4/10",
       "Değerlendirme": "320000"
     },
-    "paragraf": "'Your Name', iki genç arasındaki zaman ve mekanı aşan bağlantıyı ustaca işleyerek, 'imdb puanı yüksek animeler' listemizde üst sıralarda yer alıyor."
+    "paragraf": "Your Name, iki genç arasındaki zaman ve mekanı aşan bağlantıyı ustaca işleyerek, imdb puanı yüksek animeler listemizde üst sıralarda yer alıyor."
   },
   {
     "num": "2",
@@ -231,7 +231,7 @@ const jsonContentArray = [
       "imdb": "8.5/10",
       "Değerlendirme": ""
     },
-    "paragraf": "'Grave of the Fireflies', II. Dünya Savaşı sırasında Japonya'da yaşanan trajediyi ele alarak, 'imdb puanı yüksek animasyonlar' listemizde güçlü bir etki bırakır."
+    "paragraf": "Grave of the Fireflies, II. Dünya Savaşı sırasında Japonya'da yaşanan trajediyi ele alarak, imdb puanı yüksek animasyonlar listemizde güçlü bir etki bırakır."
   },
   {
     "num": "1",
@@ -255,7 +255,7 @@ const jsonContentArray = [
       "imdb": "8.4/10",
       "Değerlendirme": ""
     },
-    "paragraf": "'Into the Spider-Verse' çığır açan animasyon teknikleri ve yaratıcı senaryosu ile 'en yüksek imdb puanlı animasyon filmler' listemizin zirvesinde bulunuyor."
+    "paragraf": "Into the Spider-Verse çığır açan animasyon teknikleri ve yaratıcı senaryosu ile en yüksek imdb puanlı animasyon filmler listemizin zirvesinde bulunuyor."
   }
 ];
 

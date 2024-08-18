@@ -114,7 +114,7 @@ const jsonContentArray = [
       "Boyu": "1.69 m",
       "Saç Rengi": "Kızıl"
     },
-    "paragraf": "3 numarada Elçin Sangu, türkiye'nin en güzel kadını olarak bilinen, doğal kızıl saçları ve benzersiz yeteneği ile dikkat çekiyor."
+    "paragraf": "3 numarada Elçin Sangu, türkiye'nin en güzel kadınıları arasında yer alan Elçin, doğal kızıl saçları ve benzersiz yeteneği ile dikkat çekiyor."
   },
   {
     "num": "2",
@@ -126,7 +126,7 @@ const jsonContentArray = [
       "Boyu": "1.57 m",
       "Saç Rengi": "Koyu Kahverengi"
     },
-    "paragraf": "Listemizin ikinci sırasında Hazal Kaya, türkiye'nin en güzel kadını unvanıyla göz dolduruyor. Kaya, güzelliğiyle olduğu kadar oyunculuk becerisiyle de tanınmaktadır."
+    "paragraf": "Listemizin ikinci sırasında Hazal Kaya, türkiye'nin en güzel kadınları arasında göz dolduruyor. Kaya, güzelliğiyle olduğu kadar oyunculuk becerisiyle de tanınmaktadır."
   },
   {
     "num": "1",
