@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:12:52+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/jim-carrey-en-iyi-10-filmi#bolum-10",
@@ -242,6 +243,7 @@ const jsonContentArray = [
     },
     "paragraf": "Kablocu, Jim Carrey'nin kariyerindeki en dikkate değer rollerden biri olarak gösterilir. Bu film, Jim Carrey en iyi filmi tartışmalarında sıkça yer alıyor ve onun komedi ile drama arasındaki ince çizgiyi nasıl yürüdüğünü gösteriyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/jim_carrey_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

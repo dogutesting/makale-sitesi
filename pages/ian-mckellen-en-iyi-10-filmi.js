@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-10",
     "name": "Six Degrees of Separation",
     "image": "/images/movies/Ian_McKellen_six_degrees_of_separation.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-9",
     "name": "Mr. Holmes",
     "image": "/images/movies/Ian_McKellen_mr._holmes.jpg",
     "ozellikler": {
@@ -68,7 +68,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-8",
     "name": "The Da Vinci Code - Da Vinci Şifresi",
     "image": "/images/movies/Ian_McKellen_the_da_vinci_code_-_da_vinci_sifresi.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-7",
     "name": "Richard III",
     "image": "/images/movies/Ian_McKellen_richard_iii.jpg",
     "ozellikler": {
@@ -114,7 +114,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-6",
     "name": "Gods and Monsters - Tanrılar ve Canavarlar",
     "image": "/images/movies/Ian_McKellen_gods_and_monsters_-_tanrilar_ve_canavarlar.jpg",
     "ozellikler": {
@@ -136,7 +136,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-5",
     "name": "X-Men: Days of Future Past - X-Men: Geçmiş Günler Gelecek",
     "image": "/images/movies/Ian_McKellen_x-men__days_of_future_past_-_x-men__gecmis_gunler_gelecek.jpg",
     "ozellikler": {
@@ -159,7 +159,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-4",
     "name": "X-Men",
     "image": "/images/movies/Ian_McKellen_x-men.jpg",
     "ozellikler": {
@@ -182,7 +182,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-3",
     "name": "X2: X-Men United - X2: X-Men Birliği",
     "image": "/images/movies/Ian_McKellen_x2__x-men_united_-_x2__x-men_birligi.jpg",
     "ozellikler": {
@@ -205,7 +205,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-2",
     "name": "The Hobbit: An Unexpected Journey - Hobbit: Beklenmedik Yolculuk",
     "image": "/images/movies/Ian_McKellen_the_hobbit__an_unexpected_journey_-_hobbit__beklenmedik_yolculuk.jpg",
     "ozellikler": {
@@ -227,7 +227,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ian-mckellen-en-iyi-10-filmi#bolum-1",
     "name": "The Lord of the Rings: The Return of the King - Yüzüklerin Efendisi: Kralın Dönüşü",
     "image": "/images/movies/Ian_McKellen_the_lord_of_the_rings__the_return_of_the_king_-_yuzuklerin_efendisi__kralin_donusu.jpg",
     "ozellikler": {

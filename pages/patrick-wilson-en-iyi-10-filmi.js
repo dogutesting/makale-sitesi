@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-10",
     "name": "The Commuter - Yolcu",
     "image": "/images/movies/Patrick_Wilson_the_commuter_-_yolcu.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-9",
     "name": "Bone Tomahawk - Kemik Balta",
     "image": "/images/movies/Patrick_Wilson_bone_tomahawk_-_kemik_balta.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-8",
     "name": "Insidious: Chapter 2 - Ruhlar Bölgesi: Bölüm 2",
     "image": "/images/movies/Patrick_Wilson_insidious__chapter_2_-_ruhlar_bolgesi__bolum_2.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-7",
     "name": "Aquaman",
     "image": "/images/movies/Patrick_Wilson_aquaman.jpg",
     "ozellikler": {
@@ -117,33 +117,33 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-6",
     "name": "Watchmen",
     "image": "/images/movies/Patrick_Wilson_watchmen.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "Patrick Wilson",
-            "Jackie Earle Haley",
-            "Malin Åkerman",
-            "Jeffrey Dean Morgan"
-        ],
-        "Kategori": [
-            "Aksiyon",
-            "Dram",
-            "Bilim Kurgu"
-        ],
-        "Yıl": "2009",
-        "Süre": "2 sa. 42 dk.",
-        "Yönetmen": "Zack Snyder",
-        "imdb": "7.6/10",
-        "Değerlendirme": "531,456",
-        "metacritic": "56"
+      "Oyuncular": [
+        "Patrick Wilson",
+        "Jackie Earle Haley",
+        "Malin Åkerman",
+        "Jeffrey Dean Morgan"
+      ],
+      "Kategori": [
+        "Aksiyon",
+        "Dram",
+        "Bilim Kurgu"
+      ],
+      "Yıl": "2009",
+      "Süre": "2 sa. 42 dk.",
+      "Yönetmen": "Zack Snyder",
+      "imdb": "7.6/10",
+      "Değerlendirme": "531,456",
+      "metacritic": "56"
     },
     "paragraf": "Watchmen, alternatif bir tarihte geçen ve süper kahramanların toplumdaki yerini sorgulayan bir film. Patrick Wilson, Nite Owl olarak bilinen Dan Dreiberg rolüyle filmde öne çıkıyor. Bu yapım, Wilson'ın aksiyon ve dram türlerindeki başarısını gözler önüne seriyor."
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-5",
     "name": "The Conjuring: The Devil Made Me Do It - Korku Seansı 3: Katil Şeytan",
     "image": "/images/movies/Patrick_Wilson_the_conjuring__the_devil_made_me_do_it_-_korku_seansi_3__katil_seytan.jpg",
     "ozellikler": {
@@ -166,33 +166,33 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-4",
     "name": "Passengers",
     "image": "/images/movies/Patrick_Wilson_passengers_2008.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "Patrick Wilson",
-            "Anne Hathaway",
-            "David Morse",
-            "Andre Braugher"
-        ],
-        "Kategori": [
-            "Gerilim",
-            "Dram",
-            "Gizem"
-        ],
-        "Yıl": "2008",
-        "Süre": "1 sa. 33 dk.",
-        "Yönetmen": "Rodrigo García",
-        "imdb": "5.8/10",
-        "Değerlendirme": "40456",
-        "metacritic": "40"
+      "Oyuncular": [
+        "Patrick Wilson",
+        "Anne Hathaway",
+        "David Morse",
+        "Andre Braugher"
+      ],
+      "Kategori": [
+        "Gerilim",
+        "Dram",
+        "Gizem"
+      ],
+      "Yıl": "2008",
+      "Süre": "1 sa. 33 dk.",
+      "Yönetmen": "Rodrigo García",
+      "imdb": "5.8/10",
+      "Değerlendirme": "40456",
+      "metacritic": "40"
     },
     "paragraf": "Passengers, bir uçak kazasından sağ kurtulanları araştıran bir terapistin yaşadığı gizemli olayları konu alan bir gerilim filmidir. Patrick Wilson ve Anne Hathaway'in güçlü performansları, filmin atmosferine katkı sağlıyor. Bu film, Wilson'ın dramatik rollerdeki yeteneğini bir kez daha ortaya koyuyor."
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-3",
     "name": "The Conjuring 2 - Korku Seansı 2",
     "image": "/images/movies/Patrick_Wilson_the_conjuring_2_-_korku_seansi_2.jpg",
     "ozellikler": {
@@ -215,7 +215,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-2",
     "name": "Fargo",
     "image": "/images/movies/Patrick_Wilson_fargo.jpg",
     "ozellikler": {
@@ -238,7 +238,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/patrick-wilson-en-iyi-10-filmi#bolum-1",
     "name": "The Conjuring - Korku Seansı",
     "image": "/images/movies/Patrick_Wilson_the_conjuring_-_korku_seansi.jpg",
     "ozellikler": {

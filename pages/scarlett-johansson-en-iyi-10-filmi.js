@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:35:04+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/scarlett-johansson-en-iyi-10-filmi#bolum-10",
@@ -255,6 +256,7 @@ const jsonContentArray = [
     },
     "paragraf": "Lucy, izleyicilere aksiyon ve bilim kurgunun harmanlandığı, Scarlett Johansson'un üstün bir performans sergilediği bir film sunuyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/scarlett_johansson_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

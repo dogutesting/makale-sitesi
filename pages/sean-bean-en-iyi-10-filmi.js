@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-10",
     "name": "The Hitcher - Otoban Katili",
     "image": "/images/movies/Sean_Bean_the_hitcher_-_otoban_katili.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-9",
     "name": "National Treasure - Büyük Hazine",
     "image": "/images/movies/Sean_Bean_national_treasure_-_buyuk_hazine.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-8",
     "name": "GoldenEye - Altın Göz",
     "image": "/images/movies/Sean_Bean_goldeneye_-_altin_goz.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-7",
     "name": "Ronin",
     "image": "/images/movies/Sean_Bean_ronin.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-6",
     "name": "Patriot Games - Tehlikeli Oyunlar",
     "image": "/images/movies/Sean_Bean_patriot_games_-_tehlikeli_oyunlar.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-5",
     "name": "Equilibrium - İsyan",
     "image": "/images/movies/Sean_Bean_equilibrium_-_isyan.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-4",
     "name": "Jupiter Ascending - Jüpiter Yükseliyor",
     "image": "/images/movies/Sean_Bean_jupiter_ascending_-_jupiter_yukseliyor.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-3",
     "name": "Troy - Truva",
     "image": "/images/movies/Sean_Bean_troy_-_truva.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-2",
     "name": "The Fellowship of the Ring - Yüzüklerin Efendisi: Yüzük Kardeşliği",
     "image": "/images/movies/Sean_Bean_the_fellowship_of_the_ring_-_yuzuklerin_efendisi__yuzuk_kardesligi.jpg",
     "ozellikler": {
@@ -235,7 +235,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/sean-bean-en-iyi-10-filmi#bolum-1",
     "name": "The Martian - Marslı",
     "image": "/images/movies/Sean_Bean_the_martian_-_marsli.jpg",
     "ozellikler": {

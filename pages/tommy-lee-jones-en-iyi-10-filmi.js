@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-10",
     "name": "Double Jeopardy - Çifte Tehlike",
     "image": "/images/movies/Tommy_Lee_Jones_double_jeopardy_-_cifte_tehlike.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-9",
     "name": "The Client - Müvekkil",
     "image": "/images/movies/Tommy_Lee_Jones_the_client_-_muvekkil.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-8",
     "name": "Space Cowboys - İhtiyar Delikanlılar",
     "image": "/images/movies/Tommy_Lee_Jones_space_cowboys_-_ihtiyar_delikanlilar.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-7",
     "name": "In the Valley of Elah - Elah Vadisi",
     "image": "/images/movies/Tommy_Lee_Jones_in_the_valley_of_elah_-_elah_vadisi.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-6",
     "name": "Lincoln",
     "image": "/images/movies/Tommy_Lee_Jones_lincoln.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-5",
     "name": "The Homesman - Yolcu",
     "image": "/images/movies/Tommy_Lee_Jones_the_homesman_-_yolcu.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-4",
     "name": "No Country for Old Men - İhtiyarlara Yer Yok",
     "image": "/images/movies/Tommy_Lee_Jones_no_country_for_old_men_-_ihtiyarlara_yer_yok.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-3",
     "name": "JFK",
     "image": "/images/movies/Tommy_Lee_Jones_jfk.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-2",
     "name": "Men in Black - Siyah Giyen Adamlar",
     "image": "/images/movies/Tommy_Lee_Jones_men_in_black_-_siyah_giyen_adamlar.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/tommy-lee-jones-en-iyi-10-filmi#bolum-1",
     "name": "The Fugitive - Kaçak",
     "image": "/images/movies/Tommy_Lee_Jones_the_fugitive_-_kacak.jpg",
     "ozellikler": {

@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1837703",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-10",
     "name": "The Fifth Estate - Wikileaks: Beşinci Kuvvet",
     "image": "/images/movies/Benedict_Cumberbatch_the_fifth_estate_-_wikileaks__besinci_kuvvet.jpg",
     "ozellikler": {
@@ -50,7 +50,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1408101",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-9",
     "name": "Star Trek Into Darkness - Star Trek Bilinmeze Doğru",
     "image": "/images/movies/Benedict_Cumberbatch_star_trek_into_darkness_-_star_trek_bilinmeze_dogru.jpg",
     "ozellikler": {
@@ -76,7 +76,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt9419884",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-8",
     "name": "Doctor Strange in the Multiverse of Madness - Doktor Strange Çoklu Evren Çılgınlığında",
     "image": "/images/movies/Benedict_Cumberbatch_doctor_strange_in_the_multiverse_of_madness_-_doktor_strange_coklu_evren_cilginliginda.jpg",
     "ozellikler": {
@@ -100,7 +100,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1322269",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-7",
     "name": "August: Osage County - Aile Sırları",
     "image": "/images/movies/Benedict_Cumberbatch_august__osage_county_-_aile_sirlari.jpg",
     "ozellikler": {
@@ -125,7 +125,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1170358",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-6",
     "name": "The Hobbit: The Desolation of Smaug - Hobbit: Smaug'un Çorak Toprakları",
     "image": "/images/movies/Benedict_Cumberbatch_the_hobbit__the_desolation_of_smaug_-_hobbit__smaug'un_corak_topraklari.jpg",
     "ozellikler": {
@@ -150,7 +150,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1340800",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-5",
     "name": "Tinker Tailor Soldier Spy - Köstebek",
     "image": "/images/movies/Benedict_Cumberbatch_tinker_tailor_soldier_spy_-_kostebek.jpg",
     "ozellikler": {
@@ -175,7 +175,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt2084970",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-4",
     "name": "The Imitation Game - Enigma",
     "image": "/images/movies/Benedict_Cumberbatch_the_imitation_game_-_enigma.jpg",
     "ozellikler": {
@@ -200,7 +200,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1211837",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-3",
     "name": "Doctor Strange - Doktor Strange",
     "image": "/images/movies/Benedict_Cumberbatch_doctor_strange_-_doktor_strange.jpg",
     "ozellikler": {
@@ -224,7 +224,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt4154756",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-2",
     "name": "Avengers: Infinity War - Yenilmezler: Sonsuzluk Savaşı",
     "image": "/images/movies/Benedict_Cumberbatch_avengers__infinity_war_-_yenilmezler__sonsuzluk_savasi.jpg",
     "ozellikler": {
@@ -249,7 +249,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt10293406",
-    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/benedict-cumberbatch-en-iyi-10-filmi#bolum-1",
     "name": "The Power of the Dog",
     "image": "/images/movies/Benedict_Cumberbatch_the_power_of_the_dog.jpg",
     "ozellikler": {

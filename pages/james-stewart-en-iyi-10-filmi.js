@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-10",
     "name": "The Flight of the Phoenix - Çöl Aslanı",
     "image": "/images/movies/James_Stewart_the_flight_of_the_phoenix_-_col_aslani.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-9",
     "name": "The Man Who Shot Liberty Valance - Kahraman Şerif",
     "image": "/images/movies/James_Stewart_the_man_who_shot_liberty_valance_-_kahraman_serif.jpg",
     "ozellikler": {
@@ -67,7 +67,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-8",
     "name": "Harvey - Hayali Arkadaş",
     "image": "/images/movies/James_Stewart_harvey_-_hayali_arkadas.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-7",
     "name": "Anatomy of a Murder - Bir Cinayetin Tahlili",
     "image": "/images/movies/James_Stewart_anatomy_of_a_murder_-_bir_cinayetin_tahlili.jpg",
     "ozellikler": {
@@ -113,7 +113,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-6",
     "name": "Winchester '73",
     "image": "/images/movies/James_Stewart_winchester_'73.jpg",
     "ozellikler": {
@@ -134,7 +134,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-5",
     "name": "Rope - Ölüm Kararı",
     "image": "/images/movies/James_Stewart_rope_-_olum_karari.jpg",
     "ozellikler": {
@@ -157,7 +157,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-4",
     "name": "This Wonderful Life - Şahane Hayat",
     "image": "/images/movies/James_Stewart_this_wonderful_life_-_sahane_hayat.jpg",
     "ozellikler": {
@@ -180,7 +180,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-3",
     "name": "Rear Window - Arka Pencere",
     "image": "/images/movies/James_Stewart_rear_window_-_arka_pencere.jpg",
     "ozellikler": {
@@ -203,7 +203,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-2",
     "name": "Vertigo - Ölüm Korkusu",
     "image": "/images/movies/James_Stewart_vertigo_-_olum_korkusu.jpg",
     "ozellikler": {
@@ -226,7 +226,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/james-stewart-en-iyi-10-filmi#bolum-1",
     "name": "Mr. Smith Goes to Washington - Bay Smith Washington'a Gidiyor",
     "image": "/images/movies/James_Stewart_mr._smith_goes_to_washington_-_bay_smith_washington'a_gidiyor.jpg",
     "ozellikler": {

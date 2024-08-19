@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:29:41+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/samuel-jackson-en-iyi-10-filmi#bolum-10",
@@ -265,6 +266,7 @@ const jsonContentArray = [
     },
     "paragraf": "Kingsman: Gizli Servis, Samuel L. Jackson'ın şahane bir kötü adam olarak izleyici karşısına çıktığı, alışılmadık bir casus filmi. Samuel Jackson en iyi filmi olarak da nitelendirilen bu yapım, hem eğlenceli hem de heyecan doludur."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/samuel_jackson_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

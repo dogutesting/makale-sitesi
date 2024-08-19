@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-23T17:38:18+03:00";
 const addDate = "23.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/denis-villeneuve-en-iyi-10-filmi#bolum-10",
@@ -242,6 +243,7 @@ const jsonContentArray = [
     },
     "paragraf": "Blade Runner 2049, Denis Villeneuve'nin yönetmenlik kariyerindeki zirve eserlerinden biri olarak kabul edilir. Görsel olarak büyüleyici bu devam filmi, hem eleştirmenlerden yüksek puanlar aldı hem de izleyiciler tarafından yoğun ilgi gördü."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/denis_villeneuve_en_iyi_10_film_kapak.jpg" //! SEN DOLDUR

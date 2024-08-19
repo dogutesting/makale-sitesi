@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:29:54+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/daniel-day-lewis-en-iyi-10-filmi#bolum-10",
@@ -241,6 +242,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listemizin zirvesinde, 'Boksör' filmi yer alıyor. Daniel Day-Lewis bu filmde, eski bir boksörün topluma yeniden kazandırılma sürecini canlandırıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/daniel_day_lewis_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-10",
     "name": "Jack",
     "image": "/images/movies/Robin_Williams_jack.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-9",
     "name": "The Birdcage - Kuş Kafesi",
     "image": "/images/movies/Robin_Williams_the_birdcage_-_kus_kafesi.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-8",
     "name": "Dead Poets Society - Ölü Ozanlar Derneği",
     "image": "/images/movies/Robin_Williams_dead_poets_society_-_olu_ozanlar_dernegi.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-7",
     "name": "Hook - Kanca",
     "image": "/images/movies/Robin_Williams_hook_-_kanca.jpg",
     "ozellikler": {
@@ -114,7 +114,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-6",
     "name": "Good Morning, Vietnam",
     "image": "/images/movies/Robin_Williams_good_morning,_vietnam.jpg",
     "ozellikler": {
@@ -137,7 +137,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-5",
     "name": "The Fisher King",
     "image": "/images/movies/Robin_Williams_the_fisher_king.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-4",
     "name": "Mrs. Doubtfire - Müthiş Dadı",
     "image": "/images/movies/Robin_Williams_mrs._doubtfire_-_muthis_dadi.jpg",
     "ozellikler": {
@@ -184,7 +184,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-3",
     "name": "Insomnia - Uykusuz",
     "image": "/images/movies/Robin_Williams_insomnia_-_uykusuz.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-2",
     "name": "Good Will Hunting - Can Dostum",
     "image": "/images/movies/Robin_Williams_good_will_hunting_-_can_dostum.jpg",
     "ozellikler": {
@@ -231,7 +231,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/robin-williams-en-iyi-10-filmi#bolum-1",
     "name": "Aladdin",
     "image": "/images/movies/Robin_Williams_aladdin.jpg",
     "ozellikler": {

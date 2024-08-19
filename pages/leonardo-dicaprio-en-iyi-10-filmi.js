@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1343092",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-10",
     "name": "The Great Gatsby - Muhteşem Gatsby",
     "image": "/images/movies/Leonardo_DiCaprio_the_great_gatsby_-_muhtesem_gatsby.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0959337",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-9",
     "name": "Revolutionary Road - Hayallerin Peşinde",
     "image": "/images/movies/Leonardo_DiCaprio_revolutionary_road_-_hayallerin_pesinde.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1130884",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-8",
     "name": "Shutter Island - Zindan Adası",
     "image": "/images/movies/Leonardo_DiCaprio_shutter_island_-_zindan_adasi.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0264464",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-7",
     "name": "Catch Me If You Can - Sıkıysa Yakala",
     "image": "/images/movies/Leonardo_DiCaprio_catch_me_if_you_can_-_sikiysa_yakala.jpg",
     "ozellikler": {
@@ -121,7 +121,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0993846",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-6",
     "name": "The Wolf of Wall Street - Para Avcısı",
     "image": "/images/movies/Leonardo_DiCaprio_the_wolf_of_wall_street_-_para_avcisi.jpg",
     "ozellikler": {
@@ -146,7 +146,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1375666",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-5",
     "name": "Inception - Başlangıç",
     "image": "/images/movies/Leonardo_DiCaprio_inception_-_baslangic.jpg",
     "ozellikler": {
@@ -171,7 +171,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1853728",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-4",
     "name": "Django Unchained - Zincirsiz",
     "image": "/images/movies/Leonardo_DiCaprio_django_unchained_-_zincirsiz.jpg",
     "ozellikler": {
@@ -195,7 +195,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt7131622",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-3",
     "name": "Once Upon a Time in Hollywood - Bir Zamanlar... Hollywood'da",
     "image": "/images/movies/Leonardo_DiCaprio_once_upon_a_time_in_hollywood_-_bir_zamanlar..._hollywood'da.jpg",
     "ozellikler": {
@@ -219,7 +219,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0120338",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-2",
     "name": "Titanic - Titanik",
     "image": "/images/movies/Leonardo_DiCaprio_titanic_-_titanik.jpg",
     "ozellikler": {
@@ -243,7 +243,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1663202",
-    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/leonardo-dicaprio-en-iyi-10-filmi#bolum-1",
     "name": "The Revenant - Diriliş",
     "image": "/images/movies/Leonardo_DiCaprio_the_revenant_-_dirilis.jpg",
     "ozellikler": {

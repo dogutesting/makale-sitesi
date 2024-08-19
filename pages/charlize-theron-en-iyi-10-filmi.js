@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:47:48+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/charlize-theron-en-iyi-10-filmi#bolum-10",
@@ -242,6 +243,7 @@ const jsonContentArray = [
     },
     "paragraf": "Atomic Blonde, Charlize Theron'un aksiyon dolu sahnelerde gösterdiği başarılı performansıyla dikkat çekiyor. Bu film, onun yeteneklerini sergileme konusunda üst sıralarda yer alıyor ve Charlize Theron en iyi filmi olarak kabul edilebilir."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/charlize_theron_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

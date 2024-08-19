@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:45:09+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/harrison-ford-en-iyi-10-filmi#bolum-10",
@@ -241,6 +242,7 @@ const jsonContentArray = [
     },
     "paragraf": "Henry'ye Dair, Harrison Ford filmleri arasında duygusal derinliği ile öne çıkan bir başyapıt. Unutulmaz bir dram deneyimi sunuyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/harrison_ford_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

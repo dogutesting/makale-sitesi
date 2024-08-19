@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-24T17:13:27+03:00";
 const addDate = "24.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/dunyanin-en-iyi-10-aksiyon-filmi#bolum-10",
@@ -251,6 +252,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Dark Knight, Christopher Nolan tarafından yönetilen ve Batman serisinin en etkili filmlerinden biri. Heath Ledger'in Joker rolü ile unutulmaz bir performans sergilediği bu film, en iyi 10 aksiyon filmi arasında zirvede yer alıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/dunyanin_en_iyi_10_aksiyon_filmi_kapak.jpg" //! SEN DOLDUR

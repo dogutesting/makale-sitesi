@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-10",
     "name": "Prince of Persia: The Sands of Time - Pers Prensi: Zamanın Kumları",
     "image": "/images/movies/Jake_Gyllenhaal_prince_of_persia__the_sands_of_time_-_pers_prensi__zamanin_kumlari.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-9",
     "name": "Source Code - Yaşam Şifresi",
     "image": "/images/movies/Jake_Gyllenhaal_source_code_-_yasam_sifresi.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-8",
     "name": "Spider-Man: Far From Home - Örümcek-Adam: Evden Uzakta",
     "image": "/images/movies/Jake_Gyllenhaal_spider-man__far_from_home_-_orumcek-adam__evden_uzakta.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-7",
     "name": "Brothers - Kardeşler",
     "image": "/images/movies/Jake_Gyllenhaal_brothers_-_kardesler.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-6",
     "name": "Southpaw - Son Şans",
     "image": "/images/movies/Jake_Gyllenhaal_southpaw_-_son_sans.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-5",
     "name": "Nocturnal Animals - Gece Hayvanları",
     "image": "/images/movies/Jake_Gyllenhaal_nocturnal_animals_-_gece_hayvanlari.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-4",
     "name": "October Sky - Ekim Düşü",
     "image": "/images/movies/Jake_Gyllenhaal_october_sky_-_ekim_dusu.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-3",
     "name": "Prisoners - Tutsak",
     "image": "/images/movies/Jake_Gyllenhaal_prisoners_-_tutsak.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-2",
     "name": "Nightcrawler - Gece Vurgunu",
     "image": "/images/movies/Jake_Gyllenhaal_nightcrawler_-_gece_vurgunu.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jake-gyllenhaal-en-iyi-10-filmi#bolum-1",
     "name": "Donnie Darko",
     "image": "/images/movies/Jake_Gyllenhaal_donnie_darko.jpg",
     "ozellikler": {

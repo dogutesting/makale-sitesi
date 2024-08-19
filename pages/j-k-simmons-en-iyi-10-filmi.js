@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-10",
     "name": "Palm Springs",
     "image": "/images/movies/J.K._Simmons_palm_springs.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-9",
     "name": "The Mexican - Meksikalı",
     "image": "/images/movies/J.K._Simmons_the_mexican_-_meksikali.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-8",
     "name": "Spider-Man 2 - Örümcek Adam 2",
     "image": "/images/movies/J.K._Simmons_spider-man_2_-_orumcek_adam_2.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-7",
     "name": "Megamind - Mega Zeka",
     "image": "/images/movies/J.K._Simmons_megamind_-_mega_zeka.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-6",
     "name": "Up in the Air - Aklı Havada",
     "image": "/images/movies/J.K._Simmons_up_in_the_air_-_akli_havada.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-5",
     "name": "La La Land - Aşıklar Şehri",
     "image": "/images/movies/J.K._Simmons_la_la_land_-_asiklar_sehri.jpg",
     "ozellikler": {
@@ -167,7 +167,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-4",
     "name": "The Accountant - Hesaplaşma",
     "image": "/images/movies/J.K._Simmons_the_accountant_-_hesaplasma.jpg",
     "ozellikler": {
@@ -191,7 +191,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-3",
     "name": "Juno",
     "image": "/images/movies/J.K._Simmons_juno.jpg",
     "ozellikler": {
@@ -215,7 +215,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-2",
     "name": "Whiplash",
     "image": "/images/movies/J.K._Simmons_whiplash.jpg",
     "ozellikler": {
@@ -238,7 +238,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/j-k-simmons-en-iyi-10-filmi#bolum-1",
     "name": "Spider-Man: No Way Home",
     "image": "/images/movies/J.K._Simmons_spider-man__no_way_home.jpg",
     "ozellikler": {

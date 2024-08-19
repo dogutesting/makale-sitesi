@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2238032",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-10",
     "name": "Skiptrace - Çin Falı 3",
     "image": "/images/movies/Jackie_Chan_skiptrace_-_cin_fali_3.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0093015",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-9",
     "name": "Dragons Forever - Ejder Kardeşliği",
     "image": "/images/movies/Jackie_Chan_dragons_forever_-_ejder_kardesligi.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0105399",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-8",
     "name": "Twin Dragons - İkizler Operasyonu",
     "image": "/images/movies/Jackie_Chan_twin_dragons_-_ikizler_operasyonu.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0113326",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-7",
     "name": "Rumble in the Bronx - Bronx'da Patırtı",
     "image": "/images/movies/Jackie_Chan_rumble_in_the_bronx_-_bronx'da_patirti.jpg",
     "ozellikler": {
@@ -122,7 +122,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0089374",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-6",
     "name": "The Police Story - Polis Hikayesi",
     "image": "/images/movies/Jackie_Chan_the_police_story_-_polis_hikayesi.jpg",
     "ozellikler": {
@@ -147,7 +147,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0085127",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-5",
     "name": "Project A - A Projesi",
     "image": "/images/movies/Jackie_Chan_project_a_-_a_projesi.jpg",
     "ozellikler": {
@@ -171,7 +171,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0080179",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-4",
     "name": "Drunken Master - Sarhoş Usta",
     "image": "/images/movies/Jackie_Chan_drunken_master_-_sarhos_usta.jpg",
     "ozellikler": {
@@ -195,7 +195,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0111512",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-3",
     "name": "The Legend of Drunken Master - Usta'nın Dönüşü",
     "image": "/images/movies/Jackie_Chan_the_legend_of_drunken_master_-_usta'nin_donusu.jpg",
     "ozellikler": {
@@ -219,7 +219,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0104558",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-2",
     "name": "Police Story 3: Super Cop - Süper Polis",
     "image": "/images/movies/Jackie_Chan_police_story_3__super_cop_-_super_polis.jpg",
     "ozellikler": {
@@ -242,7 +242,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0120812",
-    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jackie-chan-en-iyi-10-filmi#bolum-1",
     "name": "Rush Hour - Bitirim İkili",
     "image": "/images/movies/Jackie_Chan_rush_hour_-_bitirim_ikili.jpg",
     "ozellikler": {

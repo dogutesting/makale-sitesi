@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2567026",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-10",
     "name": "Alice Through the Looking Glass - Alice Harikalar Diyarında",
     "image": "/images/movies/Alan_Rickman_alice_through_the_looking_glass_-_alice_harikalar_diyarinda.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0102798",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-9",
     "name": "Robin Hood: Prince of Thieves - Robin Hood: Hırsızlar Prensi",
     "image": "/images/movies/Alan_Rickman_robin_hood__prince_of_thieves_-_robin_hood__hirsizlar_prensi.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0314331",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-8",
     "name": "Love Actually - Aşk Her Yerde",
     "image": "/images/movies/Alan_Rickman_love_actually_-_ask_her_yerde.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0371724",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-7",
     "name": "Hitchhiker's Guide to the Galaxy - Bir Otostopçunun Galaksi Rehberi",
     "image": "/images/movies/Alan_Rickman_hitchhiker's_guide_to_the_galaxy_-_bir_otostopcunun_galaksi_rehberi.jpg",
     "ozellikler": {
@@ -123,7 +123,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0177789",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-6",
     "name": "Galaxy Quest - Galaksi Savaşçıları",
     "image": "/images/movies/Alan_Rickman_galaxy_quest_-_galaksi_savascilari.jpg",
     "ozellikler": {
@@ -148,7 +148,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0095016",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-5",
     "name": "Die Hard - Zor Ölüm",
     "image": "/images/movies/Alan_Rickman_die_hard_-_zor_olum.jpg",
     "ozellikler": {
@@ -173,7 +173,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0396171",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-4",
     "name": "Perfume: The Story of a Murderer - Koku: Bir Katilin Hikayesi",
     "image": "/images/movies/Alan_Rickman_perfume__the_story_of_a_murderer_-_koku__bir_katilin_hikayesi.jpg",
     "ozellikler": {
@@ -198,7 +198,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1327773",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-3",
     "name": "The Butler - Başkanların Hizmetkarı",
     "image": "/images/movies/Alan_Rickman_the_butler_-_baskanlarin_hizmetkari.jpg",
     "ozellikler": {
@@ -223,7 +223,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0114388",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-2",
     "name": "Sense and Sensibility - Aşk ve Yaşam",
     "image": "/images/movies/Alan_Rickman_sense_and_sensibility_-_ask_ve_yasam.jpg",
     "ozellikler": {
@@ -248,7 +248,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0241527",
-    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/alan-rickman-en-iyi-10-filmi#bolum-1",
     "name": "Harry Potter and the Sorcerer's Stone",
     "image": "/images/movies/Alan_Rickman_harry_potter_and_the_sorcerer's_stone.jpg",
     "ozellikler": {

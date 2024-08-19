@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-10",
     "name": "Suicide Squad - Gerçek Kötüler",
     "image": "/images/movies/Jared_Leto_suicide_squad_-_gercek_kotuler.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-9",
     "name": "Chapter 27",
     "image": "/images/movies/Jared_Leto_chapter_27.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-8",
     "name": "Lord of War - Savaş Tanrısı",
     "image": "/images/movies/Jared_Leto_lord_of_war_-_savas_tanrisi.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-7",
     "name": "Prefontaine",
     "image": "/images/movies/Jared_Leto_prefontaine.jpg",
     "ozellikler": {
@@ -114,7 +114,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-6",
     "name": "Mr. Nobody - Bay Hiçkimse",
     "image": "/images/movies/Jared_Leto_mr._nobody_-_bay_hickimse.jpg",
     "ozellikler": {
@@ -136,7 +136,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-5",
     "name": "The Outsider - Yabancı",
     "image": "/images/movies/Jared_Leto_the_outsider_-_yabanci.jpg",
     "ozellikler": {
@@ -159,7 +159,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-4",
     "name": "Panic Room - Panik Odası",
     "image": "/images/movies/Jared_Leto_panic_room_-_panik_odasi.jpg",
     "ozellikler": {
@@ -182,7 +182,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-3",
     "name": "Requiem for a Dream - Bir Rüya İçin Ağıt",
     "image": "/images/movies/Jared_Leto_requiem_for_a_dream_-_bir_ruya_icin_agit.jpg",
     "ozellikler": {
@@ -205,7 +205,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-2",
     "name": "Blade Runner 2049",
     "image": "/images/movies/Jared_Leto_blade_runner_2049.jpg",
     "ozellikler": {
@@ -228,7 +228,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jared-leto-en-iyi-10-filmi#bolum-1",
     "name": "Dallas Buyers Club - Sınırsızlar Kulübü",
     "image": "/images/movies/Jared_Leto_dallas_buyers_club_-_sinirsizlar_kulubu.jpg",
     "ozellikler": {

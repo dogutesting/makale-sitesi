@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:32:24+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/robert-de-niro-en-iyi-10-filmi#bolum-10",
@@ -250,6 +251,7 @@ const jsonContentArray = [
     },
     "paragraf": "Stajyer, Robert De Niro'nun film kariyerindeki farklı bir yönünü gösteriyor. Bu tatlı komedi filmi, tüm yaş gruplarından izleyiciler tarafından sevilmiş ve De Niro'nun çok yönlü bir aktör olduğunu kanıtlamıştır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/robert_de_niro_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

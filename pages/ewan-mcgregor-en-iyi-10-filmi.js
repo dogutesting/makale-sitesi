@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-10",
     "name": "Star Wars: Episode I - The Phantom Menace - Yıldız Savaşları: Bölüm I - Gizli Tehlike",
     "image": "/images/movies/Ewan_McGregor_star_wars__episode_i_-_the_phantom_menace_-_yildiz_savaslari__bolum_i_-_gizli_tehlike.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-9",
     "name": "Moulin Rouge! - Kırmızı Değirmen",
     "image": "/images/movies/Ewan_McGregor_moulin_rouge!_-_kirmizi_degirmen.jpg",
     "ozellikler": {
@@ -67,7 +67,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-8",
     "name": "Trainspotting - Trainspotting",
     "image": "/images/movies/Ewan_McGregor_trainspotting_-_trainspotting.jpg",
     "ozellikler": {
@@ -89,7 +89,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-7",
     "name": "Big Fish - Büyük Balık",
     "image": "/images/movies/Ewan_McGregor_big_fish_-_buyuk_balik.jpg",
     "ozellikler": {
@@ -111,7 +111,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-6",
     "name": "Star Wars: Episode III - Revenge of the Sith - Yıldız Savaşları: Bölüm III - Sith'in İntikamı",
     "image": "/images/movies/Ewan_McGregor_star_wars__episode_iii_-_revenge_of_the_sith_-_yildiz_savaslari__bolum_iii_-_sith'in_intikami.jpg",
     "ozellikler": {
@@ -133,7 +133,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-5",
     "name": "The Ghost Writer - Hayalet Yazar",
     "image": "/images/movies/Ewan_McGregor_the_ghost_writer_-_hayalet_yazar.jpg",
     "ozellikler": {
@@ -155,7 +155,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-4",
     "name": "Doctor Sleep - Doktor Uyku",
     "image": "/images/movies/Ewan_McGregor_doctor_sleep_-_doktor_uyku.jpg",
     "ozellikler": {
@@ -177,7 +177,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-3",
     "name": "Black Hawk Down - Kara Şahin Düştü",
     "image": "/images/movies/Ewan_McGregor_black_hawk_down_-_kara_sahin_dustu.jpg",
     "ozellikler": {
@@ -199,7 +199,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-2",
     "name": "Star Wars: Episode II - Attack of the Clones - Yıldız Savaşları: Bölüm II - Klonların Saldırısı",
     "image": "/images/movies/Ewan_McGregor_star_wars__episode_ii_-_attack_of_the_clones_-_yildiz_savaslari__bolum_ii_-_klonlarin_saldirisi.jpg",
     "ozellikler": {
@@ -221,7 +221,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ewan-mcgregor-en-iyi-10-filmi#bolum-1",
     "name": "Christopher Robin - Christopher Robin",
     "image": "/images/movies/Ewan_McGregor_christopher_robin_-_christopher_robin.jpg",
     "ozellikler": {

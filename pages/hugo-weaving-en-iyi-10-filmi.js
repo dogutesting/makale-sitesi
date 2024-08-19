@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-10",
     "name": "V for Vendetta - V",
     "image": "/images/movies/Hugo_Weaving_v_for_vendetta_-_v.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-9",
     "name": "The Lord of the Rings: The Return of the King - Yüzüklerin Efendisi: Kralın Dönüşü",
     "image": "/images/movies/Hugo_Weaving_the_lord_of_the_rings__the_return_of_the_king_-_yuzuklerin_efendisi__kralin_donusu.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-8",
     "name": "The Lord of the Rings: The Two Towers - Yüzüklerin Efendisi: İki Kule",
     "image": "/images/movies/Hugo_Weaving_the_lord_of_the_rings__the_two_towers_-_yuzuklerin_efendisi__iki_kule.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-7",
     "name": "The Lord of the Rings: The Fellowship of the Ring - Yüzüklerin Efendisi: Yüzük Kardeşliği",
     "image": "/images/movies/Hugo_Weaving_the_lord_of_the_rings__the_fellowship_of_the_ring_-_yuzuklerin_efendisi__yuzuk_kardesligi.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-6",
     "name": "The Matrix - Matrix",
     "image": "/images/movies/Hugo_Weaving_the_matrix_-_matrix.jpg",
     "ozellikler": {
@@ -142,7 +142,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-5",
     "name": "The Matrix Reloaded - Matrix Reloaded",
     "image": "/images/movies/Hugo_Weaving_the_matrix_reloaded_-_matrix_reloaded.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-4",
     "name": "The Matrix Revolutions - Matrix Revolutions",
     "image": "/images/movies/Hugo_Weaving_the_matrix_revolutions_-_matrix_revolutions.jpg",
     "ozellikler": {
@@ -190,7 +190,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-3",
     "name": "Cloud Atlas",
     "image": "/images/movies/Hugo_Weaving_cloud_atlas.jpg",
     "ozellikler": {
@@ -214,7 +214,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-2",
     "name": "Hacksaw Ridge - Savaş Vadisi",
     "image": "/images/movies/Hugo_Weaving_hacksaw_ridge_-_savas_vadisi.jpg",
     "ozellikler": {
@@ -238,7 +238,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/hugo-weaving-en-iyi-10-filmi#bolum-1",
     "name": "Priscilla, Queen of the Desert",
     "image": "/images/movies/Hugo_Weaving_priscilla,_queen_of_the_desert.jpg",
     "ozellikler": {

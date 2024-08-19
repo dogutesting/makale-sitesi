@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-10",
     "name": "The Jackal - Çakal",
     "image": "/images/movies/Richard_Gere_the_jackal_-_cakal.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-9",
     "name": "Primal Fear - İlk Korku",
     "image": "/images/movies/Richard_Gere_primal_fear_-_ilk_korku.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-8",
     "name": "Sommersby - Yabancı",
     "image": "/images/movies/Richard_Gere_sommersby_-_yabanci.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-7",
     "name": "Pretty Woman - Özel Bir Kadın",
     "image": "/images/movies/Richard_Gere_pretty_woman_-_ozel_bir_kadin.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-6",
     "name": "An Officer and a Gentleman - Subay ve Centilmen",
     "image": "/images/movies/Richard_Gere_an_officer_and_a_gentleman_-_subay_ve_centilmen.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-5",
     "name": "Arbitrage - Entrika",
     "image": "/images/movies/Richard_Gere_arbitrage_-_entrika.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-4",
     "name": "American Gigolo - Amerikalı Jigolo",
     "image": "/images/movies/Richard_Gere_american_gigolo_-_amerikali_jigolo.jpg",
     "ozellikler": {
@@ -184,7 +184,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-3",
     "name": "Chicago",
     "image": "/images/movies/Richard_Gere_chicago.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-2",
     "name": "Days of Heaven - Cennet Günleri",
     "image": "/images/movies/Richard_Gere_days_of_heaven_-_cennet_gunleri.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/richard-gere-en-iyi-10-filmi#bolum-1",
     "name": "Hachi: A Dog's Tale - Hachi: Bir Köpeğin Hikayesi",
     "image": "/images/movies/Richard_Gere_hachi__a_dog's_tale_-_hachi__bir_kopegin_hikayesi.jpg",
     "ozellikler": {

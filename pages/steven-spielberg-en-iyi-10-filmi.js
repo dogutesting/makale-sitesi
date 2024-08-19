@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:13:52+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/steven-spielberg-en-iyi-10-filmi#bolum-10",
@@ -259,6 +260,7 @@ const jsonContentArray = [
     },
     "paragraf": "Hook - Kanca, Peter Pan'in yetişkin bir adam olarak Neverland'e dönüşünü ve çocuklarını kurtarmak için Kaptan Kanca ile mücadelesini anlatır. Film, fantezi ve macera dolu bir serüven sunarken Spielberg'in yönetmenlik yeteneğinin bir yansımasıdır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/steven_spielberg_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

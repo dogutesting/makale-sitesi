@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:42:46+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/matt-damon-en-iyi-10-filmi#bolum-10",
@@ -253,7 +254,7 @@ const jsonContentArray = [
       "metascore": "90"
     },
     "paragraf": "Listemizin zirvesinde, Matt Damon'ın kariyerindeki önemli filmlerden biri olan 'Oppenheimer' yer alır. Film, atom bombasının yaratılış sürecini ve Oppenheimer'ın hayatını dramatik bir şekilde anlatıyor."
-}
+  }
 
 ];
 

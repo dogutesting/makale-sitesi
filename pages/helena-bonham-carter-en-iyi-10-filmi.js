@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1077368",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-10",
     "name": "Dark Shadows - Karanlık Gölgeler",
     "image": "/images/movies/Helena_Bonham_Carter_dark_shadows_-_karanlik_golgeler.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1661199",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-9",
     "name": "Cinderella - Sindirella",
     "image": "/images/movies/Helena_Bonham_Carter_cinderella_-_sindirella.jpg",
     "ozellikler": {
@@ -74,7 +74,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt5164214",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-8",
     "name": "Ocean's 8 - Ocean's 8",
     "image": "/images/movies/Helena_Bonham_Carter_ocean's_8_-_ocean's_8.jpg",
     "ozellikler": {
@@ -99,7 +99,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1504320",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-7",
     "name": "The King's Speech - Zoraki Kral",
     "image": "/images/movies/Helena_Bonham_Carter_the_king's_speech_-_zoraki_kral.jpg",
     "ozellikler": {
@@ -124,7 +124,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0408236",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-6",
     "name": "Sweeney Todd: The Demon Barber of Fleet Street - Sweeney Todd: Fleet Sokağının Şeytan Berberi",
     "image": "/images/movies/Helena_Bonham_Carter_sweeney_todd__the_demon_barber_of_fleet_street_-_sweeney_todd__fleet_sokaginin_seytan_berberi.jpg",
     "ozellikler": {
@@ -149,7 +149,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0319061",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-5",
     "name": "Big Fish - Büyük Balık",
     "image": "/images/movies/Helena_Bonham_Carter_big_fish_-_buyuk_balik.jpg",
     "ozellikler": {
@@ -174,7 +174,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1014759",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-4",
     "name": "Alice in Wonderland - Alis Harikalar Diyarında",
     "image": "/images/movies/Helena_Bonham_Carter_alice_in_wonderland_-_alis_harikalar_diyarinda.jpg",
     "ozellikler": {
@@ -199,7 +199,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0091867",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-3",
     "name": "A Room with a View - Manzaralı Bir Oda",
     "image": "/images/movies/Helena_Bonham_Carter_a_room_with_a_view_-_manzarali_bir_oda.jpg",
     "ozellikler": {
@@ -224,7 +224,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0137523",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-2",
     "name": "Fight Club - Dövüş Kulübü",
     "image": "/images/movies/Helena_Bonham_Carter_fight_club_-_dovus_kulubu.jpg",
     "ozellikler": {
@@ -248,7 +248,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0120520",
-    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/helena-bonham-carter-en-iyi-10-filmi#bolum-1",
     "name": "The Wings of the Dove - Güvercinin Kanatları",
     "image": "/images/movies/Helena_Bonham_Carter_the_wings_of_the_dove_-_guvercinin_kanatlari.jpg",
     "ozellikler": {

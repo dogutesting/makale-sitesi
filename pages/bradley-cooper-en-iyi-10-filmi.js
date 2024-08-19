@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2503944",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-10",
     "name": "Burnt - Çıkış Yok",
     "image": "/images/movies/Bradley_Cooper_burnt_-_cikis_yok.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt2005151",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-9",
     "name": "War Dogs - Vurguncular",
     "image": "/images/movies/Bradley_Cooper_war_dogs_-_vurguncular.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt7959026",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-8",
     "name": "The Mule - Kaçakçı",
     "image": "/images/movies/Bradley_Cooper_the_mule_-_kacakci.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1517451",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-7",
     "name": "A Star Is Born - Bir Yıldız Doğuyor",
     "image": "/images/movies/Bradley_Cooper_a_star_is_born_-_bir_yildiz_doguyor.jpg",
     "ozellikler": {
@@ -121,7 +121,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt2179136",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-6",
     "name": "American Sniper - Keskin Nişancı",
     "image": "/images/movies/Bradley_Cooper_american_sniper_-_keskin_nisanci.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1045658",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-5",
     "name": "Silver Linings Playbook - Umut Işığım",
     "image": "/images/movies/Bradley_Cooper_silver_linings_playbook_-_umut_isigim.jpg",
     "ozellikler": {
@@ -169,7 +169,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt2015381",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-4",
     "name": "Guardians of the Galaxy - Galaksinin Koruyucuları",
     "image": "/images/movies/Bradley_Cooper_guardians_of_the_galaxy_-_galaksinin_koruyuculari.jpg",
     "ozellikler": {
@@ -194,7 +194,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1800241",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-3",
     "name": "American Hustle - Düzenbaz",
     "image": "/images/movies/Bradley_Cooper_american_hustle_-_duzenbaz.jpg",
     "ozellikler": {
@@ -218,7 +218,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1119646",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-2",
     "name": "The Hangover - Felekten Bir Gece",
     "image": "/images/movies/Bradley_Cooper_the_hangover_-_felekten_bir_gece.jpg",
     "ozellikler": {
@@ -241,7 +241,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1219289",
-    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/bradley-cooper-en-iyi-10-filmi#bolum-1",
     "name": "Limitless - Limit Yok",
     "image": "/images/movies/Bradley_Cooper_limitless_-_limit_yok.jpg",
     "ozellikler": {

@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1028528",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-10",
     "name": "Death Proof - Ölüm Geçirmez",
     "image": "/images/movies/Kurt_Russell_death_proof_-_olum_gecirmez.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0119396",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-9",
     "name": "Jackie Brown",
     "image": "/images/movies/Pam_Grier_jackie_brown.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0378194",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-8",
     "name": "Kill Bill: Vol. 2",
     "image": "/images/movies/Uma_Thurman_kill_bill__vol._2.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0266697",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-7",
     "name": "Kill Bill: Vol. 1",
     "image": "/images/movies/Uma_Thurman_kill_bill__vol._1.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0108399",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-6",
     "name": "True Romance - Çılgın Romantik",
     "image": "/images/movies/Christian_Slater_true_romance_-_cilgin_romantik.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0361748",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-5",
     "name": "Inglourious Basterds - Soysuzlar Çetesi",
     "image": "/images/movies/Brad_Pitt_inglourious_basterds_-_soysuzlar_cetesi.jpg",
     "ozellikler": {
@@ -167,7 +167,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1853728",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-4",
     "name": "Django Unchained - Zincirsiz",
     "image": "/images/movies/Jamie_Foxx_django_unchained_-_zincirsiz.jpg",
     "ozellikler": {
@@ -191,7 +191,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt3460252",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-3",
     "name": "The Hateful Eight - Nefret Sekizlisi",
     "image": "/images/movies/Samuel_L._Jackson_the_hateful_eight_-_nefret_sekizlisi.jpg",
     "ozellikler": {
@@ -215,7 +215,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt7131622",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-2",
     "name": "Once Upon a Time in Hollywood - Bir Zamanlar Hollywood'da",
     "image": "/images/movies/Leonardo_DiCaprio_once_upon_a_time_in_hollywood_-_bir_zamanlar_hollywood'da.jpg",
     "ozellikler": {
@@ -239,7 +239,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0110912",
-    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/quentin-tarantino-en-iyi-10-filmi#bolum-1",
     "name": "Pulp Fiction - Ucuz Roman",
     "image": "/images/movies/John_Travolta_pulp_fiction_-_ucuz_roman.jpg",
     "ozellikler": {

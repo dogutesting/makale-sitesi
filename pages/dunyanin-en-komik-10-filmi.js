@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:17:51+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/dunyanin-en-komik-10-filmi#bolum-10",
@@ -243,6 +244,7 @@ const jsonContentArray = [
     },
     "paragraf": "Life of Brian, Monty Python ekibinden çıkma, en komik 10 film listesinde zirvede yer alan bir başyapıt. Brian'ın yanlışlıkla İsa sanılması üzerine gelişen olayları ironik ve komik bir dille anlatan film, mizah severlerin mutlaka izlemesi gereken bir yapım. Film, zamanın en cesur ve eğlenceli komedilerinden biri olarak kabul edilir."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/dunyanin-en-komik-10-filmi-kapak.jpg" //! SEN DOLDUR

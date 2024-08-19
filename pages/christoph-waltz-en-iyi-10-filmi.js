@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2379713",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-10",
     "name": "Spectre",
     "image": "/images/movies/Christoph_Waltz_spectre.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1067583",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-9",
     "name": "Water for Elephants - Aşkın Büyüsü",
     "image": "/images/movies/Christoph_Waltz_water_for_elephants_-_askin_buyusu.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0918940",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-8",
     "name": "The Legend of Tarzan - Tarzan Efsanesi",
     "image": "/images/movies/Christoph_Waltz_the_legend_of_tarzan_-_tarzan_efsanesi.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1692486",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-7",
     "name": "Carnage - Acımasız Tanrılar",
     "image": "/images/movies/Christoph_Waltz_carnage_-_acimasiz_tanrilar.jpg",
     "ozellikler": {
@@ -123,7 +123,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0437086",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-6",
     "name": "Alita: Battle Angel - Alita: Savaş Meleği",
     "image": "/images/movies/Christoph_Waltz_alita__battle_angel_-_alita__savas_melegi.jpg",
     "ozellikler": {
@@ -147,7 +147,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1126590",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-5",
     "name": "Big Eyes - Büyük Gözler",
     "image": "/images/movies/Christoph_Waltz_big_eyes_-_buyuk_gozler.jpg",
     "ozellikler": {
@@ -170,7 +170,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-4",
     "name": "Django Unchained - Zincirsiz",
     "image": "/images/movies/Christoph_Waltz_django_unchained_-_zincirsiz.jpg",
     "ozellikler": {
@@ -195,32 +195,32 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt2848292",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-3",
     "name": "The Zero Theorem",
     "image": "/images/movies/Christoph_Waltz_the_zero_theorem.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "Christoph Waltz",
-            "Mélanie Thierry",
-            "David Thewlis"
-        ],
-        "Kategori": [
-            "Bilim Kurgu",
-            "Drama"
-        ],
-        "Yıl": "2013",
-        "Süre": "1 sa. 47 dk.",
-        "Yönetmen": "Terry Gilliam",
-        "imdb": "6.0/10",
-        "Değerlendirme": "50528",
-        "metacritic": "53"
+      "Oyuncular": [
+        "Christoph Waltz",
+        "Mélanie Thierry",
+        "David Thewlis"
+      ],
+      "Kategori": [
+        "Bilim Kurgu",
+        "Drama"
+      ],
+      "Yıl": "2013",
+      "Süre": "1 sa. 47 dk.",
+      "Yönetmen": "Terry Gilliam",
+      "imdb": "6.0/10",
+      "Değerlendirme": "50528",
+      "metacritic": "53"
     },
     "paragraf": "The Zero Theorem, Christoph Waltz'un başrolde olduğu ve Terry Gilliam'ın yönettiği bir bilim kurgu filmidir. Waltz, toplumdan izole olmuş bir bilgisayar bilimcisini canlandırıyor. Film, varoluşsal sorular ve teknolojiye dair eleştirileriyle dikkat çekiyor. Waltz'un performansı, bu yapımı izlemeye değer kılıyor."
   },
   {
     "num": "2",
     "title_id": "tt0361748",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-2",
     "name": "Inglourious Basterds - Soysuzlar Çetesi",
     "image": "/images/movies/Christoph_Waltz_inglourious_basterds_-_soysuzlar_cetesi.jpg",
     "ozellikler": {
@@ -245,7 +245,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt2382320",
-    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/christoph-waltz-en-iyi-10-filmi#bolum-1",
     "name": "No Time to Die",
     "image": "/images/movies/Christoph_Waltz_no_time_to_die.jpg",
     "ozellikler": {

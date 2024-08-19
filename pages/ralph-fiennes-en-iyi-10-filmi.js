@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-10",
     "name": "Wrath of the Titans - Titanların Öfkesi",
     "image": "/images/movies/Ralph_Fiennes_wrath_of_the_titans_-_titanlarin_ofkesi.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-9",
     "name": "The Invisible Woman - Görünmeyen Kadın",
     "image": "/images/movies/Ralph_Fiennes_the_invisible_woman_-_gorunmeyen_kadin.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-8",
     "name": "Great Expectations - Büyük Umutlar",
     "image": "/images/movies/Ralph_Fiennes_great_expectations_-_buyuk_umutlar.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-7",
     "name": "Strange Days - Sıra Dışı Günler",
     "image": "/images/movies/Ralph_Fiennes_strange_days_-_sira_disi_gunler.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-6",
     "name": "The Constant Gardener - Arka Bahçe",
     "image": "/images/movies/Ralph_Fiennes_the_constant_gardener_-_arka_bahce.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-5",
     "name": "The Grand Budapest Hotel - Büyük Budapeşte Oteli",
     "image": "/images/movies/Ralph_Fiennes_the_grand_budapest_hotel_-_buyuk_budapeste_oteli.jpg",
     "ozellikler": {
@@ -164,7 +164,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-4",
     "name": "Skyfall - Skyfall",
     "image": "/images/movies/Ralph_Fiennes_skyfall_-_skyfall.jpg",
     "ozellikler": {
@@ -188,7 +188,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-3",
     "name": "Harry Potter and the Deathly Hallows: Part 2 - Harry Potter ve Ölüm Yadigarları: Bölüm 2",
     "image": "/images/movies/Ralph_Fiennes_harry_potter_and_the_deathly_hallows__part_2_-_harry_potter_ve_olum_yadigarlari__bolum_2.jpg",
     "ozellikler": {
@@ -211,7 +211,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-2",
     "name": "The English Patient - İngiliz Hasta",
     "image": "/images/movies/Ralph_Fiennes_the_english_patient_-_ingiliz_hasta.jpg",
     "ozellikler": {
@@ -234,7 +234,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ralph-fiennes-en-iyi-10-filmi#bolum-1",
     "name": "Schindler's List - Schindler'in Listesi",
     "image": "/images/movies/Ralph_Fiennes_schindler's_list_-_schindler'in_listesi.jpg",
     "ozellikler": {

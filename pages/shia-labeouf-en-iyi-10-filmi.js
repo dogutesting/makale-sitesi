@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1055369",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-10",
     "name": "Transformers: Revenge of the Fallen - Transformers: Yenilenlerin İntikamı",
     "image": "/images/movies/Shia_LaBeouf_transformers__revenge_of_the_fallen_-_transformers__yenilenlerin_intikami.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1059786",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-9",
     "name": "Eagle Eye - Kartal Göz",
     "image": "/images/movies/Shia_LaBeouf_eagle_eye_-_kartal_goz.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1196948",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-8",
     "name": "Charlie Countryman - Beklenmedik Macera",
     "image": "/images/movies/Shia_LaBeouf_charlie_countryman_-_beklenmedik_macera.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt4364194",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-7",
     "name": "The Peanut Butter Falcon - Hayallerin Peşinde",
     "image": "/images/movies/Shia_LaBeouf_the_peanut_butter_falcon_-_hayallerin_pesinde.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0486822",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-6",
     "name": "Disturbia - Şüphe",
     "image": "/images/movies/Shia_LaBeouf_disturbia_-_suphe.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0473488",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-5",
     "name": "A Guide to Recognizing Your Saints - Mahalledeki Aziz",
     "image": "/images/movies/Shia_LaBeouf_a_guide_to_recognizing_your_saints_-_mahalledeki_aziz.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt2713180",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-4",
     "name": "Fury",
     "image": "/images/movies/Shia_LaBeouf_fury.jpg",
     "ozellikler": {
@@ -190,7 +190,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt8151874",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-3",
     "name": "Honey Boy - Bal Çocuk",
     "image": "/images/movies/Shia_LaBeouf_honey_boy_-_bal_cocuk.jpg",
     "ozellikler": {
@@ -213,7 +213,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt3721936",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-2",
     "name": "American Honey - Amerikan Balı",
     "image": "/images/movies/Shia_LaBeouf_american_honey_-_amerikan_bali.jpg",
     "ozellikler": {
@@ -236,7 +236,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1937390",
-    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/shia-labeouf-en-iyi-10-filmi#bolum-1",
     "name": "Nymphomaniac - İtiraf: Bölüm I",
     "image": "/images/movies/Shia_LaBeouf_nymphomaniac_-_itiraf__bolum_i.jpg",
     "ozellikler": {

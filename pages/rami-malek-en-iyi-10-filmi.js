@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-10",
     "name": "Buster's Mal Heart - Buster'ın Hasta Kalbi",
     "image": "/images/movies/Rami_Malek_buster's_mal_heart_-_buster'in_hasta_kalbi.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-9",
     "name": "Little Things - Küçük Şeyler",
     "image": "/images/movies/Rami_Malek_little_things_-_kucuk_seyler.jpg",
     "ozellikler": {
@@ -68,7 +68,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-8",
     "name": "The Master - Usta",
     "image": "/images/movies/Rami_Malek_the_master_-_usta.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-7",
     "name": "Short Term 12 - Geçici 12",
     "image": "/images/movies/Rami_Malek_short_term_12_-_gecici_12.jpg",
     "ozellikler": {
@@ -114,7 +114,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-6",
     "name": "Da Sweet Blood of Jesus - Jesus'un Tatlı Kanı",
     "image": "/images/movies/Rami_Malek_da_sweet_blood_of_jesus_-_jesus'un_tatli_kani.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-5",
     "name": "Larry Crowne",
     "image": "/images/movies/Rami_Malek_larry_crowne.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-4",
     "name": "Papillon - Kelebek",
     "image": "/images/movies/Rami_Malek_papillon_-_kelebek.jpg",
     "ozellikler": {
@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-3",
     "name": "No Time to Die - Ölmek İçin Zaman Yok",
     "image": "/images/movies/Rami_Malek_no_time_to_die_-_olmek_icin_zaman_yok.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-2",
     "name": "Night at the Museum: Secret of the Tomb - Müze Macerası: Lahitte Macera",
     "image": "/images/movies/Rami_Malek_night_at_the_museum__secret_of_the_tomb_-_muze_macerasi__lahitte_macera.jpg",
     "ozellikler": {
@@ -234,7 +234,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/rami-malek-en-iyi-10-filmi#bolum-1",
     "name": "Bohemian Rhapsody",
     "image": "/images/movies/Rami_Malek_bohemian_rhapsody.jpg",
     "ozellikler": {

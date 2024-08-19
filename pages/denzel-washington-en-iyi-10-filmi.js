@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:25:51+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/denzel-washington-en-iyi-10-filmi#bolum-10",
@@ -248,6 +249,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Magnificent Seven - Muhteşem Yedili, Denzel Washington izlenmesi gereken filmleri listesinde birinci sırada yer alıyor. Bu modern Vahşi Batı uyarlamasında Denzel, adaleti sağlamak için savaşan 7 silahşorun lideri olarak karşımıza çıkıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/denzel_washington_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

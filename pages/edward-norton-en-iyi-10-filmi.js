@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-25T14:58:51+03:00";
 const addDate = "25.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/edward-norton-en-iyi-10-filmi#bolum-10",
@@ -241,6 +242,7 @@ const jsonContentArray = [
     },
     "paragraf": "Fight Club, Edward Norton’un kariyerindeki en unutulmaz filmlerden biri. Film, modern toplumun eleştirisiyle sarsıcı bir hikayeyi birleştiriyor. Dövüş Kulübü, Edward Norton'un en akılda kalıcı ve sevilen filmlerinden biridir. Film sistemi, tüketim toplumunu ve insanın kendiyle olan mücadelesini ele alıyor. Gençlik enerjisini, özellikle de dövüş kulübü Edward Norton adı'yla kendini gösterir. Edward Norton'ın oyunculuk kariyerindeki dönüm noktalarından biri olmuştur ve Edward Norton en iyi filmi olarak da nitelendirilir. Norton'un canlandırdığı karakterin, hayattan beklediği idealin peşinden gitmesi ve bu süreçte yaşadığı dönüşüm sinema severlerin unutamadığı sahneler arasındadır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/edward_norton_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

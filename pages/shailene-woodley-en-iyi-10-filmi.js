@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:56:30+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/shailene-woodley-en-iyi-10-filmi#bolum-10",
@@ -49,22 +50,22 @@ const jsonContentArray = [
     "name": "The Last Letter from Your Lover - Sevgilinden Son Mektup",
     "image": "/images/movies/shailene_woodley_the_last_letter_from_your_lover_sevgilinden_son_mektup.jpg",
     "ozellikler": {
-        "Yıl": "2021",
-        "Süre": "1 sa. 50 dk.",
-        "Kategori": [
-            "Dram",
-            "Romantik"
-        ],
-        "Oyuncular": [
-            "Shailene Woodley",
-            "Felicity Jones",
-            "Callum Turner",
-            "Nabhaan Rizwan"
-        ],
-        "Yönetmen": "Augustine Frizzell",
-        "imdb": "6.7/10",
-        "Değerlendirme": "22000",
-        "metascore": "57"
+      "Yıl": "2021",
+      "Süre": "1 sa. 50 dk.",
+      "Kategori": [
+        "Dram",
+        "Romantik"
+      ],
+      "Oyuncular": [
+        "Shailene Woodley",
+        "Felicity Jones",
+        "Callum Turner",
+        "Nabhaan Rizwan"
+      ],
+      "Yönetmen": "Augustine Frizzell",
+      "imdb": "6.7/10",
+      "Değerlendirme": "22000",
+      "metascore": "57"
     },
     "paragraf": "Shailene Woodley, 1960'ların Londra'sında geçen bu romantik dramda, zengin bir kadın olan Jennifer Stirling'i canlandırıyor. Film, iki farklı zaman diliminde geçen ve kayıp bir aşk mektubunun keşfiyle kesişen hikayeleri anlatıyor."
   },
@@ -144,23 +145,23 @@ const jsonContentArray = [
     "name": "The Mauritanian",
     "image": "/images/movies/shailene_woodley_the_mauritanian.jpg",
     "ozellikler": {
-        "Yıl": "2021",
-        "Süre": "2 sa. 9 dk.",
-        "Kategori": [
-            "Dram",
-            "Biyografi",
-            "Gerilim"
-        ],
-        "Oyuncular": [
-            "Tahar Rahim",
-            "Jodie Foster",
-            "Shailene Woodley",
-            "Benedict Cumberbatch"
-        ],
-        "Yönetmen": "Kevin Macdonald",
-        "imdb": "7.5/10",
-        "Değerlendirme": "62000",
-        "metascore": "53"
+      "Yıl": "2021",
+      "Süre": "2 sa. 9 dk.",
+      "Kategori": [
+        "Dram",
+        "Biyografi",
+        "Gerilim"
+      ],
+      "Oyuncular": [
+        "Tahar Rahim",
+        "Jodie Foster",
+        "Shailene Woodley",
+        "Benedict Cumberbatch"
+      ],
+      "Yönetmen": "Kevin Macdonald",
+      "imdb": "7.5/10",
+      "Değerlendirme": "62000",
+      "metascore": "53"
     },
     "paragraf": "Shailene Woodley, Guantanamo Bay'de haksız yere yıllarca tutulduktan sonra serbest bırakılan Mohamedou Ould Slahi'nin gerçek hikayesini anlatan bu etkileyici filmde önemli bir rol üstleniyor. Film, adalet ve insan hakları konularına derin bir bakış sunuyor."
   },
@@ -258,6 +259,7 @@ const jsonContentArray = [
     },
     "paragraf": "Bu gerçek hikaye, bir genç kadının denizde hayatta kalma mücadelesini anlatıyor. Shailene Woodley'in başroldeki inanılmaz performansı, bu yapıtı Shailene Woodley filmleri arasında zirveye taşıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/shailene_woodley_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

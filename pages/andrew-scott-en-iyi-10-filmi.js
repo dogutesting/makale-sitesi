@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt4645330",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-10",
     "name": "Denial - İnkar",
     "image": "/images/movies/Andrew_Scott_denial_-_inkar.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt2573858",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-9",
     "name": "The Stag - Bekarlığa Veda",
     "image": "/images/movies/Andrew_Scott_the_stag_-_bekarliga_veda.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1976009",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-8",
     "name": "Victor Frankenstein",
     "image": "/images/movies/Andrew_Scott_victor_frankenstein.jpg",
     "ozellikler": {
@@ -98,33 +98,33 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt2567026",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-7",
     "name": "Alice Through the Looking Glass",
     "image": "/images/movies/Andrew_Scott_alice_through_the_looking_glass.jpg",
     "ozellikler": {
-        "Yıl": "2016",
-        "Kategori": [
-            "Macera",
-            "Aile",
-            "Fantastik"
-        ],
-        "Oyuncular": [
-            "Andrew Scott",
-            "Mia Wasikowska",
-            "Johnny Depp",
-            "Helena Bonham Carter"
-        ],
-        "Süre": "1 sa. 53 dk.",
-        "Yönetmen": "James Bobin",
-        "imdb": "6.2/10",
-        "Değerlendirme": "124251"
+      "Yıl": "2016",
+      "Kategori": [
+        "Macera",
+        "Aile",
+        "Fantastik"
+      ],
+      "Oyuncular": [
+        "Andrew Scott",
+        "Mia Wasikowska",
+        "Johnny Depp",
+        "Helena Bonham Carter"
+      ],
+      "Süre": "1 sa. 53 dk.",
+      "Yönetmen": "James Bobin",
+      "imdb": "6.2/10",
+      "Değerlendirme": "124251"
     },
     "paragraf": "Andrew Scott, Alice Through the Looking Glass filminde kısa bir rolde yer alıyor. Bu fantastik macera, izleyicilere zamanda yolculuk ve büyülü bir dünyanın kapılarını aralıyor. Scott'ın filmdeki performansı, filmdeki genel atmosferi tamamlayıcı nitelikte."
   },
   {
     "num": "6",
     "title_id": "tt1778108",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-6",
     "name": "The Hour - Saat",
     "image": "/images/movies/Andrew_Scott_the_hour_-_saat.jpg",
     "ozellikler": {
@@ -148,7 +148,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt5936866",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-5",
     "name": "A Dark Place - Karanlık Bir Yer",
     "image": "/images/movies/Andrew_Scott_a_dark_place_-_karanlik_bir_yer.jpg",
     "ozellikler": {
@@ -172,7 +172,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt8219328",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-4",
     "name": "Hamlet",
     "image": "/images/movies/Andrew_Scott_hamlet.jpg",
     "ozellikler": {
@@ -196,7 +196,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt5687612",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-3",
     "name": "Fleabag",
     "image": "/images/movies/Andrew_Scott_fleabag.jpg",
     "ozellikler": {
@@ -220,7 +220,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt2379713",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-2",
     "name": "Spectre",
     "image": "/images/movies/Andrew_Scott_spectre.jpg",
     "ozellikler": {
@@ -245,7 +245,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt3169706",
-    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/andrew-scott-en-iyi-10-filmi#bolum-1",
     "name": "Pride - Onur",
     "image": "/images/movies/Andrew_Scott_pride_-_onur.jpg",
     "ozellikler": {

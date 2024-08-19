@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:17:05+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/peter-jackson-en-iyi-10-filmi#bolum-10",
@@ -259,7 +260,7 @@ const jsonContentArray = [
       "metascore": "91"
     },
     "paragraf": "Listemizin zirvesinde yer alan They Shall Not Grow Old, Peter Jackson'ın I. Dünya Savaşı'na dair eşsiz bir belgeselidir. Bu film, arşiv görüntülerinin renklendirilmesi ve seslendirilmesi ile tarihe yeni bir bakış açısı sunuyor."
-}
+  }
 
 ];
 

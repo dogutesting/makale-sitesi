@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2717822",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-10",
     "name": "Blackhat - Hacker",
     "image": "/images/movies/Chris_Hemsworth_blackhat_-_hacker.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt2283336",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-9",
     "name": "Men in Black: International - Siyah Giyen Adamlar: Global Tehdit",
     "image": "/images/movies/Chris_Hemsworth_men_in_black__international_-_siyah_giyen_adamlar__global_tehdit.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1289401",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-8",
     "name": "Ghostbusters - Hayalet Avcıları",
     "image": "/images/movies/Chris_Hemsworth_ghostbusters_-_hayalet_avcilari.jpg",
     "ozellikler": {
@@ -99,7 +99,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1979320",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-7",
     "name": "Rush - Zafere Hücum",
     "image": "/images/movies/Chris_Hemsworth_rush_-_zafere_hucum.jpg",
     "ozellikler": {
@@ -124,7 +124,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1259521",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-6",
     "name": "The Cabin in the Woods - Dehşet Kapanı",
     "image": "/images/movies/Chris_Hemsworth_the_cabin_in_the_woods_-_dehset_kapani.jpg",
     "ozellikler": {
@@ -148,7 +148,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0796366",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-5",
     "name": "Star Trek - Uzay Yolu",
     "image": "/images/movies/Chris_Hemsworth_star_trek_-_uzay_yolu.jpg",
     "ozellikler": {
@@ -173,7 +173,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0800369",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-4",
     "name": "Thor",
     "image": "/images/movies/Chris_Hemsworth_thor.jpg",
     "ozellikler": {
@@ -197,7 +197,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0848228",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-3",
     "name": "The Avengers - Yenilmezler",
     "image": "/images/movies/Chris_Hemsworth_the_avengers_-_yenilmezler.jpg",
     "ozellikler": {
@@ -222,7 +222,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt3501632",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-2",
     "name": "Thor: Ragnarok",
     "image": "/images/movies/Chris_Hemsworth_thor__ragnarok.jpg",
     "ozellikler": {
@@ -246,7 +246,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt4154796",
-    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/chris-hemsworth-en-iyi-10-filmi#bolum-1",
     "name": "Avengers: Endgame - Avengers: Son Oyun",
     "image": "/images/movies/Chris_Hemsworth_avengers__endgame_-_avengers__son_oyun.jpg",
     "ozellikler": {

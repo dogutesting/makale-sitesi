@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-24T18:42:36+03:00";
 const addDate = "24.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/dunyanin-en-iyi-10-ask-filmi#bolum-10",
@@ -253,6 +254,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listenin zirvesinde, unutulmaz bir aşkı silemeye çalışan bir çiftin hikayesi olan Eternal Sunshine of the Spotless Mind yer alıyor. Film, aşkın hafızadaki izdüşümünü sorgulayan benzersiz bir yapım."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/dunyanin_en_iyi_10_ask_filmi_kapak.jpg" //! SEN DOLDUR

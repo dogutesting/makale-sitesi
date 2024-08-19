@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:14:24+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/emmy-rossum-en-iyi-10-filmi#bolum-10",
@@ -246,6 +247,7 @@ const jsonContentArray = [
     },
     "paragraf": "Phantom of the Opera, Emmy Rossum'un en ikonik ve en çok öne çıkan performanslarından birini sunduğu filmdir. Rossum, bu filmdeki olağanüstü vokal yeteneği ve etkileyici performansıyla izleyenleri büyülemektedir. Emmy Rossum imdb açısından önemli bir yere sahip olan bu yapım, onun kariyerinde mihenk taşı olmuştur. Hem sanatsal yapısı hem de güçlü anlatımıyla dikkat çeken bu film, Emmy Rossum oynadığı filmler arasında zirveyi hak eden bir başyapıttır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/emmy-rossum-en-iyi-10-filmi-kapak.jpg"; //! SEN DOLDUR

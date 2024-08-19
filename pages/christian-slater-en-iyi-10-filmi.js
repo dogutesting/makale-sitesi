@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0124198",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-10",
     "name": "Very Bad Things - Çok Kötü Şeyler",
     "image": "/images/movies/Christian_Slater_very_bad_things_-_cok_kotu_seyler.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0102798",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-9",
     "name": "Robin Hood: Prince of Thieves - Robin Hood: Hırsızlar Prensi",
     "image": "/images/movies/Christian_Slater_robin_hood__prince_of_thieves_-_robin_hood__hirsizlar_prensi.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0110148",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-8",
     "name": "Interview with the Vampire - Vampirle Görüşme",
     "image": "/images/movies/Christian_Slater_interview_with_the_vampire_-_vampirle_gorusme.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0115759",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-7",
     "name": "Broken Arrow - Kırık Ok",
     "image": "/images/movies/Christian_Slater_broken_arrow_-_kirik_ok.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0091605",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-6",
     "name": "The Name of the Rose - Gülün Adı",
     "image": "/images/movies/Christian_Slater_the_name_of_the_rose_-_gulun_adi.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0097493",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-5",
     "name": "Heathers - Gençler",
     "image": "/images/movies/Christian_Slater_heathers_-_gencler.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1937390",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-4",
     "name": "Nymphomaniac: Vol. I - İtiraf: Bölüm I",
     "image": "/images/movies/Christian_Slater_nymphomaniac__vol._i_-_itiraf__bolum_i.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt4158110",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-3",
     "name": "Mr. Robot - Bay Robot",
     "image": "/images/movies/Christian_Slater_mr._robot_-_bay_robot.jpg",
     "ozellikler": {
@@ -214,7 +214,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0100436",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-2",
     "name": "Pump Up the Volume - Gürültüyü Artır",
     "image": "/images/movies/Christian_Slater_pump_up_the_volume_-_gurultuyu_artir.jpg",
     "ozellikler": {
@@ -239,7 +239,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0108399",
-    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/christian-slater-en-iyi-10-filmi#bolum-1",
     "name": "True Romance - Çılgın Romantik",
     "image": "/images/movies/Christian_Slater_true_romance_-_cilgin_romantik.jpg",
     "ozellikler": {

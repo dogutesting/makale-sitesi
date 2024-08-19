@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:54:03+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/heath-ledger-en-iyi-10-filmi#bolum-10",
@@ -253,6 +254,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listenin zirvesinde yer alan ve Heath Ledger'ın Oscar ödülü kazandığı 'The Dark Knight', tüm zamanların en iyi filmlerinden biri olarak kabul edilir. Heath Ledger en iyi filmi olması sürpriz değil."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/heath_ledger_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

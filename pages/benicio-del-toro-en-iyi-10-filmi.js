@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0116277",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-10",
     "name": "The Fan - Takip",
     "image": "/images/movies/Benicio_Del_Toro_the_fan_-_takip.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0119086",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-9",
     "name": "Excess Baggage - Fazla Mesai",
     "image": "/images/movies/Benicio_Del_Toro_excess_baggage_-_fazla_mesai.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0315733",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-8",
     "name": "21 Grams - 21 Gram",
     "image": "/images/movies/Benicio_Del_Toro_21_grams_-_21_gram.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0269347",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-7",
     "name": "The Hunted - Av",
     "image": "/images/movies/Benicio_Del_Toro_the_hunted_-_av.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt5052474",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-6",
     "name": "Sicario: Day of the Soldado - Sicario: Askerin Günü",
     "image": "/images/movies/Benicio_Del_Toro_sicario__day_of_the_soldado_-_sicario__askerin_gunu.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0181865",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-5",
     "name": "Traffic - Trafik",
     "image": "/images/movies/Benicio_Del_Toro_traffic_-_trafik.jpg",
     "ozellikler": {
@@ -165,7 +165,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0374569",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-4",
     "name": "Che: Part Two - Che: İkinci Bölüm",
     "image": "/images/movies/Benicio_Del_Toro_che__part_two_-_che__ikinci_bolum.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt3397884",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-3",
     "name": "Sicario",
     "image": "/images/movies/Benicio_Del_Toro_sicario.jpg",
     "ozellikler": {
@@ -212,7 +212,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0208092",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-2",
     "name": "Snatch - Kapışma",
     "image": "/images/movies/Benicio_Del_Toro_snatch_-_kapisma.jpg",
     "ozellikler": {
@@ -237,7 +237,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0114814",
-    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/benicio-del-toro-en-iyi-10-filmi#bolum-1",
     "name": "The Usual Suspects - Olağan Şüpheliler",
     "image": "/images/movies/Benicio_Del_Toro_the_usual_suspects_-_olagan_supheliler.jpg",
     "ozellikler": {

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:21:48+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/michael-bay-en-iyi-10-filmi#bolum-10",
@@ -250,6 +251,7 @@ const jsonContentArray = [
     },
     "paragraf": "Michael Bay’in en yeni ve özgün projelerinden biri olan '6 Underground', adrenalini yüksek sahneleri ve başarılı oyunculukları ile dikkat çekiyor. Listemizde bir numarada yer almayı hak ediyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/michael_bay_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

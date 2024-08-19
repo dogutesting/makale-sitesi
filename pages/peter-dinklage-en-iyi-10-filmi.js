@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-10",
     "name": "Pixels - Piksel",
     "image": "/images/movies/Peter_Dinklage_pixels_-_piksel.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-9",
     "name": "Underdog - Kahraman Köpek",
     "image": "/images/movies/Peter_Dinklage_underdog_-_kahraman_kopek.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-8",
     "name": "I Love You Too - Seni de Seviyorum",
     "image": "/images/movies/Peter_Dinklage_i_love_you_too_-_seni_de_seviyorum.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-7",
     "name": "The Boss - Patron",
     "image": "/images/movies/Peter_Dinklage_the_boss_-_patron.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-6",
     "name": "The Croods: A New Age - Crood'lar 2: Yeni Bir Çağ",
     "image": "/images/movies/Peter_Dinklage_the_croods__a_new_age_-_crood'lar_2__yeni_bir_cag.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-5",
     "name": "Avengers: Infinity War - Yenilmezler: Sonsuzluk Savaşı",
     "image": "/images/movies/Peter_Dinklage_avengers__infinity_war_-_yenilmezler__sonsuzluk_savasi.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-4",
     "name": "The Chronicles of Narnia: Prince Caspian - Narnia Günlükleri: Prens Kaspiyan",
     "image": "/images/movies/Peter_Dinklage_the_chronicles_of_narnia__prince_caspian_-_narnia_gunlukleri__prens_kaspiyan.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-3",
     "name": "Three Billboards Outside Ebbing, Missouri - Üç Billboard Ebbing Çıkışı, Missouri",
     "image": "/images/movies/Peter_Dinklage_three_billboards_outside_ebbing,_missouri_-_uc_billboard_ebbing_cikisi,_missouri.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-2",
     "name": "X-Men: Days of Future Past - X-Men: Geçmiş Günler Gelecek",
     "image": "/images/movies/Peter_Dinklage_x-men__days_of_future_past_-_x-men__gecmis_gunler_gelecek.jpg",
     "ozellikler": {
@@ -234,7 +234,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/peter-dinklage-en-iyi-10-filmi#bolum-1",
     "name": "The Station Agent - Istasyon Şefi",
     "image": "/images/movies/Peter_Dinklage_the_station_agent_-_istasyon_sefi.jpg",
     "ozellikler": {

@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2935476",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-10",
     "name": "Far from the Madding Crowd - Çılgın Kalabalıktan Uzak",
     "image": "/images/movies/Carey_Mulligan_far_from_the_madding_crowd_-_cilgin_kalabaliktan_uzak.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt3077214",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-9",
     "name": "Suffragette - Diren!",
     "image": "/images/movies/Carey_Mulligan_suffragette_-_diren!.jpg",
     "ozellikler": {
@@ -74,7 +74,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1027718",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-8",
     "name": "Wall Street: Money Never Sleeps - Wall Street: Para Asla Uyumaz",
     "image": "/images/movies/Carey_Mulligan_wall_street__money_never_sleeps_-_wall_street__para_asla_uyumaz.jpg",
     "ozellikler": {
@@ -100,7 +100,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt5929754",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-7",
     "name": "Wildlife - Yangın Yeri",
     "image": "/images/movies/Carey_Mulligan_wildlife_-_yangin_yeri.jpg",
     "ozellikler": {
@@ -125,7 +125,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1152836",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-6",
     "name": "Public Enemies - Halk Düşmanları",
     "image": "/images/movies/Carey_Mulligan_public_enemies_-_halk_dusmanlari.jpg",
     "ozellikler": {
@@ -151,7 +151,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1343092",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-5",
     "name": "The Great Gatsby - Muhteşem Gatsby",
     "image": "/images/movies/Carey_Mulligan_the_great_gatsby_-_muhtesem_gatsby.jpg",
     "ozellikler": {
@@ -177,7 +177,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1174732",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-4",
     "name": "An Education - Aşk Dersi",
     "image": "/images/movies/Carey_Mulligan_an_education_-_ask_dersi.jpg",
     "ozellikler": {
@@ -201,7 +201,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt2396589",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-3",
     "name": "Mudbound - Savaştan Sonra",
     "image": "/images/movies/Carey_Mulligan_mudbound_-_savastan_sonra.jpg",
     "ozellikler": {
@@ -225,7 +225,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0780504",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-2",
     "name": "Drive - Sürücü",
     "image": "/images/movies/Carey_Mulligan_drive_-_surucu.jpg",
     "ozellikler": {
@@ -249,7 +249,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt9620292",
-    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/carey-mulligan-en-iyi-10-filmi#bolum-1",
     "name": "Promising Young Woman - Gelecek Vaat Eden Genç Kadın",
     "image": "/images/movies/Carey_Mulligan_promising_young_woman_-_gelecek_vaat_eden_genc_kadin.jpg",
     "ozellikler": {

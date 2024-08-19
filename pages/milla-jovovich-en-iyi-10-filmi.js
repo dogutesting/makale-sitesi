@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0971209",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-10",
     "name": "A Perfect Getaway - Kusursuz Kaçış",
     "image": "/images/movies/Milla_Jovovich_a_perfect_getaway_-_kusursuz_kacis.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1509767",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-9",
     "name": "The Three Musketeers - Üç Silahşor",
     "image": "/images/movies/Milla_Jovovich_the_three_musketeers_-_uc_silahsor.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0370032",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-8",
     "name": "Ultraviolet - Ultraviyole",
     "image": "/images/movies/Milla_Jovovich_ultraviolet_-_ultraviyole.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0151137",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-7",
     "name": "Joan of Arc - Jeanne d'Arc",
     "image": "/images/movies/Milla_Jovovich_joan_of_arc_-_jeanne_d'arc.jpg",
     "ozellikler": {
@@ -121,7 +121,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt2592614",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-6",
     "name": "Resident Evil: The Final Chapter - Ölümsüz Kötülük: Son Bölüm",
     "image": "/images/movies/Milla_Jovovich_resident_evil__the_final_chapter_-_olumsuz_kotuluk__son_bolum.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1855325",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-5",
     "name": "Resident Evil: Retribution - Ölümsüz Kötülük: İntikam",
     "image": "/images/movies/Milla_Jovovich_resident_evil__retribution_-_olumsuz_kotuluk__intikam.jpg",
     "ozellikler": {
@@ -169,7 +169,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1220634",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-4",
     "name": "Resident Evil: Afterlife - Ölümsüz Kötülük: Ölümden Sonra",
     "image": "/images/movies/Milla_Jovovich_resident_evil__afterlife_-_olumsuz_kotuluk__olumden_sonra.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0119116",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-3",
     "name": "The Fifth Element - Beşinci Element",
     "image": "/images/movies/Milla_Jovovich_the_fifth_element_-_besinci_element.jpg",
     "ozellikler": {
@@ -217,7 +217,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0318627",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-2",
     "name": "Resident Evil: Apocalypse - Ölümsüz Kötülük: Kıyamet",
     "image": "/images/movies/Milla_Jovovich_resident_evil__apocalypse_-_olumsuz_kotuluk__kiyamet.jpg",
     "ozellikler": {
@@ -241,7 +241,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0432021",
-    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/milla-jovovich-en-iyi-10-filmi#bolum-1",
     "name": "Resident Evil: Extinction - Ölümsüz Kötülük: Yok Oluş",
     "image": "/images/movies/Milla_Jovovich_resident_evil__extinction_-_olumsuz_kotuluk__yok_olus.jpg",
     "ozellikler": {

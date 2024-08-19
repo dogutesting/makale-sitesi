@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0490204",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-10",
     "name": "Reign Over Me - Beni Unutma",
     "image": "/images/movies/Liv_Tyler_reign_over_me_-_beni_unutma.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0203755",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-9",
     "name": "One Night at McCool's - McCool's Gecesi",
     "image": "/images/movies/Liv_Tyler_one_night_at_mccool's_-_mccool's_gecesi.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0482606",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-8",
     "name": "The Strangers - Ziyaretçiler",
     "image": "/images/movies/Liv_Tyler_the_strangers_-_ziyaretciler.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0112950",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-7",
     "name": "Empire Records - İmparatorluk Kayıtları",
     "image": "/images/movies/Liv_Tyler_empire_records_-_imparatorluk_kayitlari.jpg",
     "ozellikler": {
@@ -123,7 +123,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0800080",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-6",
     "name": "The Incredible Hulk - İnanılmaz Hulk",
     "image": "/images/movies/Liv_Tyler_the_incredible_hulk_-_inanilmaz_hulk.jpg",
     "ozellikler": {
@@ -148,7 +148,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0117737",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-5",
     "name": "Stealing Beauty - Baştan Çıkarılmış Güzellik",
     "image": "/images/movies/Liv_Tyler_stealing_beauty_-_bastan_cikarilmis_guzellik.jpg",
     "ozellikler": {
@@ -173,7 +173,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0300051",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-4",
     "name": "Jersey Girl - Babam İçin",
     "image": "/images/movies/Liv_Tyler_jersey_girl_-_babam_icin.jpg",
     "ozellikler": {
@@ -198,7 +198,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0120591",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-3",
     "name": "Armageddon - Armageddon",
     "image": "/images/movies/Liv_Tyler_armageddon_-_armageddon.jpg",
     "ozellikler": {
@@ -223,7 +223,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt2935510",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-2",
     "name": "Ad Astra - Yıldızlara Doğru",
     "image": "/images/movies/Liv_Tyler_ad_astra_-_yildizlara_dogru.jpg",
     "ozellikler": {
@@ -248,7 +248,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0120737",
-    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/liv-tyler-en-iyi-10-filmi#bolum-1",
     "name": "The Lord of the Rings: The Fellowship of the Ring - Yüzüklerin Efendisi: Yüzük Kardeşliği",
     "image": "/images/movies/Liv_Tyler_the_lord_of_the_rings__the_fellowship_of_the_ring_-_yuzuklerin_efendisi__yuzuk_kardesligi.jpg",
     "ozellikler": {

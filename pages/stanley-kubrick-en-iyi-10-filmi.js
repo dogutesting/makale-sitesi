@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0093058",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-10",
     "name": "Full Metal Jacket - Full Metal Ceket",
     "image": "/images/movies/Matthew_Modine_full_metal_jacket_-_full_metal_ceket.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0120663",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-9",
     "name": "Eyes Wide Shut - Gözleri Tamamen Kapalı",
     "image": "/images/movies/Tom_Cruise_eyes_wide_shut_-_gozleri_tamamen_kapali.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0066921",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-8",
     "name": "A Clockwork Orange - Otomatik Portakal",
     "image": "/images/movies/Malcolm_McDowell_a_clockwork_orange_-_otomatik_portakal.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0049406",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-7",
     "name": "The Killing - Son Darbe",
     "image": "/images/movies/Sterling_Hayden_the_killing_-_son_darbe.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0050825",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-6",
     "name": "Paths of Glory - Zafer Yolları",
     "image": "/images/movies/Kirk_Douglas_paths_of_glory_-_zafer_yollari.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0081505",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-5",
     "name": "The Shining - Cinnet",
     "image": "/images/movies/Jack_Nicholson_the_shining_-_cinnet.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0072684",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-4",
     "name": "Barry Lyndon",
     "image": "/images/movies/Ryan_O'Neal_barry_lyndon.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0057012",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-3",
     "name": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb - Dr. Garipaşk veya: Nasıl Kaygılanmayı Bırakıp Bombayı Sevmeyi Öğrendim",
     "image": "/images/movies/Peter_Sellers_dr._strangelove_or__how_i_learned_to_stop_worrying_and_love_the_bomb_-_dr._garipask_veya__nasil_kaygilanmayi_birakip_bombayi_sevmeyi_ogrendim.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0062622",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-2",
     "name": "2001: A Space Odyssey - 2001: Bir Uzay Destanı",
     "image": "/images/movies/Keir_Dullea_2001__a_space_odyssey_-_2001__bir_uzay_destani.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0056193",
-    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/stanley-kubrick-en-iyi-10-filmi#bolum-1",
     "name": "Lolita",
     "image": "/images/movies/James_Mason_lolita.jpg",
     "ozellikler": {

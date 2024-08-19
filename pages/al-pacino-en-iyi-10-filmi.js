@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:17:03+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/al_pacino_al-pacino-en-iyi-10-filmi#bolum-10",
@@ -243,6 +244,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Godfather, sinema tarihinin en efsanevi yapımlarından biridir. Al Pacino'nun yükselişindeki dönüm noktası olan bu yapıtta, Michael Corleone'nin dramatik dönüşümünü izliyoruz. Al pacino en iyi filmleri imdb listelerinde zirvede yer alır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/al-pacino-en-iyi-10-filmi-kapak.jpg" //! SEN DOLDUR

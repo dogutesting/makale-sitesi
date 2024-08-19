@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:32:24+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/bruce-willis-en-iyi-10-filmi#bolum-10",
@@ -242,6 +243,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Last Boy Scout, aksiyon ve gerilim unsurlarını etkili bir şekilde harmanlayan ikonik bir film. Bruce Willis'in olağanüstü performansı, filmin akılda kalıcı olmasını sağlıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/bruce_willis_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

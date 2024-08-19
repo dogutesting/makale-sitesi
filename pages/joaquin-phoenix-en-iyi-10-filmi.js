@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-10",
     "name": "To Die For - Öldüren Cazibe",
     "image": "/images/movies/Joaquin_Phoenix_to_die_for_-_olduren_cazibe.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-9",
     "name": "Gladiator - Gladyatör",
     "image": "/images/movies/Joaquin_Phoenix_gladiator_-_gladyator.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-8",
     "name": "Walk the Line - Sınırları Aşmak",
     "image": "/images/movies/Joaquin_Phoenix_walk_the_line_-_sinirlari_asmak.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-7",
     "name": "The Master - Usta",
     "image": "/images/movies/Joaquin_Phoenix_the_master_-_usta.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-6",
     "name": "Her - Aşk",
     "image": "/images/movies/Joaquin_Phoenix_her_-_ask.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-5",
     "name": "You Were Never Really Here - Hiçbir Zaman Burada Değildin",
     "image": "/images/movies/Joaquin_Phoenix_you_were_never_really_here_-_hicbir_zaman_burada_degildin.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-4",
     "name": "Joker",
     "image": "/images/movies/Joaquin_Phoenix_joker.jpg",
     "ozellikler": {
@@ -190,7 +190,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-3",
     "name": "C'mon C'mon - Seni Dinliyorum",
     "image": "/images/movies/Joaquin_Phoenix_c'mon_c'mon_-_seni_dinliyorum.jpg",
     "ozellikler": {
@@ -212,7 +212,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-2",
     "name": "The Sisters Brothers - Sisters Biraderler",
     "image": "/images/movies/Joaquin_Phoenix_the_sisters_brothers_-_sisters_biraderler.jpg",
     "ozellikler": {
@@ -236,7 +236,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/joaquin-phoenix-en-iyi-10-filmi#bolum-1",
     "name": "Inherent Vice - Gizli Kusur",
     "image": "/images/movies/Joaquin_Phoenix_inherent_vice_-_gizli_kusur.jpg",
     "ozellikler": {

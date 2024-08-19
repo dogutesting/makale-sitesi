@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1077368",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-10",
     "name": "Dark Shadows - Karanlık Gölgeler",
     "image": "/images/movies/Johnny_Depp_dark_shadows_-_karanlik_golgeler.jpg",
     "ozellikler": {
@@ -50,7 +50,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0367594",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-9",
     "name": "Charlie and the Chocolate Factory - Charlie ve Çikolata Fabrikası",
     "image": "/images/movies/Johnny_Depp_charlie_and_the_chocolate_factory_-_charlie_ve_cikolata_fabrikasi.jpg",
     "ozellikler": {
@@ -76,7 +76,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0408236",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-8",
     "name": "Sweeney Todd: The Demon Barber of Fleet Street - Sweeney Todd: Fleet Sokağının Şeytan Berberi",
     "image": "/images/movies/Johnny_Depp_sweeney_todd__the_demon_barber_of_fleet_street_-_sweeney_todd__fleet_sokaginin_seytan_berberi.jpg",
     "ozellikler": {
@@ -102,7 +102,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1014759",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-7",
     "name": "Alice in Wonderland - Alis Harikalar Diyarında",
     "image": "/images/movies/Johnny_Depp_alice_in_wonderland_-_alis_harikalar_diyarinda.jpg",
     "ozellikler": {
@@ -128,7 +128,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0099487",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-6",
     "name": "Edward Scissorhands - Makas Eller",
     "image": "/images/movies/Johnny_Depp_edward_scissorhands_-_makas_eller.jpg",
     "ozellikler": {
@@ -153,7 +153,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0308644",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-5",
     "name": "Finding Neverland - Düşler Ülkesi",
     "image": "/images/movies/Johnny_Depp_finding_neverland_-_dusler_ulkesi.jpg",
     "ozellikler": {
@@ -179,7 +179,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0383574",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-4",
     "name": "Pirates of the Caribbean: Dead Man's Chest - Karayip Korsanları: Ölü Adamın Sandığı",
     "image": "/images/movies/Johnny_Depp_pirates_of_the_caribbean__dead_man's_chest_-_karayip_korsanlari__olu_adamin_sandigi.jpg",
     "ozellikler": {
@@ -205,7 +205,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1192628",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-3",
     "name": "Rango",
     "image": "/images/movies/Johnny_Depp_rango.jpg",
     "ozellikler": {
@@ -229,7 +229,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0325980",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-2",
     "name": "Pirates of the Caribbean: The Curse of the Black Pearl - Karayip Korsanları: Siyah İnci'nin Laneti",
     "image": "/images/movies/Johnny_Depp_pirates_of_the_caribbean__the_curse_of_the_black_pearl_-_karayip_korsanlari__siyah_inci'nin_laneti.jpg",
     "ozellikler": {
@@ -256,7 +256,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0109707",
-    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/johnny-depp-en-iyi-10-filmi#bolum-1",
     "name": "Ed Wood",
     "image": "/images/movies/Johnny_Depp_ed_wood.jpg",
     "ozellikler": {

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:18:38+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/en-yuksek-imdb-puanli-10-korku-filmi#bolum-10",
@@ -250,6 +251,7 @@ const jsonContentArray = [
     },
     "paragraf": "Steven Spielberg'in yönettiği Jaws, sinema tarihinde bir dönüm noktası olmuş ve sahil kasabasını tehdit eden bir köpekbalığının hikayesini anlatıyor. Gerilimi ve korkuyu başarıyla işleyen Jaws, en yüksek imdb puanlı korku filmleri arasındaki liderliğini sürdürüyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/en-yuksek-imdb-puanli-10-korku-filmi-kapak.jpg" //! SEN DOLDUR

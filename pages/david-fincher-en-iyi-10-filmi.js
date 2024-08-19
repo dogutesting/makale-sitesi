@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-22T17:26:48+03:00";
 const addDate = "22.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/david-fincher-en-iyi-10-filmi#bolum-10",
@@ -252,6 +253,7 @@ const jsonContentArray = [
     },
     "paragraf": "Fight Club, sinema tarihinde kült statüsüne erişmiş bir başyapıttır. Fincher'ın yönetmenlik kariyerindeki bu doruk nokta, toplumsal normlar ve bireysel kimlik üzerine cesur bir eleştiri sunuyor. Film, zamanla sadık bir hayran kitlesi kazanmış olup, David Fincher en iyi filmi tartışmasız olarak kabul ediliyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/david_fincher_en_iyi_10_film_kapak.png" //! SEN DOLDUR

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-10",
     "name": "Something's Gotta Give - Aşk Olsun",
     "image": "/images/movies/Jack_Nicholson_something's_gotta_give_-_ask_olsun.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-9",
     "name": "The Departed - Köstebek",
     "image": "/images/movies/Jack_Nicholson_the_departed_-_kostebek.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-8",
     "name": "Terms of Endearment - Sevgi Sözcükleri",
     "image": "/images/movies/Jack_Nicholson_terms_of_endearment_-_sevgi_sozcukleri.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-7",
     "name": "Chinatown - Çin Mahallesi",
     "image": "/images/movies/Jack_Nicholson_chinatown_-_cin_mahallesi.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-6",
     "name": "Batman - Batman",
     "image": "/images/movies/Jack_Nicholson_batman_-_batman.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-5",
     "name": "As Good as It Gets - Benden Bu Kadar",
     "image": "/images/movies/Jack_Nicholson_as_good_as_it_gets_-_benden_bu_kadar.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-4",
     "name": "Easy Rider - Özgürlük Yolu",
     "image": "/images/movies/Jack_Nicholson_easy_rider_-_ozgurluk_yolu.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-3",
     "name": "The Shining - Cinnet",
     "image": "/images/movies/Jack_Nicholson_the_shining_-_cinnet.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-2",
     "name": "One Flew Over the Cuckoo's Nest - Guguk Kuşu",
     "image": "/images/movies/Jack_Nicholson_one_flew_over_the_cuckoo's_nest_-_guguk_kusu.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jack-nicholson-en-iyi-10-filmi#bolum-1",
     "name": "Five Easy Pieces - Beş Kolay Parça",
     "image": "/images/movies/Jack_Nicholson_five_easy_pieces_-_bes_kolay_parca.jpg",
     "ozellikler": {

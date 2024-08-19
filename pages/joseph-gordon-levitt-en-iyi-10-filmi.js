@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-10",
     "name": "Premium Rush - Zorlu Takip",
     "image": "/images/movies/Joseph_Gordon-Levitt_premium_rush_-_zorlu_takip.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-9",
     "name": "The Walk - Tehlikeli Yürüyüş",
     "image": "/images/movies/Joseph_Gordon-Levitt_the_walk_-_tehlikeli_yuruyus.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-8",
     "name": "Looper - Tetikçiler",
     "image": "/images/movies/Joseph_Gordon-Levitt_looper_-_tetikciler.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-7",
     "name": "The Lookout - Suikastçı",
     "image": "/images/movies/Joseph_Gordon-Levitt_the_lookout_-_suikastci.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-6",
     "name": "50/50",
     "image": "/images/movies/Joseph_Gordon-Levitt_50_50.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-5",
     "name": "500 Days of Summer - Aşkın 500 Günü",
     "image": "/images/movies/Joseph_Gordon-Levitt_500_days_of_summer_-_askin_500_gunu.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-4",
     "name": "The Trial of the Chicago 7 - Şikago Yedilisi'nin Yargılanması",
     "image": "/images/movies/Joseph_Gordon-Levitt_the_trial_of_the_chicago_7_-_sikago_yedilisi'nin_yargilanmasi.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-3",
     "name": "Lincoln",
     "image": "/images/movies/Joseph_Gordon-Levitt_lincoln.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-2",
     "name": "Don Jon",
     "image": "/images/movies/Joseph_Gordon-Levitt_don_jon.jpg",
     "ozellikler": {
@@ -231,7 +231,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/joseph-gordon-levitt-en-iyi-10-filmi#bolum-1",
     "name": "Inception - Başlangıç",
     "image": "/images/movies/Joseph_Gordon-Levitt_inception_-_baslangic.jpg",
     "ozellikler": {

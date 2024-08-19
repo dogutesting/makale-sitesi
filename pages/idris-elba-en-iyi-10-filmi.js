@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-10",
     "name": "The Dark Tower - Kara Kule",
     "image": "/images/movies/Idris_Elba_the_dark_tower_-_kara_kule.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-9",
     "name": "Prometheus",
     "image": "/images/movies/Idris_Elba_prometheus.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-8",
     "name": "The Losers",
     "image": "/images/movies/Idris_Elba_the_losers.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-7",
     "name": "RocknRolla",
     "image": "/images/movies/Idris_Elba_rocknrolla.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-6",
     "name": "Molly's Game - Molly'nin Oyunu",
     "image": "/images/movies/Idris_Elba_molly's_game_-_molly'nin_oyunu.jpg",
     "ozellikler": {
@@ -142,7 +142,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-5",
     "name": "Mandela: Long Walk to Freedom - Mandela: Özgürlüğe Giden Uzun Yol",
     "image": "/images/movies/Idris_Elba_mandela__long_walk_to_freedom_-_mandela__ozgurluge_giden_uzun_yol.jpg",
     "ozellikler": {
@@ -165,7 +165,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-4",
     "name": "Pacific Rim - Pasifik Savaşı",
     "image": "/images/movies/Idris_Elba_pacific_rim_-_pasifik_savasi.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-3",
     "name": "Beasts of No Nation",
     "image": "/images/movies/Idris_Elba_beasts_of_no_nation.jpg",
     "ozellikler": {
@@ -213,7 +213,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-2",
     "name": "Thor: Ragnarok",
     "image": "/images/movies/Idris_Elba_thor__ragnarok.jpg",
     "ozellikler": {
@@ -237,7 +237,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/idris-elba-en-iyi-10-filmi#bolum-1",
     "name": "The Suicide Squad - Gerçek Kötüler",
     "image": "/images/movies/Idris_Elba_the_suicide_squad_-_gercek_kotuler.jpg",
     "ozellikler": {

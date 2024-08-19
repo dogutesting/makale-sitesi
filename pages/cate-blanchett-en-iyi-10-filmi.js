@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:23:19+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/cate-blanchett-en-iyi-10-filmi#bolum-10",
@@ -256,6 +257,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listemizin başında, Blanchett'in iz bırakan bir yan karakteri canlandırdığı, derinlemesine karakter çalışması sunan 'Gemi Haberleri' bulunuyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/cate_blanchett_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

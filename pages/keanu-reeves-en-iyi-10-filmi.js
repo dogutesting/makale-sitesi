@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0970416",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-10",
     "name": "The Day the Earth Stood Still - Dünyanın Durduğu Gün",
     "image": "/images/movies/Keanu_Reeves_the_day_the_earth_stood_still_-_dunyanin_durdugu_gun.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0360486",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-9",
     "name": "Constantine",
     "image": "/images/movies/Keanu_Reeves_constantine.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0118971",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-8",
     "name": "The Devil's Advocate - Şeytanın Avukatı",
     "image": "/images/movies/Keanu_Reeves_the_devil's_advocate_-_seytanin_avukati.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0111257",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-7",
     "name": "Speed - Hız Tuzağı",
     "image": "/images/movies/Keanu_Reeves_speed_-_hiz_tuzagi.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0102685",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-6",
     "name": "Point Break - Kırılma Noktası",
     "image": "/images/movies/Keanu_Reeves_point_break_-_kirilma_noktasi.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt6146586",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-5",
     "name": "John Wick: Chapter 3 - Parabellum",
     "image": "/images/movies/Keanu_Reeves_john_wick__chapter_3_-_parabellum.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt2911666",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-4",
     "name": "John Wick",
     "image": "/images/movies/Keanu_Reeves_john_wick.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt4425200",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-3",
     "name": "John Wick: Chapter 2",
     "image": "/images/movies/Keanu_Reeves_john_wick__chapter_2.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0234215",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-2",
     "name": "The Matrix Reloaded",
     "image": "/images/movies/Keanu_Reeves_the_matrix_reloaded.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0133093",
-    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/keanu-reeves-en-iyi-10-filmi#bolum-1",
     "name": "The Matrix",
     "image": "/images/movies/Keanu_Reeves_the_matrix.jpg",
     "ozellikler": {

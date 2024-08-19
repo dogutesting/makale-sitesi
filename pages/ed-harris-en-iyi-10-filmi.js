@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-10",
     "name": "Pain & Gain - Zor Kazanç",
     "image": "/images/movies/Ed_Harris_pain_&_gain_-_zor_kazanc.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-9",
     "name": "The Rock - Kaya",
     "image": "/images/movies/Ed_Harris_the_rock_-_kaya.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-8",
     "name": "Appaloosa",
     "image": "/images/movies/Ed_Harris_appaloosa.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-7",
     "name": "The Abyss - Abyss: Derinlik Sarhoşluğu",
     "image": "/images/movies/Ed_Harris_the_abyss_-_abyss__derinlik_sarhoslugu.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-6",
     "name": "Pollock",
     "image": "/images/movies/Ed_Harris_pollock.jpg",
     "ozellikler": {
@@ -140,7 +140,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-5",
     "name": "The Hours - Saatler",
     "image": "/images/movies/Ed_Harris_the_hours_-_saatler.jpg",
     "ozellikler": {
@@ -164,7 +164,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-4",
     "name": "State of Grace - Tehlikeli Oyun",
     "image": "/images/movies/Ed_Harris_state_of_grace_-_tehlikeli_oyun.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-3",
     "name": "Glengarry Glen Ross - Amerikalılar",
     "image": "/images/movies/Ed_Harris_glengarry_glen_ross_-_amerikalilar.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-2",
     "name": "A Beautiful Mind - Akıl Oyunları",
     "image": "/images/movies/Ed_Harris_a_beautiful_mind_-_akil_oyunlari.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ed-harris-en-iyi-10-filmi#bolum-1",
     "name": "Enemy at the Gates - Kapıdaki Düşman",
     "image": "/images/movies/Ed_Harris_enemy_at_the_gates_-_kapidaki_dusman.jpg",
     "ozellikler": {

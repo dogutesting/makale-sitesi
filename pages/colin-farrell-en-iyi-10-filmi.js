@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt3464902",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-10",
     "name": "The Lobster - Istakoz",
     "image": "/images/movies/Colin_Farrell_the_lobster_-_istakoz.jpg",
     "ozellikler": {
@@ -50,7 +50,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0780536",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-9",
     "name": "In Bruges - Brüj’da",
     "image": "/images/movies/Colin_Farrell_in_bruges_-_bruj’da.jpg",
     "ozellikler": {
@@ -76,7 +76,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1931533",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-8",
     "name": "Seven Psychopaths - Yedi Psikopat",
     "image": "/images/movies/Colin_Farrell_seven_psychopaths_-_yedi_psikopat.jpg",
     "ozellikler": {
@@ -102,7 +102,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0181689",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-7",
     "name": "Minority Report - Azınlık Raporu",
     "image": "/images/movies/Colin_Farrell_minority_report_-_azinlik_raporu.jpg",
     "ozellikler": {
@@ -127,7 +127,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt5715874",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-6",
     "name": "Killing of a Sacred Deer - Kutsal Geyiğin Ölümü",
     "image": "/images/movies/Colin_Farrell_killing_of_a_sacred_deer_-_kutsal_geyigin_olumu.jpg",
     "ozellikler": {
@@ -153,7 +153,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0183649",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-5",
     "name": "Phone Booth - Telefon Kulübesi",
     "image": "/images/movies/Colin_Farrell_phone_booth_-_telefon_kulubesi.jpg",
     "ozellikler": {
@@ -177,7 +177,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0430357",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-4",
     "name": "Miami Vice",
     "image": "/images/movies/Colin_Farrell_miami_vice.jpg",
     "ozellikler": {
@@ -201,7 +201,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0402399",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-3",
     "name": "The New World - Yeni Dünya",
     "image": "/images/movies/Colin_Farrell_the_new_world_-_yeni_dunya.jpg",
     "ozellikler": {
@@ -225,7 +225,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1263670",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-2",
     "name": "Crazy Heart - Çılgın Kalp",
     "image": "/images/movies/Colin_Farrell_crazy_heart_-_cilgin_kalp.jpg",
     "ozellikler": {
@@ -250,7 +250,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1499658",
-    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/colin-farrell-en-iyi-10-filmi#bolum-1",
     "name": "Horrible Bosses - Patrondan Kurtulma Sanatı",
     "image": "/images/movies/Colin_Farrell_horrible_bosses_-_patrondan_kurtulma_sanati.jpg",
     "ozellikler": {

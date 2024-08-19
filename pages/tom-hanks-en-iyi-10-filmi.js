@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T19:20:57+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/tom-hanks-en-iyi-10-filmi#bolum-10",
@@ -248,6 +249,7 @@ const jsonContentArray = [
     },
     "paragraf": "Terminal, Tom Hanks filmleri arasında sıra dışı bir hikayeye sahip bir yapıttır. Hanks, vizesi iptal edildiği için JFK Havalimanında mahsur kalan bir adamın hikayesini başarıyla perdeye taşımıştır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/tom_hanks_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

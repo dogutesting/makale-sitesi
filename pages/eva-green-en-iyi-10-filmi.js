@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-10",
     "name": "300: Rise of an Empire",
     "image": "/images/movies/Eva_Green_300__rise_of_an_empire.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-9",
     "name": "White Bird in a Blizzard - Karda Bir Beyaz Kuş",
     "image": "/images/movies/Eva_Green_white_bird_in_a_blizzard_-_karda_bir_beyaz_kus.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-8",
     "name": "The Golden Compass - Altın Pusula",
     "image": "/images/movies/Eva_Green_the_golden_compass_-_altin_pusula.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-7",
     "name": "The Dreamers - Düşler, Tutkular ve Suçlar",
     "image": "/images/movies/Eva_Green_the_dreamers_-_dusler,_tutkular_ve_suclar.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-6",
     "name": "Perfect Sense - Kusursuz Duygu",
     "image": "/images/movies/Eva_Green_perfect_sense_-_kusursuz_duygu.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-5",
     "name": "Dumbo",
     "image": "/images/movies/Eva_Green_dumbo.jpg",
     "ozellikler": {
@@ -165,7 +165,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-4",
     "name": "Proxima",
     "image": "/images/movies/Eva_Green_proxima.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-3",
     "name": "Miss Peregrine's Home for Peculiar Children - Bayan Peregrine'in Tuhaf Çocukları",
     "image": "/images/movies/Eva_Green_miss_peregrine's_home_for_peculiar_children_-_bayan_peregrine'in_tuhaf_cocuklari.jpg",
     "ozellikler": {
@@ -212,7 +212,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-2",
     "name": "Casino Royale",
     "image": "/images/movies/Eva_Green_casino_royale.jpg",
     "ozellikler": {
@@ -235,7 +235,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/eva-green-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/eva-green-en-iyi-10-filmi#bolum-1",
     "name": "Penny Dreadful",
     "image": "/images/movies/Eva_Green_penny_dreadful.jpg",
     "ozellikler": {

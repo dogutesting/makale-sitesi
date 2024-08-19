@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-10",
     "name": "The Interpreter - Çevirmen",
     "image": "/images/movies/Sean_Penn_the_interpreter_-_cevirmen.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-9",
     "name": "All the King's Men - Kralların Adaletinde",
     "image": "/images/movies/Sean_Penn_all_the_king's_men_-_krallarin_adaletinde.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-8",
     "name": "Carlito's Way - Carlito'nun Yolu",
     "image": "/images/movies/Sean_Penn_carlito's_way_-_carlito'nun_yolu.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-7",
     "name": "Mystic River - Gizemli Nehir",
     "image": "/images/movies/Sean_Penn_mystic_river_-_gizemli_nehir.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-6",
     "name": "Dead Man Walking - Ölü Adam Yürüyüşü",
     "image": "/images/movies/Sean_Penn_dead_man_walking_-_olu_adam_yuruyusu.jpg",
     "ozellikler": {
@@ -137,7 +137,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-5",
     "name": "State of Grace - Şeref Çocuğu",
     "image": "/images/movies/Sean_Penn_state_of_grace_-_seref_cocugu.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-4",
     "name": "I Am Sam - Benim Adım Sam",
     "image": "/images/movies/Sean_Penn_i_am_sam_-_benim_adim_sam.jpg",
     "ozellikler": {
@@ -183,7 +183,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-3",
     "name": "Sweet and Lowdown - Tatlı ve Kirli",
     "image": "/images/movies/Sean_Penn_sweet_and_lowdown_-_tatli_ve_kirli.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-2",
     "name": "Milk",
     "image": "/images/movies/Sean_Penn_milk.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/sean-penn-en-iyi-10-filmi#bolum-1",
     "name": "Into the Wild - Özgürlük Yolu",
     "image": "/images/movies/Sean_Penn_into_the_wild_-_ozgurluk_yolu.jpg",
     "ozellikler": {

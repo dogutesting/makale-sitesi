@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:24:14+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/emma-stone-en-iyi-10-filmi#bolum-10",
@@ -255,6 +256,7 @@ const jsonContentArray = [
     },
     "paragraf": "emma stone filmleri arasında en popülerlerinden biri olan The Amazing Spider-Man, aksiyon dolu bir hikaye sunuyor. Emma Stone ve Andrew Garfield'ın uyumuyla öne çıkan bu film, süper kahraman dünyasına yeni bir soluk getirdi."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/emma-stone-en-iyi-10-filmi-kapak.jpg"; //! SEN DOLDUR

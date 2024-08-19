@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-22T17:14:11+03:00";
 const addDate = "22.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/christian-bale-en-iyi-10-filmi#bolum-10",
@@ -259,6 +260,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Machinist, Bale'in kariyerindeki en zorlu rollerden biridir; drastik kilo kaybıyla fiziksel dönüşüm yaşamış ve karakterin psikolojik derinliğine inmiştir. Bu film, Bale'in oyunculuk yeteneğinin ve bağlılığının sınırlarını zorlayarak, onun en iyi performansını sergilediği yapıtlar arasında yer alır."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/christian_bale_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-10",
     "name": "How Do You Know - Nereden Biliyorsun?",
     "image": "/images/movies/Reese_Witherspoon_how_do_you_know_-_nereden_biliyorsun_.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-9",
     "name": "Four Christmases - Evde Tek Başına 5",
     "image": "/images/movies/Reese_Witherspoon_four_christmases_-_evde_tek_basina_5.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-8",
     "name": "Home Again - Kapımdaki Aşk",
     "image": "/images/movies/Reese_Witherspoon_home_again_-_kapimdaki_ask.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-7",
     "name": "Sing - Şarkını Söyle",
     "image": "/images/movies/Reese_Witherspoon_sing_-_sarkini_soyle.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-6",
     "name": "Cruel Intentions - Seks Oyunları",
     "image": "/images/movies/Reese_Witherspoon_cruel_intentions_-_seks_oyunlari.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-5",
     "name": "Election - Seçim",
     "image": "/images/movies/Reese_Witherspoon_election_-_secim.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-4",
     "name": "Walk the Line - Sınırları Aşmak",
     "image": "/images/movies/Reese_Witherspoon_walk_the_line_-_sinirlari_asmak.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-3",
     "name": "Legally Blonde - Bu Nasıl Sarışın?",
     "image": "/images/movies/Reese_Witherspoon_legally_blonde_-_bu_nasil_sarisin_.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-2",
     "name": "Wild - Yaban",
     "image": "/images/movies/Reese_Witherspoon_wild_-_yaban.jpg",
     "ozellikler": {
@@ -234,7 +234,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/reese-witherspoon-en-iyi-10-filmi#bolum-1",
     "name": "Big Little Lies - Büyük Küçük Yalanlar",
     "image": "/images/movies/Reese_Witherspoon_big_little_lies_-_buyuk_kucuk_yalanlar.jpg",
     "ozellikler": {

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-10",
     "name": "Now You See Me - Sihirbazlar Çetesi",
     "image": "/images/movies/Mark_Ruffalo_now_you_see_me_-_sihirbazlar_cetesi.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-9",
     "name": "Zodiac",
     "image": "/images/movies/Mark_Ruffalo_zodiac.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-8",
     "name": "Shutter Island - Zindan Adası",
     "image": "/images/movies/Mark_Ruffalo_shutter_island_-_zindan_adasi.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-7",
     "name": "The Kids Are All Right - İki Kadın, Bir Erkek",
     "image": "/images/movies/Mark_Ruffalo_the_kids_are_all_right_-_iki_kadin,_bir_erkek.jpg",
     "ozellikler": {
@@ -117,7 +117,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-6",
     "name": "Spotlight",
     "image": "/images/movies/Mark_Ruffalo_spotlight.jpg",
     "ozellikler": {
@@ -140,7 +140,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-5",
     "name": "Foxcatcher",
     "image": "/images/movies/Mark_Ruffalo_foxcatcher.jpg",
     "ozellikler": {
@@ -164,7 +164,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-4",
     "name": "Avengers: Infinity War - Yenilmezler: Sonsuzluk Savaşı",
     "image": "/images/movies/Mark_Ruffalo_avengers__infinity_war_-_yenilmezler__sonsuzluk_savasi.jpg",
     "ozellikler": {
@@ -188,7 +188,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-3",
     "name": "Avengers: Endgame - Yenilmezler: Oyunun Sonu",
     "image": "/images/movies/Mark_Ruffalo_avengers__endgame_-_yenilmezler__oyunun_sonu.jpg",
     "ozellikler": {
@@ -212,7 +212,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-2",
     "name": "Eternal Sunshine of the Spotless Mind - Sil Baştan",
     "image": "/images/movies/Mark_Ruffalo_eternal_sunshine_of_the_spotless_mind_-_sil_bastan.jpg",
     "ozellikler": {
@@ -236,7 +236,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/mark-ruffalo-en-iyi-10-filmi#bolum-1",
     "name": "The Avengers - Yenilmezler",
     "image": "/images/movies/Mark_Ruffalo_the_avengers_-_yenilmezler.jpg",
     "ozellikler": {

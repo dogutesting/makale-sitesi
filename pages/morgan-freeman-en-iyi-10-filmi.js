@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-10",
     "name": "Unforgiven - Affedilmeyen",
     "image": "/images/movies/Morgan_Freeman_unforgiven_-_affedilmeyen.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-9",
     "name": "The Bucket List - Şimdi Ya Da Asla",
     "image": "/images/movies/Morgan_Freeman_the_bucket_list_-_simdi_ya_da_asla.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-8",
     "name": "Driving Miss Daisy - Bayan Daisy'nin Şoförü",
     "image": "/images/movies/Morgan_Freeman_driving_miss_daisy_-_bayan_daisy'nin_soforu.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-7",
     "name": "Se7en - Yedi",
     "image": "/images/movies/Morgan_Freeman_se7en_-_yedi.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-6",
     "name": "The Shawshank Redemption - Esaretin Bedeli",
     "image": "/images/movies/Morgan_Freeman_the_shawshank_redemption_-_esaretin_bedeli.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-5",
     "name": "The Dark Knight - Kara Şövalye",
     "image": "/images/movies/Morgan_Freeman_the_dark_knight_-_kara_sovalye.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-4",
     "name": "Million Dollar Baby - Milyon Dolarlık Bebek",
     "image": "/images/movies/Morgan_Freeman_million_dollar_baby_-_milyon_dolarlik_bebek.jpg",
     "ozellikler": {
@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-3",
     "name": "Invictus",
     "image": "/images/movies/Morgan_Freeman_invictus.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-2",
     "name": "Bruce Almighty - Aman Tanrım!",
     "image": "/images/movies/Morgan_Freeman_bruce_almighty_-_aman_tanrim!.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/morgan-freeman-en-iyi-10-filmi#bolum-1",
     "name": "The Dark Knight Rises - Kara Şövalye Yükseliyor",
     "image": "/images/movies/Morgan_Freeman_the_dark_knight_rises_-_kara_sovalye_yukseliyor.jpg",
     "ozellikler": {

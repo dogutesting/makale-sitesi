@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-10",
     "name": "Nativity! - Doğuş!",
     "image": "/images/movies/Martin_Freeman_nativity!_-_dogus!.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-9",
     "name": "The Good Night - İyi Geceler",
     "image": "/images/movies/Martin_Freeman_the_good_night_-_iyi_geceler.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-8",
     "name": "A Confession - İtiraf",
     "image": "/images/movies/Martin_Freeman_a_confession_-_itiraf.jpg",
     "ozellikler": {
@@ -94,33 +94,33 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-7",
     "name": "Black Panther",
     "image": "/images/movies/Martin_Freeman_black_panther.jpg",
     "ozellikler": {
-        "Oyuncular": [
-          "Martin Freeman",
-          "Chadwick Boseman",
-          "Michael B. Jordan",
-          "Lupita Nyong'o"
-        ],
-        "Kategori": [
-            "Aksiyon",
-            "Macera",
-            "Bilim Kurgu"
-        ],
-        "Yıl": "2018",
-        "Süre": "2 sa. 14 dk.",
-        "Yönetmen": "Ryan Coogler",
-        "imdb": "7.3/10",
-        "Değerlendirme": "848238",
-        "metacritic": "88"
+      "Oyuncular": [
+        "Martin Freeman",
+        "Chadwick Boseman",
+        "Michael B. Jordan",
+        "Lupita Nyong'o"
+      ],
+      "Kategori": [
+        "Aksiyon",
+        "Macera",
+        "Bilim Kurgu"
+      ],
+      "Yıl": "2018",
+      "Süre": "2 sa. 14 dk.",
+      "Yönetmen": "Ryan Coogler",
+      "imdb": "7.3/10",
+      "Değerlendirme": "848238",
+      "metacritic": "88"
     },
     "paragraf": "Black Panther, Wakanda'nın kralı olan T'Challa'nın hikayesini anlatan bir süper kahraman filmidir. Martin Freeman, filmde CIA ajanı Everett K. Ross olarak rol alıyor. Freeman'ın performansı, filmin uluslararası politikalara ve süper kahraman dinamiklerine katkı sağlıyor. Bu film, Freeman'ın aksiyon türündeki önemli katkılarından biridir."
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-6",
     "name": "The Hitchhiker's Guide to the Galaxy - Otostopçunun Galaksi Rehberi",
     "image": "/images/movies/Martin_Freeman_the_hitchhiker's_guide_to_the_galaxy_-_otostopcunun_galaksi_rehberi.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-5",
     "name": "Ghost Stories - Hayalet Hikayeleri",
     "image": "/images/movies/Martin_Freeman_ghost_stories_-_hayalet_hikayeleri.jpg",
     "ozellikler": {
@@ -170,7 +170,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-4",
     "name": "The World's End - Dünyanın Sonu",
     "image": "/images/movies/Martin_Freeman_the_world's_end_-_dunyanin_sonu.jpg",
     "ozellikler": {
@@ -195,7 +195,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-3",
     "name": "The Hobbit: An Unexpected Journey - Hobbit: Beklenmedik Yolculuk",
     "image": "/images/movies/Martin_Freeman_the_hobbit__an_unexpected_journey_-_hobbit__beklenmedik_yolculuk.jpg",
     "ozellikler": {
@@ -218,7 +218,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-2",
     "name": "The Hobbit: The Desolation of Smaug - Hobbit: Smaug'un Çorak Toprakları",
     "image": "/images/movies/Martin_Freeman_the_hobbit__the_desolation_of_smaug_-_hobbit__smaug'un_corak_topraklari.jpg",
     "ozellikler": {
@@ -242,7 +242,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/martin-freeman-en-iyi-10-filmi#bolum-1",
     "name": "The Hobbit: The Battle of the Five Armies - Hobbit: Beş Ordunun Savaşı",
     "image": "/images/movies/Martin_Freeman_the_hobbit__the_battle_of_the_five_armies_-_hobbit__bes_ordunun_savasi.jpg",
     "ozellikler": {

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-16T22:06:19+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/en-yuksek-imdb-puanli-10-animasyon-filmi#bolum-10",
@@ -257,6 +258,7 @@ const jsonContentArray = [
     },
     "paragraf": "Into the Spider-Verse çığır açan animasyon teknikleri ve yaratıcı senaryosu ile en yüksek imdb puanlı animasyon filmler listemizin zirvesinde bulunuyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/en_yuksek_imdb_puanli_10_animasyon_filmi_kapak.jpg" //! SEN DOLDUR

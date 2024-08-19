@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-10",
     "name": "The Happening - Mistik Olay",
     "image": "/images/movies/Mark_Wahlberg_the_happening_-_mistik_olay.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-9",
     "name": "Shooter - Tetikçi",
     "image": "/images/movies/Mark_Wahlberg_shooter_-_tetikci.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-8",
     "name": "Patriots Day - Şehitler Günü",
     "image": "/images/movies/Mark_Wahlberg_patriots_day_-_sehitler_gunu.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-7",
     "name": "The Other Guys - Yedek Polisler",
     "image": "/images/movies/Mark_Wahlberg_the_other_guys_-_yedek_polisler.jpg",
     "ozellikler": {
@@ -117,7 +117,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-6",
     "name": "Deepwater Horizon - Büyük Felaket",
     "image": "/images/movies/Mark_Wahlberg_deepwater_horizon_-_buyuk_felaket.jpg",
     "ozellikler": {
@@ -140,7 +140,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-5",
     "name": "Three Kings - Üç Kral",
     "image": "/images/movies/Mark_Wahlberg_three_kings_-_uc_kral.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-4",
     "name": "Lone Survivor - Son Kalan",
     "image": "/images/movies/Mark_Wahlberg_lone_survivor_-_son_kalan.jpg",
     "ozellikler": {
@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-3",
     "name": "The Fighter - Dövüşçü",
     "image": "/images/movies/Mark_Wahlberg_the_fighter_-_dovuscu.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-2",
     "name": "The Departed - Köstebek",
     "image": "/images/movies/Mark_Wahlberg_the_departed_-_kostebek.jpg",
     "ozellikler": {
@@ -234,7 +234,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/mark-wahlberg-en-iyi-10-filmi#bolum-1",
     "name": "Boogie Nights - Ateşli Geceler",
     "image": "/images/movies/Mark_Wahlberg_boogie_nights_-_atesli_geceler.jpg",
     "ozellikler": {

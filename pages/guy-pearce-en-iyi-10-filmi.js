@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-10",
     "name": "Christmas Carol - Bir Noel Şarkısı",
     "image": "/images/movies/Guy_Pearce_christmas_carol_-_bir_noel_sarkisi.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-9",
     "name": "The Rover",
     "image": "/images/movies/Guy_Pearce_the_rover.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-8",
     "name": "Lockout - İsyan",
     "image": "/images/movies/Guy_Pearce_lockout_-_isyan.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-7",
     "name": "Animal Kingdom - Hayvan Krallığı",
     "image": "/images/movies/Guy_Pearce_animal_kingdom_-_hayvan_kralligi.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-6",
     "name": "Genius",
     "image": "/images/movies/Guy_Pearce_genius.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-5",
     "name": "Memento - Akıl Defteri",
     "image": "/images/movies/Guy_Pearce_memento_-_akil_defteri.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-4",
     "name": "LA Confidential - Los Angeles Sırları",
     "image": "/images/movies/Guy_Pearce_la_confidential_-_los_angeles_sirlari.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-3",
     "name": "Iron Man 3 - Demir Adam 3",
     "image": "/images/movies/Guy_Pearce_iron_man_3_-_demir_adam_3.jpg",
     "ozellikler": {
@@ -218,7 +218,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-2",
     "name": "The Proposition - Teklif",
     "image": "/images/movies/Guy_Pearce_the_proposition_-_teklif.jpg",
     "ozellikler": {
@@ -243,7 +243,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/guy-pearce-en-iyi-10-filmi#bolum-1",
     "name": "The King's Speech - Zoraki Kral",
     "image": "/images/movies/Guy_Pearce_the_king's_speech_-_zoraki_kral.jpg",
     "ozellikler": {

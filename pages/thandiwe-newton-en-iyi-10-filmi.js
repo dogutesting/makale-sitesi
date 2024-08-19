@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-10",
     "name": "The Truth About Charlie - Charlie Hakkındaki Gerçek",
     "image": "/images/movies/Thandiwe_Newton_the_truth_about_charlie_-_charlie_hakkindaki_gercek.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-9",
     "name": "Beloved - Sevgili",
     "image": "/images/movies/Thandiwe_Newton_beloved_-_sevgili.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-8",
     "name": "The Pursuit of Happyness - Umudunu Kaybetme",
     "image": "/images/movies/Thandiwe_Newton_the_pursuit_of_happyness_-_umudunu_kaybetme.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-7",
     "name": "Mission: Impossible 2 - Görevimiz Tehlike 2",
     "image": "/images/movies/Thandiwe_Newton_mission__impossible_2_-_gorevimiz_tehlike_2.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-6",
     "name": "The Chronicles of Riddick - Riddick Günlükleri",
     "image": "/images/movies/Thandiwe_Newton_the_chronicles_of_riddick_-_riddick_gunlukleri.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-5",
     "name": "Solo: A Star Wars Story - Han Solo: Bir Star Wars Hikayesi",
     "image": "/images/movies/Thandiwe_Newton_solo__a_star_wars_story_-_han_solo__bir_star_wars_hikayesi.jpg",
     "ozellikler": {
@@ -167,7 +167,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-4",
     "name": "Gringo",
     "image": "/images/movies/Thandiwe_Newton_gringo.jpg",
     "ozellikler": {
@@ -191,7 +191,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-3",
     "name": "Crash - Çarpışma",
     "image": "/images/movies/Thandiwe_Newton_crash_-_carpisma.jpg",
     "ozellikler": {
@@ -215,7 +215,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-2",
     "name": "W.",
     "image": "/images/movies/Thandiwe_Newton_w..jpg",
     "ozellikler": {
@@ -239,7 +239,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/thandiwe-newton-en-iyi-10-filmi#bolum-1",
     "name": "Westworld",
     "image": "/images/movies/Thandiwe_Newton_westworld.jpg",
     "ozellikler": {

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-10",
     "name": "The Grey - Gri Kurt",
     "image": "/images/movies/Liam_Neeson_the_grey_-_gri_kurt.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-9",
     "name": "Non-Stop - Durmaksızın",
     "image": "/images/movies/Liam_Neeson_non-stop_-_durmaksizin.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-8",
     "name": "The A-Team - A Takımı",
     "image": "/images/movies/Liam_Neeson_the_a-team_-_a_takimi.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-7",
     "name": "Run All Night - Gece Takibi",
     "image": "/images/movies/Liam_Neeson_run_all_night_-_gece_takibi.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-6",
     "name": "Cold Pursuit - Soğuk İntikam",
     "image": "/images/movies/Liam_Neeson_cold_pursuit_-_soguk_intikam.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-5",
     "name": "The Commuter - Yolcu",
     "image": "/images/movies/Liam_Neeson_the_commuter_-_yolcu.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-4",
     "name": "A Monster Calls - Canavarın Çağrısı",
     "image": "/images/movies/Liam_Neeson_a_monster_calls_-_canavarin_cagrisi.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-4",
     "name": "The Ice Road - Buz Yolu",
     "image": "/images/movies/Liam_Neeson_the_ice_road_-_buz_yolu.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-2",
     "name": "Schindler's List - Schindler'in Listesi",
     "image": "/images/movies/Liam_Neeson_schindler's_list_-_schindler'in_listesi.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/liam-neeson-en-iyi-10-filmi#bolum-1",
     "name": "Taken - 96 Saat",
     "image": "/images/movies/Liam_Neeson_taken_-_96_saat.jpg",
     "ozellikler": {

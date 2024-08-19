@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1291584",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-10",
     "name": "Warrior - Savaşçı",
     "image": "/images/movies/Tom_Hardy_warrior_-_savasci.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt3569230",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-9",
     "name": "Legend - Efsane",
     "image": "/images/movies/Tom_Hardy_legend_-_efsane.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1600196",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-8",
     "name": "The Drop - Kirli Para",
     "image": "/images/movies/Tom_Hardy_the_drop_-_kirli_para.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt2692904",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-7",
     "name": "Locke - Locke",
     "image": "/images/movies/Tom_Hardy_locke_-_locke.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1172570",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-6",
     "name": "Bronson",
     "image": "/images/movies/Tom_Hardy_bronson.jpg",
     "ozellikler": {
@@ -142,7 +142,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1663202",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-5",
     "name": "The Revenant - Diriliş",
     "image": "/images/movies/Tom_Hardy_the_revenant_-_dirilis.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt5013056",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-4",
     "name": "Dunkirk",
     "image": "/images/movies/Tom_Hardy_dunkirk.jpg",
     "ozellikler": {
@@ -190,7 +190,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1392190",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-3",
     "name": "Mad Max: Fury Road - Çılgın Max: Öfkeli Yollar",
     "image": "/images/movies/Tom_Hardy_mad_max__fury_road_-_cilgin_max__ofkeli_yollar.jpg",
     "ozellikler": {
@@ -214,7 +214,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1345836",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-2",
     "name": "The Dark Knight Rises - Kara Şövalye Yükseliyor",
     "image": "/images/movies/Tom_Hardy_the_dark_knight_rises_-_kara_sovalye_yukseliyor.jpg",
     "ozellikler": {
@@ -238,7 +238,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1375666",
-    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/tom-hardy-en-iyi-10-filmi#bolum-1",
     "name": "Inception - Başlangıç",
     "image": "/images/movies/Tom_Hardy_inception_-_baslangic.jpg",
     "ozellikler": {

@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt4481414",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-10",
     "name": "Gifted - Deha",
     "image": "/images/movies/Chris_Evans_gifted_-_deha.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt4995776",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-9",
     "name": "The Red Sea Diving Resort",
     "image": "/images/movies/Chris_Evans_the_red_sea_diving_resort.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1706620",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-8",
     "name": "Snowpiercer - Kar Küreyici",
     "image": "/images/movies/Chris_Evans_snowpiercer_-_kar_kureyici.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0448134",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-7",
     "name": "Sunshine - Gün Işığı",
     "image": "/images/movies/Chris_Evans_sunshine_-_gun_isigi.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0446029",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-6",
     "name": "Scott Pilgrim vs. the World - Scott Pilgrim Dünyaya Karşı",
     "image": "/images/movies/Chris_Evans_scott_pilgrim_vs._the_world_-_scott_pilgrim_dunyaya_karsi.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0458339",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-5",
     "name": "Captain America: The First Avenger - Kaptan Amerika: İlk Yenilmez",
     "image": "/images/movies/Chris_Evans_captain_america__the_first_avenger_-_kaptan_amerika__ilk_yenilmez.jpg",
     "ozellikler": {
@@ -167,7 +167,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt2395427",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-4",
     "name": "Avengers: Age of Ultron - Yenilmezler: Ultron Çağı",
     "image": "/images/movies/Chris_Evans_avengers__age_of_ultron_-_yenilmezler__ultron_cagi.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt4154796",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-3",
     "name": "Avengers: Endgame - Yenilmezler: Son Oyun",
     "image": "/images/movies/Chris_Evans_avengers__endgame_-_yenilmezler__son_oyun.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt3498820",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-2",
     "name": "Captain America: Civil War - Kaptan Amerika: Kahramanların Savaşı",
     "image": "/images/movies/Chris_Evans_captain_america__civil_war_-_kaptan_amerika__kahramanlarin_savasi.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt8946378",
-    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/chris-evans-en-iyi-10-filmi#bolum-1",
     "name": "Knives Out - Bıçaklar Çekildi",
     "image": "/images/movies/Chris_Evans_knives_out_-_bicaklar_cekildi.jpg",
     "ozellikler": {

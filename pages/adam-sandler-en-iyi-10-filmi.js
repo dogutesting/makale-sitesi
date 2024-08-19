@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1086772",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-10",
     "name": "Blended - Karışık Aile",
     "image": "/images/movies/Adam_Sandler_blended_-_karisik_aile.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1375670",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-9",
     "name": "Grown Ups - Büyükler",
     "image": "/images/movies/Adam_Sandler_grown_ups_-_buyukler.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0837562",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-8",
     "name": "Hotel Transylvania - Otel Transilvanya",
     "image": "/images/movies/Adam_Sandler_hotel_transylvania_-_otel_transilvanya.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0343660",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-7",
     "name": "50 First Dates - 50 İlk Öpücük",
     "image": "/images/movies/Adam_Sandler_50_first_dates_-_50_ilk_opucuk.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0142342",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-6",
     "name": "Big Daddy - Süper Baba",
     "image": "/images/movies/Adam_Sandler_big_daddy_-_super_baba.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0272338",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-5",
     "name": "Punch-Drunk Love - Aşk Sarhoşu",
     "image": "/images/movies/Adam_Sandler_punch-drunk_love_-_ask_sarhosu.jpg",
     "ozellikler": {
@@ -164,7 +164,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0120888",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-4",
     "name": "The Wedding Singer - Evlilik Sanatçısı",
     "image": "/images/movies/Adam_Sandler_the_wedding_singer_-_evlilik_sanatcisi.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt5536736",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-3",
     "name": "The Meyerowitz Stories - Meyerowitz Hikayeleri",
     "image": "/images/movies/Adam_Sandler_the_meyerowitz_stories_-_meyerowitz_hikayeleri.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt8009428",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-2",
     "name": "Hustle - Takım Oyunu",
     "image": "/images/movies/Adam_Sandler_hustle_-_takim_oyunu.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt5727208",
-    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/adam-sandler-en-iyi-10-filmi#bolum-1",
     "name": "Uncut Gems - İşlenmemiş Elmaslar",
     "image": "/images/movies/Adam_Sandler_uncut_gems_-_islenmemis_elmaslar.jpg",
     "ozellikler": {

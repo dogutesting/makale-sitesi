@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-25T18:36:04+03:00";
 const addDate = "25.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/dunyanin-en-iyi-10-korku-filmi#bolum-10",
@@ -236,6 +237,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Shining, korku ve gerilimin doruk noktasını temsil eder ve dünyanın en iyi korku filmi olarak geniş çapta kabul görür. Jack Torrance'ın Overlook Hotel'deki kabus dolu deneyimleri, en iyi korku filmleri listesinde zirvede."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/dunyanin_en_iyi_10_korku_filmi_kapak.jpg" //! SEN DOLDUR

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-22T17:02:27+03:00";
 const addDate = "30.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/will-smith-en-iyi-10-filmi#bolum-10",
@@ -254,6 +255,7 @@ const jsonContentArray = [
     },
     "paragraf": "Independence Day, Will Smith'in yıldızının en parladığı zamanlardan biri olan bu film, dünya çapında büyük bir hit oldu. Smith, dünyayı uzaylı istilasından kurtarmak için mücadele eden pilotu canlandırıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/will_smith_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

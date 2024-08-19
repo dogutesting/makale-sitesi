@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-26T18:05:54+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/en-iyi-10-turk-ask-filmi#bolum-10",
@@ -245,6 +246,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listemizin zirvesinde yer alan İncir Reçeli, aşkı ve kaybı en yalın haliyle anlatarak türk aşk filmleri ağlatan yönünün en güçlü temsilcisi."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/en_iyi_10_turk_ask_filmi_kapak.jpg" //! SEN DOLDUR

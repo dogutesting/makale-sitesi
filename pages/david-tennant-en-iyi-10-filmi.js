@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1869454",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-10",
     "name": "Good Omens - Kıyamet Gösterisi (Mini Dizi)",
     "image": "/images/movies/David_Tennant_good_omens_-_kiyamet_gosterisi_(mini_dizi).jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt2328900",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-9",
     "name": "Mary Queen of Scots - İskoç Kraliçesi Mary",
     "image": "/images/movies/David_Tennant_mary_queen_of_scots_-_iskoc_kralicesi_mary.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1438176",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-8",
     "name": "Fright Night - Korku Gecesi",
     "image": "/images/movies/David_Tennant_fright_night_-_korku_gecesi.jpg",
     "ozellikler": {
@@ -97,32 +97,32 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-7",
     "name": "Casanova",
     "image": "/images/movies/David_Tennant_casanova.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "David Tennant",
-            "Rose Byrne",
-            "Peter O'Toole"
-        ],
-        "Kategori": [
-            "Dram",
-            "Romantik"
-        ],
-        "Yıl": "2005",
-        "Süre": "4 bölümlük mini dizi",
-        "Yönetmen": "Lasse Hallström",
-        "imdb": "7.7/10",
-        "Değerlendirme": "5,685",
-        "metacritic": "N/A"
+      "Oyuncular": [
+        "David Tennant",
+        "Rose Byrne",
+        "Peter O'Toole"
+      ],
+      "Kategori": [
+        "Dram",
+        "Romantik"
+      ],
+      "Yıl": "2005",
+      "Süre": "4 bölümlük mini dizi",
+      "Yönetmen": "Lasse Hallström",
+      "imdb": "7.7/10",
+      "Değerlendirme": "5,685",
+      "metacritic": "N/A"
     },
     "paragraf": "Casanova, ünlü İtalyan maceraperest Casanova'nın yaşamına dair bir dönemi anlatan dört bölümlük bir mini dizidir. David Tennant, Casanova'nın gençliğini canlandırırken, dizi onun cazibesi ve maceralarını gözler önüne seriyor. David Tennant'ın etkileyici performansı, bu yapımı onun en iyi işlerinden biri yapıyor."
   },
   {
     "num": "6",
     "title_id": "tt1657299",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-6",
     "name": "The Decoy Bride - Aşk ve Gurur",
     "image": "/images/movies/David_Tennant_the_decoy_bride_-_ask_ve_gurur.jpg",
     "ozellikler": {
@@ -147,7 +147,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1430626",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-5",
     "name": "The Pirates! In an Adventure with Scientists! - Korsanlar! Bilim Adamları ile Bir Macera!",
     "image": "/images/movies/David_Tennant_the_pirates!_in_an_adventure_with_scientists!_-_korsanlar!_bilim_adamlari_ile_bir_macera!.jpg",
     "ozellikler": {
@@ -172,7 +172,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0330373",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-4",
     "name": "Harry Potter and the Goblet of Fire - Harry Potter ve Ateş Kadehi",
     "image": "/images/movies/David_Tennant_harry_potter_and_the_goblet_of_fire_-_harry_potter_ve_ates_kadehi.jpg",
     "ozellikler": {
@@ -198,7 +198,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt2249364",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-3",
     "name": "Broadchurch",
     "image": "/images/movies/David_Tennant_broadchurch.jpg",
     "ozellikler": {
@@ -221,7 +221,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0436992",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-2",
     "name": "Doctor Who",
     "image": "/images/movies/David_Tennant_doctor_who.jpg",
     "ozellikler": {
@@ -246,7 +246,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt2357547",
-    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/david-tennant-en-iyi-10-filmi#bolum-1",
     "name": "Jessica Jones",
     "image": "/images/movies/David_Tennant_jessica_jones.jpg",
     "ozellikler": {

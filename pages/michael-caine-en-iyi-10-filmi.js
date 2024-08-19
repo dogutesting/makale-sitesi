@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-10",
     "name": "The Swarm - Arı Saldırısı",
     "image": "/images/movies/Michael_Caine_the_swarm_-_ari_saldirisi.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-9",
     "name": "Dressed to Kill - Öldürme Arzusu",
     "image": "/images/movies/Michael_Caine_dressed_to_kill_-_oldurme_arzusu.jpg",
     "ozellikler": {
@@ -67,7 +67,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-8",
     "name": "Now You See Me 2 - Sihirbazlar Çetesi 2",
     "image": "/images/movies/Michael_Caine_now_you_see_me_2_-_sihirbazlar_cetesi_2.jpg",
     "ozellikler": {
@@ -90,7 +90,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-7",
     "name": "The Dark Knight Rises - Kara Şövalye Yükseliyor",
     "image": "/images/movies/Michael_Caine_the_dark_knight_rises_-_kara_sovalye_yukseliyor.jpg",
     "ozellikler": {
@@ -113,7 +113,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-6",
     "name": "Kingsman: The Secret Service - Kingsman: Gizli Servis",
     "image": "/images/movies/Michael_Caine_kingsman__the_secret_service_-_kingsman__gizli_servis.jpg",
     "ozellikler": {
@@ -137,7 +137,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-5",
     "name": "The Prestige - Prestij",
     "image": "/images/movies/Michael_Caine_the_prestige_-_prestij.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-4",
     "name": "Children of Men - Son Umut",
     "image": "/images/movies/Michael_Caine_children_of_men_-_son_umut.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-3",
     "name": "The Dark Knight - Kara Şövalye",
     "image": "/images/movies/Michael_Caine_the_dark_knight_-_kara_sovalye.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-2",
     "name": "Interstellar - Yıldızlararası",
     "image": "/images/movies/Michael_Caine_interstellar_-_yildizlararasi.jpg",
     "ozellikler": {
@@ -231,7 +231,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/michael-caine-en-iyi-10-filmi#bolum-1",
     "name": "The Cider House Rules - Tanrının Eseri, Şeytanın Parçası",
     "image": "/images/movies/Michael_Caine_the_cider_house_rules_-_tanrinin_eseri,_seytanin_parcasi.jpg",
     "ozellikler": {

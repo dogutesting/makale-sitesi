@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-27T16:58:48+03:00";
 const addDate = "27.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/jon-bernthal-en-iyi-10-filmi#bolum-10",
@@ -253,6 +254,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listemizin zirvesinde The Wolf of Wall Street yer alıyor. Jon Bernthal, bu biyografi, komedi ve suç filmi kombinasyonunda unutulmaz bir performans sergiliyor. Martin Scorsese’nin yönetmenliğindeki bu epik yapıt, finans dünyasının derinliklerine dair çarpıcı bir bakış sunuyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/jon_bernthal_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

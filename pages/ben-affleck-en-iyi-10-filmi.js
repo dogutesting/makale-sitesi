@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0287978",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-10",
     "name": "Daredevil",
     "image": "/images/movies/Ben_Affleck_daredevil.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0840361",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-9",
     "name": "The Town - Hırsızlar Şehri",
     "image": "/images/movies/Ben_Affleck_the_town_-_hirsizlar_sehri.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0120591",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-8",
     "name": "Armageddon",
     "image": "/images/movies/Ben_Affleck_armageddon.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0427969",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-7",
     "name": "Hollywoodland",
     "image": "/images/movies/Ben_Affleck_hollywoodland.jpg",
     "ozellikler": {
@@ -123,7 +123,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1024648",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-6",
     "name": "Argo",
     "image": "/images/movies/Ben_Affleck_argo.jpg",
     "ozellikler": {
@@ -147,7 +147,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt2267998",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-5",
     "name": "Gone Girl - Kayıp Kız",
     "image": "/images/movies/Ben_Affleck_gone_girl_-_kayip_kiz.jpg",
     "ozellikler": {
@@ -171,7 +171,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0119217",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-4",
     "name": "Good Will Hunting - Can Dostum",
     "image": "/images/movies/Ben_Affleck_good_will_hunting_-_can_dostum.jpg",
     "ozellikler": {
@@ -194,7 +194,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt2975590",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-3",
     "name": "Batman v Superman: Dawn of Justice - Batman v Superman: Adaletin Şafağı",
     "image": "/images/movies/Ben_Affleck_batman_v_superman__dawn_of_justice_-_batman_v_superman__adaletin_safagi.jpg",
     "ozellikler": {
@@ -218,7 +218,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt12361974",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-2",
     "name": "Zack Snyder's Justice League - Zack Snyder'ın Adalet Ligi",
     "image": "/images/movies/Ben_Affleck_zack_snyder's_justice_league_-_zack_snyder'in_adalet_ligi.jpg",
     "ozellikler": {
@@ -243,7 +243,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt2140479",
-    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ben-affleck-en-iyi-10-filmi#bolum-1",
     "name": "The Accountant - Hesaplaşma",
     "image": "/images/movies/Ben_Affleck_the_accountant_-_hesaplasma.jpg",
     "ozellikler": {

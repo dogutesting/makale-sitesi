@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-10",
     "name": "The Rocketeer - Uçan Adam",
     "image": "/images/movies/Jennifer_Connelly_the_rocketeer_-_ucan_adam.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-9",
     "name": "The Hot Spot - Sıcak Nokta",
     "image": "/images/movies/Jennifer_Connelly_the_hot_spot_-_sicak_nokta.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-8",
     "name": "Little Children - Tutku Oyunları",
     "image": "/images/movies/Jennifer_Connelly_little_children_-_tutku_oyunlari.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-7",
     "name": "Blood Diamond - Kanlı Elmas",
     "image": "/images/movies/Jennifer_Connelly_blood_diamond_-_kanli_elmas.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-6",
     "name": "Hulk",
     "image": "/images/movies/Jennifer_Connelly_hulk.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-5",
     "name": "Requiem for a Dream - Bir Rüya İçin Ağıt",
     "image": "/images/movies/Jennifer_Connelly_requiem_for_a_dream_-_bir_ruya_icin_agit.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-4",
     "name": "House of Sand and Fog - Sisler Evi",
     "image": "/images/movies/Jennifer_Connelly_house_of_sand_and_fog_-_sisler_evi.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-3",
     "name": "Creation - Yaratılış",
     "image": "/images/movies/Jennifer_Connelly_creation_-_yaratilis.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-2",
     "name": "Noah - Nuh: Büyük Tufan",
     "image": "/images/movies/Jennifer_Connelly_noah_-_nuh__buyuk_tufan.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jennifer-connelly-en-iyi-10-filmi#bolum-1",
     "name": "A Beautiful Mind - Akıl Oyunları",
     "image": "/images/movies/Jennifer_Connelly_a_beautiful_mind_-_akil_oyunlari.jpg",
     "ozellikler": {

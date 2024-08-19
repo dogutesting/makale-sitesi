@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-24T18:57:19+03:00";
 const addDate = "24.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/dunyanin-en-iyi-10-anime-filmi#bolum-10",
@@ -251,6 +252,7 @@ const jsonContentArray = [
     },
     "paragraf": "Ghost in the Shell, 1995 yılında Mamoru Oshii tarafından yönetilen ve bilim kurgu ile aksiyon türlerini mükemmel bir şekilde harmanlayan bu film, anime dünyasında devrim yaratmıştır. Bu başyapıt, en iyi 10 anime filmi listemizin zirvesinde yer alıyor ve anime severler tarafından büyük bir beğeni topluyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/dunyanin_en_iyi_10_anime_filmi_kapak.jpg" //! SEN DOLDUR

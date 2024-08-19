@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1570728",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-10",
     "name": "Crazy, Stupid, Love - Çılgın Aptal Aşk",
     "image": "/images/movies/Ryan_Gosling_crazy,_stupid,_love_-_cilgin_aptal_ask.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0805564",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-9",
     "name": "Lars and the Real Girl - Gerçek Sevgili",
     "image": "/images/movies/Ryan_Gosling_lars_and_the_real_girl_-_gercek_sevgili.jpg",
     "ozellikler": {
@@ -74,7 +74,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt3799694",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-8",
     "name": "The Nice Guys - İyi Adamlar",
     "image": "/images/movies/Ryan_Gosling_the_nice_guys_-_iyi_adamlar.jpg",
     "ozellikler": {
@@ -99,7 +99,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1817273",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-7",
     "name": "The Place Beyond the Pines - Babadan Oğula",
     "image": "/images/movies/Ryan_Gosling_the_place_beyond_the_pines_-_babadan_ogula.jpg",
     "ozellikler": {
@@ -124,7 +124,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0780504",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-6",
     "name": "Drive - Sürücü",
     "image": "/images/movies/Ryan_Gosling_drive_-_surucu.jpg",
     "ozellikler": {
@@ -149,7 +149,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1120985",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-5",
     "name": "Blue Valentine - Aşk ve Küller",
     "image": "/images/movies/Ryan_Gosling_blue_valentine_-_ask_ve_kuller.jpg",
     "ozellikler": {
@@ -173,7 +173,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1596363",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-4",
     "name": "The Big Short - Büyük Açık",
     "image": "/images/movies/Ryan_Gosling_the_big_short_-_buyuk_acik.jpg",
     "ozellikler": {
@@ -198,7 +198,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1213641",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-3",
     "name": "First Man - Ay'da İlk İnsan",
     "image": "/images/movies/Ryan_Gosling_first_man_-_ay'da_ilk_insan.jpg",
     "ozellikler": {
@@ -222,7 +222,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt3783958",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-2",
     "name": "La La Land - Aşıklar Şehri",
     "image": "/images/movies/Ryan_Gosling_la_la_land_-_asiklar_sehri.jpg",
     "ozellikler": {
@@ -246,7 +246,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1856101",
-    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ryan-gosling-en-iyi-10-filmi#bolum-1",
     "name": "Blade Runner 2049",
     "image": "/images/movies/Ryan_Gosling_blade_runner_2049.jpg",
     "ozellikler": {

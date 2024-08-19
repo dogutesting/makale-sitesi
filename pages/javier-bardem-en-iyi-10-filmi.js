@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-10",
     "name": "The Gunman - Silâhın Şarkısı",
     "image": "/images/movies/Javier_Bardem_the_gunman_-_silâhin_sarkisi.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-9",
     "name": "The Counselor - Danışman",
     "image": "/images/movies/Javier_Bardem_the_counselor_-_danisman.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-8",
     "name": "Eat Pray Love - Ye, Dua Et, Sev",
     "image": "/images/movies/Javier_Bardem_eat_pray_love_-_ye,_dua_et,_sev.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-7",
     "name": "The Roads Not Taken - Gidilmeyen Yollar",
     "image": "/images/movies/Javier_Bardem_the_roads_not_taken_-_gidilmeyen_yollar.jpg",
     "ozellikler": {
@@ -114,7 +114,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-6",
     "name": "The Dancer Upstairs - Ozanlar Dans Etmez",
     "image": "/images/movies/Javier_Bardem_the_dancer_upstairs_-_ozanlar_dans_etmez.jpg",
     "ozellikler": {
@@ -136,7 +136,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-5",
     "name": "To the Wonder - Aşk Ödevi",
     "image": "/images/movies/Javier_Bardem_to_the_wonder_-_ask_odevi.jpg",
     "ozellikler": {
@@ -159,7 +159,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-4",
     "name": "Vicky Cristina Barcelona",
     "image": "/images/movies/Javier_Bardem_vicky_cristina_barcelona.jpg",
     "ozellikler": {
@@ -183,7 +183,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-3",
     "name": "Biutiful",
     "image": "/images/movies/Javier_Bardem_biutiful.jpg",
     "ozellikler": {
@@ -205,7 +205,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-2",
     "name": "Skyfall",
     "image": "/images/movies/Javier_Bardem_skyfall.jpg",
     "ozellikler": {
@@ -228,7 +228,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/javier-bardem-en-iyi-10-filmi#bolum-1",
     "name": "No Country for Old Men - İhtiyarlara Yer Yok",
     "image": "/images/movies/Javier_Bardem_no_country_for_old_men_-_ihtiyarlara_yer_yok.jpg",
     "ozellikler": {

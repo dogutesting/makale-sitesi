@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0427392",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-10",
     "name": "The Invasion - İstila",
     "image": "/images/movies/Daniel_Craig_the_invasion_-_istila.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1568346",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-9",
     "name": "The Girl with the Dragon Tattoo - Ejderha Dövmeli Kız",
     "image": "/images/movies/Daniel_Craig_the_girl_with_the_dragon_tattoo_-_ejderha_dovmeli_kiz.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0385752",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-8",
     "name": "The Golden Compass - Altın Pusula",
     "image": "/images/movies/Daniel_Craig_the_golden_compass_-_altin_pusula.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt1462041",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-7",
     "name": "Dream House - Korku Evi",
     "image": "/images/movies/Daniel_Craig_dream_house_-_korku_evi.jpg",
     "ozellikler": {
@@ -124,7 +124,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0409847",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-6",
     "name": "Cowboys & Aliens - Kovboylar ve Uzaylılar",
     "image": "/images/movies/Daniel_Craig_cowboys_&_aliens_-_kovboylar_ve_uzaylilar.jpg",
     "ozellikler": {
@@ -150,7 +150,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1034303",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-5",
     "name": "Defiance - Direniş",
     "image": "/images/movies/Daniel_Craig_defiance_-_direnis.jpg",
     "ozellikler": {
@@ -175,7 +175,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt8946378",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-4",
     "name": "Knives Out - Bıçaklar Çekildi",
     "image": "/images/movies/Daniel_Craig_knives_out_-_bicaklar_cekildi.jpg",
     "ozellikler": {
@@ -200,7 +200,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0408306",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-3",
     "name": "Münich - Münih",
     "image": "/images/movies/Daniel_Craig_munich_-_munih.jpg",
     "ozellikler": {
@@ -225,7 +225,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1074638",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-2",
     "name": "Skyfall",
     "image": "/images/movies/Daniel_Craig_skyfall.jpg",
     "ozellikler": {
@@ -251,7 +251,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0381061",
-    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/daniel-craig-en-iyi-10-filmi#bolum-1",
     "name": "Casino Royale - Kraliyet Kumarhanesi",
     "image": "/images/movies/Daniel_Craig_casino_royale_-_kraliyet_kumarhanesi.jpg",
     "ozellikler": {

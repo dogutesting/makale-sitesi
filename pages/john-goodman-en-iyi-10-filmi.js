@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-10",
     "name": "Kong: Skull Island - Kong: Kafatası Adası",
     "image": "/images/movies/John_Goodman_kong__skull_island_-_kong__kafatasi_adasi.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-9",
     "name": "The Big Easy - Şenlik Ateşi",
     "image": "/images/movies/John_Goodman_the_big_easy_-_senlik_atesi.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-8",
     "name": "Monsters, Inc. - Sevimli Canavarlar",
     "image": "/images/movies/John_Goodman_monsters,_inc._-_sevimli_canavarlar.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-7",
     "name": "10 Cloverfield Lane - Cloverfield Yolu No: 10",
     "image": "/images/movies/John_Goodman_10_cloverfield_lane_-_cloverfield_yolu_no__10.jpg",
     "ozellikler": {
@@ -117,7 +117,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-6",
     "name": "O Brother, Where Art Thou? - Nerdesin Be Birader?",
     "image": "/images/movies/John_Goodman_o_brother,_where_art_thou__-_nerdesin_be_birader_.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-5",
     "name": "The Babe - Beyzbol Yıldızı",
     "image": "/images/movies/John_Goodman_the_babe_-_beyzbol_yildizi.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-4",
     "name": "Barton Fink",
     "image": "/images/movies/John_Goodman_barton_fink.jpg",
     "ozellikler": {
@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-3",
     "name": "Argo",
     "image": "/images/movies/John_Goodman_argo.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-2",
     "name": "The Big Lebowski - Büyük Lebowski",
     "image": "/images/movies/John_Goodman_the_big_lebowski_-_buyuk_lebowski.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/john-goodman-en-iyi-10-filmi#bolum-1",
     "name": "Inside Llewyn Davis - Sen Şarkılarını Söyle",
     "image": "/images/movies/John_Goodman_inside_llewyn_davis_-_sen_sarkilarini_soyle.jpg",
     "ozellikler": {

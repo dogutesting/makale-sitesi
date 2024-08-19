@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-10",
     "name": "Swordfish",
     "image": "/images/movies/John_Travolta_swordfish.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-9",
     "name": "Hairspray",
     "image": "/images/movies/John_Travolta_hairspray.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-8",
     "name": "The Fanatic",
     "image": "/images/movies/John_Travolta_the_fanatic.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-7",
     "name": "Basic",
     "image": "/images/movies/John_Travolta_basic.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-6",
     "name": "The Punisher",
     "image": "/images/movies/John_Travolta_the_punisher.jpg",
     "ozellikler": {
@@ -141,7 +141,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-5",
     "name": "A Civil Action",
     "image": "/images/movies/John_Travolta_a_civil_action.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-4",
     "name": "Get Shorty",
     "image": "/images/movies/John_Travolta_get_shorty.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-3",
     "name": "Blow Out",
     "image": "/images/movies/John_Travolta_blow_out.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-2",
     "name": "Grease - Grease",
     "image": "/images/movies/John_Travolta_grease_-_grease.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/john-travolta-en-iyi-10-filmi#bolum-1",
     "name": "Pulp Fiction - Ucuz Roman",
     "image": "/images/movies/John_Travolta_pulp_fiction_-_ucuz_roman.jpg",
     "ozellikler": {

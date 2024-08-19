@@ -23,31 +23,31 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-10",
     "name": "The Gunman",
     "image": "/images/movies/Mark_Rylance_the_gunman.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "Sean Penn",
-            "Javier Bardem",
-            "Idris Elba",
-            "Mark Rylance"
-        ],
-        "Kategori": [
-            "Aksiyon",
-            "Gerilim"
-        ],
-        "Yıl": "2015",
-        "Süre": "1 sa. 55 dk.",
-        "Yönetmen": "Pierre Morel",
-        "imdb": "5.8/10",
-        "Değerlendirme": "44951"
+      "Oyuncular": [
+        "Sean Penn",
+        "Javier Bardem",
+        "Idris Elba",
+        "Mark Rylance"
+      ],
+      "Kategori": [
+        "Aksiyon",
+        "Gerilim"
+      ],
+      "Yıl": "2015",
+      "Süre": "1 sa. 55 dk.",
+      "Yönetmen": "Pierre Morel",
+      "imdb": "5.8/10",
+      "Değerlendirme": "44951"
     },
     "paragraf": "The Gunman, eski bir paralı asker olan Jim Terrier'ın, geçmişteki bir cinayetle yüzleşmek zorunda kalmasını anlatan aksiyon ve gerilim dolu bir yapım. Mark Rylance, filmde önemli bir yan rolüyle dikkat çekiyor. Bu film, Rylance'ın aksiyon türündeki başarılı performansını gözler önüne seriyor."
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-9",
     "name": "The Outfit",
     "image": "/images/movies/Mark_Rylance_the_outfit.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-8",
     "name": "Waiting for the Barbarians",
     "image": "/images/movies/Mark_Rylance_waiting_for_the_barbarians.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-7",
     "name": "Dunkirk - Dunkirk",
     "image": "/images/movies/Mark_Rylance_dunkirk_-_dunkirk.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-6",
     "name": "The BFG - The Big Friendly Giant",
     "image": "/images/movies/Mark_Rylance_the_bfg_-_the_big_friendly_giant.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-5",
     "name": "Bridge of Spies - Casuslar Köprüsü",
     "image": "/images/movies/Mark_Rylance_bridge_of_spies_-_casuslar_koprusu.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-4",
     "name": "The Trial of the Chicago 7 - Şikago Yedilisi'nin Yargılanması",
     "image": "/images/movies/Mark_Rylance_the_trial_of_the_chicago_7_-_sikago_yedilisi'nin_yargilanmasi.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-3",
     "name": "Ready Player One - Başlat",
     "image": "/images/movies/Mark_Rylance_ready_player_one_-_baslat.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-2",
     "name": "Don't Look Up - Yukarı Bakma",
     "image": "/images/movies/Mark_Rylance_don't_look_up_-_yukari_bakma.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/mark-rylance-en-iyi-10-filmi#bolum-1",
     "name": "The Other Boleyn Girl - Boleyn Kızı",
     "image": "/images/movies/Mark_Rylance_the_other_boleyn_girl_-_boleyn_kizi.jpg",
     "ozellikler": {

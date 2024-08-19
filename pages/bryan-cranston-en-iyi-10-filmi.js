@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1987680",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-10",
     "name": "The Upside - Dostum",
     "image": "/images/movies/Bryan_Cranston_the_upside_-_dostum.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt6018306",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-9",
     "name": "Last Flag Flying - Son Kalan Bayrak",
     "image": "/images/movies/Bryan_Cranston_last_flag_flying_-_son_kalan_bayrak.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt3661394",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-8",
     "name": "The One and Only Ivan - Tek ve Yalnız Ivan",
     "image": "/images/movies/Bryan_Cranston_the_one_and_only_ivan_-_tek_ve_yalniz_ivan.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt3203606",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-7",
     "name": "Trumbo",
     "image": "/images/movies/Bryan_Cranston_trumbo.jpg",
     "ozellikler": {
@@ -121,7 +121,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1024648",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-6",
     "name": "Argo",
     "image": "/images/movies/Bryan_Cranston_argo.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0780504",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-5",
     "name": "Drive",
     "image": "/images/movies/Bryan_Cranston_drive.jpg",
     "ozellikler": {
@@ -170,7 +170,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0831387",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-4",
     "name": "Godzilla",
     "image": "/images/movies/Bryan_Cranston_godzilla.jpg",
     "ozellikler": {
@@ -195,7 +195,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt5104604",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-3",
     "name": "Isle of Dogs - Köpek Adası",
     "image": "/images/movies/Bryan_Cranston_isle_of_dogs_-_kopek_adasi.jpg",
     "ozellikler": {
@@ -220,7 +220,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt2267968",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-2",
     "name": "Kung Fu Panda 3",
     "image": "/images/movies/Bryan_Cranston_kung_fu_panda_3.jpg",
     "ozellikler": {
@@ -244,7 +244,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1355631",
-    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/bryan-cranston-en-iyi-10-filmi#bolum-1",
     "name": "The Infiltrator - İnfazcı",
     "image": "/images/movies/Bryan_Cranston_the_infiltrator_-_infazci.jpg",
     "ozellikler": {

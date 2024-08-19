@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:29:36+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/alfred-hitchcock-en-iyi-10-filmi#bolum-10",
@@ -248,6 +249,7 @@ const jsonContentArray = [
     },
     "paragraf": "Sapık, Hitchcock'un gerilim türünde adeta devrim yaratan filmi olarak bilinir. Anthony Perkins ve Janet Leigh'in performansları, alfred hitchcock filmleri deyince akla gelen bu kült filmde unutulmaz sahneler bırakmıştır. Hitchcock'un filmde usulsüz bir şekilde gerilim yaratma sanatı, Psychoyu benzersiz kılar."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/alfred-hitchcock-en-iyi-10-filmi-kapak.jpg" //! SEN DOLDUR

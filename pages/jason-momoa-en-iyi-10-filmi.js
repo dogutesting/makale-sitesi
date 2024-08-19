@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-10",
     "name": "Braven",
     "image": "/images/movies/Jason_Momoa_braven.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-9",
     "name": "Conan the Barbarian - Barbar Conan",
     "image": "/images/movies/Jason_Momoa_conan_the_barbarian_-_barbar_conan.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-8",
     "name": "Bullet to the Head - Başına Mermi",
     "image": "/images/movies/Jason_Momoa_bullet_to_the_head_-_basina_mermi.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-7",
     "name": "Road to Paloma",
     "image": "/images/movies/Jason_Momoa_road_to_paloma.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-6",
     "name": "Wolves",
     "image": "/images/movies/Jason_Momoa_wolves.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-5",
     "name": "The Bad Batch - Çürük Parti",
     "image": "/images/movies/Jason_Momoa_the_bad_batch_-_curuk_parti.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-4",
     "name": "Sweet Girl",
     "image": "/images/movies/Jason_Momoa_sweet_girl.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-3",
     "name": "Slumberland - Rüya Diyarına Yolculuk",
     "image": "/images/movies/Jason_Momoa_slumberland_-_ruya_diyarina_yolculuk.jpg",
     "ozellikler": {
@@ -213,7 +213,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-2",
     "name": "Aquaman and the Lost Kingdom - Aquaman ve Kayıp Krallık",
     "image": "/images/movies/Jason_Momoa_aquaman_and_the_lost_kingdom_-_aquaman_ve_kayip_krallik.jpg",
     "ozellikler": {
@@ -237,7 +237,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jason-momoa-en-iyi-10-filmi#bolum-1",
     "name": "Dune - Çöl Gezegeni",
     "image": "/images/movies/Jason_Momoa_dune_-_col_gezegeni.jpg",
     "ozellikler": {

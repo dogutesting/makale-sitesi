@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:51:04+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/laurence-fishburne-en-iyi-10-filmi#bolum-10",
@@ -261,6 +262,7 @@ const jsonContentArray = [
     },
     "paragraf": "Bu gerçekçi ve zamanında film, küresel bir salgını konu almakta. Laurence Fishburne, kamusal sağlık krizinde kilit bir rol oynayarak, Laurence Fishburne filmleri listesinde üst sıralarda yer alıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/laurence_fishburne_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

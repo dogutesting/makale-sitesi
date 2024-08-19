@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-10",
     "name": "Batman v Superman: Dawn of Justice - Adaletin Şafağı",
     "image": "/images/movies/Jeremy_Irons_batman_v_superman__dawn_of_justice_-_adaletin_safagi.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-9",
     "name": "The Man in the Iron Mask - Demir Maskeli Adam",
     "image": "/images/movies/Jeremy_Irons_the_man_in_the_iron_mask_-_demir_maskeli_adam.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-8",
     "name": "Dead Ringers - Ölü İkizler",
     "image": "/images/movies/Jeremy_Irons_dead_ringers_-_olu_ikizler.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-7",
     "name": "Reversal of Fortune - Talihsiz Kader",
     "image": "/images/movies/Jeremy_Irons_reversal_of_fortune_-_talihsiz_kader.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-6",
     "name": "The Mission - Görev",
     "image": "/images/movies/Jeremy_Irons_the_mission_-_gorev.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-5",
     "name": "The House of the Spirits - Ruhlar Evi",
     "image": "/images/movies/Jeremy_Irons_the_house_of_the_spirits_-_ruhlar_evi.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-4",
     "name": "Lolita",
     "image": "/images/movies/Jeremy_Irons_lolita.jpg",
     "ozellikler": {
@@ -187,7 +187,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-3",
     "name": "The French Lieutenant's Woman - Fransız Teğmenin Kadını",
     "image": "/images/movies/Jeremy_Irons_the_french_lieutenant's_woman_-_fransiz_tegmenin_kadini.jpg",
     "ozellikler": {
@@ -210,7 +210,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-2",
     "name": "Damage - Zarar",
     "image": "/images/movies/Jeremy_Irons_damage_-_zarar.jpg",
     "ozellikler": {
@@ -233,7 +233,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jeremy-irons-en-iyi-10-filmi#bolum-1",
     "name": "The Lion King - Aslan Kral",
     "image": "/images/movies/Jeremy_Irons_the_lion_king_-_aslan_kral.jpg",
     "ozellikler": {

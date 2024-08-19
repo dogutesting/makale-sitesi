@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0412080",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-10",
     "name": "The World's Fastest Indian - Dünyanın En Hızlı Indian'ı",
     "image": "/images/movies/Anthony_Hopkins_the_world's_fastest_indian_-_dunyanin_en_hizli_indian'i.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0488120",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-9",
     "name": "Fracture - Cinayet Gecesi",
     "image": "/images/movies/Anthony_Hopkins_fracture_-_cinayet_gecesi.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0118607",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-8",
     "name": "Amistad",
     "image": "/images/movies/Anthony_Hopkins_amistad.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0120746",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-7",
     "name": "The Mask of Zorro - Zorro Maskesi",
     "image": "/images/movies/Anthony_Hopkins_the_mask_of_zorro_-_zorro_maskesi.jpg",
     "ozellikler": {
@@ -122,7 +122,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0113987",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-6",
     "name": "Nixon",
     "image": "/images/movies/Anthony_Hopkins_nixon.jpg",
     "ozellikler": {
@@ -146,7 +146,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0080678",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-5",
     "name": "The Elephant Man - Fil Adam",
     "image": "/images/movies/Anthony_Hopkins_the_elephant_man_-_fil_adam.jpg",
     "ozellikler": {
@@ -170,7 +170,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0107943",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-4",
     "name": "The Remains of the Day - Günden Kalanlar",
     "image": "/images/movies/Anthony_Hopkins_the_remains_of_the_day_-_gunden_kalanlar.jpg",
     "ozellikler": {
@@ -195,7 +195,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt10272386",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-3",
     "name": "The Father - Baba",
     "image": "/images/movies/Anthony_Hopkins_the_father_-_baba.jpg",
     "ozellikler": {
@@ -218,7 +218,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0102926",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-2",
     "name": "The Silence of the Lambs - Kuzuların Sessizliği",
     "image": "/images/movies/Anthony_Hopkins_the_silence_of_the_lambs_-_kuzularin_sessizligi.jpg",
     "ozellikler": {
@@ -242,7 +242,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt8404614",
-    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/anthony-hopkins-en-iyi-10-filmi#bolum-1",
     "name": "The Two Popes - İki Papa",
     "image": "/images/movies/Anthony_Hopkins_the_two_popes_-_iki_papa.jpg",
     "ozellikler": {

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-10",
     "name": "Reign of Fire - Ateş Krallığı",
     "image": "/images/movies/Matthew_McConaughey_reign_of_fire_-_ates_kralligi.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-9",
     "name": "A Time to Kill - Öldürme Zamanı",
     "image": "/images/movies/Matthew_McConaughey_a_time_to_kill_-_oldurme_zamani.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-8",
     "name": "Mud - Kasaba",
     "image": "/images/movies/Matthew_McConaughey_mud_-_kasaba.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-7",
     "name": "The Lincoln Lawyer - Gecenin Rengi",
     "image": "/images/movies/Matthew_McConaughey_the_lincoln_lawyer_-_gecenin_rengi.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-6",
     "name": "Amistad",
     "image": "/images/movies/Matthew_McConaughey_amistad.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-5",
     "name": "Magic Mike",
     "image": "/images/movies/Matthew_McConaughey_magic_mike.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-4",
     "name": "The Wolf of Wall Street - Para Avcısı",
     "image": "/images/movies/Matthew_McConaughey_the_wolf_of_wall_street_-_para_avcisi.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-3",
     "name": "Dallas Buyers Club - Sınırsızlar Kulübü",
     "image": "/images/movies/Matthew_McConaughey_dallas_buyers_club_-_sinirsizlar_kulubu.jpg",
     "ozellikler": {
@@ -217,7 +217,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-2",
     "name": "True Detective (Dizi) - Gerçek Dedektif",
     "image": "/images/movies/Matthew_McConaughey_true_detective_(dizi)_-_gercek_dedektif.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/matthew-mcconaughey-en-iyi-10-filmi#bolum-1",
     "name": "Interstellar - Yıldızlararası",
     "image": "/images/movies/Matthew_McConaughey_interstellar_-_yildizlararasi.jpg",
     "ozellikler": {

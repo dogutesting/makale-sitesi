@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt3266284",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-10",
     "name": "November Criminals - Kasım Suçluları",
     "image": "/images/movies/Ansel_Elgort_november_criminals_-_kasim_suclulari.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt3410834",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-9",
     "name": "Allegiant - Kuralsız",
     "image": "/images/movies/Ansel_Elgort_allegiant_-_kuralsiz.jpg",
     "ozellikler": {
@@ -75,7 +75,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt5639446",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-8",
     "name": "Jonathan",
     "image": "/images/movies/Ansel_Elgort_jonathan.jpg",
     "ozellikler": {
@@ -100,7 +100,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt2908446",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-7",
     "name": "Insurgent - Kuralsız",
     "image": "/images/movies/Ansel_Elgort_insurgent_-_kuralsiz.jpg",
     "ozellikler": {
@@ -126,7 +126,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt5179598",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-7",
     "name": "Billionaire Boys Club",
     "image": "/images/movies/Ansel_Elgort_billionaire_boys_club.jpg",
     "ozellikler": {
@@ -151,7 +151,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt3864056",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-5",
     "name": "The Goldfinch - Saka Kuşu",
     "image": "/images/movies/Ansel_Elgort_the_goldfinch_-_saka_kusu.jpg",
     "ozellikler": {
@@ -175,7 +175,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt3581652",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-4",
     "name": "West Side Story - Batı Yakasının Hikayesi",
     "image": "/images/movies/Ansel_Elgort_west_side_story_-_bati_yakasinin_hikayesi.jpg",
     "ozellikler": {
@@ -200,7 +200,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt3179568",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-3",
     "name": "Men, Women & Children - Erkekler, Kadınlar ve Çocuklar",
     "image": "/images/movies/Ansel_Elgort_men,_women_&_children_-_erkekler,_kadinlar_ve_cocuklar.jpg",
     "ozellikler": {
@@ -225,7 +225,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt3890160",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-2",
     "name": "Baby Driver - Tam Gaz",
     "image": "/images/movies/Ansel_Elgort_baby_driver_-_tam_gaz.jpg",
     "ozellikler": {
@@ -250,7 +250,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt2582846",
-    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ansel-elgort-en-iyi-10-filmi#bolum-1",
     "name": "The Fault in Our Stars - Aynı Yıldızın Altında",
     "image": "/images/movies/Ansel_Elgort_the_fault_in_our_stars_-_ayni_yildizin_altinda.jpg",
     "ozellikler": {

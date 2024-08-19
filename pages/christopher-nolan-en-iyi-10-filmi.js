@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-23T17:28:15+03:00";
 const addDate = "23.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/christopher-nolan-en-iyi-10-filmi#bolum-10",
@@ -200,6 +201,7 @@ const jsonContentArray = [
     },
     "paragraf": "The Dark Knight, sinema tarihindeki en etkileyici süper kahraman filmi olarak geniş çapta takdir toplar. Heath Ledgerın Joker performansı, filmin unutulmaz sahneleri ve mükemmel hikaye anlatımı ile Nolanın yönetmenliği zirveye ulaşmıştır. Christopher Nolan en iyi filmi olarak birçok kişi tarafından kabul edilir."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/christopher_nolan_en_iyi_10_filmi.jpg" //! SEN DOLDUR

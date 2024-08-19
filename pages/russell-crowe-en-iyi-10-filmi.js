@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1837709",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-10",
     "name": "Winter's Tale - Kış Masalı",
     "image": "/images/movies/Russell_Crowe_winter's_tale_-_kis_masali.jpg",
     "ozellikler": {
@@ -49,7 +49,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0758774",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-9",
     "name": "Body of Lies - Yalanlar Üstüne",
     "image": "/images/movies/Russell_Crowe_body_of_lies_-_yalanlar_ustune.jpg",
     "ozellikler": {
@@ -74,7 +74,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0381849",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-8",
     "name": "3:10 to Yuma - 3:10 Treni",
     "image": "/images/movies/Russell_Crowe_3_10_to_yuma_-_3_10_treni.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0473705",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-7",
     "name": "State of Play - Devlet Oyunları",
     "image": "/images/movies/Russell_Crowe_state_of_play_-_devlet_oyunlari.jpg",
     "ozellikler": {
@@ -123,7 +123,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0352248",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-6",
     "name": "Cinderella Man - Külkedisi Adam",
     "image": "/images/movies/Russell_Crowe_cinderella_man_-_kulkedisi_adam.jpg",
     "ozellikler": {
@@ -148,7 +148,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1707386",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-5",
     "name": "Les Misérables - Sefiller",
     "image": "/images/movies/Russell_Crowe_les_misérables_-_sefiller.jpg",
     "ozellikler": {
@@ -173,7 +173,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0311113",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-4",
     "name": "Master and Commander: The Far Side of the World - Uzak Ufuklar",
     "image": "/images/movies/Russell_Crowe_master_and_commander__the_far_side_of_the_world_-_uzak_ufuklar.jpg",
     "ozellikler": {
@@ -198,7 +198,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0765429",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-3",
     "name": "American Gangster - Amerikan Gangsteri",
     "image": "/images/movies/Russell_Crowe_american_gangster_-_amerikan_gangsteri.jpg",
     "ozellikler": {
@@ -223,7 +223,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0268978",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-2",
     "name": "A Beautiful Mind - Akıl Oyunları",
     "image": "/images/movies/Russell_Crowe_a_beautiful_mind_-_akil_oyunlari.jpg",
     "ozellikler": {
@@ -248,7 +248,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0172495",
-    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/russell-crowe-en-iyi-10-filmi#bolum-1",
     "name": "Gladiator - Gladyatör",
     "image": "/images/movies/Russell_Crowe_gladiator_-_gladyator.jpg",
     "ozellikler": {

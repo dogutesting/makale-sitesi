@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-10",
     "name": "Gods of Egypt - Mısır Tanrıları",
     "image": "/images/movies/Geoffrey_Rush_gods_of_egypt_-_misir_tanrilari.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-9",
     "name": "Pirates of the Caribbean: On Stranger Tides - Karayip Korsanları: Gizemli Denizlerde",
     "image": "/images/movies/Geoffrey_Rush_pirates_of_the_caribbean__on_stranger_tides_-_karayip_korsanlari__gizemli_denizlerde.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-8",
     "name": "Pirates of the Caribbean: Dead Men Tell No Tales - Karayip Korsanları: Salazar'ın İntikamı",
     "image": "/images/movies/Geoffrey_Rush_pirates_of_the_caribbean__dead_men_tell_no_tales_-_karayip_korsanlari__salazar'in_intikami.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-7",
     "name": "Munich - Münih",
     "image": "/images/movies/Geoffrey_Rush_munich_-_munih.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-6",
     "name": "Elizabeth: The Golden Age - Elizabeth: Altın Çağ",
     "image": "/images/movies/Geoffrey_Rush_elizabeth__the_golden_age_-_elizabeth__altin_cag.jpg",
     "ozellikler": {
@@ -145,7 +145,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-5",
     "name": "Finding Nemo - Kayıp Balık Nemo",
     "image": "/images/movies/Geoffrey_Rush_finding_nemo_-_kayip_balik_nemo.jpg",
     "ozellikler": {
@@ -169,7 +169,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-4",
     "name": "Shakespeare in Love - Aşık Shakespeare",
     "image": "/images/movies/Geoffrey_Rush_shakespeare_in_love_-_asik_shakespeare.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-3",
     "name": "The King's Speech - Zoraki Kral",
     "image": "/images/movies/Geoffrey_Rush_the_king's_speech_-_zoraki_kral.jpg",
     "ozellikler": {
@@ -217,7 +217,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-2",
     "name": "Quills - Düşlerin Efendisi",
     "image": "/images/movies/Geoffrey_Rush_quills_-_duslerin_efendisi.jpg",
     "ozellikler": {
@@ -241,7 +241,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/geoffrey-rush-en-iyi-10-filmi#bolum-1",
     "name": "Shine - Parlaklık",
     "image": "/images/movies/Geoffrey_Rush_shine_-_parlaklik.jpg",
     "ozellikler": {

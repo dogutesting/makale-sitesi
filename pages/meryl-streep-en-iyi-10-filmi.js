@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt3623726",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-10",
     "name": "Ricki and the Flash - Sıradışı Anne",
     "image": "/images/movies/Meryl_Streep_ricki_and_the_flash_-_siradisi_anne.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt4136084",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-9",
     "name": "Florence Foster Jenkins - Florence",
     "image": "/images/movies/Meryl_Streep_florence_foster_jenkins_-_florence.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1135503",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-8",
     "name": "Julie & Julia - Julie ve Julia",
     "image": "/images/movies/Meryl_Streep_julie_&_julia_-_julie_ve_julia.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0458352",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-7",
     "name": "The Devil Wears Prada - Şeytan Marka Giyer",
     "image": "/images/movies/Meryl_Streep_the_devil_wears_prada_-_seytan_marka_giyer.jpg",
     "ozellikler": {
@@ -116,7 +116,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1007029",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-6",
     "name": "The Iron Lady - Demir Leydi",
     "image": "/images/movies/Meryl_Streep_the_iron_lady_-_demir_leydi.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0089755",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-5",
     "name": "Out of Africa - Afrika'nın Dışında",
     "image": "/images/movies/Meryl_Streep_out_of_africa_-_afrika'nin_disinda.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0086312",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-4",
     "name": "Silkwood - Silkwood",
     "image": "/images/movies/Meryl_Streep_silkwood_-_silkwood.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0079522",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-3",
     "name": "Manhattan",
     "image": "/images/movies/Meryl_Streep_manhattan.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0112579",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-2",
     "name": "The Bridges of Madison County - Yağmurdan Sonra",
     "image": "/images/movies/Meryl_Streep_the_bridges_of_madison_county_-_yagmurdan_sonra.jpg",
     "ozellikler": {
@@ -232,7 +232,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0084707",
-    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/meryl-streep-en-iyi-10-filmi#bolum-1",
     "name": "Sophie's Choice - Sophie's Choice",
     "image": "/images/movies/Meryl_Streep_sophie's_choice_-_sophie's_choice.jpg",
     "ozellikler": {

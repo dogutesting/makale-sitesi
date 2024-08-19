@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-26T18:08:06+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/en-iyi-10-hint-ask-filmi#bolum-10",
@@ -255,6 +256,7 @@ const jsonContentArray = [
     },
     "paragraf": "Film, Hindistan’ın siyasi gerilimleri arasında bir radyo yayıncısının ve gizemli bir kadının epik aşkını ele alır. Dil Se, en iyi hint aşk filmleri içinde dramatik ve güçlü bir hikayesiyle dikkat çekiyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/en_iyi_10_hint_ask_filmi.jpg" //! SEN DOLDUR

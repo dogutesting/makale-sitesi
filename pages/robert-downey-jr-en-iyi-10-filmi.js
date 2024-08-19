@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-10",
     "name": "Due Date - Git Başımdan",
     "image": "/images/movies/Robert_Downey_Jr._due_date_-_git_basimdan.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-9",
     "name": "Tropic Thunder - Tropik Fırtına",
     "image": "/images/movies/Robert_Downey_Jr._tropic_thunder_-_tropik_firtina.jpg",
     "ozellikler": {
@@ -67,7 +67,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-8",
     "name": "Spider-Man: Homecoming - Örümcek-Adam: Eve Dönüş",
     "image": "/images/movies/Robert_Downey_Jr._spider-man__homecoming_-_orumcek-adam__eve_donus.jpg",
     "ozellikler": {
@@ -90,7 +90,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-7",
     "name": "The Judge - Yargıç",
     "image": "/images/movies/Robert_Downey_Jr._the_judge_-_yargic.jpg",
     "ozellikler": {
@@ -112,7 +112,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-6",
     "name": "Zodiac - Zodyak",
     "image": "/images/movies/Robert_Downey_Jr._zodiac_-_zodyak.jpg",
     "ozellikler": {
@@ -135,7 +135,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-5",
     "name": "Chaplin",
     "image": "/images/movies/Robert_Downey_Jr._chaplin.jpg",
     "ozellikler": {
@@ -157,7 +157,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-4",
     "name": "Iron Man",
     "image": "/images/movies/Robert_Downey_Jr._iron_man.jpg",
     "ozellikler": {
@@ -179,7 +179,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-3",
     "name": "Avengers: Endgame - Yenilmezler: Son Oyun",
     "image": "/images/movies/Robert_Downey_Jr._avengers__endgame_-_yenilmezler__son_oyun.jpg",
     "ozellikler": {
@@ -201,7 +201,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-2",
     "name": "Avengers: Infinity War - Yenilmezler: Sonsuzluk Savaşı",
     "image": "/images/movies/Robert_Downey_Jr._avengers__infinity_war_-_yenilmezler__sonsuzluk_savasi.jpg",
     "ozellikler": {
@@ -223,7 +223,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/robert-downey-jr-en-iyi-10-filmi#bolum-1",
     "name": "Sherlock Holmes: A Game of Shadows - Sherlock Holmes: Gölge Oyunları",
     "image": "/images/movies/Robert_Downey_Jr._sherlock_holmes__a_game_of_shadows_-_sherlock_holmes__golge_oyunlari.jpg",
     "ozellikler": {

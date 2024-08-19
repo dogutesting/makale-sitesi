@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-10",
     "name": "Deuces Wild - Çılgın İkili",
     "image": "/images/movies/Norman_Reedus_deuces_wild_-_cilgin_ikili.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-9",
     "name": "Vacation - Tatil",
     "image": "/images/movies/Norman_Reedus_vacation_-_tatil.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-8",
     "name": "The Notorious Bettie Page",
     "image": "/images/movies/Norman_Reedus_the_notorious_bettie_page.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-7",
     "name": "Mimic - Taklitçi",
     "image": "/images/movies/Norman_Reedus_mimic_-_taklitci.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-6",
     "name": "Cadillac Records - Cadillac Kayıtları",
     "image": "/images/movies/Norman_Reedus_cadillac_records_-_cadillac_kayitlari.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-5",
     "name": "8MM - Sekiz Milimetre",
     "image": "/images/movies/Norman_Reedus_8mm_-_sekiz_milimetre.jpg",
     "ozellikler": {
@@ -161,7 +161,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-4",
     "name": "American Gangster",
     "image": "/images/movies/Norman_Reedus_american_gangster.jpg",
     "ozellikler": {
@@ -184,7 +184,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-3",
     "name": "The Boondock Saints II: All Saints Day - Kasabanın Azizi II: Azizlik Günü",
     "image": "/images/movies/Norman_Reedus_the_boondock_saints_ii__all_saints_day_-_kasabanin_azizi_ii__azizlik_gunu.jpg",
     "ozellikler": {
@@ -206,7 +206,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-2",
     "name": "The Boondock Saints - Kasabanın Azizi",
     "image": "/images/movies/Norman_Reedus_the_boondock_saints_-_kasabanin_azizi.jpg",
     "ozellikler": {
@@ -229,7 +229,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/norman-reedus-en-iyi-10-filmi#bolum-1",
     "name": "Blade II",
     "image": "/images/movies/Norman_Reedus_blade_ii.jpg",
     "ozellikler": {

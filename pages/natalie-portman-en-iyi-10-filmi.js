@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-10",
     "name": "Hesher",
     "image": "/images/movies/Natalie_Portman_hesher.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-9",
     "name": "Knight of Cups",
     "image": "/images/movies/Natalie_Portman_knight_of_cups.jpg",
     "ozellikler": {
@@ -70,7 +70,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-8",
     "name": "The Other Boleyn Girl - Boleyn Kızı",
     "image": "/images/movies/Natalie_Portman_the_other_boleyn_girl_-_boleyn_kizi.jpg",
     "ozellikler": {
@@ -93,7 +93,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-7",
     "name": "Annihilation - Yok Oluş",
     "image": "/images/movies/Natalie_Portman_annihilation_-_yok_olus.jpg",
     "ozellikler": {
@@ -117,7 +117,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-6",
     "name": "Closer - Daha Yaklaş",
     "image": "/images/movies/Natalie_Portman_closer_-_daha_yaklas.jpg",
     "ozellikler": {
@@ -140,7 +140,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-5",
     "name": "Jackie",
     "image": "/images/movies/Natalie_Portman_jackie.jpg",
     "ozellikler": {
@@ -163,7 +163,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-4",
     "name": "Black Swan - Siyah Kuğu",
     "image": "/images/movies/Natalie_Portman_black_swan_-_siyah_kugu.jpg",
     "ozellikler": {
@@ -186,7 +186,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-3",
     "name": "V for Vendetta",
     "image": "/images/movies/Natalie_Portman_v_for_vendetta.jpg",
     "ozellikler": {
@@ -209,7 +209,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/natalie-portman-en-iyi-10-filmi#bolum-2",
     "name": "Léon: The Professional - Sevginin Gücü",
     "image": "/images/movies/Natalie_Portman_léon__the_professional_-_sevginin_gucu.jpg",
     "ozellikler": {

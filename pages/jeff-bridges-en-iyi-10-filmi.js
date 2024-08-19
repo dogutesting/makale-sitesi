@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-10",
     "name": "R.I.P.D. - Ölümsüz Polisler",
     "image": "/images/movies/Jeff_Bridges_r.i.p.d._-_olumsuz_polisler.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-9",
     "name": "TRON: Legacy - TRON Efsanesi",
     "image": "/images/movies/Jeff_Bridges_tron__legacy_-_tron_efsanesi.jpg",
     "ozellikler": {
@@ -68,7 +68,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-8",
     "name": "Seventh Son - Yedinci Oğul",
     "image": "/images/movies/Jeff_Bridges_seventh_son_-_yedinci_ogul.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-7",
     "name": "Crazy Heart - Çılgın Kalp",
     "image": "/images/movies/Jeff_Bridges_crazy_heart_-_cilgin_kalp.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-6",
     "name": "The Giver - Seçilmiş Kişi",
     "image": "/images/movies/Jeff_Bridges_the_giver_-_secilmis_kisi.jpg",
     "ozellikler": {
@@ -138,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-5",
     "name": "True Grit - İz Peşinde",
     "image": "/images/movies/Jeff_Bridges_true_grit_-_iz_pesinde.jpg",
     "ozellikler": {
@@ -160,7 +160,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-4",
     "name": "Starman - Yıldız Adam",
     "image": "/images/movies/Jeff_Bridges_starman_-_yildiz_adam.jpg",
     "ozellikler": {
@@ -183,7 +183,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-3",
     "name": "The Big Lebowski - Büyük Lebowski",
     "image": "/images/movies/Jeff_Bridges_the_big_lebowski_-_buyuk_lebowski.jpg",
     "ozellikler": {
@@ -206,7 +206,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-2",
     "name": "Hell or High Water - İki Eli Kanda",
     "image": "/images/movies/Jeff_Bridges_hell_or_high_water_-_iki_eli_kanda.jpg",
     "ozellikler": {
@@ -231,7 +231,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jeff-bridges-en-iyi-10-filmi#bolum-1",
     "name": "The Fisher King - Balıkçı Kral",
     "image": "/images/movies/Jeff_Bridges_the_fisher_king_-_balikci_kral.jpg",
     "ozellikler": {

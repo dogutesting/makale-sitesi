@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-10",
     "name": "Journey 2: The Mysterious Island - Gizemli Adaya Yolculuk 2",
     "image": "/images/movies/Dwayne_Johnson_journey_2__the_mysterious_island_-_gizemli_adaya_yolculuk_2.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-9",
     "name": "Central Intelligence - Merkez İstihbarat",
     "image": "/images/movies/Dwayne_Johnson_central_intelligence_-_merkez_istihbarat.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-8",
     "name": "Jumanji: The Next Level - Jumanji: Yeni Seviye",
     "image": "/images/movies/Dwayne_Johnson_jumanji__the_next_level_-_jumanji__yeni_seviye.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-7",
     "name": "The Rundown - Büyük Tehlike",
     "image": "/images/movies/Dwayne_Johnson_the_rundown_-_buyuk_tehlike.jpg",
     "ozellikler": {
@@ -119,7 +119,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-6",
     "name": "Fast Five - Hızlı ve Öfkeli 5: Rio Soygunu",
     "image": "/images/movies/Dwayne_Johnson_fast_five_-_hizli_ve_ofkeli_5__rio_soygunu.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-5",
     "name": "Moana - Moana",
     "image": "/images/movies/Dwayne_Johnson_moana_-_moana.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-4",
     "name": "Jumanji: Welcome to the Jungle - Jumanji: Vahşi Orman",
     "image": "/images/movies/Dwayne_Johnson_jumanji__welcome_to_the_jungle_-_jumanji__vahsi_orman.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-3",
     "name": "San Andreas - San Andreas Fayı",
     "image": "/images/movies/Dwayne_Johnson_san_andreas_-_san_andreas_fayi.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-2",
     "name": "Furious 7 - Hızlı ve Öfkeli 7",
     "image": "/images/movies/Dwayne_Johnson_furious_7_-_hizli_ve_ofkeli_7.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/dwayne-johnson-en-iyi-10-filmi#bolum-1",
     "name": "Fast & Furious Presents: Hobbs & Shaw - Hızlı ve Öfkeli: Hobbs ve Shaw",
     "image": "/images/movies/Dwayne_Johnson_fast_&_furious_presents__hobbs_&_shaw_-_hizli_ve_ofkeli__hobbs_ve_shaw.jpg",
     "ozellikler": {

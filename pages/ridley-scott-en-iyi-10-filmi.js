@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0758774",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-10",
     "name": "Body of Lies - Yalanlar Üstüne",
     "image": "/images/movies/Leonardo_DiCaprio_body_of_lies_-_yalanlar_ustune.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0955308",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-9",
     "name": "Robin Hood",
     "image": "/images/movies/Russell_Crowe_robin_hood.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt5294550",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-8",
     "name": "All the Money in the World - Dünyadaki Bütün Para",
     "image": "/images/movies/Michelle_Williams_all_the_money_in_the_world_-_dunyadaki_butun_para.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0765429",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-7",
     "name": "American Gangster",
     "image": "/images/movies/Denzel_Washington_american_gangster.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0172495",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-6",
     "name": "Gladiator - Gladyatör",
     "image": "/images/movies/Russell_Crowe_gladiator_-_gladyator.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0265086",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-5",
     "name": "Black Hawk Down - Kara Şahin Düştü",
     "image": "/images/movies/Josh_Hartnett_black_hawk_down_-_kara_sahin_dustu.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt3659388",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-4",
     "name": "The Martian - Marslı",
     "image": "/images/movies/Matt_Damon_the_martian_-_marsli.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0078748",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-3",
     "name": "Alien - Yaratık",
     "image": "/images/movies/Sigourney_Weaver_alien_-_yaratik.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0083658",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-2",
     "name": "Blade Runner - Bıçak Sırtı",
     "image": "/images/movies/Harrison_Ford_blade_runner_-_bicak_sirti.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0103074",
-    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/ridley-scott-en-iyi-10-filmi#bolum-1",
     "name": "Thelma & Louise",
     "image": "/images/movies/Susan_Sarandon_thelma_&_louise.jpg",
     "ozellikler": {

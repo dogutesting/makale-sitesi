@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt0411195",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-10",
     "name": "Breakfast on Pluto - Cennetimden Bakarken",
     "image": "/images/movies/Cillian_Murphy_breakfast_on_pluto_-_cennetimden_bakarken.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0421239",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-9",
     "name": "Red Eye - Ölümcül Yolculuk",
     "image": "/images/movies/Cillian_Murphy_red_eye_-_olumcul_yolculuk.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1390411",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-8",
     "name": "In the Heart of the Sea - Denizin Ortasında",
     "image": "/images/movies/Cillian_Murphy_in_the_heart_of_the_sea_-_denizin_ortasinda.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt5013056",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-7",
     "name": "Dunkirk",
     "image": "/images/movies/Cillian_Murphy_dunkirk.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt8332922",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-6",
     "name": "A Quiet Place Part II - Sessiz Bir Yer 2",
     "image": "/images/movies/Cillian_Murphy_a_quiet_place_part_ii_-_sessiz_bir_yer_2.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0289043",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-5",
     "name": "28 Days Later - 28 Gün Sonra",
     "image": "/images/movies/Cillian_Murphy_28_days_later_-_28_gun_sonra.jpg",
     "ozellikler": {
@@ -169,7 +169,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0460989",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-4",
     "name": "The Wind That Shakes the Barley - Özgürlük Rüzgarı",
     "image": "/images/movies/Cillian_Murphy_the_wind_that_shakes_the_barley_-_ozgurluk_ruzgari.jpg",
     "ozellikler": {
@@ -193,7 +193,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0468569",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-3",
     "name": "The Dark Knight - Kara Şövalye",
     "image": "/images/movies/Cillian_Murphy_the_dark_knight_-_kara_sovalye.jpg",
     "ozellikler": {
@@ -217,7 +217,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1375666",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-2",
     "name": "Inception - Başlangıç",
     "image": "/images/movies/Cillian_Murphy_inception_-_baslangic.jpg",
     "ozellikler": {
@@ -241,7 +241,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt15398776",
-    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/cillian-murphy-en-iyi-10-filmi#bolum-1",
     "name": "Oppenheimer",
     "image": "/images/movies/Cillian_Murphy_oppenheimer.jpg",
     "ozellikler": {

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-08-09T17:24:42+03:00";
 const addDate = "09.08.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/george-clooney-en-iyi-10-filmi#bolum-10",
@@ -249,6 +250,7 @@ const jsonContentArray = [
     },
     "paragraf": "Ocean's Eleven, soygun filmleri arasında kült yapıtlar arasında yer alır. George Clooney, Danny Ocean karakterini muhteşem bir şekilde canlandırarak seyirciyi etkisi altına alıyor. Steven Soderbergh'in yönetimindeki film, akıcı senaryosu ve dinamik kadrosuyla dikkat çekiyor ve George Clooney filmleri arasında özel bir yere sahip."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/george-clooney-en-iyi-10-filmi-kapak.jpg"; //! SEN DOLDUR

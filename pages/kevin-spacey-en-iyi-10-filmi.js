@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-10",
     "name": "21",
     "image": "/images/movies/Kevin_Spacey_21.jpg",
     "ozellikler": {
@@ -37,7 +37,6 @@ const jsonContentArray = [
         "Jim Sturgess"
       ],
       "imdb": "6.8/10",
-      
       "Yönetmen": "Robert Luketic",
       "Süre": "2 sa. 3 dk.",
       "Değerlendirme": "268434",
@@ -47,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-9",
     "name": "The Shipping News - Kasımda Aşk Başkadır",
     "image": "/images/movies/Kevin_Spacey_the_shipping_news_-_kasimda_ask_baskadir.jpg",
     "ozellikler": {
@@ -60,7 +59,6 @@ const jsonContentArray = [
         "Julianne Moore"
       ],
       "imdb": "6.7/10",
-      
       "Yönetmen": "Lasse Hallström",
       "Süre": "1 sa. 51 dk.",
       "Değerlendirme": "34025",
@@ -70,7 +68,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-8",
     "name": "Superman Returns - Superman Dönüyor",
     "image": "/images/movies/Kevin_Spacey_superman_returns_-_superman_donuyor.jpg",
     "ozellikler": {
@@ -85,7 +83,6 @@ const jsonContentArray = [
         "Kate Bosworth"
       ],
       "imdb": "6.1/10",
-      
       "Yönetmen": "Bryan Singer",
       "Süre": "2 sa. 34 dk.",
       "Değerlendirme": "292609",
@@ -95,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-7",
     "name": "Beyond the Sea - Denizin Ötesinde",
     "image": "/images/movies/Kevin_Spacey_beyond_the_sea_-_denizin_otesinde.jpg",
     "ozellikler": {
@@ -110,7 +107,6 @@ const jsonContentArray = [
         "Nicolas Maupas"
       ],
       "imdb": "7.4/10",
-      
       "Yönetmen": "Carmine Elia",
       "Süre": "1 sa.",
       "Değerlendirme": "1506"
@@ -119,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-6",
     "name": "L.A. Confidential - Los Angeles Sırları",
     "image": "/images/movies/Kevin_Spacey_l.a._confidential_-_los_angeles_sirlari.jpg",
     "ozellikler": {
@@ -133,7 +129,6 @@ const jsonContentArray = [
         "Russell Crowe"
       ],
       "imdb": "8.2/10",
-      
       "Yönetmen": "Curtis Hanson",
       "Süre": "2 sa. 18 dk.",
       "Değerlendirme": "623572",
@@ -143,7 +138,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-5",
     "name": "American Beauty - Amerikan Güzeli",
     "image": "/images/movies/Kevin_Spacey_american_beauty_-_amerikan_guzeli.jpg",
     "ozellikler": {
@@ -156,7 +151,6 @@ const jsonContentArray = [
         "Annette Bening"
       ],
       "imdb": "8.3/10",
-      
       "Yönetmen": "Sam Mendes",
       "Süre": "2 sa. 2 dk.",
       "Değerlendirme": "1220403",
@@ -166,7 +160,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-4",
     "name": "Baby Driver - Tam Gaz",
     "image": "/images/movies/Kevin_Spacey_baby_driver_-_tam_gaz.jpg",
     "ozellikler": {
@@ -181,7 +175,6 @@ const jsonContentArray = [
         "Jon Bernthal"
       ],
       "imdb": "7.5/10",
-      
       "Yönetmen": "Edgar Wright",
       "Süre": "1 sa. 53 dk.",
       "Değerlendirme": "622922",
@@ -191,7 +184,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-3",
     "name": "Margin Call - Oyunun Sonu",
     "image": "/images/movies/Kevin_Spacey_margin_call_-_oyunun_sonu.jpg",
     "ozellikler": {
@@ -205,7 +198,6 @@ const jsonContentArray = [
         "Paul Bettany"
       ],
       "imdb": "7.1/10",
-      
       "Yönetmen": "J.C. Chandor",
       "Süre": "1 sa. 47 dk.",
       "Değerlendirme": "146949",
@@ -215,7 +207,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-2",
     "name": "The Usual Suspects - Olağan Şüpheliler",
     "image": "/images/movies/Kevin_Spacey_the_usual_suspects_-_olagan_supheliler.jpg",
     "ozellikler": {
@@ -230,7 +222,6 @@ const jsonContentArray = [
         "Gabriel Byrne"
       ],
       "imdb": "8.5/10",
-      
       "Yönetmen": "Bryan Singer",
       "Süre": "1 sa. 46 dk.",
       "Değerlendirme": "1156212",
@@ -240,7 +231,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/kevin-spacey-en-iyi-10-filmi#bolum-1",
     "name": "Se7en - Yedi",
     "image": "/images/movies/Kevin_Spacey_se7en_-_yedi.jpg",
     "ozellikler": {
@@ -255,7 +246,6 @@ const jsonContentArray = [
         "Andrew Kevin Walker"
       ],
       "imdb": "8.6/10",
-      
       "Yönetmen": "David Fincher",
       "Süre": "2 sa. 7 dk.",
       "Değerlendirme": "1825148",

@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-10",
     "name": "The Circle - Çember",
     "image": "/images/movies/Emma_Watson_the_circle_-_cember.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-9",
     "name": "The Perks of Being a Wallflower - Saksı Olmanın Faydaları",
     "image": "/images/movies/Emma_Watson_the_perks_of_being_a_wallflower_-_saksi_olmanin_faydalari.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-8",
     "name": "Colonia - Koloni",
     "image": "/images/movies/Emma_Watson_colonia_-_koloni.jpg",
     "ozellikler": {
@@ -95,7 +95,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-7",
     "name": "Regression - Bastırılmış",
     "image": "/images/movies/Emma_Watson_regression_-_bastirilmis.jpg",
     "ozellikler": {
@@ -118,7 +118,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-6",
     "name": "The Bling Ring - Pırıltılı Hayatlar",
     "image": "/images/movies/Emma_Watson_the_bling_ring_-_piriltili_hayatlar.jpg",
     "ozellikler": {
@@ -143,7 +143,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-5",
     "name": "This Is the End - Buraya Kadar",
     "image": "/images/movies/Emma_Watson_this_is_the_end_-_buraya_kadar.jpg",
     "ozellikler": {
@@ -166,7 +166,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-4",
     "name": "Beauty and the Beast - Güzel ve Çirkin",
     "image": "/images/movies/Emma_Watson_beauty_and_the_beast_-_guzel_ve_cirkin.jpg",
     "ozellikler": {
@@ -190,7 +190,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-3",
     "name": "The Tale of Despereaux - Despero",
     "image": "/images/movies/Emma_Watson_the_tale_of_despereaux_-_despero.jpg",
     "ozellikler": {
@@ -215,7 +215,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-2",
     "name": "Harry Potter and the Deathly Hallows: Part 1 - Harry Potter ve Ölüm Yadigarları: Bölüm 1",
     "image": "/images/movies/Emma_Watson_harry_potter_and_the_deathly_hallows__part_1_-_harry_potter_ve_olum_yadigarlari__bolum_1.jpg",
     "ozellikler": {
@@ -239,7 +239,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/emma-watson-en-iyi-10-filmi#bolum-1",
     "name": "Harry Potter and the Deathly Hallows: Part 2 - Harry Potter ve Ölüm Yadigarları: Bölüm 2",
     "image": "/images/movies/Emma_Watson_harry_potter_and_the_deathly_hallows__part_2_-_harry_potter_ve_olum_yadigarlari__bolum_2.jpg",
     "ozellikler": {

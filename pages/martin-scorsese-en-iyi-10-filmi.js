@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt1130884",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-10",
     "name": "Shutter Island - Zindan Adası",
     "image": "/images/movies/Leonardo_DiCaprio_shutter_island_-_zindan_adasi.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt0490215",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-9",
     "name": "Silence - Sessizlik",
     "image": "/images/movies/Andrew_Garfield_silence_-_sessizlik.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt0106226",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-8",
     "name": "The Age of Innocence - Masumiyet Yaşı",
     "image": "/images/movies/Daniel_Day-Lewis_the_age_of_innocence_-_masumiyet_yasi.jpg",
     "ozellikler": {
@@ -96,7 +96,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0338751",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-7",
     "name": "The Aviator - Göklerin Hakimi",
     "image": "/images/movies/Leonardo_DiCaprio_the_aviator_-_goklerin_hakimi.jpg",
     "ozellikler": {
@@ -120,7 +120,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0217505",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-6",
     "name": "Gangs of New York - New York Çeteleri",
     "image": "/images/movies/Leonardo_DiCaprio_gangs_of_new_york_-_new_york_ceteleri.jpg",
     "ozellikler": {
@@ -144,7 +144,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt1302006",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-5",
     "name": "The Irishman - İrlandalı",
     "image": "/images/movies/Robert_De_Niro_the_irishman_-_irlandali.jpg",
     "ozellikler": {
@@ -168,7 +168,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt0101540",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-4",
     "name": "Cape Fear - Korku Burnu",
     "image": "/images/movies/Robert_De_Niro_cape_fear_-_korku_burnu.jpg",
     "ozellikler": {
@@ -192,7 +192,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt0407887",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-3",
     "name": "The Departed - Köstebek",
     "image": "/images/movies/Leonardo_DiCaprio_the_departed_-_kostebek.jpg",
     "ozellikler": {
@@ -216,7 +216,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0075314",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-2",
     "name": "Taxi Driver - Taksi Şoförü",
     "image": "/images/movies/Robert_De_Niro_taxi_driver_-_taksi_soforu.jpg",
     "ozellikler": {
@@ -240,7 +240,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt0099685",
-    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/martin-scorsese-en-iyi-10-filmi#bolum-1",
     "name": "Goodfellas - Sıkı Dostlar",
     "image": "/images/movies/Robert_De_Niro_goodfellas_-_siki_dostlar.jpg",
     "ozellikler": {

@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-04-26T19:02:56+03:00";
 const addDate = "26.04.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/en-yuksek-imdb-puanli-10-komedi-filmi#bolum-10",
@@ -250,6 +251,7 @@ const jsonContentArray = [
     },
     "paragraf": "Listemizin zirvesinde yer alan Life is Beautiful, acı bir dönemin öyküsünü mizahi bir dille anlatarak hem güldürüyor hem de gözyaşlarına boğuyor. Bu çok yönlü film, en yüksek imdb puanlı komedi filmleri listemizin en üstünde yer alıyor."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/en_yuksek_imdb_puanli_10_komedi_filmi.jpg" //! SEN DOLDUR

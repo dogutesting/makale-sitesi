@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-10",
     "name": "The Mummy - Mumya",
     "image": "/images/movies/Tom_Cruise_the_mummy_-_mumya.jpg",
     "ozellikler": {
@@ -47,7 +47,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-9",
     "name": "Jack Reacher: Never Go Back - Jack Reacher: Asla Geri Dönme",
     "image": "/images/movies/Tom_Cruise_jack_reacher__never_go_back_-_jack_reacher__asla_geri_donme.jpg",
     "ozellikler": {
@@ -71,7 +71,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-8",
     "name": "Oblivion - Unutuluş",
     "image": "/images/movies/Tom_Cruise_oblivion_-_unutulus.jpg",
     "ozellikler": {
@@ -94,7 +94,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-7",
     "name": "Edge of Tomorrow - Yarının Sınırında",
     "image": "/images/movies/Tom_Cruise_edge_of_tomorrow_-_yarinin_sinirinda.jpg",
     "ozellikler": {
@@ -117,7 +117,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-6",
     "name": "A Few Good Men - Birkaç İyi Adam",
     "image": "/images/movies/Tom_Cruise_a_few_good_men_-_birkac_iyi_adam.jpg",
     "ozellikler": {
@@ -140,7 +140,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-5",
     "name": "Collateral - Tetikçi",
     "image": "/images/movies/Tom_Cruise_collateral_-_tetikci.jpg",
     "ozellikler": {
@@ -164,7 +164,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-4",
     "name": "Jerry Maguire",
     "image": "/images/movies/Tom_Cruise_jerry_maguire.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-3",
     "name": "Top Gun: Maverick",
     "image": "/images/movies/Tom_Cruise_top_gun__maverick.jpg",
     "ozellikler": {
@@ -213,7 +213,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-2",
     "name": "Rain Man - Yağmur Adam",
     "image": "/images/movies/Tom_Cruise_rain_man_-_yagmur_adam.jpg",
     "ozellikler": {
@@ -235,7 +235,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/tom-cruise-en-iyi-10-filmi#bolum-1",
     "name": "Mission: Impossible - Fallout",
     "image": "/images/movies/Tom_Cruise_mission__impossible_-_fallout.jpg",
     "ozellikler": {

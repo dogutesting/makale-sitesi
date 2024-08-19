@@ -20,6 +20,7 @@ const degistirilmeTarihi = "2024-05-25T18:27:17+03:00";
 const addDate = "25.05.24";
 
 const jsonContentArray = [
+
   {
     "num": "10",
     "url": "https://enonlar.com/hugh-jackman-en-iyi-10-filmi#bolum-10",
@@ -265,6 +266,7 @@ const jsonContentArray = [
     },
     "paragraf": "Van Helsing, Hugh Jackman'ın aksiyon dolu performansının en iyi örneklerinden biri olarak kabul edilir ve listemizde zirveye oturur."
   }
+
 ];
 
 const ana_resim = "/images/ana_gorseller/hugh_jackman_en_iyi_10_filmi_kapak.jpg" //! SEN DOLDUR

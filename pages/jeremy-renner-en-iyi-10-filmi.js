@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-10",
     "name": "The Bourne Legacy - Bourne'un Mirası",
     "image": "/images/movies/Jeremy_Renner_the_bourne_legacy_-_bourne'un_mirasi.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-9",
     "name": "The Hurt Locker - Ölümcül Tuzak",
     "image": "/images/movies/Jeremy_Renner_the_hurt_locker_-_olumcul_tuzak.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-8",
     "name": "Arrival - Geliş",
     "image": "/images/movies/Jeremy_Renner_arrival_-_gelis.jpg",
     "ozellikler": {
@@ -91,7 +91,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-7",
     "name": "American Hustle - Düzenbaz",
     "image": "/images/movies/Jeremy_Renner_american_hustle_-_duzenbaz.jpg",
     "ozellikler": {
@@ -115,33 +115,33 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-6",
     "name": "Avengers: Civil War",
     "image": "/images/movies/Jeremy_Renner_avengers_civil_war.jpg",
     "ozellikler": {
-        "Oyuncular": [
-            "Jeremy Renner",
-            "Chris Evans",
-            "Robert Downey Jr.",
-            "Scarlett Johansson"
-        ],
-        "Kategori": [
-            "Aksiyon",
-            "Macera",
-            "Bilim Kurgu"
-        ],
-        "Yıl": "2016",
-        "Süre": "2 sa. 27 dk.",
-        "Yönetmen": "Anthony Russo, Joe Russo",
-        "imdb": "7.8/10",
-        "Değerlendirme": "649,371",
-        "metacritic": "75"
+      "Oyuncular": [
+        "Jeremy Renner",
+        "Chris Evans",
+        "Robert Downey Jr.",
+        "Scarlett Johansson"
+      ],
+      "Kategori": [
+        "Aksiyon",
+        "Macera",
+        "Bilim Kurgu"
+      ],
+      "Yıl": "2016",
+      "Süre": "2 sa. 27 dk.",
+      "Yönetmen": "Anthony Russo, Joe Russo",
+      "imdb": "7.8/10",
+      "Değerlendirme": "649,371",
+      "metacritic": "75"
     },
     "paragraf": "Avengers: Civil War, Avengers ekibinin içindeki fikir ayrılıklarını ve çatışmaları konu alıyor. Jeremy Renner, Hawkeye olarak filmde önemli bir rol oynuyor ve çatışmanın taraflarından biri olarak öne çıkıyor. Bu film, Renner'ın süper kahraman evrenindeki katkılarından biridir."
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-5",
     "name": "Mission: Impossible - Ghost Protocol - Görevimiz Tehlike: Hayalet Protokol",
     "image": "/images/movies/Jeremy_Renner_mission__impossible_-_ghost_protocol_-_gorevimiz_tehlike__hayalet_protokol.jpg",
     "ozellikler": {
@@ -165,7 +165,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-4",
     "name": "Wind River - Kar Fırtınası",
     "image": "/images/movies/Jeremy_Renner_wind_river_-_kar_firtinasi.jpg",
     "ozellikler": {
@@ -189,7 +189,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-3",
     "name": "12 and Holding - 12 ve Holding",
     "image": "/images/movies/Jeremy_Renner_12_and_holding_-_12_ve_holding.jpg",
     "ozellikler": {
@@ -212,7 +212,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-2",
     "name": "Avengers: Age of Ultron - Yenilmezler: Ultron Çağı",
     "image": "/images/movies/Jeremy_Renner_avengers__age_of_ultron_-_yenilmezler__ultron_cagi.jpg",
     "ozellikler": {
@@ -236,7 +236,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/jeremy-renner-en-iyi-10-filmi#bolum-1",
     "name": "The Town - Hırsızlar Şehri",
     "image": "/images/movies/Jeremy_Renner_the_town_-_hirsizlar_sehri.jpg",
     "ozellikler": {

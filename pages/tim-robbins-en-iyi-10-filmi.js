@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-10",
     "name": "Arlington Road - Komplo Teorisi",
     "image": "/images/movies/Tim_Robbins_arlington_road_-_komplo_teorisi.jpg",
     "ozellikler": {
@@ -46,7 +46,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-9",
     "name": "The Hudsucker Proxy - Şirket",
     "image": "/images/movies/Tim_Robbins_the_hudsucker_proxy_-_sirket.jpg",
     "ozellikler": {
@@ -69,7 +69,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-8",
     "name": "Jacob's Ladder - Dehşetin Nefesi",
     "image": "/images/movies/Tim_Robbins_jacob's_ladder_-_dehsetin_nefesi.jpg",
     "ozellikler": {
@@ -92,7 +92,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-7",
     "name": "Mystic River - Gizemli Nehir",
     "image": "/images/movies/Tim_Robbins_mystic_river_-_gizemli_nehir.jpg",
     "ozellikler": {
@@ -115,7 +115,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-6",
     "name": "Bull Durham - Aşkın Efsanesi",
     "image": "/images/movies/Tim_Robbins_bull_durham_-_askin_efsanesi.jpg",
     "ozellikler": {
@@ -139,7 +139,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-5",
     "name": "The Player - Oyuncu",
     "image": "/images/movies/Tim_Robbins_the_player_-_oyuncu.jpg",
     "ozellikler": {
@@ -162,7 +162,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-4",
     "name": "Cadillac Man - Araba Satıcısı",
     "image": "/images/movies/Tim_Robbins_cadillac_man_-_araba_saticisi.jpg",
     "ozellikler": {
@@ -185,7 +185,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-3",
     "name": "The Secret Life of Words - Kelimelerin Gizli Yaşamı",
     "image": "/images/movies/Tim_Robbins_the_secret_life_of_words_-_kelimelerin_gizli_yasami.jpg",
     "ozellikler": {
@@ -208,7 +208,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-2",
     "name": "The Shawshank Redemption - Esaretin Bedeli",
     "image": "/images/movies/Tim_Robbins_the_shawshank_redemption_-_esaretin_bedeli.jpg",
     "ozellikler": {
@@ -230,7 +230,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/tim-robbins-en-iyi-10-filmi#bolum-1",
     "name": "Dead Man Walking - Ölü Adam",
     "image": "/images/movies/Tim_Robbins_dead_man_walking_-_olu_adam.jpg",
     "ozellikler": {

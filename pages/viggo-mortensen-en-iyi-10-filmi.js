@@ -23,7 +23,7 @@ const jsonContentArray = [
 
   {
     "num": "10",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-10",
     "name": "Captain Fantastic - Kaptan Fantastik",
     "image": "/images/movies/Viggo_Mortensen_captain_fantastic_-_kaptan_fantastik.jpg",
     "ozellikler": {
@@ -45,7 +45,7 @@ const jsonContentArray = [
   },
   {
     "num": "9",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-9",
     "name": "Eastern Promises - Şark Vaatleri",
     "image": "/images/movies/Viggo_Mortensen_eastern_promises_-_sark_vaatleri.jpg",
     "ozellikler": {
@@ -68,7 +68,7 @@ const jsonContentArray = [
   },
   {
     "num": "8",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-8",
     "name": "A History of Violence - Şiddetin Tarihçesi",
     "image": "/images/movies/Viggo_Mortensen_a_history_of_violence_-_siddetin_tarihcesi.jpg",
     "ozellikler": {
@@ -90,7 +90,7 @@ const jsonContentArray = [
   },
   {
     "num": "7",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-7",
     "name": "The Lord of the Rings: The Return of the King - Yüzüklerin Efendisi: Kralın Dönüşü",
     "image": "/images/movies/Viggo_Mortensen_the_lord_of_the_rings__the_return_of_the_king_-_yuzuklerin_efendisi__kralin_donusu.jpg",
     "ozellikler": {
@@ -113,7 +113,7 @@ const jsonContentArray = [
   },
   {
     "num": "6",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-6",
     "name": "The Lord of the Rings: The Two Towers - Yüzüklerin Efendisi: İki Kule",
     "image": "/images/movies/Viggo_Mortensen_the_lord_of_the_rings__the_two_towers_-_yuzuklerin_efendisi__iki_kule.jpg",
     "ozellikler": {
@@ -136,7 +136,7 @@ const jsonContentArray = [
   },
   {
     "num": "5",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-5",
     "name": "The Lord of the Rings: The Fellowship of the Ring - Yüzüklerin Efendisi: Yüzük Kardeşliği",
     "image": "/images/movies/Viggo_Mortensen_the_lord_of_the_rings__the_fellowship_of_the_ring_-_yuzuklerin_efendisi__yuzuk_kardesligi.jpg",
     "ozellikler": {
@@ -159,7 +159,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-4",
     "name": "Green Book - Yeşil Rehber",
     "image": "/images/movies/Viggo_Mortensen_green_book_-_yesil_rehber.jpg",
     "ozellikler": {
@@ -181,7 +181,7 @@ const jsonContentArray = [
   },
   {
     "num": "3",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-3",
     "name": "The Road - Yol",
     "image": "/images/movies/Viggo_Mortensen_the_road_-_yol.jpg",
     "ozellikler": {
@@ -203,7 +203,7 @@ const jsonContentArray = [
   },
   {
     "num": "2",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-2",
     "name": "Hidalgo",
     "image": "/images/movies/Viggo_Mortensen_hidalgo.jpg",
     "ozellikler": {
@@ -225,7 +225,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/viggo-mortensen-en-iyi-10-filmi#bolum-1",
     "name": "Appaloosa",
     "image": "/images/movies/Viggo_Mortensen_appaloosa.jpg",
     "ozellikler": {

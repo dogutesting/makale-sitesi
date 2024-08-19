@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt3300542",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-10",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-10",
     "name": "London Has Fallen - London Has Fallen",
     "image": "/images/movies/Gerard_Butler_london_has_fallen_-_london_has_fallen.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt1259528",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-9",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-9",
     "name": "Den of Thieves - Suçlular Şehri",
     "image": "/images/movies/Gerard_Butler_den_of_thieves_-_suclular_sehri.jpg",
     "ozellikler": {
@@ -72,7 +72,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1197624",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-8",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-8",
     "name": "Law Abiding Citizen - Adalet Peşinde",
     "image": "/images/movies/Gerard_Butler_law_abiding_citizen_-_adalet_pesinde.jpg",
     "ozellikler": {
@@ -97,7 +97,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0416449",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-7",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-7",
     "name": "300 - 300 Spartalı",
     "image": "/images/movies/Gerard_Butler_300_-_300_spartali.jpg",
     "ozellikler": {
@@ -121,7 +121,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt0293508",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-6",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-6",
     "name": "The Phantom of the Opera - Operadaki Hayalet",
     "image": "/images/movies/Gerard_Butler_the_phantom_of_the_opera_-_operadaki_hayalet.jpg",
     "ozellikler": {
@@ -146,7 +146,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt7737786",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-5",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-5",
     "name": "Greenland - Son Sığınak",
     "image": "/images/movies/Gerard_Butler_greenland_-_son_siginak.jpg",
     "ozellikler": {
@@ -170,7 +170,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt6189022",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-4",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-4",
     "name": "Angel Has Fallen - Kod Adı: Angel",
     "image": "/images/movies/Gerard_Butler_angel_has_fallen_-_kod_adi__angel.jpg",
     "ozellikler": {
@@ -194,7 +194,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1032755",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-3",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-3",
     "name": "RocknRolla - RocknRolla",
     "image": "/images/movies/Gerard_Butler_rocknrolla_-_rocknrolla.jpg",
     "ozellikler": {
@@ -219,7 +219,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt1586752",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-2",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-2",
     "name": "Machine Gun Preacher - Çatışma Alanı",
     "image": "/images/movies/Gerard_Butler_machine_gun_preacher_-_catisma_alani.jpg",
     "ozellikler": {
@@ -244,7 +244,7 @@ const jsonContentArray = [
   {
     "num": "1",
     "title_id": "tt1981128",
-    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmibolum-1",
+    "url": "https://enonlar.com/gerard-butler-en-iyi-10-filmi#bolum-1",
     "name": "Geostorm - Uzaydan Gelen Fırtına",
     "image": "/images/movies/Gerard_Butler_geostorm_-_uzaydan_gelen_firtina.jpg",
     "ozellikler": {
