@@ -64,7 +64,7 @@ const jsonContentArray = [
   },
   {
     "num": "4",
-    "url": "https://enonlar.com/okunmasi-gereken-en-iyi-felsefe-kitapları#bolum-4",
+    "url": "https://enonlar.com/okunmasi-gereken-en-iyi-felsefe-kitaplari#bolum-4",
     "name": "Friedrich Nietzsche - Böyle Buyurdu Zerdüşt",
     "image": "/images/kitap/friedrich_nietzsche_-_boyle_buyurdu_zerdust.jpg",
     "paragraf": "Nietzsche'nin bu provokatif eseri, ahlak, toplum ve bireysel varoluş üzerine radikal görüşler sunar. En iyi 10 felsefe kitabı listesinde olmazsa olmazlardan."

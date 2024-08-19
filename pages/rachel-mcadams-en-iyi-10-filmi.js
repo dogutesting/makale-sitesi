@@ -6,7 +6,7 @@ import ClassicArticleTop from '@/components/article_types/ClassicArticleTop';
 
 export default function RachelMcadamsEnİyi10FilmiMain({topCPO}) {
 //#region SAYFA TEXT TANIMLAMALARI
-const url = "rachel-mcadams-in-en-iyi-10-filmi";
+const url = "rachel-mcadams-en-iyi-10-filmi";
 const baslik = "Rachel McAdams En İyi 10 Filmi";
 const metin = "Rachel McAdams'ın kariyeri boyunca birçok unutulmaz filmde rol aldığını biliyoruz. rachel mcadams en iyi filmleri arasında izleyici tarafından beğenilen birçok yapım bulunuyor. Bu yazıda, rachel mcadams filmleri arasından en iyi 10 tanesini sizler için derledik.";
 const bitis_metin = "Bu yazımızda, Rachel McAdams'ın en iyi filmleri arasında kabul edilen 10 harika yapımı inceledik. Her biri farklı türlerde, farklı hikayeler sunarak izleyicilere muhteşem performanslar vaat ediyor. Umarız bu filmleri izlemekten keyif alırsınız.";
@@ -24,7 +24,7 @@ const jsonContentArray = [
   {
     "num": "10",
     "title_id": "tt2704998",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-10",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-10",
     "name": "Game Night - Oyun Gecesi",
     "image": "/images/movies/Rachel_McAdams_game_night_-_oyun_gecesi.jpg",
     "ozellikler": {
@@ -48,7 +48,7 @@ const jsonContentArray = [
   {
     "num": "9",
     "title_id": "tt2194499",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-9",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-9",
     "name": "About Time - Zamanda Aşk",
     "image": "/images/movies/Rachel_McAdams_about_time_-_zamanda_ask.jpg",
     "ozellikler": {
@@ -73,7 +73,7 @@ const jsonContentArray = [
   {
     "num": "8",
     "title_id": "tt1126618",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-8",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-8",
     "name": "Morning Glory - Sabah Neşesi",
     "image": "/images/movies/Rachel_McAdams_morning_glory_-_sabah_nesesi.jpg",
     "ozellikler": {
@@ -98,7 +98,7 @@ const jsonContentArray = [
   {
     "num": "7",
     "title_id": "tt0421239",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-7",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-7",
     "name": "Red Eye - Kırmızı Göz",
     "image": "/images/movies/Rachel_McAdams_red_eye_-_kirmizi_goz.jpg",
     "ozellikler": {
@@ -122,7 +122,7 @@ const jsonContentArray = [
   {
     "num": "6",
     "title_id": "tt1211837",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-6",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-6",
     "name": "Doctor Strange - Doktor Strange",
     "image": "/images/movies/Rachel_McAdams_doctor_strange_-_doktor_strange.jpg",
     "ozellikler": {
@@ -146,7 +146,7 @@ const jsonContentArray = [
   {
     "num": "5",
     "title_id": "tt0356680",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-5",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-5",
     "name": "The Family Stone - Aile Bağları",
     "image": "/images/movies/Rachel_McAdams_the_family_stone_-_aile_baglari.jpg",
     "ozellikler": {
@@ -171,7 +171,7 @@ const jsonContentArray = [
   {
     "num": "4",
     "title_id": "tt1605783",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-4",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-4",
     "name": "Midnight in Paris - Paris'te Gece Yarısı",
     "image": "/images/movies/Rachel_McAdams_midnight_in_paris_-_paris'te_gece_yarisi.jpg",
     "ozellikler": {
@@ -196,7 +196,7 @@ const jsonContentArray = [
   {
     "num": "3",
     "title_id": "tt1895587",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-3",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-3",
     "name": "Spotlight - Spotlight",
     "image": "/images/movies/Rachel_McAdams_spotlight_-_spotlight.jpg",
     "ozellikler": {
@@ -220,7 +220,7 @@ const jsonContentArray = [
   {
     "num": "2",
     "title_id": "tt0332280",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-2",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-2",
     "name": "The Notebook - Not Defteri",
     "image": "/images/movies/Rachel_McAdams_the_notebook_-_not_defteri.jpg",
     "ozellikler": {
@@ -243,7 +243,7 @@ const jsonContentArray = [
   },
   {
     "num": "1",
-    "url": "https://enonlar.com/rachel-mcadams-in-en-iyi-10-filmi#bolum-1",
+    "url": "https://enonlar.com/rachel-mcadams-en-iyi-10-filmi#bolum-1",
     "title_id": "tt0377092",
     "name": "Mean Girls - Kötü Kızlar",
     "image": "/images/movies/Rachel_McAdams_mean_girls_-_kotu_kizlar.jpg",
