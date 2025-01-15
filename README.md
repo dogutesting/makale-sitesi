@@ -1,8 +1,5 @@
-# Eklenme Sebebi:
-- Çalıştığım günleri görmek,
-- Hata durumunda geri dönmek,
-- Pc bozulması halinde yedek,
-- Önceden yazdığım kodlara bakarak ilerleyişimi görmek.
+# Projenin Yazılma Sebebi:
+Yapay zeka ile "en 10 içerikler" üretmek.
 
 # İptal Edilme Sebebi:
 Yapay zeka ile yazılan makaleler Google tarafından değersiz görüldü.
